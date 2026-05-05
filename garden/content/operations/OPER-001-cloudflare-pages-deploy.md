@@ -10,12 +10,12 @@ Purpose: How to wire and operate the Cloudflare Pages deploy for the Zo Garden m
 Status: working
 Owner: zo
 Update trigger: when the build script changes, when CF Pages settings change, when a custom domain is added
-Last updated: 2026-05-04 (build.sh trimmed to Quartz-only; githubpage/ now untracked, kept locally as porting reference)
+Last updated: 2026-05-05
 -->
 
 # OPER-001 Cloudflare Pages deploy
 
-The Zo Garden monorepo is deployed via Cloudflare Pages directly from the GitHub repo at [`DeveloperZo/Zo-Garden-eCafe`](https://github.com/DeveloperZo/Zo-Garden-eCafe). Cloudflare watches `main`, runs `build.sh`, and serves the resulting `garden/public/` to the Pages URL. The Quartz docs site lives at `/`.
+The Zo Garden monorepo is deployed via Cloudflare Pages directly from the GitHub repo at [`DeveloperZo/Zo-Garden-eCafe`](https://github.com/DeveloperZo/Zo-Garden-eCafe). Cloudflare watches `main`, runs `build.sh`, and serves the resulting `garden/public/` to the Pages URL. The Quartz docs site lives at `/`; the `resumeContent/` CRA app (`resume-content`) is built first and copied to `/resume`.
 
 ## Modes and prerequisites
 
@@ -41,6 +41,8 @@ The Zo Garden monorepo is deployed via Cloudflare Pages directly from the GitHub
    - `NODE_VERSION` = `22` (Quartz 4 requires it; CF Pages defaults to an older Node).
 5. Save and trigger the first deploy.
 
+The repo root includes [`wrangler.toml`](https://github.com/DeveloperZo/Zo-Garden-eCafe/blob/main/wrangler.toml) with `pages_build_output_dir = "garden/public"`. That matches the dashboard **Build output directory** and fixes **`wrangler pages deploy`** / Workers Builds when Wrangler looks for static assets (it does not default to `garden/public`).
+
 ### Each deploy (automatic)
 
 A push to `main` triggers a CF Pages build. No action needed in the repo.
@@ -63,15 +65,18 @@ After a deploy completes:
 
 1. **Pages URL is reachable.** `curl -I https://zo-garden.pages.dev/` returns `200`.
 2. **Quartz site renders.** Visiting the apex URL shows the **Zo Garden** landing page. Title in tab is `Zo Garden`.
-3. **Static assets resolve.** No 404s in the network tab.
-4. **Sitemap and RSS exist.** `/sitemap.xml` and `/index.xml` (RSS) return XML.
-5. **No analytics ping.** `analytics: null` in `quartz.config.ts` — confirm no requests to `plausible.io`.
+3. **`/resume` loads the React app.** Open `https://zo-garden.pages.dev/resume/` — the `resume-content` app shell loads (HashRouter; assets are built with `"homepage": "/resume"`).
+4. **Static assets resolve.** No 404s in the network tab.
+5. **Sitemap and RSS exist.** `/sitemap.xml` and `/index.xml` (RSS) return XML.
+6. **No analytics ping.** `analytics: null` in `quartz.config.ts` — confirm no requests to `plausible.io`.
 
 ## Troubleshooting and fallback
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
+| Wrangler: `Could not detect a directory containing static files` | Output path not specified — Wrangler looks for `public`/`dist`, not `garden/public` | Use dashboard output **`garden/public`**, rely on root **`wrangler.toml`** (`pages_build_output_dir`), or run **`npx wrangler pages deploy garden/public`** (after `./build.sh`). Run the build first so the directory exists and contains `index.html`. |
 | Build fails with `Quartz requires Node >=22` | `NODE_VERSION` env var not set on the Pages project | Add `NODE_VERSION=22` under Settings → Environment variables |
+| Build fails in `resumeContent/` on CI | `resumeContent/` was never pushed (e.g. it was listed in `.gitignore`) | Commit and push `resumeContent/`, or allow the build to skip it: `build.sh` runs Quartz-only when that folder is missing (no `/resume` app). |
 | Quartz pages render but links 404 | `baseUrl` in `quartz.config.ts` doesn't match the live URL | Update `baseUrl` to the actual deployed origin (e.g. `zo-garden.pages.dev` or your custom domain) and push |
 
 ### Rollback
@@ -83,6 +88,7 @@ If the issue is in the source rather than the build, `git revert <commit>` and p
 ## Ownership and references
 
 - **Owner**: zo.
-- **Produced by**: [`M-001 Quartz site goes live publicly`](../milestones/M-001-quartz-go-live.md).
+- **Produced by**: [`M-001 Quartz site goes live publicly`](../milestones/completed/M-001-quartz-go-live.md) (closed 2026-05-05).
 - **Architectural context**: [`ARCH-001 Platform overview`](../architecture/ARCH-001-platform-overview.md).
 - **Build script**: [`build.sh`](https://github.com/DeveloperZo/Zo-Garden-eCafe/blob/main/build.sh) at the repo root.
+- **Wrangler / static output path**: [`wrangler.toml`](https://github.com/DeveloperZo/Zo-Garden-eCafe/blob/main/wrangler.toml) at the repo root.
