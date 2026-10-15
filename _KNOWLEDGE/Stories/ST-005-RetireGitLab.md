@@ -11,7 +11,7 @@ Last updated: 2026-10-14
 
 ## Summary
 
-On 2026-10-14 the owner made GitHub the only active code host: there was no specific reason for GitLab, and GitHub suits Claude Code and the job search. The same evening the GitLab project was archived and the live site moved to build from GitHub. What is left: the clone still knows the GitLab remote and some finished branches, and the site footer still links to the archived project. After this work nothing points at GitLab except history.
+On 2026-10-14 the owner made GitHub the only active code host: there was no specific reason for GitLab, and GitHub suits Claude Code and the job search. The same evening the GitLab project was archived and the live site moved to build from GitHub. What is left: some finished local branches, and a decision on whether to delete the archived project. The local `gitlab` remote was removed on 2026-10-15. The footer source link on this branch points at GitHub.
 
 ## User story
 
@@ -22,7 +22,7 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 ## Status
 
 - Current: `active`
-- Next: Zo agrees to remove the `gitlab` remote and the merged local branches (AC-5, AC-6); the footer link change (AC-4) goes out as a normal commit and push.
+- Next: delete the merged local branches (AC-6) and record whether to delete the archived GitLab project (AC-8). The local `gitlab` remote was removed 2026-10-15 (AC-5).
 - Last updated: `2026-10-14`
 
 ## Acceptance criteria
@@ -72,6 +72,7 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 
 - 2026-10-14: GitHub is the only active code host; there was no specific reason for the GitLab move (owner decision). Supersedes this Story's earlier scope, "GitLab is the only code home" (archive GitHub).
 - 2026-10-14: Archive GitLab now; deleting it is a later decision (AC-8, open).
+- 2026-10-15: Remove the local `gitlab` remote. Its history was the only copy in this clone of commits with `Co-Authored-By: Claude`. The archived project stays until AC-8.
 
 ### Evidence
 
@@ -79,7 +80,7 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 - **AC-2**: met 2026-10-14. `git remote get-url origin`, `git branch -vv`, `git ls-remote origin` all as stated in Technical details.
 - **AC-3**: met 2026-10-14. Cloudflare API: `alonzo-anthologies` and `zo-garden` both `github`.
 - **AC-4**: not met. Footer still links to GitLab.
-- **AC-5**: not met. `gitlab` remote present (kept as a read-only reference).
+- **AC-5**: met 2026-10-15. `git remote` prints `origin` only.
 - **AC-6**: not met. Four merged branches remain.
 - **AC-7**: partly met. OPER-002 rewritten for GitHub and TD-001 closed (2026-10-14). ARCH-002 and the context files not checked by this Story.
 - **AC-8**: open.
@@ -87,9 +88,10 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 
 ### Risks and open questions
 
-- Deleting the archived GitLab project later loses nothing that GitHub does not hold, provided GitHub `main` contains every GitLab commit. Today both are at c6dadfe; the GitLab-only branches above are ancestors of `main`.
+- Deleting the archived GitLab project later removes the pre-rewrite commits that credit Claude as a co-author. GitHub's branches do not contain those commit ids. Rewritten commits with the same subjects are on GitHub, without the co-author lines. GitHub still serves the old SHAs if you request them.
 
 ## Changelog
 
+- 2026-10-15: AC-5 met. Local `gitlab` remote removed so this clone no longer reaches commits that credit an AI agent as a co-author. AC-6 and AC-8 stay open.
 - 2026-10-14 (late evening): Rewritten in place and renamed from `ST-005-RetireGitHub.md` ("GitLab is the only code home"). The owner made GitHub the only active host; the Story now retires GitLab. AC-1 to AC-3 met tonight, with evidence; status `active`.
 - 2026-10-14: Created from TD-001 and the owner default (archive GitHub, remove remote).

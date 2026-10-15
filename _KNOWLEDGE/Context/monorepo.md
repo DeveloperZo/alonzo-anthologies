@@ -14,9 +14,10 @@ is `alonzo-anthologies`. User-facing copy still uses
 **Alonzo's Anthologies**.
 
 For a few hours on 2026-10-14 the code lived on GitLab
-(`awilliams9293/alonzo-anthologies`). That project is now archived
-(read-only, history kept) and is a local remote named `gitlab` for
-reference only. Do not push to it.
+(`awilliams9293/alonzo-anthologies`). That project is archived.
+This clone has no `gitlab` remote. It was removed on 2026-10-15
+because it was the only local ref that still reached commits
+crediting an AI agent as a co-author. Do not add it back.
 
 ## Why
 

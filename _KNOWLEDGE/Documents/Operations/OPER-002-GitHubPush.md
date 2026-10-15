@@ -15,8 +15,8 @@ below are numbered to match
 [DIA-102](../../Diagrams/DIA-102-SourceControl.svg) and
 [ARCH-002](../../Architecture/ARCH-002-SourceControl.md).
 
-The GitLab project is archived and the local `gitlab` remote is kept only as
-a read-only reference: never push to it (see
+The GitLab project is archived. This clone has no `gitlab` remote
+(removed 2026-10-15; see
 [ST-005](../../Stories/ST-005-RetireGitLab.md)).
 
 A push to `main` currently deploys twice: to `alonzo-anthologies` and to the
@@ -37,7 +37,7 @@ is not an error.
   # https://github.com/DeveloperZo/alonzo-anthologies.git
   ```
 
-  Verified 2026-10-14 with `git remote -v`, which also lists `gitlab` (the archived project). `main` tracks `origin/main`.
+  Verified 2026-10-15 with `git remote -v`: `origin` only. `main` tracks `origin/main`.
 - Branch protection: none. The public GitHub API reports `"protected": false` for `main` (verified 2026-10-14 with `curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/branches/main`). Force pushes are therefore not blocked by the host; never force-push `main`. Protection is planned in [ST-007](../../Stories/ST-007-GitHubCi.md).
 
 ## Procedure
@@ -94,7 +94,7 @@ Status: draft. The push to GitHub was run in earnest on 2026-10-14 during the ho
 - **The check run names a different branch.** Cloudflare reports per commit. When a commit was already built on another branch (for example a preview before a fast-forward of `main`), the run can carry that branch's name. Confirm the production deployment in Cloudflare (OPER-001) rather than trusting the ref name.
 - **Conclusion `failure`.** The previous deployment keeps serving, so the site is not down. Fix forward with a new commit, or `git revert <sha>` and repeat from step 1.
 - **Bad commit is live.** `git revert <sha>`, then repeat from step 1. For an instant rollback while the revert builds, use the Cloudflare dashboard rollback in OPER-001 (once there is an earlier deployment to roll back to).
-- **You pushed to `gitlab` by mistake.** The project is archived and archived GitLab projects are read-only, so the push should be refused (GitLab's documented behaviour; not tested here). If it somehow lands, nothing deploys from GitLab any more; note it in `log.md`.
+- **A `gitlab` remote is present.** It was removed on 2026-10-15 so this clone would not keep commits that credit an AI agent as a co-author. Do not add it back. The archived project is read-only, and nothing deploys from it.
 
 ## Ownership and references
 
@@ -102,7 +102,7 @@ Status: draft. The push to GitHub was run in earnest on 2026-10-14 during the ho
 - [ARCH-002 Source control](../../Architecture/ARCH-002-SourceControl.md) and [DIA-102](../../Diagrams/DIA-102-SourceControl.svg)
 - [OPER-001 Cloudflare deploy](./OPER-001-CloudflareDeploy.md)
 - [OPER-003 Cloudflare credentials](./OPER-003-CloudflareCredentials.md)
-- [ST-005 Retire GitLab](../../Stories/ST-005-RetireGitLab.md) (removes the `gitlab` remote)
+- [ST-005 Retire GitLab](../../Stories/ST-005-RetireGitLab.md) (the `gitlab` remote is already removed; stray branches and the archived project remain)
 - [TD-002 Duplicate Pages](../Technical-Debt/TD-002-DuplicatePages.md) (why each push builds twice)
 - [TD-003 No CI](../Technical-Debt/TD-003-NoCi.md): when [ST-007](../../Stories/ST-007-GitHubCi.md) adds a GitHub Actions workflow, step 1 becomes a check the workflow also runs, and step 4 gains a workflow run to watch.
 - Closed: [TD-001 Legacy GitHub](../Technical-Debt/completed/TD-001-LegacyGitHub.md).

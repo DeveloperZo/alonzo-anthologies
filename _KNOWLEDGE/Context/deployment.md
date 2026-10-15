@@ -16,16 +16,14 @@ Local remotes:
 | Remote | URL |
 | --- | --- |
 | `origin` | `https://github.com/DeveloperZo/alonzo-anthologies.git` (`main` tracks `origin/main`) |
-| `gitlab` | `https://gitlab.com/awilliams9293/alonzo-anthologies.git` (archived, read-only, reference only) |
 
 The repo was named `Zo-Garden-eCafe` until 2026-10-14; GitHub redirects
 the old URL. For CLI work on GitHub, use `gh` (installed; run
 `gh auth login` once per machine before relying on it).
 
 Write access from Claude Code on the web still depends on whatever host
-that session can reach. Push to GitHub (`origin`). Never push to the
-`gitlab` remote; the project is archived and removing the remote is
-ST-005.
+that session can reach. Push to GitHub (`origin`). This clone has no
+`gitlab` remote (removed 2026-10-15, ST-005).
 
 ## Rebrand to one name (2026-10-14)
 

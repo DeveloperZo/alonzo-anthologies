@@ -11,7 +11,7 @@ Last updated: 2026-10-14
 
 Closed 2026-10-14. Not by retiring GitHub, as planned, but by making GitHub
 the canonical code host again. The leftover now runs the other way: the
-archived GitLab project and the local `gitlab` remote, handled by
+archived GitLab project, handled by
 [ST-005 Retire GitLab](../../../Stories/ST-005-RetireGitLab.md).
 
 ## Current impact

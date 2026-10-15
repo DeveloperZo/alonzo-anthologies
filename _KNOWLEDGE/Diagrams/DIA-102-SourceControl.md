@@ -5,7 +5,7 @@
 - **Primary audience takeaway:** Pushing `main` to GitHub is the only road to production; the archived GitLab project is a read-only leftover, and the old `zo-garden` site builds the same push as a duplicate.
 
 ## What The Diagram Shows
-The top row is the path in use today. Your local clone pushes `main` to GitHub, the only code host, where `main` is not yet protected. Cloudflare's GitHub App tells the Cloudflare Pages project `alonzo-anthologies` to build, and Cloudflare posts the result back on the commit as a check run. Five red badges mark the steps, and the key at the bottom says each one in plain words. Under the clone, the `_ENV/` folder holds the Cloudflare token: it is drawn dashed red because it stays on this machine and is never committed. The bottom row is gray and dashed: the GitLab project is archived and still a read-only local remote named `gitlab`, and the same GitHub repo still feeds the old Pages project `zo-garden`, which serves a duplicate of the live build.
+The top row is the path in use today. Your local clone pushes `main` to GitHub, the only code host, where `main` is not yet protected. Cloudflare's GitHub App tells the Cloudflare Pages project `alonzo-anthologies` to build, and Cloudflare posts the result back on the commit as a check run. Five red badges mark the steps, and the key at the bottom says each one in plain words. Under the clone, the `_ENV/` folder holds the Cloudflare token: it is drawn dashed red because it stays on this machine and is never committed. The bottom row is gray and dashed: the GitLab project is archived and is not a local remote, and the same GitHub repo still feeds the old Pages project `zo-garden`, which serves a duplicate of the live build.
 
 ## Elements And Flow
 - **Components:**
@@ -17,7 +17,7 @@ The top row is the path in use today. Your local clone pushes `main` to GitHub, 
   - Cloudflare Pages project `zo-garden` (legacy, builds every push to `main`)
 - **Relationships:**
   - Solid arrows: push (clone to GitHub), GitHub App (GitHub to Cloudflare), check run (Cloudflare back to GitHub)
-  - Dashed gray arrows: the `gitlab` remote (clone to the archived project, read-only) and the same push reaching `zo-garden`
+  - Dashed gray arrow: the same push reaching `zo-garden`. No arrow runs from the clone to GitLab; that remote was removed on 2026-10-15
   - No arrow leaves `_ENV/`: nothing in it is ever pushed
 - **Notable labels or metrics:**
   - "main not protected yet (ST-007)"

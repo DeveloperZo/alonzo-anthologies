@@ -1,6 +1,6 @@
 <svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia102-title dia102-desc">
   <title id="dia102-title">DIA-102 · Source control: one host (GitHub), push to main deploys</title>
-  <desc id="dia102-desc">Top row, left to right: your local clone pushes branch main to GitHub (origin), the only code host, where main is not yet protected. Cloudflare's GitHub App tells the Cloudflare Pages project alonzo-anthologies to build, and Cloudflare posts a check run back on the commit. Numbered badges mark five steps: 1 scan for secrets, 2 push, 3 GitHub App notifies Cloudflare, 4 build and check run, 5 check the live site. Below the clone, the _ENV folder holding the Cloudflare token is drawn as local only and never pushed. Bottom row, dashed and gray: the archived GitLab project, still a read-only local remote named gitlab, and the legacy Cloudflare Pages project zo-garden, which the same GitHub repo still feeds on every push.</desc>
+  <desc id="dia102-desc">Top row, left to right: your local clone pushes branch main to GitHub (origin), the only code host, where main is not yet protected. Cloudflare's GitHub App tells the Cloudflare Pages project alonzo-anthologies to build, and Cloudflare posts a check run back on the commit. Numbered badges mark five steps: 1 scan for secrets, 2 push, 3 GitHub App notifies Cloudflare, 4 build and check run, 5 check the live site. Below the clone, the _ENV folder holding the Cloudflare token is drawn as local only and never pushed. Bottom row, dashed and gray: the archived GitLab project, which this clone does not fetch, and the legacy Cloudflare Pages project zo-garden, which the same GitHub repo still feeds on every push.</desc>
   <defs>
     <style>
       :root {
@@ -43,9 +43,8 @@
   <line x1="560" y1="150" x2="473" y2="150" stroke="#6B6873" stroke-width="1.5" marker-end="url(#d102-solid)"/>
   <text x="515" y="166" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873">check run</text>
   <!-- Leftover arrows (dashed) -->
-  <path d="M 192 172 V 335 H 287" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#d102-ghost)"/>
-  <text x="200" y="300" font-size="9.5" fill="#9D9A95">remote "gitlab"</text>
-  <text x="200" y="313" font-size="9.5" fill="#9D9A95">read-only</text>
+  <text x="200" y="300" font-size="9.5" fill="#9D9A95">not a local remote</text>
+  <text x="200" y="313" font-size="9.5" fill="#9D9A95">removed 2026-10-15</text>
   <path d="M 455 170 V 250 H 650 V 291" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#d102-ghost)"/>
   <text x="552" y="243" text-anchor="middle" font-size="9.5" fill="#9D9A95">same repo, every push</text>
   <!-- Top row nodes -->
@@ -69,7 +68,7 @@
   <text x="515" y="282" text-anchor="middle" font-size="10" font-weight="600" fill="#9D9A95" letter-spacing="0.04em">LEFT OVER · TO RETIRE (ST-005, ST-004)</text>
   <rect x="290" y="295" width="180" height="80" rx="10" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
   <text x="380" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#9D9A95">GITLAB (archived)</text>
-  <text x="380" y="346" text-anchor="middle" font-size="11" fill="#9D9A95">read-only, history kept</text>
+  <text x="380" y="346" text-anchor="middle" font-size="11" fill="#9D9A95">archived, not fetched</text>
   <rect x="560" y="295" width="180" height="80" rx="10" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
   <text x="650" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#9D9A95">PAGES zo-garden</text>
   <text x="650" y="346" text-anchor="middle" font-size="11" fill="#9D9A95">duplicate of the live build</text>

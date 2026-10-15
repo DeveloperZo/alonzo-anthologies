@@ -28,7 +28,7 @@ The durable goals the Stories serve. Edit when a goal is reached, retired, or ad
 
 | ID | Title | Owner | State |
 |---|---|---|---|
-| [ST-005](./ST-005-RetireGitLab.md) | GitHub is the only code home | zo | Active since 2026-10-14. GitLab archived, `origin` is GitHub, Cloudflare builds only from GitHub (all met tonight). Next: footer source link to GitHub, remove the `gitlab` remote and merged local branches (with Zo's agreement), record whether to delete the archived GitLab project. |
+| [ST-005](./ST-005-RetireGitLab.md) | GitHub is the only code home | zo | Active since 2026-10-14. GitLab archived, `origin` is GitHub, Cloudflare builds only from GitHub. The local `gitlab` remote was removed 2026-10-15. Next: delete merged local branches, record whether to delete the archived GitLab project. |
 | [ST-002](./ST-002-ContentSeeds.md) | First content seeds live | zo | Active since 2026-05-04 and stale. Met in substance but never closed: project docs are out of `site/content/`, and `/resume/` and `/ai-governance/` are live (200 on 2026-10-14). The Thinking in Systems seed it names was deleted on 2026-05-05 (91c5e5b) and the AI governance series took its place. Next: closure review (strike or replace that criterion, add evidence, move to `completed/`). |
 
 ## Next

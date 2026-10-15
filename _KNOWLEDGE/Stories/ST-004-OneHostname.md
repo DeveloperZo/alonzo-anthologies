@@ -44,7 +44,7 @@ The site is public at two addresses today, and both show the same current site, 
 
 - Deleting the `zo-garden` project. The owner default is redirect plus deployments off; deleting it would remove the hostname the redirect serves.
 - Disconnecting the GitHub repo from Cloudflare. `alonzo-anthologies` builds from it; only `zo-garden`'s deployments go off.
-- Removing the `gitlab` remote and the archived GitLab project: [ST-005](./ST-005-RetireGitLab.md).
+- The archived GitLab project: [ST-005](./ST-005-RetireGitLab.md). The local `gitlab` remote was removed on 2026-10-15.
 - A custom domain. Both hostnames stay on `pages.dev`.
 - Rewriting historical Stories (ST-001, ST-003) that cite the old hostname; they are records.
 

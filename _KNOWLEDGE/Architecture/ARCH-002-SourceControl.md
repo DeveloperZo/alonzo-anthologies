@@ -11,7 +11,7 @@ Sources:
   - _KNOWLEDGE/Documents/Operations/log.md (2026-10-14 entries: cutover, then the host move to GitHub)
   - _KNOWLEDGE/Documents/Operations/OPER-002-GitHubPush.md, OPER-001-CloudflareDeploy.md
 Human id: source-control
-Last synthesized: 2026-10-14
+Last synthesized: 2026-10-15
 -->
 
 > Part of the [Architecture](./ARCH-001-PlatformOverview.md) set. Plain-language digest; the code is authoritative. Ratings use the scale in `_META/Definitions/Architecture.md`.
@@ -27,8 +27,8 @@ no branch protection on `main`. The only secret (a Cloudflare token in
 `_ENV/`) stays on the owner's machine because git ignores it. GitHub became
 the only active code host on 2026-10-14: the repo, until then named
 `Zo-Garden-eCafe`, was renamed (GitHub redirects the old URL), and the GitLab
-project used for a few hours that day was archived and kept as a read-only
-local remote named `gitlab`. One leftover remains on the Cloudflare side: the
+project used for a few hours that day was archived. The local remote named
+`gitlab` was removed on 2026-10-15. One leftover remains on the Cloudflare side: the
 old `zo-garden` Pages project is connected to this same repo, so every push to
 `main` is built twice and published on two hostnames.
 
@@ -38,8 +38,8 @@ old `zo-garden` Pages project is connected to this same repo, so every push to
 
 Read the top row left to right; the red badges 1 to 5 are the numbered steps
 in "How it works" below. The dashed red box is local only. The gray dashed
-row at the bottom is what is left over: the archived GitLab project, and the
-`zo-garden` project that the same GitHub repo still feeds.
+row at the bottom is what is left over: the archived GitLab project (no longer
+a local remote), and the `zo-garden` project that the same GitHub repo still feeds.
 
 ## Components that matter here
 
@@ -53,7 +53,7 @@ row at the bottom is what is left over: the archived GitLab project, and the
 | Branch protection on `main` | Rule point | **Important**: none today, so a force push could rewrite production history; the habit of never forcing is the only guard | Coordinated | [ST-007](../Stories/ST-007-GitHubCi.md) (turn it on together with the required CI check) | Unauthenticated GitHub API: `branches/main` reports `protected: false`; `rules/branches/main` returns an empty list. The repo settings page itself was not read (`gh` not authenticated) |
 | Pre-push secret scan | Rule point | **Important**: the only secret check, and it is manual | Routine | [OPER-002](../Documents/Operations/OPER-002-GitHubPush.md) step 1, [TD-003](../Documents/Technical-Debt/TD-003-NoCi.md) | No `.github/workflows/` at the repo root (GitHub API contents call returns 404) |
 | Work branches on GitHub | Entry point | **Important**: every pushed branch gets a public preview, today from both Pages projects | Routine | [ARCH-003](./ARCH-003-Hosting.md) (preview policy) | `git ls-remote --heads origin` (only `main` today); Cloudflare API `preview_deployment_setting` = `all` on both projects |
-| Archived GitLab project `awilliams9293/alonzo-anthologies` and local remote `gitlab` | Plumbing | **Supporting**: a read-only copy of history (five branches, `main` at c6dadfe); its Cloudflare webhook points at a Pages project that no longer exists | Routine | [ST-005](../Stories/ST-005-RetireGitLab.md) | GitLab API lists it under `archived=true`; `git ls-remote gitlab` |
+| Archived GitLab project `awilliams9293/alonzo-anthologies` | Plumbing | **Supporting**: an archived project this clone no longer fetches. Its old `main` still holds commits that credit an AI agent as a co-author. Its Cloudflare webhook points at a Pages project that no longer exists | Routine | [ST-005](../Stories/ST-005-RetireGitLab.md) | `git remote` prints `origin` only (2026-10-15). GitLab API lists the project under `archived=true` |
 | Stray local branches and worktree | Plumbing | **Supporting**: four local branches besides `main`, all merged into it; one registered worktree points at the old folder and is prunable | Routine | [ST-005](../Stories/ST-005-RetireGitLab.md), [ST-011](../Stories/ST-011-BuildCleanup.md) | `git branch --merged main`; `git branch -vv`; `git worktree list` |
 
 ## How it works, step by step
@@ -68,8 +68,8 @@ row at the bottom is what is left over: the archived GitLab project, and the
 
 **What is left of GitLab** (gray in DIA-102; nobody should use it):
 
-- The GitLab project `awilliams9293/alonzo-anthologies` was archived on 2026-10-14, so it is read-only and keeps its history. The local remote `gitlab` still points at it, for reference only. Its Cloudflare webhook targets the GitLab-wired Pages project that was deleted that night, which is moot while the project is archived.
-- Removing the remote and deciding whether to delete the archived project later is [ST-005](../Stories/ST-005-RetireGitLab.md).
+- The GitLab project `awilliams9293/alonzo-anthologies` was archived on 2026-10-14. This clone stopped fetching it on 2026-10-15: that remote was the only local ref whose history still credited an AI agent as a co-author. The archived project itself is unchanged. Its Cloudflare webhook targets the GitLab-wired Pages project that was deleted that night, which is moot while the project is archived.
+- Deciding whether to delete the archived project is [ST-005](../Stories/ST-005-RetireGitLab.md). GitHub's branches do not contain those co-author commits. GitHub still serves the old commit ids if you ask for them by SHA.
 
 ## Changing this area
 
@@ -78,7 +78,7 @@ row at the bottom is what is left over: the archived GitLab project, and the
 - **Pushing work.** Follow [OPER-002](../Documents/Operations/OPER-002-GitHubPush.md). Use `git revert` to undo a pushed commit; never rewrite `main`.
 - **Adding an ignore rule for a new kind of secret.** Edit `.gitignore`, confirm with `git check-ignore -v`, and add the token prefix to the scan in OPER-002 step 1.
 - **Deleting a finished branch.** Delete it on GitHub and locally in the same sitting, so `git ls-remote --heads origin` and `git branch` agree.
-- **Removing the `gitlab` remote and the stray local branches** ([ST-005](../Stories/ST-005-RetireGitLab.md)): nothing live depends on them.
+- **Deleting the stray local branches** ([ST-005](../Stories/ST-005-RetireGitLab.md)): the `gitlab` remote is already gone. Nothing live depends on the leftover branches.
 
 ### Coordinated changes
 
@@ -98,7 +98,7 @@ row at the bottom is what is left over: the archived GitLab project, and the
 - **No CI.** Broken builds are found only after they reach `main`, and the secret scan is manual. Tracked by [TD-003](../Documents/Technical-Debt/TD-003-NoCi.md), fixed by [ST-007](../Stories/ST-007-GitHubCi.md).
 - **The recreated Pages project has not yet deployed from a push.** Its only deployment, `c7455b17`, was started when the project was created (trigger `ad_hoc`). The `zo-garden` build of c6dadfe shows that push events from this repo reach Cloudflare, but the first push-triggered build of `alonzo-anthologies` is still to come. Check it on the next push.
 - **The old `zo-garden` Pages project is connected to this repo** and serves a second copy of the current build. Tracked by [TD-002](../Documents/Technical-Debt/TD-002-DuplicatePages.md), fixed by [ST-004](../Stories/ST-004-OneHostname.md).
-- **The archived GitLab project and the `gitlab` remote still exist.** Harmless while archived. [ST-005](../Stories/ST-005-RetireGitLab.md).
+- **The archived GitLab project still exists.** This clone no longer has a `gitlab` remote. GitHub still returns the old co-author commits if you request the SHA. [ST-005](../Stories/ST-005-RetireGitLab.md).
 - **The token in `_ENV/` is account-wide**, so a leak would reach DNS and the registrar, not only Pages. Tracked by [TD-004](../Documents/Technical-Debt/TD-004-BroadCloudflareToken.md), fixed by [ST-006](../Stories/ST-006-ScopedToken.md).
 - **A stale worktree is registered** at `C:/Repos/Zo Garden eCafe/.claude/worktrees/main-latest-commit-47b73f` (git marks it prunable). Its branch is already merged into `main`. Covered by [ST-011](../Stories/ST-011-BuildCleanup.md).
 - **Work not yet on GitHub.** On 2026-10-14 the working tree holds the new `_KNOWLEDGE/` docs and the owner's staged resume data edits; until they are committed and pushed, this machine has the only copy. No TD; it closes with the next push.
@@ -115,6 +115,7 @@ row at the bottom is what is left over: the archived GitLab project, and the
 
 ## Changelog
 
+- 2026-10-15: Removed the local `gitlab` remote. It was the only ref in this clone that still reached commits with `Co-Authored-By: Claude`. GitHub branch tips already lacked those commits. `git remote` now prints `origin` only. The archived GitLab project was not deleted, and GitHub still serves the old SHAs.
 - 2026-10-14 (late evening): GitHub is the only active code host again. Owner decision: there was no specific reason for the GitLab move, and GitHub suits Claude Code and the job search. Rewrote the page around GitHub `DeveloperZo/alonzo-anthologies` (renamed from `Zo-Garden-eCafe`, same repo id 1229275646); GitLab is described as an archived, read-only leftover; links moved to OPER-002-GitHubPush, ST-005-RetireGitLab, ST-007-GitHubCi and the closed TD-001. Re-verified tonight: remotes and upstreams (`origin` GitHub, `gitlab` GitLab, `main` tracks `origin/main`), `git ls-remote` on both (`main` at c6dadfe on each), the old GitHub URL redirecting, `main` not protected and no rulesets (public API), no `.github/workflows/` at the root, the two Cloudflare check runs on c6dadfe, both Pages projects on repo id 1229275646, GitLab project listed as archived, all local branches merged into `main`. Kept unchanged: the `.gitignore` and `_ENV/` facts and the prunable worktree. Dropped: GitLab `main` protection, the GitLab webhook and the GitLab commit status as live parts of the path.
 - 2026-10-14: Rewritten into the Architecture area-page skeleton, with diagram DIA-102. GitLab was then the only host (c6dadfe). Re-verified that day: remotes and upstreams, `git ls-remote` on both hosts, `main` protection on GitLab, the Cloudflare webhook, no remote mirrors, no CI config, the commit status on c6dadfe, `.gitignore` committed with `_ENV/`, no token prefix in any of the 38 commits reachable from local refs, and `site/.github/` deleted in c6dadfe.
 - 2026-10-14: Created (rules-first shape) from a read-only audit of local git state, `git ls-remote` against both hosts, the GitHub public API and `glab api` on the GitLab project.
