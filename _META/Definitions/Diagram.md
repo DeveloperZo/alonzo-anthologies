@@ -38,7 +38,7 @@ picking a number.
 
 ## The SVG
 
-The SVG is the artifact. Quartz, GitHub and GitLab render it directly, so
+The SVG is the artifact. Quartz and GitLab render it directly, so
 there is no PNG step. Every SVG carries:
 
 - a `<title>` that starts with the ID: `DIA-001 · Training pipeline ...`

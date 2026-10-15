@@ -1,6 +1,6 @@
 # `resumeContent` — Alonzo's Anthologies (CRA)
 
-This package is the Alonzo's Anthologies monorepo’s **Alonzo's Anthologies** SPA (npm **`resume-content`**). It originated as the `zowilliams.github.io` GitHub Pages app and is now built for **Cloudflare Pages** as part of the combined site.
+This package is the interactive resume SPA in the Alonzo's Anthologies monorepo (npm **`resume-content`**). It started as a standalone static site and is now built for **Cloudflare Pages** as part of the combined site.
 
 ## Monorepo wiring
 

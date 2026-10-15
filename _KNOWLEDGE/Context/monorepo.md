@@ -2,7 +2,6 @@
 
 Root: `C:\Repos\alonzo-anthologies`
 Primary remote: `gitlab.com/awilliams9293/alonzo-anthologies` (public)
-Backup remote: `github.com/DeveloperZo/alonzo-anthologies` (as `github`)
 
 A single repo housing multiple projects under one roof. The product brand
 is **Alonzo's Anthologies**. It covers the Quartz site at `site/` and

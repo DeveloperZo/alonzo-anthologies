@@ -15,7 +15,6 @@ Local remotes:
 | Remote | URL |
 | --- | --- |
 | `origin` | `https://gitlab.com/awilliams9293/alonzo-anthologies.git` |
-| `github` | `https://github.com/DeveloperZo/alonzo-anthologies.git` (backup) |
 
 For CLI work on GitLab, use `glab` (authenticated via `glab auth login --hostname gitlab.com`).
 
@@ -27,14 +26,14 @@ non-local work sees the canonical remote.
 
 The old site brand was dropped. Everything is now Alonzo's Anthologies,
 and the Quartz folder moved from its old name to `site/`. The repo was
-updated to the new names in the same change. Three things live outside
-the repo and have to be renamed by hand to match:
+updated to the new names in the same change. GitLab is the only code
+host. Three things live outside the repo and have to be done by hand:
 
-- Cloudflare Pages project: rename it to `alonzo-anthologies` (the
-  `name` in `wrangler.toml`), so it serves `alonzo-anthologies.pages.dev`
-  (the `baseUrl`). Also set its build output directory to `site/public`.
-- GitHub backup repo: rename it to `DeveloperZo/alonzo-anthologies`, then
-  run `git remote set-url github https://github.com/DeveloperZo/alonzo-anthologies.git`.
+- The GitLab-connected Pages project `alonzo-anthologies` already
+  exists. Change its build output directory to `site/public` before
+  pushing the rename (OPER-001, Step C).
+- Retire the old `zo-garden` Pages project and the code host it deploys
+  from (TD-005). It still builds from the old `garden/public` path.
 - Any links already shared that point at the old `*.pages.dev` hostname.
 
 Remove this section once all three are done.
@@ -56,8 +55,7 @@ Already in place:
 Dashboard setup (gives auto-deploy on push to `main`):
 
 Cloudflare, then Workers and Pages, then Create, then Pages, then Connect
-to Git, then select the GitLab project `alonzo-anthologies` (or keep an
-existing GitHub-connected project until you re-point it). Settings:
+to Git, then select the GitLab project `alonzo-anthologies`. Settings:
 
 - Build command: `bash ./build.sh`
 - Build output directory: `site/public`

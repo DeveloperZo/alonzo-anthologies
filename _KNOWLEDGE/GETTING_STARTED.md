@@ -51,7 +51,7 @@ cd site
 npx quartz build
 ```
 
-Output lands in `site/public/`. Deploy that folder however you ship — GitHub Pages, Cloudflare Pages, Netlify, etc.
+Output lands in `site/public/`. Production deploys that folder to Cloudflare Pages.
 
 ## Doc conventions
 

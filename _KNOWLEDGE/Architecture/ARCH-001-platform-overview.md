@@ -40,7 +40,7 @@ Out of scope: the internal architecture of any individual project (those get the
 │   ├── quartz/     ← Quartz framework (vendored)                                       │
 │   └── public/     ← build output (gitignored)                                         │
 │                                                                                       │
-│   resumeContent/     ← CRA interactive resume (npm `resume-content`; migrated from zowilliams.github.io). │
+│   resumeContent/     ← CRA interactive resume (npm `resume-content`; migrated from a standalone repo). │
 │                     Subsumed into the monorepo (its standalone .git was removed).     │
 │                                                                                       │
 │   <future>/       ← additional Zo-owned projects, added under their own folders.      │
@@ -51,7 +51,7 @@ Out of scope: the internal architecture of any individual project (those get the
 External-facing surfaces:
 
 - **The docs site** (Quartz output of `site/content/`) — the public-facing canonical reference for every project under this roof.
-- **The `resumeContent/` app** — also staged at **`/resume`** on the Cloudflare Pages deploy of this monorepo (see closed [`M-001`](../Stories/completed/M-001-quartz-go-live.md)). A legacy GitHub Pages deploy may still exist at `developerzo.github.io/zowilliams.github.io` until retired.
+- **The `resumeContent/` app** — also staged at **`/resume`** on the Cloudflare Pages deploy of this monorepo (see closed [`M-001`](../Stories/completed/M-001-quartz-go-live.md)). An older standalone deploy may still exist until retired.
 
 ## Components and interfaces
 
@@ -87,7 +87,7 @@ npx quartz build --serve     # serves on http://localhost:8080 with live reload
 
 - **Vendored Quartz vs. dependency.** Quartz is layered into `site/` rather than installed as an npm dependency, because that's its supported usage model (per its own docs). Tradeoff: upgrades require re-running the setup script and reconciling our local `quartz.config.ts` / `quartz.layout.ts` edits. Mitigation: keep our edits to those two files surgical, and review Quartz changelog before re-running setup.
 - **No workspace tooling yet.** With only `site/` and `resumeContent/`, the cost of npm workspaces / Turborepo isn't justified. Risk: as more projects land, dependency duplication and CI churn grow. Revisit when the third project is under the roof or when CI lands.
-- **Legacy GitHub Pages URL.** `developerzo.github.io/zowilliams.github.io` may still serve an older deploy until redirected or retired. Canonical public Zo documentation URL: **`https://alonzo-anthologies.pages.dev`**. Mitigation: prefer linking the monorepo docs site; retire or redirect the legacy deploy when convenient.
+- **Legacy resume URL.** The old standalone resume site may still serve an older deploy until redirected or retired. Canonical public Zo documentation URL: **`https://alonzo-anthologies.pages.dev`**. Mitigation: prefer linking the monorepo docs site; retire or redirect the legacy deploy when convenient.
 - **Doc rot.** The taxonomy is only useful if artifacts are kept current. Mitigation: every doc carries a `Last updated` and `Update trigger` in its frontmatter; the roadmap's review cadence is documented in [`ROADMAP.md`](../Stories/ROADMAP.md).
 
 ## Verification plan

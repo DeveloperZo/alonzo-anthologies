@@ -36,7 +36,7 @@ picking a number.
 
 ## The SVG is the artifact
 
-Diagrams are hand-authored SVG. Quartz and GitHub/GitLab render SVG directly,
+Diagrams are hand-authored SVG. Quartz and GitLab render SVG directly,
 so there is no PNG step. (Serennovas renders PNGs from TOML specs because the
 Azure DevOps wiki cannot display SVG. That constraint does not apply here.)
 

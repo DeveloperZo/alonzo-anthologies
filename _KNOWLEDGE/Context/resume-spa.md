@@ -47,7 +47,7 @@ join the entry, the start date moves to match.
 **`externalLink` is wired and used.** It renders as a Repository row in
 QuestDetail and as a link under the project name in ResumeView. Only
 `gitlab.com/awilliams9293/alonzo-anthologies` is public; the Gatekeeper Bastion
-GitHub repo returns 404 unauthenticated and Serennovas is a private Azure
+repo returns 404 unauthenticated and Serennovas is a private Azure
 DevOps repo, so neither can be linked.
 
 ## Editorial contract for quest content
@@ -200,12 +200,12 @@ harnesses, or complexity scores. Do not use raw git insertion totals
 (Bastion's millions are asset churn). Git authors are almost all
 ArchitectZo, so do not invent an authorship percentage; the unwritten-
 code claim is the method, not a measured split. Do not print the Quartz site
-or link the public GitHub. Start date is April 2025, first InfinityQube
+or link any other public repo. Start date is April 2025, first InfinityQube
 commit. No `externalLink` on this quest.
 
 Left off the printed card on purpose: the Quartz site (this resume's host),
 the n7/Discord family-assistant stack (personal), Plumbing (thin
-website prototype), PortfolioSite and RoderickSite (old GitHub Pages),
+website prototype), PortfolioSite and RoderickSite (old static sites),
 The Bonds (fiction), and Serennovas (quest 12, paid consulting).
 
 ## Independent consulting entries

@@ -196,7 +196,7 @@ const ResumeView: React.FC = () => {
                     <span className="company-name">
                       {project.link ? (
                         <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
-                          GitHub
+                          Repository
                         </a>
                       ) : (
                         'Personal Project'

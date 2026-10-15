@@ -122,7 +122,7 @@ All content and UX logic lives in `resumeContent/src/`. Read every file before t
 
 ## Evidence
 
-- **Source.** `resumeContent/` vendored from [`DeveloperZo/zowilliams.github.io`](https://github.com/DeveloperZo/zowilliams.github.io) (nested `.git` removed); canonical app name unchanged (`resume-content`).
+- **Source.** `resumeContent/` vendored from the old standalone resume repo (nested `.git` removed); canonical app name unchanged (`resume-content`).
 - **Build.** `npm ci && npm run build` in `resumeContent/`: exit 0 (warnings only). `bash ./build.sh`: exit 0; `site/public/resume/index.html` emitted with `/resume/` asset prefixes.
 - **Quartz.** `site/content/resume.md` removed — no Quartz `/resume` slug; SPA owns the route after the copy step in `build.sh`.
 - **Live checks.** Smoke at `https://alonzo-anthologies.pages.dev/resume/#/main-menu` and hash routes listed above post-deploy.

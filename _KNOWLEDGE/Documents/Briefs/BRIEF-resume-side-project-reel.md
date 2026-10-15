@@ -9,7 +9,7 @@ highlight reel of real side projects, each entry grounded in evidence
 pulled from commit history.
 
 Commit history is an input to the writing, not output on the page. No
-GitHub API calls at runtime, no contribution heatmap, no repo cards. The
+code-host API calls at runtime, no contribution heatmap, no repo cards. The
 history is read to make the claims specific and checkable, then it stays
 behind the scenes.
 
