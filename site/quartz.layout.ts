@@ -45,7 +45,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitLab: "https://gitlab.com/awilliams9293/alonzo-anthologies",
+      GitHub: "https://github.com/DeveloperZo/alonzo-anthologies",
     },
   }),
 }
