@@ -19,17 +19,14 @@ Use a Story when there is work to build. Use an [Architecture](./Architecture.md
 doc for rules that outlast any one piece of work, and a
 [Document](./Document.md) for reference material.
 
-## Kinds
+## ID
 
-| Kind | ID | Shape |
-| --- | --- | --- |
-| Story | `M-###` | Full shape below |
-| Retroactive | `RM-###` | Work that already shipped. Summary in the past tense, user story optional, each criterion already met with evidence |
+`ST-###`, so the ID always matches the definition it belongs to.
 
 ## Where it lives
 
-- Active and planned: `_KNOWLEDGE/Stories/`.
-- Completed: `_KNOWLEDGE/Stories/completed/`. Retroactive Stories go straight there.
+- Planned and active: `_KNOWLEDGE/Stories/`.
+- Completed: `_KNOWLEDGE/Stories/completed/`.
 - Sequencing: `_KNOWLEDGE/Stories/ROADMAP.md` is the single planning surface. Every Story has a row there.
 
 ## Sections, in order
@@ -50,8 +47,10 @@ doc for rules that outlast any one piece of work, and a
 
 ## Statuses
 
-`planned`, `in_progress`, `blocked`, `deferred`, `superseded`, `completed`.
-Keep the Status section and the frontmatter `Status:` line in step.
+`planned`, `active`, `completed`. These are the states the roadmap tracks
+(Next and Later, Now, Completed) and the ones existing Stories use. Record a
+blocker in the Status section's next-step line, not as a status. Keep the
+Status section and the frontmatter `Status:` line in step.
 
 ## Definition of done
 
@@ -65,7 +64,7 @@ A Story moves to `completed/` when:
 ## Template
 
 ```markdown
-# M-### <Outcome in a few words>
+# ST-### <Outcome in a few words>
 
 <!--
 Purpose: <one sentence>
@@ -120,4 +119,6 @@ Last updated: <YYYY-MM-DD>
 
 ## Changelog
 
+- 2026-10-14: Removed the retroactive kind and the Serennovas-only statuses (`in_progress`, `blocked`, `deferred`, `superseded`); neither had any instance or use in this repo. Statuses are now the three the roadmap and existing Stories use.
+- 2026-10-14: IDs changed from `M-###` to `ST-###`, so a Story's ID matches its definition.
 - 2026-10-14: Created from the earlier `milestone.md` contract (IDs, `completed/`, roadmap) and the Serennovas milestone definition (section order, user story, numbered acceptance criteria, definition of done). Serennovas board linkage and founder action items were not carried over.

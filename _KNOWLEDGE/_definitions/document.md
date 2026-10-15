@@ -2,12 +2,14 @@
 
 <!--
 Purpose: The frontmatter contract every canonical doc under _KNOWLEDGE/ follows, whatever its artifact class.
-Status: canonical
+Status: superseded
 Owner: zo
 Human id: definition-document
 Update trigger: when a frontmatter field is added, removed, or changes meaning
 Last updated: 2026-10-14
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/`](../../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 ## The block
 

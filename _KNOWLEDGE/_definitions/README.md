@@ -7,11 +7,13 @@ draft: false
 ---
 <!--
 Purpose: Authoring contracts for every doc artifact type. The schema for what counts as a valid ARCH/M/RM/OPER/TD/ROADMAP document.
-Status: canonical
+Status: superseded
 Owner: zo
 Update trigger: when an artifact type is added, removed, or has its required sections changed
 Last updated: 2026-05-04
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/`](../../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 # Definitions
 

@@ -7,11 +7,13 @@ draft: false
 ---
 <!--
 Purpose: Authoring contract for M-### and RM-### milestone artifacts.
-Status: canonical
+Status: superseded
 Owner: zo
 Update trigger: when required sections change
 Last updated: 2026-05-04
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/`](../../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 # Milestone
 

@@ -46,7 +46,7 @@ join the entry, the start date moves to match.
 
 **`externalLink` is wired and used.** It renders as a Repository row in
 QuestDetail and as a link under the project name in ResumeView. Only
-`gitlab.com/awilliams9293/alonzo-anthologies` is public; the Gatekeeper Bastion
+`github.com/DeveloperZo/alonzo-anthologies` is public; the Gatekeeper Bastion
 repo returns 404 unauthenticated and Serennovas is a private Azure
 DevOps repo, so neither can be linked.
 

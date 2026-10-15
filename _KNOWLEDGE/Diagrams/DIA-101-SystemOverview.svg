@@ -1,0 +1,145 @@
+<svg viewBox="0 0 1010 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia101-title dia101-desc">
+  <title id="dia101-title">DIA-101 · The whole system: from the owner's machine to the live site</title>
+  <desc id="dia101-desc">Reads left to right. On the owner's machine the repo holds the public writing (site/content), the resume app (resumeContent), the project docs (_KNOWLEDGE, never published) and a gitignored Cloudflare token (_ENV). Step 1: the owner commits and pushes to the GitHub repo DeveloperZo/alonzo-anthologies, whose main branch is production. Step 2: Cloudflare's GitHub App tells the Cloudflare Pages project alonzo-anthologies to build. Step 3: Cloudflare runs build.sh; Quartz turns site/content into pages while the StageResumeSpa step builds the resume app, and both land in site/public. Step 4: main is published at alonzo-anthologies.pages.dev, other branches at preview addresses. Step 5: visitors read the site at / and the resume app at /resume/. A dashed row below shows what is left over: the archived GitLab project, read-only and fed by nothing, and the legacy zo-garden Pages project, which the same GitHub repo still feeds on every push, so zo-garden.pages.dev serves a duplicate of the current build.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); } [stroke="#6B6873"] { stroke: var(--muted); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="h-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="h-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#5A8270"/></marker>
+    <marker id="h-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="h-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#9D9A95"/></marker>
+    <marker id="h-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A85B49"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1010" height="560" fill="#FAFAF8"/>
+  <!-- column A: owner's machine -->
+  <rect x="20" y="40" width="210" height="300" rx="12" fill="#F2EEE3" stroke="#E2DFD6" stroke-width="1.5"/>
+  <text x="125" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6873">OWNER'S MACHINE</text>
+  <rect x="35" y="75" width="180" height="52" rx="9" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.8"/>
+  <text x="125" y="97" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">site/content/</text>
+  <text x="125" y="114" text-anchor="middle" font-size="10.5" fill="#5A8270">public writing (Markdown)</text>
+  <rect x="35" y="137" width="180" height="52" rx="9" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.8"/>
+  <text x="125" y="159" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">resumeContent/</text>
+  <text x="125" y="176" text-anchor="middle" font-size="10.5" fill="#5A8270">the resume app (React)</text>
+  <rect x="35" y="199" width="180" height="52" rx="9" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="125" y="221" text-anchor="middle" font-size="13" font-weight="700" fill="#6B6873">_KNOWLEDGE/</text>
+  <text x="125" y="238" text-anchor="middle" font-size="10.5" fill="#6B6873">project docs, never published</text>
+  <rect x="35" y="261" width="180" height="52" rx="9" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="125" y="283" text-anchor="middle" font-size="13" font-weight="700" fill="#A85B49">_ENV/</text>
+  <text x="125" y="300" text-anchor="middle" font-size="10.5" fill="#A85B49">Cloudflare token, gitignored</text>
+  <!-- column B: GitHub -->
+  <rect x="275" y="118" width="170" height="84" rx="10" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="360" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="#4F627F">GitHub</text>
+  <text x="360" y="161" text-anchor="middle" font-size="10.5" fill="#4F627F">alonzo-anthologies (public)</text>
+  <text x="360" y="177" text-anchor="middle" font-size="10.5" fill="#4F627F">main = production</text>
+  <text x="360" y="192" text-anchor="middle" font-size="10.5" fill="#4F627F">the only code host</text>
+  <!-- column C: Cloudflare Pages -->
+  <rect x="490" y="40" width="250" height="300" rx="12" fill="#F0E5CD" stroke="#A28438" stroke-width="1.5"/>
+  <text x="615" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#A28438">CLOUDFLARE PAGES · alonzo-anthologies</text>
+  <rect x="510" y="75" width="210" height="48" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.8"/>
+  <text x="615" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">bash ./build.sh</text>
+  <text x="615" y="113" text-anchor="middle" font-size="10.5" fill="#A28438">Node 22.16.0</text>
+  <rect x="510" y="150" width="100" height="68" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.8"/>
+  <text x="560" y="172" text-anchor="middle" font-size="12.5" font-weight="700" fill="#A28438">Quartz</text>
+  <text x="560" y="189" text-anchor="middle" font-size="10" fill="#A28438">pages from</text>
+  <text x="560" y="203" text-anchor="middle" font-size="10" fill="#A28438">site/content</text>
+  <rect x="620" y="150" width="100" height="68" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.8"/>
+  <text x="670" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#A28438">StageResumeSpa</text>
+  <text x="670" y="189" text-anchor="middle" font-size="10" fill="#A28438">builds the</text>
+  <text x="670" y="203" text-anchor="middle" font-size="10" fill="#A28438">resume app</text>
+  <rect x="510" y="245" width="210" height="48" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.8"/>
+  <text x="615" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">site/public/</text>
+  <text x="615" y="283" text-anchor="middle" font-size="10.5" fill="#A28438">every file that is served</text>
+  <line x1="560" y1="123" x2="560" y2="146" stroke="#A28438" stroke-width="1.8" marker-end="url(#h-amber)"/>
+  <line x1="670" y1="123" x2="670" y2="146" stroke="#A28438" stroke-width="1.8" marker-end="url(#h-amber)"/>
+  <line x1="560" y1="218" x2="560" y2="241" stroke="#A28438" stroke-width="1.8" marker-end="url(#h-amber)"/>
+  <line x1="670" y1="218" x2="670" y2="241" stroke="#A28438" stroke-width="1.8" marker-end="url(#h-amber)"/>
+  <!-- column D: live -->
+  <rect x="785" y="75" width="205" height="84" rx="10" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="887" y="99" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5A8270">alonzo-anthologies.pages.dev</text>
+  <text x="887" y="119" text-anchor="middle" font-size="10.5" fill="#5A8270">/   essays and the series</text>
+  <text x="887" y="136" text-anchor="middle" font-size="10.5" fill="#5A8270">/resume/   the resume app</text>
+  <text x="887" y="151" text-anchor="middle" font-size="9.5" fill="#5A8270">production, from main</text>
+  <rect x="785" y="185" width="205" height="52" rx="10" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5"/>
+  <text x="887" y="207" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6B6873">Visitors</text>
+  <text x="887" y="224" text-anchor="middle" font-size="10.5" fill="#6B6873">readers, recruiters (PDF)</text>
+  <rect x="785" y="261" width="205" height="52" rx="10" fill="#FAFAF8" stroke="#A28438" stroke-width="1.5"/>
+  <text x="887" y="283" text-anchor="middle" font-size="12" font-weight="700" fill="#A28438">&lt;id&gt;.alonzo-anthologies.pages.dev</text>
+  <text x="887" y="300" text-anchor="middle" font-size="10.5" fill="#A28438">public preview per branch</text>
+  <!-- main flow arrows -->
+  <line x1="230" y1="160" x2="271" y2="160" stroke="#4F627F" stroke-width="2.5" marker-end="url(#h-blue)"/>
+  <line x1="445" y1="160" x2="486" y2="160" stroke="#4F627F" stroke-width="2.5" marker-end="url(#h-blue)"/>
+  <path d="M720,269 L758,269 L758,117 L781,117" fill="none" stroke="#5A8270" stroke-width="2.5" marker-end="url(#h-green)"/>
+  <path d="M758,269 L758,287 L781,287" fill="none" stroke="#A28438" stroke-width="2" marker-end="url(#h-amber)"/>
+  <line x1="887" y1="185" x2="887" y2="163" stroke="#5A8270" stroke-width="2" marker-end="url(#h-green)"/>
+  <!-- token, read checks -->
+  <path d="M215,287 L486,287" fill="none" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="2,3" marker-end="url(#h-red)"/>
+  <text x="352" y="280" text-anchor="middle" font-size="10" fill="#A85B49">API token, read-only checks</text>
+  <!-- step badges -->
+  <circle cx="250" cy="146" r="10" fill="#F2EEE3" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="250" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">1</text>
+  <circle cx="466" cy="146" r="10" fill="#F2EEE3" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="466" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">2</text>
+  <circle cx="500" cy="99" r="10" fill="#F2EEE3" stroke="#A28438" stroke-width="1.5"/>
+  <text x="500" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#A28438">3</text>
+  <circle cx="758" cy="200" r="10" fill="#F2EEE3" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="758" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#5A8270">4</text>
+  <circle cx="905" cy="174" r="10" fill="#F2EEE3" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="905" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#5A8270">5</text>
+  <!-- which page covers what -->
+  <text x="125" y="357" text-anchor="middle" font-size="10" font-style="italic" fill="#9D9A95">ARCH-004 site build · ARCH-005 resume</text>
+  <text x="360" y="357" text-anchor="middle" font-size="10" font-style="italic" fill="#9D9A95">ARCH-002 source control</text>
+  <text x="615" y="357" text-anchor="middle" font-size="10" font-style="italic" fill="#9D9A95">ARCH-003 hosting · ARCH-004 site build</text>
+  <text x="887" y="357" text-anchor="middle" font-size="10" font-style="italic" fill="#9D9A95">ARCH-003 hosting · ARCH-005 resume</text>
+  <!-- legacy row -->
+  <text x="20" y="389" font-size="11" font-weight="700" fill="#9D9A95">LEFT OVER (to be retired: ST-004, ST-005)</text>
+  <path d="M445,190 L467,190 L467,426 L506,426" fill="none" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#h-gray)"/>
+  <text x="474" y="384" font-size="9.5" fill="#9D9A95">same push</text>
+  <rect x="275" y="400" width="170" height="52" rx="9" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="360" y="422" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6873">GitLab (archived)</text>
+  <text x="360" y="439" text-anchor="middle" font-size="10" fill="#9D9A95">read-only, fed by nothing</text>
+  <rect x="510" y="400" width="210" height="52" rx="9" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="615" y="422" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6873">Pages project zo-garden</text>
+  <text x="615" y="439" text-anchor="middle" font-size="10" fill="#9D9A95">same repo, builds every push (TD-002)</text>
+  <rect x="785" y="400" width="205" height="52" rx="9" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="887" y="422" text-anchor="middle" font-size="12" font-weight="700" fill="#6B6873">zo-garden.pages.dev</text>
+  <text x="887" y="439" text-anchor="middle" font-size="10" fill="#9D9A95">duplicate of the current site</text>
+  <line x1="720" y1="426" x2="781" y2="426" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#h-gray)"/>
+  <!-- legend -->
+  <line x1="20" y1="487" x2="56" y2="487" stroke="#4F627F" stroke-width="2.5"/>
+  <text x="64" y="491" font-size="10.5" fill="#6B6873">push to deploy</text>
+  <line x1="170" y1="487" x2="206" y2="487" stroke="#5A8270" stroke-width="2.5"/>
+  <text x="214" y="491" font-size="10.5" fill="#6B6873">live to visitors</text>
+  <line x1="325" y1="487" x2="361" y2="487" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="369" y="491" font-size="10.5" fill="#6B6873">left over, to be retired</text>
+  <line x1="505" y1="487" x2="541" y2="487" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="2,3"/>
+  <text x="549" y="491" font-size="10.5" fill="#6B6873">credential, local only</text>
+  <circle cx="690" cy="487" r="8" fill="#F2EEE3" stroke="#6B6873" stroke-width="1.2"/>
+  <text x="690" y="491" text-anchor="middle" font-size="9.5" font-weight="700" fill="#6B6873">n</text>
+  <text x="704" y="491" font-size="10.5" fill="#6B6873">step in ARCH-001, Flows that cross pages</text>
+  <!-- caption -->
+  <text x="505" y="535" text-anchor="middle" font-size="12" font-weight="600" fill="#A85B49">DIA-101 · One push to GitHub main builds the site and the resume app on Cloudflare and publishes both; zo-garden still builds a copy.</text>
+</svg>

@@ -1,5 +1,5 @@
 ---
-title: M-002 First content seeds live
+title: ST-002 First content seeds live
 tags:
   - milestone
   - active
@@ -13,11 +13,11 @@ Update trigger: when an exit criterion flips, when content is published
 Last updated: 2026-05-04
 -->
 
-# M-002 First content seeds live
+# ST-002 First content seeds live
 
 ## Objective
 
-The site launched (M-001) with project management artifacts as its only content — milestones, runbooks, architecture docs. That was a structural mistake. This milestone corrects it: move all project docs out of `site/content/` into a project-docs folder where they drive development without being published, and plant the site's first two real content seeds so that a visitor to `alonzo-anthologies.pages.dev` finds something worth reading.
+The site launched (ST-001) with project management artifacts as its only content — milestones, runbooks, architecture docs. That was a structural mistake. This milestone corrects it: move all project docs out of `site/content/` into a project-docs folder where they drive development without being published, and plant the site's first two real content seeds so that a visitor to `alonzo-anthologies.pages.dev` finds something worth reading.
 
 ## Exit criteria
 
@@ -29,13 +29,13 @@ The site launched (M-001) with project management artifacts as its only content 
 
 ## Dependencies
 
-- M-001 completed — `alonzo-anthologies.pages.dev` must be live before exit criteria can be verified.
+- ST-001 completed — `alonzo-anthologies.pages.dev` must be live before exit criteria can be verified.
 - The old project-docs folder under the site must exist as the destination for displaced project docs (done).
 
 ## Evidence
 
 - 2026-05-04 — Project-docs folder created under the site; project docs moved out of `site/content/`.
-- 2026-05-04 — `site/content/thinking-in-systems-ai.md` created as an initial seed; resume experience lives in monorepo `resumeContent/` (see [`M-003`](./completed/M-003-resume-live.md)).
+- 2026-05-04 — `site/content/thinking-in-systems-ai.md` created as an initial seed; resume experience lives in monorepo `resumeContent/` (see [`ST-003`](./completed/ST-003-ResumeLive.md)).
 - _Live verification: TBD once content has substance and deploys green._
 
 ## Notes
@@ -44,4 +44,4 @@ The site launched (M-001) with project management artifacts as its only content 
 
 - **Two seeds only.** Resume and Thinking in Systems: AI. No folder structure beyond what these two need. The site grows as content grows, not ahead of it.
 - **Project docs location.** A project-docs folder under the site, accessible to agents and collaborators for context, not served by Quartz as public content. (Moved to `_KNOWLEDGE/` on 2026-10-14; the decision to keep project docs out of `site/content/` still stands.)
-- **Resume approach.** Canonical experience is the CRA SPA in `resumeContent/` (npm `resume-content`), staged at **`/resume`** via `build.sh` ([`M-003`](./completed/M-003-resume-live.md)). Quartz does not emit a conflicting `/resume` page.
+- **Resume approach.** Canonical experience is the CRA SPA in `resumeContent/` (npm `resume-content`), staged at **`/resume`** via `build.sh` ([`ST-003`](./completed/ST-003-ResumeLive.md)). Quartz does not emit a conflicting `/resume` page.

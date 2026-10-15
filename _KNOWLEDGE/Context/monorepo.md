@@ -1,15 +1,22 @@
 # Alonzos Anthologies monorepo
 
 Root: `C:\Repos\alonzo-anthologies`
-Primary remote: `gitlab.com/awilliams9293/alonzo-anthologies` (public)
+Primary remote: `github.com/DeveloperZo/alonzo-anthologies` (public), local
+remote `origin`. It is the only code host (owner decision, 2026-10-14).
 
 A single repo housing multiple projects under one roof. The product brand
 is **Alonzo's Anthologies**. It covers the Quartz site at `site/` and
 the interactive resume SPA the site hosts. The site has no separate brand.
 
-GitLab project display name is `Alonzos Anthologies` (no apostrophe;
-GitLab rejects `'` in project names). User-facing copy still uses
+The GitHub repo was named `Zo-Garden-eCafe` until 2026-10-14; GitHub
+redirects the old URL. Repo names cannot hold an apostrophe, so the slug
+is `alonzo-anthologies`. User-facing copy still uses
 **Alonzo's Anthologies**.
+
+For a few hours on 2026-10-14 the code lived on GitLab
+(`awilliams9293/alonzo-anthologies`). That project is now archived
+(read-only, history kept) and is a local remote named `gitlab` for
+reference only. Do not push to it.
 
 ## Why
 

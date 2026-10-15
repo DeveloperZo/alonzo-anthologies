@@ -2,12 +2,14 @@
 
 <!--
 Purpose: Authoring rules that apply to every doc under _KNOWLEDGE/, and the record of rules that were adopted or retired.
-Status: canonical
+Status: superseded
 Owner: zo
 Human id: docs-conventions
 Update trigger: when a rule is adopted or retired that should apply across stories, architecture, documents and diagrams
 Last updated: 2026-10-14
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/README.md`](../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 These rules apply to every artifact class: stories (`M-###`, `RM-###`),
 architecture (`ARCH-###`), runbooks (`OPER-###`), technical debt (`TD-###`),

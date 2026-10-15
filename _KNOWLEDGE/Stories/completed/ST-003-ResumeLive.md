@@ -1,5 +1,5 @@
 ---
-title: M-003 Interactive resume live at /resume
+title: ST-003 Interactive resume live at /resume
 tags:
   - milestone
   - completed
@@ -13,7 +13,7 @@ Update trigger: historical record only
 Last updated: 2026-05-04
 -->
 
-# M-003 Interactive resume live at /resume
+# ST-003 Interactive resume live at /resume
 
 ## Objective
 
@@ -86,7 +86,7 @@ All content and UX logic lives in `resumeContent/src/`. Read every file before t
   CRA lint warnings are acceptable; errors are not. Document any errors and fix them.
 - [x] **`build.sh` completes end-to-end.** `bash ./build.sh` from repo root produces
   `site/public/resume/index.html` and all associated static assets.
-- [x] **`site/content/resume.md` collision resolved.** The stub markdown file created in M-002
+- [x] **`site/content/resume.md` collision resolved.** The stub markdown file created in ST-002
   is removed. The React app at `site/public/resume/` is the sole owner of the `/resume` route.
   Quartz must not generate a `/resume` page that conflicts with the app's `index.html`.
 - [x] **All routes functional on the deployed site.** At `alonzo-anthologies.pages.dev/resume`:
@@ -107,7 +107,7 @@ All content and UX logic lives in `resumeContent/src/`. Read every file before t
 
 ## Dependencies
 
-- M-001 complete — `alonzo-anthologies.pages.dev` is live and `build.sh` is the confirmed build command.
+- ST-001 complete — `alonzo-anthologies.pages.dev` is live and `build.sh` is the confirmed build command.
 - `resumeContent/` source is present and untracked status does not affect the build (CRA reads source,
   outputs to `resumeContent/build/`, `build.sh` copies that output).
 

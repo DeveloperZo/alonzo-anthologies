@@ -2,12 +2,14 @@
 
 <!--
 Purpose: Authoring contract for DIA-### diagrams: naming, where they live, the spec sibling, and where the caption goes.
-Status: canonical
+Status: superseded
 Owner: zo
 Human id: definition-diagram
 Update trigger: when diagram naming, placement, the spec shape, or the caption rule changes
 Last updated: 2026-10-14
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/`](../../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 Visual style (palette, typography, nodes, arrows, legends, SVG boilerplate) is
 not repeated here. It lives in the diagramming skill at

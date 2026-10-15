@@ -1,0 +1,123 @@
+<svg viewBox="0 0 990 545" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia105-title dia105-desc">
+  <title id="dia105-title">DIA-105 · Resume SPA: data files to views, the printed resume and the PDF</title>
+  <desc id="dia105-desc">Four columns read left to right. Data files (quests.data.tsx, profile.data.ts, labels.ts with styles.data.tsx) feed the views (ResumeView, the other views, the navbar and main menu), which render what the visitor sees (the printed resume, the interactive pages, the theme frame). From the printed resume only, Download PDF runs html2canvas on the resume container, cuts the canvas into A4 JPEG strips and saves them with jsPDF as an image-only PDF. A dashed frame marks everything that runs in the browser at /resume/. A strip along the bottom shows the build: the React app is built with homepage /resume, copied by the Quartz StageResumeSpa emitter into site/public/resume/, and served by Cloudflare Pages.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="d105-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#9D9A95"/></marker>
+    <marker id="d105-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A85B49"/></marker>
+  </defs>
+  <rect width="990" height="545" fill="#F2EEE3"/>
+  <!-- header -->
+  <text x="495" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-105 · RESUME SPA</text>
+  <text x="495" y="48" text-anchor="middle" font-size="12" fill="#6B6873">data files → views → what the visitor sees → Download PDF · served under /resume/</text>
+  <!-- column pills -->
+  <rect x="20"  y="62" width="200" height="24" rx="4" fill="#E2DFD6"/>
+  <rect x="290" y="62" width="200" height="24" rx="4" fill="#E2DFD6"/>
+  <rect x="530" y="62" width="200" height="24" rx="4" fill="#E2DFD6"/>
+  <rect x="770" y="62" width="200" height="24" rx="4" fill="#E2DFD6"/>
+  <text x="120" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#6B6873">① edit the data</text>
+  <text x="390" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#6B6873">④ ⑤ views pick and filter</text>
+  <text x="630" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#6B6873">what the visitor sees</text>
+  <text x="870" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#6B6873">⑥ to ⑧ Download PDF</text>
+  <!-- browser frame -->
+  <rect x="275" y="96" width="705" height="292" rx="10" fill="none" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="290" y="114" font-size="10.5" font-weight="600" fill="#6B6873">③ in the browser at /resume/ · one index.html · HashRouter picks the view from #/path · theme from localStorage</text>
+  <!-- arrows: data to views -->
+  <line x1="220" y1="155" x2="288" y2="155" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="220" y1="172" x2="288" y2="238" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="220" y1="238" x2="288" y2="172" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="220" y1="255" x2="288" y2="255" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="220" y1="340" x2="288" y2="340" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <!-- arrows: views to screen -->
+  <line x1="490" y1="160" x2="528" y2="160" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="490" y1="250" x2="528" y2="250" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="490" y1="340" x2="528" y2="340" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <!-- arrows: PDF path -->
+  <line x1="730" y1="160" x2="768" y2="160" stroke="#A85B49" stroke-width="2" marker-end="url(#d105-red)"/>
+  <line x1="870" y1="190" x2="870" y2="218" stroke="#A85B49" stroke-width="2" marker-end="url(#d105-red)"/>
+  <line x1="870" y1="280" x2="870" y2="308" stroke="#A85B49" stroke-width="2" marker-end="url(#d105-red)"/>
+  <!-- arrows: build strip -->
+  <line x1="120" y1="370" x2="120" y2="406" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <line x1="630" y1="408" x2="630" y2="391" stroke="#9D9A95" stroke-width="2" marker-end="url(#d105-gray)"/>
+  <!-- column 1: data -->
+  <rect x="20" y="130" width="200" height="60" rx="10" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="120" y="155" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">quests.data.tsx</text>
+  <text x="120" y="173" text-anchor="middle" font-size="10.5" fill="#4F627F">roles · bullets · Quest.type</text>
+  <rect x="20" y="220" width="200" height="60" rx="10" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="120" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">profile.data.ts</text>
+  <text x="120" y="263" text-anchor="middle" font-size="10.5" fill="#4F627F">summary · core competencies</text>
+  <rect x="20" y="310" width="200" height="60" rx="10" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="120" y="335" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">labels.ts · styles.data</text>
+  <text x="120" y="353" text-anchor="middle" font-size="10.5" fill="#4F627F">menu words · theme colours</text>
+  <!-- column 2: views -->
+  <rect x="290" y="130" width="200" height="60" rx="10" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <text x="390" y="155" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">④ ResumeView</text>
+  <text x="390" y="173" text-anchor="middle" font-size="10.5" fill="#A28438">filters by Quest.type</text>
+  <rect x="290" y="220" width="200" height="60" rx="10" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <text x="390" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">⑤ Other views</text>
+  <text x="390" y="263" text-anchor="middle" font-size="10.5" fill="#A28438">all quests, unfiltered</text>
+  <rect x="290" y="310" width="200" height="60" rx="10" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <text x="390" y="335" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">Navbar · Main menu</text>
+  <text x="390" y="353" text-anchor="middle" font-size="10.5" fill="#A28438">work or play theme</text>
+  <!-- column 3: on screen -->
+  <rect x="530" y="130" width="200" height="60" rx="10" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="630" y="155" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">Printed resume</text>
+  <text x="630" y="173" text-anchor="middle" font-size="10.5" fill="#5A8270">/resume/#/resume</text>
+  <rect x="530" y="220" width="200" height="60" rx="10" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="630" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">Interactive pages</text>
+  <text x="630" y="263" text-anchor="middle" font-size="10.5" fill="#5A8270">#/timeline · #/quests/12 · …</text>
+  <rect x="530" y="310" width="200" height="60" rx="10" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="630" y="335" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">Theme frame</text>
+  <text x="630" y="353" text-anchor="middle" font-size="10.5" fill="#5A8270">office monitor or retro TV</text>
+  <!-- column 4: PDF path -->
+  <rect x="770" y="130" width="200" height="60" rx="10" fill="#EDD8CE" stroke="#A85B49" stroke-width="2"/>
+  <text x="870" y="155" text-anchor="middle" font-size="13" font-weight="700" fill="#A85B49">⑥ html2canvas</text>
+  <text x="870" y="173" text-anchor="middle" font-size="10.5" fill="#A85B49">paints .resume-container</text>
+  <rect x="770" y="220" width="200" height="60" rx="10" fill="#EDD8CE" stroke="#A85B49" stroke-width="2"/>
+  <text x="870" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#A85B49">⑦ JPEG strips</text>
+  <text x="870" y="263" text-anchor="middle" font-size="10.5" fill="#A85B49">canvas cut into A4 pages</text>
+  <rect x="770" y="310" width="200" height="60" rx="10" fill="#EDD8CE" stroke="#A85B49" stroke-width="2"/>
+  <text x="870" y="335" text-anchor="middle" font-size="13" font-weight="700" fill="#A85B49">⑧ jsPDF save</text>
+  <text x="870" y="353" text-anchor="middle" font-size="10.5" fill="#A85B49">image-only PDF, no text</text>
+  <!-- build strip -->
+  <rect x="20" y="410" width="950" height="40" rx="8" fill="#E2DFD6"/>
+  <text x="495" y="434" text-anchor="middle" font-size="11" font-weight="600" fill="#6B6873">② build and deploy: npm run build (homepage /resume) → StageResumeSpa copies build/ to site/public/resume/ → Cloudflare Pages</text>
+  <!-- legend -->
+  <rect x="20"  y="474" width="14" height="10" rx="2" fill="#DEE3EC" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="40"  y="483" font-size="10.5" fill="#6B6873">data: content edits go here</text>
+  <rect x="215" y="474" width="14" height="10" rx="2" fill="#F0E5CD" stroke="#A28438" stroke-width="1.5"/>
+  <text x="235" y="483" font-size="10.5" fill="#6B6873">views: React code</text>
+  <rect x="365" y="474" width="14" height="10" rx="2" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="385" y="483" font-size="10.5" fill="#6B6873">what a visitor sees</text>
+  <rect x="525" y="474" width="14" height="10" rx="2" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5"/>
+  <text x="545" y="483" font-size="10.5" fill="#6B6873">PDF path: pictures of the page</text>
+  <line x1="740" y1="479" x2="770" y2="479" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="778" y="483" font-size="10.5" fill="#6B6873">runs in the browser</text>
+  <!-- caption -->
+  <text x="495" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#A85B49">DIA-105 · Three data files feed every view; only the printed resume reaches the PDF, and it arrives as pictures, not text.</text>
+</svg>

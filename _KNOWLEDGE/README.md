@@ -23,38 +23,41 @@ what was left behind.
 | Folder | What lives there |
 | --- | --- |
 | [Context/](./Context/README.md) | Durable project context for agents and collaborators. Read first |
-| [Stories/](./Stories/README.md) | `M-###` and `RM-###` milestones, `completed/`, and the single [ROADMAP](./Stories/ROADMAP.md) |
-| [Architecture/](./Architecture/README.md) | `ARCH-###` system shape and decisions |
-| [Documents/](./Documents/README.md) | Briefs (`BRIEF-`), runbooks (`OPER-###`), technical debt (`TD-###`), video scripts (`VID-###`) |
-| [Diagrams/](./Diagrams/README.md) | `DIA-` diagrams that support knowledge docs |
-| [_definitions/](./_definitions/README.md) | Authoring contract for every artifact class |
+| [Architecture/](./Architecture/README.md) | `ARCH-###`: the landing page (ARCH-001) and one page per area of the system |
+| [Stories/](./Stories/README.md) | `ST-###` units of work, `completed/`, and the single [ROADMAP](./Stories/ROADMAP.md) |
+| [Documents/](./Documents/README.md) | Briefs (`BRIEF-###`), runbooks (`OPER-###`), technical debt (`TD-###`), video scripts (`VID-###`) |
+| [Diagrams/](./Diagrams/README.md) | `DIA-1xx` diagrams for architecture pages |
+
+Definitions for every type live outside this folder, in
+[`_META/Definitions/`](../_META/Definitions/README.md).
 
 Root files:
 
-- [CONVENTIONS.md](./CONVENTIONS.md): rules that apply to every doc in this tree.
 - [GETTING_STARTED.md](./GETTING_STARTED.md): onboarding and contribution flow.
 - [PROJECT_STATUS.md](./PROJECT_STATUS.md): transient recent-changes snapshot. Not a planning surface.
 
+Superseded and kept for history: `_definitions/` and `CONVENTIONS.md`.
+
 ## Prefixes
 
-| Prefix | Folder | Purpose |
+| Prefix | Folder | Definition |
 | --- | --- | --- |
-| `ARCH-###` | `Architecture/` | System shape, decisions, tradeoffs |
-| `M-###` | `Stories/`, then `Stories/completed/` | Active build work |
-| `RM-###` | `Stories/` (never moves) | Retroactive milestones |
-| `OPER-###` | `Documents/Operations/` | Runbooks |
-| `TD-###` | `Documents/Technical-Debt/`, then `completed/` | Debt items |
-| `BRIEF-` | `Documents/Briefs/` | Work authored in Cowork for execution in Claude Code |
-| `VID-###` | `Documents/Videos/` | Video scripts |
-| `DIA-###` | `Diagrams/`, or beside the page that embeds it | Diagrams |
+| `ST-###` | `Stories/`, then `Stories/completed/` | [Story](../_META/Definitions/Story.md) |
+| `ARCH-###` | `Architecture/` | [Architecture](../_META/Definitions/Architecture.md) |
+| `BRIEF-###` | `Documents/Briefs/` | [Document](../_META/Definitions/Document.md) |
+| `OPER-###` | `Documents/Operations/` | [Document](../_META/Definitions/Document.md) |
+| `TD-###` | `Documents/Technical-Debt/`, then `completed/` | [Document](../_META/Definitions/Document.md) |
+| `VID-###` | `Documents/Videos/` | [Document](../_META/Definitions/Document.md) |
+| `DIA-###` | `Diagrams/` (`DIA-1xx`), or beside a site page | [Diagram](../_META/Definitions/Diagram.md) |
 
 ## Quick start
 
+- How the system fits together: [ARCH-001 Platform overview](./Architecture/ARCH-001-PlatformOverview.md).
 - Delivery status: [ROADMAP](./Stories/ROADMAP.md).
-- Current work: [Stories](./Stories/README.md).
 - Runtime validation: [Operations index](./Documents/Operations/index.md).
-- Writing a new doc: [CONVENTIONS](./CONVENTIONS.md), then the matching file in [_definitions/](./_definitions/README.md).
+- Writing a new doc: the matching definition in [`_META/Definitions/`](../_META/Definitions/README.md).
 
 ## Changelog
 
+- 2026-10-14: Definitions moved to `_META/Definitions/`; `_definitions/` and `CONVENTIONS.md` superseded. Stories use `ST-###`, Architecture follows the Serennovas page set with ARCH-001 as the landing page, and filenames carry a short name.
 - 2026-10-14: Consolidated the old project-docs folder under the site, `docs/context/` and `docs/briefs/` into `_KNOWLEDGE/`. Milestones and the roadmap moved to `Stories/`; operations, technical debt, videos and briefs moved under `Documents/`. Added `CONVENTIONS.md`, `Diagrams/`, `_definitions/document.md` and `_definitions/diagram.md`, adapted from Serennovas.

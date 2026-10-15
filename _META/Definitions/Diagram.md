@@ -38,7 +38,7 @@ picking a number.
 
 ## The SVG
 
-The SVG is the artifact. Quartz and GitLab render it directly, so
+The SVG is the artifact. Quartz and GitHub render it directly, so
 there is no PNG step. Every SVG carries:
 
 - a `<title>` that starts with the ID: `DIA-001 · Training pipeline ...`
@@ -49,22 +49,17 @@ The markdown that embeds a Diagram adds no caption line of its own.
 
 ## The spec
 
+The spec is the reading guide that sits beside the SVG. It follows the shape
+all 13 existing specs use. It carries no frontmatter block and no Changelog:
+the Diagram is the SVG, and the spec changes only when the SVG does. This is
+the one exception to the frontmatter rule in the [README](./README.md).
+
 ```markdown
 # DIA-###: <Title>
-
-<!--
-Purpose: Reading guide for DIA-###.
-Status: working
-Owner: zo
-Human id: <slug>
-Update trigger: when the SVG changes
-Last updated: <YYYY-MM-DD>
--->
-
 ## Snapshot
 - **Diagram file:** `<repo-relative path to the .svg>`
-- **Embedded in:** <page or doc>
-- **Takeaway:** <one sentence>
+- **Theme:** <topic>
+- **Primary audience takeaway:** <one sentence>
 
 ## What The Diagram Shows
 <prose walk-through>
@@ -77,17 +72,14 @@ Last updated: <YYYY-MM-DD>
 ## How To Read It
 1. <reading order>
 
-## Caption
-<the caption text rendered inside the SVG>
+## <Topic> Relevance
+<why this picture matters to the piece that embeds it; the AI governance series uses "Governance Relevance">
 
-## Changelog
-- <YYYY-MM-DD>: Created.
+## Suggested Caption
+<the caption text rendered inside the SVG>
 ```
 
-## Statuses
-
-`draft`, `working`, `superseded`.
-
 ## Changelog
 
-- 2026-10-14: Created. Placement and the spec sibling come from Serennovas (`knowledge/diagrams/`, `images/DIA-0X-name.md`); the spec sections come from the existing AI governance specs. The Serennovas TOML-to-PNG renderer was deliberately not ported.
+- 2026-10-14: Spec shape reset to match the 13 existing specs exactly (Theme, Primary audience takeaway, the topic Relevance section, Suggested Caption). Dropped the frontmatter, Changelog and statuses added earlier the same day; no existing spec has them.
+- 2026-10-14: Created. Placement and the spec sibling come from Serennovas (`knowledge/diagrams/`, `images/DIA-0X-name.md`). The Serennovas TOML-to-PNG renderer was deliberately not ported.

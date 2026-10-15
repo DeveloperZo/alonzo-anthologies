@@ -21,7 +21,7 @@ Instances live in `_KNOWLEDGE/<Type folder>/`. Definitions live here, in
 
 | Definition | Instances live in | ID |
 | --- | --- | --- |
-| [Story](./Story.md) | `_KNOWLEDGE/Stories/` | `M-###`, `RM-###` |
+| [Story](./Story.md) | `_KNOWLEDGE/Stories/` | `ST-###` |
 | [Architecture](./Architecture.md) | `_KNOWLEDGE/Architecture/` | `ARCH-###` |
 | [Document](./Document.md) | `_KNOWLEDGE/Documents/<Kind>/` | One prefix per kind: `BRIEF-###`, `OPER-###`, `TD-###`, `VID-###` |
 | [Diagram](./Diagram.md) | `_KNOWLEDGE/Diagrams/`, or beside a site page | `DIA-###` |
@@ -45,7 +45,10 @@ Last updated: <YYYY-MM-DD>
 -->
 ```
 
-No YAML block. `_KNOWLEDGE/` is not rendered by Quartz.
+No YAML block. `_KNOWLEDGE/` is not rendered by Quartz. Some types add
+fields to this block (video scripts add Format, Platform, Source and Duration
+target). Diagram specs are the one exception: they carry no block (see
+[Diagram](./Diagram.md)).
 
 ### Numbering and filenames
 

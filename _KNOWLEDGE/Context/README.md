@@ -9,7 +9,7 @@ travel between machines. These files do.
 
 | File | What it covers |
 | --- | --- |
-| [monorepo.md](monorepo.md) | Repo layout, GitLab remote, naming and terminology |
+| [monorepo.md](monorepo.md) | Repo layout, GitHub remote, naming and terminology |
 | [docs-pattern.md](docs-pattern.md) | The doc taxonomy this repo's structure is modeled on |
 | [ai-governance-series.md](ai-governance-series.md) | The two-part explainer: structure, design system, editorial rules |
 | [working-with-zo.md](working-with-zo.md) | How Zo divides work between Cowork and Claude Code |

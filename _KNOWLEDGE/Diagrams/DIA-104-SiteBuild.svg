@@ -1,0 +1,134 @@
+<svg viewBox="0 0 900 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia104-title dia104-desc">
+  <title id="dia104-title">DIA-104 · Site build from build.sh to site/public</title>
+  <desc id="dia104-desc">Seven numbered build steps run top to bottom in the centre column: 1 build.sh, 2 npm ci in resumeContent, 3 npm ci and npx quartz build in site, 4 transformers and the RemoveDrafts filter, 5 emitters including Assets, 6 the StageResumeSpa emitter, which runs at the same time as the other emitters, 7 Cloudflare Pages serving the output. The left column shows the inputs: the pinned Node version, the resumeContent source (read at steps 2 and 6), site/content (read at step 3), and _KNOWLEDGE, which Quartz never reads. The right column shows the two drafts dropped at step 4 and the site/public output tree that steps 5 and 6 write and step 7 serves. A red box lists the two known gaps at step 6: a missing resume app is only a warning, and the emitter and the resume link bypass are local Quartz patches.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="d104-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#9D9A95"/></marker>
+  </defs>
+  <rect width="900" height="660" fill="#F2EEE3"/>
+  <!-- header -->
+  <text x="450" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F" letter-spacing="0.04em">DIA-104 · SITE BUILD</text>
+  <text x="450" y="50" text-anchor="middle" font-size="12" fill="#6B6873">one script → two installs → one Quartz run → site/public/ → Cloudflare Pages</text>
+  <text x="140" y="74" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873" letter-spacing="0.06em">INPUTS</text>
+  <text x="450" y="74" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873" letter-spacing="0.06em">BUILD STEPS, IN ORDER</text>
+  <text x="760" y="74" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873" letter-spacing="0.06em">OUTPUT</text>
+  <!-- arrows: build order (solid) -->
+  <line x1="450" y1="136" x2="450" y2="150" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <line x1="450" y1="202" x2="450" y2="216" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <line x1="450" y1="268" x2="450" y2="282" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <line x1="450" y1="334" x2="450" y2="348" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <text x="450" y="411" text-anchor="middle" font-size="9" font-style="italic" fill="#6B6873">5 and 6 run at the same time</text>
+  <line x1="590" y1="375" x2="648" y2="375" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <line x1="590" y1="441" x2="648" y2="441" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <path d="M760,466 V545 H592" fill="none" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <!-- arrows: reads from (dashed) -->
+  <line x1="250" y1="111" x2="308" y2="111" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <line x1="250" y1="177" x2="308" y2="177" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <path d="M250,192 H280 V441 H308" fill="none" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <line x1="250" y1="243" x2="308" y2="243" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <line x1="590" y1="309" x2="648" y2="309" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <!-- inputs -->
+  <rect x="30" y="86" width="220" height="50" rx="9" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="140" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#6B6873">Node 22.16.0</text>
+  <text x="140" y="123" text-anchor="middle" font-size="11" fill="#6B6873">site/.node-version · NODE_VERSION</text>
+  <rect x="30" y="152" width="220" height="50" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.5"/>
+  <text x="140" y="172" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">resumeContent/</text>
+  <text x="140" y="189" text-anchor="middle" font-size="11" fill="#A28438">resume app source + lockfile</text>
+  <rect x="30" y="218" width="220" height="50" rx="9" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="140" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">site/content/</text>
+  <text x="140" y="255" text-anchor="middle" font-size="11" fill="#4F627F">published writing: 42 .md, 15 .svg</text>
+  <rect x="30" y="284" width="220" height="50" rx="9" fill="#F2EEE3" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="140" y="304" text-anchor="middle" font-size="13" font-weight="700" fill="#9D9A95">_KNOWLEDGE/</text>
+  <text x="140" y="321" text-anchor="middle" font-size="11" fill="#9D9A95">project docs, never read by Quartz</text>
+  <!-- known gaps -->
+  <rect x="30" y="392" width="220" height="78" rx="9" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5"/>
+  <text x="140" y="410" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A85B49" letter-spacing="0.04em">KNOWN GAPS AT STEP 6</text>
+  <text x="44" y="427" font-size="10" fill="#A85B49">Missing resume app is only a warning;</text>
+  <text x="44" y="440" font-size="10" fill="#A85B49">the deploy ships without /resume (TD-007)</text>
+  <text x="44" y="455" font-size="10" fill="#A85B49">Emitter and /resume link bypass are</text>
+  <text x="44" y="468" font-size="10" fill="#A85B49">local Quartz patches (TD-006)</text>
+  <!-- build steps -->
+  <rect x="310" y="86" width="280" height="50" rx="9" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <circle cx="332" cy="111" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="332" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">1</text>
+  <text x="469" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">build.sh</text>
+  <text x="469" y="123" text-anchor="middle" font-size="11" fill="#4F627F">same command locally and on Cloudflare</text>
+  <rect x="310" y="152" width="280" height="50" rx="9" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <circle cx="332" cy="177" r="11" fill="#FAFAF8" stroke="#A28438" stroke-width="1.5"/>
+  <text x="332" y="181" text-anchor="middle" font-size="11" font-weight="700" fill="#A28438">2</text>
+  <text x="469" y="172" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">npm ci in resumeContent/</text>
+  <text x="469" y="189" text-anchor="middle" font-size="11" fill="#A28438">installs the resume app's packages</text>
+  <rect x="310" y="218" width="280" height="50" rx="9" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <circle cx="332" cy="243" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="332" y="247" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">3</text>
+  <text x="469" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">Quartz build in site/</text>
+  <text x="469" y="255" text-anchor="middle" font-size="11" fill="#4F627F">npm ci, then npx quartz build</text>
+  <rect x="310" y="284" width="280" height="50" rx="9" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <circle cx="332" cy="309" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="332" y="313" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">4</text>
+  <text x="469" y="304" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">Transformers + RemoveDrafts</text>
+  <text x="469" y="321" text-anchor="middle" font-size="11" fill="#4F627F">parse Markdown, drop draft: true pages</text>
+  <rect x="310" y="350" width="280" height="50" rx="9" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <circle cx="332" cy="375" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="332" y="379" text-anchor="middle" font-size="11" font-weight="700" fill="#4F627F">5</text>
+  <text x="469" y="370" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">Emitters</text>
+  <text x="469" y="387" text-anchor="middle" font-size="11" fill="#4F627F">pages, sitemap, RSS; Assets copies SVGs</text>
+  <rect x="310" y="416" width="280" height="50" rx="9" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <circle cx="332" cy="441" r="11" fill="#FAFAF8" stroke="#A28438" stroke-width="1.5"/>
+  <text x="332" y="445" text-anchor="middle" font-size="11" font-weight="700" fill="#A28438">6</text>
+  <text x="469" y="436" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">StageResumeSpa</text>
+  <text x="469" y="453" text-anchor="middle" font-size="11" fill="#A28438">builds the resume app, copies it to /resume/</text>
+  <rect x="310" y="520" width="280" height="50" rx="9" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <circle cx="332" cy="545" r="11" fill="#FAFAF8" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="332" y="549" text-anchor="middle" font-size="11" font-weight="700" fill="#5A8270">7</text>
+  <text x="469" y="540" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">Cloudflare Pages</text>
+  <text x="469" y="557" text-anchor="middle" font-size="11" fill="#5A8270">serves site/public/ as the live site</text>
+  <!-- outputs -->
+  <rect x="650" y="284" width="220" height="50" rx="9" fill="#FAFAF8" stroke="#A28438" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="760" y="304" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">2 drafts dropped</text>
+  <text x="760" y="321" text-anchor="middle" font-size="11" fill="#A28438">RATIONALE-2026-08.md, both parts</text>
+  <rect x="650" y="350" width="220" height="116" rx="9" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="760" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">site/public/</text>
+  <text x="664" y="395" font-size="10.5" fill="#5A8270">/  site pages, sitemap, RSS</text>
+  <text x="664" y="413" font-size="10.5" fill="#5A8270">…/diagrams/*.svg  copied as is</text>
+  <text x="664" y="431" font-size="10.5" fill="#5A8270">/resume/  the React resume app</text>
+  <text x="664" y="454" font-size="10" font-style="italic" fill="#5A8270" opacity="0.85">gitignored, rebuilt on every build</text>
+  <!-- legend -->
+  <line x1="30" y1="603" x2="60" y2="603" stroke="#9D9A95" stroke-width="2" marker-end="url(#d104-gray)"/>
+  <text x="68" y="607" font-size="10.5" fill="#6B6873">build order</text>
+  <line x1="150" y1="603" x2="180" y2="603" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d104-gray)"/>
+  <text x="188" y="607" font-size="10.5" fill="#6B6873">reads from, or side effect</text>
+  <rect x="340" y="597" width="14" height="12" rx="2" fill="#EDD8CE" stroke="#A85B49" stroke-width="1"/>
+  <text x="362" y="607" font-size="10.5" fill="#6B6873">known gap</text>
+  <circle cx="447" cy="603" r="8" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.2"/>
+  <text x="447" y="606.5" text-anchor="middle" font-size="9" font-weight="700" fill="#4F627F">1</text>
+  <text x="461" y="607" font-size="10.5" fill="#6B6873">step, as numbered in "How it works"</text>
+  <text x="690" y="607" font-size="10.5" fill="#6B6873">blue Quartz, amber resume</text>
+  <!-- caption -->
+  <text x="450" y="642" text-anchor="middle" font-size="12" font-weight="600" fill="#4F627F">DIA-104 · Site build. One script, two installs, one Quartz run; a repo-local emitter stages the resume app at /resume/.</text>
+</svg>

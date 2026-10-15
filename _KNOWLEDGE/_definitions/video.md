@@ -7,11 +7,13 @@ draft: false
 ---
 <!--
 Purpose: Authoring contract for VID-### video script artifacts — both short-form and long-form.
-Status: canonical
+Status: superseded
 Owner: zo
 Update trigger: when script format, required sections, or platform targets change
 Last updated: 2026-05-06
 -->
+
+> **Superseded 2026-10-14** by [`_META/Definitions/`](../../_META/Definitions/README.md). Kept for history; do not author against this file.
 
 # Video
 

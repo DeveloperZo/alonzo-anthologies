@@ -1,0 +1,115 @@
+<svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia102-title dia102-desc">
+  <title id="dia102-title">DIA-102 · Source control: one host (GitHub), push to main deploys</title>
+  <desc id="dia102-desc">Top row, left to right: your local clone pushes branch main to GitHub (origin), the only code host, where main is not yet protected. Cloudflare's GitHub App tells the Cloudflare Pages project alonzo-anthologies to build, and Cloudflare posts a check run back on the commit. Numbered badges mark five steps: 1 scan for secrets, 2 push, 3 GitHub App notifies Cloudflare, 4 build and check run, 5 check the live site. Below the clone, the _ENV folder holding the Cloudflare token is drawn as local only and never pushed. Bottom row, dashed and gray: the archived GitLab project, still a read-only local remote named gitlab, and the legacy Cloudflare Pages project zo-garden, which the same GitHub repo still feeds on every push.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="d102-solid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+    <marker id="d102-ghost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#9D9A95"/></marker>
+  </defs>
+  <rect width="760" height="500" fill="#F2EEE3"/>
+  <!-- Header -->
+  <text x="380" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-102 · SOURCE CONTROL</text>
+  <text x="380" y="48" text-anchor="middle" font-size="12" fill="#6B6873">one code host (GitHub) · a push to main is a deploy · zo-garden builds the same push</text>
+  <!-- Live arrows (drawn before nodes) -->
+  <line x1="200" y1="118" x2="287" y2="118" stroke="#6B6873" stroke-width="2.5" marker-end="url(#d102-solid)"/>
+  <text x="245" y="138" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873">push main</text>
+  <line x1="470" y1="112" x2="557" y2="112" stroke="#6B6873" stroke-width="2.5" marker-end="url(#d102-solid)"/>
+  <text x="515" y="130" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873">GitHub App</text>
+  <line x1="560" y1="150" x2="473" y2="150" stroke="#6B6873" stroke-width="1.5" marker-end="url(#d102-solid)"/>
+  <text x="515" y="166" text-anchor="middle" font-size="10" font-weight="600" fill="#6B6873">check run</text>
+  <!-- Leftover arrows (dashed) -->
+  <path d="M 192 172 V 335 H 287" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#d102-ghost)"/>
+  <text x="200" y="300" font-size="9.5" fill="#9D9A95">remote "gitlab"</text>
+  <text x="200" y="313" font-size="9.5" fill="#9D9A95">read-only</text>
+  <path d="M 455 170 V 250 H 650 V 291" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#d102-ghost)"/>
+  <text x="552" y="243" text-anchor="middle" font-size="9.5" fill="#9D9A95">same repo, every push</text>
+  <!-- Top row nodes -->
+  <rect x="20" y="85" width="180" height="85" rx="10" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="110" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#4F627F">YOUR CLONE</text>
+  <text x="110" y="136" text-anchor="middle" font-size="11" fill="#4F627F">local git, branch main</text>
+  <text x="110" y="152" text-anchor="middle" font-size="9.5" font-style="italic" fill="#4F627F">C:\Repos\alonzo-anthologies</text>
+  <rect x="290" y="85" width="180" height="85" rx="10" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#5A8270">GITHUB (origin)</text>
+  <text x="380" y="136" text-anchor="middle" font-size="11" fill="#5A8270">the only code host, public</text>
+  <text x="380" y="152" text-anchor="middle" font-size="9.5" font-style="italic" fill="#5A8270">main not protected yet (ST-007)</text>
+  <rect x="560" y="85" width="180" height="85" rx="10" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
+  <text x="650" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#A28438">CLOUDFLARE PAGES</text>
+  <text x="650" y="136" text-anchor="middle" font-size="11" fill="#A28438">project alonzo-anthologies</text>
+  <text x="650" y="152" text-anchor="middle" font-size="9.5" font-style="italic" fill="#A28438">alonzo-anthologies.pages.dev</text>
+  <!-- Local-only secrets -->
+  <rect x="20" y="200" width="160" height="56" rx="8" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="100" y="223" text-anchor="middle" font-size="12" font-weight="700" fill="#A85B49">_ENV/ (token)</text>
+  <text x="100" y="241" text-anchor="middle" font-size="10" fill="#A85B49">gitignored, never pushed</text>
+  <!-- Leftover row -->
+  <text x="515" y="282" text-anchor="middle" font-size="10" font-weight="600" fill="#9D9A95" letter-spacing="0.04em">LEFT OVER · TO RETIRE (ST-005, ST-004)</text>
+  <rect x="290" y="295" width="180" height="80" rx="10" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="380" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#9D9A95">GITLAB (archived)</text>
+  <text x="380" y="346" text-anchor="middle" font-size="11" fill="#9D9A95">read-only, history kept</text>
+  <rect x="560" y="295" width="180" height="80" rx="10" fill="#FAFAF8" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="650" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#9D9A95">PAGES zo-garden</text>
+  <text x="650" y="346" text-anchor="middle" font-size="11" fill="#9D9A95">duplicate of the live build</text>
+  <!-- Step badges -->
+  <circle cx="200" cy="85" r="10" fill="#A85B49"/>
+  <text x="200" y="89" text-anchor="middle" font-size="11" font-weight="700" fill="#F2EEE3">1</text>
+  <circle cx="245" cy="102" r="10" fill="#A85B49"/>
+  <text x="245" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="#F2EEE3">2</text>
+  <circle cx="515" cy="96" r="10" fill="#A85B49"/>
+  <text x="515" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#F2EEE3">3</text>
+  <circle cx="515" cy="182" r="10" fill="#A85B49"/>
+  <text x="515" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#F2EEE3">4</text>
+  <circle cx="740" cy="85" r="10" fill="#A85B49"/>
+  <text x="740" y="89" text-anchor="middle" font-size="11" font-weight="700" fill="#F2EEE3">5</text>
+  <!-- Steps key -->
+  <line x1="20" y1="392" x2="740" y2="392" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="20" y="410" font-size="10.5" font-weight="700" fill="#6B6873" letter-spacing="0.04em">STEPS</text>
+  <circle cx="28" cy="426" r="7" fill="#A85B49"/>
+  <text x="28" y="429.5" text-anchor="middle" font-size="9" font-weight="700" fill="#F2EEE3">1</text>
+  <text x="42" y="430" font-size="10.5" fill="#6B6873">Scan for secrets before pushing</text>
+  <circle cx="28" cy="444" r="7" fill="#A85B49"/>
+  <text x="28" y="447.5" text-anchor="middle" font-size="9" font-weight="700" fill="#F2EEE3">2</text>
+  <text x="42" y="448" font-size="10.5" fill="#6B6873">Push main to GitHub</text>
+  <circle cx="28" cy="462" r="7" fill="#A85B49"/>
+  <text x="28" y="465.5" text-anchor="middle" font-size="9" font-weight="700" fill="#F2EEE3">3</text>
+  <text x="42" y="466" font-size="10.5" fill="#6B6873">GitHub tells Cloudflare to build</text>
+  <circle cx="268" cy="426" r="7" fill="#A85B49"/>
+  <text x="268" y="429.5" text-anchor="middle" font-size="9" font-weight="700" fill="#F2EEE3">4</text>
+  <text x="282" y="430" font-size="10.5" fill="#6B6873">Cloudflare builds, deploys, posts a check</text>
+  <circle cx="268" cy="444" r="7" fill="#A85B49"/>
+  <text x="268" y="447.5" text-anchor="middle" font-size="9" font-weight="700" fill="#F2EEE3">5</text>
+  <text x="282" y="448" font-size="10.5" fill="#6B6873">Check the live site</text>
+  <!-- Legend -->
+  <text x="540" y="410" font-size="10.5" font-weight="700" fill="#6B6873" letter-spacing="0.04em">LEGEND</text>
+  <line x1="540" y1="426" x2="580" y2="426" stroke="#6B6873" stroke-width="2.5" marker-end="url(#d102-solid)"/>
+  <text x="590" y="430" font-size="10" fill="#6B6873">in use today</text>
+  <line x1="540" y1="444" x2="580" y2="444" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#d102-ghost)"/>
+  <text x="590" y="448" font-size="10" fill="#6B6873">left over, archived or duplicate</text>
+  <rect x="540" y="456" width="40" height="14" rx="3" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="590" y="467" font-size="10" fill="#6B6873">local only, never committed</text>
+  <!-- Caption -->
+  <text x="380" y="490" text-anchor="middle" font-size="11.5" font-weight="600" fill="#A85B49">DIA-102 · A push to main on GitHub is the only road to production; GitLab is archived and zo-garden is a duplicate.</text>
+</svg>

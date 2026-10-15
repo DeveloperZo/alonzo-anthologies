@@ -1,5 +1,5 @@
 ---
-title: M-001 Quartz site goes live publicly
+title: ST-001 Quartz site goes live publicly
 tags:
   - milestone
   - completed
@@ -13,7 +13,7 @@ Update trigger: historical record only
 Last updated: 2026-05-05
 -->
 
-# M-001 Quartz site goes live publicly
+# ST-001 Quartz site goes live publicly
 
 ## Objective
 
@@ -24,8 +24,8 @@ Publish the Quartz 4 docs site under `site/content/` to a real public URL so tha
 - [x] **Host chosen.** Cloudflare Pages (decided 2026-05-04). Build runs against `bash ./build.sh`; output at `site/public/`.
 - [x] **Fate of the old standalone resume site decided.** Quartz takes the apex; the `resume-content` React app is mounted at `/resume`. Implemented by [`build.sh`](https://gitlab.com/awilliams9293/alonzo-anthologies/-/blob/main/build.sh), which copies `resumeContent/build/` into `site/public/resume/`. `homepage` in `resumeContent/package.json` is `/resume`.
 - [x] **Deploy build is reproducible.** `bash ./build.sh` produces `site/public/` with the Quartz site at `/` and the React app at `/resume`, end-to-end. Verified locally 2026-05-05.
-- [x] **Runbook exists.** [`OPER-001 Cloudflare Pages deploy`](../../Documents/Operations/OPER-001-cloudflare-pages-deploy.md) documents the one-time CF dashboard wiring, the build settings, and rollback.
-- [x] **Cloudflare Pages project connected to the repo.** Procedure and settings are documented in [`OPER-001`](../../Documents/Operations/OPER-001-cloudflare-pages-deploy.md) (production branch `main`, build `bash ./build.sh`, output `site/public`, `NODE_VERSION=22`). Connect the repo in the Cloudflare dashboard when deploying; the repo matches those requirements.
+- [x] **Runbook exists.** [`OPER-001 Cloudflare Pages deploy`](../../Documents/Operations/OPER-001-CloudflareDeploy.md) documents the one-time CF dashboard wiring, the build settings, and rollback.
+- [x] **Cloudflare Pages project connected to the repo.** Procedure and settings are documented in [`OPER-001`](../../Documents/Operations/OPER-001-CloudflareDeploy.md) (production branch `main`, build `bash ./build.sh`, output `site/public`, `NODE_VERSION=22`). Connect the repo in the Cloudflare dashboard when deploying; the repo matches those requirements.
 - [x] **First public deploy succeeds.** Target production URL: **`https://alonzo-anthologies.pages.dev`** (default `*.pages.dev` name for project `alonzo-anthologies` in OPER-001). After connecting the repo, a green deployment serves `site/content/` at `/` and the staged CRA app at `/resume`. Re-run the verification checks in OPER-001 after the first deploy.
 - [x] **`baseUrl` updated.** `site/quartz.config.ts` sets `baseUrl` to `alonzo-anthologies.pages.dev`.
 - [x] **Footer link updated.** `site/quartz.layout.ts` footer link points at [Alonzos Anthologies](https://gitlab.com/awilliams9293/alonzo-anthologies).
@@ -34,7 +34,7 @@ Publish the Quartz 4 docs site under `site/content/` to a real public URL so tha
 
 ## Dependencies
 
-- [`ARCH-001 Platform overview`](../../Architecture/ARCH-001-platform-overview.md) — defines the doc surface this milestone publishes.
+- [`ARCH-001 Platform overview`](../../Architecture/ARCH-001-PlatformOverview.md) — defines the doc surface this milestone publishes.
 
 ## Evidence
 
