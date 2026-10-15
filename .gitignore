@@ -2,10 +2,10 @@
 **/node_modules/
 
 # Quartz outputs
-garden/public/
-garden/.quartz-cache/
-garden/prof/
-garden/tsconfig.tsbuildinfo
+site/public/
+site/.quartz-cache/
+site/prof/
+site/tsconfig.tsbuildinfo
 
 # Build outputs (CRA / generic)
 **/build/
@@ -23,3 +23,4 @@ Thumbs.db
 .vscode/
 .obsidian/
 .claude/settings.local.json
+_ENV/

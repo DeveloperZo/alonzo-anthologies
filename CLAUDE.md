@@ -1,4 +1,4 @@
-# Project rules — Zo Garden eCafe
+# Project rules: Alonzo's Anthologies
 
 ## Formatting rules (HARD)
 
@@ -27,8 +27,8 @@ When auditing a section, do not flag a "missing DIA-NNN caption" just because th
 
 ## Project context
 
-Durable project context lives in `docs/context/`, in version control, so
-that it travels between machines. Read `docs/context/README.md` at the
+Durable project context lives in `_KNOWLEDGE/Context/`, in version control, so
+that it travels between machines. Read `_KNOWLEDGE/Context/README.md` at the
 start of work on this repo.
 
 Do not record durable project context in desktop-local memory. It does

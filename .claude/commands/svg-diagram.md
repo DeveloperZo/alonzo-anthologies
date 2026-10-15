@@ -1,6 +1,6 @@
 # svg-diagram
 
-Create or update an inline SVG diagram for the Zo Garden Quartz site.
+Create or update an inline SVG diagram for the Alonzo's Anthologies Quartz site.
 
 ## Critical rule: no blank lines inside the SVG block
 
@@ -100,4 +100,4 @@ The `article > svg + p > em:only-child` CSS rule styles it as a small muted capt
 
 ## Diagram files
 
-Canonical SVG files live in `garden/content/ai-governance/part-1/diagrams/`. When a page references a diagram via `![](/ai-governance/part-1/diagrams/DIA-NNN-name.svg)`, Quartz resolves the path and renders it as an `<img>`. For inline rendering with the card CSS treatment, embed the SVG directly in the markdown with no blank lines.
+Canonical SVG files live in `site/content/ai-governance/part-1/diagrams/`. When a page references a diagram via `![](/ai-governance/part-1/diagrams/DIA-NNN-name.svg)`, Quartz resolves the path and renders it as an `<img>`. For inline rendering with the card CSS treatment, embed the SVG directly in the markdown with no blank lines.
