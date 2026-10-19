@@ -1,21 +1,29 @@
 export const professionalSummary =
-  "Strategic technology leader with over a decade of experience in software architecture and development. Leverages AI workflows to empower SDLC practices. Delivers through technical decisions and team leadership tied to the work.";
+  "Technology leader with over a decade of experience in software architecture and engineering leadership. Modernizes complex systems, leads cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
 
 export const coreCompetencies = [
   {
-    title: "Technology Leadership",
-    body: "Skilled at guiding cross-functional development teams through delivery, holding quality and timeline together.",
-  },
-  {
     title: "Software Architecture",
-    body: "Expert in navigating architecture tradeoffs against business objectives.",
+    body: "Designs scalable, maintainable systems that balance business needs, technical constraints, and long-term sustainability.",
   },
   {
-    title: "AI Enabled Development Practices",
-    body: "Strong advocate for SOLID principles, testing, continuous integration, and AI-assisted workflows.",
+    title: "Technology Leadership",
+    body: "Leads cross-functional engineering teams, sets technical direction, and drives delivery from planning through production.",
   },
   {
-    title: "Diverse Technical Experience",
-    body: "Deep working knowledge of financial and healthcare solutions with proven industry experience.",
+    title: "Enterprise Integration",
+    body: "Connects complex systems through APIs, service-oriented architectures, and integration patterns that adapt to changing requirements.",
+  },
+  {
+    title: "Systems Thinking",
+    body: "Analyzes how systems, teams, and incentives interact to identify changes that improve outcomes across the organization.",
+  },
+  {
+    title: "Development Practices",
+    body: "Establishes engineering standards around code quality, testing, CI/CD, and maintainable software design.",
+  },
+  {
+    title: "AI & Technology Modernization",
+    body: "Modernizes legacy systems and applies AI across the software development lifecycle to accelerate delivery without compromising engineering standards.",
   },
 ];

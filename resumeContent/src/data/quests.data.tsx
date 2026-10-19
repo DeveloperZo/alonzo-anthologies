@@ -35,51 +35,68 @@ const quests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Built a team of 5 to deliver a rebuild of a platform that covers 6.5M lives",
+    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7.2 million covered lives.",
   summary:
-    "I managed a team of 5 through a greenfield healthcare rebuild covering 6.5M lives. The rest of the product needed the function as a real dependency, not as a workstream that finished last.",
+    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7.2 million covered lives.",
   type: 'career',
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ['Manager, Experience Platform'],
-  tags: ['Engineering Management', 'Healthcare', 'Platform Architecture', 'API Contracts', 'Developer Tooling', 'AI-Assisted Development', 'FHIR'],
+  tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development'],
   accomplishments: [
     {
       description:
-        "Managed a team of 5 on a healthcare initiative covering 6.5M lives and set the API and data contracts 7 other teams implemented against, including data ownership and failure behavior.",
+        'Introduced AI-assisted development practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
       role: 'Manager, Experience Platform',
       learnings: [
-        "Learned that teams settle the payload and skip the failure behavior, which is where the integration defects come from",
+        'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
+        'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
       ],
     },
     {
       description:
-        "Established processes for how the platform services team delivered and operated, from accepted work through production support, across major and minor releases.",
+        'Built and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
       role: 'Manager, Experience Platform',
       learnings: [
-        "Learned that disconnected SDLC stages are an ownership problem before they are a documentation problem",
+        'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
+        'Discovered that clear capability boundaries help teams maintain focus and reduce cross-team dependencies',
       ],
     },
     {
       description:
-        "Created a shared delivery workbench the team used to plan and execute over 80% of the work across 3 quarters, keeping analysis and implementation evidence in one place.",
-      role: 'Manager, Experience Platform',
-      learnings: [],
-    },
-    {
-      description:
-        "Created a VS Code extension and CLI that kept AI-generated changes behind a specification and a human approval, used by 10 developers.",
+        'Partnered with enterprise architects to identify architectural gaps and translate technical guidance into actionable engineering specifications.',
       role: 'Manager, Experience Platform',
       learnings: [
-        "Learned that generated code is only reviewable when the requirement and scope stay attached to it",
-        "Learned that reviewing a diff against its specification is far faster than reviewing the diff alone",
+        'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
+        'Discovered that early gap analysis with architects prevents costly rework across dependent teams',
       ],
     },
     {
       description:
-        "Mentored and trained developers on leveraging AI-assisted work to enhance the SDLC.",
+        'Coordinated planning across seven engineering teams for the new platform delivery, designing solutions for 30% of its stories.',
       role: 'Manager, Experience Platform',
-      learnings: [],
+      learnings: [
+        'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
+        'Discovered that hands-on solution design across team boundaries keeps program delivery coherent',
+      ],
+    },
+    {
+      description:
+        'Led HIPAA-aware vendor evaluations and configuration platform design, balancing compliance, cost, and long-term flexibility.',
+      role: 'Manager, Experience Platform',
+      learnings: [
+        'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
+        'Discovered that BAA boundaries and PHI routing rules must be designed into architecture from the start',
+      ],
+    },
+    {
+      description:
+        'Delivered over 90% of refined work within two weeks through clear technical design and team execution.',
+      role: 'Manager, Experience Platform',
+      learnings: [
+        'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
+        'Discovered that team execution improves when work is refined with explicit design intent',
+      ],
     },
   ],
 },
@@ -87,50 +104,62 @@ const quests: Quest[] = [
   id: 2,
   titles: {
     retro: 'Rise of the Architect',
-    sleek: 'Senior Consultant & Software Architect at Inspire11',
+    sleek: 'Senior Software Architect at Inspire11',
   },
   company: 'Inspire11',
   workTitle: 'Senior Software Architect',
-  description: "Set UI architecture for five delivery teams and full stack architecture for one",
+  description:
+    'Led software architecture across five engineering teams, improving technical consistency and delivery performance.',
   summary:
-    "I set UI architecture across the delivery program and carried full stack work on one team. The architecture had to survive a delivery load I was on the hook for myself.",
+    'Led software architecture across five engineering teams, improving technical consistency and delivery performance.',
   type: 'career',
   startDate: new Date('2024-05-01'),
   endDate: new Date('2025-05-17'),
-  roles: ['Senior Consultant', 'Software Architect'],
+  roles: ['Senior Software Architect'],
   tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration'],
   accomplishments: [
     {
       description:
-        "Developed UI architecture for 5 delivery teams while carrying full stack architecture responsibility.",
-      role: 'Software Architect',
+        'Secured a $2M project extension by building a shared design library, translating Figma designs into reusable components that accelerated delivery across teams.',
+      role: 'Senior Software Architect',
       learnings: [
-        "Learned that friction against a pattern shows up in how teams solve problems when nobody is watching",
+        'Learned that component libraries still deliver value even when implemented late in a project',
+        'Discovered that reusable design systems can unlock measurable commercial outcomes',
       ],
     },
     {
       description:
-        "Built a shared UI component library of 20+ components with the design teams and landed it late in the project.",
-      role: 'Software Architect',
-      learnings: [],
+        'Led UI architecture across five engineering teams while serving as full-stack architect for one, aligning technical direction and implementation standards.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
+        'Found that specialized depth and broad oversight can be balanced through effective delegation',
+      ],
     },
     {
       description:
-        "Turned Figma designs into multiple technical directives and user stories the teams built from directly.",
-      role: 'Senior Consultant',
-      learnings: [],
+        'Mentored senior developers through pair programming and technical coaching, strengthening engineering capabilities across teams.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned that deliberate mentorship strengthens engineering capability across teams',
+      ],
     },
     {
       description:
-        "Mentored 10+ senior developers on the architecture and on how the teams delivered against it.",
-      role: 'Senior Consultant',
-      learnings: [],
+        'Translated business requirements into architectural designs, technical specifications, and actionable engineering stories.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned that translating requirements into architecture and stories closes the gap between business intent and delivery',
+      ],
     },
     {
       description:
-        "Maintained clear communication across Program Leadership over 6 months to reduce gaps and delays in delivery.",
-      role: 'Senior Consultant',
-      learnings: [],
+        'Increased team velocity by a sustained 40% through architectural improvements, technical guidance, and streamlined development workflows.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned that maximizing team velocity requires teams to understand strategic direction and implementation goals',
+        'Discovered that architectural clarity compounds into sustained delivery gains',
+      ],
     },
   ],
 },
@@ -138,73 +167,70 @@ const quests: Quest[] = [
   id: 3,
   titles: {
     retro: "The Modernizer's Quest",
-    sleek: 'Senior Consultant & Software Architect at Productive Edge',
+    sleek: 'Software Architect at Productive Edge',
   },
   company: 'Productive Edge',
   workTitle: 'Software Architect',
   description:
-    "Modernized legacy healthcare systems for clients while keeping each one running",
+    'Modernized legacy healthcare and commerce systems for consulting clients, leading cross-functional teams from architecture through delivery.',
   summary:
-    "Four years of modernization work for healthcare clients. The old system had to keep running while its replacement was built, and that shaped most of the decisions. I carried scope and budget with the client alongside the architecture.",
+    'Modernized legacy healthcare and commerce systems for consulting clients, leading cross-functional teams from architecture through delivery.',
   type: 'career',
   startDate: new Date('2020-02-01'),
   endDate: new Date('2024-05-31'),
-  roles: ['Senior Consultant', 'Software Architect'],
+  roles: ['Software Architect'],
   tags: ['Legacy Modernization', 'Cloud', 'SaaS', 'Healthcare', 'Payment Processing'],
   accomplishments: [
     {
       description:
-        "Led full stack modernization of a claims application under HIPAA, cutting over from the legacy system without interrupting the business running on it, covering [Placeholder] lives.",
+        'Managed 16 client engagements, owning budgets up to $250K, scope, technical delivery, and stakeholder expectations.',
       role: 'Software Architect',
       learnings: [
-        "Learned to make decisions WITH constraints instead of against constraints",
-        "Learned that compliance requirements should be considered in reusable patterns",
+        'Learned to ground stories in facts and data that the client cares about',
+        'Discovered that owning budget and scope alongside technical delivery builds client trust',
       ],
     },
     {
       description:
-        "Converted over a dozen monolithic client systems to various modern configurations.",
+        'Delivered enterprise solutions across .NET/C#, Java Spring Boot, React, Angular, Flutter, and UWP.',
       role: 'Software Architect',
-      learnings: [],
-    },
-    {
-      description:
-        "Reviewed and approved project scope and budget while managing client expectations alongside the technical implementation.",
-      role: 'Senior Consultant',
       learnings: [
-        "Learned to ground stories in facts and data that the client cares about",
+        'Learned to be proficient in architecting for a language I was not well-versed in',
       ],
     },
     {
       description:
-        "Took architecture responsibility across multiple stacks, including ones I had not shipped in before.",
+        'Reduced maintenance costs by 30% through full-stack modernization of a claims application while maintaining HIPAA compliance.',
       role: 'Software Architect',
       learnings: [
-        "Learned to be proficient in architecting for a language I was not well-versed in",
+        'Learned that healthcare data practices impact technical decisions and constraints',
+        'Learned that compliance requirements should be considered in reusable patterns',
       ],
     },
     {
       description:
-        "Earned a payment-processor certification and integrated secure payments into client systems, building the identity-provider integrations underneath from scratch.",
+        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform supporting 15 tenants with up to 50K users each, while preserving EHR integrations.',
       role: 'Software Architect',
       learnings: [
-        "Learned how to build IdP integrations from the ground up",
+        'Learned that multi-tenant architectures can be effectively handled through configuration',
+        'Discovered that maintaining EHR integrations during architectural transitions requires careful API design',
       ],
     },
     {
       description:
-        "Built standardized project scaffolding so new engagements started from a shared baseline.",
+        'Certified a client commerce system with a third-party payment processor, enabling secure payment processing across its applications.',
       role: 'Software Architect',
       learnings: [
-        "Learned that project templates work easier when teams build working relationships",
+        'Learned how to build IdP integrations from the ground up',
       ],
     },
     {
       description:
-        "Diagnosed kiosk hardware faults from logs and device telemetry, without sending anyone to the site.",
-      role: 'Senior Consultant',
+        'Enabled production deployments on the first day of projects through standardized scaffolding, eliminating the setup sprint other teams required.',
+      role: 'Software Architect',
       learnings: [
-        "Learned that remote diagnosis only reaches the faults someone thought to log months earlier",
+        'Learned that project templates work easier when teams build working relationships',
+        'Learned that standardization must balance consistency with flexibility for project-specific needs',
       ],
     },
   ],
@@ -218,9 +244,9 @@ const quests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    "Refactored entire lending platform prior to leading engineering through executive transition",
-  summary:
-    "Joined as team lead and covered the gap while the executive team changed over. The technical half was a runtime migration and a large refactor. The other half was representing engineering to investors and the CEO, then handing the function to the incoming CTO.",
+    'Co-led technical implementations and maintained clear communication during leadership transitions.',
+  summary: 
+    'Led critical platform migrations and major refactoring efforts that transformed application performance while providing technical leadership during organizational transitions. Established effective feedback mechanisms with stakeholders and represented technical concerns to executive leadership.',
   type: 'career',
   startDate: new Date('2018-10-01'),
   endDate: new Date('2020-02-01'),
@@ -229,51 +255,70 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        "Refactored a 350k line business application onto service and repository boundaries reversing a negative sprint velocity.",
-      role: 'Team Lead',
-      learnings: [
-        "Learned that negative velocity is a structure problem, not an effort problem",
-        "Learned how to read code for intent and clarity very effectively",
-      ],
-    },
-    {
-      description:
-        "Ran engineering as interim director, interviewed and transitioned the incoming CTO.",
+        'Represented technical leadership to investors and the CEO during executive transitions, providing strategic guidance.',
       role: 'Interim Director of Engineering',
       learnings: [
-        "Learned that handing over the KPIs takes an afternoon and handing over the reasoning takes the rest of the onboarding",
+        'Learned that technical leadership requires communication as much as technical proficiency',
+        'Learned how to communicate to leaders what outcomes to expect from the technical department',
       ],
     },
     {
       description:
-        "Migrated applications from .NET to .NET Core on day one and executed multiple production deployments in month one",
-      role: 'Team Lead',
-      learnings: [
-        "Learned that a new lead gets one decision without having to win it first, and spent mine on the runtime",
-      ],
-    },
-    {
-      description:
-        "Established a structured UAT process that put business stakeholders in front of features before release.",
-      role: 'Team Lead',
-      learnings: [
-        "Learned the importance of talking directly to end users",
-      ],
-    },
-    {
-      description:
-        "Built regulatory requirements into the development process instead of auditing for them afterward.",
-      role: 'Team Lead',
-      learnings: [
-        "Learned that building regulatory requirements in costs a fraction of retrofitting them onto finished work",
-      ],
-    },
-    {
-      description:
-        "Represented engineering to investors and the CEO through the executive transition.",
+        'Achieved target KPIs as interim director, while onboarding incoming CTO and managing team.',
       role: 'Interim Director of Engineering',
       learnings: [
-        "Learned that credibility with investors rests on what you decline to promise",
+        'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
+        'Discovered that effective onboarding of new leadership benefits from structured knowledge transfer',
+      ],
+    },
+    {
+      description:
+        'Refactored a complex business application with 350k+ lines of code, implementing service-repository patterns that reversed negative sprint velocity.',
+      role: 'Team Lead',
+      learnings: [
+        'Learned how to perform every function of and be involved in most decisions for the SDLC',
+        'Learned how to build a culture of technical excellence for a small team',
+      ],
+    },
+    {
+      description:
+        'Upgraded applications from .NET to .NET Core on day one, immediately improving performance and establishing technical direction.',
+      role: 'Team Lead',
+      learnings: [
+        'Learned how to read code for intent and clarity very effectively',
+        'Learned how to effectively leverage pair programming with other team members',
+      ],
+    },
+    {
+      description:
+        'Co-led technical implementations during leadership transitions, maintaining continuity between development and executive leadership.',
+      role: 'Interim Director of Engineering',
+      learnings: [
+        'Learned that technical leadership requires communication as much as technical proficiency',
+      ],
+    },
+    {
+      description:
+        'Established a structured UAT process aligning business stakeholders with development priorities, improving feature quality.',
+      role: 'Team Lead',
+      learnings: [
+        'Learned the importance of talking directly to end users',
+        'Learned that educating our business on technical practices positively impacted velocity',
+      ],
+    },
+    {
+      description:
+        'Collaborated with senior architects to implement product-wide strategy and enforce technical standards.',
+      role: 'Team Lead',
+      learnings: [],
+    },
+    {
+      description:
+        'Aligned technical initiatives with regulatory requirements to reduce defects and prepare for new features.',
+      role: 'Team Lead',
+      learnings: [
+        'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
+        'Discovered that early consideration of regulatory requirements prevents costly refactoring later',
       ],
     },
   ],
