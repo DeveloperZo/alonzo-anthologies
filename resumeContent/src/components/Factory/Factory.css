@@ -1,0 +1,333 @@
+/***************************************
+ *  Career factory (play-mode home)
+ ***************************************/
+
+.factory {
+  --f-panel: rgba(30, 28, 26, 0.94);
+  --f-panel-edge: #57514a;
+  --f-text: #f2e8d5;
+  --f-dim: #a89f91;
+  --f-accent: var(--accent-color, #ff9900);
+  --f-belt-bed: #2d2a26;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--f-text);
+}
+
+/* ---------- toolbar and quickbar ---------- */
+
+.factory-toolbar,
+.factory-quickbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: var(--f-panel);
+  border: 2px solid var(--f-panel-edge);
+}
+
+.factory-toolbar { border-bottom: none; }
+.factory-quickbar { border-top: none; justify-content: center; }
+
+.factory-title {
+  flex: 1 1 auto;
+  font-size: 11px;
+  color: var(--f-accent);
+  white-space: nowrap;
+}
+
+.factory-group { display: flex; gap: 3px; }
+
+.factory button {
+  font-family: inherit;
+  font-size: 9px;
+  line-height: 1;
+  padding: 7px 8px;
+  margin: 0;
+  color: var(--f-text);
+  background: #3d3934;
+  border: 2px solid;
+  border-color: #6b645b #1e1c19 #1e1c19 #6b645b;
+  border-radius: 0;
+  cursor: pointer;
+  width: auto;
+}
+
+.factory button:hover { background: #4a453f; }
+
+.factory button.on {
+  color: #1e1c19;
+  background: var(--f-accent);
+  border-color: #1e1c19 #6b645b #6b645b #1e1c19;
+}
+
+.factory button:focus-visible,
+.factory-machine:focus-visible,
+.factory-entity:focus-visible {
+  outline: 2px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+.factory-quickbar button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.factory-quickbar .slot {
+  width: 10px;
+  height: 10px;
+  background: var(--f-accent);
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- viewport ---------- */
+
+.factory-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+  border: 2px solid var(--f-panel-edge);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  background: #26231f;
+}
+
+.factory-viewport:active { cursor: grabbing; }
+
+.factory-svg { display: block; }
+
+.factory-svg text { font-family: 'Press Start 2P', monospace; }
+
+.ground { fill: #2b2824; }
+.ground-line { fill: none; stroke: #332f2a; stroke-width: 1; }
+
+/* ---------- belts ---------- */
+
+.belt-bed {
+  stroke: var(--f-belt-bed);
+  stroke-width: 11;
+  stroke-linecap: square;
+}
+
+.belt-flow {
+  stroke-width: 7;
+  stroke-dasharray: 5 5;
+  stroke-opacity: 0.4;
+  animation: factory-belt var(--belt-duration, 1.2s) linear infinite;
+}
+
+.tap .belt-bed { stroke-width: 8; }
+.tap .belt-flow { stroke-width: 4; }
+
+.belt-hit {
+  stroke: transparent;
+  stroke-width: 16;
+  cursor: help;
+}
+
+.belt.hl .belt-flow { stroke-opacity: 0.95; }
+.belt.hl .belt-bed { stroke: #4a443c; }
+
+.lane-label {
+  font-size: 7px;
+  fill: var(--f-text);
+  paint-order: stroke;
+  stroke: #1e1c19;
+  stroke-width: 3px;
+  pointer-events: none;
+}
+
+.route-path { fill: none; stroke: none; }
+
+.belt-item {
+  stroke: #1e1c19;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+@keyframes factory-belt {
+  to { stroke-dashoffset: -10; }
+}
+
+.factory.paused .belt-flow,
+.factory.paused .gear-spin,
+.factory.paused .flame { animation-play-state: paused; }
+
+/* ---------- machines ---------- */
+
+.factory-machine,
+.factory-entity[role='button'] { cursor: pointer; }
+
+.machine-body {
+  fill: #5b554c;
+  stroke: #1e1c19;
+  stroke-width: 2;
+}
+
+.machine-inset {
+  fill: #3a362f;
+  stroke: #6f685d;
+  stroke-width: 1;
+}
+
+.factory-machine.side .machine-body { fill: #4d5a52; }
+
+.factory-machine:hover .machine-body,
+.factory-machine.active .machine-body,
+.factory-entity:hover .machine-body {
+  stroke: var(--f-accent);
+}
+
+.machine-name { font-size: 8px; fill: var(--f-text); }
+.machine-name.long { font-size: 6px; }
+.machine-years { font-size: 6px; fill: var(--f-dim); }
+.machine-role { font-size: 5px; fill: var(--f-dim); }
+.machine-recipe text { font-size: 6px; fill: var(--f-text); }
+.machine-recipe rect { stroke: #1e1c19; stroke-width: 1; }
+
+.machine-gear rect,
+.machine-gear circle { fill: #8f877a; }
+.machine-gear .gear-hole { fill: #3a362f; }
+
+.gear-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: factory-gear calc(var(--belt-duration, 1.2s) * 4) linear infinite;
+}
+
+@keyframes factory-gear {
+  to { transform: rotate(360deg); }
+}
+
+.machine-status { fill: #7a2e2e; }
+.machine-status.on { fill: #5fd35f; }
+
+/* ---------- ore, silo, lab ---------- */
+
+.ore-patch { fill: #3b3026; stroke: #5a4632; stroke-width: 2; }
+.ore-chunk { fill: #c8915a; stroke: #6e4b2a; stroke-width: 1; }
+
+.entity-name { font-size: 7px; fill: var(--f-text); }
+.ore .entity-name { paint-order: stroke; stroke: #1e1c19; stroke-width: 3px; }
+.entity-count { font-size: 6px; fill: var(--f-accent); }
+
+.silo-pit { fill: #1e1c19; stroke: #8f877a; stroke-width: 2; }
+.rocket path { fill: #d9d4c7; stroke: #1e1c19; stroke-width: 1; }
+
+.flame {
+  fill: #ff9800;
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: factory-flame 0.3s steps(2) infinite alternate;
+}
+
+@keyframes factory-flame {
+  to { transform: scaleY(0.4); }
+}
+
+.lab-dome { fill: #3f6b8c; stroke: #1e1c19; stroke-width: 2; }
+.lab-core { fill: #ef5350; stroke: #1e1c19; stroke-width: 1; }
+
+/* ---------- inspector and stats ---------- */
+
+.factory-inspector,
+.factory-stats {
+  position: absolute;
+  top: 8px;
+  max-height: calc(100% - 16px);
+  overflow-y: auto;
+  padding: 10px;
+  background: var(--f-panel);
+  border: 2px solid var(--f-panel-edge);
+  font-size: 8px;
+  line-height: 1.7;
+  cursor: default;
+}
+
+.factory-inspector { right: 8px; width: 230px; }
+.factory-stats { left: 8px; width: 290px; }
+
+.factory-inspector h2,
+.factory-stats h2 {
+  font-size: 9px;
+  color: var(--f-accent);
+  margin: 0 0 8px;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.factory-inspector h3 {
+  font-size: 8px;
+  color: var(--f-dim);
+  margin: 10px 0 4px;
+}
+
+.factory-inspector p { margin: 0 0 6px; }
+.factory-inspector .sub { color: var(--f-dim); }
+.factory-inspector .hint { color: var(--f-dim); font-size: 7px; }
+
+.factory-inspector ul.recipe {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.factory-inspector ul.recipe li { color: var(--f-dim); }
+.factory-inspector ul.recipe li.shared { color: var(--f-text); }
+
+.factory .chip {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border: 1px solid #1e1c19;
+  vertical-align: middle;
+}
+
+.factory-inspector button { margin-top: 6px; }
+
+.factory-inspector button.link {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  color: var(--f-text);
+  text-decoration: underline;
+  font-size: 8px;
+}
+
+.factory-stats table { width: 100%; border-collapse: collapse; }
+.factory-stats th { text-align: left; color: var(--f-dim); font-weight: normal; }
+.factory-stats td { padding: 2px 0; white-space: nowrap; }
+.factory-stats tfoot td { color: var(--f-accent); padding-top: 6px; }
+
+.factory-stats .bar {
+  display: inline-block;
+  height: 6px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.factory-stats .bar.products { background: #e0e0e0; }
+.factory-stats .bar.science { background: #ef5350; }
+
+@media (max-width: 900px) {
+  .factory-stats { width: 240px; font-size: 7px; }
+  .factory-inspector { width: 170px; font-size: 7px; }
+  .factory-title { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .belt-flow,
+  .gear-spin,
+  .flame { animation: none; }
+}

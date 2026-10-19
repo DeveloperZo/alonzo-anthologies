@@ -10,6 +10,8 @@ import NotFound from './components/NotFound/NotFound';
 import quests from './data/quests.data';
 import CareerTimeline from './components/CareerTimeline/CareerTimeline';
 import ResumeView from './components/ResumeView/ResumeView';
+import Factory from './components/Factory/Factory';
+import { useTheme } from './context/ThemeContext';
 
 // ScrollToTop component to reset scroll position when navigating
 const ScrollToTop = () => {
@@ -45,6 +47,12 @@ const QuestDetailWrapper = () => {
   ) : null;
 };
 
+// Play mode opens on the career factory; work mode keeps the plain menu.
+const HomeScreen = () => {
+  const { theme } = useTheme()!;
+  return theme === 'play' ? <Factory /> : <MainMenu />;
+};
+
 const AppRoutes: React.FC = () => {
   return (
     <>
@@ -57,7 +65,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/main-menu" element={
           <QuestSwitcher>
             <Navbar />
-            <MainMenu />
+            <HomeScreen />
           </QuestSwitcher>
         } />
                 
