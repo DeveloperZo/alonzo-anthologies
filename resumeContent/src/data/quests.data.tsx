@@ -35,9 +35,9 @@ const quests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7.2 million covered lives.",
+    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
   summary:
-    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7.2 million covered lives.",
+    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
   type: 'career',
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing

@@ -13,7 +13,7 @@ the printed resume and the timeline.
 
 | View | File | Shows |
 | --- | --- | --- |
-| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` under Principal Technologist (above Projects), `hobby` under Projects, `education` under Education |
+| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) and `hobby` together under Independent Consultant, consulting entries first, `education` under Education |
 | Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
 | Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
 | Quest detail | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
@@ -32,11 +32,10 @@ and 12 keep working. The Quartz site is the host of this resume, not a
 printed project.
 
 **Serennovas is quest 12, not a side project.** It is a paid independent
-engagement, typed `independent`. On the printed resume it lives in
-Principal Technologist, above Projects, not under Professional
-Experience. Its date range was corrected from a Jul 2024 end to ongoing
-after the repos showed work through Aug 2026. Do not move it into the
-projects reel.
+engagement, typed `independent`. On the printed resume it leads the
+Independent Consultant section (2026-10-19), not Professional Experience. Its date
+range was corrected from a Jul 2024 end to ongoing after the repos
+showed work through Aug 2026. Do not retype it as `hobby`.
 
 **Quest 8 starts April 2025 because that is where the evidence starts.**
 The first commit of InfinityQube is 2025-04-29. The old Unity entry
@@ -80,7 +79,7 @@ Manager spine: a VS Code extension and CLI that gates AI-generated
 changes, then mentoring developers on using AI-assisted work to
 enhance the SDLC. Internal tool names (cc_toolkit, nSpec) stay off
 the printed entry. The same rule as CareConnect and Mothra: translate
-to the concept an outside reader already has. The platform scale is 6.5M lives. Direct reports are a team of 5.
+to the concept an outside reader already has. The platform scale is 7M lives (Zo, 2026-10-19: say 7M everywhere). Direct reports are a team of 5.
 Both stay on the overview and the first bullet. Dropped claims the
 register does not support: leading the program, 7 teams and two-quarter
 commitments, and HIPAA vendor selection. Do not claim
@@ -111,15 +110,15 @@ responsible for in that role.
 **Verb first, telegraphic, about 11 words.** Drop articles. Drop
 qualifiers. Name the scope and the number and stop.
 
-    Managed a team of 5 on a rebuild covering 6.5M lives
+    Managed a team of 5 on a rebuild covering 7M lives
     Refactored entire lending platform prior to leading engineering through executive transition
 
 Two failures to avoid, both of which this file has had. A noun phrase
 reads as a caption, not a job entry: "Greenfield rebuild of a fertility
-and family-building benefits platform covering roughly 6.5M lives." A
+and family-building benefits platform covering roughly 7M lives." A
 full grammatical sentence with every article and qualifier intact is
 merely wordy: "Led the platform services team through a ground-up rebuild
-of a fertility and family-building benefits platform serving roughly 6.5M
+of a fertility and family-building benefits platform serving roughly 7M
 members."
 
 Note this register is specific to `description`. Accomplishment bullets
@@ -217,11 +216,13 @@ Enterprise Architect" for the hedge fund assessment and "Independent
 Consulting, Principal Technologist" for the Serennovas engagement. The
 client's sector lives in `titles.sleek`.
 
-On the printed resume they are not Professional Experience. Quest 12
-renders under a Principal Technologist section above Projects. Quest 11
-(hedge fund) stays in the dataset for Timeline and Accomplishments but
-is excluded from the printed resume (2026-08-31). The heading on the
-consulting card is the function after the comma.
+On the printed resume they are not Professional Experience. As of
+2026-10-19 there is no Projects heading and no Principal Technologist
+heading: quest 12 and the hobby project share one Independent Consultant
+section, with the consulting card first. Quest 11 (hedge fund) stays
+in the dataset for Timeline and Accomplishments but is excluded from
+the printed resume (2026-08-31).
+The heading on the consulting card is the function after the comma.
 
 Quest 12 is full stack plus founder advising, not data or corpus work
 (Zo, 2026-08-31). The overview says that once: built the product full

@@ -49,15 +49,6 @@ const ResumeView: React.FC = () => {
     };
 
     const experience = quests.filter(isExperienceQuest).sort(byStartDesc).map(toResumeEntry);
-    const consulting = quests
-      .filter((quest) => isConsultingQuest(quest) && quest.id !== 11)
-      .sort(byStartDesc)
-      .map((quest) => ({
-      ...toResumeEntry(quest),
-      role: consultingTitle(quest),
-      company: 'Independent Consulting',
-    }));
-
     const education = quests
       .filter((quest) => quest.type === 'education')
       .map((edu) => ({
@@ -75,20 +66,37 @@ const ResumeView: React.FC = () => {
       ),
     );
 
-    const projects = quests
-      .filter(isProjectQuest)
-      .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
-      .map((quest) => ({
-        id: quest.id,
-        name: quest.titles.sleek,
-        overview: quest.description.trim(),
-        startDate: quest.startDate,
-        endDate: quest.endDate,
-        link: quest.externalLink,
-        accomplishments: quest.accomplishments.map((acc) => acc.description),
-      }));
+    // Consulting and personal work share one section. Consulting leads.
+    const projects = [
+      ...quests
+        .filter((quest) => isConsultingQuest(quest) && quest.id !== 11)
+        .sort(byStartDesc)
+        .map((quest) => ({
+          id: quest.id,
+          name: consultingTitle(quest),
+          meta: 'Independent Consulting',
+          link: undefined as string | undefined,
+          overview: quest.description.trim(),
+          startDate: quest.startDate,
+          endDate: quest.endDate,
+          accomplishments: quest.accomplishments.map((acc) => acc.description),
+        })),
+      ...quests
+        .filter(isProjectQuest)
+        .sort(byStartDesc)
+        .map((quest) => ({
+          id: quest.id,
+          name: quest.titles.sleek,
+          meta: 'Personal Project',
+          link: quest.externalLink,
+          overview: quest.description.trim(),
+          startDate: quest.startDate,
+          endDate: quest.endDate,
+          accomplishments: quest.accomplishments.map((acc) => acc.description),
+        })),
+    ];
 
-    return { experience, consulting, education, projects, skills };
+    return { experience, education, projects, skills };
   }, []);
 
   const handleDownloadPDF = () => {
@@ -155,39 +163,9 @@ const ResumeView: React.FC = () => {
           ))}
         </section>
 
-        {resumeData.consulting.length > 0 && (
-          <section className="resume-section">
-            <h2>Principal Technologist</h2>
-            {resumeData.consulting.map((job) => (
-              <div key={job.id} className="experience-item">
-                <div className="job-header">
-                  <h3>{job.role}</h3>
-                  <div className="company-period">
-                    <span className="company-name">{job.company}</span>
-                    <span className="job-period">
-                      {formatDate(job.startDate)}
-                      {' – '}
-                      {job.endDate.getFullYear() >= 2030
-                        ? 'Present'
-                        : formatDate(job.endDate)}
-                    </span>
-                  </div>
-                </div>
-                {job.overview ? <p className="role-overview">{job.overview}</p> : null}
-                <ul className="accomplishment-bullets">
-                  {job.accomplishments.map((acc, i) => (
-                    <li key={i}>{acc}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-        )}
-        
-        {/* Projects */}
         {resumeData.projects.length > 0 && (
           <section className="resume-section">
-            <h2>Projects</h2>
+            <h2>Independent Consultant</h2>
             {resumeData.projects.map((project) => (
               <div key={project.id} className="experience-item">
                 <div className="job-header">
@@ -199,7 +177,7 @@ const ResumeView: React.FC = () => {
                           Repository
                         </a>
                       ) : (
-                        'Personal Project'
+                        project.meta
                       )}
                     </span>
                     <span className="job-period">
