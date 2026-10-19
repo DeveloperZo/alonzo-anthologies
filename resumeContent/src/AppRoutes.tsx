@@ -47,10 +47,26 @@ const QuestDetailWrapper = () => {
   ) : null;
 };
 
-// Play mode opens on the career factory; work mode keeps the plain menu.
+// Play mode opens on the career factory, full screen with no TV frame.
+// Work mode keeps the plain menu inside its frame.
 const HomeScreen = () => {
   const { theme } = useTheme()!;
-  return theme === 'play' ? <Factory /> : <MainMenu />;
+  if (theme === 'play') {
+    return (
+      <>
+        <Navbar />
+        <div className="factory-stage">
+          <Factory />
+        </div>
+      </>
+    );
+  }
+  return (
+    <QuestSwitcher>
+      <Navbar />
+      <MainMenu />
+    </QuestSwitcher>
+  );
 };
 
 const AppRoutes: React.FC = () => {
@@ -62,12 +78,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/" element={<Navigate to="/main-menu" replace />} />
         
         {/* Main Menu */}
-        <Route path="/main-menu" element={
-          <QuestSwitcher>
-            <Navbar />
-            <HomeScreen />
-          </QuestSwitcher>
-        } />
+        <Route path="/main-menu" element={<HomeScreen />} />
                 
         {/* Individual Quest Detail */}
         <Route path="/quests/:id" element={

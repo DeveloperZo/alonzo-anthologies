@@ -331,3 +331,17 @@
   .gear-spin,
   .flame { animation: none; }
 }
+
+/* ---------- full-screen stage (play-mode home) ---------- */
+
+.factory-stage {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #1e1c19;
+}
+
+.factory-stage .factory-title { font-size: 13px; }

@@ -75,7 +75,7 @@ const Factory: React.FC = () => {
     const { width, height } = el.getBoundingClientRect();
     const scale = Math.max(
       Math.min(width / model.width, height / model.height) * 0.96,
-      Math.min(1.1, (height / model.height) * 0.96),
+      Math.min(1.5, (height / model.height) * 0.96),
     );
     setView({ scale, tx: 8, ty: (height - model.height * scale) / 2 });
   }, [model]);

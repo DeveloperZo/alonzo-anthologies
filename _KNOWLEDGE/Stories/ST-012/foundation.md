@@ -10,6 +10,23 @@ Every element must help answer this, as presented. Check each draft against it b
 - The equation answers "what kind".
 - The line answers "becoming": acts 1 to 3 are the foundations, act 4 is AI on top of them, and act 5 is where he is headed.
 
+## The equation's meta (Zo, 2026-10-19)
+
+The top row keeps Zo's original layout, with 01 and 02 swapped.
+
+- **01 Proven Problem Solver:** Alonzo's compounded skills.
+- **+ 02 Commitment to Continuous Learning:** the skill set that is in demand right now (AI).
+- **+ 03 Immediate Actions (the hollow circle):** the attractive trade. A two-item numbered list of what the company will expect of him first, researched from the job post and the company, and limited to what his portfolio already proves.
+- **= 04 Company Recognized Problem Solver:** the career outcome.
+
+Tailor 03 and 04 to each job post. 01 and 02 stay stable.
+
+**Conversation starter, not conversation dictator (Zo, 2026-10-19).** Do not over-specify.
+- Every line is a short, open hint in the register of his original ("Accumulated experience from dynamic and difficult problems in pursuit of deeper skill set").
+- No service lists, counts or project details on the sheet. Those belong to Zo's commentary and the resume.
+- If a line answers the question a reader would ask, it is too specific.
+- **Say each idea once, in the place that shows it best.** Durations are carried by lane length, not printed numbers. There is no thesis line, because the banner closes the page. More is less.
+
 ## Layer 1: story spine (agreed)
 
 - **Purpose:** an abstract, engaging, qualitative summary of the resume journey. It is a visual readout that implies a clear story, and Zo's own commentary in conversation magnifies it. Not every idea has to appear.
