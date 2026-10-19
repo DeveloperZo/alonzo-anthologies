@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import quests from '../../data/quests.data';
 import type { Quest } from '../../data/quests.data';
-import { coreCompetencies, professionalSummary } from '../../data/profile.data';
+import { coreCompetencies, professionalSummary, targetRole } from '../../data/profile.data';
 import './ResumeView.css';
 import { generateResumePdfFromDom } from '../../utils/pdfGenerator';
 
@@ -99,6 +99,7 @@ const ResumeView: React.FC = () => {
       <div className="resume-header">
         <div className="header-content">
           <h1>Alonzo Williams</h1>
+          <p className="target-role">{targetRole}</p>
           <div className="contact-info">
             awilliams9293@gmail.com<br />
             https://www.linkedin.com/in/alonzo-williams-1160a7b0/<br />
@@ -196,9 +197,9 @@ const ResumeView: React.FC = () => {
                     {new Date(edu.startDate).getFullYear()} – {new Date(edu.endDate).getFullYear()}
                   </span>
                 </div>
-                {edu.details && edu.details.length > 0 && (
+                {edu.details && edu.details.some((detail) => detail !== edu.degree) && (
                   <ul className="education-details">
-                    {edu.details.map((detail, i) => (
+                    {edu.details.filter((detail) => detail !== edu.degree).map((detail, i) => (
                       <li key={i}>{detail}</li>
                     ))}
                   </ul>
@@ -209,7 +210,7 @@ const ResumeView: React.FC = () => {
         )}
 
         {resumeData.projects.length > 0 && (
-          <section className="resume-section">
+          <section className="resume-section screen-only">
             <h2>Independent Projects</h2>
             {resumeData.projects.map((project) => (
               <div key={project.id} className="experience-item">

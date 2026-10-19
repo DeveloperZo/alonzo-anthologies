@@ -35,7 +35,7 @@ const quests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
+    "Leads a team of 5 on a SaaS platform rebuild covering 7M lives",
   summary:
     "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
   type: 'career',
@@ -46,16 +46,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Introduced AI-assisted development practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
-      role: 'Manager, Experience Platform',
-      learnings: [
-        'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
-        'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
-      ],
-    },
-    {
-      description:
-        'Built and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
+        'Built and led a five-engineer team owning authentication, content, Salesforce API integrations, enrollment, and eligibility.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
@@ -64,11 +55,11 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Partnered with enterprise architects to identify architectural gaps and translate technical guidance into actionable engineering specifications.',
+        'Delivered over 90% of refined work within two weeks through clear technical design and team execution.',
       role: 'Manager, Experience Platform',
       learnings: [
-        'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
-        'Discovered that early gap analysis with architects prevents costly rework across dependent teams',
+        'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
+        'Discovered that team execution improves when work is refined with explicit design intent',
       ],
     },
     {
@@ -82,20 +73,29 @@ const quests: Quest[] = [
     },
     {
       description:
+        'Partnered with enterprise architects to identify architectural gaps and translate technical guidance into actionable engineering specifications.',
+      role: 'Manager, Experience Platform',
+      learnings: [
+        'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
+        'Discovered that early gap analysis with architects prevents costly rework across dependent teams',
+      ],
+    },
+    {
+      description:
+        'Introduced AI-assisted development practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
+      role: 'Manager, Experience Platform',
+      learnings: [
+        'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
+        'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
+      ],
+    },
+    {
+      description:
         'Led HIPAA-aware vendor evaluations and configuration platform design, balancing compliance, cost, and long-term flexibility.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
         'Discovered that BAA boundaries and PHI routing rules must be designed into architecture from the start',
-      ],
-    },
-    {
-      description:
-        'Delivered over 90% of refined work within two weeks through clear technical design and team execution.',
-      role: 'Manager, Experience Platform',
-      learnings: [
-        'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
-        'Discovered that team execution improves when work is refined with explicit design intent',
       ],
     },
   ],
@@ -118,15 +118,6 @@ const quests: Quest[] = [
   roles: ['Senior Software Architect'],
   tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration'],
   accomplishments: [
-    {
-      description:
-        'Secured a $2M project extension by building a shared design library, translating Figma designs into reusable components that accelerated delivery across teams.',
-      role: 'Senior Software Architect',
-      learnings: [
-        'Learned that component libraries still deliver value even when implemented late in a project',
-        'Discovered that reusable design systems can unlock measurable commercial outcomes',
-      ],
-    },
     {
       description:
         'Led UI architecture across five engineering teams while serving as full-stack architect for one, aligning technical direction and implementation standards.',
@@ -161,6 +152,15 @@ const quests: Quest[] = [
         'Discovered that architectural clarity compounds into sustained delivery gains',
       ],
     },
+    {
+      description:
+        'Secured a $2M project extension by building a shared design library, translating Figma designs into reusable components that accelerated delivery across teams.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned that component libraries still deliver value even when implemented late in a project',
+        'Discovered that reusable design systems can unlock measurable commercial outcomes',
+      ],
+    },
   ],
 },
 {
@@ -183,28 +183,10 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Managed 16 client engagements, owning budgets up to $250K, scope, technical delivery, and stakeholder expectations.',
-      role: 'Software Architect',
-      learnings: [
-        'Learned to ground stories in facts and data that the client cares about',
-        'Discovered that owning budget and scope alongside technical delivery builds client trust',
-      ],
-    },
-    {
-      description:
-        'Delivered enterprise solutions across .NET/C#, Java Spring Boot, React, Angular, Flutter, and UWP.',
+        'Delivered enterprise solutions using C#/.NET, SQL Server, PostgreSQL, Entity Framework, Java Spring Boot, React, Angular, Flutter, and UWP.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
-      ],
-    },
-    {
-      description:
-        'Reduced maintenance costs by 30% through full-stack modernization of a claims application while maintaining HIPAA compliance.',
-      role: 'Software Architect',
-      learnings: [
-        'Learned that healthcare data practices impact technical decisions and constraints',
-        'Learned that compliance requirements should be considered in reusable patterns',
       ],
     },
     {
@@ -218,10 +200,11 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Certified a client commerce system with a third-party payment processor, enabling secure payment processing across its applications.',
+        'Managed 16 client engagements, owning budgets up to $250K, scope, technical delivery, and stakeholder expectations.',
       role: 'Software Architect',
       learnings: [
-        'Learned how to build IdP integrations from the ground up',
+        'Learned to ground stories in facts and data that the client cares about',
+        'Discovered that owning budget and scope alongside technical delivery builds client trust',
       ],
     },
     {
@@ -231,6 +214,23 @@ const quests: Quest[] = [
       learnings: [
         'Learned that project templates work easier when teams build working relationships',
         'Learned that standardization must balance consistency with flexibility for project-specific needs',
+      ],
+    },
+    {
+      description:
+        'Reduced maintenance costs by 30% through full-stack modernization of a claims application while maintaining HIPAA compliance.',
+      role: 'Software Architect',
+      learnings: [
+        'Learned that healthcare data practices impact technical decisions and constraints',
+        'Learned that compliance requirements should be considered in reusable patterns',
+      ],
+    },
+    {
+      description:
+        'Certified a client commerce system with a third-party payment processor, enabling secure payment processing across its applications.',
+      role: 'Software Architect',
+      learnings: [
+        'Learned how to build IdP integrations from the ground up',
       ],
     },
   ],
@@ -244,7 +244,7 @@ const quests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    'Co-led technical implementations and maintained clear communication during leadership transitions.',
+    'Refactored entire lending platform prior to leading engineering through executive transition',
   summary: 
     'Led critical platform migrations and major refactoring efforts that transformed application performance while providing technical leadership during organizational transitions. Established effective feedback mechanisms with stakeholders and represented technical concerns to executive leadership.',
   type: 'career',
@@ -255,20 +255,11 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Represented technical leadership to investors and the CEO during executive transitions, providing strategic guidance.',
-      role: 'Interim Director of Engineering',
+        'Upgraded C#/.NET applications to the latest .NET version using SQL Server and Entity Framework, and improved performance on day one.',
+      role: 'Team Lead',
       learnings: [
-        'Learned that technical leadership requires communication as much as technical proficiency',
-        'Learned how to communicate to leaders what outcomes to expect from the technical department',
-      ],
-    },
-    {
-      description:
-        'Achieved target KPIs as interim director, while onboarding incoming CTO and managing team.',
-      role: 'Interim Director of Engineering',
-      learnings: [
-        'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
-        'Discovered that effective onboarding of new leadership benefits from structured knowledge transfer',
+        'Learned how to read code for intent and clarity very effectively',
+        'Learned how to effectively leverage pair programming with other team members',
       ],
     },
     {
@@ -278,23 +269,6 @@ const quests: Quest[] = [
       learnings: [
         'Learned how to perform every function of and be involved in most decisions for the SDLC',
         'Learned how to build a culture of technical excellence for a small team',
-      ],
-    },
-    {
-      description:
-        'Upgraded applications from .NET to .NET Core on day one, immediately improving performance and establishing technical direction.',
-      role: 'Team Lead',
-      learnings: [
-        'Learned how to read code for intent and clarity very effectively',
-        'Learned how to effectively leverage pair programming with other team members',
-      ],
-    },
-    {
-      description:
-        'Co-led technical implementations during leadership transitions, maintaining continuity between development and executive leadership.',
-      role: 'Interim Director of Engineering',
-      learnings: [
-        'Learned that technical leadership requires communication as much as technical proficiency',
       ],
     },
     {
@@ -319,6 +293,32 @@ const quests: Quest[] = [
       learnings: [
         'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
         'Discovered that early consideration of regulatory requirements prevents costly refactoring later',
+      ],
+    },
+    {
+      description:
+        'Represented technical leadership to investors and the CEO during executive transitions, providing strategic guidance.',
+      role: 'Interim Director of Engineering',
+      learnings: [
+        'Learned that technical leadership requires communication as much as technical proficiency',
+        'Learned how to communicate to leaders what outcomes to expect from the technical department',
+      ],
+    },
+    {
+      description:
+        'Achieved target KPIs as interim director, while onboarding incoming CTO and managing team.',
+      role: 'Interim Director of Engineering',
+      learnings: [
+        'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
+        'Discovered that effective onboarding of new leadership benefits from structured knowledge transfer',
+      ],
+    },
+    {
+      description:
+        'Co-led technical implementations during leadership transitions, maintaining continuity between development and executive leadership.',
+      role: 'Interim Director of Engineering',
+      learnings: [
+        'Learned that technical leadership requires communication as much as technical proficiency',
       ],
     },
   ],
@@ -351,7 +351,7 @@ const quests: Quest[] = [
     },
 {
       description:
-        "Modernized WinForms desktop applications with Kendo UI, fitting current interfaces onto a framework not built for them.",
+        "Modernized C# WinForms applications using SQL Server and Entity Framework with Kendo UI, fitting current interfaces onto a desktop framework not built for them.",
       role: 'Senior Consultant',
       learnings: [
         "I learned how to balance modern UI expectations with legacy application constraints",
@@ -387,7 +387,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        "Built core feature components for a car loan application under senior mentorship.",
+        "Built C# feature components for a car loan application using SQL Server and Entity Framework, under senior mentorship.",
       role: 'Developer',
       learnings: [],
     },
@@ -437,7 +437,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        "Built and deployed C# MVC applications that automated financial operations and met the validation and audit requirements those systems carried.",
+        "Built and deployed C# MVC applications using SQL Server and Entity Framework that automated financial operations and met the validation and audit requirements those systems carried.",
       role: 'Developer',
       learnings: [
         "Learned that enterprise scale moves the cost from writing software to maintaining it",
@@ -479,18 +479,18 @@ const quests: Quest[] = [
     },
     {
       description:
-        "Specified the architecture and put the constraints in the build, so AI-written code failed automatically when it crossed a boundary.",
-      role: 'Game Developer',
-      learnings: [
-        "Learned that a rule a person has to remember to run documents violations rather than preventing them",
-      ],
-    },
-    {
-      description:
         "Used AI to write the implementation of over 600 C# files I reviewed and gated through play test or audit findings.",
       role: 'Game Developer',
       learnings: [
         "Learned to write the failure back into the next session's rules",
+      ],
+    },
+    {
+      description:
+        "Specified the architecture and put the constraints in the build, so AI-written code failed automatically when it crossed a boundary.",
+      role: 'Game Developer',
+      learnings: [
+        "Learned that a rule a person has to remember to run documents violations rather than preventing them",
       ],
     },
   ],
@@ -558,13 +558,13 @@ const quests: Quest[] = [
   },
   company: "Independent Consulting, Principal Technologist",
   workTitle: "Principal Technologist",
-  description: "Built the product full stack and advised founders on technical direction",
+  description: "Built Azure Function Apps using Service Bus, Storage, and Key Vault, and advised founders on direction",
   summary: "The founders brought me in for direction. I stayed and built the application.",
   type: "independent",
   startDate: new Date("2024-03-01"),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ["Principal Technologist"],
-  tags: ["Patent Intelligence", "Biotech", "Azure Functions", "React", "TypeScript", "C#", "Technical Leadership"],
+  tags: ["Patent Intelligence", "Biotech", "Azure Function Apps", "Azure Service Bus", "Azure Storage", "Azure Key Vault", "React", "TypeScript", "C#", "Technical Leadership"],
   accomplishments: [
     {
       description: "Advised the founders on technical direction, including stopping an identity-provider migration and restoring the prior stack from source control.",

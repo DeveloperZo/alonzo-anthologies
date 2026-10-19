@@ -1,4 +1,4 @@
-// WYSIWYG PDF: captures the visible résumé DOM (same layout as the screen). Slices the canvas into A4 pages.
+// PDF capture of the résumé. The print class tightens layout and drops screen-only sections.
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
@@ -24,7 +24,18 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
 
   await document.fonts?.ready?.catch?.(() => undefined);
 
+  const prevWidth = el.style.width;
+  const prevMaxWidth = el.style.maxWidth;
+  // Screen layout stays as authored. The print class and fixed width apply only for capture.
+  el.classList.add('resume-print');
+  el.style.maxWidth = '794px';
+  el.style.width = '794px';
+
   try {
+    await new Promise<void>((resolve) => {
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+    });
+
     const w = Math.max(el.scrollWidth, el.offsetWidth);
     const h = Math.max(el.scrollHeight, el.offsetHeight);
 
@@ -87,6 +98,9 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
   } catch (e) {
     console.error('PDF generation failed:', e);
   } finally {
+    el.classList.remove('resume-print');
+    el.style.width = prevWidth;
+    el.style.maxWidth = prevMaxWidth;
     if (btn) {
       btn.style.visibility = prevVisibility;
       btn.style.pointerEvents = prevPointer;
