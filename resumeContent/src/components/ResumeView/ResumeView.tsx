@@ -66,37 +66,28 @@ const ResumeView: React.FC = () => {
       ),
     );
 
-    // Consulting and personal work share one section. Consulting leads.
-    const projects = [
-      ...quests
-        .filter((quest) => isConsultingQuest(quest) && quest.id !== 11)
-        .sort(byStartDesc)
-        .map((quest) => ({
-          id: quest.id,
-          name: consultingTitle(quest),
-          meta: 'Independent Consulting',
-          link: undefined as string | undefined,
-          overview: quest.description.trim(),
-          startDate: quest.startDate,
-          endDate: quest.endDate,
-          accomplishments: quest.accomplishments.map((acc) => acc.description),
-        })),
-      ...quests
-        .filter(isProjectQuest)
-        .sort(byStartDesc)
-        .map((quest) => ({
-          id: quest.id,
-          name: quest.titles.sleek,
-          meta: 'Personal Project',
-          link: quest.externalLink,
-          overview: quest.description.trim(),
-          startDate: quest.startDate,
-          endDate: quest.endDate,
-          accomplishments: quest.accomplishments.map((acc) => acc.description),
-        })),
-    ];
+    const toPrintedEntry = (quest: Quest, name: string, meta: string) => ({
+      id: quest.id,
+      name,
+      meta,
+      link: quest.externalLink,
+      overview: quest.description.trim(),
+      startDate: quest.startDate,
+      endDate: quest.endDate,
+      accomplishments: quest.accomplishments.map((acc) => acc.description),
+    });
 
-    return { experience, education, projects, skills };
+    const consulting = quests
+      .filter((quest) => isConsultingQuest(quest) && quest.id !== 11)
+      .sort(byStartDesc)
+      .map((quest) => toPrintedEntry(quest, consultingTitle(quest), 'Independent Consulting'));
+
+    const projects = quests
+      .filter(isProjectQuest)
+      .sort(byStartDesc)
+      .map((quest) => toPrintedEntry(quest, quest.titles.sleek, 'Personal Project'));
+
+    return { experience, education, consulting, projects, skills };
   }, []);
 
   const handleDownloadPDF = () => {
@@ -163,6 +154,35 @@ const ResumeView: React.FC = () => {
           ))}
         </section>
 
+        {resumeData.consulting.length > 0 && (
+          <section className="resume-section">
+            <h2>Independent Consultant</h2>
+            {resumeData.consulting.map((entry) => (
+              <div key={entry.id} className="experience-item">
+                <div className="job-header">
+                  <h3>{entry.name}</h3>
+                  <div className="company-period">
+                    <span className="company-name">{entry.meta}</span>
+                    <span className="job-period">
+                      {formatDate(entry.startDate)}
+                      {' – '}
+                      {entry.endDate.getFullYear() >= 2030
+                        ? 'Present'
+                        : formatDate(entry.endDate)}
+                    </span>
+                  </div>
+                </div>
+                {entry.overview ? <p className="role-overview">{entry.overview}</p> : null}
+                <ul className="accomplishment-bullets">
+                  {entry.accomplishments.map((acc, i) => (
+                    <li key={i}>{acc}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </section>
+        )}
+
         {/* Education Section */}
         {resumeData.education && resumeData.education.length > 0 && (
           <section className="resume-section">
@@ -190,11 +210,10 @@ const ResumeView: React.FC = () => {
 
         {resumeData.projects.length > 0 && (
           <section className="resume-section">
-            <h2>Independent Consultant</h2>
+            <h2>Independent Projects</h2>
             {resumeData.projects.map((project) => (
               <div key={project.id} className="experience-item">
                 <div className="job-header">
-                  <h3>{project.name}</h3>
                   <div className="company-period">
                     <span className="company-name">
                       {project.link ? (

@@ -13,7 +13,7 @@ the printed resume and the timeline.
 
 | View | File | Shows |
 | --- | --- | --- |
-| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `education` under Education, then `independent` (except quest 11) and `hobby` together under Independent Consultant, consulting entries first |
+| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) under Independent Consultant, `education` under Education, `hobby` under Independent Projects |
 | Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
 | Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
 | Quest detail | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
@@ -32,8 +32,9 @@ and 12 keep working. The Quartz site is the host of this resume, not a
 printed project.
 
 **Serennovas is quest 12, not a side project.** It is a paid independent
-engagement, typed `independent`. On the printed resume it leads the
-Independent Consultant section (2026-10-19), not Professional Experience. Its date
+engagement, typed `independent`. On the printed resume it is the
+Independent Consultant section, between Professional Experience and
+Education (2026-10-19). Its date
 range was corrected from a Jul 2024 end to ongoing after the repos
 showed work through Aug 2026. Do not retype it as `hobby`.
 
@@ -217,11 +218,11 @@ Consulting, Principal Technologist" for the Serennovas engagement. The
 client's sector lives in `titles.sleek`.
 
 On the printed resume they are not Professional Experience. As of
-2026-10-19 there is no Projects heading and no Principal Technologist
-heading: quest 12 and the hobby project share one Independent Consultant
-section placed after Education, with the consulting card first. Quest 11 (hedge fund) stays
-in the dataset for Timeline and Accomplishments but is excluded from
-the printed resume (2026-08-31).
+2026-10-19 quest 12 is the Independent Consultant section, between
+Professional Experience and Education. The hobby project is a separate
+Independent Projects section after Education. Quest 11 (hedge fund)
+stays in the dataset for Timeline and Accomplishments but is excluded
+from the printed resume (2026-08-31).
 The heading on the consulting card is the function after the comma.
 
 Quest 12 is full stack plus founder advising, not data or corpus work
