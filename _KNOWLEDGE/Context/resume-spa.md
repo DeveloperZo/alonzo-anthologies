@@ -13,7 +13,7 @@ the printed resume and the timeline.
 
 | View | File | Shows |
 | --- | --- | --- |
-| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) and `hobby` together under Independent Consultant, consulting entries first, `education` under Education |
+| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `education` under Education, then `independent` (except quest 11) and `hobby` together under Independent Consultant, consulting entries first |
 | Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
 | Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
 | Quest detail | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
@@ -219,7 +219,7 @@ client's sector lives in `titles.sleek`.
 On the printed resume they are not Professional Experience. As of
 2026-10-19 there is no Projects heading and no Principal Technologist
 heading: quest 12 and the hobby project share one Independent Consultant
-section, with the consulting card first. Quest 11 (hedge fund) stays
+section placed after Education, with the consulting card first. Quest 11 (hedge fund) stays
 in the dataset for Timeline and Accomplishments but is excluded from
 the printed resume (2026-08-31).
 The heading on the consulting card is the function after the comma.

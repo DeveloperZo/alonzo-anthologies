@@ -163,6 +163,31 @@ const ResumeView: React.FC = () => {
           ))}
         </section>
 
+        {/* Education Section */}
+        {resumeData.education && resumeData.education.length > 0 && (
+          <section className="resume-section">
+            <h2>Education</h2>
+            {resumeData.education.map((edu, index) => (
+              <div key={index} className="education-item">
+                <h3>{edu.degree}</h3>
+                <div className="institution-period">
+                  <span className="institution-name">{edu.institution}</span>
+                  <span className="education-period">
+                    {new Date(edu.startDate).getFullYear()} – {new Date(edu.endDate).getFullYear()}
+                  </span>
+                </div>
+                {edu.details && edu.details.length > 0 && (
+                  <ul className="education-details">
+                    {edu.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
+
         {resumeData.projects.length > 0 && (
           <section className="resume-section">
             <h2>Independent Consultant</h2>
@@ -195,31 +220,6 @@ const ResumeView: React.FC = () => {
                     <li key={i}>{acc}</li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </section>
-        )}
-
-        {/* Education Section */}
-        {resumeData.education && resumeData.education.length > 0 && (
-          <section className="resume-section">
-            <h2>Education</h2>
-            {resumeData.education.map((edu, index) => (
-              <div key={index} className="education-item">
-                <h3>{edu.degree}</h3>
-                <div className="institution-period">
-                  <span className="institution-name">{edu.institution}</span>
-                  <span className="education-period">
-                    {new Date(edu.startDate).getFullYear()} – {new Date(edu.endDate).getFullYear()}
-                  </span>
-                </div>
-                {edu.details && edu.details.length > 0 && (
-                  <ul className="education-details">
-                    {edu.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
               </div>
             ))}
           </section>
