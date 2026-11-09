@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import './ViewportWarning.css';
 
 const ViewportWarning: React.FC = () => {
   const [showWarning, setShowWarning] = useState(false);
   const { theme } = useTheme()!;
+  // The application package prints #/resume?print=1 headlessly. A full-screen overlay there would cover the PDF.
+  const printMode = new URLSearchParams(useLocation().search).get('print') === '1';
 
   useEffect(() => {
     const checkViewport = () => {
@@ -25,7 +28,7 @@ const ViewportWarning: React.FC = () => {
     setShowWarning(false);
   };
 
-  if (!showWarning) return null;
+  if (!showWarning || printMode) return null;
 
   if (theme === 'play') {
     return (

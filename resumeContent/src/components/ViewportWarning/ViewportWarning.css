@@ -76,4 +76,11 @@
   .viewport-warning {
     display: none;
   }
-} 
+}
+
+/* Never print the warning, whatever the window width. */
+@media print {
+  .viewport-warning {
+    display: none !important;
+  }
+}
