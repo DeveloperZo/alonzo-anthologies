@@ -365,3 +365,21 @@
       break-after: avoid;
     }
   }
+
+  /* Phones: the header stacks so the download button sits under the contact details, and competencies use one column. */
+  @media screen and (max-width: 600px) {
+    .resume-container,
+    .work .resume-container {
+      padding: 18px 16px;
+    }
+
+    .resume-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .competencies-grid {
+      grid-template-columns: 1fr;
+    }
+  }

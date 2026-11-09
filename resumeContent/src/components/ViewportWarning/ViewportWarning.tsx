@@ -6,8 +6,9 @@ import './ViewportWarning.css';
 const ViewportWarning: React.FC = () => {
   const [showWarning, setShowWarning] = useState(false);
   const { theme } = useTheme()!;
-  // The application package prints #/resume?print=1 headlessly. A full-screen overlay there would cover the PDF.
-  const printMode = new URLSearchParams(useLocation().search).get('print') === '1';
+  // Never on the resume: recruiters open that link on phones, and the resume reads fine there.
+  // This also keeps the overlay off #/resume?print=1, which the application package prints.
+  const onResume = useLocation().pathname === '/resume';
 
   useEffect(() => {
     const checkViewport = () => {
@@ -28,7 +29,7 @@ const ViewportWarning: React.FC = () => {
     setShowWarning(false);
   };
 
-  if (!showWarning || printMode) return null;
+  if (!showWarning || onResume) return null;
 
   if (theme === 'play') {
     return (
