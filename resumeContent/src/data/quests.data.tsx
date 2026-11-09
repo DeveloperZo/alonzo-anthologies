@@ -1,5 +1,7 @@
 // src/data/quests.data.tsx
 
+import { applyQuestTailoring } from './tailoring';
+
 export interface Quest {
   id: number;
   titles: {
@@ -20,12 +22,13 @@ export interface Quest {
 }
 
 export interface Accomplishment {
+  key: string;        // Stable id within its quest. Tailoring overlays refer to this, never to the wording.
   description: string;
   role: string;       // Role in which it was achieved
   learnings: string[]; // What was learned or the 'reward' achieved
 }
 
-const quests: Quest[] = [
+export const baseQuests: Quest[] = [
 {
   id: 1,
   titles: {
@@ -45,6 +48,7 @@ const quests: Quest[] = [
   tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development'],
   accomplishments: [
     {
+      key: 'ai-sdlc',
       description:
         'Introduced AI-assisted SDLC practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
       role: 'Manager, Experience Platform',
@@ -54,6 +58,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'team',
       description:
         'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
       role: 'Manager, Experience Platform',
@@ -63,6 +68,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'architects',
       description:
         'Worked with the enterprise architects to find gaps in the architecture and turned their guidance into specs engineers could build from.',
       role: 'Manager, Experience Platform',
@@ -72,6 +78,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'planning',
       description:
         'Coordinated planning across seven engineering teams for the new platform and designed the solutions for 30% of its stories.',
       role: 'Manager, Experience Platform',
@@ -81,6 +88,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'vendors',
       description:
         'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice would be to change later.',
       role: 'Manager, Experience Platform',
@@ -90,6 +98,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'delivery',
       description:
         'Delivered over 90% of refined work within two weeks, with the technical design done before the team picked it up.',
       role: 'Manager, Experience Platform',
@@ -119,6 +128,7 @@ const quests: Quest[] = [
   tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration'],
   accomplishments: [
     {
+      key: 'component-library',
       description:
         'Built a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
       role: 'Senior Software Architect',
@@ -128,6 +138,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'ui-architecture',
       description:
         'Set the UI architecture and implementation standards for five engineering teams while staying hands-on as full-stack architect for one of them.',
       role: 'Senior Software Architect',
@@ -137,6 +148,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'mentoring',
       description:
         'Mentored senior developers on the architecture and on delivering against it.',
       role: 'Senior Software Architect',
@@ -145,6 +157,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'requirements',
       description:
         'Turned business requirements into designs, specs, and stories the teams could pick up and build.',
       role: 'Senior Software Architect',
@@ -153,6 +166,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'velocity',
       description:
         'Raised team velocity by 40% and kept it there through architecture changes and simpler development workflows.',
       role: 'Senior Software Architect',
@@ -182,6 +196,7 @@ const quests: Quest[] = [
   tags: ['Legacy Modernization', 'Cloud', 'SaaS', 'Healthcare', 'Payment Processing'],
   accomplishments: [
     {
+      key: 'engagements',
       description:
         'Ran 16 client engagements end to end, owning budgets up to $250K along with scope, delivery, and client expectations.',
       role: 'Software Architect',
@@ -191,6 +206,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'stack',
       description:
         'Owned the architecture on every engagement in whatever stack the client ran, including several I had not worked in before.',
       role: 'Software Architect',
@@ -199,6 +215,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'claims',
       description:
         'Cut maintenance costs by 30% by modernizing a claims application across the full stack, keeping it HIPAA compliant throughout.',
       role: 'Software Architect',
@@ -208,6 +225,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'saas-rebuild',
       description:
         'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform for 15 tenants with up to 50K users each, without breaking its EHR integrations.',
       role: 'Software Architect',
@@ -217,6 +235,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'payments',
       description:
         "Certified a client's commerce system with a third-party payment processor so its applications could take payments securely.",
       role: 'Software Architect',
@@ -225,6 +244,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'scaffolding',
       description:
         'Built standard project scaffolding that let new projects deploy to production on day one instead of spending a sprint on setup.',
       role: 'Software Architect',
@@ -254,6 +274,7 @@ const quests: Quest[] = [
   tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy'],
   accomplishments: [
     {
+      key: 'ceo-investors',
       description:
         'Represented engineering to the CEO and investors through the executive transition and advised them on technical strategy.',
       role: 'Interim Director of Engineering',
@@ -263,6 +284,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'kpis',
       description:
         'Hit the KPI targets as interim director while managing the team and onboarding the incoming CTO.',
       role: 'Interim Director of Engineering',
@@ -272,6 +294,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'refactor',
       description:
         'Refactored a 350k-line business application onto a service-repository pattern and turned sprint velocity from negative back to positive.',
       role: 'Team Lead',
@@ -281,6 +304,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'dotnet-core',
       description:
         'Moved the applications from .NET to .NET Core on day one, improving performance and setting the technical direction for the team.',
       role: 'Team Lead',
@@ -290,6 +314,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'co-led',
       description:
         'Co-led the technical work after the director left, so development kept moving until the new CTO started.',
       role: 'Interim Director of Engineering',
@@ -298,6 +323,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'uat',
       description:
         'Set up a structured UAT process where business stakeholders tested features against their own priorities, and feature quality went up.',
       role: 'Team Lead',
@@ -307,12 +333,14 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'architects',
       description:
         'Worked with the senior architects to roll out a product-wide strategy and hold the code to its standards.',
       role: 'Team Lead',
       learnings: [],
     },
     {
+      key: 'regulatory',
       description:
         'Built regulatory requirements into the technical work, cutting defects and clearing the way for new features.',
       role: 'Team Lead',
@@ -342,6 +370,7 @@ const quests: Quest[] = [
   tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation'],
   accomplishments: [
     {
+      key: 'estimates',
       description:
         "Held project estimates within a 10 percent margin across the engagement.",
       role: 'Senior Consultant',
@@ -350,6 +379,7 @@ const quests: Quest[] = [
       ],
     },
 {
+      key: 'winforms',
       description:
         "Modernized WinForms desktop applications with Kendo UI, fitting current interfaces onto a framework not built for them.",
       role: 'Senior Consultant',
@@ -358,6 +388,7 @@ const quests: Quest[] = [
       ],
     },
 {
+      key: 'automation',
       description:
         "Built and refined automation scripts the delivery schedule ran on and raised problems early.",
       role: 'Senior Consultant',
@@ -386,12 +417,14 @@ const quests: Quest[] = [
   tags: ['Development', 'Mentorship', 'Testing', 'Financial Applications'],
   accomplishments: [
     {
+      key: 'features',
       description:
         "Built core feature components for a car loan application under senior mentorship.",
       role: 'Developer',
       learnings: [],
     },
     {
+      key: 'testing',
       description:
         "Raised test coverage with AutoFixture and Moq.",
       role: 'Developer',
@@ -400,6 +433,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'mentorship',
       description:
         "Worked under senior-developer mentorship delivered in code review.",
       role: 'Developer',
@@ -428,6 +462,7 @@ const quests: Quest[] = [
   tags: ['IT Fundamentals', 'Development', 'Automation', 'Financial Operations'],
   accomplishments: [
     {
+      key: 'rotation',
       description:
         "Rotated through multiple IT functions on the selective IT Career Foundation Program, then built C# applications for financial operations.",
       role: 'ITCFP Participant',
@@ -436,6 +471,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'mvc-apps',
       description:
         "Built and deployed C# MVC applications that automated financial operations and met the validation and audit requirements those systems carried.",
       role: 'Developer',
@@ -444,6 +480,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'sdlc',
       description:
         "Improved SDLC practices on each team the rotation passed through.",
       role: 'Developer',
@@ -470,6 +507,7 @@ const quests: Quest[] = [
   tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project'],
   accomplishments: [
     {
+      key: 'games',
       description:
         "Checked in nearly 500 commits across two Unity games: a playable tactical puzzle I stopped after a market analysis, and a wave-defense FPS still in progress.",
       role: 'Game Developer',
@@ -478,6 +516,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'build-constraints',
       description:
         "Specified the architecture and put the constraints in the build, so AI-written code failed automatically when it crossed a boundary.",
       role: 'Game Developer',
@@ -486,6 +525,7 @@ const quests: Quest[] = [
       ],
     },
     {
+      key: 'ai-implementation',
       description:
         "Used AI to write the implementation of over 600 C# files I reviewed and gated through play test or audit findings.",
       role: 'Game Developer',
@@ -507,6 +547,7 @@ const quests: Quest[] = [
   summary: "I studied Computer Science and concentrated in software architecture.",
   accomplishments: [
     {
+      key: 'degree',
       description: "B.S. Computer Science, Concentration: Software Architecture",
       role: "Student",
       learnings: ["Software Architecture", "Computer Science"]
@@ -535,6 +576,7 @@ const quests: Quest[] = [
   tags: ["Code Analysis", "Technical Strategy", "Executive Advisory", "Performance Optimization"],
   accomplishments: [
     {
+      key: 'solid-review',
       description: "Sampled the hedge fund software suite against SOLID and tied each structural finding to a KPI miss.",
       role: "Principal Technologist",
       learnings: [
@@ -542,6 +584,7 @@ const quests: Quest[] = [
       ]
     },
     {
+      key: 'recommendations',
       description: "Delivered a recommendations deck to the executive team with phased remediation, KPI-moving changes first.",
       role: "Principal Technologist",
       learnings: [
@@ -567,6 +610,7 @@ const quests: Quest[] = [
   tags: ["Patent Intelligence", "Biotech", "Azure Functions", "React", "TypeScript", "C#", "Technical Leadership"],
   accomplishments: [
     {
+      key: 'advising',
       description: "Advised the founders on technical direction, including stopping an identity-provider migration and restoring the prior stack from source control.",
       role: "Principal Technologist",
       learnings: [
@@ -574,6 +618,7 @@ const quests: Quest[] = [
       ]
     },
     {
+      key: 'search',
       description: "Built sequence search, patent-family navigation, and document retrieval across the API and the UI.",
       role: "Principal Technologist",
       learnings: [
@@ -581,6 +626,7 @@ const quests: Quest[] = [
       ]
     },
     {
+      key: 'sign-in',
       description: "Built sign-in and enforced plan limits on the server.",
       role: "Principal Technologist",
       learnings: [
@@ -588,6 +634,7 @@ const quests: Quest[] = [
       ]
     },
     {
+      key: 'saved-searches',
       description: "Built saved searches and the trial and paid-plan screens used to demo the product.",
       role: "Principal Technologist",
       learnings: []
@@ -595,5 +642,8 @@ const quests: Quest[] = [
   ]
 }
 ];
+
+// Applies the tailoring overlay named by REACT_APP_TAILORING, if any. With no overlay this is baseQuests unchanged.
+const quests = applyQuestTailoring(baseQuests);
 
 export default quests;

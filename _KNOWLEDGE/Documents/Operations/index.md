@@ -24,6 +24,7 @@ Single entry point to the runbooks for this repo.
 | Push a change to GitHub and confirm Cloudflare deployed it | [OPER-002 GitHub push](./OPER-002-GitHubPush.md) | draft |
 | Deploy, redeploy or roll back the site on Cloudflare Pages | [OPER-001 Cloudflare deploy](./OPER-001-CloudflareDeploy.md) | working |
 | Find, scope, rotate or revoke the Cloudflare API token | [OPER-003 Cloudflare credentials](./OPER-003-CloudflareCredentials.md) | working |
+| Tailor, package, submit and track a job application | [OPER-004 Apply to a job](./OPER-004-ApplyToAJob.md) | draft |
 
 ## See also
 

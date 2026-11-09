@@ -69,6 +69,19 @@ const HomeScreen = () => {
   );
 };
 
+// The application package prints #/resume?print=1 headlessly: the resume alone, in its print layout.
+// Any other visit gets the normal framed page.
+const ResumeRoute = () => {
+  const { search } = useLocation();
+  if (new URLSearchParams(search).get('print') === '1') return <ResumeView printMode />;
+  return (
+    <QuestSwitcher type="career">
+      <Navbar />
+      <ResumeView />
+    </QuestSwitcher>
+  );
+};
+
 const AppRoutes: React.FC = () => {
   return (
     <>
@@ -104,12 +117,7 @@ const AppRoutes: React.FC = () => {
           </QuestSwitcher>
         } />
         
-        <Route path="/resume" element={
-          <QuestSwitcher type="career">
-            <Navbar />
-            <ResumeView />
-          </QuestSwitcher>
-        } />
+        <Route path="/resume" element={<ResumeRoute />} />
 
         {/* 404 Not Found */}
         <Route path="/not-found" element={

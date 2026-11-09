@@ -266,3 +266,27 @@ Transformed, Co-led, Enhanced, Developed or Rotated, and could never work
 against a full sentence. Descriptions now render as authored in both
 themes. Retro character comes from the quest titles, the pixel icons and
 the labels. Do not reintroduce a per-theme rewrite of authored prose.
+
+## Company tailoring is an overlay, never an edit (2026-11-09)
+
+A company's version of the resume lives in `src/data/tailoring/<id>.ts`, not in edits to `quests.data.tsx` or `profile.data.ts`. Editing the shared files per company made every rebase onto `main` conflict. See [ST-013](../Stories/ST-013-ApplicationPipeline.md).
+
+**Every accomplishment has a `key`.** It is short, lowercase, unique within its quest, and required by the type. Overlays refer to bullets only by key, because wording changes (the 2026-11 casual-voice rewrite changed nearly all of it).
+- Rename a key only together with every overlay that uses it. `npm test` fails if an overlay names a key that does not exist.
+- A new accomplishment needs a new key.
+
+**What an overlay can change:**
+- the target role, the summary, and competency text (by title)
+- a quest's overview line, summary, and tags
+- the bullet order (by key)
+- a bullet's wording or learnings (by key)
+
+It cannot add bullets. A new fact goes into the shared data first, so every view and every company gets it.
+
+**Overlays are inert by default.** They apply only when the build sets `REACT_APP_TAILORING=<id>`, which only `npm run apply:package -- <id>` does. The live site, `npm start`, and tests are always untailored. That is why overlays can be committed to `main`.
+
+**The printed resume has two paths:**
+- "Download PDF" makes an image PDF through `pdfGenerator.ts` (ST-008 will retire it).
+- `#/resume?print=1` renders the print layout alone, for the package command's text PDF.
+
+Both use the `.resume-print` rules.

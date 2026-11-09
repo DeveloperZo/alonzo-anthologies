@@ -1,0 +1,44 @@
+{
+  "contact": {
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "phone": "",
+    "location": "Chicago, IL"
+  },
+  "links": {
+    "resume": "https://alonzo-anthologies.pages.dev/resume/",
+    "linkedin": "",
+    "github": "",
+    "portfolio": "https://alonzo-anthologies.pages.dev/"
+  },
+  "workAuthorization": {
+    "authorizedInUS": "",
+    "requiresSponsorship": ""
+  },
+  "location": {
+    "willingToRelocate": "",
+    "workPreference": "",
+    "commuteRadius": ""
+  },
+  "compensation": {
+    "baseMin": "",
+    "baseMax": "",
+    "currency": "USD",
+    "answerWhenAsked": ""
+  },
+  "availability": {
+    "noticePeriod": "",
+    "earliestStart": ""
+  },
+  "voluntaryDisclosures": {
+    "gender": "Decline to self-identify",
+    "race": "Decline to self-identify",
+    "veteran": "Decline to self-identify",
+    "disability": "Decline to self-identify"
+  },
+  "standardAnswers": {
+    "How did you hear about this role?": "",
+    "Are you comfortable with a hybrid schedule?": ""
+  }
+}

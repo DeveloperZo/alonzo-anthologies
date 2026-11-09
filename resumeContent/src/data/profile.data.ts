@@ -1,7 +1,9 @@
-export const professionalSummary =
+import { applyProfileTailoring } from './tailoring';
+
+const baseSummary =
   "Technology leader with over a decade of experience in software architecture and engineering leadership. Modernizes complex systems, leads cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
 
-export const coreCompetencies = [
+const baseCompetencies = [
   {
     title: "Software Architecture",
     body: "Designs scalable, maintainable systems that balance business needs, technical constraints, and long-term sustainability.",
@@ -27,3 +29,10 @@ export const coreCompetencies = [
     body: "Modernizes legacy systems and applies AI across the software development lifecycle to accelerate delivery without compromising engineering standards.",
   },
 ];
+
+// Applies the tailoring overlay named by REACT_APP_TAILORING, if any. With no overlay these are the base values and targetRole is undefined.
+const profile = applyProfileTailoring({ professionalSummary: baseSummary, coreCompetencies: baseCompetencies });
+
+export const professionalSummary = profile.professionalSummary;
+export const coreCompetencies = profile.coreCompetencies;
+export const targetRole = profile.targetRole;

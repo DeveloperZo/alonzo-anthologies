@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import quests from '../../data/quests.data';
 import type { Quest } from '../../data/quests.data';
-import { coreCompetencies, professionalSummary } from '../../data/profile.data';
+import { coreCompetencies, professionalSummary, targetRole } from '../../data/profile.data';
 import './ResumeView.css';
 import { generateResumePdfFromDom } from '../../utils/pdfGenerator';
 
@@ -23,7 +23,12 @@ const isConsultingQuest = (quest: Quest): boolean => quest.type === 'independent
 
 const isProjectQuest = (quest: Quest): boolean => quest.type === 'hobby';
 
-const ResumeView: React.FC = () => {
+interface ResumeViewProps {
+  /** Headless print for the application package: print layout only, no download button. */
+  printMode?: boolean;
+}
+
+const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
   const { theme } = useTheme()!;
   
   // Transform quest data into resume format
@@ -95,10 +100,11 @@ const ResumeView: React.FC = () => {
   };
 
   return (
-    <div className={`resume-container ${theme}`}>
+    <div className={`resume-container ${theme}${printMode ? ' resume-print resume-print-page' : ''}`}>
       <div className="resume-header">
         <div className="header-content">
           <h1>Alonzo Williams</h1>
+          {targetRole && <p className="target-role">{targetRole}</p>}
           <div className="contact-info">
             awilliams9293@gmail.com<br />
             https://www.linkedin.com/in/alonzo-williams-1160a7b0/<br />

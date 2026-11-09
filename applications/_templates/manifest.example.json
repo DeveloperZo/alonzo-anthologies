@@ -1,0 +1,24 @@
+{
+  "id": "example",
+  "company": "Example Co",
+  "role": "Software Engineering Manager",
+  "postingUrl": "https://example.com/careers/123",
+  "ats": "greenhouse",
+  "status": "draft",
+  "dates": {
+    "created": "2026-01-01",
+    "applied": "",
+    "lastContact": ""
+  },
+  "contacts": [
+    { "name": "", "title": "", "email": "", "linkedin": "", "notes": "" }
+  ],
+  "answers": {
+    "Why do you want to work here?": "",
+    "What interests you about this role?": ""
+  },
+  "notes": "",
+  "history": [
+    { "date": "2026-01-01", "status": "draft", "note": "Manifest created" }
+  ]
+}

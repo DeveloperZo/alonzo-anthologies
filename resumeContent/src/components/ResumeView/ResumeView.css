@@ -316,3 +316,52 @@
     line-height: 1.4;
     color: #444;
   }
+
+  /* Target role line. Rendered only when a tailoring overlay sets one. */
+  .resume-container .target-role {
+    margin: 4px 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #8b0000;
+  }
+
+  .play .target-role {
+    color: var(--primary-color);
+    font-family: var(--retro-font);
+  }
+
+  .resume-print .target-role {
+    margin: 0 0 4px;
+    font-size: 13px;
+  }
+
+  /* Headless print page (#/resume?print=1) used by the application package. Same layout as the download. */
+  .resume-print-page {
+    width: 794px;
+    max-width: 794px;
+    margin: 0 auto;
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 7mm 0;
+    }
+
+    /* The navbar is not rendered in print mode, so drop the body offset Navbar.css adds for it. */
+    body {
+      margin: 0 !important;
+      background: #fff !important;
+    }
+
+    .resume-print-page li,
+    .resume-print-page .competency-item,
+    .resume-print-page .resume-section h2 {
+      break-inside: avoid;
+    }
+
+    .resume-print-page .resume-section h2 {
+      break-after: avoid;
+    }
+  }

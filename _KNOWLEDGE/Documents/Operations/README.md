@@ -28,3 +28,4 @@ something. Definition: the Runbook kind in [`_META/Definitions/Document.md`](../
 - [OPER-001 Cloudflare deploy](./OPER-001-CloudflareDeploy.md)
 - [OPER-002 GitHub push](./OPER-002-GitHubPush.md)
 - [OPER-003 Cloudflare credentials](./OPER-003-CloudflareCredentials.md)
+- [OPER-004 Apply to a job](./OPER-004-ApplyToAJob.md)

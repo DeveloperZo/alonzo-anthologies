@@ -28,6 +28,8 @@ Definition: [`Story`](../../_META/Definitions/Story.md). Sequencing, risks and d
 
 ## Active
 
+- [ST-013 One command builds an application, one click sends it](./ST-013-ApplicationPipeline.md)
+
 - [ST-005 GitHub is the only code home](./ST-005-RetireGitLab.md) (GitLab archived 2026-10-14; remote, branches and footer link left)
 - [ST-002 First content seeds live](./ST-002-ContentSeeds.md) (stale; awaiting a closure review, see the roadmap)
 
