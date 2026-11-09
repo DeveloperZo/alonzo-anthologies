@@ -5,6 +5,7 @@ import { useTheme } from '../../context/ThemeContext';
 import quests from '../../data/quests.data';
 import { coreCompetencies, professionalSummary } from '../../data/profile.data';
 import './CareerTimeline.css';
+import { formatMonthYear, isOngoing, monthsBetween } from '../../utils/questDates';
 
 const CareerTimeline: React.FC = () => {
   const navigate = useNavigate();
@@ -20,22 +21,12 @@ const CareerTimeline: React.FC = () => {
 
   // Format date as month and year
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
+    return formatMonthYear(date, 'short');
   };
   
   // Calculate duration between two dates in months and years - corrected version
   const calculateDuration = (startDate: Date, endDate: Date) => {
-    const isPresent = endDate.getFullYear() >= 2030;
-    const end = isPresent ? new Date() : endDate;
-    
-    // Calculate total months between dates
-    let months = (end.getFullYear() - startDate.getFullYear()) * 12;
-    months += end.getMonth() - startDate.getMonth();
-    
-    // Adjust for partial months
-    if (end.getDate() < startDate.getDate()) {
-      months--;
-    }
+    const months = monthsBetween(startDate, endDate);
     
     const years = Math.floor(months / 12);
     const remainingMonths = months % 12;
@@ -104,7 +95,7 @@ const CareerTimeline: React.FC = () => {
         <div className="timeline-line"></div>
         
         {sortedQuests.map((quest, index) => {
-          const isPresent = quest.endDate.getFullYear() >= 2030;
+          const isPresent = isOngoing(quest.endDate);
           
           // Create more concise descriptions based on theme
           // Descriptions are authored as role overviews and render as written in both themes.
@@ -182,15 +173,14 @@ const calculateTotalExperience = (quests: any[]) => {
   // Find earliest start date and latest end date
   const startDates = quests.map(q => q.startDate.getTime());
   const endDates = quests.map(q => {
-    return q.endDate.getFullYear() >= 2030 ? new Date().getTime() : q.endDate.getTime();
+    return isOngoing(q.endDate) ? new Date().getTime() : q.endDate.getTime();
   });
   
   const earliestStart = new Date(Math.min(...startDates));
   const latestEnd = new Date(Math.max(...endDates));
   
   // Calculate months
-  let months = (latestEnd.getFullYear() - earliestStart.getFullYear()) * 12;
-  months += latestEnd.getMonth() - earliestStart.getMonth();
+  const months = monthsBetween(earliestStart, latestEnd);
   
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;

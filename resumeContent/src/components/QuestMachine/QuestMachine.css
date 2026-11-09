@@ -1,0 +1,431 @@
+/***************************************
+ *  Quest machine window (play-mode quest detail)
+ *  Every class is prefixed qm- so nothing collides with QuestDetail.css,
+ *  which is loaded globally too.
+ ***************************************/
+
+.qm {
+  /* Same dark set as the factory floor. The play palette shifts with the time
+     of day and can be light, so only the accent follows it. */
+  --f-panel: #24211d;
+  --f-panel-2: #2d2a25;
+  --f-panel-edge: #57514a;
+  --f-text: #f2e8d5;
+  --f-dim: #a89f91;
+  --f-accent: var(--accent-color, #ff9900);
+  --qm-read: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--f-text);
+  background: var(--f-panel);
+  border: 2px solid var(--f-panel-edge);
+  font-family: 'Press Start 2P', monospace;
+  text-align: left;
+}
+
+.qm button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  line-height: 1.3;
+  padding: 7px 9px;
+  margin: 0;
+  width: auto;
+  color: var(--f-text);
+  background: #3d3934;
+  border: 2px solid;
+  border-color: #6b645b #1e1c19 #1e1c19 #6b645b;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.qm button:hover:not(:disabled) { background: #4a453f; }
+.qm button:disabled { opacity: 0.45; cursor: default; }
+
+.qm button:focus-visible,
+.qm select:focus-visible,
+.qm h1:focus-visible {
+  outline: 2px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+/* ---------- title bar ---------- */
+
+.qm-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  background: #1e1c19;
+  border-bottom: 2px solid var(--f-panel-edge);
+}
+
+.qm-heading { flex: 1 1 auto; min-width: 0; }
+
+.qm-titlebar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--f-accent);
+  text-align: left;
+}
+
+.qm-titlebar h1::after { display: none; }
+
+.qm-sub { display: block; margin-top: 4px; font-size: 8px; color: var(--f-dim); }
+
+.qm-steps { display: flex; gap: 4px; }
+
+.qm-close { font-size: 11px !important; padding: 6px 10px !important; }
+
+/* ---------- layout ---------- */
+
+.qm-body {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+/* ---------- Factoriopedia list ---------- */
+
+.qm-sidebar {
+  flex: 0 0 220px;
+  overflow-y: auto;
+  padding: 10px 8px;
+  background: #1f1d1a;
+  border-right: 2px solid var(--f-panel-edge);
+}
+
+.qm-select-label { display: none; }
+
+.qm-group h2 {
+  margin: 10px 4px 6px;
+  font-size: 8px;
+  color: var(--f-dim);
+  text-transform: uppercase;
+}
+
+.qm-group h2::after { display: none; }
+
+.qm-group ul { list-style: none; margin: 0; padding: 0; }
+
+.qm-group li button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 3px;
+  text-align: left;
+  font-size: 8px;
+}
+
+.qm-group li button.current {
+  color: #1e1c19;
+  background: var(--f-accent);
+  border-color: #1e1c19 #6b645b #6b645b #1e1c19;
+}
+
+.qm-mini { display: grid; grid-template-columns: repeat(2, 6px); gap: 1px; flex: 0 0 auto; }
+.qm-mini i { width: 6px; height: 6px; border: 1px solid #1e1c19; }
+.qm-entry-name { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qm-entry-year { color: inherit; opacity: 0.7; }
+
+/* ---------- pane ---------- */
+
+.qm-pane {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 14px 18px 24px;
+}
+
+/* ---------- assembler band ---------- */
+
+.qm-band {
+  position: relative;
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 18px;
+  padding: 14px 14px 30px;
+  background: var(--f-panel-2);
+  border: 2px solid;
+  border-color: #1e1c19 #6b645b #6b645b #1e1c19;
+}
+
+.qm-preview svg { width: 100%; height: auto; display: block; }
+.qm-body-rect { fill: #5b554c; stroke: #1e1c19; stroke-width: 2; }
+.qm.is-done .qm-body-rect { fill: #534d45; }
+.qm-inset { fill: #3a362f; stroke: #6f685d; stroke-width: 1; }
+.qm-gear rect, .qm-gear circle { fill: #8f877a; }
+.qm-gear .qm-gear-hole { fill: #3a362f; }
+
+.qm-gear {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: qm-spin 6s linear infinite;
+}
+
+.qm.is-done .qm-gear { animation-duration: 24s; }
+
+@keyframes qm-spin { to { transform: rotate(360deg); } }
+
+.qm-lamp { fill: #7a2e2e; }
+.qm.is-working .qm-lamp { fill: #5fd35f; }
+.qm.is-done .qm-lamp { fill: #d6a13a; }
+
+.qm-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  font-size: 9px;
+}
+
+.qm-dot { width: 9px; height: 9px; background: #d6a13a; }
+.qm.is-working .qm-dot { background: #5fd35f; }
+
+.qm-slots-label { font-size: 8px; color: var(--f-dim); margin: 0 0 6px; }
+
+.qm-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.qm-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px 6px 6px;
+  background: #3a362f;
+  border: 2px solid;
+  border-color: #1e1c19 #6b645b #6b645b #1e1c19;
+  font-size: 8px;
+}
+
+.qm-slot.shared { border-color: #1e1c19 #f2e8d5 #f2e8d5 #1e1c19; }
+
+.qm-slot-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #1e1c19;
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.qm-slot.ore .qm-slot-swatch { background: #c8915a; }
+.qm-slot.experience .qm-slot-swatch { background: #e0e0e0; }
+.qm-slot.knowledge .qm-slot-swatch { background: #ef5350; border-radius: 7px; }
+
+.qm-slot-badge,
+.qm-slot-count {
+  font-size: 7px;
+  padding: 2px 4px;
+  color: #1e1c19;
+  background: var(--f-text);
+}
+
+.qm-slot-count { background: var(--f-accent); }
+
+/* Crafting bar, measured against the longest role. */
+.qm-tenure { margin: 0 0 14px; }
+
+.qm-tenure-head,
+.qm-tenure-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 8px;
+}
+
+.qm-tenure-foot { color: var(--f-dim); margin-top: 5px; font-size: 7px; }
+
+.qm-bar {
+  height: 14px;
+  margin-top: 6px;
+  background: #1e1c19;
+  border: 2px solid;
+  border-color: #1e1c19 #6b645b #6b645b #1e1c19;
+}
+
+.qm-bar span {
+  display: block;
+  height: 100%;
+  width: calc(var(--share) * 100%);
+  background: repeating-linear-gradient(90deg, var(--f-accent) 0 8px, #ffb347 8px 10px);
+  animation: qm-fill 0.9s ease-out both;
+  transform-origin: left;
+}
+
+.qm.is-working .qm-bar span { animation: qm-fill 0.9s ease-out both, qm-pulse 1.6s ease-in-out 0.9s infinite; }
+
+@keyframes qm-fill { from { transform: scaleX(0); } }
+@keyframes qm-pulse { 50% { opacity: 0.7; } }
+
+/* The belt under the band. */
+.qm-belt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  height: 12px;
+  overflow: hidden;
+  background: repeating-linear-gradient(90deg, #2d2a26 0 6px, #3d3934 6px 12px);
+  animation: qm-belt 0.6s linear infinite;
+}
+
+.qm-belt i {
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #1e1c19;
+  animation: qm-ride 4.2s linear infinite;
+}
+
+@keyframes qm-belt { to { background-position: 12px 0; } }
+@keyframes qm-ride { to { left: 100%; } }
+
+/* ---------- readable sections ---------- */
+
+.qm-section {
+  margin-top: 22px;
+  font-family: var(--qm-read);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.qm-section h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  color: var(--f-accent);
+  text-align: left;
+}
+
+.qm-section h2::after { display: none; }
+.qm-section p { margin: 0 0 8px; }
+.qm-lede { font-size: 17px; color: var(--f-text); font-weight: 600; }
+.qm-dim { color: var(--f-dim); }
+
+.qm-roles,
+.qm-recipe,
+.qm-products,
+.qm-learnings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.qm-roles { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+.qm-roles li,
+.qm-role {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 13px;
+  border: 1px solid var(--f-panel-edge);
+  background: #3a362f;
+}
+
+.qm-recipe li,
+.qm-products > li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: var(--f-panel-2);
+  border-left: 3px solid var(--f-panel-edge);
+}
+
+.qm-recipe p { margin: 2px 0 0; color: var(--f-dim); }
+
+.qm-chip,
+.qm-product-icon {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  border: 1px solid #1e1c19;
+}
+
+.qm-product-icon { background: #e0e0e0; }
+
+.qm-link {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  color: var(--f-text) !important;
+  font-family: var(--qm-read) !important;
+  font-size: inherit !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.qm-link:hover { color: var(--f-accent) !important; }
+
+.qm-solo { margin-top: 8px !important; }
+
+.qm-products > li p { margin: 0 0 6px; }
+.qm-role { margin: 2px 0 6px; font-size: 12px; }
+
+.qm-learnings li {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 14px;
+  color: var(--f-dim);
+}
+
+.qm-pack {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background: #ef5350;
+  border: 1px solid #1e1c19;
+}
+
+.qm-keys { margin-top: 24px; font-size: 7px; }
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 900px) {
+  .qm-body { flex-direction: column; }
+  .qm-sidebar {
+    flex: 0 0 auto;
+    padding: 8px;
+    border-right: none;
+    border-bottom: 2px solid var(--f-panel-edge);
+  }
+  .qm-group { display: none; }
+  .qm-select-label { display: flex; align-items: center; gap: 8px; font-size: 8px; }
+  .qm-select-label select { flex: 1 1 auto; font-size: 14px; padding: 4px; }
+  .qm-band { grid-template-columns: 1fr; }
+  .qm-preview { max-width: 160px; }
+  .qm-steps button { font-size: 7px; }
+}
+
+@media (max-width: 560px) {
+  .qm-titlebar { flex-wrap: wrap; }
+  .qm-steps { order: 3; width: 100%; justify-content: space-between; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qm-gear,
+  .qm-bar span,
+  .qm-belt,
+  .qm-belt i { animation: none !important; }
+  .qm-belt i { display: none; }
+}
+
+/* The title takes focus on open so screen readers start there; no ring or
+   inherited underline is needed for that. */
+.qm-titlebar h1 { border: none; text-decoration: none; }
+.qm-titlebar h1:focus { outline: none; }

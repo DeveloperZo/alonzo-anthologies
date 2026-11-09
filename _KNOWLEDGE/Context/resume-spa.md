@@ -16,7 +16,39 @@ the printed resume and the timeline.
 | Printed resume | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) under Independent Consultant, `education` under Education, `hobby` under Independent Projects |
 | Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
 | Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
-| Quest detail | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
+| Quest detail (work) | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
+| Quest detail (play) | `components/QuestMachine/QuestMachine.tsx` | Any quest by id, as a factory machine window |
+| Play-mode home | `components/Factory/Factory.tsx` | Every quest as a machine on the career factory floor |
+
+## Play mode is a factory (2026-11-09)
+
+Play mode opens on a Factorio-style career factory. Each quest is a
+machine in date order; career and education sit above the bus,
+independent and hobby work below. Tags are the machine's recipe, and a
+tag held by two or more quests rides a belt from the earliest holder to
+every later one. `utils/factoryModel.ts` computes all of it from
+`quests.data.tsx`, so editing tags rewires the floor. The tag families
+(Platform and Software Architecture ride as Architecture, Technical
+Leadership as Leadership) and the short machine names live in
+`data/factory.data.ts`. Machine names follow the printed-resume rule:
+no client, product or game names.
+
+Opening a machine zooms the camera in and shows QuestMachine: an
+assembler band (ingredients, a tenure bar, Experience and Knowledge
+outputs) over a Factoriopedia pane (made in / used in for each shared
+ingredient, then every accomplishment with its learnings). A full
+tenure bar is the longest non-education role, not completion. Esc, E or
+browser Back return to the floor with the last open machine selected.
+Play-mode pages use a plain full-screen panel; the retro TV image is no
+longer shown.
+
+## Dates read the UTC month
+
+Quest dates written as 'YYYY-MM-DD' parse as midnight UTC. Local
+getters show the month before in US time zones, which is how quest
+pages once read Sep 2018 for an Oct 2018 start. Every view now formats
+through `utils/questDates.ts` (UTC month, whole-month tenure, ongoing
+when the end year is 2030 or later), matching the printed resume.
 
 The PDF is a DOM capture of `.resume-container` (`utils/pdfGenerator.ts`).
 Capture adds the `resume-print` class and a fixed A4 width, then removes

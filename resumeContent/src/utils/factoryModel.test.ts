@@ -1,5 +1,5 @@
 import quests from '../data/quests.data';
-import { buildFactory } from './factoryModel';
+import { buildFactory, neighbours, questLinks } from './factoryModel';
 
 const model = buildFactory(quests);
 const lane = (item: string) => model.lanes.find((l) => l.item === item);
@@ -77,4 +77,56 @@ test('each recipe lists every tag the quest is made of, one colour per item', ()
 test('totals match the quest data', () => {
   const products = quests.reduce((n, q) => n + q.accomplishments.length, 0);
   expect(model.totals.products).toBe(products);
+});
+
+describe('questLinks', () => {
+  const links = (id: number) => questLinks(model, id);
+
+  test('the first holder of an item has nothing before it', () => {
+    const arch = links(2).find((l) => l.item === 'Architecture')!;
+    expect(arch.from).toEqual([]);
+    expect(arch.to.map((s) => s.questId)).toEqual([8, 1]);
+  });
+
+  test('a later holder sees where the item came from and still keeps its own tag', () => {
+    const arch = links(8).find((l) => l.item === 'Architecture')!;
+    expect(arch.tag).toBe('Software Architecture');
+    expect(arch.from.map((s) => s.questId)).toEqual([2]);
+    expect(arch.to.map((s) => s.questId)).toEqual([1]);
+    const lead = links(12).find((l) => l.item === 'Leadership')!;
+    expect(lead.tag).toBe('Technical Leadership');
+  });
+
+  test('quests that share nothing get links with empty from and to', () => {
+    [5, 10].forEach((id) => {
+      expect(links(id).length).toBeGreaterThan(0);
+      links(id).forEach((l) => {
+        expect(l.shared).toBe(false);
+        expect(l.from).toEqual([]);
+        expect(l.to).toEqual([]);
+      });
+    });
+  });
+
+  test('a quest never links to itself', () => {
+    model.machines.forEach((m) =>
+      links(m.questId).forEach((l) =>
+        [...l.from, ...l.to].forEach((s) => expect(s.questId).not.toBe(m.questId)),
+      ),
+    );
+  });
+
+  test('neighbours follow the floor and stop at the ends', () => {
+    const first = model.machines[0].questId;
+    const last = model.machines[model.machines.length - 1].questId;
+    expect(neighbours(model, first).prev).toBeUndefined();
+    expect(neighbours(model, last).next).toBeUndefined();
+    expect(neighbours(model, 4).next?.questId).toBe(model.machines[model.machines.findIndex((m) => m.questId === 4) + 1].questId);
+  });
+});
+
+test('building the factory does not reorder the shared quests array', () => {
+  const before = quests.map((q) => q.id);
+  buildFactory(quests);
+  expect(quests.map((q) => q.id)).toEqual(before);
 });
