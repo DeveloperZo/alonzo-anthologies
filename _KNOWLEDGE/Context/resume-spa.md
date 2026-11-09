@@ -13,14 +13,17 @@ the printed resume and the timeline.
 
 | View | File | Shows |
 | --- | --- | --- |
-| Printed resume and PDF | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) under Independent Consultant, `education` under Education, `hobby` under Independent Projects |
+| Printed resume | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) under Independent Consultant, `education` under Education, `hobby` under Independent Projects |
 | Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
 | Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
 | Quest detail | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
 
-The PDF is a DOM capture of `.resume-container` (`utils/pdfGenerator.ts`),
-so anything added to ResumeView reaches the PDF with no further work.
-Nothing else does.
+The PDF is a DOM capture of `.resume-container` (`utils/pdfGenerator.ts`).
+Capture adds the `resume-print` class and a fixed A4 width, then removes
+both. That class is the two-page layout (2026-10-22). The on-screen
+resume does not use it. Independent Projects carries `screen-only`, so
+the on-screen resume shows it and the PDF does not (2026-10-22). An
+education detail that repeats the degree heading is not listed.
 
 ## Decisions taken 2026-08-25
 
@@ -220,7 +223,8 @@ client's sector lives in `titles.sleek`.
 On the printed resume they are not Professional Experience. As of
 2026-10-19 quest 12 is the Independent Consultant section, between
 Professional Experience and Education. The hobby project is a separate
-Independent Projects section after Education. Quest 11 (hedge fund)
+Independent Projects section after Education on screen, and is omitted
+from the PDF. Quest 11 (hedge fund)
 stays in the dataset for Timeline and Accomplishments but is excluded
 from the printed resume (2026-08-31).
 The heading on the consulting card is the function after the comma.

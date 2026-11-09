@@ -185,3 +185,134 @@
   .project-link:hover {
     text-decoration: underline;
   }
+
+  /* Download only. The on-screen resume keeps the rules above. */
+  .work .resume-container.resume-print,
+  .resume-container.resume-print {
+    box-sizing: border-box;
+    padding: 14px 18px 10px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .work .resume-container.resume-print p {
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0 0 2px;
+    color: #333;
+  }
+
+  .work .resume-container.resume-print h1,
+  .resume-container.resume-print h1 {
+    font-size: 22px;
+    margin: 0 0 2px;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .work .resume-container.resume-print h1::after,
+  .resume-container.resume-print h1::after {
+    content: none;
+  }
+
+  .work .resume-container.resume-print h2,
+  .resume-container.resume-print .resume-section h2 {
+    font-size: 14px;
+    margin: 0 0 5px;
+    padding-bottom: 2px;
+    color: #8b0000;
+  }
+
+  .work .resume-container.resume-print h2::after {
+    content: none;
+  }
+
+  .work .resume-container.resume-print h3 {
+    font-size: 13px;
+  }
+
+  .resume-print .download-button,
+  .resume-print .screen-only {
+    display: none;
+  }
+
+  .resume-print .resume-header {
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .resume-print .resume-header h1 {
+    border-bottom: none;
+  }
+
+  .resume-print .resume-section {
+    margin-bottom: 10px;
+  }
+
+  .resume-print .experience-item,
+  .resume-print .education-item {
+    margin-bottom: 8px;
+  }
+
+  .resume-print .job-header,
+  .resume-print .institution-period {
+    margin-bottom: 2px;
+  }
+
+  .resume-print .job-header h3,
+  .resume-print .education-item h3 {
+    font-size: 13px;
+    margin: 0 0 1px;
+  }
+
+  .resume-print .role-overview {
+    margin: 0 0 2px;
+    line-height: 1.4;
+  }
+
+  .resume-print .accomplishment-bullets li,
+  .resume-print .education-details li {
+    margin-bottom: 2px;
+    line-height: 1.4;
+  }
+
+  .resume-print .summary-text {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .resume-print .competencies-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 14px;
+  }
+
+  .resume-print .competency-item {
+    background: transparent;
+    padding: 0 0 0 8px;
+    border-radius: 0;
+    border-left: 2px solid #8b0000;
+  }
+
+  .resume-print .competency-item h3 {
+    display: inline;
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .resume-print .competency-item h3::after {
+    content: ". ";
+  }
+
+  .resume-print .competency-item p {
+    display: inline;
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: #444;
+  }

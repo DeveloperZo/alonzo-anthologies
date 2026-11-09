@@ -24,8 +24,9 @@ export interface FactoryMachine extends Box {
   endLabel: string;
   products: number;
   science: number;
-  // Every tag on the quest, with the item it travels as.
-  recipe: { tag: string; item: string; shared: boolean }[];
+  // Every tag on the quest: what this entry is made of. `shared` marks the
+  // ingredients that also ride a belt to or from another quest.
+  recipe: { tag: string; item: string; shared: boolean; color: string }[];
 }
 
 export interface LaneStop {
@@ -125,6 +126,19 @@ export function buildFactory(quests: Quest[]): FactoryModel {
         ordered.indexOf(qa[0]) - ordered.indexOf(qb[0]) || ia.localeCompare(ib),
     );
 
+  // One colour per item. Shared items take the bright belt palette; items held
+  // by a single quest get a muted colour of their own, so every recipe chip on
+  // the floor is distinct and a machine's mix of ingredients is visible at a glance.
+  const itemColors = new Map<string, string>();
+  sharedItems.forEach(([item], k) => itemColors.set(item, SKILL_COLORS[k % SKILL_COLORS.length]));
+  let soloIndex = 0;
+  holders.forEach((qs, item) => {
+    if (itemColors.has(item)) return;
+    const hue = Math.round((soloIndex * 137.5) % 360);
+    soloIndex += 1;
+    itemColors.set(item, `hsl(${hue}, 30%, 52%)`);
+  });
+
   const laneCount = sharedItems.length + 3;
   const busY = TOP_Y + MACHINE_H + BUS_GAP;
   const laneY = (i: number) => busY + i * LANE_GAP;
@@ -150,7 +164,12 @@ export function buildFactory(quests: Quest[]): FactoryModel {
       science: q.accomplishments.reduce((n, a) => n + a.learnings.length, 0),
       recipe: tags.map((tag) => {
         const item = itemFor(tag);
-        return { tag, item, shared: (holders.get(item)?.length ?? 0) >= 2 };
+        return {
+          tag,
+          item,
+          shared: (holders.get(item)?.length ?? 0) >= 2,
+          color: itemColors.get(item)!,
+        };
       }),
     };
   });
@@ -195,7 +214,7 @@ export function buildFactory(quests: Quest[]): FactoryModel {
     const members = qs.map((q) => byQuest.get(q.id)!);
     const xs = members.map((m) => tapX(m, laneIndex));
     lanes.push({
-      id, kind: 'skill', item, color: SKILL_COLORS[k % SKILL_COLORS.length],
+      id, kind: 'skill', item, color: itemColors.get(item)!,
       y, x1: Math.min(...xs), x2: Math.max(...xs),
       stops: qs.map((q) => ({
         questId: q.id,

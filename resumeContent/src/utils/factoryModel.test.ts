@@ -58,6 +58,22 @@ test('every route stays inside the floor', () => {
   });
 });
 
+test('each recipe lists every tag the quest is made of, one colour per item', () => {
+  model.machines.forEach((m) => {
+    const q = quests.find((x) => x.id === m.questId)!;
+    expect(m.recipe.map((r) => r.tag)).toEqual(q.tags ?? []);
+  });
+  const colorByItem = new Map<string, string>();
+  model.machines.flatMap((m) => m.recipe).forEach((r) => {
+    expect(colorByItem.get(r.item) ?? r.color).toBe(r.color);
+    colorByItem.set(r.item, r.color);
+  });
+  expect(new Set(colorByItem.values()).size).toBe(colorByItem.size);
+  model.lanes
+    .filter((l) => l.kind === 'skill')
+    .forEach((l) => expect(colorByItem.get(l.item)).toBe(l.color));
+});
+
 test('totals match the quest data', () => {
   const products = quests.reduce((n, q) => n + q.accomplishments.length, 0);
   expect(model.totals.products).toBe(products);

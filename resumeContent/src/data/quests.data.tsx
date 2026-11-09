@@ -35,9 +35,9 @@ const quests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
+    "Hired and lead a team modernizing Progyny's benefits platform for 7 million covered lives",
   summary:
-    "Lead an engineering team modernizing Progyny's benefits platform, serving approximately 7 million covered lives.",
+    "I hired my own team here. Beyond that team, I've helped shape the SDLC practices the wider engineering organization works by.",
   type: 'career',
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing
@@ -46,7 +46,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Introduced AI-assisted development practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
+        'Introduced AI-assisted SDLC practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
@@ -55,7 +55,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Built and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
+        'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
@@ -64,7 +64,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Partnered with enterprise architects to identify architectural gaps and translate technical guidance into actionable engineering specifications.',
+        'Worked with the enterprise architects to find gaps in the architecture and turned their guidance into specs engineers could build from.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
@@ -73,7 +73,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Coordinated planning across seven engineering teams for the new platform delivery, designing solutions for 30% of its stories.',
+        'Coordinated planning across seven engineering teams for the new platform and designed the solutions for 30% of its stories.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
@@ -82,7 +82,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Led HIPAA-aware vendor evaluations and configuration platform design, balancing compliance, cost, and long-term flexibility.',
+        'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice would be to change later.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
@@ -91,7 +91,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Delivered over 90% of refined work within two weeks through clear technical design and team execution.',
+        'Delivered over 90% of refined work within two weeks, with the technical design done before the team picked it up.',
       role: 'Manager, Experience Platform',
       learnings: [
         'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
@@ -111,7 +111,7 @@ const quests: Quest[] = [
   description:
     'Led software architecture across five engineering teams, improving technical consistency and delivery performance.',
   summary:
-    'Led software architecture across five engineering teams, improving technical consistency and delivery performance.',
+    'A year as the architect several teams leaned on at once. Most days went to keeping five teams building one product the same way.',
   type: 'career',
   startDate: new Date('2024-05-01'),
   endDate: new Date('2025-05-17'),
@@ -120,7 +120,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Secured a $2M project extension by building a shared design library, translating Figma designs into reusable components that accelerated delivery across teams.',
+        'Built a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that component libraries still deliver value even when implemented late in a project',
@@ -129,7 +129,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Led UI architecture across five engineering teams while serving as full-stack architect for one, aligning technical direction and implementation standards.',
+        'Set the UI architecture and implementation standards for five engineering teams while staying hands-on as full-stack architect for one of them.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -138,7 +138,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Mentored senior developers through pair programming and technical coaching, strengthening engineering capabilities across teams.',
+        'Mentored senior developers on the architecture and on delivering against it.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that deliberate mentorship strengthens engineering capability across teams',
@@ -146,7 +146,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Translated business requirements into architectural designs, technical specifications, and actionable engineering stories.',
+        'Turned business requirements into designs, specs, and stories the teams could pick up and build.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that translating requirements into architecture and stories closes the gap between business intent and delivery',
@@ -154,7 +154,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Increased team velocity by a sustained 40% through architectural improvements, technical guidance, and streamlined development workflows.',
+        'Raised team velocity by 40% and kept it there through architecture changes and simpler development workflows.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that maximizing team velocity requires teams to understand strategic direction and implementation goals',
@@ -174,7 +174,7 @@ const quests: Quest[] = [
   description:
     'Modernized legacy healthcare and commerce systems for consulting clients, leading cross-functional teams from architecture through delivery.',
   summary:
-    'Modernized legacy healthcare and commerce systems for consulting clients, leading cross-functional teams from architecture through delivery.',
+    "Four years of consulting. Every few months brought a new client and a new codebase, often in a stack I hadn't used before.",
   type: 'career',
   startDate: new Date('2020-02-01'),
   endDate: new Date('2024-05-31'),
@@ -183,7 +183,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Managed 16 client engagements, owning budgets up to $250K, scope, technical delivery, and stakeholder expectations.',
+        'Ran 16 client engagements end to end, owning budgets up to $250K along with scope, delivery, and client expectations.',
       role: 'Software Architect',
       learnings: [
         'Learned to ground stories in facts and data that the client cares about',
@@ -192,7 +192,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Delivered enterprise solutions across .NET/C#, Java Spring Boot, React, Angular, Flutter, and UWP.',
+        'Owned the architecture on every engagement in whatever stack the client ran, including several I had not worked in before.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -200,7 +200,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Reduced maintenance costs by 30% through full-stack modernization of a claims application while maintaining HIPAA compliance.',
+        'Cut maintenance costs by 30% by modernizing a claims application across the full stack, keeping it HIPAA compliant throughout.',
       role: 'Software Architect',
       learnings: [
         'Learned that healthcare data practices impact technical decisions and constraints',
@@ -209,7 +209,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform supporting 15 tenants with up to 50K users each, while preserving EHR integrations.',
+        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform for 15 tenants with up to 50K users each, without breaking its EHR integrations.',
       role: 'Software Architect',
       learnings: [
         'Learned that multi-tenant architectures can be effectively handled through configuration',
@@ -218,7 +218,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Certified a client commerce system with a third-party payment processor, enabling secure payment processing across its applications.',
+        "Certified a client's commerce system with a third-party payment processor so its applications could take payments securely.",
       role: 'Software Architect',
       learnings: [
         'Learned how to build IdP integrations from the ground up',
@@ -226,7 +226,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Enabled production deployments on the first day of projects through standardized scaffolding, eliminating the setup sprint other teams required.',
+        'Built standard project scaffolding that let new projects deploy to production on day one instead of spending a sprint on setup.',
       role: 'Software Architect',
       learnings: [
         'Learned that project templates work easier when teams build working relationships',
@@ -244,9 +244,9 @@ const quests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    'Co-led technical implementations and maintained clear communication during leadership transitions.',
-  summary: 
-    'Led critical platform migrations and major refactoring efforts that transformed application performance while providing technical leadership during organizational transitions. Established effective feedback mechanisms with stakeholders and represented technical concerns to executive leadership.',
+    'Refactored a 350k-line lending platform, then led engineering through an executive transition',
+  summary:
+    'I joined as a team lead while sprint velocity was running negative. When the director of engineering was let go, I stepped in as interim director until the company hired a CTO.',
   type: 'career',
   startDate: new Date('2018-10-01'),
   endDate: new Date('2020-02-01'),
@@ -255,7 +255,7 @@ const quests: Quest[] = [
   accomplishments: [
     {
       description:
-        'Represented technical leadership to investors and the CEO during executive transitions, providing strategic guidance.',
+        'Represented engineering to the CEO and investors through the executive transition and advised them on technical strategy.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that technical leadership requires communication as much as technical proficiency',
@@ -264,7 +264,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Achieved target KPIs as interim director, while onboarding incoming CTO and managing team.',
+        'Hit the KPI targets as interim director while managing the team and onboarding the incoming CTO.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
@@ -273,7 +273,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Refactored a complex business application with 350k+ lines of code, implementing service-repository patterns that reversed negative sprint velocity.',
+        'Refactored a 350k-line business application onto a service-repository pattern and turned sprint velocity from negative back to positive.',
       role: 'Team Lead',
       learnings: [
         'Learned how to perform every function of and be involved in most decisions for the SDLC',
@@ -282,7 +282,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Upgraded applications from .NET to .NET Core on day one, immediately improving performance and establishing technical direction.',
+        'Moved the applications from .NET to .NET Core on day one, improving performance and setting the technical direction for the team.',
       role: 'Team Lead',
       learnings: [
         'Learned how to read code for intent and clarity very effectively',
@@ -291,7 +291,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Co-led technical implementations during leadership transitions, maintaining continuity between development and executive leadership.',
+        'Co-led the technical work after the director left, so development kept moving until the new CTO started.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that technical leadership requires communication as much as technical proficiency',
@@ -299,7 +299,7 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Established a structured UAT process aligning business stakeholders with development priorities, improving feature quality.',
+        'Set up a structured UAT process where business stakeholders tested features against their own priorities, and feature quality went up.',
       role: 'Team Lead',
       learnings: [
         'Learned the importance of talking directly to end users',
@@ -308,13 +308,13 @@ const quests: Quest[] = [
     },
     {
       description:
-        'Collaborated with senior architects to implement product-wide strategy and enforce technical standards.',
+        'Worked with the senior architects to roll out a product-wide strategy and hold the code to its standards.',
       role: 'Team Lead',
       learnings: [],
     },
     {
       description:
-        'Aligned technical initiatives with regulatory requirements to reduce defects and prepare for new features.',
+        'Built regulatory requirements into the technical work, cutting defects and clearing the way for new features.',
       role: 'Team Lead',
       learnings: [
         'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
@@ -504,7 +504,7 @@ const quests: Quest[] = [
   company: "California State University Fullerton",
   workTitle: "Bachelor of Science in Computer Science",
   description: "Concentration: Software Architecture",
-  summary: "Completed undergraduate studies in Computer Science with focus on software architecture principles and practices.",
+  summary: "I studied Computer Science and concentrated in software architecture.",
   accomplishments: [
     {
       description: "B.S. Computer Science, Concentration: Software Architecture",

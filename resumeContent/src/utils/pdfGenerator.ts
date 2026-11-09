@@ -1,10 +1,12 @@
-// WYSIWYG PDF: captures the visible résumé DOM (same layout as the screen). Slices the canvas into A4 pages.
+// PDF capture of the résumé. The print class tightens layout for a two-page A4 file.
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 const JPEG_QUALITY = 0.88;
 /** Balance sharpness vs file size (1 = fastest/smallest, 2 = heavier). */
 const CANVAS_SCALE = 1.45;
+/** Whitespace above the content on every page after the first. */
+const CONTINUATION_TOP_MM = 16;
 
 /**
  * Renders the on-screen `.resume-container` to a multi-page A4 PDF.
@@ -24,7 +26,18 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
 
   await document.fonts?.ready?.catch?.(() => undefined);
 
+  const prevWidth = el.style.width;
+  const prevMaxWidth = el.style.maxWidth;
+  // Screen layout stays as authored. The print class and fixed width apply only for capture.
+  el.classList.add('resume-print');
+  el.style.maxWidth = '794px';
+  el.style.width = '794px';
+
   try {
+    await new Promise<void>((resolve) => {
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+    });
+
     const w = Math.max(el.scrollWidth, el.offsetWidth);
     const h = Math.max(el.scrollHeight, el.offsetHeight);
 
@@ -45,22 +58,25 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
     const pageWidthMm = pdf.internal.pageSize.getWidth();
     const pageHeightMm = pdf.internal.pageSize.getHeight();
 
-    // Full image scaled to page width; height derived from aspect ratio
+    // Full image scaled to page width.
     const imgWidthMm = pageWidthMm;
-    const imgHeightMm = (canvas.height / canvas.width) * imgWidthMm;
 
-    // One PDF page tall in px: mm/px is uniform when the image is scaled to page width
-    const pxPerPage = (pageHeightMm / pageWidthMm) * canvas.width;
+    // mm/px is uniform when the image is scaled to page width
+    const pxPerMm = canvas.width / pageWidthMm;
     let yPx = 0;
     let pageIndex = 0;
 
     while (yPx < canvas.height - 0.5) {
-      const slicePx = Math.min(pxPerPage, canvas.height - yPx);
+      const topMm = pageIndex === 0 ? 0 : CONTINUATION_TOP_MM;
+      const sliceBudgetPx = (pageHeightMm - topMm) * pxPerMm;
+      const slicePx = Math.min(sliceBudgetPx, canvas.height - yPx);
       const sliceCanvas = document.createElement('canvas');
       sliceCanvas.width = canvas.width;
       sliceCanvas.height = Math.ceil(slicePx);
       const ctx = sliceCanvas.getContext('2d');
       if (!ctx) break;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, sliceCanvas.width, sliceCanvas.height);
       ctx.drawImage(
         canvas,
         0,
@@ -74,10 +90,10 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
       );
 
       const sliceData = sliceCanvas.toDataURL('image/jpeg', JPEG_QUALITY);
-      const sliceHeightMm = (slicePx / canvas.height) * imgHeightMm;
+      const sliceHeightMm = slicePx / pxPerMm;
 
       if (pageIndex > 0) pdf.addPage();
-      pdf.addImage(sliceData, 'JPEG', 0, 0, imgWidthMm, sliceHeightMm);
+      pdf.addImage(sliceData, 'JPEG', 0, topMm, imgWidthMm, sliceHeightMm);
 
       yPx += slicePx;
       pageIndex++;
@@ -87,6 +103,9 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
   } catch (e) {
     console.error('PDF generation failed:', e);
   } finally {
+    el.classList.remove('resume-print');
+    el.style.width = prevWidth;
+    el.style.maxWidth = prevMaxWidth;
     if (btn) {
       btn.style.visibility = prevVisibility;
       btn.style.pointerEvents = prevPointer;

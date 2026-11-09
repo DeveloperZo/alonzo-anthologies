@@ -37,8 +37,8 @@ export const factoryLabels = {
   oreSub: 'new domains, mentors',
   products: 'Accomplishments',
   science: 'Learnings',
-  silo: 'Rocket silo',
+  silo: 'Experience',
   siloSub: 'shipped systems',
-  lab: 'Research lab',
+  lab: 'Knowledge',
   labSub: 'learnings',
 };

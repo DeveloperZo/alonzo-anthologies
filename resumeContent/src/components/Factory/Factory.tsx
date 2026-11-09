@@ -195,7 +195,7 @@ const Factory: React.FC = () => {
         lastPos[route.id] = prev;
       });
       if (shippedRef.current) shippedRef.current.textContent = `${shipped} shipped`;
-      if (researchedRef.current) researchedRef.current.textContent = `${researched} researched`;
+      if (researchedRef.current) researchedRef.current.textContent = `${researched} learned`;
       frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
@@ -265,12 +265,6 @@ const Factory: React.FC = () => {
     () => new Map(model.lanes.map((l) => [l.id, l])),
     [model],
   );
-  const itemColor = useMemo(() => {
-    const map = new Map<string, string>();
-    model.lanes.forEach((l) => l.kind === 'skill' && map.set(l.item, l.color));
-    return map;
-  }, [model]);
-
   const selectedLaneId = selection?.kind === 'lane' ? selection.laneId : null;
   const selectedQuest = selection?.kind === 'machine' ? selection.questId : null;
   const highlighted = (lane: FactoryLane) =>
@@ -287,7 +281,6 @@ const Factory: React.FC = () => {
   const renderMachine = (m: FactoryMachine) => {
     const active = selectedQuest === m.questId;
     const years = m.startYear === Number(m.endLabel) ? `${m.startYear}` : `${m.startYear} to ${m.endLabel}`;
-    const sharedRecipe = m.recipe.filter((r) => r.shared);
     return (
       <g
         key={m.questId}
@@ -319,22 +312,27 @@ const Factory: React.FC = () => {
         </g>
         <text className={`machine-name ${m.name.length > 10 ? "long" : ""}`} x={10} y={22}>{m.name}</text>
         <text className="machine-years" x={10} y={38}>{years}</text>
+        {/* The recipe: every ingredient this entry is made of. Shared ones ride a belt. */}
+        <g className="machine-recipe">
+          {m.recipe.map((r, i) => (
+            <rect
+              key={r.tag}
+              className={r.shared ? "shared" : ""}
+              x={10 + i * 13}
+              y={46}
+              width={10}
+              height={10}
+              fill={r.color}
+            >
+              <title>{r.shared ? `${r.tag} (shared)` : r.tag}</title>
+            </rect>
+          ))}
+          <text className="recipe-count" x={10} y={66}>{`${m.recipe.length} ingredients`}</text>
+        </g>
         {altMode ? (
-          <g className="machine-recipe">
-            {sharedRecipe.map((r, i) => (
-              <rect
-                key={r.item}
-                x={10 + i * 12}
-                y={48}
-                width={9}
-                height={9}
-                fill={itemColor.get(r.item)}
-              />
-            ))}
-            <text x={10} y={76}>{`${m.products} acc  ${m.science} learn`}</text>
-          </g>
+          <text className="machine-role alt" x={10} y={80}>{`${m.products} acc  ${m.science} learn`}</text>
         ) : (
-          <text className="machine-role" x={10} y={76}>
+          <text className="machine-role" x={10} y={80}>
             {m.role.length > 22 ? `${m.role.slice(0, 21)}.` : m.role}
           </text>
         )}
@@ -365,7 +363,7 @@ const Factory: React.FC = () => {
             <li><span className="chip" style={{ background: laneById.get('ore')!.color }} />{factoryLabels.ore}</li>
             {m.recipe.map((r) => (
               <li key={r.tag} className={r.shared ? 'shared' : ''}>
-                <span className="chip" style={{ background: itemColor.get(r.item) ?? '#555' }} />
+                <span className="chip" style={{ background: r.color }} />
                 {r.tag}
               </li>
             ))}
@@ -385,8 +383,8 @@ const Factory: React.FC = () => {
             <p>{lane.kind === 'ore'
               ? 'Raw input to every machine.'
               : lane.kind === 'products'
-                ? 'Every machine ships its accomplishments to the silo.'
-                : 'Every machine sends its learnings to the lab.'}</p>
+                ? 'Every machine ships its accomplishments to Experience.'
+                : 'Every machine sends its learnings to Knowledge.'}</p>
           </>
         );
       }
@@ -409,7 +407,7 @@ const Factory: React.FC = () => {
     }
     const copy = {
       ore: [factoryLabels.ore, `${factoryLabels.oreSub}. The raw input every machine consumes.`],
-      silo: [factoryLabels.silo, `Where ${model.totals.products} accomplishments ship. Launch it to open the ${play.resume.toLowerCase()}.`],
+      silo: [factoryLabels.silo, `Where ${model.totals.products} accomplishments ship. Click to open the ${play.resume.toLowerCase()}.`],
       lab: [factoryLabels.lab, `${model.totals.science} learnings, one per lesson worth keeping. Open ${play.accomplishments} to read them.`],
     }[selection.kind];
     return (
@@ -514,7 +512,7 @@ const Factory: React.FC = () => {
               <text className="entity-name" x={10} y={44}>{factoryLabels.ore}</text>
             </g>
 
-            {/* Rocket silo: click to launch into the printed resume. */}
+            {/* Experience (a rocket silo): click to open the printed resume. */}
             <g
               className="factory-entity silo"
               transform={`translate(${model.silo.x} ${model.silo.y})`}
@@ -536,7 +534,7 @@ const Factory: React.FC = () => {
               <text ref={shippedRef} className="entity-count" x={8} y={model.silo.h - 6}>{model.totals.products} shipped</text>
             </g>
 
-            {/* Research lab. */}
+            {/* Knowledge (a lab): click to open Achievements. */}
             <g
               className="factory-entity lab"
               transform={`translate(${model.lab.x} ${model.lab.y})`}
@@ -552,7 +550,7 @@ const Factory: React.FC = () => {
               <path className="lab-dome" d={`M 25 ${model.lab.h - 18} A 40 40 0 0 1 105 ${model.lab.h - 18} Z`} />
               <circle className="lab-core" cx={65} cy={model.lab.h - 32} r={9} />
               <text className="entity-name" x={8} y={14}>{factoryLabels.lab}</text>
-              <text ref={researchedRef} className="entity-count" x={8} y={model.lab.h - 6}>{model.totals.science} researched</text>
+              <text ref={researchedRef} className="entity-count" x={8} y={model.lab.h - 6}>{model.totals.science} learned</text>
             </g>
 
             {model.machines.map(renderMachine)}

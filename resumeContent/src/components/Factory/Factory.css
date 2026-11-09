@@ -345,3 +345,9 @@
 }
 
 .factory-stage .factory-title { font-size: 13px; }
+
+/* Recipe chips: every ingredient an entry is made of. Shared ingredients,
+   the ones that ride a belt, get a light outline. */
+.machine-recipe rect.shared { stroke: #f2e8d5; stroke-width: 1.5; }
+.machine-recipe .recipe-count { font-size: 5px; fill: var(--f-dim); }
+.machine-role.alt { fill: var(--f-text); }
