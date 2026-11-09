@@ -11,6 +11,7 @@ import quests from './data/quests.data';
 import CareerTimeline from './components/CareerTimeline/CareerTimeline';
 import ResumeView from './components/ResumeView/ResumeView';
 import Factory from './components/Factory/Factory';
+import QuestMachine from './components/QuestMachine/QuestMachine';
 import { useTheme } from './context/ThemeContext';
 
 // ScrollToTop component to reset scroll position when navigating
@@ -42,9 +43,28 @@ const QuestDetailWrapper = () => {
     }
   }, [questExists, parsedId, navigate]);
   
-  return questExists ? (
-    <QuestDetail id={parsedId} />
-  ) : null;
+  return questExists ? <QuestScreen id={parsedId} /> : null;
+};
+
+// Play mode opens a quest as a factory machine window, full screen with no
+// frame. Work mode keeps the plain quest page inside its frame. Keyed by id so
+// each machine opens fresh (scroll, focus and the bar animation reset).
+const QuestScreen = ({ id }: { id: number }) => {
+  const { theme } = useTheme()!;
+  if (theme === 'play') {
+    return (
+      <>
+        <Navbar />
+        <QuestMachine key={id} id={id} />
+      </>
+    );
+  }
+  return (
+    <QuestSwitcher>
+      <Navbar />
+      <QuestDetail id={id} />
+    </QuestSwitcher>
+  );
 };
 
 // Play mode opens on the career factory, full screen with no TV frame.
@@ -94,12 +114,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/main-menu" element={<HomeScreen />} />
                 
         {/* Individual Quest Detail */}
-        <Route path="/quests/:id" element={
-          <QuestSwitcher>
-            <Navbar />
-            <QuestDetailWrapper />
-          </QuestSwitcher>
-        } />
+        <Route path="/quests/:id" element={<QuestDetailWrapper />} />
         
         {/* Accomplishments */}
         <Route path="/accomplishments" element={

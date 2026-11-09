@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import quests from '../../data/quests.data';
 import { useTheme } from '../../context/ThemeContext';
 import './QuestDetail.css';
+import { formatDurationLong, formatMonthYear, isOngoing, monthsBetween } from '../../utils/questDates';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faBriefcase, faCalendarAlt, faTrophy, faLightbulb, faArrowRight, faLink } from '@fortawesome/free-solid-svg-icons';
 
@@ -26,7 +27,7 @@ const QuestDetail: React.FC<QuestDetailProps> = ({ id: propId }) => {
   // Find the quest by ID
   const quest = quests.find((q) => q.id === id);
   // Create a sorted map of quest IDs by date
-  const questIdByDate = quests
+  const questIdByDate = [...quests]
     .sort((a, b) => a.startDate.getTime() - b.startDate.getTime())
     .map(q => ({ id: q.id, startDate: q.startDate }));
 
@@ -51,32 +52,11 @@ const QuestDetail: React.FC<QuestDetailProps> = ({ id: propId }) => {
   
   // Format date nicely
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    return formatMonthYear(date, 'long');
   };
   
   // Calculate duration between dates
-  const calculateDuration = () => {
-    const isPresent = quest.endDate.getFullYear() >= 2030;
-    const endDate = isPresent ? new Date() : quest.endDate;
-    
-    const diffInMonths = (endDate.getFullYear() - quest.startDate.getFullYear()) * 12 
-      + (endDate.getMonth() - quest.startDate.getMonth());
-    
-    const years = Math.floor(diffInMonths / 12);
-    const months = diffInMonths % 12;
-    
-    let result = '';
-    if (years > 0) {
-      result += `${years} year${years > 1 ? 's' : ''}`;
-    }
-    
-    if (months > 0) {
-      if (result.length > 0) result += ', ';
-      result += `${months} month${months > 1 ? 's' : ''}`;
-    }
-    
-    return result || 'Less than a month';
-  };
+  const calculateDuration = () => formatDurationLong(monthsBetween(quest.startDate, quest.endDate));
 
   const learnings = quest.accomplishments
     .flatMap((acc) => acc.learnings)
@@ -108,7 +88,7 @@ const QuestDetail: React.FC<QuestDetailProps> = ({ id: propId }) => {
         <div className="metadata-item">
           <FontAwesomeIcon icon={faCalendarAlt} className="metadata-icon" />
           <span>
-            {formatDate(quest.startDate)} - {quest.endDate.getFullYear() >= 2030 
+            {formatDate(quest.startDate)} - {isOngoing(quest.endDate) 
               ? "Present" 
               : formatDate(quest.endDate)}
             {' '}({calculateDuration()})

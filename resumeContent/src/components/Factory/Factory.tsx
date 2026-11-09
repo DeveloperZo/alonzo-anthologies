@@ -2,11 +2,12 @@
 // Play-mode home: the career as a Factorio-style factory. Layout comes from
 // utils/factoryModel.ts; this file draws it and makes it playable.
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import quests from '../../data/quests.data';
 import { labels } from '../../data/labels';
 import { factoryLabels } from '../../data/factory.data';
 import { buildFactory, FactoryLane, FactoryMachine } from '../../utils/factoryModel';
+import { forgetRememberedMachine, peekRememberedMachine } from '../../utils/factoryFocus';
 import './Factory.css';
 
 type Selection =
@@ -36,6 +37,16 @@ const isTyping = (el: EventTarget | null) =>
 
 const Factory: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  // Read once: set when coming back from a machine window.
+  // Prefer the machine last open in its window (Prev/Next may have moved on).
+  const returnFrom = useRef(
+    (() => {
+      const remembered = peekRememberedMachine();
+      const fromState = (location.state as { focusQuestId?: number } | null)?.focusQuestId;
+      return fromState !== undefined ? remembered ?? fromState : undefined;
+    })(),
+  );
   const model = useMemo(() => buildFactory(quests), []);
   const play = labels.play;
 
@@ -80,10 +91,85 @@ const Factory: React.FC = () => {
     setView({ scale, tx: 8, ty: (height - model.height * scale) / 2 });
   }, [model]);
 
+  // ---------- camera moves into and out of a machine ----------
+  const viewRef = useRef(view);
+  viewRef.current = view;
+  const tweenRef = useRef(0);
+
+  const animateView = useCallback((target: View, ms: number, done?: () => void) => {
+    cancelAnimationFrame(tweenRef.current);
+    const from = viewRef.current;
+    const t0 = performance.now();
+    const step = (now: number) => {
+      const t = Math.min(1, (now - t0) / ms);
+      const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      setView({
+        scale: from.scale + (target.scale - from.scale) * e,
+        tx: from.tx + (target.tx - from.tx) * e,
+        ty: from.ty + (target.ty - from.ty) * e,
+      });
+      if (t < 1) tweenRef.current = requestAnimationFrame(step);
+      else done?.();
+    };
+    tweenRef.current = requestAnimationFrame(step);
+  }, []);
+
+  useEffect(() => () => cancelAnimationFrame(tweenRef.current), []);
+
+  // The opening view, optionally scrolled so one machine sits in the middle.
+  const homeView = useCallback((m?: FactoryMachine): View | null => {
+    const el = viewportRef.current;
+    if (!el) return null;
+    const { width, height } = el.getBoundingClientRect();
+    const scale = Math.max(
+      Math.min(width / model.width, height / model.height) * 0.96,
+      Math.min(1.5, (height / model.height) * 0.96),
+    );
+    const ty = (height - model.height * scale) / 2;
+    if (!m) return { scale, tx: 8, ty };
+    const centred = width / 2 - (m.x + m.w / 2) * scale;
+    const minTx = Math.min(8, width - model.width * scale - 8);
+    return { scale, tx: Math.max(minTx, Math.min(8, centred)), ty };
+  }, [model]);
+
+  const machineView = useCallback((m: FactoryMachine): View | null => {
+    const home = homeView();
+    const el = viewportRef.current;
+    if (!home || !el) return null;
+    const { width, height } = el.getBoundingClientRect();
+    const scale = Math.min(MAX_SCALE, home.scale * 2.6);
+    return {
+      scale,
+      tx: width / 2 - (m.x + m.w / 2) * scale,
+      ty: height / 2 - (m.y + m.h / 2) * scale,
+    };
+  }, [homeView]);
+
   useEffect(() => {
-    fitHeight();
+    forgetRememberedMachine();
+    const m = model.machines.find((x) => x.questId === returnFrom.current);
+    if (m) {
+      // Back from a machine window: start inside the machine and pull out.
+      const inside = machineView(m);
+      const out = homeView(m);
+      if (inside && out) {
+        if (prefersReducedMotion()) setView(out);
+        else {
+          setView(inside);
+          viewRef.current = inside;
+          animateView(out, 360);
+        }
+      }
+      setSelection({ kind: 'machine', questId: m.questId });
+      const el = document.querySelector<SVGGElement>(`[data-quest="${m.questId}"]`);
+      el?.focus({ preventScroll: true });
+    } else {
+      fitHeight();
+    }
     window.addEventListener('resize', fitHeight);
     return () => window.removeEventListener('resize', fitHeight);
+    // Runs once on mount; returnFrom is read once.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fitHeight]);
 
   const zoomAt = useCallback((factor: number, cx?: number, cy?: number) => {
@@ -160,7 +246,24 @@ const Factory: React.FC = () => {
     if (dragDistance.current <= 4) fn();
   };
 
-  const openQuest = useCallback((id: number) => navigate(`/quests/${id}`), [navigate]);
+  // Opening a machine zooms the camera into it, then opens its window. The
+  // floor's own history entry remembers the machine so Back lands on it.
+  const opening = useRef(false);
+  const openQuest = useCallback((id: number) => {
+    if (opening.current) return;
+    const go = () => {
+      navigate('/main-menu', { replace: true, state: { focusQuestId: id } });
+      navigate(`/quests/${id}`, { state: { fromFactory: true } });
+    };
+    const m = model.machines.find((x) => x.questId === id);
+    const target = m && machineView(m);
+    if (!target || prefersReducedMotion()) {
+      go();
+      return;
+    }
+    opening.current = true;
+    animateView(target, 320, go);
+  }, [navigate, model, machineView, animateView]);
 
   // ---------- belt items: one animation loop, no React renders ----------
   useEffect(() => {
@@ -285,6 +388,7 @@ const Factory: React.FC = () => {
       <g
         key={m.questId}
         className={`factory-machine ${m.row} ${active ? 'active' : ''}`}
+        data-quest={m.questId}
         transform={`translate(${m.x} ${m.y})`}
         role="button"
         tabIndex={0}

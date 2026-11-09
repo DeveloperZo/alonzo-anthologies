@@ -271,3 +271,42 @@ export function buildFactory(quests: Quest[]): FactoryModel {
     },
   };
 }
+
+// ---------- per-quest views for the detail page ----------
+
+export interface IngredientLink {
+  tag: string;
+  item: string;
+  color: string;
+  shared: boolean;
+  // Quests that carried this item before this one, oldest first.
+  from: LaneStop[];
+  // Quests that carried it after this one, oldest first.
+  to: LaneStop[];
+}
+
+// What a quest is made of, and where each shared ingredient came from and went.
+// A quest never appears in its own from or to list.
+export function questLinks(model: FactoryModel, questId: number): IngredientLink[] {
+  const machine = model.machines.find((m) => m.questId === questId);
+  if (!machine) return [];
+  return machine.recipe.map((r) => {
+    const lane = model.lanes.find((l) => l.kind === 'skill' && l.item === r.item);
+    const stops = lane?.stops ?? [];
+    const self = stops.findIndex((s) => s.questId === questId);
+    return {
+      ...r,
+      from: self < 0 ? [] : stops.slice(0, self),
+      to: self < 0 ? [] : stops.slice(self + 1),
+    };
+  });
+}
+
+// The machines either side of a quest on the floor (date order).
+export function neighbours(model: FactoryModel, questId: number) {
+  const i = model.machines.findIndex((m) => m.questId === questId);
+  return {
+    prev: i > 0 ? model.machines[i - 1] : undefined,
+    next: i >= 0 && i < model.machines.length - 1 ? model.machines[i + 1] : undefined,
+  };
+}

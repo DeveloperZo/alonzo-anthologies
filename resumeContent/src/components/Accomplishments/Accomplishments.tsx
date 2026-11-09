@@ -3,6 +3,7 @@ import React, { useMemo, useState, useCallback } from 'react';
 import './Accomplishments.css';
 import quests from '../../data/quests.data';
 import { useTheme } from '../../context/ThemeContext';
+import { formatMonthYear, isOngoing } from '../../utils/questDates';
 
 interface Accomplishment {
   description: string;
@@ -123,14 +124,9 @@ const Accomplishments: React.FC = () => {
     const earliest = new Date(Math.min(...accs.map(a => a.startDate.getTime())));
     const latest = new Date(Math.max(...accs.map(a => a.endDate.getTime())));
     
-    const formatDate = (date: Date) => {
-      return date.toLocaleDateString(undefined, { 
-        year: 'numeric', 
-        month: 'short'
-      });
-    };
+    const formatDate = (date: Date) => formatMonthYear(date, 'short');
     
-    return `${formatDate(earliest)} – ${latest.getFullYear() >= 2030 ? 'Present' : formatDate(latest)}`;
+    return `${formatDate(earliest)} – ${isOngoing(latest) ? 'Present' : formatDate(latest)}`;
   };
 
   // Get story summary based on view mode and theme
