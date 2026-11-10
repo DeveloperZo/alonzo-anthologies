@@ -46,19 +46,20 @@
   <rect x="20" y="20" width="920" height="680" class="thin"/>
   <text x="42" y="50" class="sc">PLATE I</text>
   <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 1 · WHAT'S BEING BUILT</text>
-  <!-- the strip of text, its next word under a slip -->
+  <!-- the strip of text. the slip that covered its last word is lifted aside, with the wrong guess written on it -->
   <path d="M 117 122 H 846 L 850 127 H 121 Z" class="h"/>
   <path d="M 112 84 H 846 L 832 103 L 846 122 H 112 L 126 103 Z" class="b"/>
-  <text x="150" y="110" class="tape">A modern AI model is a very large file of</text>
-  <g transform="rotate(-2.5 618 103)">
-    <rect x="556" y="80" width="128" height="50" class="h" transform="translate(4 5)"/>
-    <rect x="552" y="76" width="128" height="50" class="b"/>
-    <rect x="552" y="76" width="128" height="50" class="hb"/>
-    <circle cx="562" cy="85" r="2.2" class="s"/><circle cx="670" cy="117" r="2.2" class="s"/>
+  <text x="150" y="110" class="tape">A modern AI model is a very large file of <tspan font-weight="600">numbers.</tspan></text>
+  <rect x="527" y="87" width="97" height="31" class="thin" stroke-dasharray="3 3"/>
+  <g transform="translate(22 18) rotate(-6 676 84)">
+    <rect x="676" y="62" width="118" height="44" class="h" transform="translate(4 5)"/>
+    <rect x="672" y="58" width="118" height="44" class="b"/>
+    <circle cx="681" cy="66" r="2.2" class="s"/>
+    <text x="731" y="88" text-anchor="middle" class="tape" style="font-style:italic">words</text>
+    <line x1="696" y1="81" x2="766" y2="81" class="turn" style="stroke-width:2"/>
   </g>
-  <text x="150" y="152" class="it">Show it a sentence with the next word covered.</text>
-  <text x="616" y="152" text-anchor="middle" class="it">It guesses “words.” Wrong:</text>
-  <text x="616" y="169" text-anchor="middle" class="it">the page said “numbers.”</text>
+  <text x="150" y="152" class="it">Cover the next word and ask for a guess.</text>
+  <text x="700" y="152" text-anchor="middle" class="it">The guess was “words.” The page says “numbers.”</text>
   <text x="42" y="190" class="it">About 100 billion dials. Each setting is one number.</text>
   <!-- the bank of dials. x = 480 + 190 j / z, ground y = 205 + 280 / z, rows 0.45 apart in z, odd rows staggered half a pitch -->
   <g clip-path="url(#p1-clip)">
