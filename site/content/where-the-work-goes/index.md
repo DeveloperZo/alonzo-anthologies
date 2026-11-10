@@ -61,6 +61,10 @@ The same three moves are where software teams now stand.
 - **Checks that keep pace.** A person reading every change cannot keep up with a machine that writes all day. The check has to run itself, and people have to be able to trust it.
 - **A measure of the result.** DORA's delivery measures already separate the two. Deployment frequency counts what went out. Change fail rate counts how much of it needed immediate repair.<sup><a href="#where-the-work-goes-ref-12" id="where-the-work-goes-fnref-12">12</a></sup>
 
+Take code review. On many teams, reviewing a teammate's change was a ritual: every change got a look, and most looks found nothing. When each developer produces far more code, the same ritual spreads the same attention thinner, until every review is a rubber stamp. The purpose of review was never to look at everything. It was to catch what can hurt. One way to keep that purpose is to stamp most changes on purpose and spend real attention on the few that carry risk. It is one possible path of many. What matters is that the practice is chosen for what it does, and not for how it looks.
+
+![](/where-the-work-goes/diagrams/DIA-301-same-attention.svg)
+
 > [!note]- Where AI helps and where it collides
 > AI works with the process when it sits in the middle with strong ends around it, and when it helps at the ends: drafting a specification for a person to correct, or writing the tests. The curl maintainer who ended the payments also acknowledged strong reports that a developer had found with AI's help.<sup><a href="#where-the-work-goes-ref-9">9</a></sup> The tool was the same in both cases. What differed was whether someone had framed the question carefully and checked the answer before sending it.
 >
