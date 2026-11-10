@@ -32,7 +32,7 @@ export const machineNames: Record<number, string> = {
 // Framing from career-as-system-v1.md: problems flow in from the left, are
 // turned into reusable structure, and leave as shipped systems on the right.
 export const factoryLabels = {
-  title: 'The Leverage Works',
+  title: 'Alonzo\'s Anthologies',
   ore: 'Hard problems',
   oreSub: 'new domains, mentors',
   products: 'Accomplishments',

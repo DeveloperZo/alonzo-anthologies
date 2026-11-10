@@ -22,7 +22,7 @@
   /* Style the buttons */
   .main-menu button {
     background-color: var(--accent-color);
-    color: #000000;
+    color: #ffffff;
     border: none;
     padding: 1rem 2rem;
     width: 200px;

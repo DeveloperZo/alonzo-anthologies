@@ -162,13 +162,15 @@ const Accomplishments: React.FC = () => {
       }
     } else {
       if (viewMode === 'role') {
-        return `In my professional career as a ${selectedRole}, I've contributed to ${groupCount}
-        different organizations, having ${filteredAccomplishments.length} key contributions
-        and developing in ${uniqueLearningsCount} distinct professional competencies.`;
+        const organizations = groupCount === 1 ? '1 organization' : `${groupCount} different organizations`;
+        const contributions = filteredAccomplishments.length === 1 ? '1 key contribution' : `${filteredAccomplishments.length} key contributions`;
+        const competencies = uniqueLearningsCount === 1 ? '1 distinct professional competency' : `${uniqueLearningsCount} distinct professional competencies`;
+        return `In my professional career as a ${selectedRole}, I've contributed to ${organizations}, having ${contributions} and developing in ${competencies}.`;
       } else {
-        return `During my tenure at ${selectedCompany}, I've made ${filteredAccomplishments.length}
-        significant contributions across ${groupCount} different roles, developing expertise in
-        ${uniqueLearningsCount} distinct professional areas.`;
+        const roles = groupCount === 1 ? '1 role' : `${groupCount} different roles`;
+        const contributions = filteredAccomplishments.length === 1 ? '1 significant contribution' : `${filteredAccomplishments.length} significant contributions`;
+        const areas = uniqueLearningsCount === 1 ? '1 distinct professional area' : `${uniqueLearningsCount} distinct professional areas`;
+        return `During my tenure at ${selectedCompany}, I've made ${contributions} across ${roles}, developing expertise in ${areas}.`;
       }
     }
   }, [filteredAccomplishments, groupedAccomplishments, viewMode, selectedRole, selectedCompany]);

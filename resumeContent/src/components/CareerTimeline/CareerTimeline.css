@@ -99,7 +99,7 @@
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
   }
   
-  .summary-text {
+  .timeline-container .summary-text {
     text-align: center;
     margin-bottom: 1.5rem;
     max-width: 800px;

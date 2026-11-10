@@ -129,7 +129,7 @@ const ResumeRoute = () => {
   const { search } = useLocation();
   if (new URLSearchParams(search).get('print') === '1') return <ResumeView printMode />;
   return (
-    <QuestSwitcher type="career">
+    <QuestSwitcher>
       <Navbar />
       <ResumeView />
     </QuestSwitcher>

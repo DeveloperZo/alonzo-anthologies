@@ -392,7 +392,7 @@ const Factory: React.FC = () => {
         transform={`translate(${m.x} ${m.y})`}
         role="button"
         tabIndex={0}
-        aria-label={`${m.retroTitle}. ${m.name}, ${years}. ${m.products} accomplishments, ${m.science} learnings. Press Enter to open the quest.`}
+        aria-label={`${m.retroTitle}. ${m.name}, ${years}. ${m.products === 1 ? '1 accomplishment' : `${m.products} accomplishments`}, ${m.science === 1 ? '1 learning' : `${m.science} learnings`}. Press Enter to open the quest.`}
         onClick={clickGuard(() => openQuest(m.questId))}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
