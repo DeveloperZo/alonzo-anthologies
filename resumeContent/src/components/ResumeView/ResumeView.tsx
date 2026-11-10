@@ -30,6 +30,8 @@ interface ResumeViewProps {
 
 const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
   const { theme } = useTheme()!;
+  // The exported file is sleek. printMode is the package page. The on-screen page keeps the current mode.
+  const resumeTheme = printMode ? 'work' : theme;
   
   // Transform quest data into resume format
   const resumeData = useMemo(() => {
@@ -100,7 +102,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
   };
 
   return (
-    <div className={`resume-container ${theme}${printMode ? ' resume-print resume-print-page' : ''}`}>
+    <div className={`resume-container ${resumeTheme}${printMode ? ' resume-print resume-print-page' : ''}`}>
       <div className="resume-header">
         <div className="header-content">
           <h1>Alonzo Williams</h1>

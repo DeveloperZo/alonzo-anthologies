@@ -2,6 +2,27 @@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+// The download captures the live resume. Sleek is the work theme. Retro (play) must not land in the file.
+function presentSleek(el: HTMLElement): () => void {
+  const body = document.body;
+  const bodyHadPlay = body.classList.contains('play');
+  const bodyHadWork = body.classList.contains('work');
+  const elHadPlay = el.classList.contains('play');
+  const elHadWork = el.classList.contains('work');
+
+  body.classList.remove('play');
+  body.classList.add('work');
+  el.classList.remove('play');
+  el.classList.add('work');
+
+  return () => {
+    body.classList.toggle('play', bodyHadPlay);
+    body.classList.toggle('work', bodyHadWork);
+    el.classList.toggle('play', elHadPlay);
+    el.classList.toggle('work', elHadWork);
+  };
+}
+
 const JPEG_QUALITY = 0.88;
 /** Balance sharpness vs file size (1 = fastest/smallest, 2 = heavier). */
 const CANVAS_SCALE = 1.45;
@@ -28,7 +49,8 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
 
   const prevWidth = el.style.width;
   const prevMaxWidth = el.style.maxWidth;
-  // Screen layout stays as authored. The print class and fixed width apply only for capture.
+  // Screen layout stays as authored. Sleek classes, the print class, and the fixed width apply only for capture.
+  const restoreTheme = presentSleek(el);
   el.classList.add('resume-print');
   el.style.maxWidth = '794px';
   el.style.width = '794px';
@@ -104,6 +126,7 @@ export async function generateResumePdfFromDom(filename: string): Promise<void> 
     console.error('PDF generation failed:', e);
   } finally {
     el.classList.remove('resume-print');
+    restoreTheme();
     el.style.width = prevWidth;
     el.style.maxWidth = prevMaxWidth;
     if (btn) {

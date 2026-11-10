@@ -56,9 +56,12 @@ through `utils/questDates.ts` (UTC month, whole-month tenure, ongoing
 when the end year is 2030 or later), matching the printed resume.
 
 The PDF is a DOM capture of `.resume-container` (`utils/pdfGenerator.ts`).
-Capture adds the `resume-print` class and a fixed A4 width, then removes
-both. That class is the two-page layout (2026-10-22). The on-screen
-resume does not use it. Independent Projects carries `screen-only`, so
+Capture switches the page to sleek (the work theme) for the snapshot,
+adds the `resume-print` class and a fixed A4 width, then restores the
+page. The package print (`#/resume?print=1`) forces that same sleek
+theme. The on-screen resume still follows the current mode. That class
+is the two-page layout (2026-10-22). The on-screen resume does not use
+it. Independent Projects carries `screen-only`, so
 the on-screen resume shows it and the PDF does not (2026-10-22). An
 education detail that repeats the degree heading is not listed.
 
