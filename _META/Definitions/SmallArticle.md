@@ -22,7 +22,7 @@ This definition is designed, not grounded. No SmallArticle exists yet. The
 beats are adapted from a widely circulated breakdown of how Veritasium
 structures its explainer videos: misconception first, question before
 explanation, core explanation, A-plot and B-plot interleaved, and a payoff.
-Citations, voice and editorial rules come from the
+Citations, voice and the shared editorial rules come from the
 [MediumArticle](./MediumArticle.md) (AI governance Part 1). Check this against
 the first real instance and correct it where they disagree, as the other
 definitions were corrected against theirs.
@@ -31,12 +31,12 @@ definitions were corrected against theirs.
 
 | Signal | SmallArticle | MediumArticle |
 | --- | --- | --- |
-| Claim | One misconception, overturned | One argument built from several claims |
-| Shape | Five beats, on one page | Eight sections, one file each |
+| Claim | One misconception, overturned | One question, answered by reading a system |
+| Shape | Five beats, on one page (after Veritasium) | Five beats across five to eight section files (after Meadows) |
 | Story | One real-world thread through the whole piece | Evidence per section |
-| Body | About 1,200 to 1,800 words | About 5,500 words |
+| Length | About 1,200 to 1,800 words | About 5,300 words including callouts |
 | Diagrams | Zero to two | 10 to 15 |
-| Sources | About 8 to 20, on the same page | About 50, on their own page |
+| Sources | About 8 to 20, on the same page | 50 to 70, on their own page |
 
 If a SmallArticle draft passes about 2,000 words, needs a second
 misconception, or needs a second story to carry it, it wants to be a
@@ -197,7 +197,8 @@ Under `## Sources`, one flat numbered list (no per-section groups):
 
 ## Voice
 
-The [MediumArticle voice](./MediumArticle.md#voice) applies: plain first,
+The [MediumArticle voice](./MediumArticle.md#voice) applies, except its two
+systems items (systems words, the species): plain first,
 correct the common picture, guide the eye, land short, mark the strength of
 each claim, ground stakes, structural not moral. In a SmallArticle:
 

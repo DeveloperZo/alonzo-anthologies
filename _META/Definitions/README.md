@@ -25,7 +25,7 @@ Instances live in `_KNOWLEDGE/<Type folder>/`. Definitions live here, in
 | [Architecture](./Architecture.md) | `_KNOWLEDGE/Architecture/` | `ARCH-###` |
 | [Document](./Document.md) | `_KNOWLEDGE/Documents/<Kind>/` | One prefix per kind: `BRIEF-###`, `OPER-###`, `TD-###`, `VID-###` |
 | [Diagram](./Diagram.md) | `_KNOWLEDGE/Diagrams/`, or beside a site page | `DIA-###` |
-| [MediumArticle](./MediumArticle.md) | `site/content/<series>/part-<N>/` | None. The folder is the identity |
+| [MediumArticle](./MediumArticle.md) | `site/content/<series>/part-<N>/`, or `site/content/<slug>/` | None. The folder is the identity |
 | [SmallArticle](./SmallArticle.md) | `site/content/<slug>/` | None. The folder is the identity |
 
 ## Rules for every instance
