@@ -1,143 +1,116 @@
-<svg viewBox="0 0 860 510" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d6a-title d6a-desc">
-  <title id="d6a-title">DIA-006B. The Distribution Problem</title>
-  <desc id="d6a-desc">Left panel: cascade from AI-exposed advanced-economy workforce down to 6.1 million workers at high exposure and low adaptive capacity. Right panel: historical transition recovery timelines (Industrial Revolution 40 years, Internet Era 20–30 years, AI pace unknown) showing why aggregate net job creation does not arrive in time for the at-risk population.</desc>
-
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p6b-t p6b-d">
+  <title id="p6b-t">DIA-006B · The far bank</title>
+  <desc id="p6b-d">An engraved plate of a gorge seen in section. On the near bank stands a short stone pier, 92 million jobs displaced. On the far bank stands a taller pier, 170 million jobs created. No span joins them. Two measuring lines in rust cross the gap, which is drawn to a scale of years: 20 to 30 years for the internet transition, and 40 years, the full width, for the first industrial revolution. A note at the near edge names the 6.1 million US workers who stand closest to it.</desc>
   <defs>
     <style>
-      :root {
-        --bg: #FAFAF8; --paper: #F2EEE3; --line: #E2DFD6; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95;
-        --rust: #A85B49; --rust-soft: #EDD8CE; --gold: #A28438; --gold-soft: #F0E5CD;
-        --slate: #4F627F; --slate-soft: #DEE3EC; --sage: #5A8270; --sage-soft: #DEE8E1;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #1B1D23; --paper: #1E2128; --line: #3E3D38; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87;
-          --rust: #D29183; --rust-soft: #3D2925; --gold: #D6B574; --gold-soft: #3B3220;
-          --slate: #94A6C4; --slate-soft: #2A323F; --sage: #92BAA6; --sage-soft: #233029;
-        }
-      }
-      [fill="#F2EEE3"] { fill: var(--paper); } [stroke="#E2DFD6"] { stroke: var(--line); }
-      [fill="#2A2A35"] { fill: var(--text); } [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); } [stroke="#9D9A95"] { stroke: var(--muted2); }
-      [fill="#A85B49"] { fill: var(--rust); } [stroke="#A85B49"] { stroke: var(--rust); } [fill="#EDD8CE"] { fill: var(--rust-soft); }
-      [fill="#A28438"] { fill: var(--gold); } [stroke="#A28438"] { stroke: var(--gold); } [fill="#F0E5CD"] { fill: var(--gold-soft); }
-      [fill="#4F627F"] { fill: var(--slate); } [stroke="#4F627F"] { stroke: var(--slate); } [fill="#DEE3EC"] { fill: var(--slate-soft); }
-      [fill="#5A8270"] { fill: var(--sage); } [stroke="#5A8270"] { stroke: var(--sage); } [fill="#DEE8E1"] { fill: var(--sage-soft); }
+      @font-face { font-family: "Fredericka the Great"; font-weight: 400; src: url(data:font/woff2;base64,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) format("woff2"); }
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p6b-h); stroke: none; }
+      .hb { fill: url(#p6b-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .x { fill: url(#p6b-x); stroke: none; }
+      .m { fill: url(#p6b-m); stroke: var(--ink); stroke-width: 1.6; stroke-linejoin: round; }
+      .wave { fill: none; stroke: var(--ink); stroke-width: 0.6; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .dim { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: butt; }
+      .dimd { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-dasharray: 7 5; }
+      .dimt { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-linecap: round; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .big { font-size: 19px; text-anchor: middle; }
+      .lab { font-size: 13px; font-style: italic; text-anchor: middle; }
+      .yr { font-size: 17px; fill: var(--accent); }
+      .yn { font-size: 13.5px; font-style: italic; fill: var(--accent); }
+      .tick { font-size: 11px; text-anchor: middle; fill: var(--soft); }
+      .leg { font-size: 12.5px; font-style: italic; }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
     </style>
-    <marker id="arh-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0,8 3,0 6" fill="#A85B49"/>
-    </marker>
-    <marker id="arh-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0,8 3,0 6" fill="#9D9A95"/>
-    </marker>
-    <marker id="arh-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0,8 3,0 6" fill="#4F627F"/>
-    </marker>
-    <marker id="arh-amber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0,8 3,0 6" fill="#A28438"/>
-    </marker>
+    <pattern id="p6b-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <pattern id="p6b-x" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <!-- masonry: one course is 15 units high = 10 million jobs. two courses per tile, joints staggered. tile anchored on the ground line y = 400 -->
+    <pattern id="p6b-m" width="48" height="30" patternUnits="userSpaceOnUse" patternTransform="translate(60 400)">
+      <rect width="48" height="30" class="paper"/>
+      <path d="M 0 0 H 48 M 0 15 H 48 M 0 30 H 48 M 24 0 V 15 M 12 15 V 30 M 36 15 V 30" class="thin" style="stroke-width:0.9"/>
+    </pattern>
+    <pattern id="p6b-w" width="60" height="26" patternUnits="userSpaceOnUse" patternTransform="translate(0 566)">
+      <g class="wave"><path d="M 0 5 q 15 -4 30 0 t 30 0"/><path d="M 0 13 q 15 4 30 0 t 30 0"/><path d="M 0 20 q 15 -3 30 0 t 30 0"/></g>
+    </pattern>
   </defs>
-
-  <!-- Page background -->
-  <rect width="860" height="510" fill="#F2EEE3" rx="8"/>
-
-  <!-- ── STANDARD HEADER ── -->
-  <text x="430" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-006B · THE DISTRIBUTION PROBLEM</text>
-  <text x="430" y="48" text-anchor="middle" font-size="12" fill="#6B6873">where the 6.1 million come from · why recovery takes longer than displacement</text>
-
-
-  <!-- Panel divider -->
-  <line x1="430" y1="75" x2="430" y2="490" stroke="#E2DFD6" stroke-width="1" stroke-dasharray="4,3"/>
-
-  <!-- ===================== LEFT PANEL: Population Cascade ===================== -->
-
-  <text x="215" y="64" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#6B6873" letter-spacing="0.6">WHERE THE 6.1 MILLION COME FROM</text>
-
-  <!-- Bar 1: AI-exposed advanced-economy workforce -->
-  <rect x="30" y="78" width="370" height="50" fill="#DEE3EC" stroke="#4F627F" stroke-width="1.5" rx="6"/>
-  <text x="215" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#4F627F">Advanced economy workforce</text>
-  <text x="215" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#4F627F">≈ 60% have meaningful AI exposure  ·  IMF, April 2025</text>
-
-  <!-- Connectors down to split -->
-  <line x1="121" y1="128" x2="121" y2="156" stroke="#9D9A95" stroke-width="1.5" marker-end="url(#arh-gray)"/>
-  <line x1="309" y1="128" x2="309" y2="156" stroke="#9D9A95" stroke-width="1.5" marker-end="url(#arh-gray)"/>
-
-  <!-- Bar 2L: Augmented -->
-  <rect x="30" y="156" width="183" height="50" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.5" rx="6"/>
-  <text x="121" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#5A8270">≈ Half: Augmented</text>
-  <text x="121" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#5A8270">AI raises productivity</text>
-
-  <!-- Bar 2R: Substitution risk -->
-  <rect x="217" y="156" width="183" height="50" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" rx="6"/>
-  <text x="308" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#A85B49">≈ Half: Substitution risk</text>
-  <text x="308" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#A85B49">Tasks automated, roles displaced</text>
-
-  <!-- Trapezoid narrowing from Bar2R down to Bar3 -->
-  <polygon points="217,206 400,206 373,236 243,236" fill="#F0E5CD" stroke="none" opacity="0.55"/>
-  <line x1="217" y1="206" x2="243" y2="236" stroke="#A28438" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="400" y1="206" x2="373" y2="236" stroke="#A28438" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="308" y1="206" x2="308" y2="236" stroke="#A28438" stroke-width="1.5" marker-end="url(#arh-amber)"/>
-
-  <!-- Bar 3: At-risk population -->
-  <rect x="243" y="236" width="130" height="68" fill="#F0E5CD" stroke="#A28438" stroke-width="2" rx="6"/>
-  <text x="308" y="260" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#A28438">6.1 million</text>
-  <text x="308" y="278" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#A28438">US workers</text>
-  <text x="308" y="296" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#6B6873">high exposure</text>
-
-  <!-- Subline -->
-  <text x="215" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#A28438">4.2% of US workforce  ·  NBER 2026</text>
-
-  <!-- Profile tags: 2x2 grid, w=152, gap=6, centered on panel x=215 -->
-  <rect x="60" y="334" width="152" height="22" fill="#F0E5CD" stroke="#A28438" stroke-width="1" rx="4"/>
-  <text x="136" y="349" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#A28438">Clerical &amp; administrative</text>
-
-  <rect x="218" y="334" width="152" height="22" fill="#F0E5CD" stroke="#A28438" stroke-width="1" rx="4"/>
-  <text x="294" y="349" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#A28438">Predominantly women</text>
-
-  <rect x="60" y="362" width="152" height="22" fill="#F0E5CD" stroke="#A28438" stroke-width="1" rx="4"/>
-  <text x="136" y="377" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#A28438">Smaller metro areas</text>
-
-  <rect x="218" y="362" width="152" height="22" fill="#F0E5CD" stroke="#A28438" stroke-width="1" rx="4"/>
-  <text x="294" y="377" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#A28438">Limited local alternatives</text>
-
-  <!-- Quote -->
-  <text x="215" y="408" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-style="italic" font-weight="600" fill="#A85B49">"Not a career setback. Closer to permanent."</text>
-
-  <!-- ===================== RIGHT PANEL: Transition Timelines ===================== -->
-  <!-- Scale: x_origin=445, 1 yr = 5.5px → 20yr=555, 40yr=665 -->
-
-  <text x="445" y="64" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#6B6873" letter-spacing="0.6">WHY RECOVERY TAKES LONGER THAN DISPLACEMENT</text>
-
-  <!-- Row 1: Industrial Revolution: 40 years = 220px -->
-  <text x="445" y="112" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#6B6873">Industrial Revolution</text>
-  <text x="445" y="126" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">UK wages stagnated ≈ 40 years despite productivity gains</text>
-  <rect x="445" y="134" width="220" height="32" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" rx="4"/>
-  <text x="555" y="155" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#A85B49">40 years</text>
-
-  <!-- Row 2: Internet: 20–30 years (~28 yrs) = 154px -->
-  <text x="445" y="200" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#6B6873">Internet Transition</text>
-  <text x="445" y="214" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">Employment replacement stabilized over 20–30 years</text>
-  <rect x="445" y="222" width="154" height="32" fill="#F0E5CD" stroke="#A28438" stroke-width="1.5" rx="4"/>
-  <text x="522" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#A28438">20–30 years</text>
-
-  <!-- Row 3: AI Era: unknown -->
-  <text x="445" y="288" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#4F627F">AI Era (now)</text>
-  <text x="445" y="302" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">Displacement is accelerating; transition timeline unknown</text>
-  <rect x="445" y="310" width="50" height="32" fill="#DEE3EC" stroke="#4F627F" stroke-width="1.5" rx="4" stroke-dasharray="5,3"/>
-  <text x="470" y="331" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#4F627F">?</text>
-  <line x1="496" y1="326" x2="712" y2="326" stroke="#4F627F" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arh-blue)"/>
-
-  <!-- X-axis -->
-  <line x1="445" y1="388" x2="680" y2="388" stroke="#E2DFD6" stroke-width="1.5"/>
-  <line x1="445" y1="384" x2="445" y2="394" stroke="#9D9A95" stroke-width="1"/>
-  <text x="445" y="406" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">0</text>
-  <line x1="555" y1="384" x2="555" y2="394" stroke="#9D9A95" stroke-width="1"/>
-  <text x="555" y="406" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">20 yrs</text>
-  <line x1="665" y1="384" x2="665" y2="394" stroke="#9D9A95" stroke-width="1"/>
-  <text x="665" y="406" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#9D9A95">40 yrs</text>
-
-  <!-- Summary callout -->
-  <rect x="445" y="428" width="385" height="56" fill="#DEE3EC" stroke="#4F627F" stroke-width="1" rx="6"/>
-  <text x="637" y="449" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#4F627F">Aggregate recovery happens, eventually.</text>
-  <text x="637" y="465" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#4F627F">The 6.1M at-risk workers can't wait 20–40 years for it.</text>
-  <text x="637" y="479" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#6B6873">The aggregate number is the wrong unit of measurement.</text>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VI</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 6 · WHAT'S ACTUALLY AT STAKE</text>
+  <text x="480" y="100" text-anchor="middle" class="it" style="font-size:15px">The World Economic Forum projects 92 million jobs displaced</text>
+  <text x="480" y="120" text-anchor="middle" class="it" style="font-size:15px">and 170 million created by 2030: net positive, on paper.</text>
+  <!-- horizontal scale: 14 units = 1 year. near brink x = 200 (year 0), far brink x = 760 (year 40) -->
+  <!-- vertical scale of the piers: 1.5 units = 1 million jobs. near pier 92M = 138 high, far pier 170M = 255 high -->
+  <!-- the banks, in section -->
+  <path d="M 30 400 H 200 L 205 420 L 197 442 L 209 470 L 203 500 L 215 530 L 211 556 L 222 590 H 30 Z" class="hb"/>
+  <path d="M 200 400 L 205 420 L 197 442 L 209 470 L 203 500 L 215 530 L 211 556 L 222 590 H 176 L 168 556 L 172 530 L 160 500 L 166 470 L 154 442 L 162 420 L 158 400 Z" class="x"/>
+  <path d="M 930 400 H 760 L 755 420 L 764 446 L 752 474 L 758 504 L 746 532 L 750 560 L 738 590 H 930 Z" class="hb"/>
+  <g class="l" style="stroke-width:1">
+    <path d="M 30 452 q 40 -6 80 0 t 86 -4"/><path d="M 30 512 q 50 5 96 0 t 80 2"/><path d="M 30 560 q 44 -5 90 0 t 92 -2"/>
+    <path d="M 762 450 q 40 5 84 0 t 84 2"/><path d="M 756 510 q 44 -5 88 0 t 86 -2"/><path d="M 750 562 q 46 5 92 0 t 88 2"/>
+  </g>
+  <!-- the river at the bottom -->
+  <rect x="222" y="566" width="516" height="24" style="fill:url(#p6b-w)"/>
+  <line x1="30" y1="590" x2="930" y2="590" class="l"/>
+  <!-- near pier: 92 million. x 60 to 156, top y = 400 - 138 = 262 -->
+  <rect x="60" y="262" width="96" height="138" class="m"/>
+  <rect x="136" y="262" width="20" height="138" class="h"/>
+  <rect x="60" y="262" width="96" height="138" class="l" style="stroke-width:1.6"/>
+  <!-- far pier: 170 million. x 804 to 900, top y = 400 - 255 = 145 -->
+  <rect x="804" y="145" width="96" height="255" class="m"/>
+  <rect x="880" y="145" width="20" height="255" class="h"/>
+  <rect x="804" y="145" width="96" height="255" class="l" style="stroke-width:1.6"/>
+  <!-- footings: the lowest 9 units of each pier, 7 units proud each side. they add no height -->
+  <rect x="53" y="391" width="110" height="9" class="b"/><rect x="141" y="391" width="22" height="9" class="h"/><rect x="53" y="391" width="110" height="9" class="l"/>
+  <rect x="797" y="391" width="110" height="9" class="b"/><rect x="885" y="391" width="22" height="9" class="h"/><rect x="797" y="391" width="110" height="9" class="l"/>
+  <line x1="30" y1="400" x2="200" y2="400" class="l" style="stroke-width:1.8"/>
+  <line x1="760" y1="400" x2="930" y2="400" class="l" style="stroke-width:1.8"/>
+  <!-- turf on the bank tops -->
+  <path d="M 36 400 l -2 -6 M 42 400 l 1 -5 M 172 400 l -2 -6 M 178 400 l 1 -7 M 185 400 l 2 -5 M 193 400 l 1 -6 M 198 400 l 3 -5 M 762 400 l -3 -5 M 768 400 l -1 -6 M 775 400 l 2 -6 M 783 400 l -1 -5 M 790 400 l 2 -6 M 914 400 l -1 -6 M 921 400 l 2 -5 M 927 400 l 1 -6" class="thin"/>
+  <text x="108" y="230" class="big">92 million</text>
+  <text x="108" y="248" class="lab">displaced</text>
+  <text x="852" y="113" class="big">170 million</text>
+  <text x="852" y="131" class="lab">created</text>
+  <!-- where a span would run. none is drawn in ink -->
+  <path d="M 214 400 H 750 M 214 409 H 750" class="sight"/>
+  <text x="480" y="390" text-anchor="middle" class="it" style="fill:var(--soft);font-size:12.5px">no span</text>
+  <!-- extension lines up from the two brinks -->
+  <path d="M 200 392 V 206 M 760 392 V 296" class="sight"/>
+  <!-- measure one: the internet transition, 20 to 30 years. 200 to 480 solid, 480 to 620 dashed -->
+  <line x1="200" y1="222" x2="480" y2="222" class="dim"/>
+  <line x1="480" y1="222" x2="620" y2="222" class="dimd"/>
+  <path d="M 200 213 V 231 M 480 213 V 231 M 620 213 V 231" class="dimt"/>
+  <text x="212" y="204"><tspan class="yr">20 to 30 years</tspan><tspan class="yn" dx="10">the internet transition, before replacement work arrived</tspan></text>
+  <!-- measure two: the first industrial revolution, 40 years. 200 to 760 -->
+  <line x1="200" y1="312" x2="760" y2="312" class="dim"/>
+  <path d="M 200 303 V 321 M 760 303 V 321 M 340 312 V 319 M 480 312 V 319 M 620 312 V 319" class="dimt"/>
+  <text x="212" y="294"><tspan class="yr">40 years</tspan><tspan class="yn" dx="10">the first industrial revolution: UK productivity grew, wages stagnated</tspan></text>
+  <text x="212" y="337" class="tick" style="text-anchor:start">0</text><text x="340" y="337" class="tick">10</text><text x="480" y="337" class="tick">20</text><text x="620" y="337" class="tick">30</text><text x="748" y="337" class="tick" style="text-anchor:end">40 years</text>
+  <!-- notes in the gap -->
+  <path d="M 252 446 Q 224 436 207 408" class="thin"/>
+  <text x="258" y="450" class="it">Nearest the edge: 6.1 million US workers,</text>
+  <text x="258" y="468" class="it">4.2% of the workforce. Clerical and administrative,</text>
+  <text x="258" y="486" class="it">86% women, in smaller metro areas.</text>
+  <text x="712" y="486" text-anchor="end" class="it" style="fill:var(--soft)">How wide the gap is for AI</text>
+  <text x="712" y="504" text-anchor="end" class="it" style="fill:var(--soft)">is contested.</text>
+  <!-- title, legend, caption -->
+  <text x="480" y="634" text-anchor="middle" class="title">The Far Bank</text>
+  <text x="480" y="660" text-anchor="middle" class="leg">Each course of stone is 10 million jobs. The gap is drawn to the scale of years marked across it.</text>
+  <line x1="300" y1="674" x2="660" y2="674" class="thin"/>
+  <text x="480" y="692" text-anchor="middle" class="cap">DIA-006B · More is built on the far side. The last two crossings took 20 to 30 years, and 40.</text>
 </svg>

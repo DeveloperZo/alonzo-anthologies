@@ -4,9 +4,11 @@ Create or update a diagram for the Alonzo's Anthologies Quartz site.
 
 A diagram here is a **plate**: one engraved drawing of one real object, whose
 mechanics make the argument. It is not a layout of boxes. The working plates
-live in `_KNOWLEDGE/Diagrams/proposals/` (still, runout, loupes, governor,
-lever, load line). Open one and copy its `<style>` block before drawing
-anything.
+live in `_KNOWLEDGE/Diagrams/proposals/`, one per published diagram. Good
+ones to study: the dials (DIA-001), the stave tub (004B), the governor (005)
+and the lever (008B). Open one and copy its `<style>` block before drawing
+anything. A plate with a `.gen.mjs` file beside it is generated: change the
+generator and rerun it.
 
 ## 1. Find the object first
 
@@ -22,6 +24,10 @@ Examples that passed:
 
 Rules for choosing:
 
+- **Clarity beats cleverness.** The plate has to make the point faster than the old diagram did. If the reader must decode the object before they can read the claim, it has failed. This was the verdict on a distilling apparatus drawn for section 1: a complicated analogy that added no clarity.
+- **Recognized in two seconds.** Use things a general reader already knows on sight: a lever, a scale, a ship, a ruler, a ledger, a wall. No specialist apparatus.
+- **Three mappings at most.** If the plate needs a six-letter legend to explain what stands for what, it is an allegory, not a diagram. Simplify the object or pick another.
+- **Literal first.** When the thing itself can be drawn (a file of numbers, a bar at true width, a dated mark), draw that before reaching for a metaphor.
 - **The object has to do the work.** If the claim still reads the same after swapping the object for another, the object is decoration. Pick again.
 - **Take words literally.** Governance has a governor. Leverage has a lever. Distillation has a still. The series is full of dead metaphors that can be drawn.
 - **Borrow from a real drawing tradition.** Patent drawings, apparatus plates, Playfair's charts, Minard, survey sections, field-guide plates, ledgers. Name the tradition in the companion file.
@@ -65,7 +71,10 @@ Define them as CSS variables on `:root` inside the SVG `<style>`, with a
 - **The accent marks the argument and nothing else.** The missing rod, the bare end of the lever, the fines. If more than three things are rust, the plate has no point.
 - **Shade with hatching.** A 45 degree line pattern (4.5 unit pitch, 0.6 stroke) replaces every tint fill.
 - **Line weights.** 1.4 for outlines, 0.7 for leaders, belts and detail, heavier (2.2 to 3) for rods and levers.
-- **Keys, not labels.** Italic letters *a, b, c* with thin leader lines, explained in a legend line under the title. Short hand-written notes in italic are fine where they sit beside the thing they describe.
+- **Notes beside the thing, keys only if forced.** Write a short italic note next to the part it describes, with a thin leader. Fall back to lettered keys *a, b, c* and a legend line only when notes would collide, and never more than three.
+- **The argument is the biggest thing on the plate.** Crop to the detail that matters and let the rest run off the frame. A whole machine drawn small, with the point in a 40 unit corner, reads as a thin schematic.
+- **Draw with weight.** Outlines, hatched shadow sides, flanges, rivets, joints. A plate made only of thin single lines looks like a wireframe, not an engraving.
+- **No stick figures.** Avoid people where the object works without them. Where a person is needed, draw a filled silhouette with real proportions (about seven heads tall, tapered limbs, hands and feet), at least 60 units high, and check it in a zoomed render. If it still looks amateur after three tries, change the composition so no figure is needed.
 - **Type.** Spectral (Georgia fallback) for everything. Fredericka the Great for the plate title only, about 32 units, weight 400, never bold.
 
 **Frame, top to bottom:**
@@ -125,15 +134,18 @@ page do not collide.
 
 ## 7. Check before calling it done
 
-Render it and look at it, in light and in dark. Headless Edge works:
+Render it and look at it, in light and in dark, whole and zoomed:
 
 ```
-msedge --headless=new --window-size=1440,1150 --screenshot=out.png file:///path/to/plate.svg
+powershell -NoProfile -ExecutionPolicy Bypass -File _KNOWLEDGE/Diagrams/proposals/render-plate.ps1 -Svg <plate.svg> -Out <out.png> [-Scheme dark] [-ViewBox "x y w h"]
 ```
 
-Then go through this list:
+Expect at least three rounds of render, look, fix. Then go through this list:
 
+- Would a reader who has not seen the legend get the point in a few seconds?
+- Is it clearer than the diagram it replaces, or only prettier?
 - Cover the caption and legend. Does the drawing alone still make the claim?
+- Zoom into every figure, joint and label. Does anything look amateur?
 - Is the accent on the argument, and on at most three things?
 - Any text touching a line, a number or other text?
 - Anything from the banned list?

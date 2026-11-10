@@ -1,0 +1,115 @@
+<svg viewBox="0 0 960 950" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p6a-t p6a-d">
+  <title id="p6a-t">DIA-006A · A proof, marked for omissions</title>
+  <desc id="p6a-d">An engraved plate of a printer's proof sheet with a red pencil lying on it. Five industry claims are printed down the left as quotations, from Marc Andreessen, Marc Benioff, the Anthropic mission, Yann LeCun and Dario Amodei. Nothing is struck out. Each quotation ends in a red caret, the proof-reader's mark for something left out, and the omission is written beside it in the margin in red pencil.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --sheet: #F8F5EC; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --sheet: #262A33; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .sheet { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .b { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+      .h { fill: url(#p6a-h); stroke: none; }
+      .hb { fill: url(#p6a-h); stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .lead { fill: var(--accent); stroke: var(--ink); stroke-width: 1; stroke-linejoin: round; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .colh { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .hd { font-size: 11.5px; letter-spacing: 0.14em; font-weight: 600; }
+      .q { font-size: 17px; }
+      .by { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .car { font-size: 26px; font-weight: 600; fill: var(--accent); }
+      .mk { font-size: 15.5px; font-style: italic; fill: var(--accent); }
+      .ms { font-size: 13px; font-style: italic; }
+      .leg { font-size: 12.5px; font-style: italic; }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p6a-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="950" class="paper"/>
+  <rect x="14" y="14" width="932" height="922" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="910" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VI</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 6 · WHAT'S ACTUALLY AT STAKE</text>
+  <!-- the proof sheet: x 64 to 896, y 76 to 812, with its shadow and a turned corner -->
+  <path d="M 896 112 h 8 V 820 H 74 v -8 H 896 Z" class="h"/>
+  <path d="M 64 76 H 868 L 896 104 V 812 H 64 Z" class="sheet"/>
+  <path d="M 868 76 V 104 H 896 Z" class="hb"/>
+  <text x="104" y="108" class="colh">as printed</text>
+  <text x="560" y="108" class="colh">in the reader's pencil</text>
+  <line x1="104" y1="116" x2="500" y2="116" class="thin"/>
+  <line x1="560" y1="116" x2="856" y2="116" class="thin"/>
+  <!-- five entries. heading baseline y = 146 + 124 i. quotation lines at +26, +49, +72. byline two lines below the last quotation line. margin note starts level with the first quotation line -->
+  <!-- 1 -->
+  <text x="104" y="146" class="hd">I.  PESSIMISTS HAVE ALWAYS BEEN WRONG</text>
+  <text x="104" y="172" class="q">“AI is math, code, computers, built and</text>
+  <text x="104" y="195" class="q">controlled by people. A mind of its own that</text>
+  <text x="104" y="218" class="q">decides to kill us is a superstitious handwave.”<tspan class="car" dx="4" dy="12">^</tspan></text>
+  <text x="104" y="240" class="by">Marc Andreessen, a16z, June 2023</text>
+  <text x="560" y="172" class="mk">The structural issue isn't the prediction.</text>
+  <text x="560" y="192" class="mk">It's whether the system can catch</text>
+  <text x="560" y="212" class="mk">its own failures.</text>
+  <text x="560" y="233" class="ms">Past panics met oversight that grew with them:</text>
+  <text x="560" y="250" class="ms">SEC, OSHA, FDA. CAISI has $10M for FY2026.</text>
+  <!-- 2 -->
+  <text x="104" y="270" class="hd">II.  AI CREATES MORE JOBS THAN IT DESTROYS</text>
+  <text x="104" y="296" class="q">“AI will create more jobs than it eliminates,</text>
+  <text x="104" y="319" class="q">just as every previous technology has.”<tspan class="car" dx="4" dy="12">^</tspan></text>
+  <text x="104" y="341" class="by">Marc Benioff, Salesforce, 2025</text>
+  <text x="560" y="296" class="mk">The aggregate figure is probably correct,</text>
+  <text x="560" y="316" class="mk">and almost beside the point.</text>
+  <text x="560" y="337" class="ms">The structural problem is timing and distribution.</text>
+  <text x="560" y="354" class="ms">See DIA-006B.</text>
+  <!-- 3 -->
+  <text x="104" y="394" class="hd">III.  LABS GENUINELY CARE ABOUT SAFETY</text>
+  <text x="104" y="420" class="q">“The responsible development and maintenance</text>
+  <text x="104" y="443" class="q">of advanced AI for the long-term benefit</text>
+  <text x="104" y="466" class="q">of humanity.”<tspan class="car" dx="4" dy="12">^</tspan></text>
+  <text x="104" y="488" class="by">Anthropic mission</text>
+  <text x="560" y="420" class="mk">The safety teams are real. The loop</text>
+  <text x="560" y="440" class="mk">is the problem, not the people.</text>
+  <text x="560" y="461" class="ms">Even safety-focused labs can't hold the line</text>
+  <text x="560" y="478" class="ms">unilaterally if competitors won't.</text>
+  <!-- 4 -->
+  <text x="104" y="518" class="hd">IV.  OPEN-SOURCE DEMOCRATIZES AI</text>
+  <text x="104" y="544" class="q">“Concentration of power through proprietary</text>
+  <text x="104" y="567" class="q">AI systems is a much bigger danger</text>
+  <text x="104" y="590" class="q">than everything else.”<tspan class="car" dx="4" dy="12">^</tspan></text>
+  <text x="104" y="612" class="by">Yann LeCun, Lex Fridman #416, March 2024</text>
+  <text x="560" y="544" class="mk">The access argument is real. The power</text>
+  <text x="560" y="564" class="mk">argument is more complicated.</text>
+  <text x="560" y="585" class="ms">Who extracts value tracks who has the compute.</text>
+  <text x="560" y="602" class="ms">Organizations and states outpace individuals.</text>
+  <!-- 5 -->
+  <text x="104" y="642" class="hd">V.  SLOWING DOWN HANDS THE LEAD TO RIVALS</text>
+  <text x="104" y="668" class="q">“If a country like the PRC ends up with the</text>
+  <text x="104" y="691" class="q">most powerful AI systems, this could be more</text>
+  <text x="104" y="714" class="q">dangerous than any other risk we face.”<tspan class="car" dx="4" dy="12">^</tspan></text>
+  <text x="104" y="736" class="by">Dario Amodei, “Machines of Loving Grace,” October 2024</text>
+  <text x="560" y="668" class="mk">The race is treated as exogenous.</text>
+  <text x="560" y="688" class="mk">It is being constructed.</text>
+  <text x="560" y="709" class="ms">Race-as-given forecloses cooperative</text>
+  <text x="560" y="726" class="ms">arrangements not yet seriously tried.</text>
+  <!-- the pencil, tip at the origin, lying 4 degrees off the line -->
+  <g transform="translate(536 764) rotate(3) scale(1.35)">
+    <path d="M 34 9 H 252 v 5 H 40 Z" class="h"/>
+    <path d="M 30 -7 H 250 V 7 H 30 Z" class="b"/>
+    <path d="M 30 2.5 H 250 V 7 H 30 Z" class="h"/>
+    <path d="M 30 -2.5 H 250 M 30 2.5 H 250" class="thin"/>
+    <path d="M 30 -7 L 8 -2 V 2 L 30 7 q -4 -2.3 0 -4.6 q -4 -2.4 0 -4.8 q -4 -2.3 0 -4.6 Z" class="b"/>
+    <path d="M 8 -2 L 0 0 L 8 2 Z" class="lead"/>
+    <path d="M 238 -7 V 7" class="l" style="stroke-width:1.1"/>
+    <path d="M 30 -7 H 250 V 7 H 30" class="l" style="stroke-width:1.2"/>
+  </g>
+  <!-- title, legend, caption -->
+  <text x="480" y="864" text-anchor="middle" class="title">A Proof, Marked for Omissions</text>
+  <text x="480" y="890" text-anchor="middle" class="leg">The caret is a proof-reader's mark for something left out. Nothing on the sheet is struck through.</text>
+  <line x1="300" y1="904" x2="660" y2="904" class="thin"/>
+  <text x="480" y="922" text-anchor="middle" class="cap">DIA-006A · Five industry claims in their own words, and what each leaves out.</text>
+</svg>

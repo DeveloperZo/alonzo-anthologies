@@ -1,0 +1,112 @@
+<svg viewBox="0 0 960 770" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p8a-t p8a-d">
+  <title id="p8a-t">DIA-008A · From parameters to paradigm</title>
+  <desc id="p8a-d">An engraved plate set as a printed table. A graduated rule runs down the left edge, marked twelve at the top to one at the bottom, for Meadows' twelve leverage points. Brackets group the marks in threes into four tiers: low, medium, high and transformative. The tier names are set larger as leverage grows. Beside each tier the table gives what a push there does and one precedent: a diagnostic tell for the low tier, aviation's ASRS for medium, the Twin Rivers electricity study for high, and Denmark's flexicurity and the Montreal Protocol for transformative.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p8a-h); stroke: none; }
+      .hb { fill: url(#p8a-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .dot { fill: var(--paper); stroke: var(--ink); stroke-width: 1; }
+      .acc { stroke: var(--accent); }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .num { font-size: 16px; text-anchor: middle; }
+      .tier { letter-spacing: 0.01em; }
+      .in { font-size: 13.5px; font-style: italic; fill: var(--soft); }
+      .do { font-size: 14.5px; }
+      .lead { font-size: 14.5px; font-weight: 600; }
+      .it { font-size: 13.5px; font-style: italic; }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p8a-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="770" class="paper"/>
+  <rect x="14" y="14" width="932" height="742" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="730" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VIII</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 8 · WHERE YOU HAVE LEVERAGE</text>
+  <!-- column heads and the table's top and bottom rules -->
+  <text x="152" y="94" class="sc">TIER</text>
+  <text x="414" y="94" class="sc">A PUSH HERE</text>
+  <text x="686" y="94" class="sc">PRECEDENT</text>
+  <line x1="136" y1="106" x2="912" y2="106" class="l"/>
+  <line x1="136" y1="109.5" x2="912" y2="109.5" class="thin"/>
+  <line x1="136" y1="650" x2="912" y2="650" class="l"/>
+  <!-- the rule: twelve marks and no subdivisions (the ranking is ordinal), y = 136 + 44 i for point 12 - i. tiers take three marks each, centred on y = 180 + 132 k -->
+  <rect x="44" y="106" width="64" height="544" class="b"/>
+  <rect x="44" y="106" width="10" height="544" class="h"/>
+  <line x1="54" y1="120" x2="54" y2="636" class="thin"/>
+  <rect x="44" y="106" width="64" height="14" class="hb"/>
+  <rect x="44" y="636" width="64" height="14" class="hb"/>
+  <g class="dot"><circle cx="58" cy="113" r="2.2"/><circle cx="94" cy="113" r="2.2"/><circle cx="58" cy="643" r="2.2"/><circle cx="94" cy="643" r="2.2"/></g>
+  <g class="l"><line x1="86" y1="136" x2="108" y2="136"/><line x1="86" y1="180" x2="108" y2="180"/><line x1="86" y1="224" x2="108" y2="224"/><line x1="86" y1="268" x2="108" y2="268"/><line x1="86" y1="312" x2="108" y2="312"/><line x1="86" y1="356" x2="108" y2="356"/><line x1="86" y1="400" x2="108" y2="400"/><line x1="86" y1="444" x2="108" y2="444"/><line x1="86" y1="488" x2="108" y2="488"/><line x1="86" y1="532" x2="108" y2="532"/><line x1="86" y1="576" x2="108" y2="576"/><line x1="86" y1="620" x2="108" y2="620"/></g>
+  <text x="68" y="141.5" class="num">12</text><text x="68" y="185.5" class="num">11</text><text x="68" y="229.5" class="num">10</text><text x="68" y="273.5" class="num">9</text><text x="68" y="317.5" class="num">8</text><text x="68" y="361.5" class="num">7</text><text x="68" y="405.5" class="num">6</text><text x="68" y="449.5" class="num">5</text><text x="68" y="493.5" class="num">4</text><text x="68" y="537.5" class="num">3</text><text x="68" y="581.5" class="num">2</text><text x="68" y="625.5" class="num">1</text>
+  <rect x="44" y="106" width="64" height="544" class="l" style="stroke-width:1.8"/>
+  <!-- brackets: one per tier, from its first mark to its third -->
+  <g class="thin" style="stroke-width:1">
+    <path d="M 114 130 h 8 v 100 h -8"/><path d="M 114 262 h 8 v 100 h -8"/><path d="M 114 394 h 8 v 100 h -8"/>
+  </g>
+  <path d="M 114 526 h 8 v 100 h -8" class="l acc"/>
+  <!-- rules between tiers, y = 246 + 132 k -->
+  <g class="thin">
+    <line x1="136" y1="246" x2="912" y2="246"/><line x1="136" y1="378" x2="912" y2="378"/><line x1="136" y1="510" x2="912" y2="510"/>
+  </g>
+  <!-- low: centre 180 -->
+  <text x="152" y="174" class="tier" style="font-size:19px">Low</text>
+  <text x="152" y="198" class="in">parameters, buffers,</text>
+  <text x="152" y="215" class="in">physical structure</text>
+  <text x="414" y="174" class="do">Change a number and the system</text>
+  <text x="414" y="194" class="do">absorbs it. The loops keep running.</text>
+  <text x="686" y="162" class="lead">A tell, not a precedent</text>
+  <text x="686" y="182" class="it">Most lab safety announcements live</text>
+  <text x="686" y="199" class="it">here. The tell: no change in who is</text>
+  <text x="686" y="216" class="it">liable or who audits.</text>
+  <!-- medium: centre 312 -->
+  <text x="152" y="308" class="tier" style="font-size:23px">Medium</text>
+  <text x="152" y="332" class="in">delays, feedback strength,</text>
+  <text x="152" y="349" class="in">loop gain</text>
+  <text x="414" y="306" class="do">Shorten the time between harm</text>
+  <text x="414" y="326" class="do">and response.</text>
+  <text x="686" y="294" class="lead">ASRS, since 1976</text>
+  <text x="686" y="314" class="it">Aviation's voluntary near-miss</text>
+  <text x="686" y="331" class="it">reports, with limited immunity.</text>
+  <text x="686" y="348" class="it">No AI equivalent exists.</text>
+  <!-- high: centre 444 -->
+  <text x="152" y="442" class="tier" style="font-size:27px">High</text>
+  <text x="152" y="466" class="in">information flows, rules,</text>
+  <text x="152" y="483" class="in">who writes them</text>
+  <text x="414" y="428" class="do">Change the rules, with enforcement,</text>
+  <text x="414" y="448" class="do">or who sees what, and something</text>
+  <text x="414" y="468" class="do">structural shifts.</text>
+  <text x="686" y="426" class="lead">Twin Rivers</text>
+  <text x="686" y="446" class="it">Households shown their daily</text>
+  <text x="686" y="463" class="it">electricity use cut it about 10%</text>
+  <text x="686" y="480" class="it">in a month.</text>
+  <!-- transformative: centre 576 -->
+  <text x="152" y="576" class="tier" style="font-size:31px;fill:var(--accent)">Transformative</text>
+  <text x="152" y="600" class="in">goals, paradigm,</text>
+  <text x="152" y="617" class="in">coordination</text>
+  <text x="414" y="560" class="do">Change the goal and you have moved</text>
+  <text x="414" y="580" class="do">the whole machine. Also the most</text>
+  <text x="414" y="600" class="do">resisted.</text>
+  <text x="686" y="534" class="lead">Denmark's flexicurity</text>
+  <text x="686" y="552" class="it">The goal: not stable jobs, but</text>
+  <text x="686" y="569" class="it">workers viable through transitions.</text>
+  <text x="686" y="594" class="lead">The Montreal Protocol</text>
+  <text x="686" y="612" class="it">Scientists made the threat legible</text>
+  <text x="686" y="629" class="it">and gave actors a graceful way out.</text>
+  <!-- title and caption -->
+  <text x="480" y="702" text-anchor="middle" class="title">From Parameters to Paradigm</text>
+  <line x1="300" y1="718" x2="660" y2="718" class="thin"/>
+  <text x="480" y="738" text-anchor="middle" class="cap">DIA-008A · Meadows' twelve leverage points in four tiers, weakest first, and what a push at each has looked like.</text>
+</svg>

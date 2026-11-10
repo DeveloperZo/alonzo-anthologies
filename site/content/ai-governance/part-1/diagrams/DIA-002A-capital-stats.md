@@ -1,39 +1,40 @@
-# DIA-002A: AI capital structure key figures
+# DIA-002A: Eighteen Times Over
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-002A-capital-stats.svg`
-- **Theme:** Commitments versus revenue backing
-- **Primary audience takeaway:** The cards set capital commitments beside current revenue capacity, then express the spread as one structural ratio.
+- **Theme:** OpenAI's compute target against its revenue
+- **Primary audience takeaway:** The spending target is roughly eighteen years of today's revenue, stacked up.
 
 ## What The Diagram Shows
-Four cards hold the whole argument. Three cards provide the ingredients: revised compute target through 2030, annualized revenue run-rate, and combined hyperscaler capex context. The fourth card is filled and foregrounded, turning commitment divided by revenue into a single multiplier. This is not a process map. It is a scale comparison that asks whether financing commitments and operating backing move at the same order of magnitude.
+An engraved plate of two stacks of coins on one ground line, in the tradition of the true-scale comparison (Playfair's charts, with the money drawn as money). Each coin is $10 billion. On the left, four coins and a thin piece: one year of OpenAI revenue at the July 2026 rate. On the right, a column of seventy-five coins: OpenAI's compute spending target through 2030. A rule stands between them, marked off in heights of the short stack, so the column can be read in years of revenue.
+
+Claim sentence: the reader should see that OpenAI has committed to spend roughly eighteen times what it earns in a year, and two stacks of the same coin show it because a stack's height is its amount, so the short stack can be laid against the tall one like a ruler.
+
+The working plate is `_KNOWLEDGE/Diagrams/proposals/PLATE-002A-coin-stacks.svg`. The published file is generated from it and is not edited by hand.
 
 ## Elements And Flow
 - **Components:**
-  - Card 1: OpenAI revised compute target through 2030
-  - Card 2: OpenAI annualized revenue run-rate
-  - Card 3: Combined 2025 capex for major hyperscalers
-  - Card 4: Derived commitment-to-revenue ratio (highlight card)
+  - Short stack: `$42.6 billion`, annualized revenue by July 2026 (section 2 prose, source 6a). Drawn as four full coins and one thin piece for the odd $2.6 billion.
+  - Tall stack: `about $750 billion`, the compute spending target through 2030 as lifted by July 2026 (section 2 prose, sources 7a and 6a). Seventy-five coins.
+  - The rule: one division is one short stack, numbered 1 to 18. A dashed sight line carries each stack top across to it.
+  - Rust: the sight line from the tall stack, the mark where it meets the rule, and the note `17.6 on the rule: roughly eighteen times`.
 - **Relationships:**
-  - Cards 1 and 2 provide the numerator and denominator for the ratio card
-  - Card 3 adds sector-scale context, not a direct arithmetic input to the ratio
-  - Color and fill styling prioritize the ratio as the main takeaway
+  - Scale: 0.6 plate units to $1 billion throughout. One coin is 6 units thick. The short stack is 25.56 units, the tall one 450.
+  - 750 divided by 42.6 is 17.6. The prose rounds it to "roughly 18×".
 - **Notable labels or metrics:**
-  - "$600B"
-  - "~$25B"
-  - "$448B"
-  - "~24x"
-  - "COMMITMENT ÷ REVENUE"
-  - "$600B ÷ $25B"
+  - `$42.6 billion`, `about $750 billion`, `each coin, $10 billion`, `17.6`
+- **What the plate leaves out:**
+  - The January 2025 pairing in the prose: Stargate's roughly $500 billion against about $6 billion of revenue exiting 2024, which is 80 times.
+  - The earlier targets: $1.4 trillion in late 2025 and $600 billion in February 2026.
+  - Everything on the old stat tiles that the prose no longer carries: the `$448B` combined hyperscaler capex, the `~$25B` revenue figure and the `~24×` ratio. The old ratio was $600 billion over $25 billion. The prose has since been updated, and the plate follows the prose.
 
 ## How To Read It
-1. Read left to right and gather the three base figures before interpreting.
-2. Pair cards one and two as the explicit numerator and denominator.
-3. Use hyperscaler capex as market-scale context, not as ratio input.
-4. Treat the rightmost filled card as the chart's focal inference.
-5. Check the footer language to confirm why the ratio is framed as a structural bet.
+1. Find the short stack and its figure.
+2. Follow its sight line to `1` on the rule.
+3. Run your eye up the rule to the rust mark.
+4. Read the tall stack's figure.
 
 ## Governance Relevance
-For governance, the value is timing and pressure, not just arithmetic. When commitments sit far above present revenue, incentives can tilt toward speed, commercialization, and risk shifting before oversight catches up. The card layout gives policy teams a practical frame for disclosure rules, stress tests, and intervention timing around infrastructure expansion.
+Section 2 argues that the pace is set by a financial structure, not by technology alone. This plate gives the size of the bet in one look: a company does not commit eighteen years of revenue to infrastructure unless it is counting on explosive growth, and everyone who sold it the infrastructure is counting on the same thing.
 
 ## Suggested Caption
-DIA-002A condenses commitments, revenue backing, and sector capex into a ratio view that makes the scale imbalance legible at a glance.
+DIA-002A · One year of OpenAI's revenue beside its compute target, in the same coin and on the same ground.
