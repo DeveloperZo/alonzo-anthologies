@@ -95,7 +95,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
   <desc id="p1-d">An engraved plate. A strip of paper across the top carries the sentence "A modern AI model is a very large file of", with the next word hidden under a hatched slip. Below it a panel of identical dials runs back to the horizon and off both sides of the plate. Each dial in the front rows has its setting written under it as a number. One dial at the front is drawn in rust, with a dashed line showing where its pointer stood a moment ago: it has been turned a hair, from 0.4172 to 0.4173.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -123,7 +123,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
       .it { font-size: 13.5px; font-style: italic; }
       .ac { fill: var(--accent); }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p1-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

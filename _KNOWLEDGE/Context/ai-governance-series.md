@@ -42,6 +42,26 @@ Six figure labels: Fig 1-1 through Fig 5-1, plus Fig 2-2.
 Section 7 uses a two-column critique-grid layout. Part 2 is standalone
 with its own CSS.
 
+## Typography: a graded script (2026-11-10)
+
+Zo asked for the overall type to take a nod from the Self Deception
+script font (fontspace.com, Misti's Fonts), with the degree of
+influence set by readability. Great Vibes, an open Google font, stands
+in for it. Self Deception itself is "freeware, commercial use requires
+donation" and is not in the repo.
+
+- Full script (Great Vibes): the site name in the sidebar, and every
+  plate title (38 units).
+- Calligraphic italic (Cormorant Garamond italic, 600): all page
+  headings h1 to h6 and the hero question.
+- Unchanged: body text and plate notes stay in Spectral.
+
+Great Vibes was tried on h1 and h2 and taken off the same day: its
+capitals turn "AI" into "AJ" and the section numerals "I:", "II:" into
+"J:", "JJ:". Do not put it on any text with acronyms, all-caps or roman
+numerals. Fredericka the Great is no longer used on the site or the
+plates. The resume app has its own styles and was not changed.
+
 ## Diagrams are moving to engraved plates (2026-11-10)
 
 The existing DIA set read as machine-made: cards, pills, stat tiles and
@@ -85,7 +105,7 @@ those.
 
 The working copy of each plate is in `_KNOWLEDGE/Diagrams/proposals/`.
 The published file is generated from it by `embed-title-font.mjs` in
-that folder, which embeds the Fredericka title glyphs, because an SVG
+that folder, which embeds the Great Vibes title glyphs, because an SVG
 embedded as an image cannot load web fonts. Edit the working copy and
 run the script. Do not hand-edit the published file.
 

@@ -3,7 +3,7 @@
   <desc id="p5b-d">An engraved plate of a heavy pipe running across a room. At a flanged joint it leaks, and drops fall into a bucket standing on a dry floor. The bucket stands for published safety research and announced safety policies. On the floor to the right lie a repair clamp and a spanner, unused, standing for liability law, mandatory audits and hard deployment gates.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -23,7 +23,7 @@
       .ita { font-size: 14.5px; font-style: italic; fill: var(--accent); }
       .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p5b-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

@@ -65,7 +65,7 @@ p(`  <title id="p7a-t">DIA-007A · A wall in six lengths</title>`);
 p(`  <desc id="p7a-d">An engraved plate of one stone wall seen from the front, divided into six lengths, one for each constraint. The first two lengths, the electricity grid and chip supply, are old masonry at full height: the first has a breach with a road running through it, the second is cracked with stones fallen from the top. The next two, product liability and the EU AI Act, are new work: liability is two courses of footing, and the EU AI Act is raised to full height for eight twenty-sevenths of its length and footing for the rest. The fifth length, interpretability, is only pegs and string with a dashed outline where the wall would stand. The sixth, open weights, is bare ground.</desc>`);
 p(`  <defs>`);
 p(`    <style>`);
-p(`      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');`);
+p(`      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');`);
 p(`      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }`);
 p(`      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }`);
 p(`      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }`);
@@ -89,7 +89,7 @@ p(`      .name { font-size: 11px; letter-spacing: 0.1em; text-anchor: middle; }`
 p(`      .stat { font-size: 14px; font-style: italic; text-anchor: middle; }`);
 p(`      .it { font-size: 13px; font-style: italic; }`);
 p(`      .cap { font-size: 12.5px; fill: var(--soft); }`);
-p(`      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }`);
+p(`      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }`);
 p(`    </style>`);
 p(`    <pattern id="p7a-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">`);
 p(`      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>`);

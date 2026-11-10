@@ -3,7 +3,7 @@
   <desc id="p5-d">An engraved plate of a large flyball governor standing over a steam pipe. A belt from the flywheel spins it, and its two heavy balls are flung wide. A long lever runs from its raised sleeve toward the throttle valve on the pipe, but the lever ends in an empty eye: the rod that should join it to the throttle is drawn only as a rust dashed line, and the real rod lies on the floor. The other end of the lever pushes a hammer against a bell. By the firebox there is a heap of coal and a shovel.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -22,7 +22,7 @@
       .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
       .note { font-size: 15px; font-style: italic; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p5-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

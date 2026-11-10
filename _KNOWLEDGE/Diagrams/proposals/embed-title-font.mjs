@@ -2,8 +2,8 @@
 //
 //   node embed-title-font.mjs <plate.svg> <published DIA path.svg>
 //
-// An SVG loaded through ![](...) cannot fetch web fonts, so the Fredericka
-// the Great title would fall back to Georgia. This swaps the plate's
+// An SVG loaded through ![](...) cannot fetch web fonts, so the Great Vibes
+// title would fall back to Georgia. This swaps the plate's
 // @import line for an @font-face holding only the glyphs the title uses
 // (about 13 to 30 KB). Needs network access to Google Fonts.
 import fs from 'node:fs';
@@ -24,7 +24,7 @@ const glyphs = [...new Set(title)].sort().join('');
 // Google only serves woff2 to a browser user agent.
 const ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 const css = await (await fetch(
-  'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=' + encodeURIComponent(glyphs),
+  'https://fonts.googleapis.com/css2?family=Great+Vibes&text=' + encodeURIComponent(glyphs),
   { headers: { 'User-Agent': ua } },
 )).text();
 const url = css.match(/url\((https:[^)]+)\)/)?.[1];
@@ -34,7 +34,7 @@ if (font.subarray(0, 4).toString() !== 'wOF2') throw new Error('font is not woff
 
 svg = svg.replace(
   importLine,
-  `@font-face { font-family: "Fredericka the Great"; font-weight: 400; src: url(data:font/woff2;base64,${font.toString('base64')}) format("woff2"); }`,
+  `@font-face { font-family: "Great Vibes"; font-weight: 400; src: url(data:font/woff2;base64,${font.toString('base64')}) format("woff2"); }`,
 );
 // Quartz ends an inline HTML block at the first blank line.
 if (/\n\s*\n/.test(svg)) throw new Error('blank line inside ' + from);

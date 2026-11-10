@@ -3,7 +3,7 @@
   <desc id="p2-d">An engraved plate of a riveted ship's hull seen from the side, with cargo stacked on deck and one more crate being lowered. Four load-line marks are painted on the hull in a rising column. The lowest, dated autumn 2023, is far under water and struck through. Two more above it are also submerged and struck through. The newest, in rust, sits just above the waterline.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -22,7 +22,7 @@
       .note { font-size: 13.5px; font-style: italic; paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
       .leg { font-size: 12.5px; font-style: italic; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p2-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

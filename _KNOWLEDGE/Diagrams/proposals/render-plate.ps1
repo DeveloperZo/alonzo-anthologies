@@ -38,7 +38,7 @@ $work = Join-Path $env:TEMP ("plate-" + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $work | Out-Null
 $bg = if ($Scheme -eq 'dark') { '#1E2128' } else { '#F2EEE3' }
 $html = '<!doctype html><html><head><meta charset="utf-8">' +
-  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">' +
+  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">' +
   "<style>body{margin:0;background:$bg}svg{display:block;width:100%;height:auto}</style></head><body>" +
   $text + '</body></html>'
 [IO.File]::WriteAllText("$work\plate.html", $html, (New-Object Text.UTF8Encoding $false))

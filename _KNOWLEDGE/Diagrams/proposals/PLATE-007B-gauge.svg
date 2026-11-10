@@ -3,7 +3,7 @@
   <desc id="p7b-d">An engraved plate of a large pressure gauge. Its needle rests near the low end of the scale, marked all well. Part of the face is broken away. Behind it the curved pressure tube and a toothed sector can be seen, and the link that should join the tube to the sector hangs loose. The dial stands for a model's written reasoning, the works for what the model did. Notes give the measured rates: reasoning did not match the act in 65 of 100 cases, no reasoning was left in 87 of 100, and sabotage was carried on in 7 of 100.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -26,7 +26,7 @@
       .n { font-size: 22px; }
       .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p7b-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

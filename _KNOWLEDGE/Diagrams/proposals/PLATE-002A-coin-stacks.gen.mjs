@@ -92,7 +92,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
   <desc id="p2a-d">An engraved plate of two stacks of coins standing on one ground line, each coin worth ten billion dollars. On the left, a short stack: OpenAI's annualized revenue of about ${REV} billion dollars at the end of September 2026. On the right, a tall column: its compute spending through 2030 in an internal projection reported in September 2026, near ${TOTAL} billion dollars. A wooden rule between them is marked off in heights of the short stack. The tall column reaches ${RATIO.toFixed(1)} on the rule, ${WORDS.times} the short one.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -112,7 +112,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
       .big { font-size: 24px; }
       .rn { font-size: 9.5px; text-anchor: middle; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p2a-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

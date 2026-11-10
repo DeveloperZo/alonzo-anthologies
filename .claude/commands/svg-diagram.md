@@ -75,14 +75,14 @@ Define them as CSS variables on `:root` inside the SVG `<style>`, with a
 - **The argument is the biggest thing on the plate.** Crop to the detail that matters and let the rest run off the frame. A whole machine drawn small, with the point in a 40 unit corner, reads as a thin schematic.
 - **Draw with weight.** Outlines, hatched shadow sides, flanges, rivets, joints. A plate made only of thin single lines looks like a wireframe, not an engraving.
 - **No stick figures.** Avoid people where the object works without them. Where a person is needed, draw a filled silhouette with real proportions (about seven heads tall, tapered limbs, hands and feet), at least 60 units high, and check it in a zoomed render. If it still looks amateur after three tries, change the composition so no figure is needed.
-- **Type.** Spectral (Georgia fallback) for everything. Fredericka the Great for the plate title only, about 32 units, weight 400, never bold.
+- **Type.** Spectral (Georgia fallback) for everything. Great Vibes for the plate title only, 38 units with `word-spacing: 0.14em`, weight 400, never bold. It is a connected script, so a title must be ordinary mixed-case words: no acronyms, no all-caps, no roman numerals ("AI" reads as "AJ").
 
 **Frame, top to bottom:**
 
 1. Double-rule border.
 2. Top left: `PLATE V` (roman numeral of the section). Top right: `PART I · SECTION 5 · SECTION NAME`. Small, tracked, soft. Write "SECTION", never the section symbol.
 3. The drawing, standing on a hatched ground line where it has one.
-4. Title in Fredericka, centered.
+4. Title in Great Vibes, centered.
 5. Legend line or lines, if the plate has keys.
 6. Hairline, then the caption: `DIA-NNN · one plain sentence.`
 
@@ -120,7 +120,7 @@ then run:
 node _KNOWLEDGE/Diagrams/proposals/embed-title-font.mjs <plate.svg> <published DIA path.svg>
 ```
 
-It writes the published file with the title's Fredericka glyphs embedded.
+It writes the published file with the title's Great Vibes glyphs embedded.
 Never hand-edit a published plate: change the proposal and run the script
 again. Body text is not embedded and renders in Georgia on the site.
 

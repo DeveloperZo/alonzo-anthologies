@@ -3,7 +3,7 @@
   <desc id="p8a-d">An engraved plate set as a printed table. A graduated rule runs down the left edge, marked twelve at the top to one at the bottom, for Meadows' twelve leverage points. Brackets group the marks in threes into four tiers: low, medium, high and transformative. The tier names are set larger as leverage grows. Beside each tier the table gives what a push there does and one precedent: a diagnostic tell for the low tier, aviation's ASRS for medium, the Twin Rivers electricity study for high, and Denmark's flexicurity and the Montreal Protocol for transformative.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -24,7 +24,7 @@
       .lead { font-size: 14.5px; font-weight: 600; }
       .it { font-size: 13.5px; font-style: italic; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p8a-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

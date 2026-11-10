@@ -45,17 +45,38 @@
 }
 
 // ── Heading typography ────────────────────────────────────────────────────────
-h1, h2 {
-  font-family: "Fredericka the Great", var(--headerFont), serif;
+// The script feel is graded by how much text the eye has to get through.
+// Full script (Great Vibes) only where the words are known to read well in it:
+// the site name here, and the plate titles inside the SVGs. It is not used for
+// page headings, because its capitals turn "AI" into "AJ" and the section
+// numerals "I:", "II:" into "J:", "JJ:".
+// Headings and lead-in lines take a calligraphic italic (Cormorant Garamond).
+// Running text stays in Spectral.
+.page-title {
+  font-family: "Great Vibes", var(--headerFont), serif;
   font-weight: 400;
-  color: var(--secondary);
-  letter-spacing: 0.01em;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  word-spacing: 0.12em;
 }
 
-h3, h4, h5, h6 {
-  color: var(--secondary);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont), serif;
+  font-style: italic;
   font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums;
 }
+
+h1 { font-size: 2.6rem; line-height: 1.15; }
+h2 { font-size: 2.1rem; line-height: 1.2; }
+h3 { font-size: 1.55rem; }
+h4 { font-size: 1.25rem; }
+
+// Sidebar and footer labels are headings in the markup. Keep them small and plain.
+.sidebar h2, .sidebar h3, footer h2, footer h3 { font-size: 1rem; font-style: normal; }
+.sidebar .page-title { font-size: 2.1rem; }
 
 // Heading anchor link icon — keep it small and unobtrusive
 h1 a svg, h2 a svg, h3 a svg, h4 a svg, h5 a svg, h6 a svg {
@@ -85,11 +106,12 @@ article > p:nth-child(2) > em:only-child,
 h2 + p > em:only-child {
   display: block;
   color: var(--z-muted);
-  font-size: 0.97rem;
+  font-family: var(--headerFont), serif;
+  font-size: 1.2rem;
   border-left: 3px solid var(--z-border);
   padding-left: 14px;
   margin-bottom: 1.2rem;
-  line-height: 1.7;
+  line-height: 1.55;
   font-style: italic;
 }
 
@@ -101,9 +123,12 @@ h2 + p > em:only-child {
   border: 1px solid color-mix(in srgb, var(--z-red) 25%, transparent);
   background: color-mix(in srgb, var(--z-red) 6%, var(--light));
   color: var(--secondary);
-  font-weight: 700;
+  font-family: var(--headerFont), serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  font-weight: 600;
   text-align: center;
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 .series-top-links {

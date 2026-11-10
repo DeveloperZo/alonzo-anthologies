@@ -23,7 +23,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: { name: "Cormorant Garamond", weights: [400, 600] },
+        header: { name: "Cormorant Garamond", weights: [400, 600], includeItalic: true },
         body: { name: "Spectral", weights: [400, 700], includeItalic: true },
         code: "IBM Plex Mono",
       },

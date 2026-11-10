@@ -30,7 +30,7 @@ const svg = `<svg viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg" role=
   <desc id="p4-d">An engraved plate. One long hatched bar spans the page: ${TOTAL_LABEL}, ${TOTAL_NOTE}. Three oversight figures are drawn on the same scale beneath it and are too thin to see: the UK AI Security Institute's yearly budget, the largest AI fine imposed to date, and the yearly budget of the US institute. A magnifying glass at ${M1} diameters shows the UK institute as a sliver. A second glass at ${M2.toLocaleString('en-US')} diameters shows the fine and the US budget as short bars.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --glass: #F8F5EC; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --glass: #262A33; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -51,7 +51,7 @@ const svg = `<svg viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg" role=
       .tick { font-size: 11px; text-anchor: middle; fill: var(--soft); }
       .pow { font-size: 15px; letter-spacing: 0.12em; text-anchor: middle; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p4-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

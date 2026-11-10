@@ -107,7 +107,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
   <desc id="p4b-d">An engraved plate of an open wooden tub built of staves of unequal height and bound by two iron hoops. Water stands inside exactly level with the top of the shortest stave and spills over it, down the outside, into a puddle on the floor. One stave is drawn in a dashed rust outline rising far above the rest: Anthropic's binding pause commitment. Its sawn-off length lies on the floor beside the tub, dated 24 February 2026. The taller stave never held any more water than the shortest one allowed.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -127,7 +127,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
       .it { font-size: 14px; font-style: italic; }
       .ac { fill: var(--accent); }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p4b-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>

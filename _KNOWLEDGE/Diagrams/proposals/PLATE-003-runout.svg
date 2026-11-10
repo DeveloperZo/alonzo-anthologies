@@ -3,7 +3,7 @@
   <desc id="p3-d">An engraved plate of a rock face in section, its beds drawn in the manner of a geological survey. A lead climber, drawn as a silhouette in hat, jacket and boots, is high on the face, just above a level marked frontier. Ledges below are marked GPT-3, ChatGPT and GPT-4. The rope runs down from the climber's waist to four anchors clustered near the ground, the highest just above the level marked routine, and then out to a belayer who stands braced on the ground with the rope in both hands. A rust dimension line marks the long stretch of rope between the last anchor and the climber: the runout.</desc>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
       :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
       @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
       text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
@@ -25,7 +25,7 @@
       .ledge { font-size: 13px; font-style: italic; text-anchor: end; }
       .leg { font-size: 12.5px; font-style: italic; }
       .cap { font-size: 12.5px; fill: var(--soft); }
-      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
     </style>
     <pattern id="p3-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
