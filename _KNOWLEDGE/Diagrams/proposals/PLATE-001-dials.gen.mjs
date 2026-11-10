@@ -91,7 +91,7 @@ for (let y = yStart, i = 0; y > YH + 2.2; y -= Math.max(1.7, (y - YH) * 0.1), i+
 }
 rows.reverse();
 const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p1-t p1-d">
-  <title id="p1-t">DIA-001 · One hundred billion dials</title>
+  <title id="p1-t">DIA-001 · Hundreds of billions of dials</title>
   <desc id="p1-d">An engraved plate. A strip of paper across the top carries the sentence "A modern AI model is a very large file of", with the next word hidden under a hatched slip. Below it a panel of identical dials runs back to the horizon and off both sides of the plate. Each dial in the front rows has its setting written under it as a number. One dial at the front is drawn in rust, with a dashed line showing where its pointer stood a moment ago: it has been turned a hair, from 0.4172 to 0.4173.</desc>
   <defs>
     <style>
@@ -152,7 +152,7 @@ const svg = `<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role=
   </g>
   <text x="150" y="152" class="it">Cover the next word and ask for a guess.</text>
   <text x="700" y="152" text-anchor="middle" class="it">The guess was “words.” The page says “numbers.”</text>
-  <text x="42" y="190" class="it">About 100 billion dials. Each setting is one number.</text>
+  <text x="42" y="190" class="it">Hundreds of billions of dials. Each setting is one number.</text>
   <!-- the bank of dials. x = 480 + 190 j / z, ground y = 205 + 280 / z, rows 0.45 apart in z, odd rows staggered half a pitch -->
   <g clip-path="url(#p1-clip)">
     <line x1="20" y1="${YH}" x2="940" y2="${YH}" class="thin"/>
@@ -168,7 +168,7 @@ ${rows.join('\n')}
   <text x="42" y="596" class="it">Billions of times, trillions of words.</text>
   <text x="918" y="596" text-anchor="end" class="it">One run: $100M to $1B+.</text>
   <!-- title and caption -->
-  <text x="480" y="644" text-anchor="middle" class="title">One Hundred Billion Dials</text>
+  <text x="480" y="644" text-anchor="middle" class="title">Hundreds of Billions of Dials</text>
   <line x1="300" y1="660" x2="660" y2="660" class="thin"/>
   <text x="480" y="681" text-anchor="middle" class="cap">DIA-001 · The model is the settings: a file of numbers, each nudged a hair after every wrong guess at the next word.</text>
 </svg>

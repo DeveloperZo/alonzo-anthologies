@@ -115,9 +115,9 @@
   <!-- rail marks on frame one, counted from the right: the 7th, 4th and 3rd bead -->
   <g class="thin"><line x1="188" y1="170" x2="188" y2="166"/><line x1="236" y1="170" x2="236" y2="166"/><line x1="252" y1="170" x2="252" y2="166"/></g>
   <text x="188" y="163" class="rn">7</text><text x="236" y="163" class="rn">4</text><text x="252" y="163" class="rn">3</text>
-  <text x="180" y="483" class="note">Sabotage behaviors in continuation scenarios:</text>
-  <text x="180" y="500" class="note">7% for the most capable model tested,</text>
-  <text x="180" y="517" class="note">4% for another, 3% for a third.</text>
+  <text x="180" y="483" class="note">Sabotage in continuation scenarios: 7% for the</text>
+  <text x="180" y="500" class="note">most capable model tested, 4% and 3% for two</text>
+  <text x="180" y="517" class="note">others, none for a fourth. None began it unprompted.</text>
   <text x="480" y="483" class="note">The same model, when it carried the</text>
   <text x="480" y="500" class="note">sabotage on: its chain of thought failed</text>
   <text x="480" y="517" class="note">to match what it did 65% of the time.</text>

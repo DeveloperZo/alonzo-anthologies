@@ -1,6 +1,6 @@
 <svg viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p4-t p4-d">
   <title id="p4-t">DIA-004A · The brake, drawn to scale</title>
-  <desc id="p4-d">An engraved plate. One long hatched bar spans the page: about $750 billion, OpenAI’s compute spending target through 2030. Three oversight figures are drawn on the same scale beneath it and are too thin to see: the UK AI Security Institute's yearly budget, the largest AI fine imposed to date, and the yearly budget of the US institute. A magnifying glass at 100 diameters shows the UK institute as a sliver. A second glass at 10,000 diameters shows the fine and the US budget as short bars.</desc>
+  <desc id="p4-d">An engraved plate. One long hatched bar spans the page: near $856 billion, OpenAI’s projected compute spending through 2030. Three oversight figures are drawn on the same scale beneath it and are too thin to see: the UK AI Security Institute's yearly budget, the largest AI fine imposed to date, and the yearly budget of the US institute. A magnifying glass at 100 diameters shows the UK institute as a sliver. A second glass at 10,000 diameters shows the fine and the US budget as short bars.</desc>
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
@@ -37,16 +37,16 @@
   <rect x="20" y="20" width="920" height="720" class="thin"/>
   <text x="42" y="50" class="sc">PLATE IV</text>
   <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 4 · WHO WAS SUPPOSED TO SLOW IT</text>
-  <!-- the top bar: 800 units = about $750 billion -->
-  <text x="80" y="104" class="it" style="font-size:15px">OpenAI’s compute spending target through 2030</text>
-  <text x="880" y="104" text-anchor="end" style="font-size:15px">about $750 billion</text>
+  <!-- the top bar: 800 units = near $856 billion -->
+  <text x="80" y="104" class="it" style="font-size:15px">OpenAI’s projected compute spending through 2030</text>
+  <text x="880" y="104" text-anchor="end" style="font-size:15px">near $856 billion</text>
   <rect x="80" y="114" width="800" height="30" class="hb"/>
-  <line x1="80" y1="144" x2="80" y2="152" class="thin"/><text x="74" y="166" class="tick" style="text-anchor:end">$0</text><line x1="346.7" y1="144" x2="346.7" y2="152" class="thin"/><text x="346.7" y="166" class="tick">$250B</text><line x1="613.3" y1="144" x2="613.3" y2="152" class="thin"/><text x="613.3" y="166" class="tick">$500B</text><line x1="880" y1="144" x2="880" y2="152" class="thin"/><text x="880" y="166" class="tick">$750B</text>
+  <line x1="80" y1="144" x2="80" y2="152" class="thin"/><text x="74" y="166" class="tick" style="text-anchor:end">$0</text><line x1="266.9" y1="144" x2="266.9" y2="152" class="thin"/><text x="266.9" y="166" class="tick">$200B</text><line x1="453.8" y1="144" x2="453.8" y2="152" class="thin"/><text x="453.8" y="166" class="tick">$400B</text><line x1="640.7" y1="144" x2="640.7" y2="152" class="thin"/><text x="640.7" y="166" class="tick">$600B</text><line x1="880" y1="144" x2="880" y2="152" class="thin"/><text x="880" y="166" class="tick">$856B</text>
   <!-- the same scale, continued: three bars at their true widths -->
   <line x1="80" y1="152" x2="80" y2="250" class="thin"/>
-  <rect x="80" y="186" width="0.0896" height="14" class="bar"/>
-  <rect x="80" y="208" width="0.016" height="14" class="fine"/>
-  <rect x="80" y="230" width="0.0107" height="14" class="bar"/>
+  <rect x="80" y="186" width="0.0785" height="14" class="bar"/>
+  <rect x="80" y="208" width="0.014" height="14" class="fine"/>
+  <rect x="80" y="230" width="0.00935" height="14" class="bar"/>
   <text x="94" y="197" class="it">UK AI Security Institute, $84M a year</text>
   <text x="94" y="219" class="it" style="fill:var(--accent)">The largest AI fine to date, €15M (Italy, December 2024)</text>
   <text x="94" y="241" class="it">US CAISI, $10M a year</text>
@@ -61,9 +61,9 @@
   <circle cx="250" cy="430" r="104" class="glass"/>
   <g clip-path="url(#p4-c1)">
     <line x1="200" y1="320" x2="200" y2="540" class="l"/>
-    <rect x="200" y="372" width="8.96" height="20" class="bar"/>
-    <rect x="200" y="420" width="1.6" height="20" class="fine"/>
-    <rect x="200" y="468" width="1.07" height="20" class="bar"/>
+    <rect x="200" y="372" width="7.85" height="20" class="bar"/>
+    <rect x="200" y="420" width="1.4" height="20" class="fine"/>
+    <rect x="200" y="468" width="0.935" height="20" class="bar"/>
     <text x="218" y="387" class="it">UK institute</text>
     <text x="214" y="435" class="it" style="fill:var(--accent)">the fine: a hair</text>
     <text x="214" y="483" class="it">US CAISI: a hair</text>
@@ -78,9 +78,9 @@
   <circle cx="668" cy="440" r="128" class="glass"/>
   <g clip-path="url(#p4-c2)">
     <line x1="590" y1="300" x2="590" y2="580" class="l"/>
-    <rect x="590" y="366" width="896" height="24" class="hb"/>
-    <rect x="590" y="430" width="160" height="24" class="fine"/>
-    <rect x="590" y="496" width="107" height="24" class="bar"/>
+    <rect x="590" y="366" width="785" height="24" class="hb"/>
+    <rect x="590" y="430" width="140" height="24" class="fine"/>
+    <rect x="590" y="496" width="93.5" height="24" class="bar"/>
     <text x="600" y="358" class="it">UK institute, off the glass</text>
     <text x="600" y="422" class="it" style="fill:var(--accent)">the largest fine to date</text>
     <text x="600" y="488" class="it">US CAISI</text>

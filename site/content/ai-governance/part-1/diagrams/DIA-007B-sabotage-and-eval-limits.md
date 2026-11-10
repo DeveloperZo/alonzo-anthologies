@@ -21,7 +21,7 @@ Working plate: `_KNOWLEDGE/Diagrams/proposals/PLATE-007B-counting-frames.svg`.
   - The three frames do not count the same hundred. Frame one counts scenarios. Frames two and three count the cases in which the model did the thing (continued a sabotage, cheated). The note under each frame says which.
   - Rust is used only for the two bead groups under `THE ACCOUNT` and that heading.
 - **Notable labels or metrics:**
-  - 7%, 4%, 3% and 65%: Kirk et al., UK AI Security Institute, 2026 (section 7 prose, source 35).
+  - 7%, 4%, 3%, none for a fourth, and 65%: Kirk et al., UK AI Security Institute, 2026 (section 7 prose, source 35). The note under the first frame also carries the prose's qualifier that no model began sabotage unprompted.
   - 87%: UK AI Security Institute cyber evaluation report, July 2026 (section 7 prose, source 45).
   - "Counted under test conditions, which models can often detect": section 7 prose.
 

@@ -1,27 +1,27 @@
-# DIA-002A: Eighteen Times Over
+# DIA-002A: Seventeen Times Over
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-002A-capital-stats.svg`
 - **Theme:** OpenAI's compute target against its revenue
-- **Primary audience takeaway:** The spending target is roughly eighteen years of today's revenue, stacked up.
+- **Primary audience takeaway:** The spending target is roughly seventeen years of today's revenue, stacked up.
 
 ## What The Diagram Shows
-An engraved plate of two stacks of coins on one ground line, in the tradition of the true-scale comparison (Playfair's charts, with the money drawn as money). Each coin is $10 billion. On the left, four coins and a thin piece: one year of OpenAI revenue at the July 2026 rate. On the right, a column of seventy-five coins: OpenAI's compute spending target through 2030. A rule stands between them, marked off in heights of the short stack, so the column can be read in years of revenue.
+An engraved plate of two stacks of coins on one ground line, in the tradition of the true-scale comparison (Playfair's charts, with the money drawn as money). Each coin is $10 billion. On the left, five coins: one year of OpenAI revenue at the September 2026 rate. On the right, a column of eighty-five coins and a thin piece: OpenAI's compute spending through 2030 in an internal projection reported in September 2026. A rule stands between them, marked off in heights of the short stack, so the column can be read in years of revenue.
 
-Claim sentence: the reader should see that OpenAI has committed to spend roughly eighteen times what it earns in a year, and two stacks of the same coin show it because a stack's height is its amount, so the short stack can be laid against the tall one like a ruler.
+Claim sentence: the reader should see that OpenAI has is projected to spend roughly seventeen times what it earns in a year, and two stacks of the same coin show it because a stack's height is its amount, so the short stack can be laid against the tall one like a ruler.
 
 The working plate is `_KNOWLEDGE/Diagrams/proposals/PLATE-002A-coin-stacks.svg`. The published file is generated from it and is not edited by hand.
 
 ## Elements And Flow
 - **Components:**
-  - Short stack: `$42.6 billion`, annualized revenue by July 2026 (section 2 prose, source 6a). Drawn as four full coins and one thin piece for the odd $2.6 billion.
-  - Tall stack: `about $750 billion`, the compute spending target through 2030 as lifted by July 2026 (section 2 prose, sources 7a and 6a). Seventy-five coins.
+  - Short stack: `about $50 billion`, annualized revenue at the end of September 2026 as the company told investors (section 2 prose, source 6b). Five full coins.
+  - Tall stack: `near $856 billion`, compute spending through 2030 in an internal projection reported in September 2026 (section 2 prose). Eighty-five coins and a thin piece for the odd $6 billion.
   - The rule: one division is one short stack, numbered 1 to 18. A dashed sight line carries each stack top across to it.
-  - Rust: the sight line from the tall stack, the mark where it meets the rule, and the note `17.6 on the rule: roughly eighteen times`.
+  - Rust: the sight line from the tall stack, the mark where it meets the rule, and the note `17.1 on the rule: roughly seventeen times`.
 - **Relationships:**
-  - Scale: 0.6 plate units to $1 billion throughout. One coin is 6 units thick. The short stack is 25.56 units, the tall one 450.
-  - 750 divided by 42.6 is 17.6. The prose rounds it to "roughly 18×".
+  - Scale: 0.53 plate units to $1 billion throughout. One coin is 5.3 units thick. The short stack is 26.5 units, the tall one 453.7.
+  - 856 divided by 50 is 17.1. The prose rounds it to "roughly 17×".
 - **Notable labels or metrics:**
-  - `$42.6 billion`, `about $750 billion`, `each coin, $10 billion`, `17.6`
+  - `about $50 billion`, `near $856 billion`, `each coin, $10 billion`, `17.1`
 - **What the plate leaves out:**
   - The January 2025 pairing in the prose: Stargate's roughly $500 billion against about $6 billion of revenue exiting 2024, which is 80 times.
   - The earlier targets: $1.4 trillion in late 2025 and $600 billion in February 2026.
@@ -34,7 +34,9 @@ The working plate is `_KNOWLEDGE/Diagrams/proposals/PLATE-002A-coin-stacks.svg`.
 4. Read the tall stack's figure.
 
 ## Governance Relevance
-Section 2 argues that the pace is set by a financial structure, not by technology alone. This plate gives the size of the bet in one look: a company does not commit eighteen years of revenue to infrastructure unless it is counting on explosive growth, and everyone who sold it the infrastructure is counting on the same thing.
+Section 2 argues that the pace is set by a financial structure, not by technology alone. This plate gives the size of the bet in one look: a company does not commit seventeen years of revenue to infrastructure unless it is counting on explosive growth, and everyone who sold it the infrastructure is counting on the same thing.
+
+History: first drawn on 2026-11-10 with the July figures ($750 billion against $42.6 billion, 17.6, titled "Eighteen Times Over"). Regenerated the same day when section 2 moved to the September figures. The $856 billion is a reported internal projection, not a company statement, and the plate says so. All figures sit in one block at the top of `PLATE-002A-coin-stacks.gen.mjs`.
 
 ## Suggested Caption
 DIA-002A · One year of OpenAI's revenue beside its compute target, in the same coin and on the same ground.

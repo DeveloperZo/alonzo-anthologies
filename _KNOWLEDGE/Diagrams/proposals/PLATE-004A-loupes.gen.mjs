@@ -8,10 +8,10 @@ const out = process.argv[2];
 if (!out) { console.error('usage: node PLATE-004A-loupes.gen.mjs <out.svg>'); process.exit(1); }
 
 // ---- figures (source of each is in the DIA-004A spec) ----
-const TOTAL = 750e9;                       // OpenAI compute spending target through 2030, as of July 2026 (section 2)
-const TOTAL_LABEL = 'about $750 billion';
-const TOTAL_NOTE = 'OpenAI’s compute spending target through 2030';
-const TICKS = [[0, '$0'], [250e9, '$250B'], [500e9, '$500B'], [750e9, '$750B']];
+const TOTAL = 856e9;                       // OpenAI compute spending through 2030, internal projection reported September 2026 (section 2)
+const TOTAL_LABEL = 'near $856 billion';
+const TOTAL_NOTE = 'OpenAI’s projected compute spending through 2030';
+const TICKS = [[0, '$0'], [200e9, '$200B'], [400e9, '$400B'], [600e9, '$600B'], [856e9, '$856B']];
 const UK = 84e6;                           // UK AI Security Institute, per year
 const FINE = 15e6;                         // largest single AI-specific fine to date, EUR 15M, drawn at parity with the dollar (sources 13d)
 const CAISI = 10e6;                        // US CAISI, FY2026 enacted appropriation (source 26a)

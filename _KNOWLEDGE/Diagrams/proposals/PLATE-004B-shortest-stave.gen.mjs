@@ -167,7 +167,7 @@ ${lines}
   <text x="640" y="232" class="it ac">It never held any more water.</text>
   <path d="M 634 214 L ${f(gmid[0] + 4)} ${f(gmid[1])}" class="at"/>
   <text x="716" y="462" class="it ac">Sawn off 24 February 2026.</text>
-  <text x="716" y="480" class="it ac">Not put back in April.</text>
+  <text x="716" y="480" class="it ac">Four revisions since. Not put back.</text>
   <path d="M 760 488 L 764 514" class="at"/>
   <!-- title and caption -->
   <text x="480" y="642" text-anchor="middle" class="title">The Shortest Stave</text>

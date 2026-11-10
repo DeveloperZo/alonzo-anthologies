@@ -54,7 +54,7 @@
   <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 6 · WHAT'S ACTUALLY AT STAKE</text>
   <text x="480" y="100" text-anchor="middle" class="it" style="font-size:15px">The World Economic Forum projects 92 million jobs displaced</text>
   <text x="480" y="120" text-anchor="middle" class="it" style="font-size:15px">and 170 million created by 2030: net positive, on paper.</text>
-  <!-- horizontal scale: 14 units = 1 year. near brink x = 200 (year 0), far brink x = 760 (year 40) -->
+  <!-- horizontal scale: 11.2 units = 1 year. near brink x = 200 (year 0), far brink x = 760 (year 50) -->
   <!-- vertical scale of the piers: 1.5 units = 1 million jobs. near pier 92M = 138 high, far pier 170M = 255 high -->
   <!-- the banks, in section -->
   <path d="M 30 400 H 200 L 205 420 L 197 442 L 209 470 L 203 500 L 215 530 L 211 556 L 222 590 H 30 Z" class="hb"/>
@@ -91,16 +91,16 @@
   <text x="480" y="390" text-anchor="middle" class="it" style="fill:var(--soft);font-size:12.5px">no span</text>
   <!-- extension lines up from the two brinks -->
   <path d="M 200 392 V 206 M 760 392 V 296" class="sight"/>
-  <!-- measure one: the internet transition, 20 to 30 years. 200 to 480 solid, 480 to 620 dashed -->
-  <line x1="200" y1="222" x2="480" y2="222" class="dim"/>
-  <line x1="480" y1="222" x2="620" y2="222" class="dimd"/>
-  <path d="M 200 213 V 231 M 480 213 V 231 M 620 213 V 231" class="dimt"/>
+  <!-- measure one: the internet transition, 20 to 30 years. 200 to 424 solid, 424 to 536 dashed -->
+  <line x1="200" y1="222" x2="424" y2="222" class="dim"/>
+  <line x1="424" y1="222" x2="536" y2="222" class="dimd"/>
+  <path d="M 200 213 V 231 M 424 213 V 231 M 536 213 V 231" class="dimt"/>
   <text x="212" y="204"><tspan class="yr">20 to 30 years</tspan><tspan class="yn" dx="10">the internet transition, before replacement work arrived</tspan></text>
-  <!-- measure two: the first industrial revolution, 40 years. 200 to 760 -->
+  <!-- measure two: the first industrial revolution, half a century. 200 to 760 -->
   <line x1="200" y1="312" x2="760" y2="312" class="dim"/>
-  <path d="M 200 303 V 321 M 760 303 V 321 M 340 312 V 319 M 480 312 V 319 M 620 312 V 319" class="dimt"/>
-  <text x="212" y="294"><tspan class="yr">40 years</tspan><tspan class="yn" dx="10">the first industrial revolution: UK productivity grew, wages stagnated</tspan></text>
-  <text x="212" y="337" class="tick" style="text-anchor:start">0</text><text x="340" y="337" class="tick">10</text><text x="480" y="337" class="tick">20</text><text x="620" y="337" class="tick">30</text><text x="748" y="337" class="tick" style="text-anchor:end">40 years</text>
+  <path d="M 200 303 V 321 M 760 303 V 321 M 312 312 V 319 M 424 312 V 319 M 536 312 V 319 M 648 312 V 319" class="dimt"/>
+  <text x="212" y="294"><tspan class="yr">half a century</tspan><tspan class="yn" dx="10">the first industrial revolution: UK productivity grew, real wages barely moved</tspan></text>
+  <text x="212" y="337" class="tick" style="text-anchor:start">0</text><text x="312" y="337" class="tick">10</text><text x="424" y="337" class="tick">20</text><text x="536" y="337" class="tick">30</text><text x="648" y="337" class="tick">40</text><text x="748" y="337" class="tick" style="text-anchor:end">50 years</text>
   <!-- notes in the gap -->
   <path d="M 252 446 Q 224 436 207 408" class="thin"/>
   <text x="258" y="450" class="it">Nearest the edge: 6.1 million US workers,</text>
@@ -112,5 +112,5 @@
   <text x="480" y="634" text-anchor="middle" class="title">The Far Bank</text>
   <text x="480" y="660" text-anchor="middle" class="leg">Each course of stone is 10 million jobs. The gap is drawn to the scale of years marked across it.</text>
   <line x1="300" y1="674" x2="660" y2="674" class="thin"/>
-  <text x="480" y="692" text-anchor="middle" class="cap">DIA-006B · More is built on the far side. The last two crossings took 20 to 30 years, and 40.</text>
+  <text x="480" y="692" text-anchor="middle" class="cap">DIA-006B · More is built on the far side. The last two crossings took 20 to 30 years, and half a century.</text>
 </svg>

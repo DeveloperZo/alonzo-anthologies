@@ -1,4 +1,4 @@
-# DIA-001: One Hundred Billion Dials
+# DIA-001: Hundreds of Billions of Dials
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-001-training-pipeline.svg`
 - **Theme:** What a model is, and how training produces it
@@ -24,7 +24,7 @@ The three mappings:
   - Reading runs top to bottom: sentence, guess, how wrong, adjustment.
   - Every dial is the same. The rust one is singled out only to show a single turn. The note says the rest are turned too.
 - **Notable labels or metrics:**
-  - `About 100 billion dials`: section 1, "A large model might have 100 billion of them."
+  - `Hundreds of billions of dials`: section 1, "A large model has hundreds of billions of them."
   - `Billions of times, trillions of words`: section 1, "Do that billions of times across trillions of words."
   - `One run: $100M to $1B+`: section 1 and its first source note.
   - The strip's sentence, ending in `numbers`, is the first sentence of section 1.

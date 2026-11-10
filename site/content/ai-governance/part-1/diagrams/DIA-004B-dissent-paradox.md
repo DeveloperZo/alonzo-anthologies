@@ -26,7 +26,7 @@ Three mappings, no lettered legend:
   - Epigraph: "We felt that it wouldn't actually help anyone for us to stop training AI models." Jared Kaplan of Anthropic, to TIME. Source: section 4, the callout "The safety policy that weakened itself in public" (reference 13).
   - "The lowest bar any competitor is willing to hold": the wording of the same callout.
   - "Sawn off 24 February 2026": the date the Responsible Scaling Policy update removed the binding pause commitment (same callout).
-  - "Not put back in April": the v3.1 revision of April 2026, after which "the pause did not return" (same callout, reference 13e).
+  - "Four revisions since. Not put back.": section 4 says four further revisions through July 2026 adjusted thresholds and reporting, and none restored the binding pause (reference 13e).
 
 ## How To Read It
 1. Find the water line and follow it to the notch where it spills: the shortest stave.
