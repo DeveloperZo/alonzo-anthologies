@@ -14,8 +14,8 @@ the printed resume and the timeline.
 | View | File | Shows |
 | --- | --- | --- |
 | Printed resume | `components/ResumeView/ResumeView.tsx` | `career` under Professional Experience, `independent` (except quest 11) under Independent Consultant, `education` under Education, `hobby` under Independent Projects |
-| Career timeline | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
-| Accomplishments | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
+| Career timeline (work only) | `components/CareerTimeline/CareerTimeline.tsx` | Everything, side projects inline with roles |
+| Accomplishments (both modes) | `components/Accomplishments/Accomplishments.tsx` | Everything, bucketed by type into four filter sections |
 | Quest detail (work) | `components/QuestDetail/QuestDetail.tsx` | Any quest by id |
 | Quest detail (play) | `components/QuestMachine/QuestMachine.tsx` | Any quest by id, as a factory machine window |
 | Play-mode home | `components/Factory/Factory.tsx` | Every quest as a machine on the career factory floor |
@@ -41,6 +41,11 @@ tenure bar is the longest non-education role, not completion. Esc, E or
 browser Back return to the floor with the last open machine selected.
 Play-mode pages use a plain full-screen panel; the retro TV image is no
 longer shown.
+
+Play mode has no timeline: the factory already lays the career out in
+time, so the Quest Log link is gone and /timeline sends play mode home.
+Achievements is one page shared by both modes, with the same filters and
+wording; play mode only reskins it in the factory's dark panels.
 
 ## Dates read the UTC month
 

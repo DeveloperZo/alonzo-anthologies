@@ -8,7 +8,6 @@ export const labels: Record<string, Record<string, string>> = {
       coreExperience:"",
       hobbyExperience:"",
       accomplishments: "Achievements",
-      timeline: "Quest Log",
       mainTitle: "Alonzo's Anthologies",
       resume: "Resume",
       default: "",

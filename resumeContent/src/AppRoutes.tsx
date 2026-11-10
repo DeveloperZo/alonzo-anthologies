@@ -69,6 +69,40 @@ const QuestScreen = ({ id }: { id: number }) => {
 
 // Play mode opens on the career factory, full screen with no TV frame.
 // Work mode keeps the plain menu inside its frame.
+// Both modes share one achievements page. Play mode shows it full screen in
+// the factory's skin with no TV frame; work mode keeps it inside its frame.
+const AccomplishmentsScreen = () => {
+  const { theme } = useTheme()!;
+  if (theme === 'play') {
+    return (
+      <>
+        <Navbar />
+        <div className="factory-stage">
+          <Accomplishments />
+        </div>
+      </>
+    );
+  }
+  return (
+    <QuestSwitcher type="career">
+      <Navbar />
+      <Accomplishments />
+    </QuestSwitcher>
+  );
+};
+
+// Play mode has no timeline; the factory is its home.
+const TimelineScreen = () => {
+  const { theme } = useTheme()!;
+  if (theme === 'play') return <Navigate to="/main-menu" replace />;
+  return (
+    <QuestSwitcher type="career">
+      <Navbar />
+      <CareerTimeline />
+    </QuestSwitcher>
+  );
+};
+
 const HomeScreen = () => {
   const { theme } = useTheme()!;
   if (theme === 'play') {
@@ -117,20 +151,10 @@ const AppRoutes: React.FC = () => {
         <Route path="/quests/:id" element={<QuestDetailWrapper />} />
         
         {/* Accomplishments */}
-        <Route path="/accomplishments" element={
-          <QuestSwitcher type="career">
-            <Navbar />
-            <Accomplishments />
-          </QuestSwitcher>
-        } />
+        <Route path="/accomplishments" element={<AccomplishmentsScreen />} />
 
         {/* Timelines */}
-        <Route path="/timeline" element={
-          <QuestSwitcher type="career">
-            <Navbar />
-            <CareerTimeline />
-          </QuestSwitcher>
-        } />
+        <Route path="/timeline" element={<TimelineScreen />} />
         
         <Route path="/resume" element={<ResumeRoute />} />
 

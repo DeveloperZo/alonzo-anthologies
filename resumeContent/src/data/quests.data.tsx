@@ -45,7 +45,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ['Manager, Experience Platform'],
-  tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development'],
+  tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development', 'Software Development'],
   accomplishments: [
     {
       key: 'ai-sdlc',
@@ -125,7 +125,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2024-05-01'),
   endDate: new Date('2025-05-17'),
   roles: ['Senior Software Architect'],
-  tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration'],
+  tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration', 'Software Development'],
   accomplishments: [
     {
       key: 'component-library',
@@ -193,7 +193,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2020-02-01'),
   endDate: new Date('2024-05-31'),
   roles: ['Software Architect'],
-  tags: ['Legacy Modernization', 'Cloud', 'SaaS', 'Healthcare', 'Payment Processing'],
+  tags: ['Legacy Modernization', 'Cloud', 'SaaS', 'Healthcare', 'Payment Processing', 'Software Development'],
   accomplishments: [
     {
       key: 'engagements',
@@ -271,7 +271,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2018-10-01'),
   endDate: new Date('2020-02-01'),
   roles: ['Team Lead', 'Interim Director of Engineering'],
-  tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy'],
+  tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy', 'Software Development'],
   accomplishments: [
     {
       key: 'ceo-investors',
@@ -367,7 +367,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2017-10-01'),
   endDate: new Date('2018-10-01'),
   roles: ['Senior Consultant'],
-  tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation'],
+  tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation', 'Software Development'],
   accomplishments: [
     {
       key: 'estimates',
@@ -414,7 +414,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2016-08-01'),
   endDate: new Date('2017-09-01'),
   roles: ['Developer'],
-  tags: ['Development', 'Mentorship', 'Testing', 'Financial Applications'],
+  tags: ['Software Development', 'Mentorship', 'Testing', 'Financial Applications'],
   accomplishments: [
     {
       key: 'features',
@@ -459,7 +459,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2012-06-01'),
   endDate: new Date('2016-08-01'),
   roles: ['ITCFP Participant', 'Developer'],
-  tags: ['IT Fundamentals', 'Development', 'Automation', 'Financial Operations'],
+  tags: ['IT Fundamentals', 'Software Development', 'Automation', 'Financial Operations'],
   accomplishments: [
     {
       key: 'rotation',
@@ -504,7 +504,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2025-04-29'),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ['Game Developer'],
-  tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project'],
+  tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project', 'Software Development'],
   accomplishments: [
     {
       key: 'games',
@@ -573,7 +573,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date("2022-03-01"),
   endDate: new Date("2022-06-30"),
   roles: ["Principal Technologist"],
-  tags: ["Code Analysis", "Technical Strategy", "Executive Advisory", "Performance Optimization"],
+  tags: ["Code Analysis", "Technical Strategy", "Executive Advisory", "Performance Optimization", "Software Development"],
   accomplishments: [
     {
       key: 'solid-review',
@@ -607,7 +607,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date("2024-03-01"),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ["Principal Technologist"],
-  tags: ["Patent Intelligence", "Biotech", "Azure Functions", "React", "TypeScript", "C#", "Technical Leadership"],
+  tags: ["Patent Intelligence", "Biotech", "Azure Functions", "React", "TypeScript", "C#", "Technical Leadership", "Software Development"],
   accomplishments: [
     {
       key: 'advising',

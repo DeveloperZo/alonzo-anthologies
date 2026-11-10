@@ -253,122 +253,145 @@
   color: #333;
 }
 
-/* Define floating animation */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* Play theme: the same page in the factory's skin. Dark panels and bevelled
+   slots like the quest machine windows, pixel type for labels, a readable
+   face for the text. The play palette can be light, so only the accent
+   follows it. */
+.accomplishment-layout.play {
+  --f-floor: #1e1c19;
+  --f-panel: #24211d;
+  --f-panel-2: #2d2a25;
+  --f-slot: #3d3934;
+  --f-edge: #57514a;
+  --f-text: #f2e8d5;
+  --f-dim: #a89f91;
+  --f-accent: var(--accent-color, #ff9900);
+  --f-read: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --f-bevel: #6b645b #1e1c19 #1e1c19 #6b645b;
+  --f-inset: #1e1c19 #6b645b #6b645b #1e1c19;
+
+  height: 100%;
+  max-width: 1300px;
+  padding: 0;
+  gap: 10px;
+  font-family: var(--f-read);
+  color: var(--f-text);
+  text-align: left;
 }
 
-/* Play theme styling */
-.play .filter-panel {
-  background-color: var(--secondary-background-color);
-  border-color: var(--border-color);
+.play .filter-panel,
+.play .accomplishment-detail {
+  background: var(--f-panel);
+  border: 2px solid var(--f-edge);
+  border-radius: 0;
+  overflow-y: auto;
 }
 
-.play .view-mode-btn {
-  border-color: var(--border-color);
-  color: var(--primary-color);
-}
+.play .view-mode-selector { gap: 3px; border-radius: 0; }
 
-.play .view-mode-btn.active {
-  background-color: var(--accent-color);
-  border-color: var(--border-color);
-}
-
-.play h3 {
-  color: var(--primary-color);
-}
-
+.play .view-mode-btn,
 .play .accomplishment-filter-button {
-  background-color: var(--secondary-background-color) !important;
-  border-color: var(--border-color) !important;
-  color: var(--primary-color) !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important;
+  line-height: 1.4;
+  color: var(--f-text) !important;
+  background: var(--f-slot) !important;
+  border: 2px solid !important;
+  border-color: var(--f-bevel) !important;
+  border-radius: 0 !important;
 }
 
-.play .accomplishment-filter-button:hover {
-  background-color: var(--accent-color) !important;
-}
+.play .view-mode-btn:hover,
+.play .accomplishment-filter-button:hover { background: #4a453f !important; }
 
+.play .view-mode-btn.active,
 .play .accomplishment-filter-button.active {
-  background-color: var(--accent-color) !important;
-  border-color: var(--border-color) !important;
+  color: var(--f-floor) !important;
+  background: var(--f-accent) !important;
+  border-color: var(--f-inset) !important;
+}
+
+.play .filter-panel h3,
+.play .filter-section h4 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--f-dim);
+  text-transform: uppercase;
 }
 
 .play .role-count {
-  background-color: var(--accent-color) !important;
-  color: var(--primary-color) !important;
+  border-radius: 0 !important;
+  min-width: 22px !important;
+  height: 18px !important;
+  font-size: 8px !important;
+  color: var(--f-floor) !important;
+  background: var(--f-text) !important;
 }
 
-.play .accomplishment-detail {
-  background-color: var(--secondary-background-color);
-  border-color: var(--border-color);
-}
+.play .accomplishment-filter-button.active .role-count { background: var(--f-floor) !important; color: var(--f-text) !important; }
 
-/* Apply animation to pixel icon in play mode */
-.play .pixel-icon {
-  color: var(--primary-color);
-  animation: float 2s ease-in-out infinite;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.play .empty-state h2 {
-  color: var(--primary-color);
-}
-
-.play .empty-state p {
-  color: var(--primary-color);
-}
-
-.play .role-summary {
-  border-bottom-color: var(--accent-color);
-}
-
-.play .role-summary h2 {
-  color: var(--primary-color);
-}
-
-.play .date-range {
-  color: var(--primary-color);
-}
-
-.play .career-story {
-  background-color: var(--accent-color);
-  border-color: var(--border-color);
-}
-
-.play .career-story p {
-  color: var(--primary-color);
-}
-
-.play .journey-milestone {
-  background-color: var(--secondary-background-color);
-  border-color: var(--border-color);
-}
-
-.play .milestone-header {
-  border-bottom-color: var(--accent-color);
-}
-
+.play .empty-state h2,
+.play .role-summary h2,
 .play .milestone-header h3 {
-  color: var(--primary-color);
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.5;
+  color: var(--f-accent);
 }
 
-.play .milestone-date {
-  color: var(--primary-color);
+.play .empty-state h2,
+.play .role-summary h2 { font-size: 14px; }
+.play .milestone-header h3 { font-size: 11px; }
+
+.play .empty-state p,
+.play .date-range,
+.play .milestone-date { color: var(--f-dim); }
+
+.play .role-summary { border-bottom: 2px solid var(--f-edge); }
+
+.play .career-story,
+.play .journey-milestone {
+  background: var(--f-panel-2);
+  border: 2px solid;
+  border-color: var(--f-inset);
+  border-radius: 0;
 }
+
+.play .career-story p { color: var(--f-text); }
+
+.play .milestone-header { border-bottom: 2px solid var(--f-edge); }
 
 .play .milestone-accomplishments h4,
 .play .milestone-skills h4 {
-  color: var(--primary-color);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--f-dim);
 }
+
+.play .accomplishment-list,
+.play .skills-list { list-style: none; padding-left: 0; }
 
 .play .accomplishment-item,
 .play .skill-item {
-  color: var(--primary-color);
+  position: relative;
+  padding-left: 20px;
+  color: var(--f-text);
 }
+
+/* Experience and Knowledge, the same items as in the factory. */
+.play .accomplishment-item::before,
+.play .skill-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--f-floor);
+}
+
+.play .accomplishment-item::before { background: #e0e0e0; }
+.play .skill-item::before { background: #ef5350; border-radius: 6px; }
+.play .skill-item { color: var(--f-dim); }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {

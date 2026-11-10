@@ -98,7 +98,7 @@ describe('questLinks', () => {
   });
 
   test('quests that share nothing get links with empty from and to', () => {
-    [5, 10].forEach((id) => {
+    [10].forEach((id) => {
       expect(links(id).length).toBeGreaterThan(0);
       links(id).forEach((l) => {
         expect(l.shared).toBe(false);
