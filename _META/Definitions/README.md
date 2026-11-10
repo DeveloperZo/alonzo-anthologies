@@ -6,7 +6,7 @@ Status: working
 Owner: zo
 Human id: definitions-readme
 Update trigger: when a definition is added, removed, or renamed, or a rule here changes
-Last updated: 2026-10-14
+Last updated: 2026-11-10
 -->
 
 A definition describes a type of thing we create instances of. Each one says
@@ -25,6 +25,8 @@ Instances live in `_KNOWLEDGE/<Type folder>/`. Definitions live here, in
 | [Architecture](./Architecture.md) | `_KNOWLEDGE/Architecture/` | `ARCH-###` |
 | [Document](./Document.md) | `_KNOWLEDGE/Documents/<Kind>/` | One prefix per kind: `BRIEF-###`, `OPER-###`, `TD-###`, `VID-###` |
 | [Diagram](./Diagram.md) | `_KNOWLEDGE/Diagrams/`, or beside a site page | `DIA-###` |
+| [MediumArticle](./MediumArticle.md) | `site/content/<series>/part-<N>/` | None. The folder is the identity |
+| [SmallArticle](./SmallArticle.md) | `site/content/<slug>/` | None. The folder is the identity |
 
 ## Rules for every instance
 
@@ -91,4 +93,5 @@ the table above, and create its instance folder under `_KNOWLEDGE/`.
 
 ## Changelog
 
+- 2026-11-10: Added MediumArticle (from AI governance Part 1) and SmallArticle (designed from it, no instance yet). Both live under `site/content/` and use Quartz YAML, like Diagrams living beside site pages.
 - 2026-10-14: Created with Story, Architecture, Document and Diagram, adapted from the Serennovas `knowledge/_definitions/` and the earlier contracts in `_KNOWLEDGE/_definitions/`.
