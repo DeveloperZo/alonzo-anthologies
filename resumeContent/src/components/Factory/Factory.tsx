@@ -709,7 +709,6 @@ const Factory: React.FC = () => {
       </div>
 
       <nav className="factory-quickbar" aria-label="Views">
-        <button onClick={() => navigate('/timeline')}><span className="slot" aria-hidden="true" />{play.timeline}</button>
         <button onClick={() => navigate('/accomplishments')}><span className="slot" aria-hidden="true" />{play.accomplishments}</button>
         <button onClick={() => navigate('/resume')}><span className="slot" aria-hidden="true" />{play.resume}</button>
       </nav>

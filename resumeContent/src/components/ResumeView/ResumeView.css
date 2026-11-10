@@ -357,12 +357,25 @@
 
     .resume-print-page li,
     .resume-print-page .competency-item,
+    .resume-print-page .job-header,
+    .resume-print-page .institution-period,
     .resume-print-page .resume-section h2 {
       break-inside: avoid;
+      page-break-inside: avoid;
     }
 
-    .resume-print-page .resume-section h2 {
+    /* A title stays with the line under it. A page does not end on the title. */
+    .resume-print-page .resume-section h2,
+    .resume-print-page .job-header,
+    .resume-print-page .education-item h3 {
       break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .resume-print-page .job-header + .role-overview,
+    .resume-print-page .education-item h3 + .institution-period {
+      break-before: avoid;
+      page-break-before: avoid;
     }
   }
 

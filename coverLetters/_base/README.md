@@ -2,6 +2,8 @@
 
 This is the visual cover letter in Zo's own wording, with no company tailoring. Every company version starts from this one.
 
+Since 2026-11-09 it uses the Factorio look that matches the site's play mode: a grey lab-tile floor, grey bevelled panels, a blood orange accent (`#D2461F`) and warm item colours. The four ideas read as a recipe (01 + 02 + 03 = 04) and the timeline as a production line. On the canvas it is the artboard titled "Default"; the earlier navy and cream version is kept there as "Previous default". The canvas fills the accent colour in when it renders, but this file is printed straight from disk, so the colour is written out here.
+
 | File | Use |
 | --- | --- |
 | `career-profile.pdf` | Send as is when there is no specific posting |

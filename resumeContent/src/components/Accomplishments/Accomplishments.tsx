@@ -129,7 +129,7 @@ const Accomplishments: React.FC = () => {
     return `${formatDate(earliest)} – ${isOngoing(latest) ? 'Present' : formatDate(latest)}`;
   };
 
-  // Get story summary based on view mode and theme
+  // Get story summary based on view mode
   const getStorySummary = useCallback(() => {
     if (!filteredAccomplishments.length) return null;
     
@@ -146,60 +146,32 @@ const Accomplishments: React.FC = () => {
       }
     };
 
-    if (theme === 'play') {
-      if (isEducationOrPersonal()) {
-        if (viewMode === 'role') {
-          if (selectedRole === 'Student') {
-            return `As a Student, I've completed ${filteredAccomplishments.length} 
-            training quests on my path to graduation.`;
-          } else {
-            return `On my own projects as a ${selectedRole}, I've completed ${filteredAccomplishments.length} 
-            self-directed quests, where the constraints were mine to set.`;
-          }
+    if (isEducationOrPersonal()) {
+      if (viewMode === 'role') {
+        if (selectedRole === 'Student') {
+          return `As a Student, I've completed ${filteredAccomplishments.length}
+          key academic milestones in pursuit of my degree.`;
         } else {
-          return `My adventures in ${selectedCompany} have led me through 
-          ${filteredAccomplishments.length} enlightening quests, where I've gained 
-          ${uniqueLearningsCount} powerful abilities through dedicated study and practice.`;
+          return `On my own projects as a ${selectedRole}, I've shipped ${filteredAccomplishments.length}
+          distinct pieces of work, each scoped and constrained by me rather than by a client roadmap.`;
         }
       } else {
-        if (viewMode === 'role') {
-          return `As a ${selectedRole}, I've embarked on ${filteredAccomplishments.length} 
-          quests across ${groupCount} different guilds, 
-          mastering ${uniqueLearningsCount} unique skills along my journey.`;
-        } else {
-          return `My adventures with the ${selectedCompany} guild have led me through 
-          ${filteredAccomplishments.length} challenging quests, where I've taken on 
-          ${groupCount} different roles and gained ${uniqueLearningsCount} powerful abilities.`;
-        }
+        return `During my time at ${selectedCompany}, I've completed ${filteredAccomplishments.length}
+        significant learning milestones, developing expertise in ${uniqueLearningsCount}
+        distinct areas through focused study and hands-on experience.`;
       }
     } else {
-      if (isEducationOrPersonal()) {
-        if (viewMode === 'role') {
-          if (selectedRole === 'Student') {
-            return `As a Student, I've completed ${filteredAccomplishments.length} 
-            key academic milestones in pursuit of my degree.`;
-          } else {
-            return `On my own projects as a ${selectedRole}, I've shipped ${filteredAccomplishments.length} 
-            distinct pieces of work, each scoped and constrained by me rather than by a client roadmap.`;
-          }
-        } else {
-          return `During my time at ${selectedCompany}, I've completed ${filteredAccomplishments.length} 
-          significant learning milestones, developing expertise in ${uniqueLearningsCount} 
-          distinct areas through focused study and hands-on experience.`;
-        }
+      if (viewMode === 'role') {
+        return `In my professional career as a ${selectedRole}, I've contributed to ${groupCount}
+        different organizations, having ${filteredAccomplishments.length} key contributions
+        and developing in ${uniqueLearningsCount} distinct professional competencies.`;
       } else {
-        if (viewMode === 'role') {
-          return `In my professional career as a ${selectedRole}, I've contributed to ${groupCount} 
-          different organizations, having ${filteredAccomplishments.length} key contributions 
-          and developing in ${uniqueLearningsCount} distinct professional competencies.`;
-        } else {
-          return `During my tenure at ${selectedCompany}, I've made ${filteredAccomplishments.length} 
-          significant contributions across ${groupCount} different roles, developing expertise in 
-          ${uniqueLearningsCount} distinct professional areas.`;
-        }
+        return `During my tenure at ${selectedCompany}, I've made ${filteredAccomplishments.length}
+        significant contributions across ${groupCount} different roles, developing expertise in
+        ${uniqueLearningsCount} distinct professional areas.`;
       }
     }
-  }, [filteredAccomplishments, groupedAccomplishments, theme, viewMode, selectedRole, selectedCompany]);
+  }, [filteredAccomplishments, groupedAccomplishments, viewMode, selectedRole, selectedCompany]);
 
   // Group roles/companies by type
   const getFilteredItems = useMemo(() => {
@@ -227,34 +199,19 @@ const Accomplishments: React.FC = () => {
     return items;
   }, [viewMode, roles, companies, roleCounts, companyCounts]);
 
-  // Get section label based on theme and type
+  // Get section label based on type
   const getSectionLabel = (type: string) => {
-    if (theme === 'work' ) {
-      switch (type) {
-        case 'career':
-          return viewMode === 'role' ? 'Career Roles' : 'Career Companies';
-        case 'independent':
-          return 'Principal Technologist';
-        case 'hobby':
-          return 'Personal Projects';
-        case 'education':
-          return 'Education';
-        default:
-          return 'Other';
-      }
-    } else {
-      switch (type) {
-        case 'career':
-          return 'Guild Quests';
-        case 'independent':
-          return 'Solo Adventures';
-        case 'hobby':
-          return 'Side Quests';
-        case 'education':
-          return 'Training Path';
-        default:
-          return 'Mystery Quests';
-      }
+    switch (type) {
+      case 'career':
+        return viewMode === 'role' ? 'Career Roles' : 'Career Companies';
+      case 'independent':
+        return 'Principal Technologist';
+      case 'hobby':
+        return 'Personal Projects';
+      case 'education':
+        return 'Education';
+      default:
+        return 'Other';
     }
   };
 
@@ -270,7 +227,7 @@ const Accomplishments: React.FC = () => {
               setSelectedCompany(null);
             }}
           >
-            {theme === 'play' ? 'By Class' : 'By Role'}
+            By Role
           </button>
           <button 
             className={`view-mode-btn ${viewMode === 'company' ? 'active' : ''}`}
@@ -279,11 +236,11 @@ const Accomplishments: React.FC = () => {
               setSelectedRole(null);
             }}
           >
-            {theme === 'play' ? 'By Guild' : 'By Company'}
+            By Company
           </button>
         </div>
 
-        <h3>{viewMode === 'role' ? (theme === 'play' ? 'Classes' : 'Roles') : (theme === 'play' ? 'Guilds' : 'Companies')}</h3>
+        <h3>{viewMode === 'role' ? 'Roles' : 'Companies'}</h3>
         
         {/* Career Roles */}
         {getFilteredItems.career.length > 0 && (
@@ -374,18 +331,8 @@ const Accomplishments: React.FC = () => {
       <div className="accomplishment-detail">
         {!selectedRole && !selectedCompany ? (
           <div className="empty-state">
-            {theme === 'play' ? (
-              <>
-                <div className="pixel-icon">📜</div>
-                <h2>Select My Quest Log!</h2>
-                <p>Choose a class or guild from the left panel to view my epic journey.</p>
-              </>
-            ) : (
-              <>
-                <h2>Professional Journey</h2>
-                <p>Please select a role or company from the left panel to explore my career accomplishments.</p>
-              </>
-            )}
+            <h2>Professional Journey</h2>
+            <p>Please select a role or company from the left panel to explore my career accomplishments.</p>
           </div>
         ) : (
           <div className="role-content">
@@ -428,7 +375,7 @@ const Accomplishments: React.FC = () => {
                       {/* Accomplishments section */}
                       <div className="milestone-accomplishments">
                         <h4>
-                          {theme === 'play' ? 'Quests Completed' : 'Key Contributions'}
+                          Key Contributions
                         </h4>
                         <ul className="accomplishment-list">
                           {sortedAccs.map((acc, idx) => (
@@ -441,7 +388,7 @@ const Accomplishments: React.FC = () => {
                       {groupLearnings.length > 0 && (
                         <div className="milestone-skills">
                           <h4>
-                            {theme === 'play' ? 'Skills Mastered' : 'Professional Development'}
+                            Professional Development
                           </h4>
                           <ul className="skills-list">
                             {groupLearnings.map((learning, i) => (

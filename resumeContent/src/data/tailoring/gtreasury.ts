@@ -24,7 +24,7 @@ const gtreasury: Tailoring = {
   },
   quests: {
     1: {
-      description: 'Hired and lead a team of 5 rebuilding a SaaS benefits platform for 7M covered lives',
+      description: 'Hired and led a team of 5 rebuilding a SaaS benefits platform on AWS for 7M covered lives',
       order: ['team', 'delivery', 'planning', 'architects', 'ai-sdlc', 'vendors'],
       accomplishments: {
         team: {
@@ -41,7 +41,7 @@ const gtreasury: Tailoring = {
       accomplishments: {
         stack: {
           description:
-            'Owned the architecture on every engagement in whatever stack the client ran, from C#/.NET with SQL Server and Entity Framework to several I had not worked in before.',
+            'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, from C#/.NET with SQL Server and Entity Framework to several I had not worked in before.',
         },
       },
     },

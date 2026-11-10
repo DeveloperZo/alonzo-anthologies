@@ -38,14 +38,14 @@ export const baseQuests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Hired and lead a team modernizing Progyny's benefits platform for 7 million covered lives",
+    "Hired and led a team modernizing Progyny's benefits platform on AWS for 7 million covered lives",
   summary:
     "I hired my own team here. Beyond that team, I've helped shape the SDLC practices the wider engineering organization works by.",
   type: 'career',
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ['Manager, Experience Platform'],
-  tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development'],
+  tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development', 'AWS', 'Software Development'],
   accomplishments: [
     {
       key: 'ai-sdlc',
@@ -125,7 +125,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2024-05-01'),
   endDate: new Date('2025-05-17'),
   roles: ['Senior Software Architect'],
-  tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration'],
+  tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration', 'Azure', 'Software Development'],
   accomplishments: [
     {
       key: 'component-library',
@@ -140,7 +140,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and implementation standards for five engineering teams while staying hands-on as full-stack architect for one of them.',
+        'Set the UI architecture and implementation standards for five engineering teams while staying hands-on as a full-stack architect for one of them on Azure.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -193,7 +193,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2020-02-01'),
   endDate: new Date('2024-05-31'),
   roles: ['Software Architect'],
-  tags: ['Legacy Modernization', 'Cloud', 'SaaS', 'Healthcare', 'Payment Processing'],
+  tags: ['Legacy Modernization', 'Azure', 'AWS', 'SaaS', 'Healthcare', 'Payment Processing', 'Software Development'],
   accomplishments: [
     {
       key: 'engagements',
@@ -208,7 +208,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'stack',
       description:
-        'Owned the architecture on every engagement in whatever stack the client ran, including several I had not worked in before.',
+        'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, including several I had not worked in before.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -264,14 +264,14 @@ export const baseQuests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    'Refactored a 350k-line lending platform, then led engineering through an executive transition',
+    'Refactored a 350k-line lending platform on Azure, then led engineering through an executive transition',
   summary:
     'I joined as a team lead while sprint velocity was running negative. When the director of engineering was let go, I stepped in as interim director until the company hired a CTO.',
   type: 'career',
   startDate: new Date('2018-10-01'),
   endDate: new Date('2020-02-01'),
   roles: ['Team Lead', 'Interim Director of Engineering'],
-  tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy'],
+  tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy', 'Azure', 'Software Development'],
   accomplishments: [
     {
       key: 'ceo-investors',
@@ -367,7 +367,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2017-10-01'),
   endDate: new Date('2018-10-01'),
   roles: ['Senior Consultant'],
-  tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation'],
+  tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation', 'Software Development'],
   accomplishments: [
     {
       key: 'estimates',
@@ -407,14 +407,14 @@ export const baseQuests: Quest[] = [
   company: 'Manor Resources',
   workTitle: 'Developer',
   description:
-    "Built features and test coverage for car loan application under senior mentorship",
+    "Built features and test coverage for a car loan application under senior mentorship",
   summary:
     "A year of feature work on a car loan application, early on. Senior developers read what I wrote closely, and most of the teaching happened in code review.",
   type: 'career',
   startDate: new Date('2016-08-01'),
   endDate: new Date('2017-09-01'),
   roles: ['Developer'],
-  tags: ['Development', 'Mentorship', 'Testing', 'Financial Applications'],
+  tags: ['Software Development', 'Mentorship', 'Testing', 'Financial Applications'],
   accomplishments: [
     {
       key: 'features',
@@ -452,14 +452,14 @@ export const baseQuests: Quest[] = [
   company: 'The Boeing Company',
   workTitle: 'ITCFP Participant / Developer',
   description:
-    "Rotated through IT functions on selective program, then built C# applications for financial operations",
+    "Rotated through IT functions on a selective program, then built C# applications for financial operations",
   summary:
     "Four years on the IT Career Foundation Program, a selective rotation through several IT functions before I settled into development work on financial operations systems.",
   type: 'career',
   startDate: new Date('2012-06-01'),
   endDate: new Date('2016-08-01'),
   roles: ['ITCFP Participant', 'Developer'],
-  tags: ['IT Fundamentals', 'Development', 'Automation', 'Financial Operations'],
+  tags: ['IT Fundamentals', 'Software Development', 'Automation', 'Financial Operations'],
   accomplishments: [
     {
       key: 'rotation',
@@ -504,7 +504,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date('2025-04-29'),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ['Game Developer'],
-  tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project'],
+  tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project', 'Software Development'],
   accomplishments: [
     {
       key: 'games',
@@ -573,7 +573,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date("2022-03-01"),
   endDate: new Date("2022-06-30"),
   roles: ["Principal Technologist"],
-  tags: ["Code Analysis", "Technical Strategy", "Executive Advisory", "Performance Optimization"],
+  tags: ["Code Analysis", "Technical Strategy", "Executive Advisory", "Performance Optimization", "Software Development"],
   accomplishments: [
     {
       key: 'solid-review',
@@ -607,7 +607,7 @@ export const baseQuests: Quest[] = [
   startDate: new Date("2024-03-01"),
   endDate: new Date(2038, 2, 10), // Ongoing
   roles: ["Principal Technologist"],
-  tags: ["Patent Intelligence", "Biotech", "Azure Functions", "React", "TypeScript", "C#", "Technical Leadership"],
+  tags: ["Patent Intelligence", "Biotech", "Azure Functions", "Azure DevOps", "React", "TypeScript", "C#", "Technical Leadership", "Software Development"],
   accomplishments: [
     {
       key: 'advising',
@@ -627,7 +627,7 @@ export const baseQuests: Quest[] = [
     },
     {
       key: 'sign-in',
-      description: "Built sign-in and enforced plan limits on the server.",
+      description: "Built sign-in and enforced plan limits on the server, and ran CI in Azure DevOps.",
       role: "Principal Technologist",
       learnings: [
         "Learned that a CI job inheriting the deploy variable group tests against production configuration and proves nothing"

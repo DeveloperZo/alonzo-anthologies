@@ -88,9 +88,9 @@ const Navbar: React.FC = () => {
             <Link to="/main-menu">
               <FontAwesomeIcon icon={faHome} /> {labels[theme]["mainMenu"]}
             </Link>
-            <Link to="/timeline">
+            {theme === 'work' && (<Link to="/timeline">
               <FontAwesomeIcon icon={faTimeline} /> {labels[theme]["timeline"]}
-            </Link>
+            </Link>)}
             <Link to="/accomplishments">
               <FontAwesomeIcon icon={faMedal} /> {labels[theme]["accomplishments"]}
             </Link>
@@ -120,9 +120,9 @@ const Navbar: React.FC = () => {
         <Link to="/main-menu">
           <FontAwesomeIcon icon={faHome} /> {labels[theme]["mainMenu"]}
         </Link>
-        <Link to="/timeline">
+        {theme === 'work' && (<Link to="/timeline">
           <FontAwesomeIcon icon={faTimeline} /> {labels[theme]["timeline"]}
-        </Link>
+        </Link>)}
         <Link to="/accomplishments">
           <FontAwesomeIcon icon={faMedal} /> {labels[theme]["accomplishments"]}
         </Link>
