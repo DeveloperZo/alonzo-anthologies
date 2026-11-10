@@ -78,7 +78,7 @@ run the script. Do not hand-edit the published file.
 
 Four plates changed subject, each to match the prose around its embed:
 - DIA-201: was a say-versus-do table. Now the drift idea from the spec comment in the Part 2 page (a load line repainted as the ship sits lower).
-- DIA-002A: was $600B against about $25B (24 times). Now $750B against $42.6B (18 times), from the section 2 prose.
+- DIA-002A: was $600B against about $25B (24 times). Now $856B against $50B (17 times), from the section 2 prose.
 - DIA-002B: was the dissent argument with lab valuations. Now a closed ring of gears: no actor can slow down alone.
 - DIA-004B: was forces and a money bar. Now a stave tub: a standard holds only to the lowest bar any competitor keeps.
 
@@ -86,7 +86,6 @@ Open points:
 - The 1876 Merchant Shipping Act line on DIA-201 was written from memory. Check it.
 - DIA-005 no longer draws the forming loop or the capability-gap loop. The prose carries them.
 - Body text in the plates renders in Georgia on the site, not Spectral.
-- Section 2 prose says "more than twenty times your annual revenue" and then computes 18 times.
 - `leverage-points.md` calls ASRS "mandatory, anonymous". Source note 38 and DIA-008A say voluntary.
 - DIA-002B's fourth wheel, "investors", is inferred. The prose names labs, hyperscalers and neoclouds as tiers.
 - DIA-007B drops the model names and the old right-hand panel, which are not in the prose, and adds the 87% figure, which is.
