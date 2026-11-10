@@ -1,63 +1,43 @@
-# DIA-005: When the Loops Meet
-
+# DIA-005: A Governor, Unpinned
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-005-loops.svg`
-- **Theme:** Multi-loop interaction around the AI capability stock
-- **Primary audience takeaway:** Frontier capability is shaped by a forming reinforcing loop, an inverted balancing loop, and a weak brake — sharing one stock, none catching up.
+- **Theme:** A balancing loop that senses but does not act, and an alarm wired to the accelerator
+- **Primary audience takeaway:** Every part of a self-correcting system is present and working. The one link that would let it slow itself is missing, and the warning it gives is answered with more fuel.
 
-## Loop nomenclature (internal — NOT displayed on the diagram)
+## What The Diagram Shows
+An engraved plate of a steam engine, in the tradition of nineteenth-century engineering plates. A boiler feeds steam through a throttle valve to a cylinder and flywheel. A flyball governor stands on the steam pipe, driven by a belt from the flywheel, with its balls flung wide and its sleeve raised. A lever runs from the sleeve toward the throttle and stops at an empty eye. The rod that should join it to the throttle crank is drawn only as a rust dashed line. A wire from the same sleeve rings a bell. A heap of coal and a shovel wait by the firebox.
 
-These `L#` labels are working references for our conversations. The diagram renders the loops via color and arrow style only; no R/B/L badges are drawn on the canvas.
+Claim sentence: the reader should see that oversight detects harm and still does not slow the system, and a governor shows it because a governor only regulates an engine through the rod that connects it to the throttle.
 
-- **L1**  — AI capability → training rate. Forming reinforcing loop. Drawn as red curve from the **left-offset port on the stock's bottom edge** back to the training T-fitting. "AI begins to build AI" — capability now feeds back into its own training rate.
-- **L2**  — capability gap → investment & compute → training rate. Working balancing loop. Drawn as black info-links: stock right-offset port → capability gap node → investment & compute node → training T-fitting port. The classic Meadows-style inventory adjustment loop: gap drives investment, investment drives training, training closes the gap.
-- **L3**  — visible harm → investment & compute. Inverted balancing loop (paradoxical reinforcement). Drawn as deeper rust info-link sweeping from harm down across the bottom and back up to investment & compute. Section 5's claim: alarm signals raise spending instead of reducing it. The corrective inverts.
-- **L4**  — visible harm → oversight & response → investment & compute. Weak balancing loop (the intended brake). Drawn as thin sage dotted info-links. The brake is real and closes the loop, but its strength is small relative to L3 and L1, so it cannot bind. Style choice: dotted/thin/low-opacity to indicate weakness — note this is a deviation from strict Meadows convention; we accept the deviation because it adds clarity without inventing new badges.
+## Elements And Flow
+- **Components:**
+  - `a` Boiler: capital and compute.
+  - `b` Flywheel: capability, read as speed.
+  - `c` Governor: oversight. The balls rise with visible harm.
+  - `d` Rod to the throttle, in rust: never pinned.
+  - `e` Bell: rings on harm.
+  - `f` Throttle: open.
+  - `g` Coal: how the bell gets answered.
+- **Relationships:**
+  - Steam runs boiler, throttle, cylinder, flywheel. The belt carries flywheel speed up to the governor.
+  - The governor's output goes to the bell and not to the throttle.
+- **Notable labels or metrics:** none. The plate is structural.
 
-## Why L4 closes to investment & compute (not capability gap)
+## Which loops it draws
+The working labels from the earlier stock-and-flow version still apply.
 
-Real-world oversight does not change the *target* the system aims at — it raises the *cost* of getting there. Liability law, compliance burden, regulatory delay, public scrutiny all act on the funding side: making investment less attractive, slower, more expensive. That is an investment-side intervention, not a goal-setting one. So oversight & response feeds back to investment & compute.
+- **L4, the weak brake** (harm, oversight, investment): the governor and its missing rod.
+- **L3, the inverted loop** (harm raises spending): the bell and the coal.
+- **L1 and L2 are not drawn.** The forming loop where capability feeds its own training, and the capability-gap investment loop, are carried by the prose of section 5.
 
-## Color and style conventions in the SVG
+## How To Read It
+1. Follow the steam from the boiler to the flywheel.
+2. Follow the belt up to the governor and see that it is spinning fast.
+3. Follow the lever left from the sleeve to the rust gap.
+4. Follow the wire right from the sleeve to the bell, then look at the coal.
 
-- **Black info-links**: ordinary causal influence (capability gap chain — L2)
-- **Rust (`#A85B49`)**: forming reinforcing loop (L1)
-- **Deep rust (`#823F30`)**: inverted balancing loop, paradoxical reinforcement (L3)
-- **Sage thin dotted (`#5A8270`, dasharray 2,3, opacity 0.7)**: weak balancing loop (L4)
+## Governance Relevance
+The series title asks whether AI can self-govern. A governor is the original self-governing device, and it works only when its sensing is mechanically tied to the thing it limits. The plate separates two failures that section 5 describes: the brake that does not bind, and the alarm that raises investment.
 
-## Structural plan (current implementation)
-
-Main pipe (left to right): source cloud (*data · chips · talent*) → training T-fitting → AI CAPABILITY stock → deployment T-fitting → sink cloud (*products · users*).
-
-Stock bottom info-link source ports:
-- **Left-offset port (rust outline)**: emits L1
-- **Right-offset port (black outline)**: emits L2's first segment
-
-Training T-fitting bottom port: receives the closing segments of L1 and L2.
-
-Deployment T-fitting bottom port: emits the first segment of L3 and L4 (via visible harm).
-
-## Node naming choices
-
-- **Clouds**: named with small italic labels (*data · chips · talent* on left, *products · users* on right). Clarifies what's outside the system boundary without cluttering the canvas.
-- **Visible harm**: named with the article's term, with a small italic sub-line listing concrete modes (*bias · errors · layoffs*). This addresses the reader's "what kind of harm" question while keeping the structural label short.
-- **Oversight & response**: positioned at y=360 (was y=395) for cleaner spacing relative to the harm node and L4 paths.
-
-## How to read it
-
-1. Start at the AI CAPABILITY stock between training (inflow) and deployment (outflow). Source cloud feeds raw inputs; sink cloud receives products/users.
-2. Notice the two ports on the stock's bottom edge — separate origins for L1 and L2.
-3. Trace L1 (red, curving back from left port to training T) — AI accelerating its own training.
-4. Trace L2 (black) through capability gap → investment & compute → training T — the working balancing loop.
-5. From deployment T, follow to visible harm.
-6. From visible harm, two branches:
-   - L3 (deeper rust, swept low across bottom, back to investment) — the inverted balancing loop.
-   - L4 (thin sage dotted, through oversight & response, back to investment) — the intended brake, weak.
-
-## Governance relevance
-
-Two reinforcing loops climbing share a single stock with two corrective loops that fail in different ways: L3 inverts (alarm becomes spending), L4 is too weak to bind (regulatory pressure exists but is small relative to L1 and L3). The shifting-the-burden archetype names why structural reform pressure does not accumulate — visible safety apparatus absorbs the urgency that would otherwise reach liability law, audits, hard deployment gates.
-
-## Suggested caption
-
-A forming reinforcing loop, an inverted balancing loop, and a weak brake — sharing one stock.
+## Suggested Caption
+DIA-005 · Every part of a self-correcting engine is here and turning. The one rod that would let it slow itself was left off.

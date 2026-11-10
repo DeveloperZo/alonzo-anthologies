@@ -1,0 +1,165 @@
+<svg viewBox="0 0 960 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p5-t p5-d">
+  <title id="p5-t">DIA-005 · A governor, unpinned</title>
+  <desc id="p5-d">An engraved plate of a steam engine. A boiler feeds steam through an open throttle valve to a cylinder and flywheel. A flyball governor spins above the steam pipe with its balls flung wide, but the rod that should connect it to the throttle is missing. A wire from the governor rings a bell instead, and a heap of coal waits by the firebox.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .s { fill: var(--ink); }
+      .h { fill: url(#p5-h); stroke: none; }
+      .hb { fill: url(#p5-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .pipe-o { fill: none; stroke: var(--ink); stroke-width: 15; stroke-linejoin: round; }
+      .pipe-i { fill: none; stroke: var(--paper); stroke-width: 12.2; stroke-linejoin: round; }
+      .acc { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .key { font-size: 17px; font-style: italic; }
+      .leg { font-size: 12.5px; font-style: italic; }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p5-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <clipPath id="p5-boiler"><rect x="60" y="400" width="230" height="100" rx="50"/></clipPath>
+  </defs>
+  <rect width="960" height="740" class="paper"/>
+  <rect x="14" y="14" width="932" height="712" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="700" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE V</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 5 · HOW THESE INTERACT</text>
+  <!-- ground -->
+  <rect x="40" y="560" width="880" height="7" class="h"/>
+  <line x1="40" y1="560" x2="920" y2="560" class="l"/>
+  <!-- belt from flywheel shaft to governor, behind everything -->
+  <line x1="523" y1="257" x2="829" y2="456" class="thin"/>
+  <line x1="517" y1="267" x2="815" y2="480" class="thin"/>
+  <!-- chimney and smoke -->
+  <rect x="78" y="300" width="22" height="104" class="b"/>
+  <rect x="73" y="293" width="32" height="8" class="b"/>
+  <rect x="91" y="301" width="9" height="103" class="h"/>
+  <path d="M 89 286 c -14 -10 6 -22 -4 -34 c -10 -12 12 -20 2 -34 c -8 -11 10 -20 4 -32" class="thin"/>
+  <path d="M 98 280 c 12 -10 -4 -20 8 -30 c 10 -9 -6 -18 6 -30" class="thin"/>
+  <!-- steam pipe: dome up, across, down into the valve chest -->
+  <path d="M 170 380 L 170 300 L 650 300 L 650 398" class="pipe-o"/>
+  <path d="M 170 380 L 170 300 L 650 300 L 650 398" class="pipe-i"/>
+  <rect x="226" y="290" width="6" height="20" class="b"/>
+  <rect x="566" y="290" width="6" height="20" class="b"/>
+  <!-- boiler -->
+  <rect x="150" y="376" width="40" height="30" rx="8" class="b"/>
+  <rect x="60" y="400" width="230" height="100" rx="50" class="b"/>
+  <rect x="60" y="462" width="230" height="40" class="h" clip-path="url(#p5-boiler)"/>
+  <rect x="60" y="400" width="230" height="100" rx="50" class="l"/>
+  <line x1="112" y1="400" x2="112" y2="500" class="thin"/>
+  <line x1="238" y1="400" x2="238" y2="500" class="thin"/>
+  <g class="s">
+    <circle cx="107" cy="414" r="1.4"/><circle cx="107" cy="432" r="1.4"/><circle cx="107" cy="450" r="1.4"/><circle cx="107" cy="468" r="1.4"/><circle cx="107" cy="486" r="1.4"/>
+    <circle cx="243" cy="414" r="1.4"/><circle cx="243" cy="432" r="1.4"/><circle cx="243" cy="450" r="1.4"/><circle cx="243" cy="468" r="1.4"/><circle cx="243" cy="486" r="1.4"/>
+  </g>
+  <!-- firebox -->
+  <rect x="92" y="498" width="166" height="62" class="b"/>
+  <path d="M 150 552 L 150 528 Q 175 508 200 528 L 200 552 Z" class="b"/>
+  <path d="M 160 550 q 2 -12 8 -16 q 0 8 6 10 q 2 -10 8 -14 q 0 12 8 20" class="thin"/>
+  <rect x="92" y="498" width="166" height="6" class="h"/>
+  <!-- coal heap and shovel -->
+  <path d="M 286 560 l 8 -14 l 12 4 l 6 -12 l 14 2 l 6 12 l 12 -2 l 8 10 Z" class="hb"/>
+  <path d="M 300 560 l 6 -8 l 10 4 M 322 546 l 8 8 M 336 552 l 6 6" class="thin"/>
+  <line x1="372" y1="556" x2="352" y2="486" class="l" style="stroke-width:2.2"/>
+  <path d="M 366 558 l 14 -4 l 4 -16 l -14 4 Z" class="b"/>
+  <path d="M 346 486 h 12" class="l"/>
+  <!-- throttle valve, standing open -->
+  <circle cx="340" cy="300" r="17" class="b"/>
+  <line x1="326" y1="300" x2="354" y2="300" class="l" style="stroke-width:2.6"/>
+  <circle cx="340" cy="300" r="2.4" class="s"/>
+  <line x1="340" y1="283" x2="340" y2="268" class="l" style="stroke-width:2.4"/>
+  <line x1="340" y1="268" x2="362" y2="258" class="l" style="stroke-width:2.4"/>
+  <circle cx="362" cy="258" r="3.6" class="b" style="stroke:var(--accent)"/>
+  <!-- governor: pedestal, spindle, pulley -->
+  <rect x="506" y="270" width="28" height="23" class="b"/>
+  <rect x="520" y="270" width="14" height="23" class="h"/>
+  <ellipse cx="520" cy="262" rx="16" ry="5.5" class="b"/>
+  <rect x="517" y="100" width="6" height="158" class="b"/>
+  <!-- arms and links -->
+  <line x1="520" y1="104" x2="452" y2="185" class="l" style="stroke-width:2.2"/>
+  <line x1="520" y1="104" x2="588" y2="185" class="l" style="stroke-width:2.2"/>
+  <line x1="480" y1="152" x2="509" y2="230" class="l"/>
+  <line x1="560" y1="152" x2="531" y2="230" class="l"/>
+  <circle cx="480" cy="152" r="2.2" class="s"/><circle cx="560" cy="152" r="2.2" class="s"/>
+  <circle cx="520" cy="102" r="5" class="s"/>
+  <circle cx="520" cy="91" r="3" class="b"/>
+  <!-- balls, flung wide -->
+  <circle cx="452" cy="185" r="22" class="b"/>
+  <path d="M 432 193 A 22 22 0 0 0 472 193 A 30 30 0 0 1 432 193 Z" class="h"/>
+  <circle cx="588" cy="185" r="22" class="b"/>
+  <path d="M 568 193 A 22 22 0 0 0 608 193 A 30 30 0 0 1 568 193 Z" class="h"/>
+  <path d="M 418 168 q -6 16 0 34 M 410 174 q -4 11 0 22" class="thin"/>
+  <path d="M 622 168 q 6 16 0 34 M 630 174 q 4 11 0 22" class="thin"/>
+  <!-- sleeve, raised -->
+  <rect x="508" y="224" width="24" height="16" class="b"/>
+  <rect x="503" y="236" width="34" height="6" class="b"/>
+  <!-- lever from sleeve to the left, on its pivot post -->
+  <line x1="450" y1="293" x2="450" y2="243" class="l" style="stroke-width:2.2"/>
+  <line x1="503" y1="239" x2="414" y2="239" class="l" style="stroke-width:2.6"/>
+  <circle cx="450" cy="239" r="3.6" class="b"/>
+  <circle cx="414" cy="239" r="3.6" class="b" style="stroke:var(--accent)"/>
+  <!-- the rod that is not there -->
+  <line x1="409" y1="241" x2="367" y2="256" class="acc" stroke-dasharray="3 4"/>
+  <!-- bell: wired to the sleeve instead -->
+  <line x1="650" y1="293" x2="650" y2="120" class="l" style="stroke-width:2.2"/>
+  <path d="M 650 120 H 692 V 128" class="l" style="stroke-width:2.2"/>
+  <path d="M 650 140 L 672 120" class="thin"/>
+  <path d="M 692 128 C 678 130 677 152 667 163 L 717 163 C 707 152 706 130 692 128 Z" class="b"/>
+  <path d="M 700 134 C 705 142 706 154 712 161 L 717 163 C 707 152 706 130 692 128 Z" class="h"/>
+  <circle cx="692" cy="167" r="3" class="s"/>
+  <path d="M 537 239 H 646 M 654 239 V 178 L 666 170" class="thin"/>
+  <circle cx="650" cy="239" r="3" class="b"/>
+  <path d="M 728 138 q 8 10 0 22 M 738 132 q 12 16 0 34 M 748 126 q 16 22 0 46" class="thin"/>
+  <!-- cylinder and valve chest -->
+  <rect x="572" y="466" width="16" height="94" class="b"/>
+  <rect x="652" y="466" width="16" height="94" class="b"/>
+  <rect x="634" y="396" width="32" height="16" class="b"/>
+  <rect x="560" y="410" width="120" height="56" class="b"/>
+  <rect x="560" y="446" width="120" height="20" class="h"/>
+  <rect x="560" y="410" width="120" height="56" class="l"/>
+  <rect x="553" y="405" width="8" height="66" class="b"/>
+  <rect x="679" y="405" width="8" height="66" class="b"/>
+  <!-- piston rod, crosshead, connecting rod -->
+  <line x1="687" y1="438" x2="724" y2="438" class="l" style="stroke-width:3"/>
+  <rect x="722" y="430" width="12" height="16" class="s"/>
+  <!-- flywheel -->
+  <path d="M 822 468 L 800 560 H 844 Z" class="b"/>
+  <circle cx="822" cy="468" r="84" class="hb"/>
+  <circle cx="822" cy="468" r="71" class="b"/>
+  <g class="l" style="stroke-width:2.4">
+    <line x1="822" y1="397" x2="822" y2="539"/>
+    <line x1="760.5" y1="432.5" x2="883.5" y2="503.5"/>
+    <line x1="760.5" y1="503.5" x2="883.5" y2="432.5"/>
+  </g>
+  <circle cx="822" cy="468" r="13" class="b"/>
+  <line x1="822" y1="468" x2="798" y2="454" class="l" style="stroke-width:4.5"/>
+  <line x1="734" y1="438" x2="798" y2="454" class="l" style="stroke-width:3"/>
+  <circle cx="798" cy="454" r="4" class="s"/>
+  <circle cx="822" cy="468" r="3.4" class="s"/>
+  <path d="M 756 392 A 100 100 0 0 1 880 386" class="thin"/>
+  <path d="M 880 386 l -9 -1 M 880 386 l -3 -8" class="thin"/>
+  <!-- keys and leaders -->
+  <text x="262" y="372" class="key">a</text><line x1="262" y1="377" x2="252" y2="402" class="thin"/>
+  <text x="905" y="368" class="key">b</text><line x1="903" y1="374" x2="890" y2="412" class="thin"/>
+  <text x="546" y="76" class="key">c</text><line x1="542" y1="80" x2="526" y2="94" class="thin"/>
+  <text x="383" y="222" class="key" style="fill:var(--accent)">d</text><line x1="387" y1="228" x2="388" y2="243" class="thin" style="stroke:var(--accent)"/>
+  <text x="768" y="112" class="key">e</text><line x1="764" y1="114" x2="722" y2="140" class="thin"/>
+  <text x="300" y="262" class="key">f</text><line x1="308" y1="266" x2="326" y2="288" class="thin"/>
+  <text x="396" y="530" class="key">g</text><line x1="392" y1="530" x2="352" y2="548" class="thin"/>
+  <!-- title, legend, caption -->
+  <text x="480" y="618" text-anchor="middle" class="title">A Governor, Unpinned</text>
+  <text x="480" y="648" text-anchor="middle" class="leg" xml:space="preserve"><tspan font-style="normal">a.</tspan> Boiler: capital and compute.   <tspan font-style="normal">b.</tspan> Flywheel: capability, read as speed.   <tspan font-style="normal">c.</tspan> Governor: oversight. The balls rise with visible harm.</text>
+  <text x="480" y="667" text-anchor="middle" class="leg" xml:space="preserve"><tspan font-style="normal" style="fill:var(--accent)">d.</tspan> <tspan style="fill:var(--accent)">Rod to the throttle: never pinned.</tspan>   <tspan font-style="normal">e.</tspan> Bell: rings on harm.   <tspan font-style="normal">f.</tspan> Throttle: open.   <tspan font-style="normal">g.</tspan> Coal: how the bell gets answered.</text>
+  <line x1="300" y1="682" x2="660" y2="682" class="thin"/>
+  <text x="480" y="702" text-anchor="middle" class="cap">DIA-005 · Every part of a self-correcting engine is here and turning. The one rod that would let it slow itself was left off.</text>
+</svg>

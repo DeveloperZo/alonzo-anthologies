@@ -1,37 +1,45 @@
-# DIA-008B: Where AI Governance Operates On The Leverage Scale
+# DIA-008B: The Long Arm, Unattended
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-008B-leverage-hierarchy.svg`
-- **Theme:** Leverage mismatch in governance design
-- **Primary audience takeaway:** Most current AI governance interventions sit at weak leverage points, while stronger system-shaping points remain mostly undeployed.
+- **Theme:** Where AI governance sits on Meadows' leverage scale
+- **Primary audience takeaway:** Governance instruments cluster where leverage is weakest, close to the fulcrum, and the far end of the arm is nearly bare.
 
 ## What The Diagram Shows
-This diagram places AI governance interventions on Meadows' 12 leverage points, ordered from weak leverage at the top to strong leverage at the bottom. Background bands group the rows into low, medium, high, and transformative zones. Tags mark whether each intervention is deployed, forming, structural, or absent. The pattern is visual before it is verbal: activity clusters around points 10-12, with some mid-level presence, while deeper goal and paradigm levers show little operational build-out.
+An engraved plate of a lever, in the tradition of mechanics-textbook plates of Archimedes. A boulder labeled `THE SYSTEM` sits on the short end. The long arm carries twelve numbered notches, `12` nearest the fulcrum and `1` at the tip, for Meadows' twelve places to intervene. Each small weight hung from a notch is one governance instrument. Solid weights are in force or forming. Dashed outlines are proposed or absent. Brackets under the ground line group the notches into four tiers.
+
+Claim sentence: the reader should see that governance acts where it moves the system least, and a lever shows it because the same weight does more the farther it hangs from the fulcrum.
 
 ## Elements And Flow
 - **Components:**
-  - Twelve numbered leverage rows from 12 (Constants) to 1 (Paradigm)
-  - Four leverage zones: Low, Medium, High Leverage, Transformative
-  - Intervention tags such as content filters, chip supply controls, EU AI Act, and flexicurity labor model
-  - Status legend: Deployed, Forming, Structural, Absent
+  - The load, the fulcrum, and the arm with notches at even spacing.
+  - Weights per notch, taken from the earlier hierarchy diagram:
+    - `12`: three (content filters, policy thresholds, compute limits)
+    - `11`: one (grid capacity limits)
+    - `10`: one (chip supply controls)
+    - `9`: one dashed (near-miss reporting)
+    - `8`: two (AI harm fines, liability insurance)
+    - `7`: none
+    - `6`: one, and one dashed (mandatory disclosure; incident reporting)
+    - `5`: two (EU AI Act, product liability)
+    - `4`: one, and one dashed (EU AI Office; US AI safety mandate)
+    - `3`: one (flexicurity labor model)
+    - `2`: one dashed, in rust (redefine AI's purpose)
+    - `1`: one dashed, in rust (Montreal Protocol model)
+  - Tier brackets: `LOW` 12 to 10, `MEDIUM` 9 to 7, `HIGH` 6 to 4, `TRANSFORMATIVE` 3 to 1.
 - **Relationships:**
-  - Vertical hierarchy indicates increasing leverage moving downward
-  - Horizontal tag placement on each row shows where policy activity is concentrated
-  - Right-side annotations compare where governance currently operates versus where structural change lives
+  - Distance from the fulcrum is leverage.
+  - The weights thin out as the arm lengthens.
 - **Notable labels or metrics:**
-  - Explicit note of "no governance" at feedback gain (point 7)
-  - "Most AI governance operates here" annotation at the top band
-  - "Structural change lives here" annotation in the bottom band
-  - Caption emphasis that points 10-12 carry the lowest leverage
+  - The individual instruments are not named on the plate. They are listed above and in section 8.
 
 ## How To Read It
-1. Read the subtitle to orient the direction: weakest leverage at top, strongest at bottom.
-2. Use the left numbered circles to track Meadows' points from 12 through 1.
-3. Scan each row's intervention tags and their status color to see what is deployed versus missing.
-4. Compare top and bottom zones to evaluate concentration of current governance effort.
-5. Use the right annotations and caption to interpret the policy gap between activity and transformative leverage.
+1. Find the fulcrum and the boulder.
+2. Read the numbers up the arm from `12` to `1`.
+3. Count the weights near the fulcrum, then at the far end.
+4. Read the rust note at the tip.
 
 ## Governance Relevance
-For strategy, this chart shifts the test from rule volume to leverage position. Threshold and flow controls can still matter, especially for near-term risk reduction, but they rarely redirect system behavior on their own. Deeper change usually sits lower in the hierarchy, where authority over rules, system goals, and shared paradigms gets negotiated. The practical read is additive rather than dismissive: keep near-term controls, and pair them with explicit programs that move incentives and governing objectives at deeper points.
+Section 8 is a teaser for Part 2. The plate gives the reader the one idea they need to carry over: the places where a small push would do the most are the places with the least on them.
 
 ## Suggested Caption
-Mapping interventions to Meadows' leverage hierarchy shows AI governance concentrated in low-leverage controls while higher-impact systemic levers remain mostly undeployed.
+DIA-008B · Meadows' twelve places to intervene, drawn as the lever they describe. Each weight is one governance instrument.

@@ -1,0 +1,100 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p2-t p2-d">
+  <title id="p2-t">DIA-201 · A load line, repainted</title>
+  <desc id="p2-d">An engraved plate of a riveted ship's hull seen from the side, with cargo stacked on deck and one more crate being lowered. Four load-line marks are painted on the hull in a rising column. The lowest, dated autumn 2023, is far under water and struck through. Two more above it are also submerged and struck through. The newest, in rust, sits just above the waterline.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hb { fill: url(#p2-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p2-h); stroke: none; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .rivet { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 0.1 10; opacity: 0.7; }
+      .wave { fill: none; stroke: var(--ink); stroke-width: 0.6; }
+      .old { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: butt; opacity: 0.8; }
+      .new { fill: none; stroke: var(--accent); stroke-width: 3.6; stroke-linecap: butt; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .note { font-size: 13.5px; font-style: italic; paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
+      .leg { font-size: 12.5px; font-style: italic; }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p2-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <!-- water: lines close up with depth. tile starts at the waterline, y = 440 -->
+    <pattern id="p2-w" width="60" height="150" patternUnits="userSpaceOnUse" patternTransform="translate(0 440)">
+      <g class="wave">
+        <path d="M 0 20 q 15 -4 30 0 t 30 0"/><path d="M 0 38 q 15 4 30 0 t 30 0"/><path d="M 0 54 q 15 -4 30 0 t 30 0"/><path d="M 0 69 q 15 4 30 0 t 30 0"/>
+        <path d="M 0 83 q 15 -3 30 0 t 30 0"/><path d="M 0 96 q 15 3 30 0 t 30 0"/><path d="M 0 108 q 15 -3 30 0 t 30 0"/><path d="M 0 119 q 15 3 30 0 t 30 0"/>
+        <path d="M 0 129 q 15 -3 30 0 t 30 0"/><path d="M 0 138 q 15 3 30 0 t 30 0"/><path d="M 0 146 q 15 -3 30 0 t 30 0"/>
+      </g>
+    </pattern>
+    <pattern id="p2-s" width="60" height="12" patternUnits="userSpaceOnUse" patternTransform="translate(0 434)">
+      <path d="M 0 6 q 15 -5 30 0 t 30 0" style="fill:none;stroke:var(--ink);stroke-width:1.6"/>
+    </pattern>
+    <clipPath id="p2-hull"><path d="M 40 190 H 900 Q 884 420 826 590 H 40 Z"/></clipPath>
+    <!-- one load-line mark: bar 92 wide with a ring on it, origin at centre -->
+    <g id="p2-mark"><line x1="-46" y1="0" x2="46" y2="0"/><circle cx="0" cy="0" r="11"/></g>
+    <path id="p2-strike" d="M -30 -9 L -14 9 M 14 -9 L 30 9" class="thin" style="stroke-width:1.3"/>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE I</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART II · WHY YOU FEEL HELPLESS</text>
+  <!-- cargo on deck -->
+  <rect x="96" y="124" width="74" height="66" class="b"/><rect x="96" y="170" width="74" height="20" class="h"/><path d="M 96 146 h 74 M 133 124 v 66" class="thin"/>
+  <rect x="170" y="140" width="62" height="50" class="b"/><rect x="216" y="140" width="16" height="50" class="h"/>
+  <rect x="124" y="82" width="64" height="42" class="b"/><path d="M 124 96 h 64" class="thin"/>
+  <rect x="250" y="150" width="56" height="40" class="hb"/>
+  <rect x="650" y="112" width="84" height="78" class="b"/><rect x="650" y="166" width="84" height="24" class="h"/><path d="M 650 138 h 84 M 692 112 v 78" class="thin"/>
+  <rect x="734" y="134" width="64" height="56" class="b"/><rect x="782" y="134" width="16" height="56" class="h"/>
+  <rect x="676" y="70" width="58" height="42" class="hb"/>
+  <rect x="798" y="152" width="50" height="38" class="b"/>
+  <!-- one more coming aboard -->
+  <path d="M 452 62 V 96 M 452 96 L 424 112 M 452 96 L 480 112" class="l"/>
+  <rect x="420" y="112" width="64" height="46" class="b"/><rect x="420" y="142" width="64" height="16" class="h"/><path d="M 420 126 h 64" class="thin"/>
+  <path d="M 404 150 q -5 8 0 16 M 500 150 q 5 8 0 16" class="thin"/>
+  <text x="506" y="128" class="note" style="font-size:13px">cargo taken on to keep pace</text>
+  <!-- hull -->
+  <path d="M 40 190 H 900 Q 884 420 826 590 H 40 Z" class="b"/>
+  <g clip-path="url(#p2-hull)">
+  <line x1="40" y1="198" x2="920" y2="198" class="thin"/>
+  <g class="thin"><line x1="40" y1="250" x2="920" y2="250"/><line x1="40" y1="312" x2="920" y2="312"/><line x1="40" y1="374" x2="920" y2="374"/><line x1="40" y1="436" x2="920" y2="436"/><line x1="40" y1="498" x2="920" y2="498"/><line x1="40" y1="560" x2="920" y2="560"/>
+    <path d="M 210 198 v 52 M 520 198 v 52 M 800 198 v 52 M 120 250 v 62 M 380 250 v 62 M 690 250 v 62 M 250 312 v 62 M 560 312 v 62 M 840 312 v 62 M 250 374 v 62 M 220 436 v 62 M 600 436 v 62 M 860 436 v 62 M 110 498 v 62 M 300 498 v 62 M 740 498 v 62"/>
+  </g>
+  <g class="rivet"><line x1="46" y1="245" x2="916" y2="245"/><line x1="46" y1="255" x2="916" y2="255"/><line x1="46" y1="307" x2="916" y2="307"/><line x1="46" y1="317" x2="916" y2="317"/><line x1="46" y1="369" x2="916" y2="369"/><line x1="46" y1="379" x2="916" y2="379"/><line x1="46" y1="431" x2="916" y2="431"/><line x1="46" y1="493" x2="916" y2="493"/><line x1="46" y1="503" x2="916" y2="503"/><line x1="46" y1="555" x2="916" y2="555"/><line x1="46" y1="565" x2="916" y2="565"/></g>
+  <rect x="40" y="190" width="26" height="400" class="h" style="opacity:0.6"/>
+  <path d="M 878 190 Q 862 420 804 590 H 826 Q 884 420 900 190 Z" class="h" style="opacity:0.7"/>
+  </g>
+  <g class="b"><circle cx="110" cy="222" r="7"/><circle cx="170" cy="222" r="7"/><circle cx="270" cy="222" r="7"/><circle cx="330" cy="222" r="7"/><circle cx="390" cy="222" r="7"/><circle cx="580" cy="222" r="7"/><circle cx="640" cy="222" r="7"/><circle cx="700" cy="222" r="7"/></g>
+  <path d="M 40 176 H 906 M 60 176 v 14 M 320 176 v 14 M 380 176 v 14 M 540 176 v 14 M 600 176 v 14 M 870 176 v 14 M 906 176 L 900 190" class="l"/>
+  <!-- the marks, oldest lowest: 532, 500, 470, then the current one at 426 -->
+  <use href="#p2-mark" x="330" y="532" class="old"/><use href="#p2-strike" x="330" y="532"/>
+  <use href="#p2-mark" x="336" y="500" class="old"/><use href="#p2-strike" x="336" y="500"/>
+  <use href="#p2-mark" x="327" y="470" class="old"/><use href="#p2-strike" x="327" y="470"/>
+  <use href="#p2-mark" x="332" y="426" class="new"/>
+  <!-- water over the hull -->
+  <rect x="40" y="440" width="880" height="150" class="paper" style="opacity:0.45" clip-path="url(#p2-hull)"/>
+  <rect x="40" y="440" width="880" height="150" style="fill:url(#p2-w)"/>
+  <rect x="40" y="434" width="880" height="12" style="fill:url(#p2-s)"/>
+  <path d="M 40 190 H 900 Q 884 420 826 590 H 40 Z" class="l" style="stroke-width:1.8"/>
+  <line x1="40" y1="590" x2="920" y2="590" class="l"/>
+  <!-- notes beside the marks -->
+  <text x="398" y="536" class="note">autumn 2023, first painted: pause if capability outruns control</text>
+  <text x="404" y="504" class="note" style="fill:var(--soft)">painted over</text>
+  <text x="395" y="474" class="note" style="fill:var(--soft)">painted over</text>
+  <text x="400" y="424" class="note" style="fill:var(--accent)">third repainting, by February 2026: no pause. April 2026: a fresh coat, same height.</text>
+  <text x="78" y="424" class="sc" style="fill:var(--ink)">WATERLINE</text>
+  <!-- title, legend, caption -->
+  <text x="480" y="634" text-anchor="middle" class="title">A Load Line, Repainted</text>
+  <text x="480" y="660" text-anchor="middle" class="leg">The Merchant Shipping Act of 1876 made the mark compulsory, and left its height to the owner.</text>
+  <line x1="300" y1="674" x2="660" y2="674" class="thin"/>
+  <text x="480" y="692" text-anchor="middle" class="cap">DIA-201 · A standard set by the one it binds follows the water.</text>
+</svg>

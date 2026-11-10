@@ -21,6 +21,9 @@ what is under `content/`. The AI governance series is the existing example
 
 - Definition: [`_META/Definitions/Diagram.md`](../../_META/Definitions/Diagram.md)
 - Visual style: `customizations/skills/diagramming/SKILL.md`
+- Plate style for published writing: `.claude/commands/svg-diagram.md`.
+  Reference plates are in [`proposals/`](./proposals/). They are not
+  adopted diagrams and are not in the index below.
 
 ## Index
 
@@ -34,5 +37,6 @@ what is under `content/`. The AI governance series is the existing example
 
 ## Changelog
 
+- 2026-11-10: Added `proposals/` with three reference plates and a pointer to the plate style.
 - 2026-10-14: Added DIA-101 to DIA-105 for the Architecture set; definition link moved to `_META/Definitions/`.
 - 2026-10-14: Created.

@@ -1,0 +1,107 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p8-t p8-d">
+  <title id="p8-t">DIA-008B · The long arm, unattended</title>
+  <desc id="p8-d">An engraved plate of a lever. A boulder labelled the system sits on the short end. The long arm carries twelve numbered notches, twelve nearest the fulcrum and one at the far tip, for Meadows' twelve leverage points. Small weights stand for governance instruments. Most hang at notches twelve to ten beside the fulcrum. The far end, notches two and one, carries only dashed outlines.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p8-h); stroke: none; }
+      .hb { fill: url(#p8-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .w { fill: url(#p8-h); stroke: var(--ink); stroke-width: 1.1; stroke-linejoin: round; }
+      .g { fill: none; stroke: var(--soft); stroke-width: 1; stroke-dasharray: 2.5 2.5; }
+      .ga { fill: none; stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 2.5 2.5; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .num { font-size: 14px; text-anchor: middle; }
+      .it { font-size: 13px; font-style: italic; }
+      .tier { font-size: 10.5px; letter-spacing: 0.16em; text-anchor: middle; }
+      .pt { font-size: 12px; font-style: italic; text-anchor: middle; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p8-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <!-- a slotted weight, 14 wide, 11 tall, origin at top centre -->
+    <path id="p8-w" d="M -5.5 0 H 5.5 L 7 11 H -7 Z"/>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VIII</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 8 · WHERE YOU HAVE LEVERAGE</text>
+  <text x="480" y="104" text-anchor="middle" class="it" style="font-size:15px">“Give me a place to stand, and I shall move the earth.”</text>
+  <text x="480" y="123" text-anchor="middle" class="sc">ARCHIMEDES, AS PAPPUS TELLS IT</text>
+  <!-- ground -->
+  <rect x="30" y="500" width="900" height="7" class="h"/>
+  <line x1="30" y1="500" x2="930" y2="500" class="l"/>
+  <!-- the beam: centre line through (250,444), slope -0.26 -->
+  <line x1="108" y1="480.9" x2="892" y2="277.1" style="stroke:var(--ink);stroke-width:15;stroke-linecap:butt"/>
+  <line x1="109.5" y1="480.5" x2="890.5" y2="277.5" style="stroke:var(--paper);stroke-width:12.2;stroke-linecap:butt"/>
+  <line x1="112" y1="482.4" x2="888" y2="280.6" class="thin" style="opacity:0.55"/>
+  <!-- the load -->
+  <path d="M 44 500 L 38 410 L 72 338 L 142 316 L 198 352 L 206 438 L 178 470 L 122 468 L 112 500 Z" class="b"/>
+  <path d="M 142 316 L 198 352 L 206 438 L 178 470 L 152 400 Z" class="h"/>
+  <path d="M 142 316 L 152 400 L 178 470 M 152 400 L 72 338 M 152 400 L 122 468 M 38 410 L 96 430 L 122 468" class="thin"/>
+  <path d="M 44 500 L 38 410 L 72 338 L 142 316 L 198 352 L 206 438 L 178 470 L 122 468 L 112 500 Z" class="l"/>
+  <text x="84" y="392" text-anchor="middle" class="sc" style="fill:var(--ink)">THE</text>
+  <text x="80" y="408" text-anchor="middle" class="sc" style="fill:var(--ink)">SYSTEM</text>
+  <!-- fulcrum -->
+  <path d="M 250 452 L 222 500 H 278 Z" class="hb"/>
+  <text x="250" y="524" text-anchor="middle" class="it">fulcrum</text>
+  <!-- notches and numbers: x = 310 + 50 i, beam centre y = 428.4 - 13 i -->
+  <g class="l">
+    <line x1="310" y1="421" x2="310" y2="415"/><line x1="360" y1="408" x2="360" y2="402"/><line x1="410" y1="395" x2="410" y2="389"/>
+    <line x1="460" y1="382" x2="460" y2="376"/><line x1="510" y1="369" x2="510" y2="363"/><line x1="560" y1="356" x2="560" y2="350"/>
+    <line x1="610" y1="343" x2="610" y2="337"/><line x1="660" y1="330" x2="660" y2="324"/><line x1="710" y1="317" x2="710" y2="311"/>
+    <line x1="760" y1="304" x2="760" y2="298"/><line x1="810" y1="291" x2="810" y2="285"/><line x1="860" y1="278" x2="860" y2="272"/>
+  </g>
+  <text x="310" y="408" class="num">12</text><text x="360" y="395" class="num">11</text><text x="410" y="382" class="num">10</text>
+  <text x="460" y="369" class="num">9</text><text x="510" y="356" class="num">8</text><text x="560" y="343" class="num">7</text>
+  <text x="610" y="330" class="num">6</text><text x="660" y="317" class="num">5</text><text x="710" y="304" class="num">4</text>
+  <text x="760" y="291" class="num">3</text><text x="810" y="278" class="num">2</text><text x="860" y="265" class="num">1</text>
+  <!-- weights. string from beam underside, then weights stacked 13 apart -->
+  <g>
+    <line x1="310" y1="436" x2="310" y2="448" class="thin"/><use href="#p8-w" x="310" y="448" class="w"/><use href="#p8-w" x="310" y="461" class="w"/><use href="#p8-w" x="310" y="474" class="w"/>
+    <line x1="360" y1="423" x2="360" y2="435" class="thin"/><use href="#p8-w" x="360" y="435" class="w"/>
+    <line x1="410" y1="410" x2="410" y2="422" class="thin"/><use href="#p8-w" x="410" y="422" class="w"/>
+    <line x1="460" y1="397" x2="460" y2="409" class="g"/><use href="#p8-w" x="460" y="409" class="g"/>
+    <line x1="510" y1="384" x2="510" y2="396" class="thin"/><use href="#p8-w" x="510" y="396" class="w"/><use href="#p8-w" x="510" y="409" class="w"/>
+    <line x1="610" y1="358" x2="610" y2="370" class="thin"/><use href="#p8-w" x="610" y="370" class="w"/><use href="#p8-w" x="610" y="383" class="g"/>
+    <line x1="660" y1="345" x2="660" y2="357" class="thin"/><use href="#p8-w" x="660" y="357" class="w"/><use href="#p8-w" x="660" y="370" class="w"/>
+    <line x1="710" y1="332" x2="710" y2="344" class="thin"/><use href="#p8-w" x="710" y="344" class="w"/><use href="#p8-w" x="710" y="357" class="g"/>
+    <line x1="760" y1="319" x2="760" y2="331" class="thin"/><use href="#p8-w" x="760" y="331" class="w"/>
+    <line x1="810" y1="306" x2="810" y2="318" class="ga"/><use href="#p8-w" x="810" y="318" class="ga"/>
+    <line x1="860" y1="293" x2="860" y2="305" class="ga"/><use href="#p8-w" x="860" y="305" class="ga"/>
+  </g>
+  <!-- annotations -->
+  <text x="262" y="318" class="it">Most of the weight hangs here,</text>
+  <text x="262" y="335" class="it">a hand's breadth from the fulcrum.</text>
+  <path d="M 284 343 q 2 34 14 58" class="thin"/>
+  <text x="560" y="440" text-anchor="middle" class="it" style="fill:var(--soft);font-size:12px">7: nothing hung.</text>
+  <text x="560" y="455" text-anchor="middle" class="it" style="fill:var(--soft);font-size:12px">The race runs here.</text>
+  <text x="900" y="212" text-anchor="end" class="it" style="fill:var(--accent);font-size:14px">Here a hand would move it.</text>
+  <text x="900" y="230" text-anchor="end" class="it" style="fill:var(--accent);font-size:14px">No hand is here.</text>
+  <!-- tier brackets under the ground, aligned to the notches -->
+  <g class="thin">
+    <path d="M 296 540 v 6 h 128 v -6"/><path d="M 446 540 v 6 h 128 v -6"/><path d="M 596 540 v 6 h 128 v -6"/><path d="M 746 540 v 6 h 128 v -6"/>
+  </g>
+  <text x="360" y="564" class="tier">LOW</text><text x="510" y="564" class="tier">MEDIUM</text><text x="660" y="564" class="tier">HIGH</text><text x="810" y="564" class="tier" style="fill:var(--accent)">TRANSFORMATIVE</text>
+  <text x="360" y="582" class="pt">12 constants · 11 buffers</text><text x="360" y="597" class="pt">10 stocks and flows</text>
+  <text x="510" y="582" class="pt">9 delays · 8 balancing loops</text><text x="510" y="597" class="pt">7 loop gain</text>
+  <text x="660" y="582" class="pt">6 information · 5 rules</text><text x="660" y="597" class="pt">4 who writes the rules</text>
+  <text x="810" y="582" class="pt">3 subsystem goals</text><text x="810" y="597" class="pt">2 system goals · 1 paradigm</text>
+  <!-- key to the weights -->
+  <use href="#p8-w" x="60" y="560" class="w"/><text x="76" y="570" class="it" style="font-size:12px">in force or forming</text>
+  <use href="#p8-w" x="60" y="582" class="g"/><text x="76" y="592" class="it" style="font-size:12px">proposed, absent</text>
+  <!-- title and caption -->
+  <text x="480" y="642" text-anchor="middle" class="title">The Long Arm, Unattended</text>
+  <line x1="300" y1="660" x2="660" y2="660" class="thin"/>
+  <text x="480" y="681" text-anchor="middle" class="cap">DIA-008B · Meadows' twelve places to intervene, drawn as the lever they describe. Each weight is one governance instrument.</text>
+</svg>

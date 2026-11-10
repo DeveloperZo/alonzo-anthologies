@@ -24,9 +24,11 @@ Less than half a decade. One company, one policy, three revisions, gone. A fourt
 The pressure Kaplan names is real. The lab is not lying about it. The system the labs operate inside has its own behavior, and they respond to it like the rest of us do. Knowing that behavior lets you act on it. Not knowing it is how the drift continues.
 
 <!--
-DIA-201 — Drift to Low Performance (placeholder, SVG not yet authored)
+DIA-201: Drift to Low Performance. Authored 2026-11-10 as the plate "A Load Line, Repainted".
+The plate keeps the idea below (a self-imposed standard has no anchor outside the actor)
+and drops the two-line chart. Current spec: diagrams/DIA-201-drift-to-low-performance.md
 
-Spec:
+Original spec, kept for reference:
 - Time on x-axis (autumn 2023 to early 2026), commitment strength on y-axis (high at top).
 - Two lines:
     (a) Stated standard (Anthropic RSP): starts high at v1 (autumn 2023, binding pause language), steps down at v2 (2024), drops sharply at v3 (February 2026, binding pause removed).

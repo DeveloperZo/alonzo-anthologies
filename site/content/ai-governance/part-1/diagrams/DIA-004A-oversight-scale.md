@@ -1,38 +1,37 @@
-# DIA-004A: Industry Capital vs Oversight Scale
+# DIA-004A: The Brake, Drawn to Scale
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-004A-oversight-scale.svg`
 - **Theme:** Oversight capacity is tiny at industry scale
-- **Primary audience takeaway:** On a trillion-dollar axis, oversight budgets and fines nearly disappear beside industry capital.
+- **Primary audience takeaway:** On one honest scale, every oversight budget is thinner than the ink, and the fines need ten thousand times magnification to show at all.
 
 ## What The Diagram Shows
-This horizontal bar chart puts industry and oversight values on one axis capped at `$1.4T`. Industry rows, `Hyperscaler capex 2025` (`$448B`), `OpenAI commitments (8-year)` (`$1.4T`), and `OpenAI valuation (Oct 2025)` (`$852B`), occupy visible span across the panel. Oversight rows, `US CAISI`, `UK AI Security Institute`, and `Global AI fines`, are labeled as less than one pixel at that same range. The circled oversight region connects to a `$100M` zoom inset so those small amounts can be compared without changing units.
+An engraved plate with one long hatched bar across the top: `OpenAI commitments, eight years`, `$1.4 trillion`. Under it, on the same scale and from the same zero line, three more bars are drawn at their true widths: the UK AI Security Institute, US CAISI, and every AI fine ever collected. None is wide enough to see. A magnifying glass at `× 100` shows the UK institute as a sliver and CAISI as a hair. A second glass at `× 10,000` shows the UK bar running off the glass, CAISI as a short bar, and the fines as a rust hairline.
+
+Claim sentence: the reader should see that oversight money is invisible beside commitments, and a true-scale drawing with loupes shows it because the reader has to magnify ten thousand times before the smallest bar exists.
 
 ## Elements And Flow
 - **Components:**
-  - Main chart with one `$0` baseline and ticks to `$1.4T`.
-  - Industry section and Oversight & Enforcement section split by a divider.
-  - Three large red-toned industry bars and three small blue-toned oversight marks.
-  - Circular emphasis around oversight rows in the main panel.
-  - Zoom inset panel titled around a `$100M` oversight scale.
+  - The commitments bar, 800 units wide, with ticks at `$0`, `$350B`, `$700B`, `$1.05T`, `$1.4T`.
+  - Three true-width bars under it. They are in the file at 0.048, 0.0057 and 0.00023 units.
+  - Glass one, `× 100`. Glass two, `× 10,000`.
+  - The fines are the only rust element.
 - **Relationships:**
-  - All rows share a common unit scale in the main panel for strict comparability.
-  - Industry bars extend far right while oversight entries collapse to marker-width bars.
-  - Dashed lines connect the circled area to the inset where proportional differences become legible.
+  - One scale throughout. 800 units is `$1.4T`. Each glass multiplies widths and nothing else.
+  - Sight lines run from the zero line to glass one, and from glass one to glass two.
 - **Notable labels or metrics:**
-  - Industry: `$448B`, `$1.4T`, `$852B`.
-  - Oversight: `$10M`, `$84M / yr`, `~$400K`.
-  - Main-axis ticks: `$0`, `$350B`, `$700B`, `$1.05T`, `$1.4T`.
-  - Inset-axis ticks: `$0`, `$25M`, `$50M`, `$75M`, `$100M`.
+  - `$1.4 trillion`, `$84M a year`, `$10M`, `about $400K`. Carried over unchanged from the earlier bar chart.
+  - Widths under glass: UK 4.8 then 480, CAISI 0.57 then 57, fines 0.023 then 2.3.
 
 ## How To Read It
-1. Read the main axis first and confirm the shared `$1.4T` maximum.
-2. Compare the three industry rows to anchor high-capital scale.
-3. Shift to oversight rows and note each sub-pixel warning on the main panel.
-4. Follow the circle and dashed connectors to the inset.
-5. Compare `UK AISI`, `US CAISI`, and `Global fines` on the `$100M` zoom axis.
+1. Read the long bar and its scale.
+2. Read the three labels under it and look for their bars.
+3. Move to the first glass and see what has appeared.
+4. Move to the second glass and find the rust hairline.
 
 ## Governance Relevance
-The figure makes capacity mismatch concrete. Capital driving deployment sits at vastly larger orders of magnitude than the budgets assigned to supervision and sanctions. In that setup, reactive enforcement often arrives too small to shape system behavior. Governance teams can use this comparison to argue for stronger institutional funding, coordinated cross-border enforcement, and escalation tools tied to deployment scale.
+The figure makes the capacity mismatch concrete without a forced minimum width or a second axis. Capital driving deployment sits many orders of magnitude above the budgets assigned to supervision and sanction. Section 4 uses that to explain why reactive enforcement arrives too small to shape behavior.
+
+What it leaves out: the hyperscaler capex and OpenAI valuation rows from the earlier chart. The UK figure is annual and the commitments figure is cumulative, as before.
 
 ## Suggested Caption
-On the same `$1.4T` scale, industry AI capital spans hundreds of billions while oversight budgets and cumulative fines are only legible in a dedicated zoom.
+DIA-004A · One scale throughout. It takes ten thousand diameters before the fines show as a hairline.
