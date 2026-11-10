@@ -1,9 +1,9 @@
 // src/components/Resume/ResumeView.tsx
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import quests from '../../data/quests.data';
 import type { Quest } from '../../data/quests.data';
-import { coreCompetencies, professionalSummary, targetRole, technicalSkills } from '../../data/profile.data';
+import { professionalSummary, skills, targetRole } from '../../data/profile.data';
 import './ResumeView.css';
 import { generateResumePdfFromDom } from '../../utils/pdfGenerator';
 
@@ -13,6 +13,10 @@ const formatDate = (date: Date): string => {
   // Use UTC methods to avoid timezone conversion issues
   return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 };
+
+// Ongoing roles are stored with an end date far in the future.
+const formatPeriod = (start: Date, end: Date): string =>
+  `${formatDate(start)} – ${end.getFullYear() >= 2030 ? 'Present' : formatDate(end)}`;
 
 const isExperienceQuest = (quest: Quest): boolean =>
   quest.type === 'career' &&
@@ -32,6 +36,11 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
   const { theme } = useTheme()!;
   // The exported file is sleek. printMode is the package page. The on-screen page keeps the current mode.
   const resumeTheme = printMode ? 'work' : theme;
+
+  // The browser writes the page title into the PDF's /Title, which some ATS show as the document name.
+  useEffect(() => {
+    if (printMode) document.title = 'Alonzo Williams Resume';
+  }, [printMode]);
   
   // Transform quest data into resume format
   const resumeData = useMemo(() => {
@@ -126,20 +135,9 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
           <p className="summary-text">{professionalSummary}</p>
         </section>
         <section className="resume-section">
-          <h2>Core Competencies</h2>
-          <div className="competencies-grid">
-            {coreCompetencies.map((competency) => (
-              <div className="competency-item" key={competency.title}>
-                <h3>{competency.title}</h3>
-                <p>{competency.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section className="resume-section">
-          <h2>Technical Skills</h2>
+          <h2>Skills</h2>
           <ul className="technical-skills">
-            {technicalSkills.map((row) => (
+            {skills.map((row) => (
               <li key={row.group}>
                 <strong>{row.group}:</strong> {row.items.join(', ')}
               </li>
@@ -151,23 +149,28 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
           <h2>Professional Experience</h2>
           {resumeData.experience.map((job) => (
             <div key={job.id} className="experience-item">
-              <div className="job-header">
-                <h3>{job.role}</h3>
-                <div className="company-period">
-                  <span className="company-name">{job.company}</span>
-                  <span className="job-period">
-                    {formatDate(job.startDate)}
-                    {' – '}
-                    {job.endDate.getFullYear() >= 2030
-                      ? 'Present'
-                      : formatDate(job.endDate)}
-                  </span>
+              {printMode ? (
+                // One line with text separators, so extractors that read in reading order keep title, employer and dates apart.
+                <div className="job-header">
+                  <h3>
+                    {job.role}
+                    <span className="company-period">{' | '}{job.company}{' | '}{formatPeriod(job.startDate, job.endDate)}</span>
+                  </h3>
                 </div>
-              </div>
+              ) : (
+                <div className="job-header">
+                  <h3>{job.role}</h3>
+                  <div className="company-period">
+                    <span className="company-name">{job.company}</span>
+                    <span className="job-period">{formatPeriod(job.startDate, job.endDate)}</span>
+                  </div>
+                </div>
+              )}
               {job.overview ? <p className="role-overview">{job.overview}</p> : null}
               <ul className="accomplishment-bullets">
                 {job.accomplishments.map((acc, i) => (
-                  <li key={i}>{acc}</li>
+                  // The printed bullet is a text character so parsers see where each bullet starts.
+                  <li key={i}>{printMode && '• '}{acc}</li>
                 ))}
               </ul>
             </div>
@@ -180,13 +183,20 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
             <h2>Education</h2>
             {resumeData.education.map((edu, index) => (
               <div key={index} className="education-item">
-                <h3>{edu.degree}</h3>
-                <div className="institution-period">
-                  <span className="institution-name">{edu.institution}</span>
-                  <span className="education-period">
-                    {new Date(edu.startDate).getFullYear()} – {new Date(edu.endDate).getFullYear()}
-                  </span>
-                </div>
+                {printMode ? (
+                  <h3>
+                    {edu.degree}
+                    <span className="institution-period">{' | '}{edu.institution}{' | '}{formatPeriod(edu.startDate, edu.endDate)}</span>
+                  </h3>
+                ) : (
+                  <>
+                    <h3>{edu.degree}</h3>
+                    <div className="institution-period">
+                      <span className="institution-name">{edu.institution}</span>
+                      <span className="education-period">{formatPeriod(edu.startDate, edu.endDate)}</span>
+                    </div>
+                  </>
+                )}
                 {edu.details && edu.details.some((detail) => detail !== edu.degree) && (
                   <ul className="education-details">
                     {edu.details.filter((detail) => detail !== edu.degree).map((detail, i) => (
@@ -215,13 +225,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
                         project.meta
                       )}
                     </span>
-                    <span className="job-period">
-                      {formatDate(project.startDate)}
-                      {' – '}
-                      {project.endDate.getFullYear() >= 2030
-                        ? 'Present'
-                        : formatDate(project.endDate)}
-                    </span>
+                    <span className="job-period">{formatPeriod(project.startDate, project.endDate)}</span>
                   </div>
                 </div>
                 {project.overview ? <p className="role-overview">{project.overview}</p> : null}

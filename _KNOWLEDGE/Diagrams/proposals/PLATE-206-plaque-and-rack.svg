@@ -1,0 +1,113 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p206-t p206-d">
+  <title id="p206-t">DIA-206 · The plaque and the rack</title>
+  <desc id="p206-d">An engraved plate of the wall inside a works entrance. High on the wall a polished brass plaque, fixed with four screws, is engraved FOR THE BENEFIT OF ALL. Below it hang a time clock and a time-card rack with nine pockets. Five pockets hold a card. Four are empty and drawn in rust, and the four pulled cards stand in a wire bin on the floor beneath. The plaque is the stated purpose. The rack is what was done.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p206-h); stroke: none; }
+      .hb { fill: url(#p206-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .ink { fill: var(--ink); }
+      .ab { fill: var(--paper); stroke: var(--accent); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+      .al { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-linecap: round; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-linecap: round; }
+      .af { fill: var(--accent); }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 14.5px; font-style: italic; }
+      .ita { font-size: 14.5px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .eng { font-size: 20px; font-weight: 600; letter-spacing: 0.17em; }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <pattern id="p206-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VI</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART II · GOALS, ASSUMPTIONS, AND COORDINATION</text>
+  <!-- floor -->
+  <rect x="30" y="574" width="900" height="7" class="h"/>
+  <line x1="30" y1="574" x2="930" y2="574" class="l"/>
+  <!-- the plaque: brass plate 480 by 68, bevelled, four screws -->
+  <rect x="247" y="81" width="480" height="68" class="h"/>
+  <rect x="240" y="74" width="480" height="68" class="b"/>
+  <path d="M 240 142 L 248 134 H 712 L 720 142 Z M 720 74 L 712 82 V 134 L 720 142 Z" class="h"/>
+  <rect x="248" y="82" width="464" height="52" class="l" style="stroke-width:1"/>
+  <path d="M 240 74 L 248 82 M 720 74 L 712 82 M 240 142 L 248 134 M 720 142 L 712 134" class="thin"/>
+  <rect x="240" y="74" width="480" height="68" class="l" style="stroke-width:2"/>
+  <path d="M 282 90 H 678 M 282 126 H 678" class="thin"/>
+  <g transform="translate(262 95) rotate(35)"><circle r="4.6" class="b"/><line x1="-3.3999999999999995" y1="0" x2="3.3999999999999995" y2="0" class="l"/></g><g transform="translate(698 95) rotate(-20)"><circle r="4.6" class="b"/><line x1="-3.3999999999999995" y1="0" x2="3.3999999999999995" y2="0" class="l"/></g><g transform="translate(262 121) rotate(70)"><circle r="4.6" class="b"/><line x1="-3.3999999999999995" y1="0" x2="3.3999999999999995" y2="0" class="l"/></g><g transform="translate(698 121) rotate(10)"><circle r="4.6" class="b"/><line x1="-3.3999999999999995" y1="0" x2="3.3999999999999995" y2="0" class="l"/></g>
+  <text x="480" y="115" text-anchor="middle" class="eng">FOR THE BENEFIT OF ALL</text>
+  <!-- the time clock: case 146 wide, dial centre (167, 252) -->
+  <path d="M 100 176 H 246 V 194 H 254 V 322 H 246 V 362 H 236 V 562 H 244 V 574 H 228 V 362 H 100 Z" class="h"/>
+  <rect x="98" y="168" width="138" height="8" class="b"/>
+  <rect x="86" y="176" width="162" height="12" class="b"/>
+  <rect x="94" y="188" width="146" height="128" class="b"/>
+  <rect x="227" y="189" width="12" height="126" class="h"/>
+  <circle cx="167" cy="252" r="57" class="b" style="stroke-width:2"/>
+  <circle cx="167" cy="252" r="50" class="l"/>
+  <path d="M 167 214 L 167 206 M 186 219.1 L 190 212.2 M 199.9 233 L 206.8 229 M 205 252 L 213 252 M 199.9 271 L 206.8 275 M 186 284.9 L 190 291.8 M 167 290 L 167 298 M 148 284.9 L 144 291.8 M 134.1 271 L 127.2 275 M 129 252 L 121 252 M 134.1 233 L 127.2 229 M 148 219.1 L 144 212.2 " class="l" style="stroke-width:2"/>
+  <path d="M 171.5 209.2 L 171.8 206.3 M 175.9 209.9 L 176.6 207 M 180.3 211.1 L 181.2 208.3 M 184.5 212.7 L 185.7 210 M 192.3 217.2 L 194 214.8 M 195.8 220 L 197.8 217.8 M 199 223.2 L 201.2 221.2 M 201.8 226.7 L 204.2 225 M 206.3 234.5 L 209 233.3 M 207.9 238.7 L 210.7 237.8 M 209.1 243.1 L 212 242.4 M 209.8 247.5 L 212.7 247.2 M 209.8 256.5 L 212.7 256.8 M 209.1 260.9 L 212 261.6 M 207.9 265.3 L 210.7 266.2 M 206.3 269.5 L 209 270.7 M 201.8 277.3 L 204.2 279 M 199 280.8 L 201.2 282.8 M 195.8 284 L 197.8 286.2 M 192.3 286.8 L 194 289.2 M 184.5 291.3 L 185.7 294 M 180.3 292.9 L 181.2 295.7 M 175.9 294.1 L 176.6 297 M 171.5 294.8 L 171.8 297.7 M 162.5 294.8 L 162.2 297.7 M 158.1 294.1 L 157.4 297 M 153.7 292.9 L 152.8 295.7 M 149.5 291.3 L 148.3 294 M 141.7 286.8 L 140 289.2 M 138.2 284 L 136.2 286.2 M 135 280.8 L 132.8 282.8 M 132.2 277.3 L 129.8 279 M 127.7 269.5 L 125 270.7 M 126.1 265.3 L 123.3 266.2 M 124.9 260.9 L 122 261.6 M 124.2 256.5 L 121.3 256.8 M 124.2 247.5 L 121.3 247.2 M 124.9 243.1 L 122 242.4 M 126.1 238.7 L 123.3 237.8 M 127.7 234.5 L 125 233.3 M 132.2 226.7 L 129.8 225 M 135 223.2 L 132.8 221.2 M 138.2 220 L 136.2 217.8 M 141.7 217.2 L 140 214.8 M 149.5 212.7 L 148.3 210 M 153.7 211.1 L 152.8 208.3 M 158.1 209.9 L 157.4 207 M 162.5 209.2 L 162.2 206.3 " class="thin"/>
+  <path d="M 167 252 L 167 214" class="l" style="stroke-width:2.2"/>
+  <path d="M 167 252 L 153.5 275.4" class="l" style="stroke-width:3.2"/>
+  <circle cx="167" cy="252" r="3.6" class="ink"/>
+  <path d="M 132 222 A 46 46 0 0 1 150 209" class="thin" style="opacity:0.6"/>
+  <!-- the throat where a card is stamped, and the lever -->
+  <rect x="94" y="316" width="146" height="40" class="b"/>
+  <rect x="227" y="317" width="12" height="38" class="h"/>
+  <path d="M 116 324 H 208 L 202 348 H 122 Z" class="b"/>
+  <rect x="128" y="332" width="68" height="5" class="ink"/>
+  <rect x="240" y="329" width="16" height="12" class="b"/><circle cx="262" cy="335" r="7" class="b"/><circle cx="262" cy="335" r="2.4" class="ink"/>
+  <!-- pendulum case -->
+  <rect x="104" y="356" width="126" height="200" class="b"/>
+  <rect x="219" y="357" width="10" height="198" class="h"/>
+  <rect x="116" y="368" width="94" height="176" class="l"/>
+  <rect x="120" y="372" width="86" height="168" class="thin"/>
+  <path d="M 164 372 L 154.4 492" class="l" style="stroke-width:1.8"/>
+  <circle cx="153" cy="508" r="16" class="hb"/><circle cx="153" cy="508" r="6" class="b"/>
+  <path d="M 192 380 l -14 14 M 200 386 l -22 22" class="thin" style="opacity:0.6"/>
+  <rect x="96" y="556" width="142" height="18" class="b"/>
+  <rect x="96" y="566" width="142" height="8" class="h"/>
+  <line x1="96" y1="562" x2="238" y2="562" class="thin"/>
+  <!-- the rack: slot i at x = 312 + 64 i, i = 0 to 8. filled 1, 2, 4, 5, 7; empty 3, 6, 8, 9 -->
+  <path d="M 898 194 H 912 V 402 H 294 V 394 H 898 Z" class="h"/>
+  <rect x="292" y="198" width="606" height="184" class="b"/>
+  <rect x="302" y="200" width="586" height="180" class="h"/>
+  <rect x="302" y="200" width="586" height="180" class="l"/>
+  <!-- slot 1: card --><rect x="312" y="311" width="54" height="8" class="b"/><g transform="translate(316 212)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="b"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="thin" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 M 7 80.5 h 11 M 28 80.5 h 11 " class="thin" style="stroke-width:1.5;opacity:0.85"/></g><path d="M 312 318 H 329 A 10 10 0 0 0 349 318 H 366 V 368 H 312 Z" class="b"/><rect x="356" y="319" width="9" height="48" class="h"/><path d="M 312 318 H 329 A 10 10 0 0 0 349 318 H 366 V 368 H 312 Z" class="l"/><g class="ink"><circle cx="318" cy="362" r="1.5"/><circle cx="351" cy="362" r="1.5"/></g><!-- slot 2: card --><rect x="376" y="311" width="54" height="8" class="b"/><g transform="translate(380 215)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="b"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="thin" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 " class="thin" style="stroke-width:1.5;opacity:0.85"/></g><path d="M 376 318 H 393 A 10 10 0 0 0 413 318 H 430 V 368 H 376 Z" class="b"/><rect x="420" y="319" width="9" height="48" class="h"/><path d="M 376 318 H 393 A 10 10 0 0 0 413 318 H 430 V 368 H 376 Z" class="l"/><g class="ink"><circle cx="382" cy="362" r="1.5"/><circle cx="415" cy="362" r="1.5"/></g><!-- slot 3: empty --><rect x="440" y="309" width="54" height="22" class="af"/><path d="M 440 318 H 457 A 10 10 0 0 0 477 318 H 494 V 368 H 440 Z" class="ab"/><rect x="484" y="319" width="9" height="48" class="h"/><path d="M 440 318 H 457 A 10 10 0 0 0 477 318 H 494 V 368 H 440 Z" class="al" style="stroke-width:2.2"/><g class="af"><circle cx="446" cy="362" r="1.5"/><circle cx="479" cy="362" r="1.5"/></g><!-- slot 4: card --><rect x="504" y="311" width="54" height="8" class="b"/><g transform="translate(508 216)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="b"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="thin" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 " class="thin" style="stroke-width:1.5;opacity:0.85"/></g><path d="M 504 318 H 521 A 10 10 0 0 0 541 318 H 558 V 368 H 504 Z" class="b"/><rect x="548" y="319" width="9" height="48" class="h"/><path d="M 504 318 H 521 A 10 10 0 0 0 541 318 H 558 V 368 H 504 Z" class="l"/><g class="ink"><circle cx="510" cy="362" r="1.5"/><circle cx="543" cy="362" r="1.5"/></g><!-- slot 5: card --><rect x="568" y="311" width="54" height="8" class="b"/><g transform="translate(572 214)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="b"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="thin" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 M 7 80.5 h 11 M 28 80.5 h 11 " class="thin" style="stroke-width:1.5;opacity:0.85"/></g><path d="M 568 318 H 585 A 10 10 0 0 0 605 318 H 622 V 368 H 568 Z" class="b"/><rect x="612" y="319" width="9" height="48" class="h"/><path d="M 568 318 H 585 A 10 10 0 0 0 605 318 H 622 V 368 H 568 Z" class="l"/><g class="ink"><circle cx="574" cy="362" r="1.5"/><circle cx="607" cy="362" r="1.5"/></g><!-- slot 6: empty --><rect x="632" y="309" width="54" height="22" class="af"/><path d="M 632 318 H 649 A 10 10 0 0 0 669 318 H 686 V 368 H 632 Z" class="ab"/><rect x="676" y="319" width="9" height="48" class="h"/><path d="M 632 318 H 649 A 10 10 0 0 0 669 318 H 686 V 368 H 632 Z" class="al" style="stroke-width:2.2"/><g class="af"><circle cx="638" cy="362" r="1.5"/><circle cx="671" cy="362" r="1.5"/></g><!-- slot 7: card --><rect x="696" y="311" width="54" height="8" class="b"/><g transform="translate(700 215)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="b"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="thin" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 M 7 80.5 h 11 M 28 80.5 h 11 M 7 90.5 h 11 M 28 90.5 h 11 " class="thin" style="stroke-width:1.5;opacity:0.85"/></g><path d="M 696 318 H 713 A 10 10 0 0 0 733 318 H 750 V 368 H 696 Z" class="b"/><rect x="740" y="319" width="9" height="48" class="h"/><path d="M 696 318 H 713 A 10 10 0 0 0 733 318 H 750 V 368 H 696 Z" class="l"/><g class="ink"><circle cx="702" cy="362" r="1.5"/><circle cx="735" cy="362" r="1.5"/></g><!-- slot 8: empty --><rect x="760" y="309" width="54" height="22" class="af"/><path d="M 760 318 H 777 A 10 10 0 0 0 797 318 H 814 V 368 H 760 Z" class="ab"/><rect x="804" y="319" width="9" height="48" class="h"/><path d="M 760 318 H 777 A 10 10 0 0 0 797 318 H 814 V 368 H 760 Z" class="al" style="stroke-width:2.2"/><g class="af"><circle cx="766" cy="362" r="1.5"/><circle cx="799" cy="362" r="1.5"/></g><!-- slot 9: empty --><rect x="824" y="309" width="54" height="22" class="af"/><path d="M 824 318 H 841 A 10 10 0 0 0 861 318 H 878 V 368 H 824 Z" class="ab"/><rect x="868" y="319" width="9" height="48" class="h"/><path d="M 824 318 H 841 A 10 10 0 0 0 861 318 H 878 V 368 H 824 Z" class="al" style="stroke-width:2.2"/><g class="af"><circle cx="830" cy="362" r="1.5"/><circle cx="863" cy="362" r="1.5"/></g>
+  <rect x="286" y="186" width="618" height="14" class="b" style="stroke-width:1.8"/>
+  <line x1="286" y1="196" x2="904" y2="196" class="thin"/>
+  <rect x="286" y="380" width="618" height="14" class="b" style="stroke-width:1.8"/>
+  <rect x="287" y="388" width="616" height="5" class="h"/>
+  <g transform="translate(296 193) rotate(30)"><circle r="3.6" class="b"/><line x1="-2.4000000000000004" y1="0" x2="2.4000000000000004" y2="0" class="l"/></g><g transform="translate(894 193) rotate(-40)"><circle r="3.6" class="b"/><line x1="-2.4000000000000004" y1="0" x2="2.4000000000000004" y2="0" class="l"/></g><g transform="translate(296 387) rotate(80)"><circle r="3.6" class="b"/><line x1="-2.4000000000000004" y1="0" x2="2.4000000000000004" y2="0" class="l"/></g><g transform="translate(894 387) rotate(15)"><circle r="3.6" class="b"/><line x1="-2.4000000000000004" y1="0" x2="2.4000000000000004" y2="0" class="l"/></g>
+  <!-- the wire bin with the four pulled cards -->
+  <path d="M 670 500 A 100 10 0 0 1 870 500" class="l"/>
+  <g transform="translate(749 545.2) rotate(-40) translate(-23 -150)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="ab"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="la" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 M 7 80.5 h 11 M 28 80.5 h 11 M 7 90.5 h 11 M 28 90.5 h 11 " class="la" style="stroke-width:1.5;opacity:0.85"/></g><g transform="translate(763 553.3) rotate(-17) translate(-23 -150)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="ab"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="la" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 " class="la" style="stroke-width:1.5;opacity:0.85"/></g><g transform="translate(777 554.4) rotate(14) translate(-23 -150)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="ab"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="la" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 " class="la" style="stroke-width:1.5;opacity:0.85"/></g><g transform="translate(791 546.2) rotate(37) translate(-23 -150)"><path d="M 0 0 H 38 L 46 8 V 150 H 0 Z" class="ab"/><path d="M 4 14 H 42 M 23 14 V 142 M 4 24 H 42 M 4 34 H 42 M 4 44 H 42 M 4 54 H 42 M 4 64 H 42 M 4 74 H 42 M 4 84 H 42 M 4 94 H 42 M 4 104 H 42 M 4 114 H 42 M 4 124 H 42 M 4 134 H 42 " class="la" style="opacity:0.5"/><path d="M 7 20.5 h 11 M 28 20.5 h 11 M 7 30.5 h 11 M 28 30.5 h 11 M 7 40.5 h 11 M 28 40.5 h 11 M 7 50.5 h 11 M 28 50.5 h 11 M 7 60.5 h 11 M 28 60.5 h 11 M 7 70.5 h 11 M 28 70.5 h 11 M 7 80.5 h 11 M 28 80.5 h 11 " class="la" style="stroke-width:1.5;opacity:0.85"/></g>
+  <path d="M 870 500 L 832 566 M 862.4 503.8 L 827.3 568.3 M 840.7 507.1 L 813.8 570.2 M 808.3 509.2 L 793.7 571.5 M 770 510 L 770 572 M 731.7 509.2 L 746.3 571.5 M 699.3 507.1 L 726.2 570.2 M 677.6 503.8 L 712.7 568.3 M 670 500 L 708 566 " class="l" style="stroke-width:1.3"/>
+  <path d="M 689 533 A 81 8 0 0 0 851 533" class="l" style="stroke-width:1.1"/>
+  <path d="M 708 566 A 62 6 0 0 0 832 566" class="l" style="stroke-width:2"/>
+  <path d="M 670 500 A 100 10 0 0 0 870 500" class="l" style="stroke-width:2.6"/>
+  <!-- notes -->
+  <text x="746" y="114" class="it" style="font-size:17px">the words</text>
+  <line x1="730" y1="108" x2="740" y2="108" class="thin"/>
+  <text x="746" y="170" class="it" style="font-size:17px">the actions</text>
+  <path d="M 740 166 q -8 3 -10 16" class="thin"/>
+  <text x="312" y="446" class="ita">customer support at one firm, 2025:</text>
+  <text x="312" y="465" class="ita">nine thousand heads to about five thousand</text>
+  <path d="M 462 430 q 8 -14 6 -32" class="la"/>
+  <text x="480" y="603" text-anchor="middle" class="sm">Drawn to that count: nine slots, five cards.</text>
+  <text x="480" y="645" text-anchor="middle" class="title">The Plaque and the Rack</text>
+  <line x1="300" y1="662" x2="660" y2="662" class="thin"/>
+  <text x="480" y="683" text-anchor="middle" class="cap">DIA-206 · Read the purpose from the rack, not from the plaque.</text>
+</svg>

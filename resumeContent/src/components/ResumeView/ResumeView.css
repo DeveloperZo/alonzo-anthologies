@@ -150,32 +150,6 @@
     color: var(--primary-color);
     border: 1px solid var(--border-color);
   }
-  .competencies-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .competency-item {
-    background-color: #f8f8f8;
-    padding: 8px;
-    border-radius: 4px;
-    border-left: 3px solid #8b0000;
-  }
-  
-  .competency-item h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .competency-item p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #555;
-  }
   .contact-info span {
     display: block;
   }
@@ -300,11 +274,22 @@
     margin: 0 0 1px;
   }
 
-  /* Dates sit right after the company, not flush right, so text extractors do not read them as a second column. */
-  .resume-print .company-period,
-  .resume-print .institution-period {
-    justify-content: flex-start;
-    gap: 14px;
+  /* Employer and dates share the title line, after text separators, so extractors keep the fields apart. */
+  .resume-print h3 .company-period,
+  .resume-print h3 .institution-period {
+    display: inline;
+    font-weight: 400;
+  }
+
+  /* The bullet character is printed as text, so the list marker is turned off and the indent kept as a hanging one. */
+  .resume-print .accomplishment-bullets {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  .resume-print .accomplishment-bullets li {
+    padding-left: 10px;
+    text-indent: -10px;
   }
 
   .resume-print .role-overview {
@@ -321,38 +306,6 @@
   .resume-print .summary-text {
     text-align: left;
     margin-bottom: 0;
-  }
-
-  .resume-print .competencies-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 4px 14px;
-  }
-
-  .resume-print .competency-item {
-    background: transparent;
-    padding: 0 0 0 8px;
-    border-radius: 0;
-    border-left: 2px solid #8b0000;
-  }
-
-  .resume-print .competency-item h3 {
-    display: inline;
-    margin: 0;
-    font-size: 12.5px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  .resume-print .competency-item h3::after {
-    content: ". ";
-  }
-
-  .resume-print .competency-item p {
-    display: inline;
-    margin: 0;
-    font-size: 12.5px;
-    line-height: 1.4;
-    color: #444;
   }
 
   /* Target role line. Rendered only when a tailoring overlay sets one. */
@@ -394,7 +347,6 @@
     }
 
     .resume-print-page li,
-    .resume-print-page .competency-item,
     .resume-print-page .job-header,
     .resume-print-page .institution-period,
     .resume-print-page .resume-section h2 {
@@ -417,7 +369,7 @@
     }
   }
 
-  /* Phones: the header stacks so the download button sits under the contact details, and competencies use one column. */
+  /* Phones: the header stacks so the download button sits under the contact details. */
   @media screen and (max-width: 600px) {
     .resume-container,
     .work .resume-container {
@@ -428,9 +380,5 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 12px;
-    }
-
-    .competencies-grid {
-      grid-template-columns: 1fr;
     }
   }

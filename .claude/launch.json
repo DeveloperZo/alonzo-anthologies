@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["start", "--prefix", "resumeContent"],
       "port": 3000
+    },
+    {
+      "name": "site",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd site && npx quartz build --serve"],
+      "port": 8080
     }
   ]
 }

@@ -8,6 +8,8 @@ draft: false
 
 These levers are the most common targets of "AI safety" activity because they're the most accessible. They address specific problems without changing the underlying incentives, competitive dynamics, or goals. A system absorbs parameter changes and continues.
 
+![](/ai-governance/part-2/diagrams/DIA-203-stone-in-stream.svg)
+
 ---
 
 ## Constants & Parameters

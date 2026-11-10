@@ -24,7 +24,7 @@ Less than three years. One company, one policy, four revisions, gone. Four more 
 The pressure Kaplan names is real. The lab is not lying about it. The system the labs operate inside has its own behavior, and they respond to it like the rest of us do. Knowing that behavior lets you act on it. Not knowing it is how the drift continues.
 
 <!--
-DIA-201: Drift to Low Performance. Authored 2026-11-10 as the plate "A Load Line, Repainted".
+DIA-201: Drift to Low Performance. Redrawn 2026-11-10 as the plate "The Bar, Lowered".
 The plate keeps the idea below (a self-imposed standard has no anchor outside the actor)
 and drops the two-line chart. Current spec: diagrams/DIA-201-drift-to-low-performance.md
 

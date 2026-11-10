@@ -38,7 +38,7 @@ export const baseQuests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Manager, Experience Platform',
   description:
-    "Hired and led a team modernizing Progyny's benefits platform on AWS for 7 million covered lives",
+    "Modernizing Progyny's benefits platform on AWS for 7 million covered lives.",
   summary:
     "I hired my own team here. Beyond that team, I've helped shape the SDLC practices the wider engineering organization works by.",
   type: 'career',
@@ -130,7 +130,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'component-library',
       description:
-        'Built a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
+        'Created a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that component libraries still deliver value even when implemented late in a project',
@@ -140,7 +140,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and implementation standards for five engineering teams while staying hands-on as a full-stack architect for one of them on Azure.',
+        'Set the UI architecture and implementation standards for every team while staying hands-on as a full-stack architect for one of them on Azure.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -159,7 +159,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'requirements',
       description:
-        'Turned business requirements into designs, specs, and stories the teams could pick up and build.',
+        'Turned business requirements into technical documentation (designs, specs, and stories) so the teams could build one product the same way.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that translating requirements into architecture and stories closes the gap between business intent and delivery',
@@ -208,7 +208,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'stack',
       description:
-        'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, often learning the stack on the engagement.',
+        'Owned the cloud architecture on every engagement on Azure and AWS, from C#/.NET with SQL Server and Entity Framework to stacks learned on the job.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -237,7 +237,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'payments',
       description:
-        "Certified a client's commerce system with a third-party payment processor so its applications could take payments securely.",
+        "Certified a client's commerce system with FreedomPay so its applications could take payments securely.",
       role: 'Software Architect',
       learnings: [
         'Learned how to build IdP integrations from the ground up',
@@ -264,7 +264,7 @@ export const baseQuests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    'Refactored a 350k-line lending platform on Azure, then led engineering through an executive transition',
+    'Joined as team lead on a lending platform on Azure while sprint velocity was running negative.',
   summary:
     'I joined as a team lead while sprint velocity was running negative. When the director of engineering was let go, I stepped in as interim director until the company hired a CTO.',
   type: 'career',
@@ -276,7 +276,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ceo-investors',
       description:
-        'Represented engineering to the CEO and investors through the executive transition and advised them on technical strategy.',
+        'Stepped in as interim director of engineering after the director was let go, communicating technical strategy to the CEO and investors until the CTO was hired.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that technical leadership requires communication as much as technical proficiency',
@@ -306,20 +306,11 @@ export const baseQuests: Quest[] = [
     {
       key: 'dotnet-core',
       description:
-        'Moved the applications from .NET to .NET Core on day one, improving performance and setting the technical direction for the team.',
+        'Moved the applications from .NET to .NET Core starting on the first day in the role, improving performance and setting the technical direction for the team.',
       role: 'Team Lead',
       learnings: [
         'Learned how to read code for intent and clarity very effectively',
         'Learned how to effectively leverage pair programming with other team members',
-      ],
-    },
-    {
-      key: 'co-led',
-      description:
-        'Co-led the technical work after the director left, so development kept moving until the new CTO started.',
-      role: 'Interim Director of Engineering',
-      learnings: [
-        'Learned that technical leadership requires communication as much as technical proficiency',
       ],
     },
     {
@@ -331,13 +322,6 @@ export const baseQuests: Quest[] = [
         'Learned the importance of talking directly to end users',
         'Learned that educating our business on technical practices positively impacted velocity',
       ],
-    },
-    {
-      key: 'architects',
-      description:
-        'Worked with the senior architects to roll out a product-wide strategy and hold the code to its standards.',
-      role: 'Team Lead',
-      learnings: [],
     },
     {
       key: 'regulatory',
@@ -360,7 +344,7 @@ export const baseQuests: Quest[] = [
   company: 'SWC Technology Partners',
   workTitle: 'Senior Consultant',
   description:
-    "Delivered legacy WinForms modernization solo, holding estimates inside 10 percent",
+    "Delivered legacy WinForms modernization solo, holding estimates inside 10 percent.",
   summary:
     "A year of solo delivery on legacy desktop systems. It was the first engagement where I owned the estimate as well as the build.",
   type: 'career',
@@ -407,7 +391,7 @@ export const baseQuests: Quest[] = [
   company: 'Manor Resources',
   workTitle: 'Developer',
   description:
-    "Built features and test coverage for a car loan application under senior mentorship",
+    "Built features and test coverage for a car loan application.",
   summary:
     "A year of feature work on a car loan application, early on. Senior developers read what I wrote closely, and most of the teaching happened in code review.",
   type: 'career',
@@ -419,26 +403,17 @@ export const baseQuests: Quest[] = [
     {
       key: 'features',
       description:
-        "Built core feature components for a car loan application under senior mentorship.",
+        "Built C# feature components for a car loan application on SQL Server and Entity Framework.",
       role: 'Developer',
       learnings: [],
     },
     {
       key: 'testing',
       description:
-        "Raised test coverage with AutoFixture and Moq.",
+        "Raised unit testing coverage by building AutoFixture and Moq test fixtures.",
       role: 'Developer',
       learnings: [
         "Learned that well-designed test fixtures do more for coverage than more tests do",
-      ],
-    },
-    {
-      key: 'mentorship',
-      description:
-        "Worked under senior-developer mentorship delivered in code review.",
-      role: 'Developer',
-      learnings: [
-        "Learned that code review teaches what self-directed study cannot, because it arrives attached to a mistake I already made",
       ],
     },
   ],
@@ -452,7 +427,7 @@ export const baseQuests: Quest[] = [
   company: 'The Boeing Company',
   workTitle: 'ITCFP Participant / Developer',
   description:
-    "Rotated through IT functions on a selective program, then built C# applications for financial operations",
+    "Rotated through IT functions on the IT Career Foundation Program (ITCFP), a selective program, then built C# applications for financial operations.",
   summary:
     "Four years on the IT Career Foundation Program, a selective rotation through several IT functions before I settled into development work on financial operations systems.",
   type: 'career',
@@ -488,7 +463,7 @@ export const baseQuests: Quest[] = [
   company: 'Personal Project',
   workTitle: 'Independent Projects',
   description:
-    "Directed AI through two functional Unity games",
+    "Directed AI through two functional Unity games.",
   summary:
     "Solo direction of two Unity games.",
   type: 'hobby',
@@ -500,7 +475,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'games',
       description:
-        "Checked in nearly 500 commits across two Unity games: a playable tactical puzzle I stopped after a market analysis, and a wave-defense FPS still in progress.",
+        "Checked in nearly 500 commits across two Unity games: a playable tactical puzzle stopped after a market analysis, and a wave-defense FPS still in progress.",
       role: 'Game Developer',
       learnings: [
         "Learned that writing the market analysis was the decision, not a document that preceded one",
@@ -518,7 +493,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ai-implementation',
       description:
-        "Used AI to write the implementation of over 600 C# files I reviewed and gated through play test or audit findings.",
+        "Used AI to write the implementation of over 600 C# files, each reviewed and gated through play test or audit findings.",
       role: 'Game Developer',
       learnings: [
         "Learned to write the failure back into the next session's rules",
@@ -592,7 +567,7 @@ export const baseQuests: Quest[] = [
   },
   company: "Independent Consulting, Principal Technologist",
   workTitle: "Principal Technologist",
-  description: "Built the product full stack and advised founders on technical direction",
+  description: "Built the product full stack and advised founders on technical direction.",
   summary: "The founders brought me in for direction. I stayed and built the application.",
   type: "independent",
   startDate: new Date("2024-03-01"),
@@ -610,7 +585,7 @@ export const baseQuests: Quest[] = [
     },
     {
       key: 'search',
-      description: "Built sequence search, patent-family navigation, and document retrieval across the API and the UI.",
+      description: "Built sequence search, patent-family navigation, and document retrieval across the backend API and a React and TypeScript frontend.",
       role: "Principal Technologist",
       learnings: [
         "Learned that grouping results by patent family changed what the tool was good for"
@@ -618,7 +593,7 @@ export const baseQuests: Quest[] = [
     },
     {
       key: 'sign-in',
-      description: "Built sign-in and enforced plan limits on the server, and ran CI in Azure DevOps.",
+      description: "Implemented sign-in with server-side plan limits and ran CI in Azure DevOps.",
       role: "Principal Technologist",
       learnings: [
         "Learned that a CI job inheriting the deploy variable group tests against production configuration and proves nothing"
@@ -626,7 +601,7 @@ export const baseQuests: Quest[] = [
     },
     {
       key: 'saved-searches',
-      description: "Built saved searches and the trial and paid-plan screens used to demo the product.",
+      description: "Delivered saved searches and the trial and paid-plan screens used to demo the product.",
       role: "Principal Technologist",
       learnings: []
     }

@@ -8,6 +8,8 @@ draft: false
 
 The hardest levers, and the ones with the highest ceiling. These require changing the actual goals of powerful actors, dislodging assumptions that feel like facts, or coordinating entities in direct competition with each other. None of those are easy. All of them involve decisions that can still be influenced.
 
+![](/ai-governance/part-2/diagrams/DIA-206-plaque-and-rack.svg)
+
 ---
 
 ## What the System Is Actually For

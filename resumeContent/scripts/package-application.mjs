@@ -151,7 +151,6 @@ async function main() {
   rmSync(buildDir, { recursive: true, force: true });
 
   const phone = readPhone();
-  if (!phone) console.warn('No contact.phone in applications/answers.json. The resume will print without a phone number.');
 
   console.log(`\n==> Building the resume${tailored ? ` with the "${id}" overlay` : ' untailored'}`);
   await run('npx', ['react-scripts', 'build'], {

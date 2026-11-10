@@ -1,7 +1,7 @@
 ---
 title: "If the Machine Does the Work, Where Does the Work Go?"
 tags: [ai, software-delivery, systems-thinking]
-draft: true
+draft: false
 version: "1.0"
 ---
 

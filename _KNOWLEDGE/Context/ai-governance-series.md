@@ -49,6 +49,64 @@ decision from the November pass. Its Part 1 companion is
 Part 2 has no source apparatus. The URLs behind its claims are in the
 two proposals files and `part-2/RATIONALE-2026-08.md`.
 
+## Part 2 plates (2026-11-10)
+
+Part 2 had one plate. Five were added on 2026-11-10, each drawn by a
+subagent from a brief and reviewed in light and dark before publishing:
+
+- DIA-202, section 1: a switch panel, every switch already on, one with no lever.
+- DIA-203, tier 1: a radio whose volume knob turns and whose tuning dial is sealed.
+- DIA-204, tier 2: a stopping-distance diagram. The train rests past the signal.
+- DIA-205, tier 3: Meadows' two identical houses, meter in the basement and in the hall.
+- DIA-206, tier 4: a plaque over a time-card rack, nine slots and five cards.
+
+Zo chose the objects for 202, 204 and 205. For tier 3 Zo preferred
+Meadows' own example over a market scale that would have covered all
+three points of the tier. For tier 4 Zo turned down a signpost and worn
+path and asked for "more visceral depiction of actions vs words", which
+became the plaque and rack. The radio (203) was not put to Zo.
+
+Zo's verdict on the six Part 2 plates, same day: II (switch panel) and
+VI (plaque and rack) stand. V (meter in the hall) and IV (stopping
+distance) are weak: "too literal, no bite" and "nothing is happening".
+I (load line) is "meh". III (radio) is "barely ok". Across the set:
+"too stylistically the same even when we are trying to convey different
+ideas/topics", and the same texture on everything (hatching, screws,
+bevels).
+
+What follows from that, for every later plate:
+- One house style for all plates is itself the fault. Vary the form
+  with the subject: a chart from real figures, a marked document, a
+  map, a sequence, a scene. Keep only the frame, palette, title face
+  and caption line in common.
+- A plate must add something the sentence beside it did not say.
+  Illustrating the sentence is not enough.
+- Draw a moment. Something should be happening or have just happened,
+  with the consequence visible.
+- Zo approves a concept per plate before anything is drawn.
+
+Redrawn the same day on those rules, each in a different manner. Zo
+chose or directed every concept:
+- DIA-201 is now "The Bar, Lowered": a high-jump pit in stippled
+  perspective, the bar reset near the ground under a ghost of its old
+  height.
+- DIA-203 is now "A Stone in the Stream": three frames in flowing line.
+- DIA-204 is now "The Late Arrival": a night metro platform as a
+  poster, the indicator board carrying the argument. Zo's direction:
+  "Train / Metro station illustration of delays and its impacts".
+- DIA-205 is now "Three Signs Before the Bridge": a road-safety poster.
+  Zo's direction: "Dangers of misleading or unclear signage".
+DIA-202 and DIA-206 are unchanged. The four replaced working plates
+(load line, volume knob, stopping distance, meter in the hall) are
+still in `proposals/`, unpublished.
+
+A first drawing of the lowered bar put a foam landing bed behind the
+gap, so the drop read as a mattress. Lesson: nothing may stand behind
+the space that carries the argument.
+
+Part 2 headers read PLATE I to VI and "PART II · PAGE TITLE", with no
+section number, since Part 2 has none.
+
 ## Design system
 
 CSS variables `--red` / `--green` / `--blue` / `--amber` / `--gray`, each
@@ -167,7 +225,12 @@ line with the November 2026 revision of Part 1 (commit d53bea9) on
 | DIA-007B | 65, 87 and 7 in 100, "No model began one unprompted" | text in the generator |
 | DIA-008A | ASRS since 1976 and voluntary, about 10% in a month | plate file |
 | DIA-008B | weights per leverage point, and the twelve point names (3 goals, 2 paradigm, 1 coordination, as in `leverage-points.md`) | plate file |
-| DIA-201 | autumn 2023, "February 2026, the fourth revision", "Four fresh coats since" | plate file |
+| DIA-201 | September 2023, February 2026, "Four revisions since, to July 2026" | generator |
+| DIA-202 | 14 May 2024, 2024, January 2025, 2024, four product names | generator |
+| DIA-203 | none | generator |
+| DIA-204 | "18 MONTHS LATE", "DELAYED: YEARS", two departed trains (from the tier card's own example) | generator |
+| DIA-205 | none | generator |
+| DIA-206 | nine slots, five cards, "nine thousand heads to about five thousand" | generator. The count is one constant. |
 
 DIA-201 and Part 2's opening section were brought in line with section 4
 of Part 1 on 2026-11-10: the fourth revision (February 2026) dropped the

@@ -8,6 +8,8 @@ draft: false
 
 These levers work on how fast the system moves and how hard it can be stopped. Shorter delays make harm visible faster. Stronger brakes make recklessness financially costly. Slower acceleration gives oversight time to keep pace. All three face significant institutional resistance.
 
+![](/ai-governance/part-2/diagrams/DIA-204-late-arrival.svg)
+
 ---
 
 ## Length of Delays

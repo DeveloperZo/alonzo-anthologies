@@ -19,7 +19,7 @@ const welltheory: Tailoring = {
   role: 'Head of Engineering',
   profile: {
     professionalSummary:
-      'Technology leader with over a decade of experience in software architecture and engineering leadership. Hires and leads engineering teams, sets technical direction, and stays hands-on through delivery. Experience integrating AI into the development lifecycle in regulated work environments.',
+      'Engineering manager and software architect, building software since 2012 and in lead, architect, and manager roles since 2018. Hires and leads engineering teams, sets technical direction, and stays hands-on through delivery. Experience integrating AI into the development lifecycle in regulated work environments.',
     competencies: {
       'Software Architecture': 'Designs healthcare platforms, including multi-tenant SaaS.',
       'Technology Leadership': 'Hires and leads engineering teams and sets technical direction.',
@@ -57,7 +57,7 @@ const welltheory: Tailoring = {
       },
     },
     4: {
-      order: ['ceo-investors', 'kpis', 'regulatory', 'refactor', 'uat', 'co-led', 'architects', 'dotnet-core'],
+      order: ['ceo-investors', 'kpis', 'regulatory', 'refactor', 'uat', 'dotnet-core'],
     },
     8: {
       description: 'Directed AI implementation with architecture constraints enforced in the build',

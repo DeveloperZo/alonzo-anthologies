@@ -1,0 +1,122 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p204b-t p204b-d">
+  <title id="p204b-t">DIA-204 · The late arrival</title>
+  <desc id="p204b-d">A metro platform at night, drawn as a transport poster in flat shapes and one-point perspective. A large split-flap indicator board hangs over the platform. Under DEPARTURES it lists THE MODEL, departed; ITS SUCCESSOR, departed; THE ONE AFTER, boarding. Under ARRIVALS it lists REPORT OF HARM FROM THE FIRST, 18 months late, picked out in rust; and THE REGULATOR'S RESPONSE, delayed: years. Down the tunnel the two red tail lamps of the train that has just left are receding. On the empty lit platform stand a suitcase and a holdall.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; --p204b-night: #2A2A35; --p204b-lit: #F2EEE3; --p204b-glow: #D29183; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; --p204b-night: #1E2128; --p204b-lit: #E8E5DC; --p204b-glow: #D29183; } }
+      /* The picture is a night scene in both schemes: its ground is always the dark of the pair and its lights the pale one, so dark mode does not turn it into a negative. Rust inside the picture is the on-dark rust in both. */
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .night { fill: var(--p204b-night); }
+      .lit { fill: var(--p204b-lit); }
+      .t10 { fill: var(--p204b-lit); fill-opacity: 0.10; }
+      .t16 { fill: var(--p204b-lit); fill-opacity: 0.16; }
+      .t20 { fill: var(--p204b-lit); fill-opacity: 0.20; }
+      .t28 { fill: var(--p204b-lit); fill-opacity: 0.28; }
+      .t45 { fill: var(--p204b-lit); fill-opacity: 0.45; }
+      .t55 { fill: var(--p204b-lit); fill-opacity: 0.55; }
+      .t80 { fill: var(--p204b-lit); fill-opacity: 0.80; }
+      .tile { fill: var(--p204b-lit); fill-opacity: 0.13; }
+      .glow { fill: var(--p204b-glow); }
+      .case { fill: none; stroke: var(--p204b-lit); stroke-width: 2.5; }
+      .seam { fill: none; stroke: var(--p204b-night); stroke-width: 1; }
+      .strap { fill: none; stroke: var(--p204b-night); stroke-width: 3.2; stroke-linecap: round; }
+      .edge { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+      .flap { font-size: 17.5px; font-weight: 600; text-anchor: middle; fill: var(--p204b-lit); }
+      .late { fill: var(--p204b-night); }
+      .bh { font-size: 11.5px; font-weight: 600; letter-spacing: 0.3em; fill: var(--p204b-lit); fill-opacity: 0.8; }
+      .note { font-size: 14.5px; font-style: italic; fill: var(--p204b-glow); }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <clipPath id="p204b-clip"><rect x="40" y="66" width="880" height="530"/></clipPath>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE IV</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART II · DELAYS, BRAKES, AND ENGINE SPEED</text>
+  <rect x="40" y="66" width="880" height="530" class="night"/>
+  <g clip-path="url(#p204b-clip)">
+    <!-- ceiling, right wall, end wall, track bed: every receding edge runs to VP (570, 455) -->
+    <polygon points="460,380 684,380 1558,-195 -383.3,-195" class="t10"/>
+    <polygon points="684,380 684,509 1558,923 1558,-195" class="t16"/>
+    <polygon points="460,380 684,380 684,509 460,509" class="t28"/>
+    <polygon points="684,433 684,443 1558,351 1558,264.3" class="t55"/>
+    <polygon points="483.6,305 496.4,305 483,277.7 467.9,277.7" class="t80"/>
+    <polygon points="501.9,336.8 512,336.8 504,320.5 492.5,320.5" class="t80"/>
+    <polygon points="513.8,357.5 522.2,357.5 516.8,346.7 507.6,346.7" class="t80"/>
+    <polygon points="522.2,372 529.3,372 525.5,364.3 517.8,364.3" class="t80"/>
+    <polygon points="707.6,305 720.4,305 747.7,277.7 732.6,277.7" class="t80"/>
+    <polygon points="678.4,336.8 688.5,336.8 704.8,320.5 693.4,320.5" class="t80"/>
+    <polygon points="659.4,357.5 667.8,357.5 678.6,346.7 669.4,346.7" class="t80"/>
+    <polygon points="646.1,372 653.2,372 660.9,364.3 653.2,364.3" class="t80"/>
+    <polygon points="600,509 684,509 1558,923 830,923" class="night"/>
+    <!-- tunnel mouth, and the train that has left: rear at Z = 31, lamps at X = 2.7 and 4.5 -->
+    <path d="M 608,509 L 608,451 A 34 28 0 0 1 676,451 L 676,509 Z" class="night"/>
+    <polygon points="617.9,497.8 619.4,497.8 1080.5,897 1064.9,897" class="t55"/>
+    <polygon points="641.4,497.8 642.9,497.8 1323.1,897 1307.5,897" class="t55"/>
+    <clipPath id="p204b-mouth"><path d="M 608,509 L 608,451 A 34 28 0 0 1 676,451 L 676,509 Z"/></clipPath>
+    <g clip-path="url(#p204b-mouth)">
+    <polygon points="676,423 676,509 658.9,500.3 658.9,428.2" class="t16"/>
+    <rect x="606.9" y="438.2" width="47" height="57.9" rx="5" class="t10"/>
+    <rect x="616.1" y="445.8" width="28.5" height="18.4" rx="2" class="t16"/>
+    <circle cx="615.3" cy="480.2" r="14" class="glow" style="fill-opacity:0.2"/><circle cx="615.3" cy="480.2" r="6" class="glow"/>
+    <circle cx="645.5" cy="480.2" r="14" class="glow" style="fill-opacity:0.2"/><circle cx="645.5" cy="480.2" r="6" class="glow"/>
+    </g>
+    <!-- left wall with poster panels, then the lit platform -->
+    <polygon points="460,380 460,487 -383.3,732.3 -383.3,-195" class="t20"/>
+    <polygon points="123.1,381.9 123.1,511.9 -80,537.7 -80,348.6" class="t45"/>
+    <polygon points="275.2,406.8 275.2,492.5 198.6,502.3 198.6,394.2" class="t45"/>
+    <polygon points="350,419 350,483 310,488.1 310,412.5" class="t45"/>
+    <polygon points="394.5,426.3 394.5,477.3 370,480.5 370,422.3" class="t45"/>
+    <polygon points="424.1,431.1 424.1,473.6 407.5,475.7 407.5,428.4" class="t45"/>
+    <polygon points="445.1,434.6 445.1,470.9 433.2,472.4 433.2,432.6" class="t45"/>
+    <polygon points="460,487 600,487 830,732.3 -383.3,732.3" class="lit"/>
+    <polygon points="585,487 590,487 743.3,732.3 700,732.3" class="night"/>
+    <rect x="486" y="441" width="28" height="46" class="lit"/>
+    <!-- what the delay leaves behind: a case and a holdall, Z = 6.6 -->
+    <g class="night"><rect x="471.5" y="519.8" width="44.1" height="58.3" rx="5"/><rect x="476.5" y="576.1" width="6" height="5" rx="2"/><rect x="504.6" y="576.1" width="6" height="5" rx="2"/><path d="M 484.7 519.8 v -27 h 17.6 v 27 h -3.4 v -23.4 h -10.8 v 23.4 Z"/></g>
+    <path d="M 480.5 534.8 v 30.3 M 506.6 534.8 v 30.3" class="seam" style="stroke:var(--p204b-lit);stroke-width:1.6;stroke-opacity:0.5"/>
+    <g class="night"><path d="M 530.6 581.1 v -16.1 q 0 -10.7 7.9 -10.7 h 40.8 q 7.9 0 7.9 10.7 v 16.1 Z"/></g>
+    <path d="M 546.5 554.3 q 12.5 -20.1 24.9 0" class="strap"/>
+    <!-- the indicator board: front face at Z = 5.2, underside receding to VP -->
+    <rect x="217.5" y="80" width="5" height="20" class="t55"/>
+    <rect x="647.5" y="80" width="5" height="20" class="t55"/>
+    <polygon points="64,336 804,336 789.2,343.5 95.9,343.5" class="t45"/>
+    <rect x="64" y="100" width="740" height="236" class="night"/>
+    <rect x="65.25" y="101.25" width="737.5" height="233.5" class="case"/>
+    <text x="81" y="125" class="bh">DEPARTURES</text>
+    <text x="81" y="251" class="bh">ARRIVALS</text>
+    <g class="tile"><rect x="81" y="136" width="14" height="26" rx="1.5"/><rect x="96.7" y="136" width="14" height="26" rx="1.5"/><rect x="112.4" y="136" width="14" height="26" rx="1.5"/><rect x="128.1" y="136" width="14" height="26" rx="1.5"/><rect x="143.8" y="136" width="14" height="26" rx="1.5"/><rect x="159.4" y="136" width="14" height="26" rx="1.5"/><rect x="175.1" y="136" width="14" height="26" rx="1.5"/><rect x="190.8" y="136" width="14" height="26" rx="1.5"/><rect x="206.5" y="136" width="14" height="26" rx="1.5"/><rect x="222.2" y="136" width="14" height="26" rx="1.5"/><rect x="237.9" y="136" width="14" height="26" rx="1.5"/><rect x="253.6" y="136" width="14" height="26" rx="1.5"/><rect x="269.3" y="136" width="14" height="26" rx="1.5"/><rect x="285" y="136" width="14" height="26" rx="1.5"/><rect x="300.6" y="136" width="14" height="26" rx="1.5"/><rect x="316.3" y="136" width="14" height="26" rx="1.5"/><rect x="332" y="136" width="14" height="26" rx="1.5"/><rect x="347.7" y="136" width="14" height="26" rx="1.5"/><rect x="363.4" y="136" width="14" height="26" rx="1.5"/><rect x="379.1" y="136" width="14" height="26" rx="1.5"/><rect x="394.8" y="136" width="14" height="26" rx="1.5"/><rect x="410.5" y="136" width="14" height="26" rx="1.5"/><rect x="426.2" y="136" width="14" height="26" rx="1.5"/><rect x="441.8" y="136" width="14" height="26" rx="1.5"/><rect x="457.5" y="136" width="14" height="26" rx="1.5"/><rect x="473.2" y="136" width="14" height="26" rx="1.5"/><rect x="488.9" y="136" width="14" height="26" rx="1.5"/><rect x="504.6" y="136" width="14" height="26" rx="1.5"/><rect x="520.3" y="136" width="14" height="26" rx="1.5"/><rect x="536" y="136" width="14" height="26" rx="1.5"/><rect x="551.7" y="136" width="14" height="26" rx="1.5"/><rect x="567.4" y="136" width="14" height="26" rx="1.5"/><rect x="583" y="136" width="14" height="26" rx="1.5"/><rect x="598.7" y="136" width="14" height="26" rx="1.5"/><rect x="614.4" y="136" width="14" height="26" rx="1.5"/><rect x="630.1" y="136" width="14" height="26" rx="1.5"/><rect x="645.8" y="136" width="14" height="26" rx="1.5"/><rect x="661.5" y="136" width="14" height="26" rx="1.5"/><rect x="677.2" y="136" width="14" height="26" rx="1.5"/><rect x="692.9" y="136" width="14" height="26" rx="1.5"/><rect x="708.6" y="136" width="14" height="26" rx="1.5"/><rect x="724.2" y="136" width="14" height="26" rx="1.5"/><rect x="739.9" y="136" width="14" height="26" rx="1.5"/><rect x="755.6" y="136" width="14" height="26" rx="1.5"/><rect x="771.3" y="136" width="14" height="26" rx="1.5"/></g>
+    <line x1="81" y1="149" x2="785.3" y2="149" class="seam"/>
+    <text x="88 103.7 119.4 135.1 150.8 166.4 182.1 197.8 213.5" y="155.2" class="flap">THE MODEL</text>
+    <text x="574.4 590 605.7 621.4 637.1 652.8 668.5 684.2" y="155.2" class="flap">DEPARTED</text>
+    <g class="tile"><rect x="81" y="168" width="14" height="26" rx="1.5"/><rect x="96.7" y="168" width="14" height="26" rx="1.5"/><rect x="112.4" y="168" width="14" height="26" rx="1.5"/><rect x="128.1" y="168" width="14" height="26" rx="1.5"/><rect x="143.8" y="168" width="14" height="26" rx="1.5"/><rect x="159.4" y="168" width="14" height="26" rx="1.5"/><rect x="175.1" y="168" width="14" height="26" rx="1.5"/><rect x="190.8" y="168" width="14" height="26" rx="1.5"/><rect x="206.5" y="168" width="14" height="26" rx="1.5"/><rect x="222.2" y="168" width="14" height="26" rx="1.5"/><rect x="237.9" y="168" width="14" height="26" rx="1.5"/><rect x="253.6" y="168" width="14" height="26" rx="1.5"/><rect x="269.3" y="168" width="14" height="26" rx="1.5"/><rect x="285" y="168" width="14" height="26" rx="1.5"/><rect x="300.6" y="168" width="14" height="26" rx="1.5"/><rect x="316.3" y="168" width="14" height="26" rx="1.5"/><rect x="332" y="168" width="14" height="26" rx="1.5"/><rect x="347.7" y="168" width="14" height="26" rx="1.5"/><rect x="363.4" y="168" width="14" height="26" rx="1.5"/><rect x="379.1" y="168" width="14" height="26" rx="1.5"/><rect x="394.8" y="168" width="14" height="26" rx="1.5"/><rect x="410.5" y="168" width="14" height="26" rx="1.5"/><rect x="426.2" y="168" width="14" height="26" rx="1.5"/><rect x="441.8" y="168" width="14" height="26" rx="1.5"/><rect x="457.5" y="168" width="14" height="26" rx="1.5"/><rect x="473.2" y="168" width="14" height="26" rx="1.5"/><rect x="488.9" y="168" width="14" height="26" rx="1.5"/><rect x="504.6" y="168" width="14" height="26" rx="1.5"/><rect x="520.3" y="168" width="14" height="26" rx="1.5"/><rect x="536" y="168" width="14" height="26" rx="1.5"/><rect x="551.7" y="168" width="14" height="26" rx="1.5"/><rect x="567.4" y="168" width="14" height="26" rx="1.5"/><rect x="583" y="168" width="14" height="26" rx="1.5"/><rect x="598.7" y="168" width="14" height="26" rx="1.5"/><rect x="614.4" y="168" width="14" height="26" rx="1.5"/><rect x="630.1" y="168" width="14" height="26" rx="1.5"/><rect x="645.8" y="168" width="14" height="26" rx="1.5"/><rect x="661.5" y="168" width="14" height="26" rx="1.5"/><rect x="677.2" y="168" width="14" height="26" rx="1.5"/><rect x="692.9" y="168" width="14" height="26" rx="1.5"/><rect x="708.6" y="168" width="14" height="26" rx="1.5"/><rect x="724.2" y="168" width="14" height="26" rx="1.5"/><rect x="739.9" y="168" width="14" height="26" rx="1.5"/><rect x="755.6" y="168" width="14" height="26" rx="1.5"/><rect x="771.3" y="168" width="14" height="26" rx="1.5"/></g>
+    <line x1="81" y1="181" x2="785.3" y2="181" class="seam"/>
+    <text x="88 103.7 119.4 135.1 150.8 166.4 182.1 197.8 213.5 229.2 244.9 260.6 276.3" y="187.2" class="flap">ITS SUCCESSOR</text>
+    <text x="574.4 590 605.7 621.4 637.1 652.8 668.5 684.2" y="187.2" class="flap">DEPARTED</text>
+    <g class="tile"><rect x="81" y="200" width="14" height="26" rx="1.5"/><rect x="96.7" y="200" width="14" height="26" rx="1.5"/><rect x="112.4" y="200" width="14" height="26" rx="1.5"/><rect x="128.1" y="200" width="14" height="26" rx="1.5"/><rect x="143.8" y="200" width="14" height="26" rx="1.5"/><rect x="159.4" y="200" width="14" height="26" rx="1.5"/><rect x="175.1" y="200" width="14" height="26" rx="1.5"/><rect x="190.8" y="200" width="14" height="26" rx="1.5"/><rect x="206.5" y="200" width="14" height="26" rx="1.5"/><rect x="222.2" y="200" width="14" height="26" rx="1.5"/><rect x="237.9" y="200" width="14" height="26" rx="1.5"/><rect x="253.6" y="200" width="14" height="26" rx="1.5"/><rect x="269.3" y="200" width="14" height="26" rx="1.5"/><rect x="285" y="200" width="14" height="26" rx="1.5"/><rect x="300.6" y="200" width="14" height="26" rx="1.5"/><rect x="316.3" y="200" width="14" height="26" rx="1.5"/><rect x="332" y="200" width="14" height="26" rx="1.5"/><rect x="347.7" y="200" width="14" height="26" rx="1.5"/><rect x="363.4" y="200" width="14" height="26" rx="1.5"/><rect x="379.1" y="200" width="14" height="26" rx="1.5"/><rect x="394.8" y="200" width="14" height="26" rx="1.5"/><rect x="410.5" y="200" width="14" height="26" rx="1.5"/><rect x="426.2" y="200" width="14" height="26" rx="1.5"/><rect x="441.8" y="200" width="14" height="26" rx="1.5"/><rect x="457.5" y="200" width="14" height="26" rx="1.5"/><rect x="473.2" y="200" width="14" height="26" rx="1.5"/><rect x="488.9" y="200" width="14" height="26" rx="1.5"/><rect x="504.6" y="200" width="14" height="26" rx="1.5"/><rect x="520.3" y="200" width="14" height="26" rx="1.5"/><rect x="536" y="200" width="14" height="26" rx="1.5"/><rect x="551.7" y="200" width="14" height="26" rx="1.5"/><rect x="567.4" y="200" width="14" height="26" rx="1.5"/><rect x="583" y="200" width="14" height="26" rx="1.5"/><rect x="598.7" y="200" width="14" height="26" rx="1.5"/><rect x="614.4" y="200" width="14" height="26" rx="1.5"/><rect x="630.1" y="200" width="14" height="26" rx="1.5"/><rect x="645.8" y="200" width="14" height="26" rx="1.5"/><rect x="661.5" y="200" width="14" height="26" rx="1.5"/><rect x="677.2" y="200" width="14" height="26" rx="1.5"/><rect x="692.9" y="200" width="14" height="26" rx="1.5"/><rect x="708.6" y="200" width="14" height="26" rx="1.5"/><rect x="724.2" y="200" width="14" height="26" rx="1.5"/><rect x="739.9" y="200" width="14" height="26" rx="1.5"/><rect x="755.6" y="200" width="14" height="26" rx="1.5"/><rect x="771.3" y="200" width="14" height="26" rx="1.5"/></g>
+    <line x1="81" y1="213" x2="785.3" y2="213" class="seam"/>
+    <text x="88 103.7 119.4 135.1 150.8 166.4 182.1 197.8 213.5 229.2 244.9 260.6 276.3" y="219.2" class="flap">THE ONE AFTER</text>
+    <text x="574.4 590 605.7 621.4 637.1 652.8 668.5 684.2" y="219.2" class="flap">BOARDING</text>
+    <g class="glow"><rect x="81" y="262" width="14" height="26" rx="1.5"/><rect x="96.7" y="262" width="14" height="26" rx="1.5"/><rect x="112.4" y="262" width="14" height="26" rx="1.5"/><rect x="128.1" y="262" width="14" height="26" rx="1.5"/><rect x="143.8" y="262" width="14" height="26" rx="1.5"/><rect x="159.4" y="262" width="14" height="26" rx="1.5"/><rect x="175.1" y="262" width="14" height="26" rx="1.5"/><rect x="190.8" y="262" width="14" height="26" rx="1.5"/><rect x="206.5" y="262" width="14" height="26" rx="1.5"/><rect x="222.2" y="262" width="14" height="26" rx="1.5"/><rect x="237.9" y="262" width="14" height="26" rx="1.5"/><rect x="253.6" y="262" width="14" height="26" rx="1.5"/><rect x="269.3" y="262" width="14" height="26" rx="1.5"/><rect x="285" y="262" width="14" height="26" rx="1.5"/><rect x="300.6" y="262" width="14" height="26" rx="1.5"/><rect x="316.3" y="262" width="14" height="26" rx="1.5"/><rect x="332" y="262" width="14" height="26" rx="1.5"/><rect x="347.7" y="262" width="14" height="26" rx="1.5"/><rect x="363.4" y="262" width="14" height="26" rx="1.5"/><rect x="379.1" y="262" width="14" height="26" rx="1.5"/><rect x="394.8" y="262" width="14" height="26" rx="1.5"/><rect x="410.5" y="262" width="14" height="26" rx="1.5"/><rect x="426.2" y="262" width="14" height="26" rx="1.5"/><rect x="441.8" y="262" width="14" height="26" rx="1.5"/><rect x="457.5" y="262" width="14" height="26" rx="1.5"/><rect x="473.2" y="262" width="14" height="26" rx="1.5"/><rect x="488.9" y="262" width="14" height="26" rx="1.5"/><rect x="504.6" y="262" width="14" height="26" rx="1.5"/><rect x="520.3" y="262" width="14" height="26" rx="1.5"/><rect x="536" y="262" width="14" height="26" rx="1.5"/><rect x="551.7" y="262" width="14" height="26" rx="1.5"/><rect x="567.4" y="262" width="14" height="26" rx="1.5"/><rect x="583" y="262" width="14" height="26" rx="1.5"/><rect x="598.7" y="262" width="14" height="26" rx="1.5"/><rect x="614.4" y="262" width="14" height="26" rx="1.5"/><rect x="630.1" y="262" width="14" height="26" rx="1.5"/><rect x="645.8" y="262" width="14" height="26" rx="1.5"/><rect x="661.5" y="262" width="14" height="26" rx="1.5"/><rect x="677.2" y="262" width="14" height="26" rx="1.5"/><rect x="692.9" y="262" width="14" height="26" rx="1.5"/><rect x="708.6" y="262" width="14" height="26" rx="1.5"/><rect x="724.2" y="262" width="14" height="26" rx="1.5"/><rect x="739.9" y="262" width="14" height="26" rx="1.5"/><rect x="755.6" y="262" width="14" height="26" rx="1.5"/><rect x="771.3" y="262" width="14" height="26" rx="1.5"/></g>
+    <line x1="81" y1="275" x2="785.3" y2="275" class="seam" style="stroke-opacity:0.3"/>
+    <text x="88 103.7 119.4 135.1 150.8 166.4 182.1 197.8 213.5 229.2 244.9 260.6 276.3 292 307.6 323.3 339 354.7 370.4 386.1 401.8 417.5 433.2 448.8 464.5 480.2 495.9 511.6 527.3" y="281.2" class="flap late">REPORT OF HARM FROM THE FIRST</text>
+    <text x="574.4 590 605.7 621.4 637.1 652.8 668.5 684.2 699.9 715.6 731.2 746.9 762.6 778.3" y="281.2" class="flap late">18 MONTHS LATE</text>
+    <g class="tile"><rect x="81" y="294" width="14" height="26" rx="1.5"/><rect x="96.7" y="294" width="14" height="26" rx="1.5"/><rect x="112.4" y="294" width="14" height="26" rx="1.5"/><rect x="128.1" y="294" width="14" height="26" rx="1.5"/><rect x="143.8" y="294" width="14" height="26" rx="1.5"/><rect x="159.4" y="294" width="14" height="26" rx="1.5"/><rect x="175.1" y="294" width="14" height="26" rx="1.5"/><rect x="190.8" y="294" width="14" height="26" rx="1.5"/><rect x="206.5" y="294" width="14" height="26" rx="1.5"/><rect x="222.2" y="294" width="14" height="26" rx="1.5"/><rect x="237.9" y="294" width="14" height="26" rx="1.5"/><rect x="253.6" y="294" width="14" height="26" rx="1.5"/><rect x="269.3" y="294" width="14" height="26" rx="1.5"/><rect x="285" y="294" width="14" height="26" rx="1.5"/><rect x="300.6" y="294" width="14" height="26" rx="1.5"/><rect x="316.3" y="294" width="14" height="26" rx="1.5"/><rect x="332" y="294" width="14" height="26" rx="1.5"/><rect x="347.7" y="294" width="14" height="26" rx="1.5"/><rect x="363.4" y="294" width="14" height="26" rx="1.5"/><rect x="379.1" y="294" width="14" height="26" rx="1.5"/><rect x="394.8" y="294" width="14" height="26" rx="1.5"/><rect x="410.5" y="294" width="14" height="26" rx="1.5"/><rect x="426.2" y="294" width="14" height="26" rx="1.5"/><rect x="441.8" y="294" width="14" height="26" rx="1.5"/><rect x="457.5" y="294" width="14" height="26" rx="1.5"/><rect x="473.2" y="294" width="14" height="26" rx="1.5"/><rect x="488.9" y="294" width="14" height="26" rx="1.5"/><rect x="504.6" y="294" width="14" height="26" rx="1.5"/><rect x="520.3" y="294" width="14" height="26" rx="1.5"/><rect x="536" y="294" width="14" height="26" rx="1.5"/><rect x="551.7" y="294" width="14" height="26" rx="1.5"/><rect x="567.4" y="294" width="14" height="26" rx="1.5"/><rect x="583" y="294" width="14" height="26" rx="1.5"/><rect x="598.7" y="294" width="14" height="26" rx="1.5"/><rect x="614.4" y="294" width="14" height="26" rx="1.5"/><rect x="630.1" y="294" width="14" height="26" rx="1.5"/><rect x="645.8" y="294" width="14" height="26" rx="1.5"/><rect x="661.5" y="294" width="14" height="26" rx="1.5"/><rect x="677.2" y="294" width="14" height="26" rx="1.5"/><rect x="692.9" y="294" width="14" height="26" rx="1.5"/><rect x="708.6" y="294" width="14" height="26" rx="1.5"/><rect x="724.2" y="294" width="14" height="26" rx="1.5"/><rect x="739.9" y="294" width="14" height="26" rx="1.5"/><rect x="755.6" y="294" width="14" height="26" rx="1.5"/><rect x="771.3" y="294" width="14" height="26" rx="1.5"/></g>
+    <line x1="81" y1="307" x2="785.3" y2="307" class="seam"/>
+    <text x="88 103.7 119.4 135.1 150.8 166.4 182.1 197.8 213.5 229.2 244.9 260.6 276.3 292 307.6 323.3 339 354.7 370.4 386.1 401.8 417.5 433.2 448.8" y="313.2" class="flap">THE REGULATOR'S RESPONSE</text>
+    <text x="574.4 590 605.7 621.4 637.1 652.8 668.5 684.2 699.9 715.6 731.2 746.9 762.6 778.3" y="313.2" class="flap">DELAYED: YEARS</text>
+    <text x="702" y="487" class="note">the train the report is about</text>
+  </g>
+  <rect x="40" y="66" width="880" height="530" class="edge"/>
+  <text x="480" y="645" text-anchor="middle" class="title">The Late Arrival</text>
+  <line x1="300" y1="662" x2="660" y2="662" class="thin"/>
+  <text x="480" y="683" text-anchor="middle" class="cap">DIA-204 · The report of harm pulls in two trains after the one that caused it.</text>
+</svg>

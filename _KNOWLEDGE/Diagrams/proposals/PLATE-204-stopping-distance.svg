@@ -1,0 +1,158 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p204-t p204-d">
+  <title id="p204-t">DIA-204 · Stopping distance</title>
+  <desc id="p204-d">An engraved plate of a steam tank engine seen from the side on a straight track. It has come to rest beyond a semaphore signal whose arm stands at danger. Under the track a ruler is marked off in two lengths. The first, from where the danger shows to where the brakes go on, stands for the delay before harm is documented. The second, the braking length, stands for liability, audits and insurance. It runs on past the signal, and the part beyond the signal is drawn in rust. The engine stands for capability, investment and compute.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p204-h); stroke: none; }
+      .hb { fill: url(#p204-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hx { fill: url(#p204-x); stroke: none; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .ink { fill: var(--ink); }
+      .ab { fill: var(--paper); stroke: var(--accent); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+      .accb { fill: var(--accent); stroke: var(--accent); stroke-width: 1.5; stroke-linejoin: round; }
+      .al { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-linecap: round; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-linecap: round; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.8; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 14.5px; font-style: italic; }
+      .ita { font-size: 14.5px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <pattern id="p204-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <pattern id="p204-x" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE IV</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART II · DELAYS, BRAKES, AND ENGINE SPEED</text>
+  <!-- sight line from where the danger shows (x = 70) to the signal arm -->
+  <line x1="70" y1="223" x2="414" y2="122" class="sight"/>
+  <line x1="70" y1="223" x2="70" y2="380" class="sight"/>
+  <circle cx="70" cy="223" r="2.6" class="ink"/>
+  <!-- direction of running: an arrow above the rail, from x = X_SEE + 30 to X_BRAKE - 30 -->
+  <line x1="100" y1="354" x2="220" y2="354" class="l"/>
+  <path d="M 220 354 l -13 -5 l 3 5 l -3 5 Z" class="ink"/>
+  <text x="160" y="344" text-anchor="middle" class="sm">direction of running</text>
+  <!-- the signal, standing behind the track at x = 500 -->
+  <g>
+    <g class="thin"><line x1="462.1" y1="370.7" x2="471.1" y2="372.1"/><line x1="464.9" y1="352.9" x2="473.9" y2="354.3"/><line x1="467.7" y1="335.2" x2="476.7" y2="336.6"/><line x1="470.5" y1="317.4" x2="479.5" y2="318.8"/><line x1="473.3" y1="299.6" x2="482.3" y2="301"/><line x1="476.1" y1="281.9" x2="485.1" y2="283.3"/><line x1="478.9" y1="264.1" x2="487.9" y2="265.5"/><line x1="481.7" y1="246.4" x2="490.7" y2="247.8"/><line x1="484.5" y1="228.6" x2="493.5" y2="230"/><line x1="487.3" y1="210.8" x2="496.3" y2="212.2"/><line x1="490.1" y1="193.1" x2="499.1" y2="194.5"/><line x1="492.9" y1="175.3" x2="501.9" y2="176.7"/></g>
+    <line x1="460" y1="384" x2="495" y2="162" class="l"/><line x1="469" y1="384" x2="504" y2="163.4" class="l"/>
+    <path d="M 493 384 L 496 98 L 504 98 L 507 384 Z" class="b"/>
+    <path d="M 501 384 L 500.5 98 L 504 98 L 507 384 Z" class="h"/>
+    <path d="M 493 384 L 496 98 L 504 98 L 507 384" class="l"/>
+    <rect x="494" y="93" width="12" height="5" class="b"/>
+    <path d="M 497 93 L 500 76 L 503 93 Z" class="ink"/>
+    <!-- balance lever and weight, with the rod up to the arm -->
+    <line x1="509" y1="346" x2="509" y2="144" class="thin"/>
+    <line x1="498" y1="344" x2="522" y2="349" class="l" style="stroke-width:2.4"/>
+    <circle cx="524" cy="350" r="6.5" class="ink"/>
+    <!-- spectacle plate and lamp -->
+    <path d="M 504 109 H 520 Q 530 109 530 119 V 136 Q 530 146 520 146 H 504 Z" class="b"/>
+    <circle cx="517" cy="119" r="6" class="hb"/><circle cx="517" cy="135" r="6" class="b"/>
+    <!-- the arm at danger: horizontal, 80 long -->
+    <rect x="420" y="112" width="84" height="20" class="accb"/>
+    <rect x="434" y="112" width="10" height="20" class="paper"/>
+    <rect x="420" y="112" width="84" height="20" class="al"/>
+    <circle cx="500" cy="122" r="3.2" class="b"/>
+  </g>
+  <!-- the engine at rest: front buffer beam at x = 905, origin = 905 - 1.15 * 303 = 556.6 -->
+  <g transform="translate(556.6 384) scale(1.15)">
+    <!-- frames and buffer beams -->
+    <rect x="6" y="-73" width="291" height="47" class="hb"/>
+    <g class="ink"><circle cx="14" cy="-67" r="1.2"/><circle cx="34" cy="-67" r="1.2"/><circle cx="54" cy="-67" r="1.2"/><circle cx="74" cy="-67" r="1.2"/><circle cx="94" cy="-67" r="1.2"/><circle cx="114" cy="-67" r="1.2"/><circle cx="134" cy="-67" r="1.2"/><circle cx="154" cy="-67" r="1.2"/><circle cx="174" cy="-67" r="1.2"/><circle cx="194" cy="-67" r="1.2"/><circle cx="214" cy="-67" r="1.2"/><circle cx="234" cy="-67" r="1.2"/><circle cx="254" cy="-67" r="1.2"/><circle cx="274" cy="-67" r="1.2"/><circle cx="294" cy="-67" r="1.2"/></g>
+    <path d="M 10 -73 V -30 M 24 -73 V -30 M 6 -30 H 28 M 8 -51 H 26" class="l" style="stroke-width:2.2"/>
+    <path d="M 291 -26 V -9 Q 291 -3 297 -3" class="l" style="stroke-width:2.4"/>
+    <rect x="-2" y="-73" width="8" height="28" class="b"/><rect x="297" y="-73" width="8" height="28" class="b"/>
+    <rect x="-10" y="-63" width="8" height="8" class="b"/><rect x="-14" y="-70" width="4" height="22" class="ink"/>
+    <rect x="305" y="-63" width="8" height="8" class="b"/><rect x="313" y="-70" width="4" height="22" class="ink"/>
+    <!-- boiler, seen above the side tank: top at -160 -->
+    <rect x="96" y="-160" width="146" height="40" class="b"/>
+    <line x1="96" y1="-153" x2="240" y2="-153" class="thin" style="opacity:0.6"/>
+    <g class="l"><line x1="140" y1="-160" x2="140" y2="-138"/><line x1="144" y1="-160" x2="144" y2="-138"/><line x1="196" y1="-160" x2="196" y2="-138"/><line x1="200" y1="-160" x2="200" y2="-138"/></g>
+    <!-- dome, safety valves, tank filler -->
+    <path d="M 152 -160 Q 156 -162 156 -168 L 156 -174 Q 156 -188 170 -188 Q 184 -188 184 -174 L 184 -168 Q 184 -162 188 -160 Z" class="b"/>
+    <path d="M 176 -187 Q 184 -185 184 -174 L 184 -168 Q 184 -162 188 -160 L 176 -160 Z" class="h"/>
+    <path d="M 152 -160 Q 156 -162 156 -168 L 156 -174 Q 156 -188 170 -188 Q 184 -188 184 -174 L 184 -168 Q 184 -162 188 -160" class="l"/>
+    <rect x="110" y="-172" width="5" height="12" class="b"/><rect x="119" y="-172" width="5" height="12" class="b"/><rect x="107" y="-163" width="20" height="3" class="ink"/>
+    <rect x="212" y="-144" width="14" height="6" class="b"/>
+    <!-- smokebox and chimney -->
+    <path d="M 290 -161 Q 301 -122 290 -83 Z" class="b"/>
+    <rect x="240" y="-165" width="50" height="86" class="hb"/>
+    <line x1="246" y1="-165" x2="246" y2="-79" class="l"/><line x1="284" y1="-165" x2="284" y2="-79" class="l"/>
+    <path d="M 251 -165 Q 258 -168 258 -178 L 258 -197 L 276 -197 L 276 -178 Q 276 -168 283 -165 Z" class="b"/>
+    <path d="M 269 -197 L 276 -197 L 276 -178 Q 276 -168 283 -165 L 269 -165 Z" class="h"/>
+    <path d="M 251 -165 Q 258 -168 258 -178 L 258 -197 M 276 -197 L 276 -178 Q 276 -168 283 -165" class="l"/>
+    <rect x="254" y="-204" width="26" height="7" class="b"/><rect x="268" y="-204" width="12" height="7" class="h"/><rect x="254" y="-204" width="26" height="7" class="l"/>
+    <!-- side tank, cab and bunker, standing on the running plate at -79 -->
+    <rect x="2" y="-138" width="28" height="59" class="b"/>
+    <path d="M 4 -138 l 4 -7 l 6 3 l 5 -6 l 6 5 l 3 5 Z" class="ink"/>
+    <rect x="30" y="-172" width="66" height="93" class="b"/>
+    <rect x="96" y="-138" width="142" height="59" class="b"/>
+    <rect x="2" y="-93" width="236" height="14" class="h"/>
+    <path d="M 46 -106 L 46 -150 Q 46 -160 56 -160 L 72 -160 Q 82 -160 82 -150 L 82 -106 Z" class="hb"/>
+    <path d="M 46 -106 L 46 -150 Q 46 -160 56 -160 L 72 -160 Q 82 -160 82 -150 L 82 -106 Z" class="hx"/>
+    <rect x="2" y="-138" width="28" height="59" class="l"/><rect x="30" y="-172" width="66" height="93" class="l"/><rect x="96" y="-138" width="142" height="59" class="l"/>
+    <line x1="0" y1="-140" x2="32" y2="-140" class="l" style="stroke-width:2.2"/>
+    <line x1="38" y1="-110" x2="38" y2="-150" class="l"/><line x1="90" y1="-110" x2="90" y2="-150" class="l"/>
+    <g class="ink"><circle cx="103" cy="-133" r="1.3"/><circle cx="103" cy="-97" r="1.3"/><circle cx="115" cy="-133" r="1.3"/><circle cx="115" cy="-97" r="1.3"/><circle cx="127" cy="-133" r="1.3"/><circle cx="127" cy="-97" r="1.3"/><circle cx="139" cy="-133" r="1.3"/><circle cx="139" cy="-97" r="1.3"/><circle cx="151" cy="-133" r="1.3"/><circle cx="151" cy="-97" r="1.3"/><circle cx="163" cy="-133" r="1.3"/><circle cx="163" cy="-97" r="1.3"/><circle cx="175" cy="-133" r="1.3"/><circle cx="175" cy="-97" r="1.3"/><circle cx="187" cy="-133" r="1.3"/><circle cx="187" cy="-97" r="1.3"/><circle cx="199" cy="-133" r="1.3"/><circle cx="199" cy="-97" r="1.3"/><circle cx="211" cy="-133" r="1.3"/><circle cx="211" cy="-97" r="1.3"/><circle cx="223" cy="-133" r="1.3"/><circle cx="223" cy="-97" r="1.3"/><circle cx="235" cy="-133" r="1.3"/><circle cx="235" cy="-97" r="1.3"/><circle cx="9" cy="-97" r="1.3"/><circle cx="21" cy="-97" r="1.3"/><circle cx="33" cy="-97" r="1.3"/><circle cx="45" cy="-97" r="1.3"/><circle cx="57" cy="-97" r="1.3"/><circle cx="69" cy="-97" r="1.3"/><circle cx="81" cy="-97" r="1.3"/><circle cx="93" cy="-97" r="1.3"/></g>
+    <path d="M 23 -172 L 23 -176 Q 63 -191 103 -176 L 103 -172 Z" class="hb"/>
+    <line x1="100" y1="-148" x2="238" y2="-148" class="l"/>
+    <!-- lamp on the front of the running plate, handrail knobs at x = 110 + 40 i -->
+    <rect x="291" y="-93" width="11" height="14" class="b"/><rect x="294" y="-97" width="5" height="4" class="ink"/><circle cx="298" cy="-86" r="3" class="hb"/>
+    <g class="ink"><circle cx="110" cy="-148" r="2"/><circle cx="150" cy="-148" r="2"/><circle cx="190" cy="-148" r="2"/><circle cx="230" cy="-148" r="2"/></g>
+    <!-- running plate -->
+    <rect x="-2" y="-79" width="307" height="6" class="b"/>
+    <!-- wheels: three coupled, radius 36, centres x = 66 + 82 i -->
+    <circle cx="66" cy="-36" r="36" class="b" style="stroke-width:1.8"/><circle cx="66" cy="-36" r="30" class="l"/><g class="l" style="stroke-width:1.7"><line x1="73.7" y1="-33.9" x2="95" y2="-28.2"/><line x1="71.7" y1="-30.3" x2="87.2" y2="-14.8"/><line x1="68.1" y1="-28.3" x2="73.8" y2="-7"/><line x1="63.9" y1="-28.3" x2="58.2" y2="-7"/><line x1="60.3" y1="-30.3" x2="44.8" y2="-14.8"/><line x1="58.3" y1="-33.9" x2="37" y2="-28.2"/><line x1="58.3" y1="-38.1" x2="37" y2="-43.8"/><line x1="60.3" y1="-41.7" x2="44.8" y2="-57.2"/><line x1="63.9" y1="-43.7" x2="58.2" y2="-65"/><line x1="68.1" y1="-43.7" x2="73.8" y2="-65"/><line x1="71.7" y1="-41.7" x2="87.2" y2="-57.2"/><line x1="73.7" y1="-38.1" x2="95" y2="-43.8"/></g><path d="M 74.9 -64.7 A 30 30 0 0 1 96 -34.5 Z" class="ink"/><circle cx="66" cy="-36" r="8" class="b"/><circle cx="66" cy="-36" r="2.6" class="ink"/>
+    <circle cx="148" cy="-36" r="36" class="b" style="stroke-width:1.8"/><circle cx="148" cy="-36" r="30" class="l"/><g class="l" style="stroke-width:1.7"><line x1="155.7" y1="-33.9" x2="177" y2="-28.2"/><line x1="153.7" y1="-30.3" x2="169.2" y2="-14.8"/><line x1="150.1" y1="-28.3" x2="155.8" y2="-7"/><line x1="145.9" y1="-28.3" x2="140.2" y2="-7"/><line x1="142.3" y1="-30.3" x2="126.8" y2="-14.8"/><line x1="140.3" y1="-33.9" x2="119" y2="-28.2"/><line x1="140.3" y1="-38.1" x2="119" y2="-43.8"/><line x1="142.3" y1="-41.7" x2="126.8" y2="-57.2"/><line x1="145.9" y1="-43.7" x2="140.2" y2="-65"/><line x1="150.1" y1="-43.7" x2="155.8" y2="-65"/><line x1="153.7" y1="-41.7" x2="169.2" y2="-57.2"/><line x1="155.7" y1="-38.1" x2="177" y2="-43.8"/></g><path d="M 156.9 -64.7 A 30 30 0 0 1 178 -34.5 Z" class="ink"/><circle cx="148" cy="-36" r="8" class="b"/><circle cx="148" cy="-36" r="2.6" class="ink"/>
+    <circle cx="230" cy="-36" r="36" class="b" style="stroke-width:1.8"/><circle cx="230" cy="-36" r="30" class="l"/><g class="l" style="stroke-width:1.7"><line x1="237.7" y1="-33.9" x2="259" y2="-28.2"/><line x1="235.7" y1="-30.3" x2="251.2" y2="-14.8"/><line x1="232.1" y1="-28.3" x2="237.8" y2="-7"/><line x1="227.9" y1="-28.3" x2="222.2" y2="-7"/><line x1="224.3" y1="-30.3" x2="208.8" y2="-14.8"/><line x1="222.3" y1="-33.9" x2="201" y2="-28.2"/><line x1="222.3" y1="-38.1" x2="201" y2="-43.8"/><line x1="224.3" y1="-41.7" x2="208.8" y2="-57.2"/><line x1="227.9" y1="-43.7" x2="222.2" y2="-65"/><line x1="232.1" y1="-43.7" x2="237.8" y2="-65"/><line x1="235.7" y1="-41.7" x2="251.2" y2="-57.2"/><line x1="237.7" y1="-38.1" x2="259" y2="-43.8"/></g><path d="M 238.9 -64.7 A 30 30 0 0 1 260 -34.5 Z" class="ink"/><circle cx="230" cy="-36" r="8" class="b"/><circle cx="230" cy="-36" r="2.6" class="ink"/>
+    <!-- coupling rod through the three crank pins -->
+    <line x1="53.7" y1="-27.4" x2="217.7" y2="-27.4" style="stroke:var(--ink);stroke-width:8.4;stroke-linecap:round"/>
+    <line x1="53.7" y1="-27.4" x2="217.7" y2="-27.4" style="stroke:var(--paper);stroke-width:5.6;stroke-linecap:round"/>
+    <circle cx="53.7" cy="-27.4" r="5.2" class="b"/><circle cx="53.7" cy="-27.4" r="1.8" class="ink"/><circle cx="135.7" cy="-27.4" r="5.2" class="b"/><circle cx="135.7" cy="-27.4" r="1.8" class="ink"/><circle cx="217.7" cy="-27.4" r="5.2" class="b"/><circle cx="217.7" cy="-27.4" r="1.8" class="ink"/>
+  </g>
+  <!-- track: rail top at y = 384, sleepers at x = 36 + 22 i, ballast below -->
+  <rect x="30" y="384" width="900" height="5" class="ink"/>
+  <g class="b" style="stroke-width:1"><rect x="36" y="389" width="12" height="6"/><rect x="58" y="389" width="12" height="6"/><rect x="80" y="389" width="12" height="6"/><rect x="102" y="389" width="12" height="6"/><rect x="124" y="389" width="12" height="6"/><rect x="146" y="389" width="12" height="6"/><rect x="168" y="389" width="12" height="6"/><rect x="190" y="389" width="12" height="6"/><rect x="212" y="389" width="12" height="6"/><rect x="234" y="389" width="12" height="6"/><rect x="256" y="389" width="12" height="6"/><rect x="278" y="389" width="12" height="6"/><rect x="300" y="389" width="12" height="6"/><rect x="322" y="389" width="12" height="6"/><rect x="344" y="389" width="12" height="6"/><rect x="366" y="389" width="12" height="6"/><rect x="388" y="389" width="12" height="6"/><rect x="410" y="389" width="12" height="6"/><rect x="432" y="389" width="12" height="6"/><rect x="454" y="389" width="12" height="6"/><rect x="476" y="389" width="12" height="6"/><rect x="498" y="389" width="12" height="6"/><rect x="520" y="389" width="12" height="6"/><rect x="542" y="389" width="12" height="6"/><rect x="564" y="389" width="12" height="6"/><rect x="586" y="389" width="12" height="6"/><rect x="608" y="389" width="12" height="6"/><rect x="630" y="389" width="12" height="6"/><rect x="652" y="389" width="12" height="6"/><rect x="674" y="389" width="12" height="6"/><rect x="696" y="389" width="12" height="6"/><rect x="718" y="389" width="12" height="6"/><rect x="740" y="389" width="12" height="6"/><rect x="762" y="389" width="12" height="6"/><rect x="784" y="389" width="12" height="6"/><rect x="806" y="389" width="12" height="6"/><rect x="828" y="389" width="12" height="6"/><rect x="850" y="389" width="12" height="6"/><rect x="872" y="389" width="12" height="6"/><rect x="894" y="389" width="12" height="6"/><rect x="916" y="389" width="12" height="6"/></g>
+  <line x1="30" y1="395" x2="930" y2="395" class="l"/>
+  <rect x="30" y="395" width="900" height="7" class="h"/>
+  <!-- drop lines from the track to the ruler -->
+  <g class="sight"><line x1="70" y1="406" x2="70" y2="448"/><line x1="250" y1="406" x2="250" y2="448"/><line x1="500" y1="406" x2="500" y2="448"/><line x1="905" y1="406" x2="905" y2="448"/></g>
+  <text x="78" y="442" class="sm">danger in sight</text>
+  <text x="258" y="442" class="sm">brakes go on</text>
+  <text x="508" y="442" class="sm">the signal</text>
+  <!-- the ruler: delay 70 to 250, braking 250 to 905, of which 500 to 905 is the overrun -->
+  <rect x="70" y="458" width="180" height="24" class="hb"/>
+  <rect x="500" y="458" width="405" height="24" class="accb"/>
+  <rect x="250" y="458" width="655" height="24" class="l"/>
+  <g class="l" style="stroke-width:2.2"><line x1="70" y1="452" x2="70" y2="488"/><line x1="250" y1="452" x2="250" y2="488"/><line x1="905" y1="452" x2="905" y2="488"/></g>
+  <!-- notes -->
+  <text x="74" y="508" class="it">the delay: harm is</text>
+  <text x="74" y="527" class="it">documented months to</text>
+  <text x="74" y="546" class="it">years after release</text>
+  <text x="258" y="508" class="it">the brakes: liability,</text>
+  <text x="258" y="527" class="it">audits, insurance</text>
+  <text x="508" y="508" class="ita">where it stops: past the signal</text>
+  <text x="905" y="96" text-anchor="end" class="it">the engine: capability, investment,</text>
+  <text x="905" y="115" text-anchor="end" class="it">compute, and round again</text>
+  <path d="M 800 124 q -10 34 2 70" class="thin"/>
+  <text x="480" y="600" text-anchor="middle" class="sm">Lengths are judged, not measured.</text>
+  <text x="480" y="645" text-anchor="middle" class="title">Stopping Distance</text>
+  <line x1="300" y1="662" x2="660" y2="662" class="thin"/>
+  <text x="480" y="683" text-anchor="middle" class="cap">DIA-204 · A late warning, weak brakes and high speed: the train stops beyond the signal.</text>
+</svg>

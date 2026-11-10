@@ -1,7 +1,7 @@
 import { applyProfileTailoring } from './tailoring';
 
 const baseSummary =
-  "Technology leader with over a decade of experience in software architecture and engineering leadership. Modernizes complex systems, leads cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
+  "Technology leader with over a decade of experience in leveraging software architecture and engineering principles. Modernizes complex systems, leads cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
 
 const baseCompetencies = [
   {
@@ -30,14 +30,15 @@ const baseCompetencies = [
   },
 ];
 
-// Named tools for ATS keyword matching. List only what the experience entries or their overlays back up.
-export const technicalSkills = [
-  { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "SQL"] },
-  { group: "Frameworks", items: [".NET", ".NET Core", "ASP.NET MVC", "Entity Framework", "React", "Kendo UI", "WinForms", "Unity"] },
-  { group: "Cloud & DevOps", items: ["AWS", "Azure", "Azure Functions", "Azure DevOps", "CI/CD"] },
-  { group: "Data & Integration", items: ["SQL Server", "PostgreSQL", "REST APIs", "Salesforce", "Stripe", "EHR integrations"] },
-  { group: "Testing", items: ["xUnit", "Moq", "AutoFixture", "Jest", "Vitest", "Playwright"] },
-  { group: "Practices", items: ["Multi-tenant SaaS", "HIPAA & PHI compliance", "AI-assisted SDLC", "Agile delivery", "Legacy modernization"] },
+// The resume's one Skills section: each competency theme with the named tools behind it, for ATS keyword matching.
+// List only what the experience entries or their overlays back up. The prose competencies above feed the site's timeline.
+export const skills = [
+  { group: "Leadership", items: ["Engineering management", "Hiring engineering teams", "Cross-team planning", "Technical leadership", "Executive communication"] },
+  { group: "Architecture", items: ["Microservices", "Multi-tenant", "SOA", "CQRS (command query responsibility segregation)"] },
+  { group: "Languages & Frameworks", items: ["C#", "TypeScript", "JavaScript", "SQL", ".NET", "Python", "Entity Framework", "React"] },
+  { group: "Cloud, Data & DevOps", items: ["Azure Cloud","AWS Cloud", "CI/CD", "SQL Server", "PostgreSQL"] },
+  { group: "Quality & Compliance", items: ["Automated testing", "HIPAA & PHI compliance", "Agile delivery"] },
+  { group: "AI & Modernization", items: ["AI-assisted SDLC (Claude, Codex, Cursor)", "Legacy modernization"] },
 ];
 
 // Applies the tailoring overlay named by REACT_APP_TAILORING, if any. With no overlay these are the base values and targetRole is undefined.

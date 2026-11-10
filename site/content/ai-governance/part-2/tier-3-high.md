@@ -8,6 +8,8 @@ draft: false
 
 This tier is where individuals and institutions can create structural change in the next two to three years. It requires access: to journalists, to courts, to regulatory proceedings, or to workplaces deploying AI. The access itself is the constraint. These levers are available to more people than usually act on them.
 
+![](/ai-governance/part-2/diagrams/DIA-205-road-signs.svg)
+
 ---
 
 ## Visibility

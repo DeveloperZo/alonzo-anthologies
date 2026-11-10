@@ -11,7 +11,7 @@ version: "1.0"
 What can you actually do about AI?
 </div>
 
-[[../part-1/index|Part 1]] mapped why AI companies cannot reliably self-govern. This guide trains your eye to see leverage where it actually lives. It opens by naming why most AI announcements feel hollow, walks the four tiers through real 2024-2026 examples paired with their look-alikes, and closes by helping you locate where you sit relative to the tiers. From recognition, not optimism.
+[[../part-1/index|Part 1]] asked whether the companies building AI can govern themselves, and found they cannot be relied on to. This part starts where you are standing: with what has already arrived on your screen, in your subscription and at your work, whether or not anyone asked you. Then it goes through the twelve places a system can be pushed, weakest first, and who can reach each one.
 
 ---
 

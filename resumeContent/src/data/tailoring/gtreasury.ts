@@ -12,7 +12,7 @@ const gtreasury: Tailoring = {
   profile: {
     targetRole: 'Software Engineering Manager',
     professionalSummary:
-      'Technology leader with over a decade of experience in software architecture and engineering leadership on SaaS platforms. Modernizes complex distributed systems, leads and mentors cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.',
+      'Engineering manager and software architect on SaaS platforms, building software since 2012 and in lead, architect, and manager roles since 2018. Modernizes complex distributed systems, leads and mentors cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.',
     competencies: {
       'Technology Leadership':
         'Leads and mentors cross-functional engineering teams, sets technical direction, and drives delivery from planning through production.',
@@ -46,11 +46,11 @@ const gtreasury: Tailoring = {
       },
     },
     4: {
-      order: ['dotnet-core', 'refactor', 'uat', 'architects', 'regulatory', 'ceo-investors', 'kpis', 'co-led'],
+      order: ['dotnet-core', 'refactor', 'uat', 'regulatory', 'ceo-investors', 'kpis'],
       accomplishments: {
         'dotnet-core': {
           description:
-            'Moved the C# applications from .NET to .NET Core on SQL Server and Entity Framework on day one, improving performance and setting the technical direction for the team.',
+            'Moved the C# applications from .NET to .NET Core on SQL Server and Entity Framework starting on the first day in the role, improving performance and setting the technical direction for the team.',
         },
       },
     },
