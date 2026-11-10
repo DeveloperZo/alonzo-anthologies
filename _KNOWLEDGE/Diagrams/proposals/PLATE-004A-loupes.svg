@@ -1,6 +1,6 @@
 <svg viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p4-t p4-d">
   <title id="p4-t">DIA-004A · The brake, drawn to scale</title>
-  <desc id="p4-d">An engraved plate. One long hatched bar spans the page: 1.4 trillion dollars of commitments. Three oversight figures are drawn on the same scale beneath it and are too thin to see. A magnifying glass at one hundred diameters shows the UK AI Security Institute as a sliver. A second glass at ten thousand diameters shows US CAISI as a short bar and all AI fines ever collected as a hairline.</desc>
+  <desc id="p4-d">An engraved plate. One long hatched bar spans the page: about $750 billion, OpenAI’s compute spending target through 2030. Three oversight figures are drawn on the same scale beneath it and are too thin to see: the UK AI Security Institute's yearly budget, the largest AI fine imposed to date, and the yearly budget of the US institute. A magnifying glass at 100 diameters shows the UK institute as a sliver. A second glass at 10,000 diameters shows the fine and the US budget as short bars.</desc>
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
@@ -37,56 +37,53 @@
   <rect x="20" y="20" width="920" height="720" class="thin"/>
   <text x="42" y="50" class="sc">PLATE IV</text>
   <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 4 · WHO WAS SUPPOSED TO SLOW IT</text>
-  <!-- the commitments bar: 800 units = $1.4T -->
-  <text x="80" y="104" class="it" style="font-size:15px">OpenAI commitments, eight years</text>
-  <text x="880" y="104" text-anchor="end" style="font-size:15px">$1.4 trillion</text>
+  <!-- the top bar: 800 units = about $750 billion -->
+  <text x="80" y="104" class="it" style="font-size:15px">OpenAI’s compute spending target through 2030</text>
+  <text x="880" y="104" text-anchor="end" style="font-size:15px">about $750 billion</text>
   <rect x="80" y="114" width="800" height="30" class="hb"/>
-  <g class="thin">
-    <line x1="80" y1="144" x2="80" y2="152"/><line x1="280" y1="144" x2="280" y2="152"/><line x1="480" y1="144" x2="480" y2="152"/><line x1="680" y1="144" x2="680" y2="152"/><line x1="880" y1="144" x2="880" y2="152"/>
-  </g>
-  <text x="74" y="166" class="tick" style="text-anchor:end">$0</text><text x="280" y="166" class="tick">$350B</text><text x="480" y="166" class="tick">$700B</text><text x="680" y="166" class="tick">$1.05T</text><text x="880" y="166" class="tick">$1.4T</text>
+  <line x1="80" y1="144" x2="80" y2="152" class="thin"/><text x="74" y="166" class="tick" style="text-anchor:end">$0</text><line x1="346.7" y1="144" x2="346.7" y2="152" class="thin"/><text x="346.7" y="166" class="tick">$250B</text><line x1="613.3" y1="144" x2="613.3" y2="152" class="thin"/><text x="613.3" y="166" class="tick">$500B</text><line x1="880" y1="144" x2="880" y2="152" class="thin"/><text x="880" y="166" class="tick">$750B</text>
   <!-- the same scale, continued: three bars at their true widths -->
   <line x1="80" y1="152" x2="80" y2="250" class="thin"/>
-  <rect x="80" y="186" width="0.048" height="14" class="bar"/>
-  <rect x="80" y="208" width="0.0057" height="14" class="bar"/>
-  <rect x="80" y="230" width="0.00023" height="14" class="fine"/>
+  <rect x="80" y="186" width="0.0896" height="14" class="bar"/>
+  <rect x="80" y="208" width="0.016" height="14" class="fine"/>
+  <rect x="80" y="230" width="0.0107" height="14" class="bar"/>
   <text x="94" y="197" class="it">UK AI Security Institute, $84M a year</text>
-  <text x="94" y="219" class="it">US CAISI, $10M</text>
-  <text x="94" y="241" class="it" style="fill:var(--accent)">Every AI fine ever collected, about $400K</text>
-  <text x="372" y="219" class="sm">(all three are drawn. None is wide enough to hold ink.)</text>
+  <text x="94" y="219" class="it" style="fill:var(--accent)">The largest AI fine to date, €15M (Italy, December 2024)</text>
+  <text x="94" y="241" class="it">US CAISI, $10M a year</text>
+  <text x="492" y="219" class="sm">(all three are drawn. None is wide enough to hold ink.)</text>
   <!-- sight lines -->
   <path d="M 80 250 L 147 415 M 80 250 L 262 327" class="sight"/>
   <path d="M 205 480 L 558 374 M 205 480 L 600 548" class="sight"/>
-  <!-- glass one: 100 diameters -->
+  <!-- glass one -->
   <line x1="176" y1="504" x2="112" y2="568" style="stroke:var(--ink);stroke-width:15;stroke-linecap:round"/>
   <line x1="176" y1="504" x2="112" y2="568" style="stroke:var(--paper);stroke-width:12;stroke-linecap:round"/>
   <line x1="150" y1="534" x2="116" y2="568" style="stroke:url(#p4-h);stroke-width:6"/>
   <circle cx="250" cy="430" r="104" class="glass"/>
   <g clip-path="url(#p4-c1)">
     <line x1="200" y1="320" x2="200" y2="540" class="l"/>
-    <rect x="200" y="372" width="4.8" height="20" class="bar"/>
-    <rect x="200" y="420" width="0.57" height="20" class="bar"/>
-    <rect x="200" y="468" width="0.023" height="20" class="fine"/>
-    <text x="214" y="387" class="it">UK institute</text>
-    <text x="214" y="435" class="it">US CAISI, a hair</text>
-    <text x="214" y="483" class="it" style="fill:var(--accent)">fines: not yet</text>
+    <rect x="200" y="372" width="8.96" height="20" class="bar"/>
+    <rect x="200" y="420" width="1.6" height="20" class="fine"/>
+    <rect x="200" y="468" width="1.07" height="20" class="bar"/>
+    <text x="218" y="387" class="it">UK institute</text>
+    <text x="214" y="435" class="it" style="fill:var(--accent)">the fine: a hair</text>
+    <text x="214" y="483" class="it">US CAISI: a hair</text>
   </g>
   <circle cx="250" cy="430" r="108" class="rim-o"/>
   <circle cx="250" cy="430" r="108" class="rim-i"/>
   <path d="M 178 372 A 92 92 0 0 1 232 340" class="thin" style="opacity:0.6"/>
   <text x="270" y="572" class="pow">× 100</text>
-  <!-- glass two: 10,000 diameters -->
+  <!-- glass two -->
   <line x1="762" y1="534" x2="826" y2="598" style="stroke:var(--ink);stroke-width:15;stroke-linecap:round"/>
   <line x1="762" y1="534" x2="826" y2="598" style="stroke:var(--paper);stroke-width:12;stroke-linecap:round"/>
   <circle cx="668" cy="440" r="128" class="glass"/>
   <g clip-path="url(#p4-c2)">
     <line x1="590" y1="300" x2="590" y2="580" class="l"/>
-    <rect x="590" y="366" width="480" height="24" class="hb"/>
-    <rect x="590" y="428" width="57.1" height="24" class="bar"/>
-    <rect x="590" y="490" width="2.29" height="24" class="fine"/>
+    <rect x="590" y="366" width="896" height="24" class="hb"/>
+    <rect x="590" y="430" width="160" height="24" class="fine"/>
+    <rect x="590" y="496" width="107" height="24" class="bar"/>
     <text x="600" y="358" class="it">UK institute, off the glass</text>
-    <text x="656" y="445" class="it">US CAISI</text>
-    <text x="602" y="507" class="it" style="fill:var(--accent)">all the fines, ever</text>
+    <text x="600" y="422" class="it" style="fill:var(--accent)">the largest fine to date</text>
+    <text x="600" y="488" class="it">US CAISI</text>
   </g>
   <circle cx="668" cy="440" r="132" class="rim-o"/>
   <circle cx="668" cy="440" r="132" class="rim-i"/>
@@ -95,5 +92,5 @@
   <!-- title and caption -->
   <text x="480" y="668" text-anchor="middle" class="title">The Brake, Drawn to Scale</text>
   <line x1="300" y1="686" x2="660" y2="686" class="thin"/>
-  <text x="480" y="707" text-anchor="middle" class="cap">DIA-004A · One scale throughout. It takes ten thousand diameters before the fines show as a hairline.</text>
+  <text x="480" y="707" text-anchor="middle" class="cap">DIA-004A · One scale throughout. Two oversight budgets and the largest fine to date are thinner than the ink until magnified.</text>
 </svg>

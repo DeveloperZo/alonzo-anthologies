@@ -1,7 +1,7 @@
 # DIA-008A: From Parameters to Paradigm
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-008A-leverage-tiers.svg`
-- **Theme:** Meadows' twelve leverage points clustered into four tiers, weakest first
+- **Theme:** Meadows' twelve leverage points, grouped by this series into four tiers, weakest first
 - **Primary audience takeaway:** Leverage is ranked, not equal. A push on a number is absorbed. A push on the goal moves the whole machine.
 
 ## What The Diagram Shows
@@ -46,4 +46,4 @@ What the plate leaves out, compared with the card diagram it replaces: the full 
 Section 8 is a teaser for Part 2. This plate gives the reader the four tier names and one case for each, so that the lever in DIA-008B, which uses the same twelve numbers and the same four tier names, can be read at a glance. It does not say where AI governance sits. That is the next plate's job.
 
 ## Suggested Caption
-DIA-008A · Meadows' twelve leverage points in four tiers, weakest first, and what a push at each has looked like.
+DIA-008A · Meadows' twelve leverage points, grouped here into four tiers, weakest first, with what a push at each has looked like.

@@ -92,6 +92,33 @@ Open points:
 - DIA-007B drops the model names and the old right-hand panel, which are not in the prose, and adds the 87% figure, which is.
 - DIA-007A and 007B headers read PLATE VII A and VII B, but 007B appears first on the page.
 
+### Which plate carries which figure
+
+A prose fact update is not finished until the plates that print the
+same figure are regenerated and republished. As of 2026-11-10 the
+proposals in part C of `part-1/UPDATE-PROPOSALS-2026-11.md` are not yet
+applied. When one lands, this is what it touches:
+
+| Plate | Figures printed on it | Pending proposal that would change it |
+| --- | --- | --- |
+| DIA-001 | "About 100 billion dials", the title "One Hundred Billion Dials", $100M to $1B+ a run | C1.4 (hundreds of billions of weights). The title and note would both change. |
+| DIA-002A | about $750B target, $42.6B revenue, 17.6 on the rule | C2.1 ($856B and about $50B, about 17 times). Constants at the top of the generator. |
+| DIA-002B | no figures. Wheel names only | C2.3 and C2.4 only if the author wants them drawn |
+| DIA-003 | ledge years 2020, 2022, 2023 | none |
+| DIA-004A | about $750B, UK $84M a year, CAISI $10M a year, largest fine 15 million euros | C2.1 (top bar follows DIA-002A). Constants at the top of the generator. |
+| DIA-004B | "Sawn off 24 February 2026. Not put back in April." Kaplan quote | C4.5 (three more revisions through July 2026, no pause) |
+| DIA-005 | none. The plate has no R1, B or R2 letters, which settles D11 | none |
+| DIA-006A | five quotations and attributions, "CAISI has $10M for FY2026" | none |
+| DIA-006B | 92 million and 170 million (WEF), 20 to 30 years, 40 years, 6.1 million, 4.2%, 86% women | C6.4 (the 20 to 30 year internet figure may be cut, which removes one of the two measures) |
+| DIA-007A | "8 of 27", 2 August 2026, $2.5B smuggling case, four firms and 10+ GW, "one settled" | C4.6 (Garcia dismissed), C7.3 (first EU enforcement actions) |
+| DIA-007B | 7, 4, 3 in 100, then 65 and 87 in 100 | C7.1 (add that no model began sabotage unprompted) |
+| DIA-008A | ASRS since 1976 and voluntary, about 10% in a month | none. Caption now says the four tiers are this series' grouping (A10). |
+| DIA-008B | weights per leverage point | none |
+| DIA-201 | autumn 2023, February 2026, "April 2026: a fresh coat" | C4.5, if Part 2's prose is updated to match |
+
+The new DIA-007A no longer cites the NP-hardness result, so source 30
+is now cited by nothing.
+
 ## Editorial rules (HARD)
 
 - No false dichotomies. Do not frame AI as having unique properties that

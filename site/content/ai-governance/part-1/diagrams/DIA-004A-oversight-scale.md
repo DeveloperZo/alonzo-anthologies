@@ -2,36 +2,41 @@
 ## Snapshot
 - **Diagram file:** `site/content/ai-governance/part-1/diagrams/DIA-004A-oversight-scale.svg`
 - **Theme:** Oversight capacity is tiny at industry scale
-- **Primary audience takeaway:** On one honest scale, every oversight budget is thinner than the ink, and the fines need ten thousand times magnification to show at all.
+- **Primary audience takeaway:** On one honest scale, two oversight budgets and the largest AI fine to date are thinner than the ink, and only show under magnification.
 
 ## What The Diagram Shows
-An engraved plate with one long hatched bar across the top: `OpenAI commitments, eight years`, `$1.4 trillion`. Under it, on the same scale and from the same zero line, three more bars are drawn at their true widths: the UK AI Security Institute, US CAISI, and every AI fine ever collected. None is wide enough to see. A magnifying glass at `× 100` shows the UK institute as a sliver and CAISI as a hair. A second glass at `× 10,000` shows the UK bar running off the glass, CAISI as a short bar, and the fines as a rust hairline.
+An engraved plate with one long hatched bar across the top: `OpenAI's compute spending target through 2030`, `about $750 billion`. Under it, on the same scale and from the same zero line, three more bars are drawn at their true widths: the UK AI Security Institute's yearly budget, the largest AI fine imposed to date, and US CAISI's yearly budget. None is wide enough to see. A magnifying glass at `× 100` shows the UK institute as a sliver and the other two as hairs. A second glass at `× 10,000` shows the UK bar running off the glass, and the fine and CAISI as short bars.
 
-Claim sentence: the reader should see that oversight money is invisible beside commitments, and a true-scale drawing with loupes shows it because the reader has to magnify ten thousand times before the smallest bar exists.
+Claim sentence: the reader should see that oversight money is invisible beside commitments, and a true-scale drawing with loupes shows it because the reader has to magnify ten thousand times before the smaller bars exist.
 
 ## Elements And Flow
 - **Components:**
-  - The commitments bar, 800 units wide, with ticks at `$0`, `$350B`, `$700B`, `$1.05T`, `$1.4T`.
-  - Three true-width bars under it. They are in the file at 0.048, 0.0057 and 0.00023 units.
+  - The top bar, 800 units wide, with ticks at `$0`, `$250B`, `$500B`, `$750B`.
+  - Three true-width bars under it. They are in the file at 0.0896, 0.016 and 0.0107 units.
   - Glass one, `× 100`. Glass two, `× 10,000`.
-  - The fines are the only rust element.
+  - The fine is the only rust element.
 - **Relationships:**
-  - One scale throughout. 800 units is `$1.4T`. Each glass multiplies widths and nothing else.
+  - One scale throughout. 800 units is `$750B`. Each glass multiplies widths and nothing else.
   - Sight lines run from the zero line to glass one, and from glass one to glass two.
 - **Notable labels or metrics:**
-  - `$1.4 trillion`, `$84M a year`, `$10M`, `about $400K`. Carried over unchanged from the earlier bar chart.
-  - Widths under glass: UK 4.8 then 480, CAISI 0.57 then 57, fines 0.023 then 2.3.
+  - `about $750 billion`: section 2, OpenAI's compute spending target through 2030 as of July 2026. It is the same figure DIA-002A uses.
+  - `$84M a year`: carried over from the earlier bar chart.
+  - `$10M a year`: source 26a, CAISI's FY2026 enacted appropriation.
+  - `€15M (Italy, December 2024)`: source 13d, the Italian Garante's penalty against OpenAI, the largest single AI-specific fine to date. It is drawn at parity with the dollar. At this scale the exchange rate moves it by a few units under the second glass.
+  - Widths under glass: UK 8.96 then 896, fine 1.6 then 160, CAISI 1.07 then 107.
 
 ## How To Read It
 1. Read the long bar and its scale.
 2. Read the three labels under it and look for their bars.
 3. Move to the first glass and see what has appeared.
-4. Move to the second glass and find the rust hairline.
+4. Move to the second glass and compare the rust bar with the two ink ones.
 
 ## Governance Relevance
 The figure makes the capacity mismatch concrete without a forced minimum width or a second axis. Capital driving deployment sits many orders of magnitude above the budgets assigned to supervision and sanction. Section 4 uses that to explain why reactive enforcement arrives too small to shape behavior.
 
-What it leaves out: the hyperscaler capex and OpenAI valuation rows from the earlier chart. The UK figure is annual and the commitments figure is cumulative, as before.
+What it leaves out: the hyperscaler capex and OpenAI valuation rows from the earlier chart. The two budgets are annual and the top bar is a multi-year target.
+
+History: the first version of this plate carried two figures over from the old chart that the sources do not support. The top bar was `$1.4 trillion`, which section 2 records as superseded in February 2026. The third bar was "every AI fine ever collected, about $400K", but source 13d says no global dollar total is published and records a single fine of 15 million euros. Both were replaced on 2026-11-10. The plate is now generated by `PLATE-004A-loupes.gen.mjs`, with every figure in one block at the top.
 
 ## Suggested Caption
-DIA-004A · One scale throughout. It takes ten thousand diameters before the fines show as a hairline.
+DIA-004A · One scale throughout. Two oversight budgets and the largest fine to date are thinner than the ink until magnified.
