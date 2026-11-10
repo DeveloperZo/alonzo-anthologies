@@ -1,0 +1,82 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p4c-t p4c-d">
+  <title id="p4c-t">DIA-004C · The heavier ball keeps going</title>
+  <desc id="p4c-d">An engraved plate of two wrecking balls hung from one girder and swinging toward each other. The left ball is enormous and stands for OpenAI's projected compute spending through 2030, 856 billion dollars. The right ball is the size of a marble and stands for one year of the UK AI Security Institute's budget, 84 million dollars. Their weights are drawn in the true ratio of 10,190 to 1.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p4c-h); stroke: none; }
+      .hb { fill: url(#p4c-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hx { fill: url(#p4c-x); stroke: none; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .ink { fill: var(--ink); }
+      .acc { fill: var(--accent); }
+      .la { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-linecap: round; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 14.5px; font-style: italic; }
+      .ita { font-size: 14.5px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p4c-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <pattern id="p4c-x" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+    <clipPath id="p4c-ball"><circle cx="378" cy="401" r="160"/></clipPath>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE IV C</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 4 · WHO WAS SUPPOSED TO SLOW IT</text>
+  <!-- girder, running off both sides -->
+  <rect x="30" y="80" width="900" height="22" class="hb"/>
+  <line x1="30" y1="85" x2="930" y2="85" class="thin"/><line x1="30" y1="97" x2="930" y2="97" class="thin"/>
+  <g class="ink"><circle cx="60" cy="91" r="1.8"/><circle cx="120" cy="91" r="1.8"/><circle cx="180" cy="91" r="1.8"/><circle cx="240" cy="91" r="1.8"/><circle cx="300" cy="91" r="1.8"/><circle cx="360" cy="91" r="1.8"/><circle cx="420" cy="91" r="1.8"/><circle cx="480" cy="91" r="1.8"/><circle cx="540" cy="91" r="1.8"/><circle cx="600" cy="91" r="1.8"/><circle cx="660" cy="91" r="1.8"/><circle cx="720" cy="91" r="1.8"/><circle cx="780" cy="91" r="1.8"/><circle cx="840" cy="91" r="1.8"/><circle cx="900" cy="91" r="1.8"/></g>
+  <path d="M 408 102 h 24 l -6 12 h -12 Z" class="b"/><path d="M 634 102 h 12 l -3 7 h -6 Z" class="b"/>
+  <!-- ground -->
+  <rect x="30" y="575" width="900" height="7" class="h"/>
+  <line x1="30" y1="575" x2="930" y2="575" class="l"/>
+  <!-- the large ball: centre (378,401), radius 160 -->
+  <line x1="420" y1="112" x2="401.1" y2="236.6" style="stroke:var(--ink);stroke-width:6.5;stroke-linecap:round;stroke-dasharray:11 7"/>
+  <line x1="420" y1="112" x2="401.1" y2="236.6" class="l"/>
+  <circle cx="378" cy="401" r="160" class="paper"/>
+  <g clip-path="url(#p4c-ball)">
+    <rect x="218" y="241" width="320" height="320" class="h"/>
+    <circle cx="348" cy="367" r="154" class="paper"/>
+    <path d="M 398 561 A 160 160 0 0 0 538 421 L 538 561 Z" class="hx"/>
+  </g>
+  <path d="M 260 339 A 134 134 0 0 1 326 278" class="thin"/>
+  <circle cx="378" cy="401" r="160" class="l" style="stroke-width:1.8"/>
+  <circle cx="401.1" cy="236.6" r="8" class="b"/><circle cx="401.1" cy="236.6" r="3" class="b"/>
+  <g class="thin"><path d="M 212.6 340.8 A 176.0 176.0 0 0 0 212.6 461.2"/><path d="M 194.5 351.8 A 190.0 190.0 0 0 0 194.5 450.2"/><path d="M 177.1 365.6 A 204.0 204.0 0 0 0 177.1 436.4"/></g>
+  <!-- the small ball: radius = 160 / cbrt(10190) = 7.4 -->
+  <line x1="640" y1="109" x2="554.5" y2="393.9" class="thin" style="stroke-width:0.9"/>
+  <circle cx="552.4" cy="401" r="7.4" class="acc"/>
+  <g class="thin"><path d="M 565.4 394.9 A 14.4 14.4 0 0 1 565.4 407.1"/><path d="M 572.5 393.7 A 21.4 21.4 0 0 1 572.5 408.3"/></g>
+  <!-- notes -->
+  <text x="56" y="150" class="it">OpenAI's projected compute spending</text>
+  <text x="56" y="169" class="it">through 2030: $856 billion</text>
+  <path d="M 150 178 q 16 34 62 72" class="thin"/>
+  <text x="612" y="300" class="ita">the UK AI Security Institute's</text>
+  <text x="612" y="319" class="ita">budget for one year: $84 million</text>
+  <path d="M 632 328 Q 612 372 563.8 396.0" class="la"/>
+  <text x="612" y="444" class="sm">US CAISI's ball, at $10 million a year,</text>
+  <text x="612" y="461" class="sm">would be half as wide.</text>
+  <text x="612" y="500" class="it">If they meet at equal speed, the large</text>
+  <text x="612" y="519" class="it">ball keeps all but a five-thousandth</text>
+  <text x="612" y="538" class="it">of its own.</text>
+  <text x="480" y="600" text-anchor="middle" class="sm">Drawn to weight, as two balls of the same iron: 10,190 parts to 1, which makes the small ball a twenty-second as wide.</text>
+  <text x="480" y="645" text-anchor="middle" class="title">The Heavier Ball Keeps Going</text>
+  <line x1="300" y1="662" x2="660" y2="662" class="thin"/>
+  <text x="480" y="683" text-anchor="middle" class="cap">DIA-004C · Projected spending against one year of the largest oversight budget, as two wrecking balls drawn to weight.</text>
+</svg>

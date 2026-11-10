@@ -14,6 +14,8 @@ One exception has now been demonstrated. In June 2026, days after Anthropic rele
 
 ![](/ai-governance/part-1/diagrams/DIA-004A-oversight-scale.svg)
 
+![](/ai-governance/part-1/diagrams/DIA-004C-momentum.svg)
+
 Now watch a safety policy weaken itself in public. Anthropic's Responsible Scaling Policy (the document governing when Anthropic pauses model development) was updated February 24, 2026 to remove its previous binding pause commitment. Jared Kaplan (Chief Science Officer and Responsible Scaling Officer) told TIME: *"We felt that it wouldn't actually help anyone for us to stop training AI models."* He added that the company "didn't really feel… that it made sense for us to make unilateral commitments… if competitors are blazing ahead."<sup><a href="sources#part1-ref-13" id="part1-fnref-13">13</a></sup> Four further revisions through July 2026 adjusted thresholds and reporting; none restored the binding pause.<sup><a href="sources#part1-ref-13e" id="part1-fnref-13e">13e</a></sup>
 
 Follow that logic through. It ties the safety standard to the lowest bar any competitor is willing to hold, which means the standard gets quietly redefined to match current behavior. This is the dissent paradox: even a lab that built its brand on safety did not hold the line alone once competitors would not.

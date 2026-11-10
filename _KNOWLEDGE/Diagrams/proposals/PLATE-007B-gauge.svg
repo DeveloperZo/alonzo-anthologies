@@ -1,0 +1,96 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p7b-t p7b-d">
+  <title id="p7b-t">DIA-007B · The needle and the works</title>
+  <desc id="p7b-d">An engraved plate of a large pressure gauge. Its needle rests near the low end of the scale, marked all well. Part of the face is broken away. Behind it the curved pressure tube and a toothed sector can be seen, and the link that should join the tube to the sector hangs loose. The dial stands for a model's written reasoning, the works for what the model did. Notes give the measured rates: reasoning did not match the act in 65 of 100 cases, no reasoning was left in 87 of 100, and sabotage was carried on in 7 of 100.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .h { fill: url(#p7b-h); stroke: none; }
+      .hb { fill: url(#p7b-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .ink { fill: var(--ink); stroke: var(--ink); stroke-width: 1; stroke-linejoin: round; }
+      .ga { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 4 3.5; stroke-linecap: round; }
+      .ea { fill: var(--paper); stroke: var(--accent); stroke-width: 1.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-linecap: round; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .scd { font-size: 12px; letter-spacing: 0.2em; text-anchor: middle; }
+      .it { font-size: 14.5px; font-style: italic; }
+      .ita { font-size: 14.5px; font-style: italic; fill: var(--accent); }
+      .dial { font-size: 15px; font-style: italic; text-anchor: middle; }
+      .n { font-size: 22px; }
+      .sm { font-size: 12.5px; font-style: italic; fill: var(--soft); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Fredericka the Great", "Cormorant Garamond", Georgia, serif; font-size: 32px; letter-spacing: 0.01em; }
+    </style>
+    <pattern id="p7b-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VII B</text>
+  <text x="918" y="50" text-anchor="end" class="sc">PART I · SECTION 7 · SAFETY RISK AND BINDING CONSTRAINTS</text>
+  <!-- bench and the pipe the gauge stands on -->
+  <rect x="30" y="578" width="900" height="7" class="h"/>
+  <line x1="30" y1="578" x2="930" y2="578" class="l"/>
+  <rect x="305" y="522" width="26" height="30" class="b"/>
+  <rect x="294" y="548" width="48" height="14" class="hb"/>
+  <rect x="305" y="562" width="26" height="16" class="b"/>
+  <!-- case and bezel -->
+  <circle cx="318" cy="318" r="208" class="hb" style="stroke-width:1.8"/>
+  <circle cx="318" cy="318" r="196" class="b"/>
+  <!-- back plate, seen through the break -->
+  <circle cx="318" cy="318" r="186" class="hb"/>
+  <!-- the works: tube, sector, and the link hanging loose -->
+  <rect x="296" y="454" width="44" height="34" class="b"/>
+  <path d="M 306.8 478.6 A 161 161 0 0 0 476.6 346.0 L 458.8 342.8 A 143 143 0 0 1 308.0 460.7 Z" class="b"/>
+  <path d="M 312.7 469.9 A 152 152 0 0 0 466.7 349.6" class="thin"/>
+  <path d="M 364.0 370.0 L 309.4 345.1 A 60 60 0 0 1 346.0 312.8 Z" class="b"/>
+  <path d="M 309.4 345.1 A 60 60 0 0 1 346.0 312.8" style="fill:none;stroke:var(--ink);stroke-width:5;stroke-dasharray:2 2.4"/>
+  <line x1="364.0" y1="370.0" x2="414.0" y2="340.0" style="stroke:var(--ink);stroke-width:5;stroke-linecap:round"/>
+  <circle cx="364.0" cy="370.0" r="4.5" class="b"/>
+  <line x1="467.7" y1="344.4" x2="462.7" y2="394.4" style="stroke:var(--ink);stroke-width:4.5;stroke-linecap:round"/>
+  <circle cx="467.7" cy="344.4" r="5.5" class="b"/>
+  <circle cx="462.7" cy="394.4" r="4.5" class="b"/>
+  <!-- where the link should run: the argument -->
+  <line x1="421.0" y1="340.5" x2="459.7" y2="343.9" class="ga"/>
+  <circle cx="414.0" cy="340.0" r="5.5" class="ea"/>
+  <!-- the face, with a piece broken away -->
+  <path d="M 499.9 279.3 A 186 186 0 1 0 203.5 464.6 L 218.0 451.0 L 244.0 434.0 L 252.0 410.0 L 278.0 400.0 L 284.0 376.0 L 308.0 368.0 L 316.0 346.0 L 340.0 340.0 L 350.0 322.0 L 376.0 326.0 L 398.0 310.0 L 428.0 320.0 L 454.0 308.0 L 476.0 292.0 Z" class="b"/>
+  <g class="l"><line x1="190.7" y1="445.3" x2="203.4" y2="432.6" style="stroke-width:1.6"/><line x1="164.5" y1="412.0" x2="172.2" y2="407.3"/><line x1="146.8" y1="373.6" x2="163.9" y2="368.1" style="stroke-width:1.6"/><line x1="138.6" y1="332.1" x2="147.5" y2="331.4"/><line x1="140.2" y1="289.8" x2="158.0" y2="292.7" style="stroke-width:1.6"/><line x1="151.7" y1="249.1" x2="160.0" y2="252.6"/><line x1="172.4" y1="212.2" x2="186.9" y2="222.8" style="stroke-width:1.6"/><line x1="201.1" y1="181.1" x2="206.9" y2="188.0"/><line x1="236.3" y1="157.6" x2="244.5" y2="173.7" style="stroke-width:1.6"/><line x1="276.0" y1="143.0" x2="278.1" y2="151.7"/><line x1="318.0" y1="138.0" x2="318.0" y2="156.0" style="stroke-width:1.6"/><line x1="360.0" y1="143.0" x2="357.9" y2="151.7"/><line x1="399.7" y1="157.6" x2="391.5" y2="173.7" style="stroke-width:1.6"/><line x1="434.9" y1="181.1" x2="429.1" y2="188.0"/><line x1="463.6" y1="212.2" x2="449.1" y2="222.8" style="stroke-width:1.6"/><line x1="484.3" y1="249.1" x2="476.0" y2="252.6"/></g>
+  <text x="204.6" y="285.5" class="dial">all well</text>
+  <text x="408.7" y="236.4" class="dial">alarm</text>
+  <text x="318" y="240" class="scd">REASONING,</text>
+  <text x="318" y="258" class="scd">AS WRITTEN</text>
+  <path d="M 185.4 379.1 L 320.3 323.0 L 348.9 303.8 L 315.7 313.0 Z" class="ink"/>
+  <circle cx="318" cy="318" r="11" class="ink"/><circle cx="318" cy="318" r="3" class="paper"/>
+  <!-- notes -->
+  <text x="590" y="118" class="it">the dial: the model's written reasoning,</text>
+  <text x="590" y="137" class="it">the only part an evaluator can read</text>
+  <path d="M 584 124 Q 540 150 467.7 201.0" class="thin"/>
+  <text x="590" y="196" class="ita">the link between them is off</text>
+  <path d="M 584 193 L 444.8 337.2" class="la"/>
+  <text x="590" y="250" class="it">the works: what the model did</text>
+  <path d="M 584 247 L 443.6 423.4" class="thin"/>
+  <line x1="590" y1="296" x2="900" y2="296" class="thin"/>
+  <text x="590" y="320" class="sc">MEASURED, UK AI SECURITY INSTITUTE, 2026</text>
+  <text x="590" y="358" class="n">65 in 100</text>
+  <text x="590" y="378" class="it">reasoning that did not match the act,</text>
+  <text x="590" y="396" class="it">when the most capable model carried a sabotage on</text>
+  <text x="590" y="438" class="n">87 in 100</text>
+  <text x="590" y="458" class="it">no reasoning left to read at all,</text>
+  <text x="590" y="476" class="it">in its cheating cases in a later test</text>
+  <text x="590" y="518" class="n">7 in 100</text>
+  <text x="590" y="538" class="it">how often it carried the sabotage on.</text>
+  <text x="590" y="556" class="it">No model began one unprompted.</text>
+  <text x="480" y="645" text-anchor="middle" class="title">The Needle and the Works</text>
+  <line x1="300" y1="662" x2="660" y2="662" class="thin"/>
+  <text x="480" y="683" text-anchor="middle" class="cap">DIA-007B · A gauge reports only through the link to its works. Where it matters most, a model's written reasoning is not linked to what it did.</text>
+</svg>
