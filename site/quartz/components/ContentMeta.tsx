@@ -4,6 +4,8 @@ import readingTime from "reading-time"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 import { JSX } from "preact"
+import { Root } from "hast"
+import { toString } from "hast-util-to-string"
 import style from "./styles/contentMeta.scss"
 
 interface ContentMetaOptions {
@@ -23,7 +25,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
   // Merge options with defaults
   const options: ContentMetaOptions = { ...defaultOptions, ...opts }
 
-  function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
+  function ContentMetadata({ cfg, fileData, tree, displayClass }: QuartzComponentProps) {
     const text = fileData.text
 
     if (text) {
@@ -35,7 +37,12 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
       // Display reading time if enabled
       if (options.showReadingTime) {
-        const { minutes, words: _words } = readingTime(text)
+        // fileData.text leaves out transcluded pages. The rendered tree has them,
+        // so a page assembled from ![[embeds]] is timed on what the reader gets.
+        const rendered = toString(tree as Root)
+        const { minutes, words: _words } = readingTime(
+          rendered.length > text.length ? rendered : text,
+        )
         const displayedTime = i18n(cfg.locale).components.contentMeta.readingTime({
           minutes: Math.ceil(minutes),
         })
