@@ -176,6 +176,31 @@
     line-height: 1.5;
     color: #555;
   }
+  .contact-info span {
+    display: block;
+  }
+
+  .resume-print .contact-info span {
+    display: inline;
+    margin-right: 14px;
+  }
+
+  .technical-skills {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .technical-skills li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+
+  .resume-print .technical-skills li {
+    margin-bottom: 1px;
+    line-height: 1.4;
+  }
+
   .project-link {
     color: #8b0000;
     text-decoration: none;
@@ -258,6 +283,12 @@
     margin-bottom: 8px;
   }
 
+  /* A role heading never ends a page on its own. */
+  .resume-print .job-header,
+  .resume-print .role-overview {
+    break-after: avoid;
+  }
+
   .resume-print .job-header,
   .resume-print .institution-period {
     margin-bottom: 2px;
@@ -267,6 +298,13 @@
   .resume-print .education-item h3 {
     font-size: 13px;
     margin: 0 0 1px;
+  }
+
+  /* Dates sit right after the company, not flush right, so text extractors do not read them as a second column. */
+  .resume-print .company-period,
+  .resume-print .institution-period {
+    justify-content: flex-start;
+    gap: 14px;
   }
 
   .resume-print .role-overview {

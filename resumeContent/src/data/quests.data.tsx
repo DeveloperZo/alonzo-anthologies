@@ -208,7 +208,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'stack',
       description:
-        'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, including several I had not worked in before.',
+        'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, often learning the stack on the engagement.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -461,15 +461,6 @@ export const baseQuests: Quest[] = [
   roles: ['ITCFP Participant', 'Developer'],
   tags: ['IT Fundamentals', 'Software Development', 'Automation', 'Financial Operations'],
   accomplishments: [
-    {
-      key: 'rotation',
-      description:
-        "Rotated through multiple IT functions on the selective IT Career Foundation Program, then built C# applications for financial operations.",
-      role: 'ITCFP Participant',
-      learnings: [
-        "Learned how technology choices affect different business units in distinct ways",
-      ],
-    },
     {
       key: 'mvc-apps',
       description:

@@ -41,7 +41,7 @@ const gtreasury: Tailoring = {
       accomplishments: {
         stack: {
           description:
-            'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, from C#/.NET with SQL Server and Entity Framework to several I had not worked in before.',
+            'Owned the architecture on every engagement in whatever stack the client ran, on Azure and AWS, from C#/.NET with SQL Server and Entity Framework to stacks learned on the engagement.',
         },
       },
     },

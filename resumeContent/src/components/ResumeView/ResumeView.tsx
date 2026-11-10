@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import quests from '../../data/quests.data';
 import type { Quest } from '../../data/quests.data';
-import { coreCompetencies, professionalSummary, targetRole } from '../../data/profile.data';
+import { coreCompetencies, professionalSummary, targetRole, technicalSkills } from '../../data/profile.data';
 import './ResumeView.css';
 import { generateResumePdfFromDom } from '../../utils/pdfGenerator';
 
@@ -47,15 +47,19 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
 
     const byStartDesc = (a: Quest, b: Quest) => b.startDate.getTime() - a.startDate.getTime();
 
-    const consultingTitle = (quest: Quest) => {
-      const prefix = 'Independent Consulting, ';
-      const company = quest.company ?? '';
-      return company.startsWith(prefix)
-        ? company.slice(prefix.length)
-        : quest.workTitle;
-    };
+    // Consulting sits in Professional Experience in date order, so a parser reads it as a job and not as an
+    // unlabeled section after the oldest role. Quest 11 is a short past engagement the resume leaves out.
+    const asConsultingJob = (quest: Quest): Quest => ({
+      ...quest,
+      company: `Independent Consulting (${quest.titles.sleek.replace(/^.* for an? /, '')})`,
+    });
 
-    const experience = quests.filter(isExperienceQuest).sort(byStartDesc).map(toResumeEntry);
+    const experience = [
+      ...quests.filter(isExperienceQuest),
+      ...quests.filter((quest) => isConsultingQuest(quest) && quest.id !== 11).map(asConsultingJob),
+    ]
+      .sort(byStartDesc)
+      .map(toResumeEntry);
     const education = quests
       .filter((quest) => quest.type === 'education')
       .map((edu) => ({
@@ -84,17 +88,12 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
       accomplishments: quest.accomplishments.map((acc) => acc.description),
     });
 
-    const consulting = quests
-      .filter((quest) => isConsultingQuest(quest) && quest.id !== 11)
-      .sort(byStartDesc)
-      .map((quest) => toPrintedEntry(quest, consultingTitle(quest), 'Independent Consulting'));
-
     const projects = quests
       .filter(isProjectQuest)
       .sort(byStartDesc)
       .map((quest) => toPrintedEntry(quest, quest.titles.sleek, 'Personal Project'));
 
-    return { experience, education, consulting, projects, skills };
+    return { experience, education, projects, skills };
   }, []);
 
   const handleDownloadPDF = () => {
@@ -107,10 +106,13 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
         <div className="header-content">
           <h1>Alonzo Williams</h1>
           {targetRole && <p className="target-role">{targetRole}</p>}
+          {/* Spaces between the spans keep the fields apart in the PDF text layer when print lays them on one line. */}
           <div className="contact-info">
-            awilliams9293@gmail.com<br />
-            https://www.linkedin.com/in/alonzo-williams-1160a7b0/<br />
-            Chicago, IL<br />
+            <span>awilliams9293@gmail.com</span>{' '}
+            {/* Set only by apply:package from the gitignored answers bank, so the number stays out of this public repo and the live site. */}
+            {process.env.REACT_APP_PHONE && <><span>{process.env.REACT_APP_PHONE}</span>{' '}</>}
+            <span>https://www.linkedin.com/in/alonzo-williams-1160a7b0/</span>{' '}
+            <span>Chicago, IL</span>
           </div>
         </div>
         <button type="button" className="download-button" onClick={handleDownloadPDF}>
@@ -133,6 +135,16 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
               </div>
             ))}
           </div>
+        </section>
+        <section className="resume-section">
+          <h2>Technical Skills</h2>
+          <ul className="technical-skills">
+            {technicalSkills.map((row) => (
+              <li key={row.group}>
+                <strong>{row.group}:</strong> {row.items.join(', ')}
+              </li>
+            ))}
+          </ul>
         </section>
         {/* Professional Experience */}
         <section className="resume-section">
@@ -161,35 +173,6 @@ const ResumeView: React.FC<ResumeViewProps> = ({ printMode = false }) => {
             </div>
           ))}
         </section>
-
-        {resumeData.consulting.length > 0 && (
-          <section className="resume-section">
-            <h2>Independent Consultant</h2>
-            {resumeData.consulting.map((entry) => (
-              <div key={entry.id} className="experience-item">
-                <div className="job-header">
-                  <h3>{entry.name}</h3>
-                  <div className="company-period">
-                    <span className="company-name">{entry.meta}</span>
-                    <span className="job-period">
-                      {formatDate(entry.startDate)}
-                      {' – '}
-                      {entry.endDate.getFullYear() >= 2030
-                        ? 'Present'
-                        : formatDate(entry.endDate)}
-                    </span>
-                  </div>
-                </div>
-                {entry.overview ? <p className="role-overview">{entry.overview}</p> : null}
-                <ul className="accomplishment-bullets">
-                  {entry.accomplishments.map((acc, i) => (
-                    <li key={i}>{acc}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-        )}
 
         {/* Education Section */}
         {resumeData.education && resumeData.education.length > 0 && (

@@ -30,6 +30,16 @@ const baseCompetencies = [
   },
 ];
 
+// Named tools for ATS keyword matching. List only what the experience entries or their overlays back up.
+export const technicalSkills = [
+  { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "SQL"] },
+  { group: "Frameworks", items: [".NET", ".NET Core", "ASP.NET MVC", "Entity Framework", "React", "Kendo UI", "WinForms", "Unity"] },
+  { group: "Cloud & DevOps", items: ["AWS", "Azure", "Azure Functions", "Azure DevOps", "CI/CD"] },
+  { group: "Data & Integration", items: ["SQL Server", "PostgreSQL", "REST APIs", "Salesforce", "Stripe", "EHR integrations"] },
+  { group: "Testing", items: ["xUnit", "Moq", "AutoFixture", "Jest", "Vitest", "Playwright"] },
+  { group: "Practices", items: ["Multi-tenant SaaS", "HIPAA & PHI compliance", "AI-assisted SDLC", "Agile delivery", "Legacy modernization"] },
+];
+
 // Applies the tailoring overlay named by REACT_APP_TAILORING, if any. With no overlay these are the base values and targetRole is undefined.
 const profile = applyProfileTailoring({ professionalSummary: baseSummary, coreCompetencies: baseCompetencies });
 

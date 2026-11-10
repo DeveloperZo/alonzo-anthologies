@@ -121,6 +121,17 @@ function describePdf(file) {
   return { pages, hasText, kb: Math.round(statSync(file).size / 1024) };
 }
 
+// The phone number lives only in the gitignored answers bank, never in the public source.
+function readPhone() {
+  const file = join(repoRoot, 'applications', 'answers.json');
+  if (!existsSync(file)) return '';
+  try {
+    return (JSON.parse(readFileSync(file, 'utf8')).contact?.phone || '').trim();
+  } catch {
+    fail('applications/answers.json is not valid JSON.');
+  }
+}
+
 async function main() {
   const id = resolveId();
   const tailored = id !== 'base';
@@ -139,10 +150,13 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
   rmSync(buildDir, { recursive: true, force: true });
 
+  const phone = readPhone();
+  if (!phone) console.warn('No contact.phone in applications/answers.json. The resume will print without a phone number.');
+
   console.log(`\n==> Building the resume${tailored ? ` with the "${id}" overlay` : ' untailored'}`);
   await run('npx', ['react-scripts', 'build'], {
     cwd: appDir,
-    env: { ...process.env, REACT_APP_TAILORING: tailored ? id : '', BUILD_PATH: buildDir, GENERATE_SOURCEMAP: 'false', CI: 'false' },
+    env: { ...process.env, REACT_APP_TAILORING: tailored ? id : '', REACT_APP_PHONE: phone, BUILD_PATH: buildDir, GENERATE_SOURCEMAP: 'false', CI: 'false' },
   });
 
   const browser = findBrowser();
