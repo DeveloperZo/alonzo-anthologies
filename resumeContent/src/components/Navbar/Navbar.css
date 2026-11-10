@@ -234,6 +234,46 @@ input[type="radio"] {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.mode-toggle.tip-target {
+  box-shadow: 0 0 0 3px #1e1c19, 0 0 0 6px var(--accent-color);
+}
+
+.sleek-tip {
+  position: fixed;
+  top: 58px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 8px 10px;
+  background: #1e1c19;
+  color: #f2e8d5;
+  border: 3px solid var(--accent-color);
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 8px;
+  line-height: 1.7;
+  text-align: left;
+  text-transform: none;
+  text-shadow: none;
+  z-index: 1001;
+}
+
+.sleek-tip button {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 8px;
+  color: #1e1c19;
+  background: var(--accent-color);
+  border: none;
+  cursor: pointer;
+}
+
+body.sleek-tip-open .factory-stage { top: 108px; }
+
 /* If you're using the .theme-button-container approach */
 .theme-button-container {
   position: relative;

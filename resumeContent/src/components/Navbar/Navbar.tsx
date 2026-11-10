@@ -16,6 +16,8 @@ import { labels } from "../../data/labels";
 import "./Navbar.css";
 
 
+const SLEEK_TIP_KEY = 'sleekTipDismissed';
+
 const Navbar: React.FC = () => {
   const {
     theme,
@@ -30,6 +32,9 @@ const Navbar: React.FC = () => {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isCustomizeOpen, setCustomizeOpen] = useState(false);
+  const [tipDismissed, setTipDismissed] = useState(
+    () => typeof window !== 'undefined' && localStorage.getItem(SLEEK_TIP_KEY) === '1'
+  );
 
   // Ref for detecting clicks outside the "Customize" area
   const customizeContainerRef = useRef<HTMLDivElement>(null);
@@ -64,6 +69,22 @@ const Navbar: React.FC = () => {
   // Toggle between Retro and Sleek modes
   const modeToggleText = theme === "play" ? "Sleek Mode" : "Retro Mode";
   const modeIcon = theme === "play" ? faMoon : faSun;
+  const showSleekTip = theme === "play" && !tipDismissed;
+
+  const dismissSleekTip = () => {
+    localStorage.setItem(SLEEK_TIP_KEY, '1');
+    setTipDismissed(true);
+  };
+
+  useEffect(() => {
+    document.body.classList.toggle('sleek-tip-open', showSleekTip);
+    return () => document.body.classList.remove('sleek-tip-open');
+  }, [showSleekTip]);
+
+  const toggleMode = () => {
+    if (theme === "play") dismissSleekTip();
+    setTheme(theme === "play" ? "work" : "play");
+  };
 
   const handleSetSeason = (value: number) => {
     setOverrideFlag(true);
@@ -101,7 +122,7 @@ const Navbar: React.FC = () => {
             <hr className={`menu-divider ${theme}`} />
 
             {/* Mode Toggle */}
-            <button className={`mode-toggle ${theme}`} onClick={() => setTheme(theme === "play" ? "work" : "play")}>
+            <button className={`mode-toggle ${theme}${showSleekTip ? ' tip-target' : ''}`} onClick={toggleMode}>
               <FontAwesomeIcon icon={modeIcon} /> {modeToggleText}
             </button>
 
@@ -131,7 +152,7 @@ const Navbar: React.FC = () => {
         </Link>)}
 
         {/* Mode Toggle */}
-        <button className={`mode-toggle ${theme}`} onClick={() => setTheme(theme === "play" ? "work" : "play")}>
+        <button className={`mode-toggle ${theme}${showSleekTip ? ' tip-target' : ''}`} onClick={toggleMode}>
           <FontAwesomeIcon icon={modeIcon} /> {modeToggleText}
         </button>
 
@@ -174,6 +195,13 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
+      )}
+
+      {showSleekTip && (
+        <p className="sleek-tip" role="status">
+          Click Sleek Mode for a traditional site.
+          <button type="button" onClick={dismissSleekTip} aria-label="Dismiss tip">Close</button>
+        </p>
       )}
     </nav>
   );

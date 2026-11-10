@@ -42,6 +42,12 @@ browser Back return to the floor with the last open machine selected.
 Play-mode pages use a plain full-screen panel; the retro TV image is no
 longer shown.
 
+The site opens in play (retro). On 2026-11-10 that became the default,
+and browsers that had the old sleek default saved were moved to retro
+once. A choice made after that is kept in `appTheme`. While retro is
+showing, a tip under the navbar points at Sleek Mode for a traditional
+site. Closing it or following it stores `sleekTipDismissed`.
+
 Play mode has no timeline: the factory already lays the career out in
 time, so the Quest Log link is gone and /timeline sends play mode home.
 Achievements is one page shared by both modes, with the same filters and

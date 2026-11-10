@@ -28,15 +28,17 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeType>(() => {
-    // Only access localStorage in browser environment
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('appTheme') as ThemeType;
-      // Validate that it's a valid theme option before using it
-      if (savedTheme === 'work' || savedTheme === 'play') {
-        return savedTheme;
-      }
+    if (typeof window === 'undefined') return 'play';
+    // Retro is the start. Visitors who already had the old sleek default
+    // saved are moved once; a choice made after that is kept.
+    if (localStorage.getItem('appThemeDefault') !== 'retro') {
+      localStorage.setItem('appThemeDefault', 'retro');
+      localStorage.setItem('appTheme', 'play');
+      return 'play';
     }
-    return 'work'; // Default theme
+    const savedTheme = localStorage.getItem('appTheme');
+    if (savedTheme === 'work' || savedTheme === 'play') return savedTheme;
+    return 'play';
   });
   const [season, setSeason] = useState<number>(0.5);
   const [timeOfDay, setTimeOfDay] = useState<number>(0.5);
