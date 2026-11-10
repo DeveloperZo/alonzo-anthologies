@@ -102,7 +102,7 @@ applied. When one lands, this is what it touches:
 | Plate | Figures printed on it | Pending proposal that would change it |
 | --- | --- | --- |
 | DIA-001 | "About 100 billion dials", the title "One Hundred Billion Dials", $100M to $1B+ a run | C1.4 (hundreds of billions of weights). The title and note would both change. |
-| DIA-002A | about $750B target, $42.6B revenue, 17.6 on the rule | C2.1 ($856B and about $50B, about 17 times). Constants at the top of the generator. |
+| DIA-002A | about $750B target, $42.6B revenue, 17.6 on the rule | C2.1 ($856B and about $50B, about 17 times). The figures are written into the generator in several places, not one block. |
 | DIA-002B | no figures. Wheel names only | C2.3 and C2.4 only if the author wants them drawn |
 | DIA-003 | ledge years 2020, 2022, 2023 | none |
 | DIA-004A | about $750B, UK $84M a year, CAISI $10M a year, largest fine 15 million euros | C2.1 (top bar follows DIA-002A). Constants at the top of the generator. |
