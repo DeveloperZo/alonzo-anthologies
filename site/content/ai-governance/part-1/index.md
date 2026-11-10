@@ -1,17 +1,17 @@
 ---
-title: "Part 1 — Can AI Self-Govern?"
+title: "Part 1: Can AI Self-Govern?"
 tags: [ai, governance, systems-thinking]
 draft: false
-version: "1.0"
+version: "1.2"
 ---
 
-*An analysis · May 2026 · [[changelog|v1.0]]*
+*An analysis · May 2026, revised November 2026 · [[changelog|v1.2]]*
 
 <div class="hero-question">
 Can the companies building the most powerful technology in history be trusted to regulate themselves?
 </div>
 
-From the system up, not from politics down — that's the path this series takes. How the technology works. What forces are driving it faster than oversight can follow. What remains genuinely unsolved. Where real leverage exists.
+This series works from the system up, not from politics down. How the technology works. What forces are driving it faster than oversight can follow. What remains genuinely unsolved. Where real leverage exists.
 
 ![[01-whats-being-built]]
 

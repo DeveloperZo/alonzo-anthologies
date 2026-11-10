@@ -4,13 +4,13 @@ tags: [ai, governance, systems-thinking]
 draft: false
 ---
 
-*Part VIII of VIII*
+*Section 8 of 8*
 
 *Meadows identified twelve places in any system where a small push produces a meaningful shift in behavior. They're ranked by power. Most AI governance operates at the bottom. Real structural change lives higher up.*
 
-A leverage point is a place in a system where a small change produces a large shift in behavior. Not all leverage is equal. Change a number (a content filter threshold, a compute reporting limit) and the system absorbs it. The loops keep running. Change the rules with real enforcement behind them, or change what information flows to whom, and something structural shifts. Change the goals the system actually pursues, and you've moved the whole machine. That last one is also the most resisted, by whoever benefits from the current goal.
+Not all leverage is equal. Change a number (a content filter threshold, a compute reporting limit) and the system absorbs it. The loops keep running. Change the rules with real enforcement behind them, or change what information flows to whom, and something structural shifts. Change the goals the system actually pursues, and you've moved the whole machine. That last one is also the most resisted, by whoever benefits from the current goal.
 
-Meadows grouped the twelve points into a rough hierarchy, clustered into four tiers. Each tier carries a working precedent or, in the case of the lowest tier, a diagnostic tell:
+Meadows ranked the twelve. This series groups them into four tiers. Each tier carries a working precedent or, in the case of the lowest tier, a diagnostic tell:
 
 ![](/ai-governance/part-1/diagrams/DIA-008A-leverage-tiers.svg)
 
