@@ -30,6 +30,25 @@ Section 6 is not called "The Dance" and does not present two paths. That
 false dichotomy was removed. Section 7 does not use the phrase
 "extinction risk".
 
+## Part 2 state (2026-11-10)
+
+Part 2's index embeds two essay sections (`00-why-you-feel-helpless`,
+`01-beneath-the-search-result`) and the four tier cards. Only the two
+essay sections are in the current voice. The tier cards are an older
+layer. The tier walk the index promises (dated examples paired with
+look-alikes, and a close on where the reader sits) is not written.
+
+Five files from an earlier structure are still `draft: false` and are
+embedded and linked nowhere: `01-how-youre-already-in-it`, `02`, `03`,
+`04` and `06`. They contain known errors. Do not cite or reuse them
+without the corrections listed in
+`part-2/UPDATE-PROPOSALS-2026-11.md`, which also holds every open
+decision from the November pass. Its Part 1 companion is
+`part-1/UPDATE-PROPOSALS-2026-11.md`.
+
+Part 2 has no source apparatus. The URLs behind its claims are in the
+two proposals files and `part-2/RATIONALE-2026-08.md`.
+
 ## Design system
 
 CSS variables `--red` / `--green` / `--blue` / `--amber` / `--gray`, each
@@ -116,13 +135,11 @@ Four plates changed subject, each to match the prose around its embed:
 - DIA-004B: was forces and a money bar. Now a stave tub: a standard holds only to the lowest bar any competitor keeps.
 
 Open points:
-- The 1876 Merchant Shipping Act line on DIA-201 was written from memory. Check it.
 - DIA-005 draws only shifting the burden. No loop is drawn anywhere in section 5 now. The prose carries them.
 - DIA-004C sets a multi-year projection against a one-year budget, as DIA-004A does. Its spec says so. The $84M figure on both has no entry in `sources.md`.
 - `PLATE-005-governor.svg` and `PLATE-007B-counting-frames.svg` are still in `proposals/` but are no longer published. The skill file still cites the governor as a model to study.
 - `proposals/preview.html` has not been updated for the three plates of the later pass.
 - Body text in the plates renders in Georgia on the site, not Spectral.
-- `leverage-points.md` calls ASRS "mandatory, anonymous". Source note 38 and DIA-008A say voluntary.
 - DIA-002B's fourth wheel, "investors", is inferred. The prose names labs, hyperscalers and neoclouds as tiers.
 - DIA-007B drops the model names, and no longer draws its quantities to scale: 65, 87 and 7 in 100 are text beside the gauge.
 - DIA-007A and 007B headers read PLATE VII A and VII B, but 007B appears first on the page.
@@ -146,15 +163,15 @@ line with the November 2026 revision of Part 1 (commit d53bea9) on
 | DIA-005 | none. "liability law, mandatory audits, hard deployment gates" quotes section 5 | plate file |
 | DIA-006A | five quotations and attributions, "CAISI has $10M for FY2026" | plate file |
 | DIA-006B | 92 million and 170 million (WEF), 20 to 30 years, half a century, 6.1 million, 4.2%, 86% women | plate file. The gorge is 50 years wide at 11.2 units a year. |
-| DIA-007A | "8 of 27", 2 August 2026, $2.5B smuggling case, four firms and 10+ GW, "one settled" | generator for the masonry, plate file for the notes |
+| DIA-007A | "8 of 27", 2 August 2026, $2.5B smuggling case, four firms and 10+ GW, "one settled" | generator, for the notes as well as the masonry. A hand edit to the plate is lost on the next run. |
 | DIA-007B | 65, 87 and 7 in 100, "No model began one unprompted" | text in the generator |
 | DIA-008A | ASRS since 1976 and voluntary, about 10% in a month | plate file |
-| DIA-008B | weights per leverage point | plate file |
-| DIA-201 | autumn 2023, February 2026, "April 2026: a fresh coat" | plate file |
+| DIA-008B | weights per leverage point, and the twelve point names (3 goals, 2 paradigm, 1 coordination, as in `leverage-points.md`) | plate file |
+| DIA-201 | autumn 2023, "February 2026, the fourth revision", "Four fresh coats since" | plate file |
 
-DIA-201 still says one revision after the pause was dropped, because
-Part 2's prose still says so. Section 4 of Part 1 now says four. If
-Part 2 is updated, DIA-201 follows.
+DIA-201 and Part 2's opening section were brought in line with section 4
+of Part 1 on 2026-11-10: the fourth revision (February 2026) dropped the
+pause, and four more followed through July 2026.
 
 The new DIA-007A no longer cites the NP-hardness result, so source 30
 is now cited by nothing.

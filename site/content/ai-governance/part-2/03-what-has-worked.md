@@ -1,7 +1,7 @@
 ---
 title: "What Has Actually Worked"
 tags: [ai, governance, systems-thinking, leverage]
-draft: false
+draft: true
 ---
 
 *Section 3 of 4*

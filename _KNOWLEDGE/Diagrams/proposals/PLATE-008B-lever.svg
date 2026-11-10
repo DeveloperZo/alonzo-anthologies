@@ -96,7 +96,7 @@
   <text x="360" y="582" class="pt">12 constants · 11 buffers</text><text x="360" y="597" class="pt">10 stocks and flows</text>
   <text x="510" y="582" class="pt">9 delays · 8 balancing loops</text><text x="510" y="597" class="pt">7 loop gain</text>
   <text x="660" y="582" class="pt">6 information · 5 rules</text><text x="660" y="597" class="pt">4 who writes the rules</text>
-  <text x="810" y="582" class="pt">3 subsystem goals</text><text x="810" y="597" class="pt">2 system goals · 1 paradigm</text>
+  <text x="810" y="582" class="pt">3 goals · 2 paradigm</text><text x="810" y="597" class="pt">1 coordination</text>
   <!-- key to the weights -->
   <use href="#p8-w" x="60" y="560" class="w"/><text x="76" y="570" class="it" style="font-size:12px">in force or forming</text>
   <use href="#p8-w" x="60" y="582" class="g"/><text x="76" y="592" class="it" style="font-size:12px">proposed, absent</text>

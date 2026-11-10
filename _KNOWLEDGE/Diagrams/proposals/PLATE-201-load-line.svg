@@ -90,7 +90,7 @@
   <text x="398" y="536" class="note">autumn 2023, first painted: pause if capability outruns control</text>
   <text x="404" y="504" class="note" style="fill:var(--soft)">painted over</text>
   <text x="395" y="474" class="note" style="fill:var(--soft)">painted over</text>
-  <text x="400" y="424" class="note" style="fill:var(--accent)">third repainting, by February 2026: no pause. April 2026: a fresh coat, same height.</text>
+  <text x="400" y="424" class="note" style="fill:var(--accent)">February 2026, the fourth revision: no pause. Four fresh coats since, same height.</text>
   <text x="78" y="424" class="sc" style="fill:var(--ink)">WATERLINE</text>
   <!-- title, legend, caption -->
   <text x="480" y="634" text-anchor="middle" class="title">A Load Line, Repainted</text>

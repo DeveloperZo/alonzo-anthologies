@@ -20,8 +20,9 @@ Claim sentence: the reader should see that a self-set safety standard drifts tow
   - Older marks stay visible under the surface, so the history is readable.
 - **Notable labels or metrics:**
   - `autumn 2023`: first version of Anthropic's Responsible Scaling Policy, with the pause commitment.
-  - `third repainting, by February 2026: no pause`: the prose says the binding pause was gone after three revisions.
-  - `April 2026: a fresh coat, same height`: the fourth revision, which did not restore it.
+  - `February 2026, the fourth revision: no pause`: version 3.0 of 24 February 2026. Versions 2.0, 2.1 and 2.2 came before it and kept the pause.
+  - `Four fresh coats since, same height`: versions 3.1, 3.2, 3.3 and 3.4, through 8 July 2026. None restored the pause. Source: Anthropic's policy updates page, and Part 1 source 13e.
+  - The plate draws four marks for five versions up to February 2026. The two middle marks stand for the three revisions that kept the pause.
   - The two middle marks are unlabeled on purpose. The text does not say what each revision changed.
 
 ## How To Read It
@@ -33,7 +34,7 @@ Claim sentence: the reader should see that a self-set safety standard drifts tow
 ## Leverage Relevance
 Part 2 opens on the reader's sense that pledges do not hold. The plate shows why without accusing anyone of lying: each mark was a true statement about the ship on the day it was painted. The standard has no anchor outside the actor. The historical line under the title points at the remedy the rest of Part 2 builds toward, which is a mark someone else sets.
 
-History note: this plate draws the drift idea from the original spec comment in `00-why-you-feel-helpless.md`. The earlier SVG under this file name was a say-versus-do table. The 1876 statement in the legend was written from memory and should be checked before it is relied on.
+History note: this plate draws the drift idea from the original spec comment in `00-why-you-feel-helpless.md`. The earlier SVG under this file name was a say-versus-do table. The 1876 statement in the legend was checked on 2026-11-10 against the Lloyd's Register Foundation heritage page on the Plimsoll line: the 1876 Act left owners to decide where the line was painted, and its position was fixed by law in 1890.
 
 ## Suggested Caption
 DIA-201 · A standard set by the one it binds follows the water.

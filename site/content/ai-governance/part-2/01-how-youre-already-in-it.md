@@ -1,7 +1,7 @@
 ---
 title: "How You're Already In It"
 tags: [ai, governance, systems-thinking, leverage]
-draft: false
+draft: true
 ---
 
 *Section 1 of 4*

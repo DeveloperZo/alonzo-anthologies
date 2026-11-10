@@ -1,7 +1,7 @@
 ---
 title: "Reading Your Leverage"
 tags: [ai, governance, systems-thinking, leverage]
-draft: false
+draft: true
 ---
 
 *Section 4 of 4*

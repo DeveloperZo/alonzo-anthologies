@@ -7,7 +7,7 @@ draft: false
 *Frustration about AI is the right read. The emperors leading the race have no clothes.*
 
 
-OpenAI signed the open letter calling AI a civilizational extinction risk, then shipped a model its own CEO described as "talking to a PhD-level expert in any topic," and announced the next one would arrive faster. AI, they say, will fix AI's problems. The mission statements of these companies speak of curing cancer, of intelligence as an abundance distributed to everyone, of the most important technology of the century.
+OpenAI's chief executive signed the statement calling AI an extinction risk, then shipped a model he described as "talking to a PhD-level expert in any topic," and announced the next one would arrive faster. AI, they say, will fix AI's problems. The mission statements of these companies speak of curing cancer, of intelligence as an abundance distributed to everyone, of the most important technology of the century.
 
 The reality is in the earnings calls. Salesforce announces it is cutting customer service from nine thousand people to five thousand because, the company says, it needs less heads. Microsoft tells a developer conference that thirty percent of its code is now AI-written; two weeks later the layoffs land in its home state, concentrated in engineering. Amazon opens 2026 by cutting sixteen thousand corporate jobs and naming AI in the announcement. The cure-cancer technology becomes, in a quarter, the rationale for cutting headcount. AI summaries arrive in your search results without permission. A press release announces an internal oversight board.
 
@@ -17,9 +17,9 @@ What the actions show is plain: an unwavering attempt to divorce labor from capi
 
 You watch them and feel a particular kind of tired. The kind that belongs to people who can read the room. It is the recognition of a contradiction, and the futile attempt to play along.
 
-The companies racing to build civilization-changing technology have not developed civilization-changing discipline. Anthropic published the first version of its Responsible Scaling Policy in autumn 2023, committing to pause development if its own evaluations suggested capability had outrun control. After three revisions, the binding pause was gone. By February 2026, Jared Kaplan was telling *TIME* the company "didn't really feel" the pause commitment made sense with competitors blazing ahead.
+The companies racing to build civilization-changing technology have not developed civilization-changing discipline. Anthropic published the first version of its Responsible Scaling Policy in autumn 2023, committing to pause development if its own evaluations suggested capability had outrun control. Three revisions kept the pause. The fourth, in February 2026, dropped it. That month Jared Kaplan was telling *TIME* the company "didn't really feel" the pause commitment made sense with competitors blazing ahead.
 
-Less than half a decade. One company, one policy, three revisions, gone. A fourth revision arrived in April 2026. The pause stayed gone.
+Less than three years. One company, one policy, four revisions, gone. Four more followed by July 2026. The pause stayed gone.
 
 The pressure Kaplan names is real. The lab is not lying about it. The system the labs operate inside has its own behavior, and they respond to it like the rest of us do. Knowing that behavior lets you act on it. Not knowing it is how the drift continues.
 
@@ -35,7 +35,7 @@ Original spec, kept for reference:
     (b) Industry baseline (peer-lab average): lower starting point in 2023, drifts slightly upward through 2024-2025.
 - Convergence point at February 2026 where the two lines meet at a flat lower level.
 - Annotation arrow at the convergence: "standard recalibrates to baseline."
-- Caption rendered inside the SVG: "DIA-201 — Drift to Low Performance: a self-imposed standard has no anchor outside the actor."
+- Caption rendered inside the SVG: "DIA-201 · Drift to Low Performance: a self-imposed standard has no anchor outside the actor."
 - Style precedent: DIA-005 (causal-loop / archetype visualization).
 -->
 
