@@ -22,7 +22,7 @@ Working plate: `_KNOWLEDGE/Diagrams/proposals/PLATE-206-plaque-and-rack.svg`, ge
 - **Relationships:**
   - Slot i is at x = 312 + 64 i. Slots 3, 6, 8 and 9 are empty.
   - One slot stands for a thousand heads.
-- **Notable labels or metrics:** nine and five. Source: Marc Benioff, quoted in Fortune, 2 September 2025: "I've reduced it from 9,000 heads to about 5,000, because I need less heads." The same figure is in the second paragraph of Part 2's opening section. The firm is not named on the plate.
+- **Notable labels or metrics:** nine and five. Source: Marc Benioff, quoted in Fortune, 2 September 2025: "I've reduced it from 9,000 heads to about 5,000, because I need less heads." The same figure and quotation are in the third paragraph of Part 2's opening section. The firm is not named on the plate.
 
 ## How To Read It
 1. Read the plaque.

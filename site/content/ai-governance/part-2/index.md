@@ -2,10 +2,10 @@
 title: "Part 2: What Can I Do About AI?"
 tags: [ai, governance, systems-thinking, leverage]
 draft: false
-version: "1.0"
+version: "1.2"
 ---
 
-*Action guide · May 2026, revised November 2026 · v0.1*
+*Action guide · May 2026, revised November 2026 · v1.2*
 
 <div class="hero-question">
 What can you actually do about AI?

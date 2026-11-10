@@ -5,8 +5,9 @@ Create or update a diagram for the Alonzo's Anthologies Quartz site.
 A diagram here is a **plate**: one engraved drawing of one real object, whose
 mechanics make the argument. It is not a layout of boxes. The working plates
 live in `_KNOWLEDGE/Diagrams/proposals/`, one per published diagram. Good
-ones to study: the dials (DIA-001), the stave tub (004B), the governor (005)
-and the lever (008B). Open one and copy its `<style>` block before drawing
+ones to study: the dials (DIA-001), the stave tub (004B), the lever (008B),
+and in Part 2 the plaque and rack (206), the station board (204) and the
+road signs (205). Open one and copy its `<style>` block before drawing
 anything. A plate with a `.gen.mjs` file beside it is generated: change the
 generator and rerun it.
 
@@ -18,7 +19,7 @@ Do not open an SVG until this sentence is written down:
 
 Examples that passed:
 
-- Oversight exists but does not bind. A steam governor whose rod to the throttle was never pinned.
+- A self-set standard gets lowered. A high-jump bar reset near the ground, under a ghost of its old height.
 - Governance acts where leverage is weakest. An actual lever, with the weights hung beside the fulcrum.
 - Oversight money is invisible next to commitments. Bars at true width, and the magnifying glasses needed to see them.
 
@@ -33,6 +34,36 @@ Rules for choosing:
 - **Borrow from a real drawing tradition.** Patent drawings, apparatus plates, Playfair's charts, Minard, survey sections, field-guide plates, ledgers. Name the tradition in the companion file.
 - **One object per plate.** Two ideas means two plates.
 - **Data gets drawn honestly.** Use true scale and show what that costs (the loupes), not a forced minimum width.
+
+## 1a. Vary the manner, and draw a moment
+
+The author's verdict on a set drawn in one manner (2026-11-10): "too
+stylistically the same even when we are trying to convey different
+ideas/topics", and plates that were "too literal, no bite" where
+"nothing is happening". So:
+
+- **The manner follows the subject.** Section 4's engraved style is one
+  manner among several, not the house style. Others that have passed: a
+  poster in solid shapes with deep perspective (DIA-204, DIA-205), a
+  sequence strip in flowing line (DIA-203), a stippled scene from a
+  coaching manual (DIA-201). Charts from real figures, marked documents
+  and maps are open too. Two plates on one page should not look like
+  pages of the same catalogue.
+- **Only these stay common:** the viewBox, the double-rule frame, the
+  header line, the palette, Spectral, the title face, the hairline and
+  the caption line.
+- **Draw a moment.** Something is happening or has just happened, and
+  the consequence is visible: tyre tracks ending at a gap, tail lamps
+  in a tunnel, pegs lying on the grass.
+- **Add something.** A plate that only illustrates the sentence beside
+  it has failed. It should say what the sentence did not.
+- **Nothing stands behind the argument.** The space that carries the
+  point (a gap, a drop, a distance) must be empty.
+- **A plate draws the paragraph it sits beside.**
+- **The author approves a concept per plate before it is drawn.**
+
+Part 2 headers read `PLATE I` to `PLATE VI` and `PART II · PAGE TITLE`,
+with no section number.
 
 ## 2. When not to draw
 

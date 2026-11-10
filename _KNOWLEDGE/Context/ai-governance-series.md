@@ -49,6 +49,30 @@ decision from the November pass. Its Part 1 companion is
 Part 2 has no source apparatus. The URLs behind its claims are in the
 two proposals files and `part-2/RATIONALE-2026-08.md`.
 
+## Part 2 voice: what Zo rejected and approved (2026-11-10)
+
+Zo called the old opening of "Frustrated About AI?" (section 0) and
+the old page intro "preachy and plastic", and called the rewrite
+"beautiful". The rewrite is the reference for Part 2 prose. What
+changed:
+
+- No verdict ahead of the evidence. The old text opened on "Frustration
+  about AI is the right read" and "the emperors have no clothes". The
+  new one sets two columns side by side, what was said and what was
+  done, and makes one plain judgment after them.
+- No slogan runs. Three short parallel sentences in a row ("AI is the
+  lever. The mission statements decorate the move. The earnings calls
+  disclose it.") read as plastic.
+- Do not tell the reader what they feel. One line of acknowledgement
+  at most.
+- Claims about what was done, not about intent. "An unwavering attempt
+  to divorce labor from capital" became "the gain was taken as fewer
+  people on the payroll".
+- Every remark placed where it was made (a podcast, a stage, a memo),
+  with the speaker named.
+- An intro says what the page delivers. It does not describe the guide
+  or promise sections that are not written.
+
 ## Part 2 plates (2026-11-10)
 
 Part 2 had one plate. Five were added on 2026-11-10, each drawn by a

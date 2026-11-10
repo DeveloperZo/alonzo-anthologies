@@ -51,6 +51,15 @@ Only Opened findings, and findings already sourced in Part 1, went into the text
 
 Four plates were changed and republished. See part H.
 
+## Settled later on November 10, 2026
+
+- **A2, A3, E1, E2, E3, D3 and I4** are closed by the rewrite of section 0, which the author approved. Remarks are placed where they were made, the Amazon memo that named AI is the October 2025 one, the claim about intent is now a claim about what was done, and the three unsourced claims are cut.
+- **A4** is closed by a new page intro that says only what the page delivers.
+- **A5**: the five unembedded pages are `draft: true`.
+- **B2**: version 1.2 in both places, to match Part 1.
+- **H3 and H4**: Part 2 now has six plates, numbered PLATE I to VI, with the header form "PART II · PAGE TITLE". DIA-201 was redrawn as "The Bar, Lowered".
+- Still open: A1 (the Altman sentence in section 1), B1, B3 to B6, C1 to C11, D2, E4 to E6, F1 to F3, H1, H2 and the housekeeping list.
+
 ## A. Fix first
 
 **A1. [ARGUMENT] [Section 1] The Altman sentence is wrong on two points. Not changed.**

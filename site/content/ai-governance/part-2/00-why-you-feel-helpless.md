@@ -4,24 +4,21 @@ tags: [ai, governance, systems-thinking, leverage]
 draft: false
 ---
 
-*Frustration about AI is the right read. The emperors leading the race have no clothes.*
+*Two columns: what was said, and what was done.*
 
+In May 2023 the chief executive of OpenAI put his name to a one-sentence statement that set the risk from AI beside pandemics and nuclear war. Two years later he launched a model he likened to a PhD-level expert in any subject. More have followed. The mission statements talk about curing cancer, and about abundance for everyone.
 
-OpenAI's chief executive signed the statement calling AI an extinction risk, then shipped a model he described as "talking to a PhD-level expert in any topic," and announced the next one would arrive faster. AI, they say, will fix AI's problems. The mission statements of these companies speak of curing cancer, of intelligence as an abundance distributed to everyone, of the most important technology of the century.
+Now the other column. Marc Benioff of Salesforce told a podcast he had taken customer support from nine thousand people to about five thousand: "I need less heads." Satya Nadella said on a conference stage that perhaps a fifth to a third of Microsoft's code was now written by software. Two weeks later the layoffs landed in Microsoft's home state, concentrated in engineering. Amazon cut fourteen thousand corporate jobs in October 2025, in a memo that called AI the most transformative technology since the internet, and sixteen thousand more in January.
 
-The reality is in the earnings calls. Salesforce announces it is cutting customer service from nine thousand people to five thousand because, the company says, it needs less heads. Microsoft tells a developer conference that thirty percent of its code is now AI-written; two weeks later the layoffs land in its home state, concentrated in engineering. Amazon opens 2026 by cutting sixteen thousand corporate jobs and naming AI in the announcement. The cure-cancer technology becomes, in a quarter, the rationale for cutting headcount. AI summaries arrive in your search results without permission. A press release announces an internal oversight board.
+Nobody hid any of it. It was said on a podcast, on a stage and in a staff memo. Most of these companies have also signed voluntary safety pledges.
 
-These are the same companies that sign the safety frameworks, that appear at the summits, that publish the responsible-development pledges.
+Read down the second column and one thing repeats. Each time, the gain was taken as fewer people on the payroll. That is a decision about who the technology is for, and so far it has gone one way.
 
-What the actions show is plain: an unwavering attempt to divorce labor from capital. AI is the lever. The mission statements decorate the move. The earnings calls disclose it. The data centers go up in low-income neighborhoods where political pushback is weakest. The expert workers being destabilized by the technology are hired cheap to label its training data, refining the systems built to replace them. The technology pitched as society's salvation is making society more vulnerable, at a pace nothing else has matched.
+If the announcements have started to sound hollow to you, you are reading them correctly.
 
-You watch them and feel a particular kind of tired. The kind that belongs to people who can read the room. It is the recognition of a contradiction, and the futile attempt to play along.
+The pledges move too. In September 2023 Anthropic published a Responsible Scaling Policy that committed the company to pause development if its own tests showed capability outrunning control. Three revisions kept the pause. The fourth, in February 2026, dropped it, and Jared Kaplan told *TIME* that unilateral commitments no longer made sense "if competitors are blazing ahead." Four more revisions followed by July. None brought the pause back.
 
-The companies racing to build civilization-changing technology have not developed civilization-changing discipline. Anthropic published the first version of its Responsible Scaling Policy in autumn 2023, committing to pause development if its own evaluations suggested capability had outrun control. Three revisions kept the pause. The fourth, in February 2026, dropped it. That month Jared Kaplan was telling *TIME* the company "didn't really feel" the pause commitment made sense with competitors blazing ahead.
-
-Less than three years. One company, one policy, four revisions, gone. Four more followed by July 2026. The pause stayed gone.
-
-The pressure Kaplan names is real. The lab is not lying about it. The system the labs operate inside has its own behavior, and they respond to it like the rest of us do. Knowing that behavior lets you act on it. Not knowing it is how the drift continues.
+Kaplan was describing real pressure, and nothing suggests he was lying about it. A lab that stops alone falls behind one that does not. So a promise a company makes to itself holds for as long as the company can afford it.
 
 <!--
 DIA-201: Drift to Low Performance. Redrawn 2026-11-10 as the plate "The Bar, Lowered".
@@ -42,6 +39,4 @@ Original spec, kept for reference:
 ![](/ai-governance/part-2/diagrams/DIA-201-drift-to-low-performance.svg)
 
 
-You do not need to settle the motive question to act. There is a framework that works without it. It is older than AI and bigger: it asks where in any system a small push produces structural change, and ranks those places by power. Some you can reach alone. Others require people working together.
-
-That seeing is what the rest of this is for.
+So you do not have to decide whether these people mean well. An older question works without that: where in a system does a small push change the structure, and which of those places can you reach? Some you can reach alone. Others take company.

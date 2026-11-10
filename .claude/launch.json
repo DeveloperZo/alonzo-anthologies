@@ -10,8 +10,9 @@
     {
       "name": "site",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": ["/c", "cd site && npx quartz build --serve"],
-      "port": 8080
+      "runtimeArgs": ["/c", "cd site && npx quartz build --serve --port 8080"],
+      "port": 8080,
+      "autoPort": false
     }
   ]
 }
