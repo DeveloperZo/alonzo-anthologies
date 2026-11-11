@@ -33,12 +33,33 @@ const baseCompetencies = [
 // The resume's one Skills section: each competency theme with the named tools behind it, for ATS keyword matching.
 // List only what the experience entries or their overlays back up. The prose competencies above feed the site's timeline.
 export const skills = [
-  { group: "Leadership", items: ["Engineering management", "Hiring engineering teams", "Cross-team planning", "Technical leadership", "Executive communication"] },
+  { group: "Leadership", items: ["Engineering management", "People leadership", "Hiring engineering teams", "Cross-team planning", "Technical leadership", "Executive communication"] },
   { group: "Architecture", items: ["Microservices", "Multi-tenant", "SOA", "CQRS (command query responsibility segregation)"] },
-  { group: "Languages & Frameworks", items: ["C#", "TypeScript", "JavaScript", "SQL", ".NET", "Python", "Entity Framework", "React"] },
-  { group: "Cloud, Data & DevOps", items: ["Azure Cloud","AWS Cloud", "CI/CD", "SQL Server", "PostgreSQL"] },
+  { group: "Languages & Frameworks", items: ["C#", "TypeScript", "JavaScript", "SQL", ".NET", "Python", "Entity Framework", "SignalR", "React"] },
+  { group: "Cloud, Data & DevOps", items: ["Azure Cloud","AWS Cloud", "Docker", "CI/CD", "SQL Server", "PostgreSQL", "Observability (Application Insights, CloudWatch, Datadog)"] },
   { group: "Quality & Compliance", items: ["Automated testing", "HIPAA & PHI compliance", "Agile delivery"] },
   { group: "AI & Modernization", items: ["AI-assisted SDLC (Claude, Codex, Cursor)", "Legacy modernization"] },
+];
+
+// Leadership outside paid work, and awards. Periods are printed as written because some are year-only.
+export const leadership = [
+  {
+    role: "Vice-Chairperson, National Conference Planning Committee",
+    organization: "National Society of Black Engineers (NSBE)",
+    period: "May 2014 – Mar 2015",
+    detail: "Managed a group of 25 and owned logistics and content for a $3.5 million conference with over 10,000 attendees.",
+  },
+  {
+    role: "Mentor",
+    organization: "iMentor",
+    period: "2014 – 2017",
+    detail: "Mentored a student for three years through the transition from high school to college.",
+  },
+];
+
+export const awards = [
+  "IT Career Foundation Graduate, Boeing (2016)",
+  "City of Anaheim Recognition Award (2014)",
 ];
 
 // Applies the tailoring overlay named by REACT_APP_TAILORING, if any. With no overlay these are the base values and targetRole is undefined.

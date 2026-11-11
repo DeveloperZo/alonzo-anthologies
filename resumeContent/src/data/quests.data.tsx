@@ -33,25 +33,25 @@ export const baseQuests: Quest[] = [
   id: 1,
   titles: {
     retro: 'The Platform Manager',
-    sleek: 'Manager, Experience Platform at Progyny',
+    sleek: 'Software Engineering Manager at Progyny',
   },
   company: 'Progyny',
-  workTitle: 'Manager, Experience Platform',
+  workTitle: 'Software Engineering Manager',
   description:
-    "Modernizing Progyny's benefits platform on AWS for 7 million covered lives.",
+    "Leads the Experience Platform team that modernizes and runs Progyny's benefits platform in production on AWS for 7 million covered lives, monitored with Datadog and CloudWatch.",
   summary:
     "I hired my own team here. Beyond that team, I've helped shape the SDLC practices the wider engineering organization works by.",
   type: 'career',
   startDate: new Date('2025-05-01'),
   endDate: new Date(2038, 2, 10), // Ongoing
-  roles: ['Manager, Experience Platform'],
+  roles: ['Software Engineering Manager'],
   tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development', 'AWS', 'Software Development'],
   accomplishments: [
     {
       key: 'ai-sdlc',
       description:
         'Introduced AI-assisted SDLC practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
-      role: 'Manager, Experience Platform',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
         'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
@@ -61,7 +61,7 @@ export const baseQuests: Quest[] = [
       key: 'team',
       description:
         'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
-      role: 'Manager, Experience Platform',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
         'Discovered that clear capability boundaries help teams maintain focus and reduce cross-team dependencies',
@@ -71,7 +71,7 @@ export const baseQuests: Quest[] = [
       key: 'architects',
       description:
         'Worked with the enterprise architects to find gaps in the architecture and turned their guidance into specs engineers could build from.',
-      role: 'Manager, Experience Platform',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
         'Discovered that early gap analysis with architects prevents costly rework across dependent teams',
@@ -80,8 +80,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'planning',
       description:
-        'Coordinated planning across seven engineering teams for the new platform and designed the solutions for 30% of its stories.',
-      role: 'Manager, Experience Platform',
+        'Coordinated planning across seven engineering teams for the new platform and did the system design for 30% of its stories.',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
         'Discovered that hands-on solution design across team boundaries keeps program delivery coherent',
@@ -91,7 +91,7 @@ export const baseQuests: Quest[] = [
       key: 'vendors',
       description:
         'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice would be to change later.',
-      role: 'Manager, Experience Platform',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
         'Discovered that BAA boundaries and PHI routing rules must be designed into architecture from the start',
@@ -101,7 +101,7 @@ export const baseQuests: Quest[] = [
       key: 'delivery',
       description:
         'Delivered over 90% of refined work within two weeks, with the technical design done before the team picked it up.',
-      role: 'Manager, Experience Platform',
+      role: 'Software Engineering Manager',
       learnings: [
         'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
         'Discovered that team execution improves when work is refined with explicit design intent',
@@ -140,7 +140,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and implementation standards for every team while staying hands-on as a full-stack architect for one of them on Azure.',
+        'Set the UI architecture and implementation standards for every team while staying hands-on as a full-stack architect for one of them on Azure, including production support with Application Insights.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -150,7 +150,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'mentoring',
       description:
-        'Mentored senior developers on the architecture and on delivering against it.',
+        'Led developers at every level across the five teams on the architecture, and mentored the senior developers.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that deliberate mentorship strengthens engineering capability across teams',
@@ -198,7 +198,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'engagements',
       description:
-        'Ran 16 client engagements end to end, owning budgets up to $250K along with scope, delivery, and client expectations.',
+        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call (Application Insights, CloudWatch).',
       role: 'Software Architect',
       learnings: [
         'Learned to ground stories in facts and data that the client cares about',
@@ -208,7 +208,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'stack',
       description:
-        'Owned the cloud architecture on every engagement on Azure and AWS, from C#/.NET with SQL Server and Entity Framework to stacks learned on the job.',
+        'Owned the cloud architecture on every engagement on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker, AWS Lambda, and Azure SQL.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -237,7 +237,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'payments',
       description:
-        "Certified a client's commerce system with FreedomPay so its applications could take payments securely.",
+        "Certified a client's commerce system with FreedomPay to meet payment security requirements.",
       role: 'Software Architect',
       learnings: [
         'Learned how to build IdP integrations from the ground up',
@@ -253,6 +253,13 @@ export const baseQuests: Quest[] = [
         'Learned that standardization must balance consistency with flexibility for project-specific needs',
       ],
     },
+    {
+      key: 'people',
+      description:
+        "Ran 1-on-1s and career progression for the development team, and contributed to the firm's strategy on AI usage and productivity.",
+      role: 'Software Architect',
+      learnings: [],
+    },
   ],
 },
 {
@@ -264,9 +271,9 @@ export const baseQuests: Quest[] = [
   company: 'Lendr',
   workTitle: 'Team Lead / Interim Director of Engineering',
   description:
-    'Joined as team lead on a lending platform on Azure while sprint velocity was running negative.',
+    'Joined as a senior developer on a lending platform on Azure while sprint velocity was running negative, and was promoted to team lead within the first year.',
   summary:
-    'I joined as a team lead while sprint velocity was running negative. When the director of engineering was let go, I stepped in as interim director until the company hired a CTO.',
+    'I joined as a senior developer while sprint velocity was running negative and was promoted to team lead within the first year. When the director of engineering was let go, I stepped in as interim director until the company hired a CTO.',
   type: 'career',
   startDate: new Date('2018-10-01'),
   endDate: new Date('2020-02-01'),
@@ -286,7 +293,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'kpis',
       description:
-        'Hit the KPI targets as interim director while managing the team and onboarding the incoming CTO.',
+        'Hit the KPI targets as interim director while managing the developers and an offshore QA team and onboarding the incoming CTO.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
@@ -296,7 +303,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'refactor',
       description:
-        'Refactored a 350k-line business application onto a service-repository pattern and turned sprint velocity from negative back to positive.',
+        'Rewrote the production lending application: moved 250k+ lines onto a service-repository pattern in 3 months and turned sprint velocity from negative back to positive.',
       role: 'Team Lead',
       learnings: [
         'Learned how to perform every function of and be involved in most decisions for the SDLC',
@@ -304,9 +311,16 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
+      key: 'operations',
+      description:
+        'Owned all deployments and outage response at all hours, with Application Insights monitoring, for a platform where customers made payments through a portal.',
+      role: 'Team Lead',
+      learnings: [],
+    },
+    {
       key: 'dotnet-core',
       description:
-        'Moved the applications from .NET to .NET Core starting on the first day in the role, improving performance and setting the technical direction for the team.',
+        'Moved the applications from .NET Framework to .NET Core starting on the first day in the role, improving performance and setting the technical direction for the team.',
       role: 'Team Lead',
       learnings: [
         'Learned how to read code for intent and clarity very effectively',
@@ -314,19 +328,9 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'uat',
+      key: 'microservices',
       description:
-        'Set up a structured UAT process where business stakeholders tested features against their own priorities, and feature quality went up.',
-      role: 'Team Lead',
-      learnings: [
-        'Learned the importance of talking directly to end users',
-        'Learned that educating our business on technical practices positively impacted velocity',
-      ],
-    },
-    {
-      key: 'regulatory',
-      description:
-        'Built regulatory requirements into the technical work, cutting defects and clearing the way for new features.',
+        'Implemented microservices on Azure Functions and Azure App Service with SignalR for real-time messaging, reworked the Salesforce integration, and wrote a utility to transform the entire database schema.',
       role: 'Team Lead',
       learnings: [
         'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
@@ -344,41 +348,39 @@ export const baseQuests: Quest[] = [
   company: 'SWC Technology Partners',
   workTitle: 'Senior Consultant',
   description:
-    "Delivered legacy WinForms modernization solo, holding estimates inside 10 percent.",
+    "Delivered WinForms, API, and MVC work for multiple consulting clients, holding estimates inside 10 percent.",
   summary:
-    "A year of solo delivery on legacy desktop systems. It was the first engagement where I owned the estimate as well as the build.",
+    "A year of consulting for several clients across desktop, API, and MVC work. It was the first role where I owned the estimate as well as the build.",
   type: 'career',
   startDate: new Date('2017-10-01'),
   endDate: new Date('2018-10-01'),
   roles: ['Senior Consultant'],
   tags: ['Desktop Applications', 'UI Enhancement', 'Project Estimation', 'Software Development'],
   accomplishments: [
-    {
-      key: 'estimates',
-      description:
-        "Held project estimates within a 10 percent margin across the engagement.",
-      role: 'Senior Consultant',
-      learnings: [
-        "Learned that estimate accuracy tracks how well I understood the requirement, not the technique",
-      ],
-    },
 {
       key: 'winforms',
       description:
-        "Modernized WinForms desktop applications with Kendo UI, fitting current interfaces onto a framework not built for them.",
+        "Extended a WinForms desktop application built with DevExpress.",
       role: 'Senior Consultant',
       learnings: [
         "I learned how to balance modern UI expectations with legacy application constraints",
       ],
     },
 {
-      key: 'automation',
+      key: 'api-sync',
       description:
-        "Built and refined automation scripts the delivery schedule ran on and raised problems early.",
+        "Implemented data syncing for a C# API service.",
       role: 'Senior Consultant',
       learnings: [
         "Learned that raising a problem early costs credibility and raising it late costs the schedule",
       ],
+    },
+{
+      key: 'mvc-apps',
+      description:
+        "Built several small C# MVC applications, managing tasks and timelines across multiple clients.",
+      role: 'Senior Consultant',
+      learnings: [],
     },
 ],
 },
@@ -403,7 +405,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'features',
       description:
-        "Built C# feature components for a car loan application on SQL Server and Entity Framework.",
+        "Built C# features for a car loan app on SQL Server and Entity Framework, and owned its deployments and outages at all hours.",
       role: 'Developer',
       learnings: [],
     },
@@ -416,6 +418,13 @@ export const baseQuests: Quest[] = [
         "Learned that well-designed test fixtures do more for coverage than more tests do",
       ],
     },
+    {
+      key: 'integrations',
+      description:
+        "Integrated third-party APIs (Twilio, Azure Blob Storage) and extended the JavaScript front end with Bootstrap and AngularJS.",
+      role: 'Developer',
+      learnings: [],
+    },
   ],
 },
 {
@@ -427,7 +436,7 @@ export const baseQuests: Quest[] = [
   company: 'The Boeing Company',
   workTitle: 'ITCFP Participant / Developer',
   description:
-    "Rotated through IT functions on the IT Career Foundation Program (ITCFP), a selective program, then built C# applications for financial operations.",
+    "Rotated through four IT groups in Bellevue, Charleston, and Chicago on the IT Career Foundation Program (ITCFP), a selective program, and was promoted to technical lead of a small team.",
   summary:
     "Four years on the IT Career Foundation Program, a selective rotation through several IT functions before I settled into development work on financial operations systems.",
   type: 'career',
@@ -439,16 +448,23 @@ export const baseQuests: Quest[] = [
     {
       key: 'mvc-apps',
       description:
-        "Built and deployed C# MVC applications that automated financial operations and met the validation and audit requirements those systems carried.",
+        "Developed for a finance application portfolio that saves the company over $40M annually, including a C#/.NET MVC site for calculated exchange rates.",
       role: 'Developer',
       learnings: [
         "Learned that enterprise scale moves the cost from writing software to maintaining it",
       ],
     },
     {
-      key: 'sdlc',
+      key: 'refactor',
       description:
-        "Improved SDLC practices on each team the rotation passed through.",
+        "Refactored legacy functionality to cut lines of code by 50%, and wrote 50+ unit tests that helped bring critical-level bugs down to zero.",
+      role: 'Developer',
+      learnings: [],
+    },
+    {
+      key: 'compliance-poc',
+      description:
+        "Built a proof of concept that ran compliance checks on over 10,000 servers, and wrote Perl and Python scripts for small-scale ETL.",
       role: 'Developer',
       learnings: [],
     },
@@ -585,7 +601,7 @@ export const baseQuests: Quest[] = [
     },
     {
       key: 'search',
-      description: "Built sequence search, patent-family navigation, and document retrieval across the backend API and a React and TypeScript frontend.",
+      description: "Built sequence search, patent-family navigation, and document retrieval across the backend API and a React and TypeScript web frontend.",
       role: "Principal Technologist",
       learnings: [
         "Learned that grouping results by patent family changed what the tool was good for"

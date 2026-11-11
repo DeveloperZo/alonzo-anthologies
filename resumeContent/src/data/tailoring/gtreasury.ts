@@ -46,11 +46,11 @@ const gtreasury: Tailoring = {
       },
     },
     4: {
-      order: ['dotnet-core', 'refactor', 'uat', 'regulatory', 'ceo-investors', 'kpis'],
+      order: ['dotnet-core', 'refactor', 'microservices', 'ceo-investors', 'kpis'],
       accomplishments: {
         'dotnet-core': {
           description:
-            'Moved the C# applications from .NET to .NET Core on SQL Server and Entity Framework starting on the first day in the role, improving performance and setting the technical direction for the team.',
+            'Moved the C# applications from .NET Framework to .NET Core on SQL Server and Entity Framework starting on the first day in the role, improving performance and setting the technical direction for the team.',
         },
       },
     },
@@ -58,7 +58,7 @@ const gtreasury: Tailoring = {
       accomplishments: {
         winforms: {
           description:
-            'Modernized C# WinForms applications on SQL Server and Entity Framework with Kendo UI, fitting current interfaces onto a desktop framework not built for them.',
+            'Extended a C# WinForms desktop application on SQL Server, built with DevExpress.',
         },
       },
     },

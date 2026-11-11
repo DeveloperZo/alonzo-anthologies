@@ -57,7 +57,7 @@ const welltheory: Tailoring = {
       },
     },
     4: {
-      order: ['ceo-investors', 'kpis', 'regulatory', 'refactor', 'uat', 'dotnet-core'],
+      order: ['ceo-investors', 'kpis', 'microservices', 'refactor', 'dotnet-core'],
     },
     8: {
       description: 'Directed AI implementation with architecture constraints enforced in the build',
