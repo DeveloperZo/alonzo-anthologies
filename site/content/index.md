@@ -10,6 +10,5 @@ This is **Alonzo's Anthologies**: writing on systems, AI governance, and technic
 
 - **[Interactive resume](/resume/#/main-menu)**: Timeline, quests, and printable CV (opens the React app at `/resume/`).
 - **[GitHub](https://github.com/DeveloperZo)**: Source for this site, the resume app, and other projects.
-- **[[ai-governance/index|AI governance series hub]]** — Full series outline.
 - **[[where-the-work-goes/index|Where The Work Goes]]**: SDLC in the AI inspired era.
 

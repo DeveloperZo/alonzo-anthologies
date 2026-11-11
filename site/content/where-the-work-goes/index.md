@@ -21,9 +21,11 @@ The answer starts a long way from software, on a living room floor.
 
 ## 1:30 a.m. in Little Rock
 
-In August 2016, Jesse Newton of Little Rock, Arkansas, had his robot vacuum scheduled to run at 1:30 a.m. Some time after midnight, his dog had an accident on the living room rug. The robot started on time, drove through it, and kept going on its route. Newton woke around 3 a.m. to find it tracked through the house. His account was shared more than 200,000 times.<sup><a href="#where-the-work-goes-ref-3" id="where-the-work-goes-fnref-3">3</a></sup>
+In August 2016, Jesse Newton of Little Rock, Arkansas, had his robot vacuum scheduled to run at 1:30 a.m. Some time after midnight, his dog pooped on the living room rug. The robot started on time, drove through it, and kept going on its route. Newton woke around 3 a.m. to find it tracked through the house. His account was shared more than 200,000 times.<sup><a href="#where-the-work-goes-ref-3" id="where-the-work-goes-fnref-3">3</a></sup>
 
-Think about what cleaning a floor involves. There are three jobs in it. Someone decides the floor needs doing and looks at what is on it. Someone pushes the vacuum. Someone looks again afterwards and judges whether it is clean. A person with a broom does all three at once and never notices the first and last, because they happen in the same glance. That person stops at the first step.
+Picture a person doing the same chore. They would never have got that far. Walking in with the vacuum, they would see the rug, put the vacuum down, and fetch paper towels. Nobody vacuums that.
+
+That small scene holds three jobs. The first is looking at the floor and deciding what it needs, which that night was not a vacuum at all. The second is the vacuuming. The third is looking again afterwards to see whether the floor is clean. A person does all three and only notices the middle one, because the looking never stops while they work.
 
 The robot took over the middle job only. Nobody had handed the other two to anyone.
 
@@ -33,7 +35,7 @@ Watch what the robot's own record would show for that night. It ran on schedule.
 
 ## The advice: don't schedule it
 
-iRobot knew about the problem and had no fix for it yet. Its advice to owners was not to run the vacuum when a pet might have an accident.<sup><a href="#where-the-work-goes-ref-4" id="where-the-work-goes-fnref-4">4</a></sup>
+iRobot knew about the problem and had no fix for it yet. Its advice to owners was not to run the vacuum when a pet might leave a mess on the floor.<sup><a href="#where-the-work-goes-ref-4" id="where-the-work-goes-fnref-4">4</a></sup>
 
 Follow that advice through. To use the machine safely, the owner has to inspect the floor before every run. That is the first job, handed back, and it defeats the point of a schedule. It is also an instruction that nothing enforces. The robot would run either way.
 
@@ -57,13 +59,11 @@ The company then did something more telling. It promised to replace any robot th
 
 The same three moves are where software teams now stand.
 
-- **Inputs that are enforced.** "Don't run it when the dog might" is a rule written in a sentence. A rule that matters has to be built into the system, where the machine cannot run past it.
+- **Inputs that are enforced.** "Don't run it if the dog has made a mess" is a rule written in a sentence. A rule that matters has to be built into the system, where the machine cannot run past it.
 - **Checks that keep pace.** A person reading every change cannot keep up with a machine that writes all day. The check has to run itself, and people have to be able to trust it.
 - **A measure of the result.** DORA's delivery measures already separate the two. Deployment frequency counts what went out. Change fail rate counts how much of it needed immediate repair.<sup><a href="#where-the-work-goes-ref-12" id="where-the-work-goes-fnref-12">12</a></sup>
 
 Take code review. On many teams, reviewing a teammate's change was a ritual: every change got a look, and most looks found nothing. When each developer produces far more code, the same ritual spreads the same attention thinner, until every review is a rubber stamp. The purpose of review was never to look at everything. It was to catch what can hurt. One way to keep that purpose is to stamp most changes on purpose and spend real attention on the few that carry risk. It is one possible path of many. What matters is that the practice is chosen for what it does, and not for how it looks.
-
-![](/where-the-work-goes/diagrams/DIA-301-same-attention.svg)
 
 > [!note]- Where AI helps and where it collides
 > AI works with the process when it sits in the middle with strong ends around it, and when it helps at the ends: drafting a specification for a person to correct, or writing the tests. The curl maintainer who ended the payments also acknowledged strong reports that a developer had found with AI's help.<sup><a href="#where-the-work-goes-ref-9">9</a></sup> The tool was the same in both cases. What differed was whether someone had framed the question carefully and checked the answer before sending it.
@@ -71,6 +71,14 @@ Take code review. On many teams, reviewing a teammate's change was a ritual: eve
 > AI collides with the process when it stands in for the ends. A vague request gets built exactly as written, and the output arrives faster than anyone can check it.
 
 So where does the work go? To the two ends. Saying precisely what is wanted, and finding out whether it was delivered.
+
+Curling is a good picture of that job. One player aims a heavy stone, slides it down the ice and lets go. From that moment nobody on the team may touch it. Two teammates run ahead of it with brooms, sweeping the ice so the stone travels farther and straighter, and the captain at the far end calls the line. Nobody scores for throwing. Points are counted only at the end, by where the stones have come to rest.<sup><a href="#where-the-work-goes-ref-13" id="where-the-work-goes-fnref-13">13</a></sup>
+
+AI does not replace any of those people. The player still aims and the teammates still sweep. What changes is the stone, which moves faster and faster. A faster stone leaves the sweepers less time to do anything about it. Thrown hard enough, it runs past the back line and is out of play. A stone thrown too softly stops short of the far line and is taken off the ice.<sup><a href="#where-the-work-goes-ref-13">13</a></sup> The two score the same: nothing.
+
+That is the trap ahead. A team that lets everything through has built an unstoppable force. A team that answers by checking everything, until nothing ships, has built an immovable object. On the scoreboard there is little difference between them. A fair bet is that more software teams will land at one of those extremes before they learn to throw at a weight they can still sweep.
+
+![](/where-the-work-goes/diagrams/DIA-301-two-stones.svg)
 
 ## What the route cannot tell you
 
@@ -109,6 +117,8 @@ For the same gap between a measure and the thing it was meant to track, in a lar
 11. <span id="where-the-work-goes-ref-11"></span>iRobot, "Pet Owner Official Promise." https://irobot.com/pet-promise. The terms as listed on iRobot's product pages: one year from purchase, replacement only, solid cat or dog waste.
 
 12. <span id="where-the-work-goes-ref-12"></span>DORA, "DORA's software delivery performance metrics." https://dora.dev/guides/dora-metrics-four-keys/. Defines deployment frequency and change fail rate.
+
+13. <span id="where-the-work-goes-ref-13"></span>Capital Curling Club, "Curling basics." https://capitalcurlingclub.org/curling-basics.html. The roles on a four-player team, what sweeping does, the rule against touching a moving stone, the removal of stones that stop short of the far hog line or pass the back line, and scoring by where the stones rest at the end.
 
 ## Revision history
 
