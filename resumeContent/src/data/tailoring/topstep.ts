@@ -15,7 +15,7 @@ const topstep: Tailoring = {
   profile: {
     targetRole: 'Staff Software Engineer',
     professionalSummary:
-      'Staff-level software engineer and architect with C#/.NET in production since 2012, including deployments, incident response, on-call, and observability. Builds distributed cloud services on AWS and Azure with React and TypeScript front ends, SQL Server, Docker, and microservices, in fintech lending, payments, and healthcare. Sets engineering standards across teams and uses AI developer tools with review gates.',
+      'Staff-level software engineer and architect with C#/.NET in production since 2012, including deployments, incident response, and on-call. Builds distributed cloud services on AWS and Azure with React and TypeScript, SQL Server, Docker, and microservices, in fintech lending, payments, and healthcare. Sets engineering standards across teams and uses AI developer tools.',
   },
   quests: {
     1: {

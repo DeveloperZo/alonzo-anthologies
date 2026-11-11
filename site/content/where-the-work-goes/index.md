@@ -78,8 +78,6 @@ AI does not replace any of those people. The player still aims and the teammates
 
 That is the trap ahead. A team that lets everything through has built an unstoppable force. A team that answers by checking everything, until nothing ships, has built an immovable object. On the scoreboard there is little difference between them. A fair bet is that more software teams will land at one of those extremes before they learn to throw at a weight they can still sweep.
 
-![](/where-the-work-goes/diagrams/DIA-301-two-stones.svg)
-
 ## What the route cannot tell you
 
 Any tool that makes doing cheap turns knowing into the job: knowing what is worth doing, and knowing whether it worked. That was always where the judgment sat. It was easy to miss while the doing took all day.
