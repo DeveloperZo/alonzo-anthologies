@@ -29,7 +29,7 @@ This series works from the system up, not from politics down. How the technology
 
 ![[08-where-you-have-leverage]]
 
-Continue to [[../part-2/index|Part 2: What Can I Do About AI?]]
+Continue to [[ai-governance/part-2/index|Part 2: What Can I Do About AI?]]
 
 [[changelog|Revision history →]]
 
