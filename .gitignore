@@ -30,3 +30,6 @@ _ENV/
 applications/*
 !applications/README.md
 !applications/_templates/
+
+# Past resume files. They hold a home address and phone number, and this repo is public.
+_KNOWLEDGE/ARTIFACTS/
