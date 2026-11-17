@@ -33,3 +33,7 @@ applications/*
 
 # Past resume files. They hold a home address and phone number, and this repo is public.
 _KNOWLEDGE/ARTIFACTS/
+
+# Local-only working material: exports and summaries from other projects (client and personal).
+# This repo is public, so nothing under _LOCAL is committed. It does not travel between machines.
+_LOCAL/
