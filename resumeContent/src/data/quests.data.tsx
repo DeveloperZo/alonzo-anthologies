@@ -38,7 +38,7 @@ export const baseQuests: Quest[] = [
   company: 'Progyny',
   workTitle: 'Software Engineering Manager',
   description:
-    "Leads the Experience Platform team that modernizes and runs Progyny's benefits platform in production on AWS for 7 million covered lives, monitored with Datadog and CloudWatch.",
+    "Leads the Experience Platform team that modernizes and runs Progyny's benefits platform in production on AWS for 7 million covered lives.",
   summary:
     "I hired my own team here. Beyond that team, I've helped shape the SDLC practices the wider engineering organization works by.",
   type: 'career',
@@ -50,7 +50,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ai-sdlc',
       description:
-        'Introduced AI-assisted SDLC practices with PHI safeguards across five projects, folding institutional knowledge, architectural guidance, and code review feedback into workflows the team could repeat.',
+        'Introduced AI-assisted SDLC practices with PHI safeguards across multiple teams, bringing in industry expertise and architectural guidance the teams could use to be more effective.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
@@ -118,7 +118,7 @@ export const baseQuests: Quest[] = [
   company: 'Inspire11',
   workTitle: 'Senior Software Architect',
   description:
-    'Led software architecture across five engineering teams, improving technical consistency and delivery performance.',
+    'Led software architecture for five engineering teams building a single product.',
   summary:
     'A year as the architect several teams leaned on at once. Most days went to keeping five teams building one product the same way.',
   type: 'career',
@@ -140,7 +140,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and implementation standards for every team while staying hands-on as a full-stack architect for one of them on Azure, including production support with Application Insights.',
+        'Set the UI architecture and standards for all five teams, and stayed hands-on as full-stack architect for one of them on Azure, including production support with Application Insights.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -159,7 +159,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'requirements',
       description:
-        'Turned business requirements into technical documentation (designs, specs, and stories) so the teams could build one product the same way.',
+        'Turned business requirements into technical documentation (designs, specs, and stories) so every team built it the same way.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned that translating requirements into architecture and stories closes the gap between business intent and delivery',
@@ -208,7 +208,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'stack',
       description:
-        'Owned the cloud architecture on every engagement on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker, AWS Lambda, and Azure SQL.',
+        'Owned the cloud architecture for every engagement, on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker, AWS Lambda, and Azure SQL.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
@@ -293,7 +293,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'kpis',
       description:
-        'Hit the KPI targets as interim director while managing the developers and an offshore QA team and onboarding the incoming CTO.',
+        'Hit the KPI targets as interim director while managing the developers and an offshore QA team, then onboarded the incoming CTO.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
@@ -313,14 +313,14 @@ export const baseQuests: Quest[] = [
     {
       key: 'operations',
       description:
-        'Owned all deployments and outage response at all hours, with Application Insights monitoring, for a platform where customers made payments through a portal.',
+        'Owned every deployment and outage response, day and night, with Application Insights monitoring, for a platform where customers made payments through a portal.',
       role: 'Team Lead',
       learnings: [],
     },
     {
       key: 'dotnet-core',
       description:
-        'Moved the applications from .NET Framework to .NET Core starting on the first day in the role, improving performance and setting the technical direction for the team.',
+        'Began moving the applications from .NET Framework to .NET Core on the first day in the role, improving performance and setting the technical direction for the team.',
       role: 'Team Lead',
       learnings: [
         'Learned how to read code for intent and clarity very effectively',
@@ -405,7 +405,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'features',
       description:
-        "Built C# features for a car loan app on SQL Server and Entity Framework, and owned its deployments and outages at all hours.",
+        "Built C# features on SQL Server and Entity Framework, and owned deployments and outages at all hours.",
       role: 'Developer',
       learnings: [],
     },
@@ -436,7 +436,7 @@ export const baseQuests: Quest[] = [
   company: 'The Boeing Company',
   workTitle: 'ITCFP Participant / Developer',
   description:
-    "Rotated through four IT groups in Bellevue, Charleston, and Chicago on the IT Career Foundation Program (ITCFP), a selective program, and was promoted to technical lead of a small team.",
+    "Rotated through four IT groups in Bellevue, Charleston, and Chicago on the selective IT Career Foundation Program (ITCFP), and was promoted to technical lead of a small team.",
   summary:
     "Four years on the IT Career Foundation Program, a selective rotation through several IT functions before I settled into development work on financial operations systems.",
   type: 'career',
@@ -448,7 +448,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'mvc-apps',
       description:
-        "Developed for a finance application portfolio that saves the company over $40M annually, including a C#/.NET MVC site for calculated exchange rates.",
+        "Built software for a finance application portfolio that saves the company over $40M annually, including a C#/.NET MVC site for calculated exchange rates.",
       role: 'Developer',
       learnings: [
         "Learned that enterprise scale moves the cost from writing software to maintaining it",
