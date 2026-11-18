@@ -14,7 +14,7 @@ checks change nothing on either machine.
 
 ## What you are proving
 
-limesalt can reach every service on the desktop (`win-mpisa5dbmqf`) over
+limesalt can reach every service on the desktop (`lemonpepper`) over
 Tailscale, both on home wifi and away from it. The picture of what
 should be there is `_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg`.
 
@@ -22,7 +22,7 @@ should be there is `_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg`.
 
 1. Pull this repo so `verify.ps1` beside this file is current.
 2. Confirm Tailscale is connected: `tailscale status` lists
-   `win-mpisa5dbmqf`.
+   `lemonpepper`.
 3. The relay checks need the LiteLLM key. It is not in this repo. If
    the environment variable `WHL_LITELLM_KEY` is not already set, ask Zo
    for it once. Do not search for it, and do not write it into any
@@ -54,7 +54,7 @@ Only Zo can switch the network, so ask for that once and wait.
 The script exits with the number of failed checks, so 0 is a full pass.
 
 After a relay chat passes, the request should also appear in Langfuse at
-`http://win-mpisa5dbmqf:3001` within about 30 seconds, named
+`http://lemonpepper:3001` within about 30 seconds, named
 `litellm_request`. Looking needs Zo's Langfuse login, so leave that
 check to Zo.
 

@@ -32,8 +32,13 @@ The picture is DIA-106 in `_KNOWLEDGE/Diagrams/`.
 
 ## Machine names
 
-The desktop is `win-mpisa5dbmqf` on the tailnet. The laptop is
-`limesalt`.
+The desktop is `lemonpepper` on the tailnet (renamed on 2026-11-18 with
+`tailscale set --hostname=lemonpepper`). The laptop is `limesalt`.
+
+The Windows computer name of the desktop is still `WIN-MPISA5DBMQF`.
+Only the tailnet name changed, so the old name no longer resolves from
+limesalt. Changing the Windows name needs an administrator and a
+restart, and nothing depends on it.
 
 ## Docker Desktop will not start: stale socket
 

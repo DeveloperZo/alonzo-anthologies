@@ -26,7 +26,7 @@ tokens. The thin version runs on Windows; the move to Linux comes
 after.
 
 Met on 2026-11-17: from limesalt on a phone hotspot,
-`http://win-mpisa5dbmqf:11434/v1/models` returned the desktop's model
+`http://lemonpepper:11434/v1/models` returned the desktop's model
 list. A chat request by the same name was answered from the desktop
 itself.
 
@@ -36,11 +36,11 @@ itself.
 
 | Piece | Address | Job |
 | --- | --- | --- |
-| LiteLLM (the relay) | `http://win-mpisa5dbmqf:4000/v1` | The one address tools should use. Needs a key. Forwards to LM Studio or Ollama and records each request |
-| Langfuse (the dashboard) | `http://win-mpisa5dbmqf:3001` | Shows every request through the relay: model, prompt, reply, time taken |
-| Open WebUI | `http://win-mpisa5dbmqf:3000` | Chat in the browser |
-| Ollama | `http://win-mpisa5dbmqf:11434/v1` | Direct access to Ollama models. No key, and not recorded in Langfuse |
-| Jellyfin | `http://win-mpisa5dbmqf:8096` | Media server |
+| LiteLLM (the relay) | `http://lemonpepper:4000/v1` | The one address tools should use. Needs a key. Forwards to LM Studio or Ollama and records each request |
+| Langfuse (the dashboard) | `http://lemonpepper:3001` | Shows every request through the relay: model, prompt, reply, time taken |
+| Open WebUI | `http://lemonpepper:3000` | Chat in the browser |
+| Ollama | `http://lemonpepper:11434/v1` | Direct access to Ollama models. No key, and not recorded in Langfuse |
+| Jellyfin | `http://lemonpepper:8096` | Media server |
 | LM Studio | Port 1234, desktop only | Reached through the relay |
 
 The relay offers three routes. A client asks for a route name, not a
@@ -159,6 +159,10 @@ Design seeds for the swarm are listed in
 
 ## Changelog
 
+- 2026-11-18: Desktop renamed to `lemonpepper` on the tailnet. Every
+  address on this page uses the new name. The old name,
+  `win-mpisa5dbmqf`, no longer resolves, and is still the Windows
+  computer name.
 - 2026-11-18: Second run on limesalt, with the relay key: the relay
   listed its three routes and answered a chat on `ollama-coder`, and
   the record of that chat is in Langfuse. All other service checks

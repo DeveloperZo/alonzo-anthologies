@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1100 575" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia106-title dia106-desc">
   <title id="dia106-title">DIA-106 · Home library: what runs on the desktop and how limesalt reaches it, as of 2026-11-18</title>
-  <desc id="dia106-desc">Reads left to right. The laptop limesalt reaches the desktop win-mpisa5dbmqf over Tailscale. Step 1, proven from limesalt away from home: a request to Ollama on port 11434, which runs natively on Windows and listens on all addresses. Step 2, proven from limesalt on 2026-11-18: ports 3000, 3001, 4000 and 8096, including a chat through the relay with its key. The run did not record whether limesalt was away from home. Step 3: Open WebUI on port 3000 sends chat to LiteLLM on port 4000. Step 4: LiteLLM forwards the routes local-fast and local-coder to LM Studio on port 1234, which runs natively and accepts connections from this machine only. Step 5: Jellyfin on port 8096 reads the media folder at E:\WHL\media. Step 6: LiteLLM forwards the route ollama-coder to Ollama. Step 7: LiteLLM sends a record of every request to Langfuse, the activity dashboard on port 3001, whose files live in this repo.</desc>
+  <desc id="dia106-desc">Reads left to right. The laptop limesalt reaches the desktop lemonpepper over Tailscale. Step 1, proven from limesalt away from home: a request to Ollama on port 11434, which runs natively on Windows and listens on all addresses. Step 2, proven from limesalt on 2026-11-18: ports 3000, 3001, 4000 and 8096, including a chat through the relay with its key. The run did not record whether limesalt was away from home. Step 3: Open WebUI on port 3000 sends chat to LiteLLM on port 4000. Step 4: LiteLLM forwards the routes local-fast and local-coder to LM Studio on port 1234, which runs natively and accepts connections from this machine only. Step 5: Jellyfin on port 8096 reads the media folder at E:\WHL\media. Step 6: LiteLLM forwards the route ollama-coder to Ollama. Step 7: LiteLLM sends a record of every request to Langfuse, the activity dashboard on port 3001, whose files live in this repo.</desc>
   <defs>
     <style>
       :root {
@@ -40,7 +40,7 @@
   <rect x="10" y="82" width="180" height="110" rx="8" fill="none" stroke="#9D9A95" stroke-width="1.2" stroke-dasharray="3,3"/>
   <text x="20" y="98" font-size="10" font-weight="600" fill="#6B6873">CLIENT</text>
   <rect x="310" y="82" width="775" height="388" rx="8" fill="none" stroke="#9D9A95" stroke-width="1.2" stroke-dasharray="3,3"/>
-  <text x="320" y="98" font-size="10" font-weight="600" fill="#6B6873">DESKTOP · win-mpisa5dbmqf · WINDOWS · RTX 5080, 16 GB</text>
+  <text x="320" y="98" font-size="10" font-weight="600" fill="#6B6873">DESKTOP · lemonpepper · WINDOWS · RTX 5080, 16 GB</text>
   <rect x="325" y="238" width="495" height="217" rx="8" fill="none" stroke="#9D9A95" stroke-width="1.2" stroke-dasharray="3,3"/>
   <text x="335" y="255" font-size="10" font-weight="600" fill="#6B6873">DOCKER DESKTOP · WHL STACK · files in E:\WHL</text>
   <!-- arrow 1: proven path -->

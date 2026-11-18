@@ -5,7 +5,7 @@
 - **Primary audience takeaway:** One relay (LiteLLM on port 4000) fronts both model runtimes, LM Studio and Ollama, and records every request in Langfuse. limesalt reaches all of it over Tailscale. From limesalt, the direct Ollama path is proven away from home, and the relay, dashboard, chat page and media server are proven too, on a network the run did not record.
 
 ## What The Diagram Shows
-The laptop, limesalt, sits on the left. The desktop, `win-mpisa5dbmqf`, fills the right. Both are on the same Tailscale network, which is how every arrow from the laptop travels.
+The laptop, limesalt, sits on the left. The desktop, `lemonpepper`, fills the right. Both are on the same Tailscale network, which is how every arrow from the laptop travels.
 
 The blue arrow is the thin version: limesalt asks Ollama directly on port 11434. Ollama runs natively on Windows, listens on all addresses, and has six models pulled. This was answered from limesalt on a phone hotspot on 2026-11-17.
 
