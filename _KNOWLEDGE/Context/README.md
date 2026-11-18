@@ -14,6 +14,7 @@ travel between machines. These files do.
 | [ai-governance-series.md](ai-governance-series.md) | The two-part explainer: structure, design system, editorial rules |
 | [working-with-zo.md](working-with-zo.md) | How Zo divides work between Cowork and Claude Code |
 | [deployment.md](deployment.md) | Publishing the site and getting write access from non-local sessions |
+| [home-library.md](home-library.md) | The desktop's two model stacks, where the WHL project really lives, and a Docker startup fix |
 | [resume-spa.md](resume-spa.md) | Alonzo's Anthologies: quest data model, view filters, and what reaches the PDF |
 
 Hard formatting rules live in the repo root `CLAUDE.md`, not here.

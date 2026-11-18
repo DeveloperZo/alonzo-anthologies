@@ -1,0 +1,27 @@
+# The relay. Every client talks to this instead of Ollama, so each request
+# is forwarded to Ollama and recorded in Langfuse.
+# Run together with langfuse.compose.yml (see the series README).
+services:
+  litellm:
+    image: ghcr.io/berriai/litellm:main-stable
+    restart: always
+    depends_on:
+      - langfuse-web
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    volumes:
+      - ./litellm-config.yaml:/app/config.yaml:ro
+    ports:
+      - 4000:4000
+    extra_hosts:
+      # Lets the container reach Ollama on the desktop itself. Needed on Linux,
+      # harmless on Windows.
+      - host.docker.internal:host-gateway
+    environment:
+      # Clients send this as their API key.
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:?set LITELLM_MASTER_KEY in .env}
+      # Where traces go, and the project keys Langfuse creates on first start.
+      LITELLM_OTEL_V2: "true"
+      LANGFUSE_HOST: http://langfuse-web:3000
+      LANGFUSE_OTEL_HOST: http://langfuse-web:3000
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_INIT_PROJECT_PUBLIC_KEY:?set in .env}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_INIT_PROJECT_SECRET_KEY:?set in .env}

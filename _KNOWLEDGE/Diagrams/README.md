@@ -6,9 +6,8 @@ Status: working
 Owner: zo
 Human id: diagrams-readme
 Update trigger: when a diagram is added here, or the placement rule changes
-Last updated: 2026-10-14
+Last updated: 2026-11-17
 -->
-
 
 Diagrams that explain the system to whoever is building it. Each one is an
 `.svg` plus a `.md` spec sibling. Architecture diagrams use the `DIA-1xx`
@@ -34,9 +33,11 @@ what is under `content/`. The AI governance series is the existing example
 | DIA-103 | [Hosting](./DIA-103-Hosting.svg) ([spec](./DIA-103-Hosting.md)) | [ARCH-003](../Architecture/ARCH-003-Hosting.md) |
 | DIA-104 | [Site build](./DIA-104-SiteBuild.svg) ([spec](./DIA-104-SiteBuild.md)) | [ARCH-004](../Architecture/ARCH-004-SiteBuild.md) |
 | DIA-105 | [Resume app](./DIA-105-ResumeSpa.svg) ([spec](./DIA-105-ResumeSpa.md)) | [ARCH-005](../Architecture/ARCH-005-ResumeSpa.md) |
+| DIA-106 | [Home library](./DIA-106-HomeLibrary.svg) ([spec](./DIA-106-HomeLibrary.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
 
 ## Changelog
 
+- 2026-11-17: Added DIA-106 for the home library series.
 - 2026-11-10: Added `proposals/` with three reference plates and a pointer to the plate style.
 - 2026-10-14: Added DIA-101 to DIA-105 for the Architecture set; definition link moved to `_META/Definitions/`.
 - 2026-10-14: Created.
