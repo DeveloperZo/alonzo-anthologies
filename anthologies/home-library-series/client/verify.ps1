@@ -57,11 +57,23 @@ function Send-Chat([string]$Url, [string]$Model, [hashtable]$Headers = @{}) {
 $base = "http://$Desktop"
 
 # 1. The tunnel. Also records whether the path is direct or relayed.
-Test-Step "Tailscale reaches the desktop" {
-    $out = (& tailscale ping --c 1 $Desktop 2>&1 | Out-String).Trim()
-    if ($out -match "is local Tailscale IP") { return "this machine is the desktop, so there is no tunnel to test" }
-    if ($out -notmatch "pong") { throw $out }
-    $out
+# The Tailscale command is often missing from PATH in a non-interactive shell,
+# so fall back to the default install folder. If it cannot be found at all the
+# check is skipped: the service checks below prove the tunnel on their own.
+$tailscale = (Get-Command tailscale -ErrorAction SilentlyContinue).Source
+if (-not $tailscale) {
+    $default = Join-Path $env:ProgramFiles "Tailscale\tailscale.exe"
+    if (Test-Path $default) { $tailscale = $default }
+}
+if ($tailscale) {
+    Test-Step "Tailscale reaches the desktop" {
+        $out = (& $tailscale ping --c 1 $Desktop 2>&1 | Out-String).Trim()
+        if ($out -match "is local Tailscale IP") { return "this machine is the desktop, so there is no tunnel to test" }
+        if ($out -notmatch "pong") { throw $out }
+        $out
+    }
+} else {
+    Add-Result "Tailscale reaches the desktop" "SKIP" "tailscale command not found"
 }
 
 # 2 and 3. Ollama, the thin version exit test.

@@ -6,7 +6,7 @@ Status: working
 Owner: zo
 Human id: home-library-client-verify
 Update trigger: when a service, port or route on the desktop changes
-Last updated: 2026-11-17
+Last updated: 2026-11-18
 -->
 
 This is a brief for an agent working on limesalt. It is read-only: the
@@ -41,7 +41,7 @@ Only Zo can switch the network, so ask for that once and wait.
 
 | Check | Passes when |
 | --- | --- |
-| Tailscale reaches the desktop | A pong comes back. "via DERP" means relayed, which is normal on a hotspot |
+| Tailscale reaches the desktop | A pong comes back. "via DERP" means relayed, which is normal on a hotspot. Skipped if the Tailscale command cannot be found |
 | Ollama lists models | Six models |
 | Ollama answers a chat | A one-word reply, usually within 10 seconds |
 | Relay refuses a request with no key | HTTP 401 |
@@ -75,6 +75,7 @@ Do not try to fix the desktop from limesalt. Report instead.
 
 ## What to report
 
-Paste the result table from each run, say which network each run was on,
+Paste the result table from each run, say which network each run was on
+(home wifi or hotspot, every time),
 and add one line per failure with the error text. Then record the date
 and outcome in the changelog of `../README.md`.

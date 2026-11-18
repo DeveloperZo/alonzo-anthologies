@@ -11,10 +11,10 @@ Last updated: 2026-11-17
 
 Status: working on the desktop as of 2026-11-17. One relay fronts both
 model runtimes and every request through it is recorded in Langfuse.
-The thin version exit test passed from limesalt. Still to do: run
-`client/verify.ps1` from limesalt to prove the relay, the dashboard and
-the chat page from the laptop (brief in `client/VERIFY.md`), and set a
-Langfuse login.
+The thin version exit test passed from limesalt, and on 2026-11-18
+`client/verify.ps1` run on limesalt reached every service. Still to do:
+rerun it on limesalt with `WHL_LITELLM_KEY` set, so a chat through the
+relay is proven from the laptop, and set a Langfuse login.
 
 ## Thin version exit test
 
@@ -158,6 +158,13 @@ Design seeds for the swarm are listed in
 
 ## Changelog
 
+- 2026-11-18: `client/verify.ps1` run on limesalt: Ollama chat, Open
+  WebUI, Langfuse and Jellyfin passed, and the relay refused a request
+  with no key. The two keyed relay checks were skipped (no key set).
+  The report did not say whether limesalt was on home wifi or a
+  hotspot. The one failure was the script not finding the Tailscale
+  command, which is fixed: it now looks in the install folder and
+  skips the check if the command is missing.
 - 2026-11-17: Stacks joined. Langfuse started on port 3001 and attached
   to the WHL LiteLLM, which gained the `ollama-coder` route. Second
   relay removed. `client/verify.ps1` passes 9 of 9 from the desktop.
