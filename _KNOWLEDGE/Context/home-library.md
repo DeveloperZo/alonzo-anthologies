@@ -13,9 +13,20 @@ relay got written on 2026-11-17.
   has its own `README.md` and `docs/Architecture/Architecture.md`.
 - **Ollama** runs natively on port 11434 and is what the thin version
   proved from limesalt.
-- `anthologies/home-library-series/server/` asks for ports 4000 and
-  3000. Both are held by the WHL stack. How the two become one is an
-  open decision recorded in the series README.
+- **The two were joined on 2026-11-17** (Zo's decision). The WHL
+  LiteLLM on port 4000 is the one relay. It has a route to Ollama
+  (`ollama-coder`) and reports every request to Langfuse.
+- **Langfuse** runs from `anthologies/home-library-series/server/` on
+  port 3001, as compose project `whl-langfuse`, attached to the `whl`
+  Docker network. Port 3000 is Open WebUI.
+- Edits made in `E:\WHL` that day: `config/litellm/config.yaml`,
+  `compose/docker-compose.yml`, `compose/.env`, `compose/.env.example`
+  and `README.md`. The first three have `.bak-2026-11-17` copies beside
+  them, since nothing there is under version control.
+- Langfuse 4 has no `/api/public/traces`. To read records back, use
+  `/api/public/v2/observations` with the project keys.
+- To check the whole system, run
+  `anthologies/home-library-series/client/verify.ps1`.
 
 The picture is DIA-106 in `_KNOWLEDGE/Diagrams/`.
 

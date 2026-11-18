@@ -1,0 +1,21 @@
+# Local changes to langfuse.compose.yml, kept here so that file stays an
+# unchanged copy of the upstream one. Always pass both files:
+#   docker compose -f langfuse.compose.yml -f langfuse.override.yml up -d
+name: whl-langfuse
+
+services:
+  langfuse-web:
+    # Port 3000 on the desktop belongs to Open WebUI in the WHL stack, so the
+    # dashboard is published on 3001. !override replaces the upstream list
+    # instead of adding to it.
+    ports: !override
+      - 3001:3000
+    # Joins the WHL network so the WHL LiteLLM container can send traces to
+    # http://langfuse-web:3000 without leaving Docker.
+    networks:
+      - default
+      - whl
+
+networks:
+  whl:
+    external: true

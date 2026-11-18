@@ -1,50 +1,52 @@
 # DIA-106: Home library
 ## Snapshot
 - **Diagram file:** `_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg`
-- **Theme:** What runs on the desktop for the home library, and how the laptop reaches it, as of 2026-11-17
-- **Primary audience takeaway:** Two model stacks run side by side on the desktop. Ollama is the one proven from limesalt away from home. The older WHL stack (Open WebUI, LiteLLM, LM Studio, Jellyfin) holds ports 3000 and 4000, so the relay and Langfuse dashboard written in the repo cannot start as written.
+- **Theme:** What runs on the desktop for the home library, and how the laptop reaches it, as of 2026-11-18
+- **Primary audience takeaway:** One relay (LiteLLM on port 4000) fronts both model runtimes, LM Studio and Ollama, and records every request in Langfuse. limesalt reaches all of it over Tailscale, and only the direct Ollama path has been proven from limesalt so far.
 
 ## What The Diagram Shows
 The laptop, limesalt, sits on the left. The desktop, `win-mpisa5dbmqf`, fills the right. Both are on the same Tailscale network, which is how every arrow from the laptop travels.
 
-The top row is the Ollama path. Ollama runs natively on Windows, listens on all addresses on port 11434, and has six models pulled. A request from limesalt on a phone hotspot was answered on 2026-11-17, so this arrow is drawn in blue as proven. To the right of Ollama, dashed, are the relay (LiteLLM) and the Langfuse dashboard defined in `anthologies/home-library-series/server/`. Neither is started and Langfuse is not installed. The red line under them gives the reason they cannot start as written: they ask for ports 4000 and 3000.
+The blue arrow is the thin version: limesalt asks Ollama directly on port 11434. Ollama runs natively on Windows, listens on all addresses, and has six models pulled. This was answered from limesalt on a phone hotspot on 2026-11-17.
 
-The lower block is the WHL stack, built on 2026-10-02 from files in `E:\WHL`, which is outside this repo and not under version control. Inside Docker Desktop, Open WebUI on port 3000 sends chat to LiteLLM on port 4000. LiteLLM forwards to LM Studio on port 1234. LM Studio runs natively on Windows and accepts connections from this machine only. Jellyfin on port 8096 serves the media folder at `E:\WHL\media`, mounted read-only.
+The lower block is the WHL stack, built on 2026-10-02 from files in `E:\WHL`, which is outside this repo and not under version control. Inside Docker Desktop, Open WebUI on port 3000 sends chat to LiteLLM on port 4000. LiteLLM is the relay. It offers three routes and refuses any caller without its key. Two routes go to LM Studio on port 1234, which runs natively and accepts connections from this machine only. The third, `ollama-coder`, goes up to Ollama. Jellyfin on port 8096 serves the media folder at `E:\WHL\media`, mounted read-only.
 
-The amber arrows from limesalt into the WHL stack mark ports that are open on the network and answer on the desktop's Tailscale address, but that nobody has tried from limesalt yet.
+Langfuse, top right, is the activity dashboard on port 3001. It runs in Docker from the files in `anthologies/home-library-series/server/` and joins the WHL Docker network, so LiteLLM can send it a record of every request without leaving Docker.
+
+The amber arrows from limesalt mark ports that are open on the network and answer on the desktop's Tailscale name, but that nobody has tried from limesalt yet.
 
 ## Elements And Flow
 - **Components:**
   - limesalt, the laptop and client
   - Ollama, native Windows, port 11434, six models pulled
-  - Relay (LiteLLM) and Langfuse from the repo's `server/` folder, not started
-  - Open WebUI (`whl-openwebui`, port 3000), LiteLLM (`whl-litellm`, port 4000) and Jellyfin (`whl-jellyfin`, port 8096) in Docker Desktop
+  - Open WebUI (`whl-openwebui`, port 3000), LiteLLM (`whl-litellm`, port 4000) and Jellyfin (`whl-jellyfin`, port 8096) in Docker Desktop, compose files in `E:\WHL\compose`
   - LM Studio, native Windows, port 1234, bound to 127.0.0.1, serving `openai/gpt-oss-20b` and `mistralai/devstral-small-2-2512`
+  - Langfuse 4.82.0 (compose project `whl-langfuse`, port 3001), with its own Postgres, ClickHouse, Redis and object store, none of which are drawn
   - The media folder `E:\WHL\media`
 - **Relationships:**
-  - Blue arrow 1 is the only path proven from limesalt away from the home network
+  - Blue arrow 1 is the only path proven from limesalt away from home
   - Amber arrows 2 are open ports not yet tried from limesalt
-  - Green arrows 3 to 5 are connections that run entirely on the desktop
-  - Dashed gray arrows 6 are written in the repo and not started
-  - Dashed outlines group the client, the desktop, and what runs inside Docker Desktop
+  - Green arrows 3 to 7 are connections that run entirely on the desktop
+  - Dashed outlines group the client, the desktop, and the WHL stack inside Docker Desktop
 - **Notable labels or metrics:**
   - "all addresses · 6 models pulled" on Ollama
-  - "routes: local-fast, local-coder" on LiteLLM, the two names clients ask for
+  - "the relay · 3 routes · needs a key" on LiteLLM. The routes are `local-fast`, `local-coder` and `ollama-coder`
   - "this machine only (127.0.0.1)" on LM Studio
-  - "cannot start as written: ports 4000 and 3000 are already held by the stack below"
+  - "a record of every request" on the arrow into Langfuse
 
 ## How To Read It
 1. Step 1: limesalt asks Ollama for a model over Tailscale. This is the thin version exit test and it passed.
-2. Step 2: the same tunnel also reaches ports 3000, 4000 and 8096. They are open, and untested from the laptop.
+2. Step 2: the same tunnel also reaches ports 3000, 3001, 4000 and 8096. They are open, and untested from the laptop.
 3. Step 3: Open WebUI passes each chat request to LiteLLM, using the key in `E:\WHL\compose\.env`.
-4. Step 4: LiteLLM forwards to LM Studio through `host.docker.internal`, which is why LM Studio can stay bound to this machine.
+4. Step 4: LiteLLM forwards `local-fast` and `local-coder` to LM Studio through `host.docker.internal`, which is why LM Studio can stay bound to this machine.
 5. Step 5: Jellyfin reads the media folder. It depends on nothing else in the picture.
-6. Step 6: the planned relay would sit in front of Ollama and report every request to Langfuse. Read the red line before starting it.
+6. Step 6: LiteLLM forwards `ollama-coder` to Ollama, the same way.
+7. Step 7: LiteLLM reports each request to Langfuse. If Langfuse is down, requests still succeed and only the record is lost.
 
 ## Home Library Relevance
-The series README was written without sight of `E:\WHL`, so it describes Ollama as the only model runtime and plans a second LiteLLM on port 4000 and Langfuse on port 3000. This picture puts both stacks in one frame so the overlap is visible: two runtimes (Ollama and LM Studio) sharing one 16 GB graphics card, one relay already running and one planned, and two things wanting each of ports 3000 and 4000. The open decision it points at is whether Langfuse joins the existing WHL LiteLLM or the repo's relay replaces it.
+The series README was first written without sight of `E:\WHL` and planned a second relay. On 2026-11-17 the decision was to join the two: keep the LiteLLM that already ran, add a route to Ollama, and attach Langfuse to it. This picture is that result. It also shows what is left: the amber arrows are untested from limesalt (the brief for that is `anthologies/home-library-series/client/VERIFY.md`), a caller who goes straight to Ollama on arrow 1 is not recorded in Langfuse, and Ollama and LM Studio share one 16 GB graphics card.
 
-Sources, all read on 2026-11-17: `docker ps`, `tailscale status`, `ollama list`, the listening ports on the desktop, `E:\WHL\README.md`, `E:\WHL\compose\`, `E:\WHL\config\litellm\config.yaml`, and `anthologies/home-library-series/server/`.
+Verified from the desktop on 2026-11-18 by `anthologies/home-library-series/client/verify.ps1` (9 of 9 checks) and by reading back from Langfuse the record of a chat sent through each runtime. Other sources, read on 2026-11-17: `docker ps`, `tailscale status`, `ollama list`, `E:\WHL\README.md`, `E:\WHL\compose\`, `E:\WHL\config\litellm\config.yaml`.
 
 ## Suggested Caption
-DIA-106 · Home library: limesalt reaches Ollama on the desktop over Tailscale; the WHL stack runs beside it; Langfuse is not started.
+DIA-106 · Home library: limesalt reaches the desktop over Tailscale; one relay fronts LM Studio and Ollama and records every request in Langfuse.
