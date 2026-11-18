@@ -1,0 +1,20 @@
+1. Rename the desktop to lemonpepper on the tailnet
+2. Tighten resume wording across the experience entries
+3. Fix the links between Part 1 and Part 2
+4. Ignore _LOCAL so local-only working material is never committed
+5. Record the keyed relay run from limesalt
+6. Make the printed resume easier for an ATS to parse
+7. Rewrite the Part 2 opening as two columns of fact
+8. Disable Claude Code commit and PR attribution
+9. Join Langfuse to the WHL relay and add a client verify script
+10. Redraw six governance diagrams as engraved plates
+11. Show the resume on phones without the viewport warning
+12. Drop the local gitlab remote so this clone no longer keeps AI co-author history.
+13. Build job applications from tailoring overlays with one package command
+14. Revise Part 1 for November 2026: current facts, section naming, source attribution
+15. Restructure project knowledge: _META definitions, architecture set, stories
+16. Open quests in play mode as factory machine windows, and read quest dates in UTC everywhere
+17. Record the limesalt verify run and fix the Tailscale check
+18. Update project structure to use anthologies directory
+19. Bring the plates in line with the November prose figures
+20. Keep the viewport warning out of printed resumes

@@ -251,8 +251,8 @@
 "use strict";
 var POLL_MS = 2000, STALE_MS = 15000;
 var P = { laptop: [87, 102], tunnel: [235, 102], relay: [381, 102], ollama: [680, 102], log: [382, 196] };
-var ROUTE_CLASS = { "local-fast": "fast", "local-coder": "coder" };
-var ROUTE_LETTER = { "local-fast": "F", "local-coder": "C" };
+var ROUTE_CLASS = { "local-fast": "fast", "local-think": "coder", "local-coder": "fast" };
+var ROUTE_LETTER = { "local-fast": "F", "local-think": "T", "local-coder": "F" };
 
 var data = null, recvAt = 0, lastGen = null, lastChangeAt = 0, everLoaded = false;
 var seen = null, freshIds = {}, queue = [], playing = false, mode = "live", demoToken = 0, note = "", noteUntil = 0;
@@ -431,7 +431,7 @@ function drawScene() {
   var ow = ok ? Math.min(W - mw, (g.other_mb || 0) / total * W) : 0;
   var tm = $("tankModel");
   tm.setAttribute("width", mw.toFixed(1));
-  tm.setAttribute("class", m && routeOf(m.name) === "local-coder" ? "coder" : "");
+  tm.setAttribute("class", m && false ? "coder" : "");
   $("tankOther").setAttribute("x", (520 + mw).toFixed(1));
   $("tankOther").setAttribute("width", ow.toFixed(1));
   $("tankLabel").textContent = mw > 150 && m ? m.name : "";
@@ -562,7 +562,7 @@ function render() {
   $("refreshed").textContent = everLoaded ? "reading from " + clock(lastGen) : "";
   if (!data) return;
   drawScene(); drawReadout(); drawLights(); drawStrip(); drawTable();
-  if (!playing && !$("caption").textContent) setCaption("A dot is drawn a few seconds after a real request finishes. F is local-fast, C is local-coder. Travel time is not to scale.");
+  if (!playing && !$("caption").textContent) setCaption("A dot is drawn a few seconds after a real request finishes. F is local-fast (thinks briefly), T is local-think (thinks first). Travel time is not to scale.");
 }
 
 (function init() {

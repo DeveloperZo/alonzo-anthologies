@@ -30,8 +30,8 @@ The picture reads bottom to top: each thing stands on what is beneath it. The la
 - **Notable labels or metrics:**
   - The bar scale is 16 GB = 300 units (1 GB = 18.75 units). The vertical rule marked `16 GB` is the size of the card.
   - `local-fast` uses `gpt-oss:20b`: 12 GB when loaded, fully on the graphics card, context 16384, about 155 tokens per second. It is 13 GB on disk.
-  - `local-coder` uses `qwen2.5-coder:14b`: 11 GB when loaded, fully on the card, context 16384. It is 9 GB on disk.
-  - `one model loaded at a time; a swap takes 6 to 30 s`: Ollama holds one of the two models at a time. Asking for the other swaps them. A loaded model stays for 30 minutes after its last use.
+  - `local-fast thinks briefly · local-think thinks first`: the relay's routes all use `gpt-oss:20b`. `local-fast` asks it to think briefly, `local-think` lets it think at its default depth, and `local-coder` is an old name kept as an alias of `local-fast`. Decided 2026-11-18 after scoring: this one model outscored `qwen2.5-coder:14b` at the same speed.
+  - `one model, always loaded: no wait between routes`: because every route uses the same model, Ollama never has to swap. It stays loaded for 60 minutes after its last use.
   - `Devstral Small 2 (15 GB) was too big: removed`: 15 percent of it ran in system memory, at 27 tokens per second, so it was removed. It is a note and not a bar, because its loaded size was not measured.
   - Not drawn: `gpt-oss:20b` at context 32768 still loads but drops to 62 tokens per second.
   - Sources: the hardware, Windows, Tailscale, Docker and the seven Langfuse containers come from the component fact sheet checked on lemonpepper on 2026-11-18 (`nvidia-smi`, `Get-CimInstance`, `powercfg`, `docker ps -a`). The routes, model sizes, swap time and the Devstral result are the measurements taken on 2026-11-18 after LM Studio was retired. The card reports 16303 MiB, drawn as 16 GB.

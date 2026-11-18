@@ -52,17 +52,19 @@ Six more views, each answering one question:
 | Jellyfin | `http://lemonpepper:8096` | Media server |
 
 The relay offers two routes. A client asks for a route name, not a
-model name.
+model name. One model, `gpt-oss:20b`, answers both.
 
-| Route | For | Answered by | Measured |
-| --- | --- | --- | --- |
-| `local-fast` | General work and reasoning | `gpt-oss:20b` in Ollama | 12 GB on the card, about 155 tokens per second |
-| `local-coder` | Code | `qwen2.5-coder:14b` in Ollama | 11 GB on the card |
+| Route | For | How it differs |
+| --- | --- | --- |
+| `local-fast` | The default: reading, extracting, labelling, small code jobs | Thinks briefly. A short answer takes 1 to 3 seconds |
+| `local-think` | Ordering, counting, comparing, strict rewrites | Thinks first. About three times slower |
 
-Both run with a 16384 token context window, the largest at which each
-stays fully on the 16 GB card. Ollama holds one model at a time: asking
-for the other route swaps them, which takes 6 to 30 seconds. A loaded
-model stays for 30 minutes after its last use.
+`local-coder` is an old name kept as an alias of `local-fast`.
+
+The model takes 12 GB of the 16 GB card and runs at about 155 tokens
+per second with a 16384 token context window, the largest at which it
+stays fully on the card. Because every route uses the same model it is
+always loaded, and stays so for 60 minutes after its last use.
 
 LM Studio was a second model runtime doing the same job as Ollama. It
 was retired on 2026-11-18. On the same model the two ran at 165 and 155
@@ -121,8 +123,22 @@ recorded in Langfuse under the caller's name and a task label.
 powershell -NoProfile -ExecutionPolicy Bypass -File client/ask-local.ps1 -Prompt "Summarize this in five bullets." -File notes.md -Task summary
 ```
 
-Which work is safe to hand over, and which is not, is in
-`client/ROUTING.md`.
+For many files at once, `client/ask-local-batch.ps1` runs the same
+instruction over each and writes one reply per file, so the harness
+never reads the inputs. Which work is safe to hand over, and which is
+not, is in `client/ROUTING.md`. Claude Code learns all of this from the
+`local-models` skill in `.claude/skills/`.
+
+## Seeing it work
+
+The live board is at `http://lemonpepper:8088`: the path a request
+takes, what is loaded on the graphics card, service lights, today's
+numbers and the last ten requests by caller. It shows no prompt or
+reply text. Files and details are in `board/`.
+
+After a restart of the desktop, log in and run `server/start.ps1`. It
+starts everything that does not start by itself and runs the checks.
+What to try first is in `TEST-DRIVE.md`.
 
 ## Server: the activity dashboard
 
@@ -166,8 +182,10 @@ an entry to `E:\WHL\config\litellm\config.yaml` and restart the relay.
 - Later: `E:\WHL` moves into a repo. Today it has no history and no
   backup.
 - Settled 2026-11-18: Ollama is the only model runtime. LM Studio is
-  retired. `local-fast` is `gpt-oss:20b` and `local-coder` is
-  `qwen2.5-coder:14b`, each at a 16384 token context.
+  retired.
+- Settled 2026-11-18: one model, `gpt-oss:20b`, answers every route.
+  Scored against the old coder model and two newer 9B models, it won
+  or tied on quality at the same speed (table in `client/ROUTING.md`).
 - Settled 2026-11-18: no fallback for when the desktop is off. This is
   a home setup and that is acceptable.
 - Settled 2026-11-18: a frontier tool is the harness and the local
@@ -175,8 +193,9 @@ an entry to `E:\WHL\config\litellm\config.yaml` and restart the relay.
   WHL README that kept orchestration local.
 - Later: a memory layer (a vector store and a workflow runner are
   staged in the WHL files but not started).
-- Four Ollama models from two years ago are unused and take 52 GB of
-  disk. Two of them cannot fit on the card.
+- Five Ollama models are now unused: four from two years ago (52 GB,
+  two of which cannot fit on the card) and `qwen2.5-coder:14b` (9 GB).
+  Deleting them is Zo's call.
 - Settled 2026-11-17: an activity dashboard is wanted (Langfuse behind
   a relay). Open WebUI is the chat front end already running.
 - Where the non-repo library lives, and how it is backed up.
@@ -189,9 +208,11 @@ In order:
    desktop setup as scripts and a runbook (network, runtime,
    keep-awake).
 2. `client/`: started. Holds the connectivity check (`verify.ps1`), the
-   brief for running it on limesalt (`VERIFY.md`), the hand-off tool
-   (`ask-local.ps1`) and the guide to what to hand over (`ROUTING.md`).
-3. `swarm/`: agent swarms that use the server as their model endpoint.
+   brief for running it on limesalt (`VERIFY.md`), the hand-off tools
+   (`ask-local.ps1`, `ask-local-batch.ps1`), the guide to what to hand
+   over (`ROUTING.md`) and the scoring script behind it (`eval/`).
+3. `board/`: started. The live board.
+4. `swarm/`: agent swarms that use the server as their model endpoint.
 
 ## Relation to the gatekeeper series
 
@@ -204,6 +225,12 @@ Design seeds for the swarm are listed in
 
 ## Changelog
 
+- 2026-11-18: Local models scored on twelve tasks, then scored again
+  against two newer models. Result: one model on every route, with
+  `local-fast` and `local-think` differing only in thinking effort.
+  Hand-off tool hardened (refuses oversize input, rejects cut-off
+  replies), batch tool added, live board added on port 8088,
+  `server/start.ps1` added, `local-models` skill added.
 - 2026-11-18: Diagram set added: DIA-106 redrawn as the overview, plus
   DIA-107 to DIA-112. Drawn by subagents from a verified fact sheet.
 - 2026-11-18: LM Studio retired and Ollama made the only runtime. Both

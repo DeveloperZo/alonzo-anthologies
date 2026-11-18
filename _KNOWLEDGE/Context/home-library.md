@@ -18,9 +18,12 @@ relay got written on 2026-11-17.
   Langfuse.
 - **Ollama is the only model runtime since 2026-11-18** (Zo's decision:
   drop whichever of the two was worse). LM Studio's server is stopped;
-  the app is still installed. Routes: `local-fast` is `gpt-oss:20b`,
-  `local-coder` is `qwen2.5-coder:14b`, both at context 16384, the
-  largest that keeps each fully on the 16 GB card. Measured the same
+  the app is still installed. One model, `gpt-oss:20b`, answers every
+  route at context 16384, the largest that keeps it fully on the 16 GB
+  card. `local-fast` asks it to think briefly, `local-think` lets it
+  think first, and `local-coder` is an old alias of `local-fast`. This
+  was chosen by scoring: it beat `qwen2.5-coder:14b` and two newer 9B
+  models (table in `client/ROUTING.md`). Measured the same
   day: gpt-oss 20b ran at 165 tokens per second in LM Studio and 155 in
   Ollama; at context 32768 it drops to 62; Devstral Small 2 does not
   fit and was removed.
@@ -30,6 +33,17 @@ relay got written on 2026-11-17.
   what is safe to hand over is in `client/ROUTING.md` beside it. No
   fallback is wanted for when the desktop is off. A memory layer and
   moving `E:\WHL` into a repo are both deferred.
+- **Tools added 2026-11-18**, all under
+  `anthologies/home-library-series/`: `client/ask-local-batch.ps1`
+  (one instruction over many files), `client/eval/run_eval.py` (rerun
+  after any model change), `board/` (live board on port 8088; its
+  collector is a Python process that does not start by itself), and
+  `server/start.ps1` (brings everything up after a restart and runs the
+  checks).
+- **Do not ask Ollama directly with a different context size.** Ollama
+  reloads the model when the size differs, and the next relay request
+  then waits for another load. `verify.ps1` asks at 16384 for this
+  reason.
 - **Never call the relay's `GET /health`.** It sends a real chat to
   every route and forces a model swap. Use `/health/liveliness`.
 - **Langfuse** runs from `anthologies/home-library-series/server/` on

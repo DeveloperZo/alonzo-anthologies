@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d108-title d108-desc">
   <title id="d108-title">DIA-108 · What runs where: what runs on what in the home library, and which models fit on the graphics card</title>
-  <desc id="d108-desc">Reads bottom to top: each thing stands on what is beneath it. On the left is the laptop, limesalt, holding your tools: Claude Code, a browser and Tailscale. On the right is the desktop, lemonpepper. At the bottom of the desktop is the hardware layer: an i9-13900K processor, 64 GB of memory and one graphics card, an RTX 5080 with 16 GB of graphics memory, where models run. Above the hardware is Windows 11, with sleep set to never. Standing on Windows are two programs that run directly on it, Tailscale (the private network to the laptop) and Ollama (the model runtime, which loads a model when a request asks), and Docker Desktop, which runs four containers: LiteLLM (the relay), Open WebUI (the chat page), Langfuse (the request record, seven containers drawn as one) and Jellyfin (the media server). One line runs from Ollama straight down to the graphics card: Ollama loads models there. A small bar chart beside the graphics card shows which models fit in 16 GB, drawn to scale. Route local-fast uses gpt-oss:20b, 12 GB when loaded. Route local-coder uses qwen2.5-coder:14b, 11 GB when loaded. Both fit, one at a time. A swap between them takes 6 to 30 seconds. Devstral Small 2, at 15 GB, was too big and was removed.</desc>
+  <desc id="d108-desc">Reads bottom to top: each thing stands on what is beneath it. On the left is the laptop, limesalt, holding your tools: Claude Code, a browser and Tailscale. On the right is the desktop, lemonpepper. At the bottom of the desktop is the hardware layer: an i9-13900K processor, 64 GB of memory and one graphics card, an RTX 5080 with 16 GB of graphics memory, where models run. Above the hardware is Windows 11, with sleep set to never. Standing on Windows are two programs that run directly on it, Tailscale (the private network to the laptop) and Ollama (the model runtime, which loads a model when a request asks), and Docker Desktop, which runs four containers: LiteLLM (the relay), Open WebUI (the chat page), Langfuse (the request record, seven containers drawn as one) and Jellyfin (the media server). One line runs from Ollama straight down to the graphics card: Ollama loads models there. A small bar chart beside the graphics card shows which models fit in 16 GB, drawn to scale. Route local-fast uses gpt-oss:20b, 12 GB when loaded. Both fit, one at a time. Devstral Small 2, at 15 GB, was too big and was removed. Beside the card, one bar drawn to scale against a 16 GB rule: gpt-oss:20b takes 12 GB and answers every route. The route local-fast makes it think briefly and local-think makes it think first.</desc>
   <defs>
     <style>
       :root {
@@ -99,20 +99,17 @@
   <text x="405" y="544" text-anchor="middle" font-size="13" font-style="italic" fill="#6B6873">where models run</text>
 
   <!-- model bars. Scale: 16 GB = 300 units, so 1 GB = 18.75 units. Bars start at x 590.
-       12 GB = 225 units, 11 GB = 206.25 units, the 16 GB rule is at x 890.
+       12 GB = 225 units, the 16 GB rule is at x 890. One model answers every route.
        Sizes are graphics memory when loaded at context 16384 (measured 2026-11-18). -->
   <text x="590" y="479" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">WHICH MODELS FIT IN 16 GB</text>
   <rect x="590" y="506" width="300" height="12" fill="#F2EEE3" stroke="#E2DFD6" stroke-width="1"/>
-  <rect x="590" y="544" width="300" height="12" fill="#F2EEE3" stroke="#E2DFD6" stroke-width="1"/>
   <rect x="590" y="506" width="225" height="12" fill="#5A8270"/>
-  <rect x="590" y="544" width="206.25" height="12" fill="#5A8270"/>
   <line x1="890" y1="488" x2="890" y2="562" stroke="#6B6873" stroke-width="1.5"/>
   <text x="897" y="500" font-size="12.5" font-weight="600" fill="#6B6873">16 GB</text>
-  <text x="590" y="500" font-size="12.5" font-weight="600" fill="#2A2A35" class="m">local-fast</text>
+  <text x="590" y="500" font-size="12.5" font-weight="600" fill="#2A2A35" class="m">every route</text>
   <text x="686" y="500" font-size="13" fill="#2A2A35">gpt-oss:20b · 12 GB</text>
-  <text x="590" y="538" font-size="12.5" font-weight="600" fill="#2A2A35" class="m">local-coder</text>
-  <text x="686" y="538" font-size="13" fill="#2A2A35">qwen2.5-coder:14b · 11 GB</text>
-  <text x="590" y="575" font-size="12.5" fill="#6B6873">one model loaded at a time; a swap takes 6 to 30 s</text>
+  <text x="590" y="540" font-size="12.5" fill="#2A2A35">local-fast thinks briefly · local-think thinks first</text>
+  <text x="590" y="560" font-size="12.5" fill="#6B6873">one model, always loaded: no wait between routes</text>
   <rect x="590" y="586" width="8" height="8" fill="#A28438"/>
   <text x="604" y="594" font-size="12.5" font-weight="600" fill="#A28438">Devstral Small 2 (15 GB) was too big: removed</text>
 

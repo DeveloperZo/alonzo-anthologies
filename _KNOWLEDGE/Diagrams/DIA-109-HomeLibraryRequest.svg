@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d109-title d109-desc">
   <title id="d109-title">DIA-109 · One request: what happens to one request sent to the home library, step by step</title>
-  <desc id="d109-desc">Reads left to right. On the left is the caller: a tool or a browser, on limesalt or lemonpepper. A dotted vertical line marks the tailnet that calls from limesalt cross. Step 1 has two forms: a browser opens the chat page Open WebUI on port 3000, or a tool calls LiteLLM, the relay, on port 4000 with the key. Step 2: Open WebUI calls the relay with the key. The relay checks the key and picks the model by route name. A note lists the two routes: local-fast goes to gpt-oss:20b and local-coder goes to qwen2.5-coder:14b. Step 3: the relay calls Ollama on port 11434 for the route's model. Ollama loads the model if needed and writes the answer. Step 4: the answer returns the same way. Step 5: the relay sends a record of the request to Langfuse on port 3001, which stores the record. An amber line along the bottom shows the weak point: a caller can go straight to Ollama, with no key and no record.</desc>
+  <desc id="d109-desc">Reads left to right. On the left is the caller: a tool or a browser, on limesalt or lemonpepper. A dotted vertical line marks the tailnet that calls from limesalt cross. Step 1 has two forms: a browser opens the chat page Open WebUI on port 3000, or a tool calls LiteLLM, the relay, on port 4000 with the key. Step 2: Open WebUI calls the relay with the key. The relay checks the key and picks the model by route name. Step 3: the relay calls Ollama on port 11434 for the route's model. Ollama loads the model if needed and writes the answer. Step 4: the answer returns the same way. Step 5: the relay sends a record of the request to Langfuse on port 3001, which stores the record. An amber line along the bottom shows the weak point: a caller can go straight to Ollama, with no key and no record. A note lists the routes: local-fast goes to gpt-oss:20b thinking briefly, and local-think goes to the same model thinking first.</desc>
   <defs>
     <style>
       :root {
@@ -68,8 +68,8 @@
 
   <!-- routes note -->
   <text x="744" y="126" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">ROUTES</text>
-  <text class="m" x="744" y="146" font-size="12.5" font-weight="600" fill="#5A8270" xml:space="preserve">local-fast  → gpt-oss:20b</text>
-  <text class="m" x="744" y="166" font-size="12.5" font-weight="600" fill="#5A8270" xml:space="preserve">local-coder → qwen2.5-coder:14b</text>
+  <text class="m" x="744" y="146" font-size="12.5" font-weight="600" fill="#5A8270" xml:space="preserve">local-fast  → gpt-oss:20b, thinks briefly</text>
+  <text class="m" x="744" y="166" font-size="12.5" font-weight="600" fill="#5A8270" xml:space="preserve">local-think → same model, thinks first</text>
 
   <!-- nodes -->
   <!-- caller -->

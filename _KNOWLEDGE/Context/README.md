@@ -14,10 +14,19 @@ travel between machines. These files do.
 | [ai-governance-series.md](ai-governance-series.md) | The two-part explainer: structure, design system, editorial rules |
 | [working-with-zo.md](working-with-zo.md) | How Zo divides work between Cowork and Claude Code |
 | [deployment.md](deployment.md) | Publishing the site and getting write access from non-local sessions |
-| [home-library.md](home-library.md) | The desktop's two model stacks, where the WHL project really lives, and a Docker startup fix |
+| [home-library.md](home-library.md) | The home server: what runs on it, where the WHL project really lives, a Docker startup fix, and the rule to hand token-heavy work to the local models |
 | [resume-spa.md](resume-spa.md) | Alonzo's Anthologies: quest data model, view filters, and what reaches the PDF |
 
 Hard formatting rules live in the repo root `CLAUDE.md`, not here.
+
+## Standing rule: use the local models for bulk work
+
+Before reading several files, or one long file, only to summarize it,
+pull facts out of it or label it, hand that work to the free local
+models instead. The how is in the `local-models` skill
+(`.claude/skills/local-models/SKILL.md`) and the evidence is in
+`anthologies/home-library-series/client/ROUTING.md`. Zo set this on
+2026-11-18 to cut frontier token cost.
 
 ## Keeping these current
 

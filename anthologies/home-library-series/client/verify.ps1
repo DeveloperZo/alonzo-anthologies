@@ -12,8 +12,8 @@ Exit code 0 means every check that ran passed.
 #>
 param(
     [string]$Desktop = "lemonpepper",
-    [string]$OllamaModel = "qwen2.5-coder:14b",
-    [string]$RelayModel = "local-coder"
+    [string]$OllamaModel = "gpt-oss:20b",
+    [string]$RelayModel = "local-fast"
 )
 
 $ErrorActionPreference = "Stop"
@@ -90,7 +90,20 @@ Test-Step "Ollama lists models (port 11434)" {
     "$(@($ids).Count) models"
 }
 Test-Step "Ollama answers a chat" {
-    Send-Chat "${base}:11434/v1/chat/completions" $OllamaModel
+    # Ask in Ollama's own format with the same context size the relay uses.
+    # A different size would make Ollama reload the model, and the next real
+    # request through the relay would then wait for it to load again.
+    $body = @{
+        model    = $OllamaModel
+        messages = @(@{ role = "user"; content = "Reply with one word: ready" })
+        stream   = $false
+        think    = "low"
+        options  = @{ num_ctx = 16384; num_predict = 200 }
+    } | ConvertTo-Json -Depth 5
+    $sw = [Diagnostics.Stopwatch]::StartNew()
+    $r = Invoke-RestMethod -Uri "${base}:11434/api/chat" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 180
+    if (-not $r.message.content) { throw "empty reply" }
+    "replied '$($r.message.content.Trim())' in $([math]::Round($sw.Elapsed.TotalSeconds, 1)) s"
 }
 
 # 4. The relay must be reachable and must refuse a caller with no key.

@@ -56,7 +56,7 @@ reading and exit: `py -3.12 collector.py --once`.
   saying what the system is doing.
 - **The scene.** Laptop, private tunnel, relay, Ollama, and the log. When
   a real request appears in the log, one dot travels the path once. The
-  dot carries F for `local-fast` or C for `local-coder`. A smaller dot
+  dot carries F for `local-fast` or T for `local-think`. A smaller dot
   drops from the relay into the log.
 - **The tank.** The graphics card as 16 cells of about 1 GB. Solid is
   the loaded model, striped is everything else on the card, empty is

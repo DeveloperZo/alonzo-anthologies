@@ -26,7 +26,7 @@ Every node also says what stops when that piece is down. A note at the lower lef
 - **Relationships:**
   - Windows to Tailscale, Docker Desktop and Ollama: one gray bracket with three tips. These programs can only start after Windows is up and a user is logged in.
   - Docker Desktop to the containers frame: one amber arrow that ends at the frame edge. Every container needs Docker Desktop, and this is the weak point of the chain.
-  - Ollama to LiteLLM: solid blue. Both relay routes (`local-fast` and `local-coder`) point at Ollama, so the relay has nothing to pass work to without it.
+  - Ollama to LiteLLM: solid blue. Every relay route points at Ollama, so the relay has nothing to pass work to without it.
   - LiteLLM to Open WebUI: solid blue. Open WebUI talks only to the relay.
   - LiteLLM to Langfuse: thin blue, labelled "not required". The relay sends a record of each request, and carries on if Langfuse is down.
 - **Notable labels or metrics:**

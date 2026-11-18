@@ -43,7 +43,7 @@ URLS = {
 DEAD = "http://127.0.0.1:9"  # nothing listens here; used by --break
 
 # Used until the relay's own route list has been read once.
-DEFAULT_ROUTES = {"local-fast": "gpt-oss:20b", "local-coder": "qwen2.5-coder:14b"}
+DEFAULT_ROUTES = {"local-fast": "gpt-oss:20b", "local-think": "gpt-oss:20b", "local-coder": "gpt-oss:20b"}
 KEEP_ALIVE_S = 1800      # the relay asks Ollama to keep a model for 30 minutes
 BUSY_UTIL_PCT = 40       # card utilization that counts as "working"
 SELF_NAME = "lemonpepper"
