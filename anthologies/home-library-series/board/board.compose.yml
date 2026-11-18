@@ -1,0 +1,18 @@
+# Serves the board folder (index.html and status.json) to the home network.
+# Read-only, one port. The collector runs on the host, not in here.
+#
+#   docker compose -f board.compose.yml up -d
+#   docker compose -f board.compose.yml down
+name: whl-board
+
+services:
+  board:
+    image: busybox:1.37
+    container_name: whl-board
+    command: ["httpd", "-f", "-p", "8088", "-h", "/srv"]
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./:/srv:ro
+    read_only: true
+    restart: unless-stopped

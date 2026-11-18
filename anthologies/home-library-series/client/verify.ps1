@@ -46,7 +46,14 @@ function Send-Chat([string]$Url, [string]$Model, [hashtable]$Headers = @{}) {
         model      = $Model
         messages   = @(@{ role = "user"; content = "Reply with one word: ready" })
         max_tokens = 200
-    } | ConvertTo-Json -Depth 5
+    }
+    # Through the relay, label the request so the board and Langfuse can tell
+    # a check from real use.
+    if ($Headers.ContainsKey("Authorization")) {
+        $body.user = "verify"
+        $body.metadata = @{ tags = @("verify") }
+    }
+    $body = $body | ConvertTo-Json -Depth 5
     $sw = [Diagnostics.Stopwatch]::StartNew()
     $r = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -ContentType "application/json" -Body $body -TimeoutSec 180
     $reply = $r.choices[0].message.content

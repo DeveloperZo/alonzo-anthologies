@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home library board</title>
+<style>
+  :root {
+    --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+    --red: #A85B49;   --red-soft: #EDD8CE;
+    --amber: #A28438; --amber-soft: #F0E5CD;
+    --blue: #4F627F;  --blue-soft: #DEE3EC;
+    --green: #5A8270; --green-soft: #DEE8E1;
+    --card: #FFFFFF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+      --red: #D29183;   --red-soft: #3D2925;
+      --amber: #D6B574; --amber-soft: #3B3220;
+      --blue: #94A6C4;  --blue-soft: #2A323F;
+      --green: #92BAA6; --green-soft: #233029;
+      --card: #23262E;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body { font: 14px/1.35 system-ui, "Segoe UI", sans-serif; padding: 10px 12px; font-variant-numeric: tabular-nums; }
+  header { display: flex; align-items: center; gap: 12px; min-height: 38px; margin-bottom: 8px; flex-wrap: wrap; }
+  h1 { font-size: 15px; margin: 0; font-weight: 600; white-space: nowrap; }
+  h2 { font-size: 11px; margin: 0 0 6px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  #badge { font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 4px; border: 2px solid var(--green); color: var(--green); white-space: nowrap; letter-spacing: .04em; }
+  #badge.demo { border: 2px dashed var(--amber); color: var(--amber); }
+  #badge.nodata { border: 2px solid var(--red); color: var(--bg); background: var(--red); }
+  #sentence { font-size: 16px; flex: 1 1 300px; min-width: 0; }
+  #refreshed { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 10px; align-items: start; }
+  .col { display: grid; gap: 10px; min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-width: 0; }
+  body.nodata main { filter: grayscale(1); opacity: .5; }
+
+  .scenewrap { overflow-x: auto; }
+  #scene { display: block; width: 100%; min-width: 620px; height: auto; }
+  #scene text { fill: var(--text); font: 12px system-ui, "Segoe UI", sans-serif; }
+  #scene .small { fill: var(--muted); font-size: 11px; }
+  #scene .title { font-weight: 600; font-size: 13px; }
+  .frame { fill: none; stroke: var(--line); stroke-width: 1.5; }
+  .demo .frame { stroke: var(--amber); stroke-dasharray: 8 6; stroke-width: 2; }
+  .desk { fill: var(--paper); stroke: var(--line); stroke-width: 1.5; }
+  .st rect.box { fill: var(--card); stroke: var(--blue); stroke-width: 1.8; }
+  .st .cross { display: none; stroke: var(--red); stroke-width: 2.5; stroke-linecap: round; }
+  .st .state { fill: var(--muted); font-size: 11px; }
+  .st.down rect.box { stroke: var(--red); stroke-dasharray: 5 4; fill: none; }
+  .st.down .cross { display: inline; }
+  .st.down .state { fill: var(--red); font-weight: 700; }
+  .st.off rect.box { stroke: var(--muted2); stroke-dasharray: 5 4; fill: none; }
+  .st.lit rect.box { stroke-width: 4; }
+  .wire { stroke: var(--muted2); stroke-width: 1.5; fill: none; }
+  .tube { stroke: var(--blue); stroke-width: 1.5; fill: var(--blue-soft); }
+  .cell { fill: none; stroke: var(--muted2); stroke-width: 1; }
+  #tankModel { fill: var(--blue); }
+  #tankModel.coder { fill: var(--amber); }
+  #tankOther { fill: url(#hatch); }
+  #hatch line { stroke: var(--muted); stroke-width: 2; }
+  #cdBar { fill: var(--green); }
+  #cdTrack { fill: var(--line); }
+  #dot circle { stroke-width: 2.5; }
+  #dot text { font-weight: 700; font-size: 11px; text-anchor: middle; }
+  #dot.fast circle { fill: var(--blue); stroke: var(--blue); }
+  #dot.coder circle { fill: var(--amber); stroke: var(--amber); }
+  #dot.fast text, #dot.coder text { fill: var(--bg); }
+  #dot.demo circle { fill: var(--card); stroke: var(--amber); stroke-dasharray: 3 3; }
+  #dot.demo text { fill: var(--amber); }
+  #dot.failed circle { fill: var(--card); stroke: var(--red); }
+  #dot.failed text { fill: var(--red); }
+  #dotTag { font-size: 11px; font-weight: 700; text-anchor: middle; }
+  #rec { fill: var(--green); }
+  #caption { color: var(--muted); font-size: 12px; min-height: 17px; margin-top: 2px; }
+
+  .readout { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+  .tile { border-top: 2px solid var(--line); padding-top: 4px; min-width: 0; }
+  .tile .num { font-size: 28px; font-weight: 600; line-height: 1.1; white-space: nowrap; }
+  .tile .num small { font-size: 13px; font-weight: 400; color: var(--muted); }
+  .tile .cap { font-size: 11.5px; color: var(--muted); }
+
+  #strip { display: block; width: 100%; height: 74px; }
+  #strip .bar { fill: var(--blue); }
+  #strip .fail { fill: var(--red); }
+  #strip .base { stroke: var(--line); stroke-width: 1; }
+  #strip text { fill: var(--muted); font: 10px system-ui, sans-serif; }
+  .striphead { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .striphead span { color: var(--muted); font-size: 12px; }
+
+  .lights { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; }
+  .light { display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .light svg { flex: none; width: 16px; height: 16px; }
+  .light .nm { font-weight: 600; white-space: nowrap; }
+  .light .wd { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .light.down .wd { color: var(--red); font-weight: 700; }
+  .ico-up { fill: var(--green); }
+  .ico-ring { fill: none; stroke: var(--muted); stroke-width: 2; }
+  .ico-down { fill: none; stroke: var(--red); stroke-width: 2; }
+  .ico-x { stroke: var(--red); stroke-width: 2; stroke-linecap: round; }
+  .ico-tick { stroke: var(--card); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  #consequences { color: var(--red); font-size: 12.5px; margin-top: 6px; }
+  #consequences:empty { display: none; }
+  #hostline { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11px; padding: 0 6px 3px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 2px 6px 2px 0; border-bottom: 1px solid var(--line); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }
+  td.r, th.r { text-align: right; padding-right: 0; }
+  td .tag { color: var(--muted); font-size: 11px; }
+  tr.failed td { color: var(--red); }
+  tr.new td { background: var(--green-soft); }
+  #tablenote, #stripnote { color: var(--muted); font-size: 11.5px; margin-top: 4px; }
+  .warn { color: var(--red); }
+
+  button { font: inherit; font-size: 12.5px; color: var(--amber); background: none; border: 2px dashed var(--amber); border-radius: 5px; padding: 3px 10px; cursor: pointer; white-space: nowrap; }
+  button:hover { background: var(--amber-soft); }
+  button:disabled { opacity: .5; cursor: default; }
+  button:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+  @media (max-width: 980px) {
+    main { grid-template-columns: minmax(0, 1fr); }
+    .readout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #sentence { flex-basis: 100%; order: 5; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Home library board</h1>
+  <span id="badge" class="nodata">NO DATA</span>
+  <span id="sentence" role="status" aria-live="polite">Waiting for the first reading.</span>
+  <button id="demoBtn" type="button" title="Plays one invented request through the picture. It is not real and changes no number.">Play a DEMO request (not real)</button>
+  <span id="refreshed"></span>
+</header>
+
+<main>
+  <div class="col">
+    <section class="card" id="sceneCard">
+      <div class="scenewrap">
+      <svg id="scene" viewBox="0 0 880 286" role="img" aria-labelledby="scT scD">
+        <title id="scT">How a request travels</title>
+        <desc id="scD">A request goes from the laptop through a private tunnel to the relay on the desktop, then to Ollama, which runs a model on the 16 GB graphics card. The relay drops a record of each request into the log.</desc>
+        <defs>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6"/></pattern>
+        </defs>
+        <rect class="frame" x="4" y="4" width="872" height="278" rx="10"/>
+        <text class="small" x="16" y="22">Private network (Tailscale). A request never leaves it.</text>
+        <text class="small" id="frameWord" x="864" y="22" text-anchor="end"></text>
+
+        <rect class="desk" x="296" y="32" width="570" height="242" rx="8"/>
+        <text class="small" x="308" y="50">Desktop: lemonpepper</text>
+
+        <!-- tunnel -->
+        <rect class="tube" x="150" y="93" width="170" height="18" rx="9"/>
+        <text class="small" x="235" y="86" text-anchor="middle">private tunnel</text>
+        <!-- wires -->
+        <path class="wire" d="M442 102 H520"/>
+        <path class="wire" d="M382 134 V196" stroke-dasharray="3 4"/>
+        <text class="small" x="390" y="170">one record each</text>
+        <path class="wire" d="M680 134 V160"/>
+
+        <g class="st" id="st-laptop">
+          <rect class="box" x="24" y="70" width="126" height="64" rx="6"/>
+          <text class="title" x="36" y="94">Laptop</text>
+          <text class="small" x="36" y="110">limesalt</text>
+          <text class="state" x="36" y="126"></text>
+          <g class="cross"><line x1="128" y1="78" x2="140" y2="90"/><line x1="140" y1="78" x2="128" y2="90"/></g>
+        </g>
+        <g class="st" id="st-relay">
+          <rect class="box" x="320" y="70" width="122" height="64" rx="6"/>
+          <text class="title" x="332" y="94">Relay</text>
+          <text class="small" x="332" y="110">picks a route</text>
+          <text class="state" x="332" y="126"></text>
+          <g class="cross"><line x1="420" y1="78" x2="432" y2="90"/><line x1="432" y1="78" x2="420" y2="90"/></g>
+        </g>
+        <g class="st" id="st-ollama">
+          <rect class="box" x="520" y="70" width="320" height="64" rx="6"/>
+          <text class="title" x="532" y="94">Ollama (runs the model)</text>
+          <text class="small" id="olModel" x="532" y="110"></text>
+          <text class="state" x="532" y="126"></text>
+          <g class="cross"><line x1="818" y1="78" x2="830" y2="90"/><line x1="830" y1="78" x2="818" y2="90"/></g>
+        </g>
+        <g class="st" id="st-langfuse">
+          <rect class="box" x="320" y="196" width="122" height="62" rx="6"/>
+          <text class="title" x="332" y="219">Log</text>
+          <text class="small" id="logCount" x="332" y="235"></text>
+          <text class="state" x="332" y="250"></text>
+          <g class="cross"><line x1="420" y1="204" x2="432" y2="216"/><line x1="432" y1="204" x2="420" y2="216"/></g>
+        </g>
+
+        <!-- the 16 GB tank -->
+        <text class="small" id="tankHead" x="520" y="156">Graphics card memory, one cell is about 1 GB</text>
+        <g id="tank">
+          <rect id="tankModel" x="520" y="162" width="0" height="34"/>
+          <rect id="tankOther" x="520" y="162" width="0" height="34"/>
+          <g id="cells"></g>
+          <text id="tankLabel" x="526" y="184" style="font-weight:600"></text>
+        </g>
+        <rect id="cdTrack" x="520" y="201" width="320" height="4" rx="2"/>
+        <rect id="cdBar" x="520" y="201" width="0" height="4" rx="2"/>
+        <text id="tankLine1" x="520" y="222"></text>
+        <text class="small" id="tankLine2" x="520" y="238"></text>
+        <text class="small" id="tankLine3" x="520" y="253"></text>
+        <text class="small" id="tankLine4" x="520" y="268"></text>
+
+        <!-- movers -->
+        <circle id="rec" r="5" cx="382" cy="134" visibility="hidden"/>
+        <g id="dot" visibility="hidden"><circle r="10"/><text y="4"></text></g>
+        <text id="dotTag" visibility="hidden"></text>
+      </svg>
+      </div>
+      <div id="caption"></div>
+      <div class="readout">
+        <div class="tile"><div class="num" id="n-req">-</div><div class="cap" id="c-req">requests today</div></div>
+        <div class="tile"><div class="num" id="n-tok">-</div><div class="cap" id="c-tok">tokens handled at home today</div></div>
+        <div class="tile"><div class="num" id="n-tps">-</div><div class="cap" id="c-tps">speed of the last request</div></div>
+        <div class="tile"><div class="num" id="n-mem">-</div><div class="cap" id="c-mem">card memory in use</div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="striphead"><h2>Requests per hour, last 24 hours</h2><span id="stripsum"></span></div>
+      <svg id="strip" viewBox="0 0 600 74" preserveAspectRatio="none" role="img" aria-label="Requests per hour for the last 24 hours"></svg>
+      <div id="stripnote"></div>
+    </section>
+  </div>
+
+  <div class="col">
+    <section class="card">
+      <h2>Services and machines</h2>
+      <div class="lights" id="lights"></div>
+      <div id="consequences"></div>
+      <div id="hostline"></div>
+    </section>
+    <section class="card">
+      <h2>Last ten requests</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Caller</th><th>Route</th><th class="r">Tokens in / out</th><th class="r">Seconds</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div id="tablenote"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+"use strict";
+var POLL_MS = 2000, STALE_MS = 15000;
+var P = { laptop: [87, 102], tunnel: [235, 102], relay: [381, 102], ollama: [680, 102], log: [382, 196] };
+var ROUTE_CLASS = { "local-fast": "fast", "local-coder": "coder" };
+var ROUTE_LETTER = { "local-fast": "F", "local-coder": "C" };
+
+var data = null, recvAt = 0, lastGen = null, lastChangeAt = 0, everLoaded = false;
+var seen = null, freshIds = {}, queue = [], playing = false, mode = "live", demoToken = 0, note = "", noteUntil = 0;
+var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function $(id) { return document.getElementById(id); }
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function serverNow() { return data ? data.generated_epoch * 1000 + (Date.now() - recvAt) : Date.now(); }
+function clock(t) { var d = new Date(t); return isNaN(d) ? "unknown" : d.toLocaleTimeString([], { hour12: false }); }
+function hm(t) { var d = new Date(t); return isNaN(d) ? "unknown" : d.toLocaleTimeString([], { hour12: false, hour: "2-digit", minute: "2-digit" }); }
+function gb(mb) { return (mb / 1024).toFixed(1); }
+function big(n) { n = n || 0; return n >= 1e6 ? (n / 1e6).toFixed(2) + "M" : n >= 1e4 ? (n / 1e3).toFixed(1) + "k" : String(n); }
+function plural(n, w) { return n + " " + w + (n === 1 ? "" : "s"); }
+function span(sec) {
+  sec = Math.max(0, Math.round(sec));
+  if (sec < 90) return plural(sec, "second");
+  if (sec < 5400) return plural(Math.round(sec / 60), "minute");
+  if (sec < 172800) return plural(Math.round(sec / 3600), "hour");
+  return plural(Math.round(sec / 86400), "day");
+}
+function mmss(sec) { sec = Math.max(0, Math.floor(sec)); return Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0"); }
+function src(name) { return (data && data.sources && data.sources[name]) || { ok: false, last_ok: null }; }
+function since(name) { var s = src(name); return s.last_ok ? "since " + hm(s.last_ok) : "and has not answered yet"; }
+function realRows() { return ((data && data.requests && data.requests.recent) || []).filter(function (r) { return !r.probe; }); }
+function loadedModel() { var l = data && data.ollama && data.ollama.loaded; return l && l.length ? l[0] : null; }
+function expiresIn(m) { return m && m.expires_in_s != null ? m.expires_in_s - (Date.now() - recvAt) / 1000 : null; }
+function routeOf(model) {
+  var rs = (data && data.relay && data.relay.routes) || [];
+  for (var i = 0; i < rs.length; i++) if (rs[i].model === model) return rs[i].route;
+  return null;
+}
+function isStale() { return !everLoaded || Date.now() - lastChangeAt > STALE_MS; }
+
+// ------------------------------------------------------------ data
+function onData(d) {
+  data = d; recvAt = Date.now();
+  if (d.generated_at !== lastGen) { lastGen = d.generated_at; lastChangeAt = Date.now(); }
+  everLoaded = true;
+  var rows = realRows();
+  if (seen === null) { seen = {}; rows.forEach(function (r) { seen[r.id] = 1; }); return; }
+  var fresh = rows.filter(function (r) { return !seen[r.id]; }).sort(function (a, b) { return a.end < b.end ? -1 : 1; });
+  fresh.forEach(function (r) { seen[r.id] = 1; freshIds[r.id] = Date.now(); });
+  if (fresh.length) {
+    if (mode === "demo") { demoToken++; note = "A real request arrived. Returned to live."; noteUntil = Date.now() + 6000; }
+    var room = Math.max(0, 4 - queue.length);
+    fresh.slice(-room).forEach(function (r) { queue.push({ real: r, extra: 0 }); });
+    if (fresh.length > room && queue.length) queue[queue.length - 1].extra += fresh.length - room;
+    pump();
+  }
+}
+function tick() {
+  fetch("status.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+    .then(onData).catch(function () {}).then(render);
+}
+
+// ------------------------------------------------------------ the travelling dot
+function wait(ms) { return new Promise(function (ok) { setTimeout(ok, ms); }); }
+function place(el, p) { el.setAttribute("transform", "translate(" + p[0] + "," + p[1] + ")"); }
+function glide(el, a, b, ms) {
+  if (reduce.matches || document.hidden) { place(el, b); return wait(ms); }   // no travel: the dot steps from station to station
+  var t0 = performance.now(), done = false;
+  (function step(t) {
+    if (done) return;
+    var k = Math.min(1, (t - t0) / ms), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+    place(el, [a[0] + (b[0] - a[0]) * e, a[1] + (b[1] - a[1]) * e]);
+    if (k < 1) requestAnimationFrame(step);
+  })(t0);
+  // The timer, not the frame callback, ends the move, so a hidden tab cannot stall the queue.
+  return wait(ms).then(function () { done = true; place(el, b); });
+}
+function lit(id, on) { $("st-" + id).classList.toggle("lit", on); }
+function setCaption(t) { $("caption").textContent = t; }
+
+async function play(job) {
+  var demo = !job.real, r = job.real || { route: "local-fast", caller: "limesalt", status: "ok" };
+  var dot = $("dot"), tag = $("dotTag"), rec = $("rec"), token = demoToken;
+  var gone = function () { return demo && token !== demoToken; };
+  var cls = demo ? "demo" : r.status !== "ok" ? "failed" : (ROUTE_CLASS[r.route] || "fast");
+  dot.setAttribute("class", cls);
+  dot.querySelector("text").textContent = ROUTE_LETTER[r.route] || "?";
+  tag.textContent = demo ? "DEMO" : "";
+  tag.style.fill = "var(--amber)";
+  var follow = function () { var m = /translate\(([-\d.]+),([-\d.]+)\)/.exec(dot.getAttribute("transform") || ""); if (m) { tag.setAttribute("x", m[1]); tag.setAttribute("y", +m[2] - 15); } };
+  var timer = setInterval(follow, 30);
+  var say = function (real, demoText) { if (demo) { demoStep = demoText; render(); } else setCaption(real); };
+  var who = esc(r.caller) === "unnamed" ? "an unnamed caller" : r.caller;
+  var what = "Replay of a real request that finished at " + clock(r.end) + ": " + who + " asked " + r.route + "." + (job.extra ? " Plus " + job.extra + " more not drawn." : "");
+  try {
+    place(dot, P.laptop); follow();
+    dot.setAttribute("visibility", "visible"); tag.setAttribute("visibility", demo ? "visible" : "hidden");
+    lit("laptop", true);
+    say(what, "The laptop sends a question into the private tunnel.");
+    await wait(demo ? 1200 : 300); lit("laptop", false); if (gone()) return;
+    await glide(dot, P.laptop, P.relay, demo ? 1500 : 900); if (gone()) return;
+    lit("relay", true);
+    say(what, "The relay checks the key and picks a route. It passes the question on. It does not think.");
+    if (!demo && r.status !== "ok") { setCaption(what + " It failed."); await wait(1500); return; }
+    if (!demo) {                                   // only a real request drops a record into the log
+      rec.setAttribute("visibility", "visible");
+      glide(rec, [382, 134], P.log, 700).then(function () { rec.setAttribute("visibility", "hidden"); lit("langfuse", true); setTimeout(function () { lit("langfuse", false); }, 600); });
+    }
+    await wait(demo ? 2200 : 600); lit("relay", false); if (gone()) return;
+    await glide(dot, P.relay, P.ollama, demo ? 1200 : 700); if (gone()) return;
+    lit("ollama", true);
+    say(what, "Ollama runs the model on the graphics card and writes the answer.");
+    await wait(demo ? 2200 : 1100); lit("ollama", false); if (gone()) return;
+    say(what, "The answer goes back the same way. A real request would also leave a record in the log.");
+    await glide(dot, P.ollama, P.laptop, demo ? 2000 : 1300); if (gone()) return;
+    lit("laptop", true); await wait(demo ? 1200 : 400);
+  } finally {
+    clearInterval(timer);
+    ["laptop", "relay", "ollama", "langfuse"].forEach(function (s) { lit(s, false); });
+    dot.setAttribute("visibility", "hidden"); tag.setAttribute("visibility", "hidden");
+    if (demo) { mode = "live"; demoStep = ""; }
+    setCaption("");
+  }
+}
+var demoStep = "";
+async function pump() {
+  if (playing) return;
+  playing = true;
+  try {
+    while (queue.length) {
+      var job = queue.shift();
+      if (!job.real) { mode = "demo"; render(); }
+      await play(job);
+      render();
+    }
+  } finally { playing = false; render(); }
+}
+$("demoBtn").addEventListener("click", function () {
+  if (mode === "demo" || playing) return;
+  queue.push({ real: null });
+  pump();
+});
+
+// ------------------------------------------------------------ drawing
+function sentence() {
+  if (!everLoaded) return "The collector has not written a reading yet. Start collector.py on the desktop.";
+  var core = ["relay", "ollama", "langfuse"], svc = (data.services || []);
+  for (var i = 0; i < core.length; i++) {
+    var s = svc.filter(function (x) { return x.id === core[i]; })[0];
+    if (s && !s.up) return s.label + " is not answering " + since(s.source) + ". " + s.down_means;
+  }
+  var m = loadedModel(), ex = expiresIn(m), rows = realRows(), last = rows[0];
+  var route = m ? routeOf(m.name) : null;
+  var age = last ? (serverNow() - new Date(last.end).getTime()) / 1000 : null;
+  if (data.gpu && data.gpu.busy && m && src("gpu").ok)
+    return (route ? route + " (" + m.name + ")" : m.name) + " is answering a request now. The card is at " + Math.round(data.gpu.util_pct) + " percent. The caller is known once it finishes.";
+  if (last && age !== null && age < 90 && last.status === "ok")
+    return last.route + " answered a request from " + (last.caller === "unnamed" ? "an unnamed caller" : last.caller) + " " + span(age) + " ago, in " + last.seconds + " seconds.";
+  if (m) return "Idle. " + m.name + " is loaded and will unload in " + (ex !== null ? span(ex) : "an unknown time") + ".";
+  return "Idle. No model is loaded. The next request waits 6 to 30 seconds while one loads.";
+}
+
+function drawScene() {
+  var m = loadedModel(), g = data.gpu || {}, svc = {};
+  (data.services || []).forEach(function (s) { svc[s.id] = s; });
+  ["relay", "ollama", "langfuse"].forEach(function (id) {
+    var el = $("st-" + id), s = svc[id], up = s && s.up;
+    el.classList.toggle("down", !up);
+    el.querySelector(".state").textContent = up ? "up" : "DOWN " + since(s ? s.source : id);
+  });
+  var lap = (data.machines || []).filter(function (x) { return x.name === "limesalt"; })[0];
+  var lapEl = $("st-laptop"), tsOk = src("tailscale").ok;
+  lapEl.classList.toggle("off", !(tsOk && lap && lap.online));
+  lapEl.querySelector(".state").textContent = !tsOk ? "unknown" : lap && lap.online ? "online" : "offline";
+  $("olModel").textContent = !svc.ollama || !svc.ollama.up ? "" : m ? "loaded: " + m.name + (m.context ? ", context " + m.context : "") : "no model loaded";
+  var t = data.requests && data.requests.today;
+  $("logCount").textContent = t ? plural(t.requests, "record") + " today" : "";
+
+  // tank
+  var total = g.total_mb || 16384, W = 320, ok = src("gpu").ok && g.used_mb != null;
+  var mw = ok && g.model_mb ? Math.min(W, g.model_mb / total * W) : 0;
+  var ow = ok ? Math.min(W - mw, (g.other_mb || 0) / total * W) : 0;
+  var tm = $("tankModel");
+  tm.setAttribute("width", mw.toFixed(1));
+  tm.setAttribute("class", m && routeOf(m.name) === "local-coder" ? "coder" : "");
+  $("tankOther").setAttribute("x", (520 + mw).toFixed(1));
+  $("tankOther").setAttribute("width", ow.toFixed(1));
+  $("tankLabel").textContent = mw > 150 && m ? m.name : "";
+  $("tankLabel").style.fill = "var(--bg)";
+  var ex = expiresIn(m), keep = (data.ollama && data.ollama.keep_alive_s) || 1800;
+  $("cdBar").setAttribute("width", (m && ex !== null ? Math.max(0, Math.min(1, ex / keep)) * W : 0).toFixed(1));
+  if (!ok) {
+    $("tankLine1").textContent = "Card reading unavailable " + since("gpu") + ".";
+    $("tankLine2").textContent = ""; $("tankLine3").textContent = ""; $("tankLine4").textContent = "";
+  } else {
+    var free = Math.max(0, total - g.used_mb);
+    $("tankLine1").textContent = m ? m.name + " " + gb(g.model_mb) + " GB (solid). Unloads in " + (ex !== null ? mmss(ex) : "?") + " if unused."
+                                   : !src("ollama_ps").ok ? "Ollama cannot be read, so the model's share is not known."
+                                   : "No model loaded. The card is free for other use.";
+    $("tankLine2").textContent = "Other use " + gb(g.other_mb || 0) + " GB (striped). Free " + gb(free) + " GB (empty). Card total " + gb(total) + " GB.";
+    var names = (g.others || []).slice(0, 2).map(function (o) { return o.name.replace(/\.exe$/i, ""); });
+    $("tankLine3").textContent = names.length ? "Other use is mostly: " + names.join(", ") + " (a hint only)." : "";
+    $("tankLine4").textContent = "Card now: " + Math.round(g.util_pct) + " percent busy, " + Math.round(g.watts) + " W, " + Math.round(g.temp_c) + " C.";
+  }
+}
+
+function drawReadout() {
+  var rq = data.requests || {}, t = rq.today, g = data.gpu || {}, lfOk = src("langfuse_day").ok;
+  var stale = lfOk ? "" : " (last known, log unreachable " + since("langfuse_day") + ")";
+  $("n-req").textContent = t ? t.requests : "-";
+  $("c-req").textContent = "requests today" + (t && t.failed ? ", plus " + t.failed + " failed" : "") + stale;
+  $("n-tok").textContent = t ? big(t.tokens_in + t.tokens_out) : "-";
+  $("c-tok").textContent = t ? "tokens handled at home today (" + big(t.tokens_in) + " in, " + big(t.tokens_out) + " out)" : "tokens handled at home today";
+  var rows = realRows().filter(function (r) { return r.status === "ok" && r.tps; });
+  var solid = rows.filter(function (r) { return r.tokens_out >= 20; })[0] || rows[0];
+  $("n-tps").innerHTML = solid ? esc(Math.round(solid.tps)) + " <small>tokens/s</small>" : "-";
+  $("c-tps").textContent = solid ? "last answer of 20 tokens or more: " + solid.route + " at " + hm(solid.end) + ", " + solid.tokens_out + " tokens in " + solid.seconds + " s, waiting included"
+                                 : "speed of the last request";
+  if (src("gpu").ok && g.used_mb != null) {
+    $("n-mem").innerHTML = esc(gb(g.used_mb)) + " <small>of " + esc(gb(g.total_mb)) + " GB</small>";
+    $("c-mem").textContent = "card memory in use" + (g.used_mb / g.total_mb > .95 ? ". Nearly full: replies may slow down" : "");
+  } else { $("n-mem").textContent = "-"; $("c-mem").textContent = "card memory: no reading " + since("gpu"); }
+}
+
+var ICON = {
+  up: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle class="ico-up" cx="8" cy="8" r="7"/><path class="ico-tick" d="M4.5 8.2l2.4 2.4 4.6-5"/></svg>',
+  down: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle class="ico-down" cx="8" cy="8" r="6.5"/><line class="ico-x" x1="5" y1="5" x2="11" y2="11"/><line class="ico-x" x1="11" y1="5" x2="5" y2="11"/></svg>',
+  off: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle class="ico-ring" cx="8" cy="8" r="6.5"/></svg>'
+};
+function drawLights() {
+  var html = "", cons = [];
+  (data.services || []).forEach(function (s) {
+    html += '<div class="light ' + (s.up ? "" : "down") + '">' + (s.up ? ICON.up : ICON.down) + '<span class="nm">' + esc(s.label) + '</span><span class="wd">' +
+      (s.up ? "up" : "DOWN " + esc(since(s.source))) + "</span></div>";
+    if (!s.up) cons.push(s.label + " is down: " + s.down_means);
+  });
+  var tsOk = src("tailscale").ok, ms = data.machines || [];
+  ["lemonpepper", "limesalt"].forEach(function (n) {
+    var mch = ms.filter(function (x) { return x.name === n; })[0];
+    var word = !tsOk ? "unknown, Tailscale not read " + since("tailscale") : !mch ? "not on the tailnet" : mch.online ? "online" + (mch.self ? " (this desktop)" : "") : "offline" + (mch.last_seen ? ", seen " + hm(mch.last_seen) : "");
+    html += '<div class="light">' + (tsOk && mch && mch.online ? ICON.up : ICON.off) + '<span class="nm">' + n + '</span><span class="wd">' + esc(word) + "</span></div>";
+  });
+  $("lights").innerHTML = html;
+  $("consequences").textContent = cons.join(" ");
+  var c = data.containers || {}, line = [];
+  if (src("docker").ok && c.total != null) {
+    line.push(c.running + " of " + c.total + " containers running");
+    if (c.unhealthy && c.unhealthy.length) line.push("unhealthy: " + c.unhealthy.join(", "));
+    line.push(c.restarts && c.restarts.length ? "restarts: " + c.restarts.map(function (r) { return r.name + " " + r.count; }).join(", ") : "no restarts");
+  } else line.push("Docker not read " + since("docker"));
+  if (data.host && data.host.uptime_s != null) line.push("desktop up " + span(data.host.uptime_s));
+  $("hostline").textContent = line.join(". ") + ".";
+}
+
+function drawStrip() {
+  var h = (data.requests && data.requests.hourly) || [], svg = "", W = 600, H = 74, base = 58, bw = W / 24;
+  var max = Math.max.apply(null, h.map(function (x) { return x.count + x.failed; }).concat([1]));
+  var sum = 0;
+  svg += '<line class="base" x1="0" y1="' + base + '" x2="' + W + '" y2="' + base + '"/>';
+  h.forEach(function (x, i) {
+    sum += x.count;
+    var ch = x.count / max * 46, fh = x.failed / max * 46, bx = i * bw + 2;
+    var tip = "<title>" + hm(x.hour) + ": " + plural(x.count, "request") + ", " + big(x.tokens) + " tokens" + (x.failed ? ", " + x.failed + " failed" : "") + "</title>";
+    if (x.count) svg += '<rect class="bar" x="' + bx + '" y="' + (base - ch) + '" width="' + (bw - 4) + '" height="' + ch + '">' + tip + "</rect>";
+    if (x.failed) svg += '<rect class="fail" x="' + bx + '" y="' + (base - ch - fh) + '" width="' + (bw - 4) + '" height="' + fh + '">' + tip + "</rect>";
+    if (x.count) svg += '<text x="' + (bx + (bw - 4) / 2) + '" y="' + (base - ch - fh - 2) + '" text-anchor="middle">' + x.count + "</text>";
+    if (i % 3 === 0) svg += '<text x="' + bx + '" y="' + (H - 4) + '">' + hm(x.hour) + "</text>";
+  });
+  $("strip").innerHTML = svg;
+  $("stripsum").textContent = h.length ? plural(sum, "request") + " in 24 hours" : "";
+  var rq = data.requests || {}, bits = [];
+  if (!h.length) bits.push("No hourly data yet.");
+  if (rq.probes_24h) bits.push(rq.probes_24h + " probe records left out (key checks, health checks, the verify script).");
+  if (rq.truncated) bits.push("The day was too busy to count in full. Counts are a lower bound.");
+  if (!src("langfuse_day").ok) bits.push("Log unreachable " + since("langfuse_day") + ". Showing the last known counts.");
+  $("stripnote").textContent = bits.join(" ");
+}
+
+function drawTable() {
+  var rows = realRows().slice(0, 10), html = "", now = Date.now();
+  rows.forEach(function (r) {
+    var tags = (r.tags || []).filter(function (t) { return t !== "ask-local" && t !== "untagged"; }).join(", ");
+    var fresh = freshIds[r.id] && now - freshIds[r.id] < 20000;
+    html += '<tr class="' + (r.status !== "ok" ? "failed " : "") + (fresh ? "new" : "") + '"><td>' + esc(clock(r.end)) + "</td><td title=\"" + esc((r.tags || []).join(", ")) + '">' +
+      esc(r.caller) + (tags ? ' <span class="tag">' + esc(tags) + "</span>" : "") + "</td><td title=\"" + esc(r.model) + '">' + esc(r.route) + (r.status !== "ok" ? " (" + esc(r.status) + ")" : "") +
+      '</td><td class="r">' + esc(r.tokens_in == null ? "-" : r.tokens_in) + " / " + esc(r.tokens_out == null ? "-" : r.tokens_out) + '</td><td class="r">' + esc(r.seconds == null ? "-" : r.seconds.toFixed(1)) + "</td></tr>";
+  });
+  if (!rows.length) html = '<tr><td colspan="5">No real requests in the recent records.</td></tr>';
+  $("rows").innerHTML = html;
+  var ok = src("langfuse_recent").ok;
+  $("tablenote").innerHTML = (ok ? "" : '<span class="warn">Log unreachable ' + esc(since("langfuse_recent")) + ". Showing the last known rows.</span> ") +
+    "A row appears a few seconds after the reply ends. No prompt or reply text is shown or stored here.";
+}
+
+function render() {
+  var stale = isStale(), b = $("badge");
+  document.body.classList.toggle("nodata", stale);
+  $("sceneCard").classList.toggle("demo", mode === "demo");
+  $("frameWord").textContent = mode === "demo" ? "DEMO: this dot is invented" : "";
+  $("demoBtn").disabled = mode === "demo" || playing || stale;
+  if (stale) {
+    b.className = "nodata";
+    b.textContent = everLoaded ? "NO DATA since " + clock(lastGen) : "NO DATA";
+    $("sentence").textContent = everLoaded ? "The board has had no new reading since " + clock(lastGen) + ". Everything below is the last known state, not the current one. Check that collector.py is running on the desktop."
+                                           : sentence();
+  } else if (mode === "demo") {
+    b.className = "demo"; b.textContent = "DEMO: not real activity";
+    $("sentence").textContent = "Demo, not real: " + demoStep;
+  } else {
+    b.className = ""; b.textContent = "● LIVE";
+    $("sentence").textContent = Date.now() < noteUntil ? note + " " + sentence() : sentence();
+  }
+  $("refreshed").textContent = everLoaded ? "reading from " + clock(lastGen) : "";
+  if (!data) return;
+  drawScene(); drawReadout(); drawLights(); drawStrip(); drawTable();
+  if (!playing && !$("caption").textContent) setCaption("A dot is drawn a few seconds after a real request finishes. F is local-fast, C is local-coder. Travel time is not to scale.");
+}
+
+(function init() {
+  var cells = "";
+  for (var i = 0; i < 16; i++) cells += '<rect class="cell" x="' + (520 + i * 20) + '" y="162" width="20" height="34"/>';
+  $("cells").innerHTML = cells;
+  tick();
+  setInterval(tick, POLL_MS);
+  setInterval(function () { if (everLoaded) render(); }, 1000);
+})();
+</script>
+</body>
+</html>
