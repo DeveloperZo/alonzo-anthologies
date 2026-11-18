@@ -5,7 +5,7 @@
 - **Primary audience takeaway:** One push to GitHub is the whole deploy: Cloudflare builds it and publishes `main` to production and every other branch to a public preview, while the old `zo-garden` project builds the same push and serves a duplicate on a second hostname.
 
 ## What The Diagram Shows
-The live path runs left to right across the top. The owner pushes a branch from the local clone to GitHub, the only code host. Cloudflare's GitHub App tells the Cloudflare Pages project `alonzo-anthologies` to build. The project runs `bash ./build.sh` with `NODE_VERSION` 22.16.0 and publishes the `site/public` folder, which `wrangler.toml` names. A push to `main` lands on production at `alonzo-anthologies.pages.dev` (today deployment `c7455b17` of commit c6dadfe); a push to any other branch lands on its own preview URL, which is public. The Cloudflare API token sits in the gitignored `_ENV/` folder on the owner's machine and is used only to read project settings and deployments. Across the bottom, drawn dashed, are the leftovers: the archived GitLab project, connected to nothing live, and the Pages project `zo-garden`, which the same GitHub push also builds, so `zo-garden.pages.dev` serves a duplicate of production.
+The live path runs left to right across the top. The owner pushes a branch from the local clone to GitHub, the only code host. Cloudflare's GitHub App tells the Cloudflare Pages project `alonzo-anthologies` to build. The project runs `bash ./build.sh` with `NODE_VERSION` 22.16.0 and publishes the `anthologies/website-series/site/public` folder, which `wrangler.toml` names. A push to `main` lands on production at `alonzo-anthologies.pages.dev` (today deployment `c7455b17` of commit c6dadfe); a push to any other branch lands on its own preview URL, which is public. The Cloudflare API token sits in the gitignored `_ENV/` folder on the owner's machine and is used only to read project settings and deployments. Across the bottom, drawn dashed, are the leftovers: the archived GitLab project, connected to nothing live, and the Pages project `zo-garden`, which the same GitHub push also builds, so `zo-garden.pages.dev` serves a duplicate of production.
 
 ## Elements And Flow
 - **Components:**
@@ -22,7 +22,7 @@ The live path runs left to right across the top. The owner pushes a branch from 
   - The dashed gray arrow labeled "same push" runs from GitHub to `zo-garden`, then on to its hostname; the archived GitLab box has no arrows
   - Two dashed outlines group what lives on the owner's machine and what lives in the Cloudflare account
 - **Notable labels or metrics:**
-  - "output dir: site/public (wrangler.toml)"
+  - "output dir: anthologies/website-series/site/public (wrangler.toml)"
   - "c7455b17 · c6dadfe · 2026-10-14" on production
   - "dashboard says garden/public (ignored)" on `zo-garden`
   - "duplicate of production (dc4746b5)" and "redirect planned (ST-004)" on `zo-garden.pages.dev`

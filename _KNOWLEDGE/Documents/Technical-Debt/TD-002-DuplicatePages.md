@@ -39,12 +39,12 @@ that repo (same repo id), so it started building the current code too.
 
 Open. Re-verified 2026-10-14, late evening, read-only:
 
-- Cloudflare API: both projects have source `github`, owner `DeveloperZo`, repo id 1229275646. `zo-garden` still records the old repo name `Zo-Garden-eCafe`, `deployments_enabled` true, previews `all`, output `garden/public`, `NODE_VERSION=22`, 24 deployments; the latest is `dc4746b5`, production, `github:push`, c6dadfe, success. `alonzo-anthologies` has output `site/public` and one deployment, `c7455b17` (c6dadfe).
+- Cloudflare API: both projects have source `github`, owner `DeveloperZo`, repo id 1229275646. `zo-garden` still records the old repo name `Zo-Garden-eCafe`, `deployments_enabled` true, previews `all`, output `garden/public`, `NODE_VERSION=22`, 24 deployments; the latest is `dc4746b5`, production, `github:push`, c6dadfe, success. `alonzo-anthologies` has output `anthologies/website-series/site/public` and one deployment, `c7455b17` (c6dadfe).
 - Public GitHub API: c6dadfe carries two Cloudflare check runs, one for `alonzo-anthologies` (`c7455b17`) and one for `zo-garden` (`dc4746b5`), both `success`.
 - `curl`: on both hostnames `/`, `/resume/` and `/ai-governance/` return 200, `og:site_name` is "Alonzo's Anthologies", and each sitemap lists only `alonzo-anthologies.pages.dev` (the `baseUrl`).
 
 ## Changelog
 
 - 2026-10-14 (late evening): GitHub became the home again and `zo-garden`, still wired to the same (renamed) repo, built c6dadfe (`dc4746b5`) despite its `garden/public` setting. Impact restated: a duplicate of the current site, built on every push, not a stale copy that would fail. Acceptance criterion about GitHub pushes restated for the same-repo case. Verified with Cloudflare API GETs, the public GitHub API and `curl`.
-- 2026-10-14: Updated after the garden/ to site/ cutover. The two hostnames no longer serve the same build: `zo-garden` is now a stale copy with an output directory that would fail its next build. Remediation set to ST-004 with the owner's redirect decision; acceptance criteria tightened to a 301.
+- 2026-10-14: Updated after the garden/ to anthologies/website-series/site/ cutover. The two hostnames no longer serve the same build: `zo-garden` is now a stale copy with an output directory that would fail its next build. Remediation set to ST-004 with the owner's redirect decision; acceptance criteria tightened to a 301.
 - 2026-10-14: Merged two items written independently the same day (TD-002 Legacy Pages from the source-control audit, TD-005 Duplicate Pages project from the hosting audit). The Cloudflare API evidence settled what the first left unverified. The backup-remote naming point moved to [TD-001](./completed/TD-001-LegacyGitHub.md).

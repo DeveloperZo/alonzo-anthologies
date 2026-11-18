@@ -4,13 +4,13 @@
     {
       "name": "resume-spa",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["start", "--prefix", "resumeContent"],
+      "runtimeArgs": ["start", "--prefix", "anthologies/resume-series/resumeContent"],
       "port": 3000
     },
     {
       "name": "site",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": ["/c", "cd site && npx quartz build --serve --port 8080"],
+      "runtimeArgs": ["/c", "cd anthologies\\website-series\\site && npx quartz build --serve --port 8080"],
       "port": 8080,
       "autoPort": false
     }

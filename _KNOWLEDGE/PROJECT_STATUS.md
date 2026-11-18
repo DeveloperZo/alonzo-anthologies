@@ -21,14 +21,14 @@ Last updated: 2026-10-14
 
 ## Recent changes
 
-- 2026-05-04: Repo seeded; Quartz 4 site scaffolded under `site/`; doc taxonomy adopted from the Serennovas pattern (core categories: ARCH, M/RM, OPER, TD, ROADMAP).
-- 2026-05-04: The standalone `resume-content` React app subsumed into `resumeContent/`; its standalone `.git` was removed.
+- 2026-05-04: Repo seeded; Quartz 4 site scaffolded under `anthologies/website-series/site/`; doc taxonomy adopted from the Serennovas pattern (core categories: ARCH, M/RM, OPER, TD, ROADMAP).
+- 2026-05-04: The standalone `resume-content` React app subsumed into `anthologies/resume-series/resumeContent/`; its standalone `.git` was removed.
 - 2026-05-04: Monorepo `git init`'d on `main`; first commit captures the Quartz scaffold and content taxonomy.
 - 2026-05-04: Quartz configured: `pageTitle` set (now "Alonzo's Anthologies"), analytics disabled, footer link set.
 - 2026-05-05: ST-001 closed: `baseUrl` → `alonzo-anthologies.pages.dev`, footer → monorepo URL, combined `build.sh` restored; see [`completed ST-001`](./Stories/completed/ST-001-QuartzGoLive.md).
 - 2026-05-04: First canonical artifacts seeded: [`ARCH-001`](./Architecture/ARCH-001-PlatformOverview.md), ST-001 (now [`closed`](./Stories/completed/ST-001-QuartzGoLive.md)), and the first three outcomes on [`ROADMAP`](./Stories/ROADMAP.md).
-- 2026-05-04: Host decided (**Cloudflare Pages**); `resume-content` mounted at `/resume`; combined `build.sh` produces `site/public/` with both apps. Runbook: [`OPER-001`](./Documents/Operations/OPER-001-CloudflareDeploy.md). Workspace tooling deferred per `ARCH-001`.
-- 2026-10-14 (evening): Rebrand to Alonzo's Anthologies and `garden/` to `site/` rename shipped (commits 445ece0, c6dadfe) from GitLab, which was briefly the only code host. Superseded later the same night, see the next entry.
+- 2026-05-04: Host decided (**Cloudflare Pages**); `resume-content` mounted at `/resume`; combined `build.sh` produces `anthologies/website-series/site/public/` with both apps. Runbook: [`OPER-001`](./Documents/Operations/OPER-001-CloudflareDeploy.md). Workspace tooling deferred per `ARCH-001`.
+- 2026-10-14 (evening): Rebrand to Alonzo's Anthologies and `garden/` to `anthologies/website-series/site/` rename shipped (commits 445ece0, c6dadfe) from GitLab, which was briefly the only code host. Superseded later the same night, see the next entry.
 - 2026-10-14 (late evening): **GitHub is the only code host.** Owner decision: there was no specific reason for the GitLab move, and GitHub suits Claude Code and the job search. The GitHub repo was renamed `Zo-Garden-eCafe` to [`DeveloperZo/alonzo-anthologies`](https://github.com/DeveloperZo/alonzo-anthologies) (public, same repo id, old URL redirects); local `origin` is GitHub. The GitLab project is archived. The local `gitlab` remote was removed on 2026-10-15. The Cloudflare Pages project `alonzo-anthologies` was deleted and recreated from GitHub with the same settings; production `c7455b17` (c6dadfe) went live at 23:48 local after about 3 minutes down. Re-verified the same night: `/`, `/resume/`, `/ai-governance/` return 200, site name "Alonzo's Anthologies", sitemap on `alonzo-anthologies.pages.dev`. The legacy `zo-garden` project, connected to the same repo, also built c6dadfe and now serves a duplicate of the site. Logged in [`Operations/log.md`](./Documents/Operations/log.md); architecture in [`ARCH-002`](./Architecture/ARCH-002-SourceControl.md) and [`ARCH-003`](./Architecture/ARCH-003-Hosting.md).
 
 ## Up next
@@ -37,5 +37,5 @@ Last updated: 2026-10-14
 - Retire the duplicate `zo-garden.pages.dev` ([`ST-004`](./Stories/ST-004-OneHostname.md)).
 - Add GitHub Actions CI and protect `main` ([`ST-007`](./Stories/ST-007-GitHubCi.md)).
 - Delete stray local branches ([`ST-005`](./Stories/ST-005-RetireGitLab.md)). The `gitlab` remote is already gone. Narrow the Cloudflare token ([`ST-006`](./Stories/ST-006-ScopedToken.md)).
-- The site footer in `site/quartz.layout.ts` points at GitHub. The live site picks that up on the next push of `main`.
+- The site footer in `anthologies/website-series/site/quartz.layout.ts` points at GitHub. The live site picks that up on the next push of `main`.
 - Optionally retire or redirect the old standalone resume deploy when convenient.

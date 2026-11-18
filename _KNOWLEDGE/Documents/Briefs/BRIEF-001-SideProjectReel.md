@@ -4,7 +4,7 @@ Authored in Cowork, for execution in Claude Code. Written 2026-08-25.
 
 ## Goal
 
-Replace quests 8 and 9 in `resumeContent/src/data/quests.data.tsx` with a
+Replace quests 8 and 9 in `anthologies/resume-series/resumeContent/src/data/quests.data.tsx` with a
 highlight reel of real side projects, each entry grounded in evidence
 pulled from commit history.
 

@@ -80,7 +80,7 @@ There are also four hooks, not three, and two lines that are false or close to i
 | Vol. II · unreleased · Director, still hands-on | PLOT (ending) | Edit 14 |
 | Liner note quote | IDENTITY (brand thesis) | Edit 17 |
 | "Recorded between systems thinking, space games and thunderstorms." | FILLER (names identity, shows nothing) | Edit 18 |
-| "Full sessions: alonzo-anthologies.pages.dev/resume" | Structure, good j-card wording | Keep (host confirmed in site/quartz.config.ts) |
+| "Full sessions: alonzo-anthologies.pages.dev/resume" | Structure, good j-card wording | Keep (host confirmed in anthologies/website-series/site/quartz.config.ts) |
 | [EMAIL] · [LINKEDIN] | Structure | Keep |
 
 ## Fact check
@@ -109,7 +109,7 @@ There are also four hooks, not three, and two lines that are false or close to i
 | "two years after I left" | Lendr ended 2020-02-01; quest 11 started 2022-03-01; career-as-system-v1.md: "engage him for a hedge-fund consult two years later" | Supported (about 25 months). Cut anyway for the number count. Note quest 11 is excluded from the printed resume, so Zo must be ready to tell it unprompted. |
 | "Director content", "Director" in Vol. II | Target role, Phase 0 | Fine as target. "Director content" reads like a held title; resume-spa.md: "Do not put Director or VP on the resume." Edit 15. |
 | Brand line | Phase 0 brand line | Drifts slightly ("once I'm in the room"). Edit 17. |
-| Site URL | site/quartz.config.ts: baseUrl "alonzo-anthologies.pages.dev"; ARCH-003 lists /resume/ | Supported |
+| Site URL | anthologies/website-series/site/quartz.config.ts: baseUrl "alonzo-anthologies.pages.dev"; ARCH-003 lists /resume/ | Supported |
 | Seven teams, HIPAA vendor evaluations | Still open, do not print | Not present. Pass. |
 
 ## Hooks under a skeptical hiring manager

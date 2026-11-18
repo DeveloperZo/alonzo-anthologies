@@ -5,7 +5,7 @@ Purpose: Record that the resume's Download PDF produces image-only pages with no
 Status: open
 Owner: zo
 Human id: raster-pdf
-Update trigger: when resumeContent/src/utils/pdfGenerator.ts changes, or ST-008 starts or ships
+Update trigger: when anthologies/resume-series/resumeContent/src/utils/pdfGenerator.ts changes, or ST-008 starts or ships
 Last updated: 2026-10-14
 -->
 
@@ -31,7 +31,7 @@ LinkedIn address in the header is plain text on screen too, not a link
 
 ## Root cause
 
-`resumeContent/src/utils/pdfGenerator.ts` paints `.resume-container`
+`anthologies/resume-series/resumeContent/src/utils/pdfGenerator.ts` paints `.resume-container`
 with `html2canvas`, slices the canvas into A4-height strips and adds each
 strip with `pdf.addImage(..., 'JPEG', ...)` (lines 76 to 80). This was
 chosen for WYSIWYG fidelity: the PDF matches the screen layout and fonts

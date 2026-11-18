@@ -11,24 +11,24 @@ Last updated: 2026-10-14
 
 ## Current impact
 
-`StageResumeSpa` (`site/quartz/plugins/emitters/stageResumeSpa.ts`) logs
+`StageResumeSpa` (`anthologies/website-series/site/quartz/plugins/emitters/stageResumeSpa.ts`) logs
 a yellow warning and returns, leaving the Quartz build at exit 0, when:
 
-- `resumeContent/package.json` is missing (lines 45 to 52), or
-- `resumeContent/build/index.html` is missing after the build step
+- `anthologies/resume-series/resumeContent/package.json` is missing (lines 45 to 52), or
+- `anthologies/resume-series/resumeContent/build/index.html` is missing after the build step
   (lines 58 to 68).
 
 `build.sh` also skips the resume install with a message when
-`resumeContent/package.json` is missing (lines 8 to 13). In either case
+`anthologies/resume-series/resumeContent/package.json` is missing (lines 8 to 13). In either case
 Cloudflare would deploy a site with no `/resume`, while the home page
 and `interactive-resume.md` still link to it, so the links 404.
 
 Separately, `QUARTZ_SKIP_RESUME_BUILD=1` and `--serve` partial rebuilds
-copy whatever `resumeContent/build/` holds, which can be older than
+copy whatever `anthologies/resume-series/resumeContent/build/` holds, which can be older than
 `src/`.
 
 A failed `npm run build` does throw (lines 27 to 31), and Quartz prints
-the error and exits 1 (`site/quartz/util/trace.ts`), so that path is
+the error and exits 1 (`anthologies/website-series/site/quartz/util/trace.ts`), so that path is
 fine.
 
 ## Root cause
@@ -44,15 +44,15 @@ and `/resume` was not staged; keep the warning for local runs.
 
 ## Acceptance criteria
 
-- With `resumeContent/` absent and `CF_PAGES=1`, `bash ./build.sh` exits
+- With `anthologies/resume-series/resumeContent/` absent and `CF_PAGES=1`, `bash ./build.sh` exits
   non-zero with a message naming `/resume`.
-- With `resumeContent/` absent locally and no CI variables, the build
+- With `anthologies/resume-series/resumeContent/` absent locally and no CI variables, the build
   still succeeds with the warning.
 
 ## Evidence and status
 
 - Behaviour read from source on 2026-10-14 and re-checked at HEAD c6dadfe
-  (line numbers unchanged); not reproduced by removing `resumeContent/`.
+  (line numbers unchanged); not reproduced by removing `anthologies/resume-series/resumeContent/`.
 - The normal path works: Cloudflare deploy `c7455b17` (2026-10-14) serves
   `/resume/` with status 200, so the skip did not fire there.
 - Whether Cloudflare sets `CF_PAGES` in this project's build is unverified.

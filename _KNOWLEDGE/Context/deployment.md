@@ -28,11 +28,11 @@ that session can reach. Push to GitHub (`origin`). This clone has no
 ## Rebrand to one name (2026-10-14)
 
 The old site brand was dropped. Everything is now Alonzo's Anthologies,
-and the Quartz folder moved from its old name to `site/`. The repo was
+and the Quartz folder moved from its old name to `anthologies/website-series/site/`. The repo was
 updated to the new names in the same change. Status of the things that
 live outside the repo:
 
-- Done: the Pages project `alonzo-anthologies` builds from `site/public`.
+- Done: the Pages project `alonzo-anthologies` builds from `anthologies/website-series/site/public`.
   It was recreated from GitHub on the night of 2026-10-14 and serves
   c6dadfe (deployment `c7455b17`).
 - Open: retire the old `zo-garden` Pages project (TD-002, ST-004). It is
@@ -53,10 +53,10 @@ In the repo:
 
 | File | What it provides |
 | --- | --- |
-| `wrangler.toml` | `pages_build_output_dir = "site/public"`. A Git-connected build takes the output folder from here, not from the dashboard (shown by `zo-garden` on 2026-10-14) |
-| `build.sh` | Installs `resumeContent/` deps, then `npx quartz build` |
-| `site/quartz.config.ts` | `baseUrl` (`alonzo-anthologies.pages.dev`) |
-| `site/.node-version` | v22.16.0 |
+| `wrangler.toml` | `pages_build_output_dir = "anthologies/website-series/site/public"`. A Git-connected build takes the output folder from here, not from the dashboard (shown by `zo-garden` on 2026-10-14) |
+| `build.sh` | Installs `anthologies/resume-series/resumeContent/` deps, then `npx quartz build` |
+| `anthologies/website-series/site/quartz.config.ts` | `baseUrl` (`alonzo-anthologies.pages.dev`) |
+| `anthologies/website-series/site/.node-version` | v22.16.0 |
 
 Dashboard settings, as recreated on 2026-10-14 (Cloudflare, then Workers
 and Pages, then Create, then Pages, then Connect to Git, then the GitHub
@@ -64,7 +64,10 @@ repo `DeveloperZo/alonzo-anthologies`):
 
 - Production branch: `main`
 - Build command: `bash ./build.sh`
-- Build output directory: `site/public`
+- Build output directory: `site/public` (stale since the 2026-11-17 move
+  to `anthologies/website-series/site/public`; `wrangler.toml` carries the
+  new path and wins for a Git-connected build, so update the dashboard
+  field only for tidiness)
 - Root directory: `/`
 - Environment variable: `NODE_VERSION = 22.16.0` (Production and Preview)
 - Preview deployments: all branches
@@ -83,7 +86,7 @@ npx wrangler pages deploy
 Still worth deciding:
 
 - If a custom domain is coming, change `baseUrl` in
-  `site/quartz.config.ts` first, so RSS and Open Graph links are correct.
+  `anthologies/website-series/site/quartz.config.ts` first, so RSS and Open Graph links are correct.
 - Whatever is on `main` is public. Pages marked `draft: true` (the
   `RATIONALE-*` files today) are left out of every build.
 

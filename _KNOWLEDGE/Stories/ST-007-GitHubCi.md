@@ -27,7 +27,7 @@ Nothing checks a change before it reaches the main branch, and nothing stops a d
 
 - **AC-1** Given a pull request against `main`, when it is opened, then a GitHub Actions run executes a build job (`bash ./build.sh`) and a secret scan job, both visible as checks on the pull request.
 - **AC-2** A throwaway pull request that plants a fake token pattern (for example a string shaped like `ghp_` plus 36 characters) fails the secret scan job. The pull request is closed unmerged and its branch deleted.
-- **AC-3** A throwaway pull request that breaks the build (for example a syntax error in `site/quartz.config.ts`) fails the build job. Closed unmerged.
+- **AC-3** A throwaway pull request that breaks the build (for example a syntax error in `anthologies/website-series/site/quartz.config.ts`) fails the build job. Closed unmerged.
 - **AC-4** A run on `main` at the HEAD after merge passes. Checked with `gh run list --branch main` or `gh api repos/DeveloperZo/alonzo-anthologies/actions/runs?branch=main`.
 - **AC-5** `main` is protected and requires both jobs: `gh api repos/DeveloperZo/alonzo-anthologies/branches/main/protection` lists them under `required_status_checks`, and force pushes and deletion are disallowed. The unauthenticated `curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/branches/main` shows `"protected": true`.
 - **AC-6** The workflow does not deploy and holds no Cloudflare token: no `wrangler` call in `.github/workflows/`, and `gh secret list` shows no Cloudflare secret. Production still deploys through the Git integration: the merge produces a `Cloudflare Pages: alonzo-anthologies` check run with `success`, and `https://alonzo-anthologies.pages.dev/` returns 200.
@@ -37,7 +37,7 @@ Nothing checks a change before it reaches the main branch, and nothing stops a d
 
 - A root `.github/workflows/ci.yml` (the name is a suggestion) with two jobs: `build` (`actions/setup-node` with Node 22.16.0, matching the Pages `NODE_VERSION`, then `bash ./build.sh`) and a secret scan (for example the gitleaks action, or GitHub's own secret scanning if it covers the need; decide in the pull request and record it).
 - Triggers: `pull_request` against `main` and `push` to `main`.
-- npm cache for `site/` and `resumeContent/` keyed on their lockfiles, if the first run is slow.
+- npm cache for `anthologies/website-series/site/` and `anthologies/resume-series/resumeContent/` keyed on their lockfiles, if the first run is slow.
 - Branch protection (or a ruleset) on `main`: require both checks, block force pushes and deletion.
 
 ## Out of scope
@@ -58,7 +58,7 @@ Nothing checks a change before it reaches the main branch, and nothing stops a d
 
 - Verified 2026-10-14, late evening: no `.github/` at the repo root (`ls`), and the GitHub Actions API lists 0 workflows (`curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/actions/workflows`, public repo, no auth).
 - Verified 2026-10-14: `main` is not protected (`curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/branches/main` returns `"protected": false`). The detailed protection endpoint needs auth and was not called.
-- Verified 2026-10-14 by `git ls-files`: the vendored Quartz workflows under `site/.github/` are gone (deleted in c6dadfe). GitHub only runs workflows from the root `.github/workflows/`, so nothing runs today.
+- Verified 2026-10-14 by `git ls-files`: the vendored Quartz workflows under `anthologies/website-series/site/.github/` are gone (deleted in c6dadfe). GitHub only runs workflows from the root `.github/workflows/`, so nothing runs today.
 - The only checks on c6dadfe are the two Cloudflare Pages check runs (public check-runs API).
 - GitHub Actions sets `CI=true`. Create React App treats lint warnings as errors when `CI=true`, so the resume build may fail in CI where it passes locally. ARCH-005 records no lint warnings on 2026-10-14; the first run confirms it.
 

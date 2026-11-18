@@ -70,7 +70,7 @@ per meaningful change: `- YYYY-MM-DD: what changed and why`.
 | A decision about system shape | `Architecture/` |
 | A runbook, debt item, brief or script | `Documents/` |
 | A diagram that supports a knowledge doc | `Diagrams/` |
-| Writing meant for the public | `site/content/`, not here |
+| Writing meant for the public | `anthologies/website-series/site/content/`, not here |
 
 ## Changelog
 

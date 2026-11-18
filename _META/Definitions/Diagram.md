@@ -24,7 +24,7 @@ not here.
 | The Diagram supports... | It lives in |
 | --- | --- |
 | A Story, Architecture doc or Document | `_KNOWLEDGE/Diagrams/` |
-| A published site page | A `diagrams/` folder beside that page under `site/content/`, because Quartz only serves `content/` |
+| A published site page | A `diagrams/` folder beside that page under `anthologies/website-series/site/content/`, because Quartz only serves `content/` |
 
 The `DIA` number space is shared across both places. Check both before
 picking a number.

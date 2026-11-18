@@ -29,7 +29,7 @@ The durable goals the Stories serve. Edit when a goal is reached, retired, or ad
 | ID | Title | Owner | State |
 |---|---|---|---|
 | [ST-005](./ST-005-RetireGitLab.md) | GitHub is the only code home | zo | Active since 2026-10-14. GitLab archived, `origin` is GitHub, Cloudflare builds only from GitHub. The local `gitlab` remote was removed 2026-10-15. Next: delete merged local branches, record whether to delete the archived GitLab project. |
-| [ST-002](./ST-002-ContentSeeds.md) | First content seeds live | zo | Active since 2026-05-04 and stale. Met in substance but never closed: project docs are out of `site/content/`, and `/resume/` and `/ai-governance/` are live (200 on 2026-10-14). The Thinking in Systems seed it names was deleted on 2026-05-05 (91c5e5b) and the AI governance series took its place. Next: closure review (strike or replace that criterion, add evidence, move to `completed/`). |
+| [ST-002](./ST-002-ContentSeeds.md) | First content seeds live | zo | Active since 2026-05-04 and stale. Met in substance but never closed: project docs are out of `anthologies/website-series/site/content/`, and `/resume/` and `/ai-governance/` are live (200 on 2026-10-14). The Thinking in Systems seed it names was deleted on 2026-05-05 (91c5e5b) and the AI governance series took its place. Next: closure review (strike or replace that criterion, add evidence, move to `completed/`). |
 
 ## Next
 
@@ -67,7 +67,7 @@ Ordered by risk, highest first.
 | A production build deploys without `/resume`, and the resume links 404 | [TD-007](../Documents/Technical-Debt/TD-007-SilentResumeSkip.md) | ST-009 |
 | A broken build or a committed key is only found after it is on public `main`, which has no branch protection | [TD-003](../Documents/Technical-Debt/TD-003-NoCi.md) | ST-007 |
 | Recruiters' tools cannot read the resume PDF | [TD-005](../Documents/Technical-Debt/TD-005-RasterPdf.md) | ST-008 |
-| A Quartz refresh overwrites the local patches and breaks `/resume` or the build | [TD-006](../Documents/Technical-Debt/TD-006-QuartzPatches.md) | ST-010; until then, do not run `site/setup-quartz.ps1` |
+| A Quartz refresh overwrites the local patches and breaks `/resume` or the build | [TD-006](../Documents/Technical-Debt/TD-006-QuartzPatches.md) | ST-010; until then, do not run `anthologies/website-series/site/setup-quartz.ps1` |
 
 ## Review cadence
 

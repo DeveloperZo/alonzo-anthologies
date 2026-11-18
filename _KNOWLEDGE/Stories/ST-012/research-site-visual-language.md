@@ -6,18 +6,18 @@ Scope: how the "What's Being Built" heading on the Quartz site is styled, what o
 
 ### Short answer
 
-There is no image, SVG pattern, mask, or `background-clip: text` anywhere in the site styles (searched `site/quartz/styles`, `site/quartz/components`, `quartz.config.ts`, `quartz.layout.ts`). The engraved, stippled, chalky look comes entirely from the typeface: **Fredericka the Great** (Google Font, single weight 400). Its glyphs are drawn as Victorian engraved letters with hatched, hand-sketched inner strokes and open counters, so a flat solid `color` already reads as a textured fill. The blue is the dark-mode `--secondary` theme color on the dark-mode page background.
+There is no image, SVG pattern, mask, or `background-clip: text` anywhere in the site styles (searched `anthologies/website-series/site/quartz/styles`, `anthologies/website-series/site/quartz/components`, `quartz.config.ts`, `quartz.layout.ts`). The engraved, stippled, chalky look comes entirely from the typeface: **Fredericka the Great** (Google Font, single weight 400). Its glyphs are drawn as Victorian engraved letters with hatched, hand-sketched inner strokes and open counters, so a flat solid `color` already reads as a textured fill. The blue is the dark-mode `--secondary` theme color on the dark-mode page background.
 
 ### Font source
 
-Loaded from Google Fonts by a hand-added link in the Head component, `site/quartz/components/Head.tsx` lines 48 to 49:
+Loaded from Google Fonts by a hand-added link in the Head component, `anthologies/website-series/site/quartz/components/Head.tsx` lines 48 to 49:
 
 ```tsx
 {/* Fredericka the Great: display headings only, weight 400 (no bold variant exists) */}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" />
 ```
 
-It is not part of the Quartz theme typography. The theme fonts in `site/quartz.config.ts` are:
+It is not part of the Quartz theme typography. The theme fonts in `anthologies/website-series/site/quartz.config.ts` are:
 
 ```ts
 fontOrigin: "googleFonts",
@@ -32,7 +32,7 @@ Cormorant Garamond is only the fallback for h1 and h2, and the real face for h3 
 
 ### Selectors and rules
 
-`site/quartz/styles/custom.scss`, "Heading typography" block:
+`anthologies/website-series/site/quartz/styles/custom.scss`, "Heading typography" block:
 
 ```scss
 h1, h2 {
@@ -48,11 +48,11 @@ h3, h4, h5, h6 {
 }
 ```
 
-The "I: What's Being Built" heading is the page title, rendered by `site/quartz/components/ArticleTitle.tsx` as `<h1 class="article-title">` (margin `2rem 0 0 0`). Sizes come from `site/quartz/styles/base.scss`: `h1 { font-size: 1.75rem }`, `h2 { font-size: 1.4rem }`. So every h1 and h2 on the site (page titles, section headings, and the sidebar site title, which is an `h2.page-title`) gets this treatment.
+The "I: What's Being Built" heading is the page title, rendered by `anthologies/website-series/site/quartz/components/ArticleTitle.tsx` as `<h1 class="article-title">` (margin `2rem 0 0 0`). Sizes come from `anthologies/website-series/site/quartz/styles/base.scss`: `h1 { font-size: 1.75rem }`, `h2 { font-size: 1.4rem }`. So every h1 and h2 on the site (page titles, section headings, and the sidebar site title, which is an `h2.page-title`) gets this treatment.
 
 ### Exact colors
 
-From `site/quartz.config.ts`:
+From `anthologies/website-series/site/quartz.config.ts`:
 
 | Role | Light mode | Dark mode |
 |---|---|---|

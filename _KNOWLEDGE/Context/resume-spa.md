@@ -1,6 +1,6 @@
 # Alonzo's Anthologies: quest data and what reaches the printed resume
 
-The React SPA branded **Alonzo's Anthologies** lives at `resumeContent/`
+The React SPA branded **Alonzo's Anthologies** lives at `anthologies/resume-series/resumeContent/`
 and renders one dataset,
 `src/data/quests.data.tsx`, through four views. Which view shows which
 quest is decided by `Quest.type`, and those rules are not obvious from

@@ -7,7 +7,7 @@ import { BuildCtx } from "../../util/ctx"
 import { FilePath, joinSegments } from "../../util/path"
 
 function resumePackageRoot(): string {
-  return path.resolve(process.cwd(), "..", "resumeContent")
+  return path.resolve(process.cwd(), "..", "..", "resume-series", "resumeContent")
 }
 
 /** Runs `npm run build` in resumeContent so `build/` matches source before copy. */
@@ -27,7 +27,7 @@ function runResumeProductionBuild(): void {
   } catch (e) {
     const err = e as { status?: number }
     throw new Error(
-      `[StageResumeSpa] resumeContent build failed (exit ${err.status ?? "unknown"}). Install deps: cd ../resumeContent && npm ci`,
+      `[StageResumeSpa] resumeContent build failed (exit ${err.status ?? "unknown"}). Install deps: cd ../../resume-series/resumeContent && npm ci`,
     )
   }
 }
@@ -61,7 +61,7 @@ async function* stageResumeIntoPublic(
     console.log(
       styleText(
         "yellow",
-        "[StageResumeSpa] resumeContent/build/ missing — skipping /resume (install deps: cd ../resumeContent && npm ci, then run quartz build without QUARTZ_SKIP_RESUME_BUILD).",
+        "[StageResumeSpa] resumeContent/build/ missing — skipping /resume (install deps: cd ../../resume-series/resumeContent && npm ci, then run quartz build without QUARTZ_SKIP_RESUME_BUILD).",
       ),
     )
     return

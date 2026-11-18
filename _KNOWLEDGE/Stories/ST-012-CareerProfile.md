@@ -37,7 +37,7 @@ Zo does not send cover letters. He sends one visual page that gets him into a co
 ## Inputs every agent gets
 
 - **Fact register**, the only allowed source of claims:
-  - `resumeContent/src/data/quests.data.tsx` and `resumeContent/src/data/profile.data.ts`
+  - `anthologies/resume-series/resumeContent/src/data/quests.data.tsx` and `anthologies/resume-series/resumeContent/src/data/profile.data.ts`
   - `career-as-system-v1.md` (career as a stock-and-flow system: reputation flywheel, AI leverage compound, energy brake)
   - `_KNOWLEDGE/Context/resume-spa.md` (which claims were dropped as unsupported)
   - Zo's corrections from 2026-10-19:

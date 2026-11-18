@@ -8,7 +8,7 @@ Sources:
   - _KNOWLEDGE/Architecture/ARCH-004-SiteBuild.md
   - _KNOWLEDGE/Architecture/ARCH-005-ResumeSpa.md
   - _KNOWLEDGE/Documents/Operations/log.md (2026-10-14 entries: cutover, then the host move to GitHub)
-  - build.sh, wrangler.toml, site/quartz.config.ts, resumeContent/package.json
+  - build.sh, wrangler.toml, anthologies/website-series/site/quartz.config.ts, anthologies/resume-series/resumeContent/package.json
 Human id: platform-overview
 Last synthesized: 2026-10-14
 -->
@@ -38,9 +38,9 @@ Read it left to right, following the numbered steps. The four boxes along the to
 
 The numbers match DIA-101.
 
-1. **Write and push.** The owner edits Markdown in `site/content/` or the resume data in `resumeContent/src/data/`, commits, and pushes to GitHub. Anything pushed is public: the repo is public and every branch gets a preview. See [ARCH-002](./ARCH-002-SourceControl.md).
+1. **Write and push.** The owner edits Markdown in `anthologies/website-series/site/content/` or the resume data in `anthologies/resume-series/resumeContent/src/data/`, commits, and pushes to GitHub. Anything pushed is public: the repo is public and every branch gets a preview. See [ARCH-002](./ARCH-002-SourceControl.md).
 2. **GitHub tells Cloudflare.** Cloudflare's GitHub App starts a build on the Pages project `alonzo-anthologies`, and today also on the duplicate `zo-garden`. If the app lost access to the repo, pushes would stop deploying with no error anywhere. See [ARCH-002](./ARCH-002-SourceControl.md) and [ARCH-003](./ARCH-003-Hosting.md).
-3. **One build makes everything.** Cloudflare runs `bash ./build.sh` on Node 22.16.0. Quartz turns `site/content/` into pages and drops anything marked `draft: true`; in the same run the `StageResumeSpa` step builds the resume app and copies it to `/resume/`. All output lands in `site/public/`, the folder `wrangler.toml` names. A failed build leaves the previous deploy serving. See [ARCH-004](./ARCH-004-SiteBuild.md).
+3. **One build makes everything.** Cloudflare runs `bash ./build.sh` on Node 22.16.0. Quartz turns `anthologies/website-series/site/content/` into pages and drops anything marked `draft: true`; in the same run the `StageResumeSpa` step builds the resume app and copies it to `/resume/`. All output lands in `anthologies/website-series/site/public/`, the folder `wrangler.toml` names. A failed build leaves the previous deploy serving. See [ARCH-004](./ARCH-004-SiteBuild.md).
 4. **Publish.** `main` replaces the live site at `alonzo-anthologies.pages.dev`; any other branch is published at its own preview address. See [ARCH-003](./ARCH-003-Hosting.md).
 5. **Visitors read and download.** Readers browse the essays and series; recruiters open `/resume/`, whose pages are `#/` addresses, and can download a PDF that today is pictures of the page with no selectable text. See [ARCH-005](./ARCH-005-ResumeSpa.md).
 
@@ -71,12 +71,12 @@ Every component the area pages rate **Structural** or **Coordinated**, most dema
 | `HashRouter` | Rule point | **Important**: every shared resume link is a `#/` address | Structural | [ARCH-005](./ARCH-005-ResumeSpa.md) |
 | Quest ids | Shared contract | **Supporting**: appear in shared `#/quests/N` links | Structural | [ARCH-005](./ARCH-005-ResumeSpa.md) |
 | Cloudflare's GitHub App connection | Plumbing | **Critical**: the push-to-deploy link; if it goes, nothing deploys and nothing says so | Coordinated | [ARCH-002](./ARCH-002-SourceControl.md), [ARCH-003](./ARCH-003-Hosting.md) |
-| Build output directory (`site/public`) | Shared contract | **Critical**: `wrangler.toml` names the folder a Git build publishes; the Pages dashboard value must agree or it misleads | Coordinated | [ARCH-003](./ARCH-003-Hosting.md), [ARCH-004](./ARCH-004-SiteBuild.md) |
+| Build output directory (`anthologies/website-series/site/public`) | Shared contract | **Critical**: `wrangler.toml` names the folder a Git build publishes; the Pages dashboard value must agree or it misleads | Coordinated | [ARCH-003](./ARCH-003-Hosting.md), [ARCH-004](./ARCH-004-SiteBuild.md) |
 | Cloudflare API token (`_ENV/`) | Data of record | **Critical**: the only credential for the account; today it can change DNS and domains | Coordinated | [ARCH-003](./ARCH-003-Hosting.md), [ARCH-002](./ARCH-002-SourceControl.md) |
 | `StageResumeSpa` emitter | Worker | **Critical**: the only path for `/resume/` into the deploy; skips itself with only a warning | Coordinated | [ARCH-004](./ARCH-004-SiteBuild.md) |
-| Plugin list (`site/quartz.config.ts`) | Rule point | **Critical**: decides how every page is parsed, filtered and emitted | Coordinated | [ARCH-004](./ARCH-004-SiteBuild.md) |
+| Plugin list (`anthologies/website-series/site/quartz.config.ts`) | Rule point | **Critical**: decides how every page is parsed, filtered and emitted | Coordinated | [ARCH-004](./ARCH-004-SiteBuild.md) |
 | Branch protection on `main` | Rule point | **Important**: none today, so a force push would rewrite production; to be turned on with CI | Coordinated | [ARCH-002](./ARCH-002-SourceControl.md) |
-| Node pin (`NODE_VERSION`, `site/.node-version`) | Shared contract | **Important**: Quartz needs Node 22 or later; Cloudflare uses the env var | Coordinated | [ARCH-003](./ARCH-003-Hosting.md), [ARCH-004](./ARCH-004-SiteBuild.md) |
+| Node pin (`NODE_VERSION`, `anthologies/website-series/site/.node-version`) | Shared contract | **Important**: Quartz needs Node 22 or later; Cloudflare uses the env var | Coordinated | [ARCH-003](./ARCH-003-Hosting.md), [ARCH-004](./ARCH-004-SiteBuild.md) |
 | `homepage: /resume` | Shared contract | **Important**: must match where the build is copied and the site's links | Coordinated | [ARCH-005](./ARCH-005-ResumeSpa.md), [ARCH-004](./ARCH-004-SiteBuild.md) |
 | Quest shape and `Quest.type` | Shared contract | **Important**: the field four views agree on | Coordinated | [ARCH-005](./ARCH-005-ResumeSpa.md) |
 | Print filters in ResumeView | Rule point | **Important**: decide what reaches the printed resume and the PDF | Coordinated | [ARCH-005](./ARCH-005-ResumeSpa.md) |
@@ -85,7 +85,7 @@ Every component the area pages rate **Structural** or **Coordinated**, most dema
 
 ## Standing decisions
 
-- **The site and the apps are decoupled.** The resume app does not import from `site/`, and Quartz does not read app sources; the only join is the `StageResumeSpa` copy step. Stories and this set link them editorially. (Carried over from the 2026-05-05 version of this page.)
+- **The site and the apps are decoupled.** The resume app does not import from `anthologies/website-series/site/`, and Quartz does not read app sources; the only join is the `StageResumeSpa` copy step. Stories and this set link them editorially. (Carried over from the 2026-05-05 version of this page.)
 - **No workspace tooling yet.** Each folder keeps its own `package.json`, lockfile and `node_modules/`. Revisit when a third project arrives or CI lands ([ST-007](../Stories/ST-007-GitHubCi.md)).
 - **GitHub is the only code host** (2026-10-14). The repo is `DeveloperZo/alonzo-anthologies`, renamed that day from `Zo-Garden-eCafe`. There was no specific reason for the move to GitLab earlier the same day, and GitHub suits Claude Code and the job search. The GitLab project is archived and not mirrored. The local `gitlab` remote was removed on 2026-10-15 ([ST-005](../Stories/ST-005-RetireGitLab.md)). This replaces the same-day decision recorded in commit c6dadfe that GitLab was the only host.
 

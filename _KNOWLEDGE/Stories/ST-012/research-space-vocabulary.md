@@ -174,7 +174,7 @@ Rejected: a Paragon and Renegade blue-red split (too loud, and it brings in red)
 
 ## Section 5. The galaxy map site: three directions
 
-All three use SVG for the map and CSS for motion, with React state for selection. No canvas or game engine is needed. All three draw from the existing quest data (`resumeContent/src/data/quests.data.tsx`: `startDate`, `endDate`, `type`, `roles`, `tags`, `accomplishments[].learnings`).
+All three use SVG for the map and CSS for motion, with React state for selection. No canvas or game engine is needed. All three draw from the existing quest data (`anthologies/resume-series/resumeContent/src/data/quests.data.tsx`: `startDate`, `endDate`, `type`, `roles`, `tags`, `accomplishments[].learnings`).
 
 Shared data changes for all three:
 - Crew would need a new optional `crew?: string[]` field on `Quest`, because quests do not list mentors today. Mentorship currently shows up only as a tag and in prose.

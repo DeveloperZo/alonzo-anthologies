@@ -33,7 +33,7 @@ Each claim below was checked against the repository. The method was Chain of Ver
 
 | # | Verification question | Answer, with evidence | Effect on the design |
 | --- | --- | --- | --- |
-| 1 | Can the manifest and answers bank be committed? | No. The repo is public (`github.com/DeveloperZo/alonzo-anthologies`, see [deployment.md](../Context/deployment.md)), and so is every pushed branch. Salary, work authorization and recruiter contacts would be published. | `applications/` is gitignored except the README and `_templates/`. The trade-off: these files do not travel between machines. |
+| 1 | Can the manifest and answers bank be committed? | No. The repo is public (`github.com/DeveloperZo/alonzo-anthologies`, see [deployment.md](../Context/deployment.md)), and so is every pushed branch. Salary, work authorization and recruiter contacts would be published. | `anthologies/resume-series/applications/` is gitignored except the README and `_templates/`. The trade-off: these files do not travel between machines. |
 | 2 | If an overlay activates by being present, what happens when a company branch merges back to `main`? | The overlay lands on `main` and tailors the live site to that company. | Overlays activate only through `REACT_APP_TAILORING`, which only the package command sets. Overlays can therefore live on `main` safely, and company branches become optional. |
 | 3 | Is the current PDF readable by an ATS? | No. `utils/pdfGenerator.ts` rasterizes the page with html2canvas into JPEG pages (see [ST-008](./ST-008-TextPdf.md) and TD-005). | The package prints the page through the browser's print path, and the command fails if the PDF has no text layer. |
 | 4 | Can an overlay safely point at bullets by their wording? | No. The 2026-11 casual-voice rewrite on `main` changed almost every bullet, and that is what made the GTreasury rebase conflict in 12 places. | Every accomplishment gets a stable `key`, required by the type. Overlays refer only to keys, and a test fails on unknown keys. |
@@ -61,17 +61,17 @@ Each claim below was checked against the repository. The method was Chain of Ver
 - It has a print mode, `#/resume?print=1`.
 - Print CSS sets A4 pages, avoids breaks inside bullets, and drops the navbar offset.
 
-**Commands** (`resumeContent/scripts/`):
+**Commands** (`anthologies/resume-series/resumeContent/scripts/`):
 - `npm run apply:package -- <id>`: build, serve, print `resume.pdf` and `cover-letter.pdf`, and check the text layer.
-- `npm run apply:list` and `npm run apply:status`: the tracker, reading and writing `applications/<id>.json`.
+- `npm run apply:list` and `npm run apply:status`: the tracker, reading and writing `anthologies/resume-series/applications/<id>.json`.
 
 **Application files:**
-- `applications/` holds the README and templates. Everything else in it is gitignored.
-- The GTreasury cover letter moves to `coverLetters/gtreasury/` on `main`.
+- `anthologies/resume-series/applications/` holds the README and templates. Everything else in it is gitignored.
+- The GTreasury cover letter moves to `anthologies/resume-series/coverLetters/gtreasury/` on `main`.
 
 ## Acceptance criteria
 
-- **AC-1** `npm run apply:package -- gtreasury` writes a 2-page `resume.pdf` with a text layer and a 1-page `cover-letter.pdf` into `applications/gtreasury/package/`. **Met 2026-11-09.**
+- **AC-1** `npm run apply:package -- gtreasury` writes a 2-page `resume.pdf` with a text layer and a 1-page `cover-letter.pdf` into `anthologies/resume-series/applications/gtreasury/package/`. **Met 2026-11-09.**
 - **AC-2** The GTreasury print shows its tailoring:
   - the target role
   - the SaaS summary

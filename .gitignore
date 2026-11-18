@@ -2,10 +2,10 @@
 **/node_modules/
 
 # Quartz outputs
-site/public/
-site/.quartz-cache/
-site/prof/
-site/tsconfig.tsbuildinfo
+anthologies/website-series/site/public/
+anthologies/website-series/site/.quartz-cache/
+anthologies/website-series/site/prof/
+anthologies/website-series/site/tsconfig.tsbuildinfo
 
 # Build outputs (CRA / generic)
 **/build/
@@ -27,9 +27,9 @@ _ENV/
 
 # Job applications: manifests, the answers bank and generated packages hold personal data.
 # This repo is public, so only the README and templates are committed.
-applications/*
-!applications/README.md
-!applications/_templates/
+anthologies/resume-series/applications/*
+!anthologies/resume-series/applications/README.md
+!anthologies/resume-series/applications/_templates/
 
 # Past resume files. They hold a home address and phone number, and this repo is public.
 _KNOWLEDGE/ARTIFACTS/

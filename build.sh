@@ -1,19 +1,23 @@
 #!/usr/bin/env bash
 # Monorepo build for Cloudflare Pages.
-# Output: site/public/  (Quartz site at /, interactive résumé at /resume via StageResumeSpa emitter).
+# Layout: anthologies/<name>-series/<project>/.
+# Output: anthologies/website-series/site/public/
+#   (Quartz site at /, interactive résumé at /resume via StageResumeSpa emitter).
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+SITE_DIR="$REPO_ROOT/anthologies/website-series/site"
+RESUME_DIR="$REPO_ROOT/anthologies/resume-series/resumeContent"
 
-if [ -f "$REPO_ROOT/resumeContent/package.json" ]; then
-  echo "==> Installing resume SPA deps (resumeContent/) — Quartz StageResumeSpa runs npm run build during site emit"
-  (cd "$REPO_ROOT/resumeContent" && npm ci)
+if [ -f "$RESUME_DIR/package.json" ]; then
+  echo "==> Installing resume SPA deps (resume-series/resumeContent/) — Quartz StageResumeSpa runs npm run build during site emit"
+  (cd "$RESUME_DIR" && npm ci)
 else
-  echo "==> Skipping resumeContent/ (not in workspace — e.g. incomplete clone). Quartz-only deploy."
+  echo "==> Skipping resume-series/resumeContent/ (not in workspace — e.g. incomplete clone). Quartz-only deploy."
 fi
 
-echo "==> Building Quartz docs site (site/)"
-(cd "$REPO_ROOT/site" && npm ci && npx quartz build)
-# /resume: StageResumeSpa runs resumeContent npm run build then copies build/ into public/resume/.
+echo "==> Building Quartz docs site (website-series/site/)"
+(cd "$SITE_DIR" && npm ci && npx quartz build)
+# /resume: StageResumeSpa runs the resumeContent npm run build then copies build/ into public/resume/.
 
-echo "==> Done. Deploy site/public/"
+echo "==> Done. Deploy anthologies/website-series/site/public/"

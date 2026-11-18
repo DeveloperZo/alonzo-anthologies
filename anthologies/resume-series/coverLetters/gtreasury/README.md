@@ -10,4 +10,4 @@ Visual cover letter for the Software Engineering Manager role at GTreasury, a Ri
 
 ## How it is built
 
-The resume half of this application is the overlay `resumeContent/src/data/tailoring/gtreasury.ts`. Build both PDFs with `npm run apply:package -- gtreasury` from `resumeContent/`. The full workflow is in `_KNOWLEDGE/Documents/Operations/OPER-004-ApplyToAJob.md`.
+The resume half of this application is the overlay `anthologies/resume-series/resumeContent/src/data/tailoring/gtreasury.ts`. Build both PDFs with `npm run apply:package -- gtreasury` from `anthologies/resume-series/resumeContent/`. The full workflow is in `_KNOWLEDGE/Documents/Operations/OPER-004-ApplyToAJob.md`.

@@ -10,7 +10,7 @@ Visual cover letter for the Head of Engineering role at WellTheory, the first en
 
 ## What is tailored
 
-Copied from `coverLetters/_base/` on 2026-11-09. Only these changed:
+Copied from `anthologies/resume-series/coverLetters/_base/` on 2026-11-09. Only these changed:
 
 - **03 Immediate Actions:** "Build the engineering team and stay hands-on in the code." and "Set habits that move fast and protect member health data." The first leans on the hired team of 5 at Progyny, the second on AI-assisted development with PHI safeguards and HIPAA work across healthcare roles.
 - **04:** "The first engineering leader who builds the team and still ships."
@@ -18,4 +18,4 @@ Copied from `coverLetters/_base/` on 2026-11-09. Only these changed:
 
 ## How it is built
 
-The resume half of this application is the overlay `resumeContent/src/data/tailoring/welltheory.ts`. Build both PDFs with `npm run apply:package -- welltheory` from `resumeContent/`. The full workflow is in `_KNOWLEDGE/Documents/Operations/OPER-004-ApplyToAJob.md`.
+The resume half of this application is the overlay `anthologies/resume-series/resumeContent/src/data/tailoring/welltheory.ts`. Build both PDFs with `npm run apply:package -- welltheory` from `anthologies/resume-series/resumeContent/`. The full workflow is in `_KNOWLEDGE/Documents/Operations/OPER-004-ApplyToAJob.md`.

@@ -132,7 +132,7 @@ should not wince.
 
 ## 6. Files and embedding
 
-- Part 1 and Part 2 diagrams: `site/content/ai-governance/part-N/diagrams/DIA-NNN-name.svg`
+- Part 1 and Part 2 diagrams: `anthologies/website-series/site/content/ai-governance/part-N/diagrams/DIA-NNN-name.svg`
 - Repo and system diagrams: `_KNOWLEDGE/Diagrams/DIA-1NN-Name.svg`
 - Every SVG has a companion `DIA-NNN-name.md` beside it, in the spec shape set by `_META/Definitions/Diagram.md`. Within that shape, record the claim sentence from step 1, the tradition borrowed from, what each key letter stands for, the source of every number, and what the plate leaves out.
 

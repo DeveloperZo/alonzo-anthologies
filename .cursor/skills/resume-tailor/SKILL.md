@@ -2,8 +2,8 @@
 name: resume-tailor
 description: >-
   Tailor a resume or cover letter for one job without inventing titles, scope,
-  or outcomes. Use when editing resumeContent/src/data/tailoring, quest or
-  profile wording, a cover letter under coverLetters/, or when building or
+  or outcomes. Use when editing anthologies/resume-series/resumeContent/src/data/tailoring, quest or
+  profile wording, a cover letter under anthologies/resume-series/coverLetters/, or when building or
   reviewing an application package with apply:package.
 ---
 
@@ -15,15 +15,15 @@ The base resume is the only source of facts. An overlay may reorder bullets and 
 
 Read these before writing a word:
 
-- `resumeContent/src/data/profile.data.ts`: the base summary and the base competencies.
-- `resumeContent/src/data/quests.data.tsx`: `baseQuests`. Job titles are `workTitle` and `roles`. Bullets are `accomplishments`. A tag is a tag on that quest, not a license to add an outcome.
+- `anthologies/resume-series/resumeContent/src/data/profile.data.ts`: the base summary and the base competencies.
+- `anthologies/resume-series/resumeContent/src/data/quests.data.tsx`: `baseQuests`. Job titles are `workTitle` and `roles`. Bullets are `accomplishments`. A tag is a tag on that quest, not a license to add an outcome.
 - The printed default is that data with no `REACT_APP_TAILORING`.
 
 A job posting is a target, not a fact. A title, certification, or stack from the posting stays off the page unless the base resume already states it.
 
 ## What an overlay may change
 
-Files live in `resumeContent/src/data/tailoring/<id>.ts`. The shape is `types.ts`.
+Files live in `anthologies/resume-series/resumeContent/src/data/tailoring/<id>.ts`. The shape is `types.ts`.
 
 Allowed:
 
@@ -44,11 +44,11 @@ Forbidden:
 
 ## Cover letter
 
-`coverLetters/<id>/` follows the same rule. Immediate Actions is future work in the role, not a past title and not a past result. Do not retitle a past job. Do not write the job they are applying for as a line that reads as a title they hold. A year on a timeline must match the quest dates.
+`anthologies/resume-series/coverLetters/<id>/` follows the same rule. Immediate Actions is future work in the role, not a past title and not a past result. Do not retitle a past job. Do not write the job they are applying for as a line that reads as a title they hold. A year on a timeline must match the quest dates.
 
 ## Before you say it is done
 
-A successful build is not a check. After `npm run apply:package -- <id>`, read the text of `applications/<id>/package/resume.pdf`. Do not treat the TypeScript as the printed page.
+A successful build is not a check. After `npm run apply:package -- <id>`, read the text of `anthologies/resume-series/applications/<id>/package/resume.pdf`. Do not treat the TypeScript as the printed page.
 
 Confirm all of these from the PDF, and quote the lines:
 

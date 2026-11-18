@@ -9,7 +9,7 @@ Four columns read left to right. The blue column is the data: `quests.data.tsx` 
 
 ## Elements And Flow
 - **Components:**
-  - Data files: `quests.data.tsx`, `profile.data.ts`, `labels.ts` and `styles.data.tsx` in `resumeContent/src/data/`
+  - Data files: `quests.data.tsx`, `profile.data.ts`, `labels.ts` and `styles.data.tsx` in `anthologies/resume-series/resumeContent/src/data/`
   - Views: `ResumeView`, the other views (`CareerTimeline`, `Accomplishments`, `QuestDetail`), and `Navbar` with `MainMenu`
   - What the visitor sees: the printed resume (`/resume/#/resume`), the interactive pages, the theme frame (work monitor or retro TV)
   - PDF path: `html2canvas`, JPEG strips, `jsPDF` (all in `src/utils/pdfGenerator.ts`)

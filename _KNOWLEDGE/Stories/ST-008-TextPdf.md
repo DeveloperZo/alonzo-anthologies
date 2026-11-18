@@ -40,7 +40,7 @@ The resume's download button produces a PDF made of pictures of the page. It loo
 - A print stylesheet (`@media print`) for `ResumeView`: hide app chrome and the download button, set page size and margins, control page breaks, force the light palette.
 - Change the PDF control to call `window.print()`, and label it so a visitor expects the print dialog.
 - Render the email (`mailto:`) and LinkedIn URL in the resume header as anchors so the browser writes them as PDF links.
-- Remove `resumeContent/src/utils/pdfGenerator.ts` and the `jspdf` and `html2canvas` dependencies if nothing else uses them.
+- Remove `anthologies/resume-series/resumeContent/src/utils/pdfGenerator.ts` and the `jspdf` and `html2canvas` dependencies if nothing else uses them.
 
 ## Out of scope
 
@@ -56,7 +56,7 @@ The resume's download button produces a PDF made of pictures of the page. It loo
 
 ### Technical details
 
-- Verified 2026-10-14 by reading `resumeContent/src/utils/pdfGenerator.ts`: it captures `.resume-container` with `html2canvas` and adds JPEG strips with `pdf.addImage`; it never calls `text`. The only caller is `components/ResumeView/ResumeView.tsx`, and `jspdf` and `html2canvas` are imported nowhere else in `src/` (grep).
+- Verified 2026-10-14 by reading `anthologies/resume-series/resumeContent/src/utils/pdfGenerator.ts`: it captures `.resume-container` with `html2canvas` and adds JPEG strips with `pdf.addImage`; it never calls `text`. The only caller is `components/ResumeView/ResumeView.tsx`, and `jspdf` and `html2canvas` are imported nowhere else in `src/` (grep).
 - Verified 2026-10-14 by reading `ResumeView.tsx`: the email and LinkedIn URL are plain text in `.contact-info`, not links. Moving them into `profile.data.ts` is ARCH-005's separate Change Map row and is not required here.
 
 ### Decisions

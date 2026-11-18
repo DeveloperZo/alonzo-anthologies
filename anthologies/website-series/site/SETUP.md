@@ -5,7 +5,7 @@ The Quartz 4 framework files are not yet present in this folder — only the `co
 To layer Quartz 4 in:
 
 ```powershell
-cd site
+cd anthologies/website-series/site
 .\setup-quartz.ps1
 ```
 
@@ -36,6 +36,6 @@ Quartz's own docs are at <https://quartz.jzhao.xyz/>.
 
 ## Where the project docs live
 
-Project docs (definitions, architecture, milestones, runbooks, technical debt, roadmap) live in `_KNOWLEDGE/` at the repo root, not under `site/content/`. Start at [`_KNOWLEDGE/README.md`](../_KNOWLEDGE/README.md). Pages under `content/` are public writing only.
+Project docs (definitions, architecture, milestones, runbooks, technical debt, roadmap) live in `_KNOWLEDGE/` at the repo root, not under `anthologies/website-series/site/content/`. Start at [`_KNOWLEDGE/README.md`](../../../_KNOWLEDGE/README.md). Pages under `content/` are public writing only.
 
 You can delete this `SETUP.md` and `setup-quartz.ps1` after the framework is in place.

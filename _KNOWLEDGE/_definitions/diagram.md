@@ -30,7 +30,7 @@ is filed.
 
 | The diagram supports... | It lives in |
 | --- | --- |
-| A published site page | A `diagrams/` folder beside that page under `site/content/`, so Quartz can serve it |
+| A published site page | A `diagrams/` folder beside that page under `anthologies/website-series/site/content/`, so Quartz can serve it |
 | A knowledge doc (ARCH, M, OPER, TD) | `_KNOWLEDGE/Diagrams/` |
 
 The DIA number space is shared across both locations. Check both before

@@ -10,11 +10,11 @@ The application log and the files each application needs. **Everything in this f
 | `<id>.json` | One manifest per application: posting, ATS, status, contacts, company-specific answers, history | No |
 | `<id>/package/resume.pdf`, `cover-letter.pdf` | The package for that application, made by `npm run apply:package` | No |
 
-`<id>` is a short lowercase company id, such as `gtreasury`. The same id names the resume overlay (`resumeContent/src/data/tailoring/<id>.ts`) and the cover letter folder (`coverLetters/<id>/`).
+`<id>` is a short lowercase company id, such as `gtreasury`. The same id names the resume overlay (`anthologies/resume-series/resumeContent/src/data/tailoring/<id>.ts`) and the cover letter folder (`anthologies/resume-series/coverLetters/<id>/`).
 
 ## Commands
 
-Run these from `resumeContent/`:
+Run these from `anthologies/resume-series/resumeContent/`:
 
 ```
 npm run apply:package -- <id>                      build resume.pdf and cover-letter.pdf

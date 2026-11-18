@@ -5,13 +5,13 @@
 - **Primary audience takeaway:** Everything ships through one path, a push to GitHub `main` that Cloudflare builds and publishes; the old `zo-garden` project builds the same push as a duplicate until it is retired, and the GitLab project is archived.
 
 ## What The Diagram Shows
-Four columns run left to right. The owner's machine holds the public writing, the resume app, the project docs that are never published, and a gitignored Cloudflare token. A push goes to GitHub, the only code host, whose `main` branch is production. Cloudflare's GitHub App starts the Cloudflare Pages project `alonzo-anthologies`, which runs `build.sh`: Quartz builds the pages while `StageResumeSpa` builds the resume app, and both land in `site/public/`. That folder is published to the live address for `main` and to a preview address for other branches, where visitors read the site and open the resume. A dashed row underneath shows what is left over: the archived GitLab project, connected to nothing, and the `zo-garden` Pages project, which the same push still builds and publishes at `zo-garden.pages.dev` as a duplicate of the current site.
+Four columns run left to right. The owner's machine holds the public writing, the resume app, the project docs that are never published, and a gitignored Cloudflare token. A push goes to GitHub, the only code host, whose `main` branch is production. Cloudflare's GitHub App starts the Cloudflare Pages project `alonzo-anthologies`, which runs `build.sh`: Quartz builds the pages while `StageResumeSpa` builds the resume app, and both land in `anthologies/website-series/site/public/`. That folder is published to the live address for `main` and to a preview address for other branches, where visitors read the site and open the resume. A dashed row underneath shows what is left over: the archived GitLab project, connected to nothing, and the `zo-garden` Pages project, which the same push still builds and publishes at `zo-garden.pages.dev` as a duplicate of the current site.
 
 ## Elements And Flow
 - **Components:**
-  - Owner's machine: `site/content/`, `resumeContent/`, `_KNOWLEDGE/`, `_ENV/`
+  - Owner's machine: `anthologies/website-series/site/content/`, `anthologies/resume-series/resumeContent/`, `_KNOWLEDGE/`, `_ENV/`
   - GitHub repo `alonzo-anthologies` (`main` = production)
-  - Cloudflare Pages `alonzo-anthologies`: `build.sh`, Quartz, `StageResumeSpa`, `site/public/`
+  - Cloudflare Pages `alonzo-anthologies`: `build.sh`, Quartz, `StageResumeSpa`, `anthologies/website-series/site/public/`
   - `alonzo-anthologies.pages.dev`, branch previews, visitors
   - Left over: GitLab (archived), Pages `zo-garden`, `zo-garden.pages.dev`
 - **Relationships:**

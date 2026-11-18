@@ -21,7 +21,7 @@ move. It runs about 5,300 words including callouts (about 4,000 without)
 across five to eight sections, with 10 to 15 diagrams and 50 to 70 sources.
 
 The page mechanics (files, index, section shape, callouts, citations, voice,
-versioning) are grounded in `site/content/ai-governance/part-1/` (Part 1:
+versioning) are grounded in `anthologies/website-series/site/content/ai-governance/part-1/` (Part 1:
 Can AI Self-Govern?) as it stood at v1.2. The five beats were set on
 2026-11-10, after Part 1 was written. Part 1 matches them in part; the gaps
 are listed under [Part 1 against the beats](#part-1-against-the-beats).
@@ -36,8 +36,8 @@ video script drawn from an article is a Document), and a
 ## ID and naming
 
 MediumArticles take no ID prefix. Quartz builds URLs from paths, so the folder is
-the identity: `site/content/<series>/part-<N>/`, or
-`site/content/<slug>/` for a standalone piece. Section files are
+the identity: `anthologies/website-series/site/content/<series>/part-<N>/`, or
+`anthologies/website-series/site/content/<slug>/` for a standalone piece. Section files are
 `NN-<slug>.md`, two-digit and in reading order, with the slug taken from the
 section title (`03-whats-unsolved.md`).
 
@@ -46,7 +46,7 @@ the article belongs to a series (see [Diagram](./Diagram.md)).
 
 ## Where it lives
 
-Under `site/content/`, because Quartz only serves `content/`. This is the
+Under `anthologies/website-series/site/content/`, because Quartz only serves `content/`. This is the
 exception to the `_KNOWLEDGE/<Type folder>/` rule in the
 [README](./README.md). Series-level context (canonical locations, design
 system, series editorial rules) lives in `_KNOWLEDGE/Context/`.

@@ -5,26 +5,26 @@ Purpose: Record that the vendored Quartz framework carries untracked local patch
 Status: open
 Owner: zo
 Human id: quartz-patches
-Update trigger: when Quartz is upgraded, setup-quartz.ps1 is run, or a patch is added to or removed from site/quartz/
+Update trigger: when Quartz is upgraded, setup-quartz.ps1 is run, or a patch is added to or removed from anthologies/website-series/site/quartz/
 Last updated: 2026-10-14
 -->
 
 ## Current impact
 
-Three files inside the vendored framework (`site/quartz/`, Quartz 4.5.2)
+Three files inside the vendored framework (`anthologies/website-series/site/quartz/`, Quartz 4.5.2)
 carry repo-specific changes, and nothing outside ARCH-004 records them:
 
 | File | Local change |
 | --- | --- |
-| `site/quartz/plugins/emitters/stageResumeSpa.ts` | New file: builds and stages the resume SPA at `/resume` |
-| `site/quartz/plugins/emitters/index.ts:13` | Exports `StageResumeSpa` |
-| `site/quartz/components/scripts/spa.inline.ts:27-29, 40, 141` | `isInteractiveResumeUrl` makes `/resume` links full page loads instead of SPA swaps |
+| `anthologies/website-series/site/quartz/plugins/emitters/stageResumeSpa.ts` | New file: builds and stages the resume SPA at `/resume` |
+| `anthologies/website-series/site/quartz/plugins/emitters/index.ts:13` | Exports `StageResumeSpa` |
+| `anthologies/website-series/site/quartz/components/scripts/spa.inline.ts:27-29, 40, 141` | `isInteractiveResumeUrl` makes `/resume` links full page loads instead of SPA swaps |
 
-`site/setup-quartz.ps1` refreshes Quartz by robocopying a fresh upstream
-clone over `site/` (everything except `content/` and `.git`). Run today,
+`anthologies/website-series/site/setup-quartz.ps1` refreshes Quartz by robocopying a fresh upstream
+clone over `anthologies/website-series/site/` (everything except `content/` and `.git`). Run today,
 it would overwrite `index.ts` and `spa.inline.ts`, and also the
-repo-owned `site/quartz.config.ts` (site name, `baseUrl`, the
-`StageResumeSpa` emitter entry), `site/quartz.layout.ts`, `package.json`
+repo-owned `anthologies/website-series/site/quartz.config.ts` (site name, `baseUrl`, the
+`StageResumeSpa` emitter entry), `anthologies/website-series/site/quartz.layout.ts`, `package.json`
 and `package-lock.json`, and it would bring back the upstream `.github/`
 folder deleted in c6dadfe. `stageResumeSpa.ts` itself would survive,
 because upstream has no file of that name, but nothing would load it.
@@ -53,14 +53,14 @@ components table; the open part is the procedure and a tested upgrade.
 - A written procedure for upgrading Quartz names all three files, plus
   `quartz.config.ts` and `quartz.layout.ts`, and how to re-apply each
   change.
-- After a test upgrade, `bash ./build.sh` exits 0, `site/public/resume/index.html`
+- After a test upgrade, `bash ./build.sh` exits 0, `anthologies/website-series/site/public/resume/index.html`
   exists, and clicking the resume link on the site home page loads the
   app.
 
 ## Evidence and status
 
 - Re-verified 2026-10-14 at HEAD c6dadfe by grep:
-  `grep -rln -i "resume" site/quartz --include=*.ts` returns only these
+  `grep -rln -i "resume" anthologies/website-series/site/quartz --include=*.ts` returns only these
   three files plus an unrelated Spanish locale string (`es-ES.ts`).
 - `setup-quartz.ps1` behaviour read from source (line 26, robocopy
   `/E /XD ".git" "content"`); not run. That upstream Quartz ships its own

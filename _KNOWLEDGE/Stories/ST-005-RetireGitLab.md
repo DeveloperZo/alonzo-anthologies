@@ -40,7 +40,7 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 ## Scope
 
 - Done on 2026-10-14 (by Zo and the orchestrator, logged in `log.md`): GitHub repo renamed to `DeveloperZo/alonzo-anthologies`; `origin` switched to it; Cloudflare `alonzo-anthologies` recreated from it; GitLab project archived.
-- Code: change the footer link in `site/quartz.layout.ts` from GitLab to `https://github.com/DeveloperZo/alonzo-anthologies`.
+- Code: change the footer link in `anthologies/website-series/site/quartz.layout.ts` from GitLab to `https://github.com/DeveloperZo/alonzo-anthologies`.
 - Local clone, with Zo's agreement: `git remote remove gitlab`; delete merged branches `rebrand-alonzos-anthologies`, `claude/trusting-clarke-f82a22`, `claude/main-latest-commit-47b73f` and `docs/portable-project-context` with `git branch -d` (all are ancestors of `main`).
 - Docs: ARCH-002 and the context files named in AC-7.
 - Optional: revoke Cloudflare's authorised application on the GitLab account (User settings, Applications), since nothing on Cloudflare uses GitLab now.
@@ -66,7 +66,7 @@ On 2026-10-14 the owner made GitHub the only active code host: there was no spec
 - Verified with the public GitHub API: repo id 1229275646, public, not archived; the old name `DeveloperZo/Zo-Garden-eCafe` redirects (301) to the same repo.
 - Verified with `curl` of the GitLab project page: the archived notice is shown.
 - Verified with Cloudflare API GETs: both Pages projects have source type `github` (repo id 1229275646). The GitLab-wired project was deleted at 23:45:26 and recreated from GitHub (log.md). The GitLab project's Cloudflare webhook now points at the deleted project; moot while the project is archived (from the orchestrator, not re-checked).
-- Verified with `curl` of the live home page: the footer links to `https://gitlab.com/awilliams9293/alonzo-anthologies` (from `site/quartz.layout.ts` line 48).
+- Verified with `curl` of the live home page: the footer links to `https://gitlab.com/awilliams9293/alonzo-anthologies` (from `anthologies/website-series/site/quartz.layout.ts` line 48).
 
 ### Decisions
 

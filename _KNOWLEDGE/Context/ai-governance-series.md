@@ -6,10 +6,10 @@ A two-part explainer living on the site.
 
 | Path | What |
 | --- | --- |
-| `site/content/ai-governance/index.md` | Quartz hub page for the series |
-| `site/content/ai-governance/part-1/` | Part 1: "Can AI Self-Govern?" 8-section systems analysis |
-| `site/content/ai-governance/part-2/` | Part 2: "What Can I Do About AI?" full 12 leverage-point action guide |
-| `site/content/ai-governance/leverage-points.md` | 12 LP quick reference as Quartz markdown |
+| `anthologies/website-series/site/content/ai-governance/index.md` | Quartz hub page for the series |
+| `anthologies/website-series/site/content/ai-governance/part-1/` | Part 1: "Can AI Self-Govern?" 8-section systems analysis |
+| `anthologies/website-series/site/content/ai-governance/part-2/` | Part 2: "What Can I Do About AI?" full 12 leverage-point action guide |
+| `anthologies/website-series/site/content/ai-governance/leverage-points.md` | 12 LP quick reference as Quartz markdown |
 
 Legacy single-file HTML copies exist at the repo root
 (`ai-systems-explainer.html`, `what-can-i-do.html`). They are superseded

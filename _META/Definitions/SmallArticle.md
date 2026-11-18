@@ -50,7 +50,7 @@ Use a [Document](./Document.md) for working material about the repo, and a
 ## ID and naming
 
 No ID prefix. Quartz builds URLs from paths, so the folder is the identity:
-`site/content/<slug>/`, or `site/content/<series>/<slug>/` when it belongs
+`anthologies/website-series/site/content/<slug>/`, or `anthologies/website-series/site/content/<series>/<slug>/` when it belongs
 to a series. The slug comes from the title in kebab case, a few words
 (`why-labs-cant-pause/`).
 
@@ -60,7 +60,7 @@ the repo (see [Diagram](./Diagram.md)).
 
 ## Where it lives
 
-Under `site/content/`, because Quartz only serves `content/`. This is the
+Under `anthologies/website-series/site/content/`, because Quartz only serves `content/`. This is the
 exception to the `_KNOWLEDGE/<Type folder>/` rule in the
 [README](./README.md), the same as MediumArticle.
 

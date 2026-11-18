@@ -15,7 +15,7 @@ Diagrams that explain the system to whoever is building it. Each one is an
 block.
 
 Diagrams for published writing do not live here. They sit in a `diagrams/`
-folder beside their page under `site/content/`, because Quartz only serves
+folder beside their page under `anthologies/website-series/site/content/`, because Quartz only serves
 what is under `content/`. The AI governance series is the existing example
 (`DIA-0xx` and `DIA-2xx`).
 

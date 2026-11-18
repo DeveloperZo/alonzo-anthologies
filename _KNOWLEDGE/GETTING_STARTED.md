@@ -18,7 +18,7 @@ Last updated: 2026-05-04
 
 ## What this repo is
 
-Alonzo's Anthologies is the monorepo. The Quartz site and the interactive resume live under it, with the canonical documentation surface in `site/`. The doc surface is rendered as a static site by [Quartz 4](https://quartz.jzhao.xyz/).
+Alonzo's Anthologies is the monorepo. The Quartz site and the interactive resume live under it, with the canonical documentation surface in `anthologies/website-series/site/`. The doc surface is rendered as a static site by [Quartz 4](https://quartz.jzhao.xyz/).
 
 ## Prerequisites
 
@@ -31,14 +31,14 @@ Alonzo's Anthologies is the monorepo. The Quartz site and the interactive resume
 From the repo root:
 
 ```sh
-cd site
+cd anthologies/website-series/site
 npm ci
 ```
 
 ## Running the site locally
 
 ```sh
-cd site
+cd anthologies/website-series/site
 npx quartz build --serve
 ```
 
@@ -47,16 +47,16 @@ The site serves on `http://localhost:8080`. Edits to anything under `content/` r
 ## Building for production
 
 ```sh
-cd site
+cd anthologies/website-series/site
 npx quartz build
 ```
 
-Output lands in `site/public/`. Production deploys that folder to Cloudflare Pages.
+Output lands in `anthologies/website-series/site/public/`. Production deploys that folder to Cloudflare Pages.
 
 ## Doc conventions
 
 Project docs live in `_KNOWLEDGE/`, which Quartz does not render. Public
-writing lives in `site/content/`.
+writing lives in `anthologies/website-series/site/content/`.
 
 Every type of doc we create instances of has a definition in
 [`_META/Definitions/`](../_META/Definitions/README.md): Story (`ST-###`),
@@ -66,7 +66,7 @@ every instance follows: the HTML-comment frontmatter block, filenames as
 `<ID>-<ShortName>.md`, and keeping planned, built, verified and deployed
 distinct.
 
-Pages under `site/content/` still need the YAML block Quartz reads, with the
+Pages under `anthologies/website-series/site/content/` still need the YAML block Quartz reads, with the
 HTML-comment block under it.
 
 ## Filing a new doc

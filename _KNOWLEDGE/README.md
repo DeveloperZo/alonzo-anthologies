@@ -12,7 +12,7 @@ Last updated: 2026-10-14
 `_KNOWLEDGE/` is the canonical documentation surface for the monorepo:
 planning, architecture, operations, briefs, diagrams, and the durable
 context an agent needs on any machine. Quartz does not render it. Public
-writing lives in `site/content/`.
+writing lives in `anthologies/website-series/site/content/`.
 
 The shape is adapted from the Serennovas `knowledge/` tree. See
 [Context/docs-pattern.md](./Context/docs-pattern.md) for what was taken and

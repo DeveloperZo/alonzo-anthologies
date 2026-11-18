@@ -11,7 +11,7 @@ Last updated: 2026-10-14
 
 ## Current impact
 
-- A broken `build.sh`, Quartz build or `resumeContent/` build is only found after it is on `main`. Cloudflare leaves the previous deployment serving, so the failure is quiet.
+- A broken `build.sh`, Quartz build or `anthologies/resume-series/resumeContent/` build is only found after it is on `main`. Cloudflare leaves the previous deployment serving, so the failure is quiet.
 - Nothing checks the no-tracked-secrets rules in [ARCH-002](../../Architecture/ARCH-002-SourceControl.md) on push; they rely on the manual scan in [OPER-002](../Operations/OPER-002-GitHubPush.md). The repo is public on GitHub, so a pushed secret is public at once.
 - `main` on GitHub has no branch protection, so nothing at the host stops a direct or forced push either.
 
@@ -43,12 +43,12 @@ Open. Verified 2026-10-14, late evening:
 - No `.github/` at the repo root (`ls .github` fails), and the GitHub Actions API for `DeveloperZo/alonzo-anthologies` lists 0 workflows (`curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/actions/workflows`, unauthenticated, public repo).
 - The only checks on `main` (c6dadfe) are the two Cloudflare Pages check runs (public check-runs API).
 - `main` is not protected: `curl https://api.github.com/repos/DeveloperZo/alonzo-anthologies/branches/main` returns `"protected": false`.
-- `site/.github/` (four vendored upstream Quartz workflows plus templates) was deleted in `c6dadfe`: `git show --stat c6dadfe` lists the deletions and `git ls-files | grep '^site/\.github'` prints nothing.
+- `anthologies/website-series/site/.github/` (four vendored upstream Quartz workflows plus templates) was deleted in `c6dadfe`: `git show --stat c6dadfe` lists the deletions and `git ls-files | grep '^anthologies/website-series/site/\.github'` prints nothing.
 - Earlier the same day, on GitLab (now archived): no `.gitlab-ci.yml`, empty `ci_config_path`, `only_allow_merge_if_pipeline_succeeds` false (`glab api`). Historical.
 
 ## Changelog
 
 - 2026-10-14 (late evening): Rewritten for GitHub as the only active host. Remediation is now ST-007 GitHub CI (GitHub Actions and branch protection); acceptance criteria restated for pull requests and required checks. Added the unprotected `main` (public GitHub API). GitLab evidence kept as history.
-- 2026-10-14: Corrected the stale `site/.github/workflows/` statements (deleted in c6dadfe, verified with git). Remediation now links ST-007.
+- 2026-10-14: Corrected the stale `anthologies/website-series/site/.github/workflows/` statements (deleted in c6dadfe, verified with git). Remediation now links ST-007.
 - 2026-10-14: Restructured to the Technical debt sections in the Document definition.
 - 2026-10-14: Created from `glab api` project settings and pipelines, and a check for `.gitlab-ci.yml`.
