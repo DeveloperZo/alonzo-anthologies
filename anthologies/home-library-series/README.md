@@ -6,16 +6,16 @@ Status: draft
 Owner: zo
 Human id: home-library-series-readme
 Update trigger: when a decision below is settled, or a project in the series starts
-Last updated: 2026-11-17
+Last updated: 2026-11-18
 -->
 
-Status: working on the desktop as of 2026-11-17. One relay fronts both
-model runtimes and every request through it is recorded in Langfuse.
-The thin version exit test passed from limesalt. On 2026-11-18
-`client/verify.ps1` run on limesalt with the relay key passed every
-service check, including a chat through the relay that Langfuse
-recorded. Still to do: one run on a phone hotspot (the runs so far did
-not record the network), and set a Langfuse login.
+Status: working as of 2026-11-18. One relay fronts one model runtime
+(Ollama), and every request through it is recorded in Langfuse. The
+thin version exit test passed from limesalt, and `client/verify.ps1`
+run on limesalt with the relay key passed every service check. A
+frontier harness can hand work to the local models with
+`client/ask-local.ps1`. Still to do: one run of the verify script on a
+phone hotspot (the runs so far did not record the network).
 
 ## Thin version exit test
 
@@ -34,23 +34,40 @@ itself.
 
 ![](../../_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg)
 
+Six more views, each answering one question:
+
+- [DIA-107: Components: what each piece is and why it is here](../../_KNOWLEDGE/Diagrams/DIA-107-HomeLibraryComponents.svg)
+- [DIA-108: What runs where, and which models fit on the card](../../_KNOWLEDGE/Diagrams/DIA-108-HomeLibraryRunsWhere.svg)
+- [DIA-109: One request, step by step](../../_KNOWLEDGE/Diagrams/DIA-109-HomeLibraryRequest.svg)
+- [DIA-110: Startup and failure](../../_KNOWLEDGE/Diagrams/DIA-110-HomeLibraryStartup.svg)
+- [DIA-111: Files, secrets and state](../../_KNOWLEDGE/Diagrams/DIA-111-HomeLibraryFiles.svg)
+- [DIA-112: Who can reach what](../../_KNOWLEDGE/Diagrams/DIA-112-HomeLibraryReach.svg)
+
 | Piece | Address | Job |
 | --- | --- | --- |
-| LiteLLM (the relay) | `http://lemonpepper:4000/v1` | The one address tools should use. Needs a key. Forwards to LM Studio or Ollama and records each request |
+| LiteLLM (the relay) | `http://lemonpepper:4000/v1` | The one address tools should use. Needs a key. Forwards to Ollama and records each request |
 | Langfuse (the dashboard) | `http://lemonpepper:3001` | Shows every request through the relay: model, prompt, reply, time taken |
 | Open WebUI | `http://lemonpepper:3000` | Chat in the browser |
-| Ollama | `http://lemonpepper:11434/v1` | Direct access to Ollama models. No key, and not recorded in Langfuse |
+| Ollama | `http://lemonpepper:11434/v1` | The model runtime: loads a model onto the graphics card and answers with it. Direct access has no key and is not recorded in Langfuse |
 | Jellyfin | `http://lemonpepper:8096` | Media server |
-| LM Studio | Port 1234, desktop only | Reached through the relay |
 
-The relay offers three routes. A client asks for a route name, not a
+The relay offers two routes. A client asks for a route name, not a
 model name.
 
-| Route | Answered by |
-| --- | --- |
-| `local-fast` | `openai/gpt-oss-20b` in LM Studio |
-| `local-coder` | `mistralai/devstral-small-2-2512` in LM Studio |
-| `ollama-coder` | `qwen2.5-coder:14b` in Ollama |
+| Route | For | Answered by | Measured |
+| --- | --- | --- | --- |
+| `local-fast` | General work and reasoning | `gpt-oss:20b` in Ollama | 12 GB on the card, about 155 tokens per second |
+| `local-coder` | Code | `qwen2.5-coder:14b` in Ollama | 11 GB on the card |
+
+Both run with a 16384 token context window, the largest at which each
+stays fully on the 16 GB card. Ollama holds one model at a time: asking
+for the other route swaps them, which takes 6 to 30 seconds. A loaded
+model stays for 30 minutes after its last use.
+
+LM Studio was a second model runtime doing the same job as Ollama. It
+was retired on 2026-11-18. On the same model the two ran at 165 and 155
+tokens per second, so nothing was lost, and Ollama needs no one to
+start it or load a model by hand.
 
 The files are in two places. The relay, Open WebUI and Jellyfin belong
 to the WHL project in `E:\WHL` on the desktop, which is outside this
@@ -82,12 +99,30 @@ Three layers, each replaceable without touching the others.
 | Layer | Job | Default choice | Why |
 | --- | --- | --- | --- |
 | Network | One stable private address for the desktop, at home and away | Tailscale on both machines | Same name works on the home network (direct) and off it (encrypted tunnel). No router port forwarding, nothing exposed to the internet |
-| Model runtime | Serve models over HTTP | Ollama and LM Studio on the desktop, behind one relay (LiteLLM) | Free, run on Windows. The relay gives tools one OpenAI-compatible address and a record of use |
+| Model runtime | Serve models over HTTP | Ollama on the desktop, behind one relay (LiteLLM) | Free, runs in the background, loads models on request. The relay gives tools one OpenAI-compatible address and a record of use |
 | Library | Files both machines need | Git for anything that is a repo. A private repo or a synced folder for the rest | See `_KNOWLEDGE/Context/` for why repos do not go in a file-sync tool |
 
 The laptop then points any OpenAI-compatible tool at the relay,
 `http://<desktop-name>:4000/v1`. The address does not change when the
 laptop leaves the house.
+
+## How it is meant to be used
+
+A frontier tool (Claude Code, on either machine) is the harness. It
+plans, judges and does the hard parts. Token-heavy grunt work goes to
+the local models through the relay, so it costs electricity and not
+frontier tokens. Decided 2026-11-18.
+
+The hand-off is `client/ask-local.ps1`: it sends a prompt, and
+optionally files, to a route and prints the reply. Each call is
+recorded in Langfuse under the caller's name and a task label.
+
+```
+powershell -NoProfile -ExecutionPolicy Bypass -File client/ask-local.ps1 -Prompt "Summarize this in five bullets." -File notes.md -Task summary
+```
+
+Which work is safe to hand over, and which is not, is in
+`client/ROUTING.md`.
 
 ## Server: the activity dashboard
 
@@ -128,10 +163,20 @@ an entry to `E:\WHL\config\litellm\config.yaml` and restart the relay.
   second relay was removed from `server/`.
 - Whether direct access to Ollama on port 11434 stays open. It has no
   key and is not recorded in Langfuse.
-- Whether `E:\WHL` moves into this repo. Today it has no history and no
+- Later: `E:\WHL` moves into a repo. Today it has no history and no
   backup.
-- Which models to keep loaded, and for what work. Ollama and LM Studio
-  share one 16 GB graphics card.
+- Settled 2026-11-18: Ollama is the only model runtime. LM Studio is
+  retired. `local-fast` is `gpt-oss:20b` and `local-coder` is
+  `qwen2.5-coder:14b`, each at a 16384 token context.
+- Settled 2026-11-18: no fallback for when the desktop is off. This is
+  a home setup and that is acceptable.
+- Settled 2026-11-18: a frontier tool is the harness and the local
+  models do the token-heavy work. This reverses an earlier line in the
+  WHL README that kept orchestration local.
+- Later: a memory layer (a vector store and a workflow runner are
+  staged in the WHL files but not started).
+- Four Ollama models from two years ago are unused and take 52 GB of
+  disk. Two of them cannot fit on the card.
 - Settled 2026-11-17: an activity dashboard is wanted (Langfuse behind
   a relay). Open WebUI is the chat front end already running.
 - Where the non-repo library lives, and how it is backed up.
@@ -143,9 +188,9 @@ In order:
 1. `server/`: started. Holds Langfuse. Still wanted: the rest of the
    desktop setup as scripts and a runbook (network, runtime,
    keep-awake).
-2. `client/`: started. Holds the connectivity check (`verify.ps1`) and
-   the brief for running it on limesalt (`VERIFY.md`). Laptop tool
-   configuration is still to come.
+2. `client/`: started. Holds the connectivity check (`verify.ps1`), the
+   brief for running it on limesalt (`VERIFY.md`), the hand-off tool
+   (`ask-local.ps1`) and the guide to what to hand over (`ROUTING.md`).
 3. `swarm/`: agent swarms that use the server as their model endpoint.
 
 ## Relation to the gatekeeper series
@@ -159,6 +204,13 @@ Design seeds for the swarm are listed in
 
 ## Changelog
 
+- 2026-11-18: Diagram set added: DIA-106 redrawn as the overview, plus
+  DIA-107 to DIA-112. Drawn by subagents from a verified fact sheet.
+- 2026-11-18: LM Studio retired and Ollama made the only runtime. Both
+  relay routes repointed to Ollama at a 16384 token context, and the
+  `ollama-coder` route removed. Added `client/ask-local.ps1`, the
+  hand-off from a frontier harness to the local models, with named
+  callers in Langfuse.
 - 2026-11-18: Desktop renamed to `lemonpepper` on the tailnet. Every
   address on this page uses the new name. The old name,
   `win-mpisa5dbmqf`, no longer resolves, and is still the Windows

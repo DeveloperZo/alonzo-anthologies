@@ -1,0 +1,118 @@
+<svg viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d111-title d111-desc">
+  <title id="d111-title">DIA-111 · Files and state: where the home library's files, secrets and saved state live, and what has no backup</title>
+  <desc id="d111-desc">Three columns, one per place, each read top to bottom. There is no flow. The first column is the folder E:\WHL, which has no history and no backup. It holds five things: the compose files that say how the relay, the chat page and the media server start (if lost, rebuild by hand); the LiteLLM config file that holds the routes (if lost, rebuild by hand); a secrets file, compose\.env, with the relay key and the Langfuse keys (if lost, make new keys and update every tool); the data folder with chats, accounts and the media index (if lost, gone); and the media folder for movies, shows and music, which is empty today (if lost, gone). The second column is the repo, which is in git and pushed to GitHub. It holds the server folder that says how Langfuse starts (if lost, clone the repo again) and a second secrets file, server\.env, with the Langfuse keys and login. Git ignores that file, so it exists on this disk only (if lost, make new keys). A red dotted line joins the two secrets files: the Langfuse keys in both must match. The third column is state held inside Docker and Ollama, with no backup: the Docker volumes of whl-langfuse, which hold every recorded request (if lost, gone), and the Ollama model files on the C: drive (if lost, download again).</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); } [stroke="#2A2A35"] { stroke: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); } [stroke="#6B6873"] { stroke: var(--muted); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="d111-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+  </defs>
+  <rect width="1000" height="720" fill="#F2EEE3"/>
+
+  <!-- header -->
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-111 · FILES AND STATE</text>
+  <text x="500" y="58" text-anchor="middle" font-size="14" fill="#6B6873">Where do the files, secrets and saved state live, and what has no backup?</text>
+
+  <!-- column frames: A x 24..354, B x 374..664, C x 684..976, all y 90..610 -->
+  <rect x="24" y="90" width="330" height="520" rx="14" fill="none" stroke="#A28438" stroke-width="1.5"/>
+  <text x="38" y="111" font-size="12" font-weight="700" fill="#A28438" letter-spacing="0.03em"><tspan class="m">E:\WHL</tspan> · NO HISTORY, NO BACKUP</text>
+  <rect x="374" y="90" width="290" height="520" rx="14" fill="none" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="388" y="111" font-size="12" font-weight="700" fill="#5A8270" letter-spacing="0.03em">THE REPO · IN GIT, PUSHED TO GITHUB</text>
+  <rect x="684" y="90" width="292" height="520" rx="14" fill="none" stroke="#A28438" stroke-width="1.5"/>
+  <text x="698" y="111" font-size="12" font-weight="700" fill="#A28438" letter-spacing="0.03em">DOCKER AND OLLAMA · NO BACKUP</text>
+
+  <!-- the one line: the two secrets files, level at y 365 -->
+  <line x1="340" y1="365" x2="388" y2="365" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="2,3"/>
+
+  <!-- column A nodes: x 38, w 302, rows at y 126, 222, 318, 414, 510, h 84 -->
+  <path d="M38,126 H98 V136 H340 V210 H38 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="52" y="158" font-size="14" font-weight="700" fill="#2A2A35">compose\*.yml</text>
+  <text x="52" y="178" font-size="13" fill="#6B6873">how relay, chat and media start</text>
+  <text x="52" y="198" font-size="13" font-style="italic" fill="#6B6873">if lost: rebuild by hand</text>
+
+  <path d="M38,222 H98 V232 H340 V306 H38 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="52" y="254" font-size="14" font-weight="700" fill="#2A2A35">config\litellm\config.yaml</text>
+  <text x="52" y="274" font-size="13" fill="#6B6873">the routes</text>
+  <text x="52" y="294" font-size="13" font-style="italic" fill="#6B6873">if lost: rebuild by hand</text>
+
+  <path d="M38,318 H98 V328 H340 V402 H38 Z" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="52" y="350" font-size="14" font-weight="700" fill="#A85B49">compose\.env</text>
+  <text x="52" y="370" font-size="13" fill="#A85B49">relay key, Langfuse keys</text>
+  <text x="52" y="390" font-size="13" font-style="italic" fill="#A85B49">if lost: make new keys, update every tool</text>
+
+  <path d="M38,414 H98 V424 H340 V498 H38 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="52" y="446" font-size="14" font-weight="700" fill="#2A2A35">data\</text>
+  <text x="52" y="466" font-size="13" fill="#6B6873">chats, accounts, media index</text>
+  <text x="52" y="486" font-size="13" font-style="italic" fill="#6B6873">if lost: gone</text>
+
+  <path d="M38,510 H98 V520 H340 V594 H38 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="52" y="542" font-size="14" font-weight="700" fill="#2A2A35">media\</text>
+  <text x="52" y="562" font-size="13" fill="#6B6873">movies, shows, music · empty today</text>
+  <text x="52" y="582" font-size="13" font-style="italic" fill="#6B6873">if lost: gone</text>
+
+  <!-- column B nodes: x 388, w 262, row 1 (h 84) and row 3 (h 104) -->
+  <path d="M388,126 H448 V136 H650 V210 H388 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="402" y="158" font-size="14" font-weight="700" fill="#2A2A35">home-library-series\server\</text>
+  <text x="402" y="178" font-size="13" fill="#6B6873">how Langfuse starts</text>
+  <text x="402" y="198" font-size="13" font-style="italic" fill="#6B6873">if lost: clone the repo again</text>
+
+  <path d="M388,318 H448 V328 H650 V422 H388 Z" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="402" y="350" font-size="14" font-weight="700" fill="#A85B49">server\.env</text>
+  <text x="402" y="370" font-size="13" fill="#A85B49">Langfuse keys and login</text>
+  <text x="402" y="390" font-size="13" fill="#A85B49">git ignores it: this disk only</text>
+  <text x="402" y="410" font-size="13" font-style="italic" fill="#A85B49">if lost: make new keys</text>
+
+  <text x="402" y="444" font-size="12.5" font-weight="600" fill="#A85B49">The Langfuse keys in both .env</text>
+  <text x="402" y="461" font-size="12.5" font-weight="600" fill="#A85B49">files must match.</text>
+
+  <!-- column C nodes: x 698, w 264, rows 1 and 2 -->
+  <path d="M698,126 H758 V136 H962 V210 H698 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="712" y="158" font-size="14" font-weight="700" fill="#2A2A35">whl-langfuse volumes</text>
+  <text x="712" y="178" font-size="13" fill="#6B6873">every recorded request</text>
+  <text x="712" y="198" font-size="13" font-style="italic" fill="#6B6873">if lost: gone</text>
+
+  <path d="M698,222 H758 V232 H962 V306 H698 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text class="m" x="712" y="254" font-size="14" font-weight="700" fill="#2A2A35">.ollama\models</text>
+  <text x="712" y="274" font-size="13" fill="#6B6873">the downloaded models, on C:</text>
+  <text x="712" y="294" font-size="13" font-style="italic" fill="#6B6873">if lost: download again</text>
+
+  <!-- legend, one row at y 662 -->
+  <path d="M24,652 H34 V655 H48 V670 H24 Z" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="56" y="666" font-size="12.5" fill="#6B6873">a file or folder</text>
+  <path d="M176,652 H186 V655 H200 V670 H176 Z" fill="#EDD8CE" stroke="#A85B49" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="208" y="666" font-size="12.5" fill="#6B6873">holds secrets</text>
+  <line x1="318" y1="662" x2="354" y2="662" stroke="#A85B49" stroke-width="1.5" stroke-dasharray="2,3"/>
+  <text x="362" y="666" font-size="12.5" fill="#6B6873">these must match</text>
+  <rect x="496" y="654" width="24" height="16" rx="5" fill="none" stroke="#A28438" stroke-width="1.5"/>
+  <text x="528" y="666" font-size="12.5" fill="#6B6873">no backup</text>
+  <rect x="622" y="654" width="24" height="16" rx="5" fill="none" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="654" y="666" font-size="12.5" fill="#6B6873">in git</text>
+
+  <!-- caption -->
+  <text x="500" y="698" text-anchor="middle" font-size="13.5" font-weight="600" fill="#A85B49">DIA-111 · Files and state: only the Langfuse compose files are in git; E:\WHL and all saved state have no backup.</text>
+</svg>

@@ -13,7 +13,7 @@ Exit code 0 means every check that ran passed.
 param(
     [string]$Desktop = "lemonpepper",
     [string]$OllamaModel = "qwen2.5-coder:14b",
-    [string]$RelayModel = "ollama-coder"
+    [string]$RelayModel = "local-coder"
 )
 
 $ErrorActionPreference = "Stop"

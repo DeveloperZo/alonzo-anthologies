@@ -42,11 +42,11 @@ Only Zo can switch the network, so ask for that once and wait.
 | Check | Passes when |
 | --- | --- |
 | Tailscale reaches the desktop | A pong comes back. "via DERP" means relayed, which is normal on a hotspot. Skipped if the Tailscale command cannot be found |
-| Ollama lists models | Six models |
+| Ollama lists models | At least the two the relay uses, `gpt-oss:20b` and `qwen2.5-coder:14b` |
 | Ollama answers a chat | A one-word reply, usually within 10 seconds |
 | Relay refuses a request with no key | HTTP 401 |
-| Relay lists its routes | `local-fast`, `local-coder`, `ollama-coder` |
-| Relay answers a chat on `ollama-coder` | A one-word reply |
+| Relay lists its routes | `local-fast`, `local-coder` |
+| Relay answers a chat on `local-coder` | A one-word reply. Up to 30 seconds if the other model was loaded |
 | Langfuse dashboard is up | Status OK |
 | Open WebUI is up | HTTP 200 |
 | Jellyfin is up | HTTP 200 |

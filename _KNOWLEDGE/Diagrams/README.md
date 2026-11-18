@@ -33,10 +33,17 @@ what is under `content/`. The AI governance series is the existing example
 | DIA-103 | [Hosting](./DIA-103-Hosting.svg) ([spec](./DIA-103-Hosting.md)) | [ARCH-003](../Architecture/ARCH-003-Hosting.md) |
 | DIA-104 | [Site build](./DIA-104-SiteBuild.svg) ([spec](./DIA-104-SiteBuild.md)) | [ARCH-004](../Architecture/ARCH-004-SiteBuild.md) |
 | DIA-105 | [Resume app](./DIA-105-ResumeSpa.svg) ([spec](./DIA-105-ResumeSpa.md)) | [ARCH-005](../Architecture/ARCH-005-ResumeSpa.md) |
-| DIA-106 | [Home library](./DIA-106-HomeLibrary.svg) ([spec](./DIA-106-HomeLibrary.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-106 | [Home library: who does what work](./DIA-106-HomeLibrary.svg) ([spec](./DIA-106-HomeLibrary.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-107 | [Components: what each piece is and why it is here](./DIA-107-HomeLibraryComponents.svg) ([spec](./DIA-107-HomeLibraryComponents.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-108 | [What runs where, and which models fit on the card](./DIA-108-HomeLibraryRunsWhere.svg) ([spec](./DIA-108-HomeLibraryRunsWhere.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-109 | [One request, step by step](./DIA-109-HomeLibraryRequest.svg) ([spec](./DIA-109-HomeLibraryRequest.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-110 | [Startup and failure](./DIA-110-HomeLibraryStartup.svg) ([spec](./DIA-110-HomeLibraryStartup.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-111 | [Files, secrets and state](./DIA-111-HomeLibraryFiles.svg) ([spec](./DIA-111-HomeLibraryFiles.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
+| DIA-112 | [Who can reach what](./DIA-112-HomeLibraryReach.svg) ([spec](./DIA-112-HomeLibraryReach.md)) | [Home library series README](../../anthologies/home-library-series/README.md) |
 
 ## Changelog
 
+- 2026-11-18: DIA-106 redrawn as the overview of a set of seven; added DIA-107 to DIA-112, each from one perspective.
 - 2026-11-17: Added DIA-106 for the home library series.
 - 2026-11-10: Added `proposals/` with three reference plates and a pointer to the plate style.
 - 2026-10-14: Added DIA-101 to DIA-105 for the Architecture set; definition link moved to `_META/Definitions/`.

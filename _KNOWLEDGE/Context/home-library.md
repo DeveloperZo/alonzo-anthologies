@@ -14,8 +14,24 @@ relay got written on 2026-11-17.
 - **Ollama** runs natively on port 11434 and is what the thin version
   proved from limesalt.
 - **The two were joined on 2026-11-17** (Zo's decision). The WHL
-  LiteLLM on port 4000 is the one relay. It has a route to Ollama
-  (`ollama-coder`) and reports every request to Langfuse.
+  LiteLLM on port 4000 is the one relay and reports every request to
+  Langfuse.
+- **Ollama is the only model runtime since 2026-11-18** (Zo's decision:
+  drop whichever of the two was worse). LM Studio's server is stopped;
+  the app is still installed. Routes: `local-fast` is `gpt-oss:20b`,
+  `local-coder` is `qwen2.5-coder:14b`, both at context 16384, the
+  largest that keeps each fully on the 16 GB card. Measured the same
+  day: gpt-oss 20b ran at 165 tokens per second in LM Studio and 155 in
+  Ollama; at context 32768 it drops to 62; Devstral Small 2 does not
+  fit and was removed.
+- **Intended use (Zo, 2026-11-18):** a frontier tool is the harness and
+  hands token-heavy work to the local models to cut frontier cost. The
+  hand-off is `anthologies/home-library-series/client/ask-local.ps1`;
+  what is safe to hand over is in `client/ROUTING.md` beside it. No
+  fallback is wanted for when the desktop is off. A memory layer and
+  moving `E:\WHL` into a repo are both deferred.
+- **Never call the relay's `GET /health`.** It sends a real chat to
+  every route and forces a model swap. Use `/health/liveliness`.
 - **Langfuse** runs from `anthologies/home-library-series/server/` on
   port 3001, as compose project `whl-langfuse`, attached to the `whl`
   Docker network. Port 3000 is Open WebUI.

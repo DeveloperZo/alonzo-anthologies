@@ -1,0 +1,133 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d108-title d108-desc">
+  <title id="d108-title">DIA-108 · What runs where: what runs on what in the home library, and which models fit on the graphics card</title>
+  <desc id="d108-desc">Reads bottom to top: each thing stands on what is beneath it. On the left is the laptop, limesalt, holding your tools: Claude Code, a browser and Tailscale. On the right is the desktop, lemonpepper. At the bottom of the desktop is the hardware layer: an i9-13900K processor, 64 GB of memory and one graphics card, an RTX 5080 with 16 GB of graphics memory, where models run. Above the hardware is Windows 11, with sleep set to never. Standing on Windows are two programs that run directly on it, Tailscale (the private network to the laptop) and Ollama (the model runtime, which loads a model when a request asks), and Docker Desktop, which runs four containers: LiteLLM (the relay), Open WebUI (the chat page), Langfuse (the request record, seven containers drawn as one) and Jellyfin (the media server). One line runs from Ollama straight down to the graphics card: Ollama loads models there. A small bar chart beside the graphics card shows which models fit in 16 GB, drawn to scale. Route local-fast uses gpt-oss:20b, 12 GB when loaded. Route local-coder uses qwen2.5-coder:14b, 11 GB when loaded. Both fit, one at a time. A swap between them takes 6 to 30 seconds. Devstral Small 2, at 15 GB, was too big and was removed.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49;   --red-soft: #EDD8CE;
+        --amber: #A28438; --amber-soft: #F0E5CD;
+        --blue: #4F627F;  --blue-soft: #DEE3EC;
+        --green: #5A8270; --green-soft: #DEE8E1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183;   --red-soft: #3D2925;
+          --amber: #D6B574; --amber-soft: #3B3220;
+          --blue: #94A6C4;  --blue-soft: #2A323F;
+          --green: #92BAA6; --green-soft: #233029;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); } [stroke="#2A2A35"] { stroke: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [fill="#E2DFD6"] { fill: var(--line); } [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); } [stroke="#6B6873"] { stroke: var(--muted); }
+      [fill="#A85B49"] { fill: var(--red); } [stroke="#A85B49"] { stroke: var(--red); } [fill="#EDD8CE"] { fill: var(--red-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+    </style>
+    <marker id="d108-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+  </defs>
+  <rect width="1000" height="700" fill="#F2EEE3"/>
+
+  <!-- header -->
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-108 · WHAT RUNS WHERE</text>
+  <text x="500" y="58" text-anchor="middle" font-size="14" fill="#6B6873">What runs on what, and which models fit on the graphics card?</text>
+
+  <!-- machine frames -->
+  <rect x="24" y="90" width="180" height="526" rx="14" fill="none" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="38" y="112" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">LAPTOP · limesalt</text>
+  <rect x="224" y="90" width="752" height="526" rx="14" fill="none" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="240" y="112" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">DESKTOP · lemonpepper</text>
+
+  <!-- bands: Windows stands on hardware -->
+  <rect x="240" y="436" width="720" height="168" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="590" y="455" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">HARDWARE · i9-13900K · 64 GB memory</text>
+  <rect x="240" y="390" width="720" height="34" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="590" y="411" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">WINDOWS 11 · sleep set to never</text>
+
+  <!-- native zone label and Docker frame -->
+  <text x="244" y="149" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">PROGRAMS ON WINDOWS</text>
+  <rect x="584" y="130" width="380" height="250" rx="8" fill="none" stroke="#9D9A95" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="596" y="149" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">DOCKER DESKTOP · runs containers on Windows</text>
+
+  <!-- the one line: Ollama loads models onto the graphics card -->
+  <line x1="405" y1="364" x2="405" y2="474" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d108-blue)"/>
+  <text x="416" y="460" font-size="12.5" font-weight="600" fill="#4F627F">loads models here</text>
+
+  <!-- laptop: your tools (caller pill) -->
+  <rect x="36" y="295" width="156" height="110" rx="55" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="114" y="327" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">YOUR TOOLS</text>
+  <text x="114" y="348" text-anchor="middle" font-size="13" fill="#4F627F">Claude Code,</text>
+  <text x="114" y="366" text-anchor="middle" font-size="13" fill="#4F627F">a browser,</text>
+  <text x="114" y="384" text-anchor="middle" font-size="13" fill="#4F627F">plus Tailscale</text>
+
+  <!-- native Windows programs (square corners) -->
+  <rect x="244" y="160" width="322" height="84" rx="2" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="405" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">TAILSCALE</text>
+  <text x="405" y="218" text-anchor="middle" font-size="13" fill="#5A8270">private network to the laptop</text>
+  <rect x="244" y="280" width="322" height="84" rx="2" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="405" y="306" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">OLLAMA</text>
+  <text x="405" y="328" text-anchor="middle" font-size="13" fill="#5A8270">the model runtime</text>
+  <text x="405" y="348" text-anchor="middle" font-size="13" font-style="italic" fill="#5A8270">loads a model when a request asks</text>
+
+  <!-- Docker containers (round corners), 2 by 2 grid -->
+  <rect x="596" y="160" width="170" height="84" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="681" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">LITELLM</text>
+  <text x="681" y="218" text-anchor="middle" font-size="13" fill="#5A8270">the relay</text>
+  <rect x="782" y="160" width="170" height="84" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="867" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">OPEN WEBUI</text>
+  <text x="867" y="218" text-anchor="middle" font-size="13" fill="#5A8270">chat page</text>
+  <!-- Langfuse: several containers drawn as one stack -->
+  <rect x="602" y="286" width="170" height="84" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <rect x="596" y="280" width="170" height="84" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="681" y="306" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">LANGFUSE</text>
+  <text x="681" y="328" text-anchor="middle" font-size="13" fill="#5A8270">request record</text>
+  <text x="681" y="348" text-anchor="middle" font-size="13" font-style="italic" fill="#5A8270">seven containers</text>
+  <rect x="782" y="280" width="170" height="84" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="867" y="316" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">JELLYFIN</text>
+  <text x="867" y="338" text-anchor="middle" font-size="13" fill="#5A8270">media server</text>
+
+  <!-- hardware node: the graphics card, directly under Ollama -->
+  <rect x="244" y="476" width="322" height="84" rx="2" fill="#FAFAF8" stroke="#6B6873" stroke-width="3"/>
+  <text x="405" y="502" text-anchor="middle" font-size="16" font-weight="700" fill="#6B6873">GRAPHICS CARD · RTX 5080</text>
+  <text x="405" y="524" text-anchor="middle" font-size="13" fill="#6B6873">16 GB of graphics memory</text>
+  <text x="405" y="544" text-anchor="middle" font-size="13" font-style="italic" fill="#6B6873">where models run</text>
+
+  <!-- model bars. Scale: 16 GB = 300 units, so 1 GB = 18.75 units. Bars start at x 590.
+       12 GB = 225 units, 11 GB = 206.25 units, the 16 GB rule is at x 890.
+       Sizes are graphics memory when loaded at context 16384 (measured 2026-11-18). -->
+  <text x="590" y="479" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">WHICH MODELS FIT IN 16 GB</text>
+  <rect x="590" y="506" width="300" height="12" fill="#F2EEE3" stroke="#E2DFD6" stroke-width="1"/>
+  <rect x="590" y="544" width="300" height="12" fill="#F2EEE3" stroke="#E2DFD6" stroke-width="1"/>
+  <rect x="590" y="506" width="225" height="12" fill="#5A8270"/>
+  <rect x="590" y="544" width="206.25" height="12" fill="#5A8270"/>
+  <line x1="890" y1="488" x2="890" y2="562" stroke="#6B6873" stroke-width="1.5"/>
+  <text x="897" y="500" font-size="12.5" font-weight="600" fill="#6B6873">16 GB</text>
+  <text x="590" y="500" font-size="12.5" font-weight="600" fill="#2A2A35" class="m">local-fast</text>
+  <text x="686" y="500" font-size="13" fill="#2A2A35">gpt-oss:20b · 12 GB</text>
+  <text x="590" y="538" font-size="12.5" font-weight="600" fill="#2A2A35" class="m">local-coder</text>
+  <text x="686" y="538" font-size="13" fill="#2A2A35">qwen2.5-coder:14b · 11 GB</text>
+  <text x="590" y="575" font-size="12.5" fill="#6B6873">one model loaded at a time; a swap takes 6 to 30 s</text>
+  <rect x="590" y="586" width="8" height="8" fill="#A28438"/>
+  <text x="604" y="594" font-size="12.5" font-weight="600" fill="#A28438">Devstral Small 2 (15 GB) was too big: removed</text>
+
+  <!-- legend -->
+  <rect x="24" y="634" width="24" height="16" rx="2" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="56" y="646" font-size="12.5" fill="#6B6873">runs directly on Windows</text>
+  <rect x="236" y="634" width="24" height="16" rx="6" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="268" y="646" font-size="12.5" fill="#6B6873">Docker container</text>
+  <rect x="400" y="634" width="24" height="16" rx="2" fill="#FAFAF8" stroke="#6B6873" stroke-width="3"/>
+  <text x="432" y="646" font-size="12.5" fill="#6B6873">hardware</text>
+  <rect x="520" y="637" width="24" height="10" fill="#5A8270"/>
+  <text x="552" y="646" font-size="12.5" fill="#6B6873">fits on the card</text>
+  <rect x="676" y="638" width="8" height="8" fill="#A28438"/>
+  <text x="692" y="646" font-size="12.5" fill="#6B6873">does not fit</text>
+
+  <!-- caption -->
+  <text x="500" y="678" text-anchor="middle" font-size="13.5" font-weight="600" fill="#A85B49">DIA-108 · What runs where: Ollama runs on Windows and loads models onto one 16 GB graphics card; the rest runs in Docker.</text>
+</svg>
