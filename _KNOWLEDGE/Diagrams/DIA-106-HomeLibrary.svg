@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1100 575" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dia106-title dia106-desc">
   <title id="dia106-title">DIA-106 · Home library: what runs on the desktop and how limesalt reaches it, as of 2026-11-18</title>
-  <desc id="dia106-desc">Reads left to right. The laptop limesalt reaches the desktop win-mpisa5dbmqf over Tailscale. Step 1, proven from limesalt away from home: a request to Ollama on port 11434, which runs natively on Windows and listens on all addresses. Step 2, answered from limesalt on 2026-11-18: ports 3000, 3001, 4000 and 8096, though a chat through the relay with its key has not been run from limesalt. Step 3: Open WebUI on port 3000 sends chat to LiteLLM on port 4000. Step 4: LiteLLM forwards the routes local-fast and local-coder to LM Studio on port 1234, which runs natively and accepts connections from this machine only. Step 5: Jellyfin on port 8096 reads the media folder at E:\WHL\media. Step 6: LiteLLM forwards the route ollama-coder to Ollama. Step 7: LiteLLM sends a record of every request to Langfuse, the activity dashboard on port 3001, whose files live in this repo.</desc>
+  <desc id="dia106-desc">Reads left to right. The laptop limesalt reaches the desktop win-mpisa5dbmqf over Tailscale. Step 1, proven from limesalt away from home: a request to Ollama on port 11434, which runs natively on Windows and listens on all addresses. Step 2, proven from limesalt on 2026-11-18: ports 3000, 3001, 4000 and 8096, including a chat through the relay with its key. The run did not record whether limesalt was away from home. Step 3: Open WebUI on port 3000 sends chat to LiteLLM on port 4000. Step 4: LiteLLM forwards the routes local-fast and local-coder to LM Studio on port 1234, which runs natively and accepts connections from this machine only. Step 5: Jellyfin on port 8096 reads the media folder at E:\WHL\media. Step 6: LiteLLM forwards the route ollama-coder to Ollama. Step 7: LiteLLM sends a record of every request to Langfuse, the activity dashboard on port 3001, whose files live in this repo.</desc>
   <defs>
     <style>
       :root {
@@ -51,7 +51,7 @@
   <path d="M100,180 V303 H336" fill="none" stroke="#A28438" stroke-width="2" marker-end="url(#hl-amber)"/>
   <path d="M100,303 V407 H336" fill="none" stroke="#A28438" stroke-width="2" marker-end="url(#hl-amber)"/>
   <text x="212" y="293" text-anchor="middle" font-size="9.5" font-weight="600" fill="#A28438">ports 3000, 3001, 4000, 8096</text>
-  <text x="212" y="319" text-anchor="middle" font-size="9" fill="#A28438">answer limesalt · keyed chat not yet run</text>
+  <text x="212" y="319" text-anchor="middle" font-size="9" fill="#A28438">proven from limesalt · network not noted</text>
   <!-- arrows 3 to 5: running on the desktop -->
   <line x1="540" y1="303" x2="596" y2="303" stroke="#5A8270" stroke-width="2.5" marker-end="url(#hl-green)"/>
   <line x1="800" y1="303" x2="866" y2="303" stroke="#5A8270" stroke-width="2.5" marker-end="url(#hl-green)"/>
@@ -117,7 +117,7 @@
   <line x1="300" y1="505" x2="336" y2="505" stroke="#5A8270" stroke-width="2.5"/>
   <text x="344" y="509" font-size="10.5" fill="#6B6873">running on the desktop</text>
   <line x1="490" y1="505" x2="526" y2="505" stroke="#A28438" stroke-width="2"/>
-  <text x="534" y="509" font-size="10.5" fill="#6B6873">answers limesalt; chat with the relay key not yet run</text>
+  <text x="534" y="509" font-size="10.5" fill="#6B6873">proven from limesalt; away from home not confirmed</text>
   <circle cx="870" cy="505" r="8" fill="#F2EEE3" stroke="#6B6873" stroke-width="1.2"/>
   <text x="870" y="509" text-anchor="middle" font-size="9.5" font-weight="700" fill="#6B6873">n</text>
   <text x="884" y="509" font-size="10.5" fill="#6B6873">step in the spec</text>

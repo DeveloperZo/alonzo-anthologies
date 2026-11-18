@@ -2,7 +2,7 @@
 ## Snapshot
 - **Diagram file:** `_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg`
 - **Theme:** What runs on the desktop for the home library, and how the laptop reaches it, as of 2026-11-18
-- **Primary audience takeaway:** One relay (LiteLLM on port 4000) fronts both model runtimes, LM Studio and Ollama, and records every request in Langfuse. limesalt reaches all of it over Tailscale. From limesalt, the direct Ollama path is proven end to end and every other port answers, but a chat through the relay with its key has not been run.
+- **Primary audience takeaway:** One relay (LiteLLM on port 4000) fronts both model runtimes, LM Studio and Ollama, and records every request in Langfuse. limesalt reaches all of it over Tailscale. From limesalt, the direct Ollama path is proven away from home, and the relay, dashboard, chat page and media server are proven too, on a network the run did not record.
 
 ## What The Diagram Shows
 The laptop, limesalt, sits on the left. The desktop, `win-mpisa5dbmqf`, fills the right. Both are on the same Tailscale network, which is how every arrow from the laptop travels.
@@ -13,7 +13,7 @@ The lower block is the WHL stack, built on 2026-10-02 from files in `E:\WHL`, wh
 
 Langfuse, top right, is the activity dashboard on port 3001. It runs in Docker from the files in `anthologies/home-library-series/server/` and joins the WHL Docker network, so LiteLLM can send it a record of every request without leaving Docker.
 
-The amber arrows from limesalt mark ports that answered from limesalt on 2026-11-18: Open WebUI, Langfuse and Jellyfin reported healthy, and the relay refused a request with no key, as it should. They stay amber because a chat through the relay with its key has not been run from limesalt, and the report did not say which network the laptop was on.
+The amber arrows from limesalt mark ports that answered from limesalt on 2026-11-18: Open WebUI, Langfuse and Jellyfin reported healthy, and the relay refused a request with no key, as it should. A second run with the key set listed the three routes and got a chat answered on `ollama-coder`, and Langfuse holds the record of that chat. They stay amber only because neither report said which network the laptop was on.
 
 ## Elements And Flow
 - **Components:**
@@ -25,7 +25,7 @@ The amber arrows from limesalt mark ports that answered from limesalt on 2026-11
   - The media folder `E:\WHL\media`
 - **Relationships:**
   - Blue arrow 1 is the only path proven from limesalt away from home
-  - Amber arrows 2 are ports that answer limesalt, with the keyed relay chat still untested from there
+  - Amber arrows 2 are proven from limesalt, but not confirmed away from home
   - Green arrows 3 to 7 are connections that run entirely on the desktop
   - Dashed outlines group the client, the desktop, and the WHL stack inside Docker Desktop
 - **Notable labels or metrics:**
@@ -36,7 +36,7 @@ The amber arrows from limesalt mark ports that answered from limesalt on 2026-11
 
 ## How To Read It
 1. Step 1: limesalt asks Ollama for a model over Tailscale. This is the thin version exit test and it passed.
-2. Step 2: the same tunnel also reaches ports 3000, 3001, 4000 and 8096. All four answered from the laptop. The relay has only been asked without its key.
+2. Step 2: the same tunnel also reaches ports 3000, 3001, 4000 and 8096. All four are proven from the laptop, the relay with its key.
 3. Step 3: Open WebUI passes each chat request to LiteLLM, using the key in `E:\WHL\compose\.env`.
 4. Step 4: LiteLLM forwards `local-fast` and `local-coder` to LM Studio through `host.docker.internal`, which is why LM Studio can stay bound to this machine.
 5. Step 5: Jellyfin reads the media folder. It depends on nothing else in the picture.
@@ -44,7 +44,7 @@ The amber arrows from limesalt mark ports that answered from limesalt on 2026-11
 7. Step 7: LiteLLM reports each request to Langfuse. If Langfuse is down, requests still succeed and only the record is lost.
 
 ## Home Library Relevance
-The series README was first written without sight of `E:\WHL` and planned a second relay. On 2026-11-17 the decision was to join the two: keep the LiteLLM that already ran, add a route to Ollama, and attach Langfuse to it. This picture is that result. It also shows what is left: the keyed relay chat is untested from limesalt (the brief for that is `anthologies/home-library-series/client/VERIFY.md`), a caller who goes straight to Ollama on arrow 1 is not recorded in Langfuse, and Ollama and LM Studio share one 16 GB graphics card.
+The series README was first written without sight of `E:\WHL` and planned a second relay. On 2026-11-17 the decision was to join the two: keep the LiteLLM that already ran, add a route to Ollama, and attach Langfuse to it. This picture is that result. It also shows what is left: one run from limesalt on a hotspot to confirm the amber arrows away from home (the brief is `anthologies/home-library-series/client/VERIFY.md`), a caller who goes straight to Ollama on arrow 1 is not recorded in Langfuse, and Ollama and LM Studio share one 16 GB graphics card.
 
 Verified from the desktop on 2026-11-18 by `anthologies/home-library-series/client/verify.ps1` (9 of 9 checks) and by reading back from Langfuse the record of a chat sent through each runtime. Other sources, read on 2026-11-17: `docker ps`, `tailscale status`, `ollama list`, `E:\WHL\README.md`, `E:\WHL\compose\`, `E:\WHL\config\litellm\config.yaml`.
 
