@@ -1,16 +1,12 @@
 import { applyProfileTailoring } from './tailoring';
 
 const baseSummary =
-  "Technology leader with over a decade of experience in leveraging software architecture and engineering principles. Modernizes complex systems, leads cross-functional teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
+  "Software architect and principal engineer with over a decade of experience building and running production systems. Modernizes complex systems, sets technical direction across teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
 
 const baseCompetencies = [
   {
     title: "Software Architecture",
     body: "Designs scalable, maintainable systems that balance business needs, technical constraints, and long-term sustainability.",
-  },
-  {
-    title: "Technology Leadership",
-    body: "Leads cross-functional engineering teams, sets technical direction, and drives delivery from planning through production.",
   },
   {
     title: "Enterprise Integration",
@@ -28,17 +24,21 @@ const baseCompetencies = [
     title: "AI & Technology Modernization",
     body: "Modernizes legacy systems and applies AI across the software development lifecycle to accelerate delivery without compromising engineering standards.",
   },
+  {
+    title: "Technology Leadership",
+    body: "Sets technical direction, leads cross-functional engineering teams, and drives delivery from planning through production.",
+  },
 ];
 
 // The resume's one Skills section: each competency theme with the named tools behind it, for ATS keyword matching.
 // List only what the experience entries or their overlays back up. The prose competencies above feed the site's timeline.
 export const skills = [
-  { group: "Leadership", items: ["Engineering management", "People leadership", "Hiring engineering teams", "Cross-team planning", "Technical leadership", "Executive communication"] },
   { group: "Architecture", items: ["Microservices", "Multi-tenant", "SOA", "CQRS (command query responsibility segregation)"] },
   { group: "Languages & Frameworks", items: ["C#", "TypeScript", "JavaScript", "SQL", ".NET", "Python", "Entity Framework", "SignalR", "React"] },
   { group: "Cloud, Data & DevOps", items: ["Azure Cloud","AWS Cloud", "Docker", "CI/CD", "SQL Server", "PostgreSQL", "Observability (Application Insights, CloudWatch, Datadog)"] },
   { group: "Quality & Compliance", items: ["Automated testing", "HIPAA & PHI compliance", "Agile delivery"] },
   { group: "AI & Modernization", items: ["AI-assisted SDLC (Claude, Codex, Cursor)", "Legacy modernization"] },
+  { group: "Leadership", items: ["Technical leadership", "Cross-team planning", "Executive communication", "Engineering management", "People leadership", "Hiring engineering teams"] },
 ];
 
 // Leadership outside paid work, and awards. Periods are printed as written because some are year-only.

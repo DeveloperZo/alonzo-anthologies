@@ -9,6 +9,43 @@ competencies live in `src/data/profile.data.ts`. ResumeView and
 CareerTimeline both read that file, so a change in one place reaches
 the printed resume and the timeline.
 
+## The base resume leads with architecture and engineering (2026-11-20)
+
+The untailored data is written for Architect and Senior or Principal
+Engineer roles, not management (Zo, 2026-11-20). A management
+application is an overlay, like `topstep-em`.
+
+What that means in the shared files:
+
+- **Summary** opens "Software architect and principal engineer" (Zo chose principal over senior, 2026-11-20; the only Principal title held is Principal Technologist on the consulting work) and says
+  "sets technical direction across teams". It does not say "Technology
+  leader" or "leads cross-functional teams".
+- **Bullet order** in quests 1, 2, 3, 4 and 8 puts design and build work
+  first and people or executive work last. Quest 1 ends on the hiring
+  bullet. Quest 4 ends on the two interim director bullets. Quest 12
+  keeps advising first, because advising on technical direction is
+  principal-level work.
+- **Skills** lists the Leadership group last, with technical leadership
+  and cross-team planning ahead of engineering management inside it.
+- **Competencies** list Technology Leadership last.
+
+Nothing was added or removed and no title changed. Titles are facts:
+quest 1 stays Software Engineering Manager.
+
+Two things to know before changing this again:
+
+- An overlay that lists every key in `order` is unaffected by base
+  order. An overlay that omits a quest inherits it. On 2026-11-20 the
+  only inherited case was `topstep-em` quest 8.
+- Overlays cannot change the Skills section, so its group order reaches
+  every company package, including management ones.
+
+The check used for this change: dump the data untailored and under every
+overlay before and after, then confirm for each quest and variant that
+the set of bullets, their wording, and all other fields are identical
+and only order differs. Then `npm test`, `npm run apply:package -- base`
+(must stay 2 pages with a text layer), and a look at each view.
+
 ## What each view filters on
 
 | View | File | Shows |

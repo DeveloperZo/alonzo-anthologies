@@ -48,23 +48,13 @@ export const baseQuests: Quest[] = [
   tags: ['Engineering Management', 'Healthcare', 'HIPAA', 'Identity/Auth', 'Platform Architecture', 'AI-Assisted Development', 'AWS', 'Software Development'],
   accomplishments: [
     {
-      key: 'ai-sdlc',
+      key: 'planning',
       description:
-        'Introduced AI-assisted SDLC practices with PHI safeguards across multiple teams, bringing in industry expertise and architectural guidance the teams could use to be more effective.',
+        'Coordinated planning across seven engineering teams for the new platform and did the system design for 30% of its stories.',
       role: 'Software Engineering Manager',
       learnings: [
-        'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
-        'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
-      ],
-    },
-    {
-      key: 'team',
-      description:
-        'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
-      role: 'Software Engineering Manager',
-      learnings: [
-        'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
-        'Discovered that clear capability boundaries help teams maintain focus and reduce cross-team dependencies',
+        'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
+        'Discovered that hands-on solution design across team boundaries keeps program delivery coherent',
       ],
     },
     {
@@ -78,16 +68,6 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'planning',
-      description:
-        'Coordinated planning across seven engineering teams for the new platform and did the system design for 30% of its stories.',
-      role: 'Software Engineering Manager',
-      learnings: [
-        'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
-        'Discovered that hands-on solution design across team boundaries keeps program delivery coherent',
-      ],
-    },
-    {
       key: 'vendors',
       description:
         'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice would be to change later.',
@@ -98,6 +78,16 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
+      key: 'ai-sdlc',
+      description:
+        'Introduced AI-assisted SDLC practices with PHI safeguards across multiple teams, bringing in industry expertise and architectural guidance the teams could use to be more effective.',
+      role: 'Software Engineering Manager',
+      learnings: [
+        'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
+        'Discovered that structured redaction standards enable AI productivity while maintaining HIPAA compliance',
+      ],
+    },
+    {
       key: 'delivery',
       description:
         'Delivered over 90% of refined work within two weeks, with the technical design done before the team picked it up.',
@@ -105,6 +95,16 @@ export const baseQuests: Quest[] = [
       learnings: [
         'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
         'Discovered that team execution improves when work is refined with explicit design intent',
+      ],
+    },
+    {
+      key: 'team',
+      description:
+        'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
+      role: 'Software Engineering Manager',
+      learnings: [
+        'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
+        'Discovered that clear capability boundaries help teams maintain focus and reduce cross-team dependencies',
       ],
     },
   ],
@@ -128,16 +128,6 @@ export const baseQuests: Quest[] = [
   tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration', 'Azure', 'Software Development'],
   accomplishments: [
     {
-      key: 'component-library',
-      description:
-        'Created a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
-      role: 'Senior Software Architect',
-      learnings: [
-        'Learned that component libraries still deliver value even when implemented late in a project',
-        'Discovered that reusable design systems can unlock measurable commercial outcomes',
-      ],
-    },
-    {
       key: 'ui-architecture',
       description:
         'Set the UI architecture and standards for all five teams, and stayed hands-on as full-stack architect for one of them on Azure, including production support with Application Insights.',
@@ -148,12 +138,13 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'mentoring',
+      key: 'component-library',
       description:
-        'Led developers at every level across the five teams on the architecture, and mentored the senior developers.',
+        'Created a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
       role: 'Senior Software Architect',
       learnings: [
-        'Learned that deliberate mentorship strengthens engineering capability across teams',
+        'Learned that component libraries still deliver value even when implemented late in a project',
+        'Discovered that reusable design systems can unlock measurable commercial outcomes',
       ],
     },
     {
@@ -173,6 +164,15 @@ export const baseQuests: Quest[] = [
       learnings: [
         'Learned that maximizing team velocity requires teams to understand strategic direction and implementation goals',
         'Discovered that architectural clarity compounds into sustained delivery gains',
+      ],
+    },
+    {
+      key: 'mentoring',
+      description:
+        'Led developers at every level across the five teams on the architecture, and mentored the senior developers.',
+      role: 'Senior Software Architect',
+      learnings: [
+        'Learned that deliberate mentorship strengthens engineering capability across teams',
       ],
     },
   ],
@@ -196,22 +196,22 @@ export const baseQuests: Quest[] = [
   tags: ['Legacy Modernization', 'Azure', 'AWS', 'SaaS', 'Healthcare', 'Payment Processing', 'Software Development'],
   accomplishments: [
     {
-      key: 'engagements',
-      description:
-        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call (Application Insights, CloudWatch).',
-      role: 'Software Architect',
-      learnings: [
-        'Learned to ground stories in facts and data that the client cares about',
-        'Discovered that owning budget and scope alongside technical delivery builds client trust',
-      ],
-    },
-    {
       key: 'stack',
       description:
         'Owned the cloud architecture for every engagement, on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker, AWS Lambda, and Azure SQL.',
       role: 'Software Architect',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
+      ],
+    },
+    {
+      key: 'saas-rebuild',
+      description:
+        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform for 15 tenants with up to 50K users each, without breaking its EHR integrations.',
+      role: 'Software Architect',
+      learnings: [
+        'Learned that multi-tenant architectures can be effectively handled through configuration',
+        'Discovered that maintaining EHR integrations during architectural transitions requires careful API design',
       ],
     },
     {
@@ -225,13 +225,13 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'saas-rebuild',
+      key: 'engagements',
       description:
-        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform for 15 tenants with up to 50K users each, without breaking its EHR integrations.',
+        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call (Application Insights, CloudWatch).',
       role: 'Software Architect',
       learnings: [
-        'Learned that multi-tenant architectures can be effectively handled through configuration',
-        'Discovered that maintaining EHR integrations during architectural transitions requires careful API design',
+        'Learned to ground stories in facts and data that the client cares about',
+        'Discovered that owning budget and scope alongside technical delivery builds client trust',
       ],
     },
     {
@@ -281,26 +281,6 @@ export const baseQuests: Quest[] = [
   tags: ['Leadership', 'Engineering Transition', 'Performance Optimization', 'Technical Strategy', 'Azure', 'Software Development'],
   accomplishments: [
     {
-      key: 'ceo-investors',
-      description:
-        'Stepped in as interim director of engineering after the director was let go, communicating technical strategy to the CEO and investors until the CTO was hired.',
-      role: 'Interim Director of Engineering',
-      learnings: [
-        'Learned that technical leadership requires communication as much as technical proficiency',
-        'Learned how to communicate to leaders what outcomes to expect from the technical department',
-      ],
-    },
-    {
-      key: 'kpis',
-      description:
-        'Hit the KPI targets as interim director while managing the developers and an offshore QA team, then onboarded the incoming CTO.',
-      role: 'Interim Director of Engineering',
-      learnings: [
-        'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
-        'Discovered that effective onboarding of new leadership benefits from structured knowledge transfer',
-      ],
-    },
-    {
       key: 'refactor',
       description:
         'Rewrote the production lending application: moved 250k+ lines onto a service-repository pattern in 3 months and turned sprint velocity from negative back to positive.',
@@ -311,11 +291,14 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'operations',
+      key: 'microservices',
       description:
-        'Owned every deployment and outage response, day and night, with Application Insights monitoring, for a platform where customers made payments through a portal.',
+        'Implemented microservices on Azure Functions and Azure App Service with SignalR for real-time messaging, reworked the Salesforce integration, and wrote a utility to transform the entire database schema.',
       role: 'Team Lead',
-      learnings: [],
+      learnings: [
+        'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
+        'Discovered that early consideration of regulatory requirements prevents costly refactoring later',
+      ],
     },
     {
       key: 'dotnet-core',
@@ -328,13 +311,30 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'microservices',
+      key: 'operations',
       description:
-        'Implemented microservices on Azure Functions and Azure App Service with SignalR for real-time messaging, reworked the Salesforce integration, and wrote a utility to transform the entire database schema.',
+        'Owned every deployment and outage response, day and night, with Application Insights monitoring, for a platform where customers made payments through a portal.',
       role: 'Team Lead',
+      learnings: [],
+    },
+    {
+      key: 'kpis',
+      description:
+        'Hit the KPI targets as interim director while managing the developers and an offshore QA team, then onboarded the incoming CTO.',
+      role: 'Interim Director of Engineering',
       learnings: [
-        'Learned that regulatory compliance should be built into development processes rather than added as an afterthought',
-        'Discovered that early consideration of regulatory requirements prevents costly refactoring later',
+        'Learned that maintaining performance metrics during transitions requires clear communication and delegation',
+        'Discovered that effective onboarding of new leadership benefits from structured knowledge transfer',
+      ],
+    },
+    {
+      key: 'ceo-investors',
+      description:
+        'Stepped in as interim director of engineering after the director was let go, communicating technical strategy to the CEO and investors until the CTO was hired.',
+      role: 'Interim Director of Engineering',
+      learnings: [
+        'Learned that technical leadership requires communication as much as technical proficiency',
+        'Learned how to communicate to leaders what outcomes to expect from the technical department',
       ],
     },
   ],
@@ -489,15 +489,6 @@ export const baseQuests: Quest[] = [
   tags: ['Unity', 'C#', 'Game Development', 'Software Architecture', 'AI-Assisted Development', 'Personal Project', 'Software Development'],
   accomplishments: [
     {
-      key: 'games',
-      description:
-        "Checked in nearly 500 commits across two Unity games: a playable tactical puzzle stopped after a market analysis, and a wave-defense FPS still in progress.",
-      role: 'Game Developer',
-      learnings: [
-        "Learned that writing the market analysis was the decision, not a document that preceded one",
-      ],
-    },
-    {
       key: 'build-constraints',
       description:
         "Specified the architecture and put the constraints in the build, so AI-written code failed automatically when it crossed a boundary.",
@@ -513,6 +504,15 @@ export const baseQuests: Quest[] = [
       role: 'Game Developer',
       learnings: [
         "Learned to write the failure back into the next session's rules",
+      ],
+    },
+    {
+      key: 'games',
+      description:
+        "Checked in nearly 500 commits across two Unity games: a playable tactical puzzle stopped after a market analysis, and a wave-defense FPS still in progress.",
+      role: 'Game Developer',
+      learnings: [
+        "Learned that writing the market analysis was the decision, not a document that preceded one",
       ],
     },
   ],
