@@ -27,7 +27,7 @@ One script, `build.sh`, turns the repo into the folder of web pages Cloudflare s
 
 ![DIA-104 Site build](../Diagrams/DIA-104-SiteBuild.svg)
 
-Read the centre column top to bottom: the numbered steps 1 to 7 are the steps below. The left column is what each step reads (dashed arrows); `_KNOWLEDGE/` has no arrow because Quartz never reads it. The right column is what gets dropped and what gets written. The red box marks the two known gaps, both at step 6.
+The picture is the plain-language outline. The page maker (Quartz) reads only the writing folder, the resume app is placed at `/resume/`, and both land in the finished folder that the publisher puts online. The project notes (`_KNOWLEDGE/`) have no arrow because Quartz never reads them. The picture carries no step numbers and leaves out the two known gaps; both are in the text below.
 
 ## Components that matter here
 
@@ -48,7 +48,7 @@ Read the centre column top to bottom: the numbered steps 1 to 7 are the steps be
 
 ## How it works, step by step
 
-**A full build (steps 1 to 7 in DIA-104; what Cloudflare runs on every push):**
+**A full build (what Cloudflare runs on every push; DIA-104 shows the outline, not these step numbers):**
 
 1. **`build.sh` starts** at the repo root, on Cloudflare (with `NODE_VERSION=22.16.0`) or locally with `bash ./build.sh`. It stops on the first failing command (`set -euo pipefail`).
 2. **It installs the resume app's packages** with `npm ci` in `anthologies/resume-series/resumeContent/`. If `anthologies/resume-series/resumeContent/package.json` is missing it prints "Skipping anthologies/resume-series/resumeContent/" and carries on, which is the first half of the silent-skip gap.

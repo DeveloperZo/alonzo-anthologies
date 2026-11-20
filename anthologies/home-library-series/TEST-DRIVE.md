@@ -9,7 +9,7 @@ Update trigger: when a route, port, tool or the board changes
 Last updated: 2026-11-18
 -->
 
-Eight things to try, quickest first. Each says what you should see. All
+Nine things to try, quickest first. Each says what you should see. All
 commands run from the repo root. The first six work on the desktop
 (lemonpepper) with nothing to set up.
 
@@ -111,6 +111,61 @@ You should see: each piece reported up, then `9 passed, 0 failed`. This
 is also the one command to run after restarting the desktop and logging
 in.
 
+## 9. Private and paid
+
+Rules and limits are in [client/PRIVATE.md](./client/PRIVATE.md). On
+lemonpepper, drives `C:` and `D:` are private and `F:` is the working drive.
+
+**a. The private chat page.** Open `http://lemonpepper:3002` and create
+your account (the first account owns the page). The model list should
+show `local-fast` and `local-think` and nothing else. There is no `paid`.
+
+**b. A private file is refused on the way out.** Make a test file, then try
+to send it to paid, and to save its summary on the working drive:
+
+```powershell
+Set-Content D:\private-test.txt "Test only. The marker is ZEBRA-1."
+```
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local.ps1 -Prompt "Summarize." -File D:\private-test.txt -Route paid -Out D:\out.txt
+```
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local.ps1 -Prompt "Summarize." -File D:\private-test.txt -Out F:\out.txt
+```
+
+You should see: both refused, with `private input cannot go to the 'paid'
+route` and `must be saved on a private drive`. Nothing is sent.
+
+**c. A private file handled at home.**
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local.ps1 -Prompt "Summarize in one line." -File D:\private-test.txt -Out D:\private-test.summary.txt -Task private-test -Stats
+```
+
+You should see: no reply on screen, only a line of numbers with
+`"private":true`. The summary is in `D:\private-test.summary.txt`.
+
+**d. The logbook has no private words.** Open `http://lemonpepper:3001`
+and filter by the tag `private-test`. The request is there with its time
+and token counts, and its text reads as redacted. Search for `ZEBRA-1`:
+nothing.
+
+**e. Paid tools are kept off the private drives.** In Claude Code, ask it
+to read `D:\private-test.txt`. It should say the folder is denied by the
+permission settings.
+
+**f. The paid switch.** This needs your Anthropic API key first (three
+steps in PRIVATE.md). Then, on `http://lemonpepper:3000`, start a new
+chat and pick `paid` in the model list. From a tool:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local.ps1 -Route paid -Prompt "Reply with one word: ready" -Stats
+```
+
+Without a key you should see `request failed` and `401`. With one, `ready`.
+
 ## From limesalt
 
 1. `git pull` in the repo.
@@ -129,6 +184,8 @@ laptop.
 
 | Step | Why it matters |
 | --- | --- |
+| Create your account at `http://lemonpepper:3002` | The private chat page. Same rule: the first account owns it, and it will hold private chats |
+| Put an Anthropic API key in `E:\WHL\compose\.env` | The paid channel stays off until you do. Steps are in `client/PRIVATE.md` |
 | Create your account at `http://lemonpepper:3000` | Open WebUI has no account yet. The first person to sign up on your network becomes its administrator and gets use of the relay |
 | Finish the setup wizard at `http://lemonpepper:8096` | Same for Jellyfin: the first visitor claims it. The media folder is also empty |
 | Decide whether things start by themselves | Docker Desktop is not set to start at login, and the board's collector needs a logon task. Until then, run `server/start.ps1` after a restart |

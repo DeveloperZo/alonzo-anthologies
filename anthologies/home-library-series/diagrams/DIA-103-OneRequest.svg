@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d103-title d103-desc">
+  <title id="d103-title">DIA-103 · One request, step by step</title>
+  <desc id="d103-desc">Five numbered steps. One: whoever asks (the Arbiter, or you on the chat page) sends a request over the private connection to the front door. Two: the front door checks the password and passes the request on. Three: the home AI reads the request and writes the answer. Four: the answer goes back the same way. Five: the front door writes a note of the request in the logbook, which keeps the full question and answer. A short answer takes 1 to 3 seconds. After an hour of quiet the home AI goes to sleep and the next answer takes up to 30 seconds.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49; --blue: #4F627F; --blue-soft: #DEE3EC; --green: #5A8270; --green-soft: #DEE8E1; --amber: #A28438; --amber-soft: #F0E5CD;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183; --blue: #94A6C4; --blue-soft: #2A323F; --green: #92BAA6; --green-soft: #233029; --amber: #D6B574; --amber-soft: #3B3220;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [stroke="#6B6873"] { stroke: var(--muted); } [stroke="#A85B49"] { stroke: var(--red); } [stroke="#2A2A35"] { stroke: var(--text); }
+    </style>
+    <marker id="d103-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="d103-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="d103-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+    <marker id="d103-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#5A8270"/></marker>
+  </defs>
+  <rect width="1000" height="540" fill="#F2EEE3"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-103 · ONE REQUEST</text>
+  <text x="500" y="58" font-size="14" fill="#6B6873" text-anchor="middle">What happens when someone asks the home AI something?</text>
+  <line x1="244" y1="200" x2="387" y2="200" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d103-blue)"/>
+  <line x1="610" y1="200" x2="753" y2="200" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d103-blue)"/>
+  <line x1="756" y1="236" x2="613" y2="236" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d103-blue)"/>
+  <line x1="390" y1="236" x2="247" y2="236" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d103-blue)"/>
+  <line x1="500" y1="262" x2="500" y2="357" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d103-blue)"/>
+  <rect x="24" y="170" width="220" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="134.0" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">WHOEVER ASKS</text>
+  <text x="134.0" y="217" text-anchor="middle" font-size="13" fill="#4F627F">the Arbiter,</text>
+  <text x="134.0" y="235" text-anchor="middle" font-size="13" fill="#4F627F">or you on the chat page</text>
+  <text x="134.0" y="254" text-anchor="middle" font-size="11" fill="#6B6873">Claude Code · Open WebUI</text>
+  <rect x="390" y="170" width="220" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="500.0" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE FRONT DOOR</text>
+  <text x="500.0" y="217" text-anchor="middle" font-size="13" fill="#5A8270">checks the password</text>
+  <text x="500.0" y="235" text-anchor="middle" font-size="13" fill="#5A8270">no password, no answer</text>
+  <text x="500.0" y="254" text-anchor="middle" font-size="11" fill="#6B6873">LiteLLM</text>
+  <rect x="756" y="170" width="220" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="866.0" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE HOME AI</text>
+  <text x="866.0" y="217" text-anchor="middle" font-size="13" fill="#5A8270">reads the request</text>
+  <text x="866.0" y="235" text-anchor="middle" font-size="13" fill="#5A8270">writes the answer</text>
+  <text x="866.0" y="254" text-anchor="middle" font-size="11" fill="#6B6873">Ollama</text>
+  <rect x="390" y="360" width="220" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="500.0" y="386" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE LOGBOOK</text>
+  <text x="500.0" y="407" text-anchor="middle" font-size="13" fill="#5A8270">keeps the note, and the</text>
+  <text x="500.0" y="425" text-anchor="middle" font-size="13" fill="#5A8270">full question and answer</text>
+  <text x="500.0" y="444" text-anchor="middle" font-size="11" fill="#6B6873">Langfuse</text>
+  <circle cx="317" cy="200" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="317" y="204.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">1</text>
+  <circle cx="683" cy="200" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="683" y="204.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">2</text>
+  <circle cx="756" cy="170" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="756" y="174.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">3</text>
+  <circle cx="683" cy="236" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="683" y="240.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">4</text>
+  <circle cx="500" cy="310" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="500" y="314.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">5</text>
+  <text x="317" y="158" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="600">asks, over the</text>
+  <text x="317" y="174" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="600">private connection</text>
+  <text x="683" y="174" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="600">passes it on</text>
+  <text x="683" y="264" font-size="12.5" fill="#6B6873" text-anchor="middle">the answer goes back</text>
+  <text x="317" y="264" font-size="12.5" fill="#6B6873" text-anchor="middle">the same way</text>
+  <text x="520" y="306" font-size="12.5" fill="#4F627F" font-weight="600">a note of the request:</text>
+  <text x="520" y="322" font-size="12.5" fill="#4F627F" font-weight="600">who asked, how long it took</text>
+  <text x="24" y="372" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">HOW LONG IT TAKES</text>
+  <text x="24" y="396" font-size="13.5" fill="#2A2A35">A short answer: 1 to 3 seconds.</text>
+  <text x="24" y="415" font-size="13.5" fill="#2A2A35">After an hour of quiet the home AI</text>
+  <text x="24" y="434" font-size="13.5" fill="#2A2A35">goes to sleep. The next answer</text>
+  <text x="24" y="453" font-size="13.5" fill="#2A2A35">takes up to 30 seconds.</text>
+  <text x="700" y="372" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">FROM THE CHAT PAGE</text>
+  <text x="700" y="396" font-size="13.5" fill="#2A2A35">The same steps. The chat page asks</text>
+  <text x="700" y="415" font-size="13.5" fill="#2A2A35">the front door for you. The password</text>
+  <text x="700" y="434" font-size="13.5" fill="#2A2A35">is already saved in it. Nothing</text>
+  <text x="700" y="453" font-size="13.5" fill="#2A2A35">leaves the house.</text>
+  <circle cx="36" cy="484" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="36" y="488.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">n</text>
+  <text x="56" y="488.5" font-size="12.5" fill="#6B6873">a step, in order</text>
+  <text x="500" y="518" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-103 · One request: the front door checks the password, the home AI answers, and the logbook keeps a note.</text>
+</svg>

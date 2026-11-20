@@ -16,7 +16,7 @@ checks change nothing on either machine.
 
 limesalt can reach every service on the desktop (`lemonpepper`) over
 Tailscale, both on home wifi and away from it. The picture of what
-should be there is `_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg`.
+should be there is `anthologies/home-library-series/diagrams/DIA-100-WhatItIsFor.svg`.
 
 ## Before you start
 

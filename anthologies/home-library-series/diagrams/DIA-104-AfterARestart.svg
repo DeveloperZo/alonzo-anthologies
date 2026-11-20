@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d104-title d104-desc">
+  <title id="d104-title">DIA-104 · After a restart</title>
+  <desc id="d104-desc">On the left, three steps to bring the system back after the computer at home restarts. One: sign in to Windows; the private connection and the home AI start by themselves. Two: run the start command, server/start.ps1, which starts everything else and checks all of it. Three: look at the live board at lemonpepper:8088; the badge should say LIVE. On the right, a table of what you lose when one piece is off: the whole computer, the private connection, the service runner, the front door, the home AI, the logbook, the chat page, or movies and shows.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49; --blue: #4F627F; --blue-soft: #DEE3EC; --green: #5A8270; --green-soft: #DEE8E1; --amber: #A28438; --amber-soft: #F0E5CD;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183; --blue: #94A6C4; --blue-soft: #2A323F; --green: #92BAA6; --green-soft: #233029; --amber: #D6B574; --amber-soft: #3B3220;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [stroke="#6B6873"] { stroke: var(--muted); } [stroke="#A85B49"] { stroke: var(--red); } [stroke="#2A2A35"] { stroke: var(--text); }
+    </style>
+    <marker id="d104-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="d104-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="d104-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+    <marker id="d104-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#5A8270"/></marker>
+  </defs>
+  <rect width="1000" height="540" fill="#F2EEE3"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-104 · AFTER A RESTART</text>
+  <text x="500" y="58" font-size="14" fill="#6B6873" text-anchor="middle">How do you bring it back, and what stops when one piece is off?</text>
+  <text x="24" y="104" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">TO BRING IT BACK</text>
+  <line x1="174" y1="208" x2="174" y2="229" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d104-blue)"/>
+  <line x1="174" y1="324" x2="174" y2="345" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d104-blue)"/>
+  <rect x="24" y="116" width="300" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="174.0" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">1 · SIGN IN TO WINDOWS</text>
+  <text x="174.0" y="163" text-anchor="middle" font-size="13" fill="#4F627F">turn the computer on and sign in</text>
+  <text x="174.0" y="181" text-anchor="middle" font-size="13" fill="#4F627F">two pieces then start by themselves</text>
+  <text x="174.0" y="200" text-anchor="middle" font-size="11" fill="#6B6873">the private connection, the home AI</text>
+  <rect x="24" y="232" width="300" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="174.0" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">2 · RUN THE START COMMAND</text>
+  <text x="174.0" y="279" text-anchor="middle" font-size="13" fill="#4F627F">it starts everything else</text>
+  <text x="174.0" y="297" text-anchor="middle" font-size="13" fill="#4F627F">and checks all of it</text>
+  <text x="174.0" y="316" text-anchor="middle" font-size="11" fill="#6B6873">server/start.ps1</text>
+  <rect x="24" y="348" width="300" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="174.0" y="374" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">3 · LOOK AT THE LIVE BOARD</text>
+  <text x="174.0" y="395" text-anchor="middle" font-size="13" fill="#4F627F">the badge should say LIVE</text>
+  <text x="174.0" y="413" text-anchor="middle" font-size="13" fill="#4F627F">and every light should be on</text>
+  <text x="174.0" y="432" text-anchor="middle" font-size="11" fill="#6B6873">lemonpepper:8088</text>
+  <text x="24" y="466" font-size="12.5" fill="#6B6873">The start command has been tried with pieces</text>
+  <text x="24" y="483" font-size="12.5" fill="#6B6873">switched off, not yet after a full restart.</text>
+  <text x="380" y="104" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">IF THIS IS OFF</text>
+  <text x="590" y="104" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">YOU LOSE</text>
+  <line x1="380" y1="116" x2="976" y2="116" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="134" font-size="14" fill="#5A8270" font-weight="700">The whole computer</text>
+  <text x="380" y="149" font-size="11" fill="#6B6873">lemonpepper</text>
+  <text x="590" y="140" font-size="13" fill="#2A2A35">Everything. There is no stand-in, and that is by choice</text>
+  <line x1="380" y1="157" x2="976" y2="157" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="175" font-size="14" fill="#5A8270" font-weight="700">The private connection</text>
+  <text x="380" y="190" font-size="11" fill="#6B6873">Tailscale</text>
+  <text x="590" y="181" font-size="13" fill="#2A2A35">The laptop cannot find the computer at home</text>
+  <line x1="380" y1="198" x2="976" y2="198" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="216" font-size="14" fill="#5A8270" font-weight="700">The service runner</text>
+  <text x="380" y="231" font-size="11" fill="#6B6873">Docker Desktop</text>
+  <text x="590" y="222" font-size="13" fill="#2A2A35">The front door and every page stop together</text>
+  <line x1="380" y1="239" x2="976" y2="239" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="257" font-size="14" fill="#5A8270" font-weight="700">The front door</text>
+  <text x="380" y="272" font-size="11" fill="#6B6873">LiteLLM</text>
+  <text x="590" y="263" font-size="13" fill="#2A2A35">No one gets an answer: not the Arbiter, not the chat page</text>
+  <line x1="380" y1="280" x2="976" y2="280" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="298" font-size="14" fill="#5A8270" font-weight="700">The home AI</text>
+  <text x="380" y="313" font-size="11" fill="#6B6873">Ollama</text>
+  <text x="590" y="304" font-size="13" fill="#2A2A35">No one gets an answer</text>
+  <line x1="380" y1="321" x2="976" y2="321" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="339" font-size="14" fill="#5A8270" font-weight="700">The logbook</text>
+  <text x="380" y="354" font-size="11" fill="#6B6873">Langfuse</text>
+  <text x="590" y="345" font-size="13" fill="#2A2A35">Answers still come, but no notes are kept</text>
+  <line x1="380" y1="362" x2="976" y2="362" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="380" font-size="14" fill="#5A8270" font-weight="700">The chat page</text>
+  <text x="380" y="395" font-size="11" fill="#6B6873">Open WebUI</text>
+  <text x="590" y="386" font-size="13" fill="#2A2A35">No chat in the browser. The Arbiter still works</text>
+  <line x1="380" y1="403" x2="976" y2="403" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="380" y="421" font-size="14" fill="#5A8270" font-weight="700">Movies and shows</text>
+  <text x="380" y="436" font-size="11" fill="#6B6873">Jellyfin</text>
+  <text x="590" y="427" font-size="13" fill="#2A2A35">Only the movies. Nothing else notices</text>
+  <line x1="380" y1="444" x2="976" y2="444" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="500" y="518" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-104 · After a restart: sign in, run one command, check the board. Each piece that is off takes a known thing with it.</text>
+</svg>

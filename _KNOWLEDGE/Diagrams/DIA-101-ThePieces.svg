@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1000 1028" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="s101-title s101-desc">
+  <title id="s101-title">DIA-101 · The pieces: what each piece is, why we have it, and how you use it</title>
+  <desc id="s101-desc">A plain-language table of the pieces that publish the website, in four groups. Each row gives a plain name with the real name in small print, what it is, why we have it, and how you use it. Where the work is kept: Zo's computer (the working copy), the online copy (GitHub), and the main copy (the main branch). The road to the site: the publisher (Cloudflare Pages) and the page maker (Quartz, run by build.sh). What the public sees: the live site at alonzo-anthologies.pages.dev, the resume app at /resume/, and a trial copy (branch preview). Never on the site: the project notes (_KNOWLEDGE). Two things are left over: the old duplicate site (zo-garden), to be retired, and the old shelf, closed (GitLab, archived).</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49; --blue: #4F627F; --blue-soft: #DEE3EC; --green: #5A8270; --green-soft: #DEE8E1; --amber: #A28438; --amber-soft: #F0E5CD;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183; --blue: #94A6C4; --blue-soft: #2A323F; --green: #92BAA6; --green-soft: #233029; --amber: #D6B574; --amber-soft: #3B3220;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [stroke="#6B6873"] { stroke: var(--muted); } [stroke="#A85B49"] { stroke: var(--red); } [stroke="#2A2A35"] { stroke: var(--text); }
+    </style>
+    <marker id="s101-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="s101-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="s101-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+  </defs>
+  <rect width="1000" height="1028" fill="#F2EEE3"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-101 · THE PIECES</text>
+  <text x="500" y="58" font-size="14" fill="#6B6873" text-anchor="middle">What is each piece of the publishing system, why do we have it, and how do you use it?</text>
+  <g font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">
+    <text x="24" y="97">NAME</text><text x="222" y="97">WHAT IT IS</text><text x="478" y="97">WHY WE HAVE IT</text><text x="742" y="97">HOW YOU USE IT</text>
+  </g>
+  <rect x="24" y="104" width="952" height="22" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="34" y="119.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">WHERE THE WORK IS KEPT</text>
+  <text x="24" y="153" font-size="15.5" fill="#4F627F" font-weight="700">Zo's computer</text>
+  <text x="24" y="171" font-size="11.5" fill="#6B6873">the working copy</text>
+  <text x="222" y="153" font-size="13" fill="#2A2A35">The folder on Zo's computer where</text>
+  <text x="222" y="171" font-size="13" fill="#2A2A35">everything is written and changed</text>
+  <text x="478" y="153" font-size="13" fill="#2A2A35" font-style="italic">Nothing reaches the internet until Zo</text>
+  <text x="478" y="171" font-size="13" fill="#2A2A35" font-style="italic">sends it up</text>
+  <text x="742" y="153" font-size="13" fill="#6B6873">Write and save here, as usual</text>
+  <line x1="24" y1="190" x2="976" y2="190" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="217" font-size="15.5" fill="#4F627F" font-weight="700">The online copy</text>
+  <text x="24" y="235" font-size="11.5" fill="#6B6873">GitHub</text>
+  <text x="222" y="217" font-size="13" fill="#2A2A35">A copy of the whole folder on the</text>
+  <text x="222" y="235" font-size="13" fill="#2A2A35">internet, with every past change.</text>
+  <text x="222" y="253" font-size="13" fill="#2A2A35">Anyone can read it</text>
+  <text x="478" y="217" font-size="13" fill="#2A2A35" font-style="italic">It is the copy the publisher reads, and</text>
+  <text x="478" y="235" font-size="13" fill="#2A2A35" font-style="italic">it lets the work travel between</text>
+  <text x="478" y="253" font-size="13" fill="#2A2A35" font-style="italic">computers</text>
+  <text x="742" y="217" font-size="13" fill="#6B6873">Send the changes up (git push)</text>
+  <line x1="24" y1="272" x2="976" y2="272" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="299" font-size="15.5" fill="#4F627F" font-weight="700">The main copy</text>
+  <text x="24" y="317" font-size="11.5" fill="#6B6873">the main branch</text>
+  <text x="222" y="299" font-size="13" fill="#2A2A35">The one version in the online copy that</text>
+  <text x="222" y="317" font-size="13" fill="#2A2A35">counts as finished</text>
+  <text x="478" y="299" font-size="13" fill="#2A2A35" font-style="italic">Whatever is in it is what the public</text>
+  <text x="478" y="317" font-size="13" fill="#2A2A35" font-style="italic">sees on the live site</text>
+  <text x="742" y="299" font-size="13" fill="#6B6873">Send changes to it only when they</text>
+  <text x="742" y="317" font-size="13" fill="#6B6873">are ready to be seen</text>
+  <rect x="24" y="336" width="952" height="22" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="34" y="351.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">THE ROAD TO THE SITE</text>
+  <text x="24" y="385" font-size="15.5" fill="#4F627F" font-weight="700">The publisher</text>
+  <text x="24" y="403" font-size="11.5" fill="#6B6873">Cloudflare Pages</text>
+  <text x="222" y="385" font-size="13" fill="#2A2A35">A free service on the internet. It</text>
+  <text x="222" y="403" font-size="13" fill="#2A2A35">hears about each change sent up, makes</text>
+  <text x="222" y="421" font-size="13" fill="#2A2A35">the site and puts it up</text>
+  <text x="478" y="385" font-size="13" fill="#2A2A35" font-style="italic">Nobody uploads anything by hand. Sending</text>
+  <text x="478" y="403" font-size="13" fill="#2A2A35" font-style="italic">the changes up is the whole job</text>
+  <text x="742" y="385" font-size="13" fill="#6B6873">Nothing to do. It starts by itself</text>
+  <text x="742" y="403" font-size="13" fill="#6B6873">after each send</text>
+  <line x1="24" y1="440" x2="976" y2="440" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="467" font-size="15.5" fill="#4F627F" font-weight="700">The page maker</text>
+  <text x="24" y="485" font-size="11.5" fill="#6B6873">Quartz, run by build.sh</text>
+  <text x="222" y="467" font-size="13" fill="#2A2A35">A program the publisher runs. It turns</text>
+  <text x="222" y="485" font-size="13" fill="#2A2A35">plain written files into web pages</text>
+  <text x="478" y="467" font-size="13" fill="#2A2A35" font-style="italic">Zo writes plain text and never makes a</text>
+  <text x="478" y="485" font-size="13" fill="#2A2A35" font-style="italic">page by hand. A file marked as a draft</text>
+  <text x="478" y="503" font-size="13" fill="#2A2A35" font-style="italic">is left out</text>
+  <text x="742" y="467" font-size="13" fill="#6B6873">Nothing to do. The publisher runs</text>
+  <text x="742" y="485" font-size="13" fill="#6B6873">it each time</text>
+  <rect x="24" y="522" width="952" height="22" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="34" y="537.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">WHAT THE PUBLIC SEES</text>
+  <text x="24" y="571" font-size="15.5" fill="#5A8270" font-weight="700">The live site</text>
+  <text x="24" y="589" font-size="11.5" fill="#6B6873">the public website</text>
+  <text x="222" y="571" font-size="13" fill="#2A2A35">The website anyone can open: the</text>
+  <text x="222" y="589" font-size="13" fill="#2A2A35">essays, the illustrated series and the</text>
+  <text x="222" y="607" font-size="13" fill="#2A2A35">resume</text>
+  <text x="478" y="571" font-size="13" fill="#2A2A35" font-style="italic">It is the reason for all the rest: a</text>
+  <text x="478" y="589" font-size="13" fill="#2A2A35" font-style="italic">public home for Zo's writing</text>
+  <rect x="742" y="557.5" width="221" height="19" rx="4" fill="#FAFAF8" stroke="#5A8270" stroke-width="1"/>
+  <text x="852.5" y="571" font-size="12" fill="#5A8270" text-anchor="middle" font-weight="600" class="m">alonzo-anthologies.pages.dev</text>
+  <text x="742" y="591" font-size="13" fill="#6B6873">in a web browser</text>
+  <line x1="24" y1="626" x2="976" y2="626" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="653" font-size="15.5" fill="#5A8270" font-weight="700">The resume app</text>
+  <text x="24" y="671" font-size="11.5" fill="#6B6873">the resume SPA</text>
+  <text x="222" y="653" font-size="13" fill="#2A2A35">An interactive resume. It is a small</text>
+  <text x="222" y="671" font-size="13" fill="#2A2A35">program of its own, made in the same</text>
+  <text x="222" y="689" font-size="13" fill="#2A2A35">run as the pages</text>
+  <text x="478" y="653" font-size="13" fill="#2A2A35" font-style="italic">A recruiter can explore the resume and</text>
+  <text x="478" y="671" font-size="13" fill="#2A2A35" font-style="italic">download it as a PDF</text>
+  <rect x="742" y="639.5" width="73" height="19" rx="4" fill="#FAFAF8" stroke="#5A8270" stroke-width="1"/>
+  <text x="778.5" y="653" font-size="12" fill="#5A8270" text-anchor="middle" font-weight="600" class="m">/resume/</text>
+  <text x="742" y="673" font-size="13" fill="#6B6873">after the live site's address</text>
+  <line x1="24" y1="708" x2="976" y2="708" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="735" font-size="15.5" fill="#5A8270" font-weight="700">A trial copy</text>
+  <text x="24" y="753" font-size="11.5" fill="#6B6873">branch preview</text>
+  <text x="222" y="735" font-size="13" fill="#2A2A35">A change sent up beside the main copy</text>
+  <text x="222" y="753" font-size="13" fill="#2A2A35">gets a web address of its own</text>
+  <text x="478" y="735" font-size="13" fill="#2A2A35" font-style="italic">See a change on a real page before it</text>
+  <text x="478" y="753" font-size="13" fill="#2A2A35" font-style="italic">replaces the live site</text>
+  <text x="742" y="735" font-size="13" fill="#6B6873">Open the address the publisher</text>
+  <text x="742" y="753" font-size="13" fill="#6B6873">gives. It is public too</text>
+  <rect x="24" y="772" width="952" height="22" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="34" y="787.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">NEVER ON THE SITE</text>
+  <text x="24" y="821" font-size="15.5" fill="#6B6873" font-weight="700">The project notes,</text>
+  <text x="24" y="839" font-size="15.5" fill="#6B6873" font-weight="700">never published</text>
+  <text x="24" y="857" font-size="11.5" fill="#6B6873">_KNOWLEDGE</text>
+  <text x="222" y="821" font-size="13" fill="#2A2A35">The plans, the decisions and the</text>
+  <text x="222" y="839" font-size="13" fill="#2A2A35">pictures, such as this one</text>
+  <text x="478" y="821" font-size="13" fill="#2A2A35" font-style="italic">So the reasons behind the work are</text>
+  <text x="478" y="839" font-size="13" fill="#2A2A35" font-style="italic">written down and travel with it</text>
+  <text x="742" y="821" font-size="13" fill="#6B6873">Read them in the folder, or in the</text>
+  <text x="742" y="839" font-size="13" fill="#6B6873">online copy</text>
+  <line x1="24" y1="876" x2="976" y2="876" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="897.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">LEFT OVER</text>
+  <text x="110" y="897.5" font-size="13" fill="#6B6873">The old duplicate site (zo-garden): an earlier publisher project that still puts up a second copy of the site. To be retired.</text>
+  <line x1="24" y1="910" x2="976" y2="910" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="24" y="931.5" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">LEFT OVER</text>
+  <text x="110" y="931.5" font-size="13" fill="#6B6873">The old shelf, closed (GitLab, archived): the work was kept there for a few hours on 2026-10-14. Nothing goes there now.</text>
+  <line x1="24" y1="944" x2="976" y2="944" stroke="#E2DFD6" stroke-width="1"/>
+  <rect x="24" y="958.5" width="221" height="19" rx="4" fill="#FAFAF8" stroke="#5A8270" stroke-width="1"/>
+  <text x="134.5" y="972" font-size="12" fill="#5A8270" text-anchor="middle" font-weight="600" class="m">alonzo-anthologies.pages.dev</text>
+  <text x="255" y="972" font-size="12.5" fill="#6B6873">an address to type into a web browser. It works for anyone, anywhere.</text>
+  <text x="500" y="1006" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-101 · The pieces: what each piece of the publishing system is, why we have it, and how you use it.</text>
+</svg>

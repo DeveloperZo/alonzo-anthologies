@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="s100-title s100-desc">
+  <title id="s100-title">DIA-100 · What this repository is for</title>
+  <desc id="s100-desc">A plain-language overview. On the left is Zo's computer, which holds one folder with four series of work. The website: essays and an illustrated series, the pages people read. The resume: an interactive resume; its cover letters stay off the site. The home library: our own AI at home, which has its own set of pictures. Checking AI work: a way to check what AI did, plans only, nothing built yet. The same folder also holds the project notes, which are never published. On the right is the one road to the public website, in three steps. One: Zo sends the changes up to the online copy (GitHub), which keeps a copy of the whole folder in public. Two: the online copy tells the publisher (Cloudflare Pages), which makes web pages from the website and the resume only. Three: the publisher puts the pages up on the live site, alonzo-anthologies.pages.dev, where anyone can read the essays, the series and the resume. The small grey print under each box is the real name of the program or folder.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49; --blue: #4F627F; --blue-soft: #DEE3EC; --green: #5A8270; --green-soft: #DEE8E1; --amber: #A28438; --amber-soft: #F0E5CD;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183; --blue: #94A6C4; --blue-soft: #2A323F; --green: #92BAA6; --green-soft: #233029; --amber: #D6B574; --amber-soft: #3B3220;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [stroke="#6B6873"] { stroke: var(--muted); } [stroke="#A85B49"] { stroke: var(--red); } [stroke="#2A2A35"] { stroke: var(--text); }
+    </style>
+    <marker id="s100-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="s100-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="s100-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+  </defs>
+  <rect width="1000" height="610" fill="#F2EEE3"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-100 · WHAT IT IS FOR</text>
+  <text x="500" y="58" font-size="14" fill="#6B6873" text-anchor="middle">One folder of Zo's work, in four series. Two of them become the public website.</text>
+  <rect x="24" y="84" width="496" height="424" rx="14" fill="none" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="40" y="106" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">ZO'S COMPUTER</text>
+  <text x="40" y="123" font-size="12" fill="#6B6873">Everything is written here first · the working copy</text>
+  <rect x="40" y="140" width="224" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="152.0" y="166" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE WEBSITE</text>
+  <text x="152.0" y="187" text-anchor="middle" font-size="13" fill="#5A8270">essays and an illustrated series</text>
+  <text x="152.0" y="205" text-anchor="middle" font-size="13" fill="#5A8270">the pages people read</text>
+  <text x="152.0" y="224" text-anchor="middle" font-size="11" fill="#6B6873">website-series</text>
+  <rect x="280" y="140" width="224" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="392.0" y="166" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE RESUME</text>
+  <text x="392.0" y="187" text-anchor="middle" font-size="13" fill="#5A8270">an interactive resume</text>
+  <text x="392.0" y="205" text-anchor="middle" font-size="13" fill="#5A8270">cover letters stay off the site</text>
+  <text x="392.0" y="224" text-anchor="middle" font-size="11" fill="#6B6873">resume-series</text>
+  <rect x="40" y="250" width="224" height="92" rx="12" fill="#FAFAF8" stroke="#6B6873" stroke-width="2"/>
+  <text x="152.0" y="276" text-anchor="middle" font-size="16" font-weight="700" fill="#6B6873">THE HOME LIBRARY</text>
+  <text x="152.0" y="297" text-anchor="middle" font-size="13" fill="#6B6873">our own AI at home</text>
+  <text x="152.0" y="315" text-anchor="middle" font-size="13" fill="#6B6873">has its own set of pictures</text>
+  <text x="152.0" y="334" text-anchor="middle" font-size="11" fill="#6B6873">home-library-series</text>
+  <rect x="280" y="250" width="224" height="92" rx="12" fill="#FAFAF8" stroke="#6B6873" stroke-width="2"/>
+  <text x="392.0" y="276" text-anchor="middle" font-size="16" font-weight="700" fill="#6B6873">CHECKING AI WORK</text>
+  <text x="392.0" y="297" text-anchor="middle" font-size="13" fill="#6B6873">a way to check what AI did</text>
+  <text x="392.0" y="315" text-anchor="middle" font-size="13" fill="#6B6873">plans only, nothing built yet</text>
+  <text x="392.0" y="334" text-anchor="middle" font-size="11" fill="#6B6873">gatekeeper-series</text>
+  <rect x="40" y="368" width="464" height="1" rx="0" fill="none" stroke="#E2DFD6" stroke-width="1"/>
+  <text x="40" y="392" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">ALSO IN THE FOLDER</text>
+  <rect x="40" y="404" width="464" height="84" rx="12" fill="#FAFAF8" stroke="#6B6873" stroke-width="2"/>
+  <text x="272.0" y="428" font-size="14" fill="#6B6873" text-anchor="middle" font-weight="700">THE PROJECT NOTES, NEVER PUBLISHED</text>
+  <text x="272.0" y="447" font-size="12.5" fill="#6B6873" text-anchor="middle">plans, decisions and pictures like this one</text>
+  <text x="272.0" y="464" font-size="11" fill="#6B6873" text-anchor="middle">_KNOWLEDGE</text>
+  <text x="826" y="106" font-size="12" fill="#6B6873" text-anchor="middle" font-weight="700" letter-spacing="0.03em">THE ONE ROAD TO THE PUBLIC WEBSITE</text>
+  <line x1="520" y1="186" x2="673" y2="186" stroke="#4F627F" stroke-width="2.5" marker-end="url(#s100-blue)"/>
+  <line x1="826" y1="232" x2="826" y2="273" stroke="#4F627F" stroke-width="2.5" marker-end="url(#s100-blue)"/>
+  <line x1="826" y1="368" x2="826" y2="409" stroke="#4F627F" stroke-width="2.5" marker-end="url(#s100-blue)"/>
+  <rect x="676" y="140" width="300" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="826.0" y="166" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">THE ONLINE COPY</text>
+  <text x="826.0" y="187" text-anchor="middle" font-size="13" fill="#4F627F">a copy of the whole folder,</text>
+  <text x="826.0" y="205" text-anchor="middle" font-size="13" fill="#4F627F">kept on the internet, in public</text>
+  <text x="826.0" y="224" text-anchor="middle" font-size="11" fill="#6B6873">GitHub</text>
+  <rect x="676" y="276" width="300" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="826.0" y="302" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">THE PUBLISHER</text>
+  <text x="826.0" y="323" text-anchor="middle" font-size="13" fill="#4F627F">makes web pages from the</text>
+  <text x="826.0" y="341" text-anchor="middle" font-size="13" fill="#4F627F">website and the resume only</text>
+  <text x="826.0" y="360" text-anchor="middle" font-size="11" fill="#6B6873">Cloudflare Pages</text>
+  <rect x="676" y="412" width="300" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="826.0" y="438" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE LIVE SITE</text>
+  <text x="826.0" y="459" text-anchor="middle" font-size="13" fill="#5A8270">the essays, the series and the resume</text>
+  <text x="826.0" y="477" text-anchor="middle" font-size="13" fill="#5A8270">anyone can read it</text>
+  <text x="826.0" y="496" text-anchor="middle" font-size="11" fill="#6B6873">alonzo-anthologies.pages.dev</text>
+  <circle cx="596" cy="186" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="596" y="190.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">1</text>
+  <circle cx="826" cy="252" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="826" y="256.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">2</text>
+  <circle cx="826" cy="388" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="826" y="392.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">3</text>
+  <text x="596" y="152" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="600">send the</text>
+  <text x="596" y="168" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="600">changes up</text>
+  <text x="596" y="214" font-size="11" fill="#6B6873" text-anchor="middle">git push</text>
+  <text x="846" y="256.5" font-size="12.5" fill="#4F627F" font-weight="600">tells the publisher</text>
+  <text x="846" y="392.5" font-size="12.5" fill="#4F627F" font-weight="600">puts the pages up</text>
+  <text x="536" y="300" font-size="12.5" fill="#6B6873">Nothing is uploaded</text>
+  <text x="536" y="317" font-size="12.5" fill="#6B6873">by hand. Sending</text>
+  <text x="536" y="334" font-size="12.5" fill="#6B6873">the changes up</text>
+  <text x="536" y="351" font-size="12.5" fill="#6B6873">starts the rest.</text>
+  <rect x="24" y="534" width="24" height="16" rx="4" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="56" y="546" font-size="12.5" fill="#6B6873">ends up on the public website</text>
+  <rect x="276" y="534" width="24" height="16" rx="4" fill="#FAFAF8" stroke="#6B6873" stroke-width="1.5"/>
+  <text x="308" y="546" font-size="12.5" fill="#6B6873">stays off the website</text>
+  <rect x="470" y="534" width="24" height="16" rx="4" fill="#DEE3EC" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="502" y="546" font-size="12.5" fill="#6B6873">the road: services on the internet</text>
+  <circle cx="752" cy="542" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
+  <text x="752" y="546.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">n</text>
+  <text x="772" y="546" font-size="12.5" fill="#6B6873">a step, in order</text>
+  <text x="500" y="588" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-100 · What it is for: four series live in one folder, and the website and the resume travel one road to the public site.</text>
+</svg>

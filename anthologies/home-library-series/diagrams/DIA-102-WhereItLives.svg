@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d102-title d102-desc">
+  <title id="d102-title">DIA-102 · Where it lives</title>
+  <desc id="d102-desc">Two computers. On the left, the laptop, which goes anywhere and is named limesalt. It holds the Arbiter (Claude Code today) and a web browser. In the middle, a private connection (Tailscale) that works at home and away. On the right, the computer at home, named lemonpepper, which stays on and never sleeps. Five pieces there are kept running by the service runner (Docker Desktop): the front door, the chat page, the logbook, the live board, and movies and shows. The home AI (Ollama) starts by itself and does its work on the graphics card, filling 12 of the card's 16 gigabytes.</desc>
+  <defs>
+    <style>
+      :root {
+        --bg: #FAFAF8; --paper: #F2EEE3; --text: #2A2A35; --muted: #6B6873; --muted2: #9D9A95; --line: #E2DFD6;
+        --red: #A85B49; --blue: #4F627F; --blue-soft: #DEE3EC; --green: #5A8270; --green-soft: #DEE8E1; --amber: #A28438; --amber-soft: #F0E5CD;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1B1D23; --paper: #1E2128; --text: #E8E5DC; --muted: #B8B5AD; --muted2: #908D87; --line: #3E3D38;
+          --red: #D29183; --blue: #94A6C4; --blue-soft: #2A323F; --green: #92BAA6; --green-soft: #233029; --amber: #D6B574; --amber-soft: #3B3220;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      text.m, tspan.m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      [fill="#FAFAF8"] { fill: var(--bg); } [fill="#F2EEE3"] { fill: var(--paper); }
+      [fill="#2A2A35"] { fill: var(--text); }
+      [fill="#6B6873"] { fill: var(--muted); } [fill="#9D9A95"] { fill: var(--muted2); }
+      [stroke="#E2DFD6"] { stroke: var(--line); } [stroke="#9D9A95"] { stroke: var(--muted2); }
+      [fill="#A85B49"] { fill: var(--red); }
+      [fill="#4F627F"] { fill: var(--blue); } [stroke="#4F627F"] { stroke: var(--blue); } [fill="#DEE3EC"] { fill: var(--blue-soft); }
+      [fill="#5A8270"] { fill: var(--green); } [stroke="#5A8270"] { stroke: var(--green); } [fill="#DEE8E1"] { fill: var(--green-soft); }
+      [fill="#A28438"] { fill: var(--amber); } [stroke="#A28438"] { stroke: var(--amber); } [fill="#F0E5CD"] { fill: var(--amber-soft); }
+      [stroke="#6B6873"] { stroke: var(--muted); } [stroke="#A85B49"] { stroke: var(--red); } [stroke="#2A2A35"] { stroke: var(--text); }
+    </style>
+    <marker id="d102-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#4F627F"/></marker>
+    <marker id="d102-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#A28438"/></marker>
+    <marker id="d102-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#6B6873"/></marker>
+    <marker id="d102-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="strokeWidth"><path d="M0,1 L9,5 L0,9 Z" fill="#5A8270"/></marker>
+  </defs>
+  <rect width="1000" height="540" fill="#F2EEE3"/>
+  <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-102 · WHERE IT LIVES</text>
+  <text x="500" y="58" font-size="14" fill="#6B6873" text-anchor="middle">Two computers, and a private connection between them.</text>
+  <rect x="24" y="84" width="240" height="366" rx="14" fill="none" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="40" y="106" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">THE LAPTOP</text>
+  <text x="40" y="123" font-size="12" fill="#6B6873">goes anywhere · named limesalt</text>
+  <rect x="44" y="150" width="200" height="92" rx="12" fill="#DEE3EC" stroke="#4F627F" stroke-width="2"/>
+  <text x="144.0" y="176" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">THE ARBITER</text>
+  <text x="144.0" y="197" text-anchor="middle" font-size="13" fill="#4F627F">plans and checks, from here</text>
+  <text x="144.0" y="215" text-anchor="middle" font-size="13" fill="#4F627F">a paid AI today</text>
+  <text x="144.0" y="234" text-anchor="middle" font-size="11" fill="#6B6873">Claude Code today</text>
+  <rect x="44" y="270" width="200" height="92" rx="12" fill="#FAFAF8" stroke="#4F627F" stroke-width="2"/>
+  <text x="144.0" y="296" text-anchor="middle" font-size="16" font-weight="700" fill="#4F627F">A WEB BROWSER</text>
+  <text x="144.0" y="317" text-anchor="middle" font-size="13" fill="#4F627F">opens the pages</text>
+  <text x="144.0" y="335" text-anchor="middle" font-size="13" fill="#4F627F">on the computer at home</text>
+  <text x="144.0" y="354" text-anchor="middle" font-size="11" fill="#6B6873">any browser</text>
+  <line x1="268" y1="244" x2="417" y2="244" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d102-blue)"/>
+  <line x1="416" y1="258" x2="267" y2="258" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d102-blue)"/>
+  <text x="342" y="222" font-size="12" fill="#4F627F" text-anchor="middle" font-weight="700" letter-spacing="0.03em">PRIVATE CONNECTION</text>
+  <text x="342" y="282" font-size="12.5" fill="#6B6873" text-anchor="middle">works at home</text>
+  <text x="342" y="298" font-size="12.5" fill="#6B6873" text-anchor="middle">and away</text>
+  <text x="342" y="316" font-size="11" fill="#6B6873" text-anchor="middle">Tailscale</text>
+  <rect x="420" y="84" width="556" height="366" rx="14" fill="none" stroke="#9D9A95" stroke-width="1.5"/>
+  <text x="436" y="106" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">THE COMPUTER AT HOME</text>
+  <text x="436" y="123" font-size="12" fill="#6B6873">stays on, never sleeps · named lemonpepper</text>
+  <rect x="430" y="134" width="536" height="194" rx="8" fill="none" stroke="#9D9A95" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="442" y="152" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">KEPT RUNNING BY THE SERVICE RUNNER</text>
+  <text x="722" y="152" font-size="11" fill="#6B6873">Docker Desktop</text>
+  <rect x="442" y="162" width="164" height="72" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="524.0" y="186" font-size="14" fill="#5A8270" text-anchor="middle" font-weight="700">THE FRONT DOOR</text>
+  <text x="524.0" y="205" font-size="12.5" fill="#5A8270" text-anchor="middle">checks the password</text>
+  <text x="524.0" y="222" font-size="11" fill="#6B6873" text-anchor="middle">LiteLLM</text>
+  <rect x="618" y="162" width="164" height="72" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="700.0" y="186" font-size="14" fill="#5A8270" text-anchor="middle" font-weight="700">THE CHAT PAGE</text>
+  <text x="700.0" y="205" font-size="12.5" fill="#5A8270" text-anchor="middle">ask the home AI</text>
+  <text x="700.0" y="222" font-size="11" fill="#6B6873" text-anchor="middle">Open WebUI</text>
+  <rect x="794" y="162" width="164" height="72" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="876.0" y="186" font-size="14" fill="#5A8270" text-anchor="middle" font-weight="700">THE LOGBOOK</text>
+  <text x="876.0" y="205" font-size="12.5" fill="#5A8270" text-anchor="middle">notes every request</text>
+  <text x="876.0" y="222" font-size="11" fill="#6B6873" text-anchor="middle">Langfuse</text>
+  <rect x="442" y="244" width="164" height="72" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="524.0" y="268" font-size="14" fill="#5A8270" text-anchor="middle" font-weight="700">THE LIVE BOARD</text>
+  <text x="524.0" y="287" font-size="12.5" fill="#5A8270" text-anchor="middle">shows what is happening</text>
+  <text x="524.0" y="304" font-size="11" fill="#6B6873" text-anchor="middle">made for this system</text>
+  <rect x="618" y="244" width="164" height="72" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="700.0" y="268" font-size="14" fill="#5A8270" text-anchor="middle" font-weight="700">MOVIES AND SHOWS</text>
+  <text x="700.0" y="287" font-size="12.5" fill="#5A8270" text-anchor="middle">our films and music</text>
+  <text x="700.0" y="304" font-size="11" fill="#6B6873" text-anchor="middle">Jellyfin · not set up yet</text>
+  <rect x="442" y="344" width="250" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
+  <text x="567.0" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE HOME AI</text>
+  <text x="567.0" y="391" text-anchor="middle" font-size="13" fill="#5A8270">reads, summarizes and drafts</text>
+  <text x="567.0" y="409" text-anchor="middle" font-size="13" fill="#5A8270">starts by itself at sign-in</text>
+  <text x="567.0" y="428" text-anchor="middle" font-size="11" fill="#6B6873">Ollama</text>
+  <line x1="692" y1="390" x2="705" y2="390" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d102-blue)"/>
+  <rect x="708" y="344" width="250" height="92" rx="2" fill="#FAFAF8" stroke="#6B6873" stroke-width="2.5"/>
+  <text x="833" y="368" font-size="15" fill="#6B6873" text-anchor="middle" font-weight="700">THE GRAPHICS CARD</text>
+  <text x="833" y="387" font-size="12.5" fill="#6B6873" text-anchor="middle">where the home AI does its work</text>
+  <rect x="728" y="398" width="210" height="9" fill="#F2EEE3" stroke="#9D9A95" stroke-width="1"/>
+  <rect x="728" y="398" width="157.5" height="9" fill="#5A8270"/>
+  <text x="833" y="425" font-size="11" fill="#6B6873" text-anchor="middle">the home AI fills 12 of its 16 GB</text>
+  <rect x="24" y="474" width="24" height="16" rx="4" fill="#DEE3EC" stroke="#4F627F" stroke-width="1.5"/>
+  <text x="56" y="486" font-size="12.5" fill="#6B6873">on the laptop</text>
+  <rect x="180" y="474" width="24" height="16" rx="4" fill="#DEE8E1" stroke="#5A8270" stroke-width="1.5"/>
+  <text x="212" y="486" font-size="12.5" fill="#6B6873">on the computer at home</text>
+  <rect x="420" y="474" width="24" height="16" rx="4" fill="none" stroke="#9D9A95" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="452" y="486" font-size="12.5" fill="#6B6873">kept running by one program</text>
+  <text x="500" y="518" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-102 · Where it lives: everything is on one computer at home, and the laptop reaches it over a private connection.</text>
+</svg>

@@ -25,6 +25,7 @@ Definition: [`Story`](../../_META/Definitions/Story.md). Sequencing, risks and d
 - [ST-009 Production never ships without the resume](./ST-009-ResumeGuard.md)
 - [ST-010 Quartz can be upgraded without breaking the resume](./ST-010-QuartzUpgrade.md)
 - [ST-011 Build files say only what is true](./ST-011-BuildCleanup.md)
+- [ST-014 Each series has diagrams that fit its own context](./ST-014-SeriesDiagrams.md)
 
 ## Active
 

@@ -130,6 +130,33 @@ if ($key) {
     Add-Result "Relay answers a chat on '$RelayModel'" "SKIP" "WHL_LITELLM_KEY not set"
 }
 
+# The private side: a second door with home routes only, and its chat page.
+Test-Step "Private door refuses a request with no key (port 4001)" {
+    $code = Get-StatusCode "${base}:4001/v1/models"
+    if ($code -ne 401) { throw "expected 401, got $code" }
+    "401 as expected"
+}
+$pkey = $env:WHL_PRIVATE_KEY
+if (-not $pkey -and (Test-Path "E:\WHL\compose\.env")) {
+    $line = Get-Content "E:\WHL\compose\.env" | Where-Object { $_ -match '^LITELLM_PRIVATE_KEY=' } | Select-Object -First 1
+    if ($line) { $pkey = ($line -split '=', 2)[1].Trim() }
+}
+if ($pkey) {
+    Test-Step "Private door has home routes only" {
+        $ids = @((Invoke-RestMethod -Uri "${base}:4001/v1/models" -Headers @{ Authorization = "Bearer $pkey" } -TimeoutSec 20).data.id)
+        $bad = @($ids | Where-Object { $_ -notlike "local-*" -and $_ -notlike "home-*" })
+        if ($bad.Count -gt 0) { throw "a route that is not a home route is on the private door: $($bad -join ', ')" }
+        $ids -join ", "
+    }
+} else {
+    Add-Result "Private door has home routes only" "SKIP" "WHL_PRIVATE_KEY not set"
+}
+Test-Step "Private chat page is up (port 3002)" {
+    $code = Get-StatusCode "${base}:3002/health"
+    if ($code -ne 200) { throw "got $code" }
+    "200"
+}
+
 # 7 to 9. The three web pages.
 Test-Step "Langfuse dashboard is up (port 3001)" {
     $r = Invoke-RestMethod -Uri "${base}:3001/api/public/health" -TimeoutSec 20

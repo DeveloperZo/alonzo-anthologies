@@ -36,10 +36,13 @@ old `zo-garden` Pages project is connected to this same repo, so every push to
 
 ![DIA-102 Source control](../Diagrams/DIA-102-SourceControl.svg)
 
-Read the top row left to right; the red badges 1 to 5 are the numbered steps
-in "How it works" below. The dashed red box is local only. The gray dashed
-row at the bottom is what is left over: the archived GitLab project (no longer
-a local remote), and the `zo-garden` project that the same GitHub repo still feeds.
+The picture is the plain-language outline. Read it left to right: the work on
+Zo's computer, one arrow up to the main copy in the online copy (GitHub), then
+the hand-off to the publisher (DIA-103). The secrets folder (`_ENV/`) has no
+arrow because it is never sent. The dashed frame at the bottom is what is left
+over: the archived GitLab project and the `zo-garden` project that the same
+GitHub repo still feeds. The picture carries no step numbers; the numbered
+steps are in "How it works" below.
 
 ## Components that matter here
 
@@ -58,7 +61,7 @@ a local remote), and the `zo-garden` project that the same GitHub repo still fee
 
 ## How it works, step by step
 
-**Shipping a change** (the numbers match DIA-102 and [OPER-002](../Documents/Operations/OPER-002-GitHubPush.md)):
+**Shipping a change** (DIA-102 shows the outline; the numbers match [OPER-002](../Documents/Operations/OPER-002-GitHubPush.md)):
 
 1. **You scan for secrets.** Before pushing, the owner checks that `_ENV/` and `.env` files are ignored and that no token prefix (`cfat_`, `ghp_`, `github_pat_`, `glpat-`) appears in the outgoing commits. This is manual; nothing enforces it. What can go wrong: skipping it, and a token reaches a public repo.
 2. **You push `main` to GitHub** (`git push origin main`). Nothing on GitHub refuses a force push today, so the rule is a habit: fetch and rebase when behind, never force. What can go wrong: a force push silently rewrites production history.
@@ -66,7 +69,7 @@ a local remote), and the `zo-garden` project that the same GitHub repo still fee
 4. **Cloudflare builds, deploys and reports back.** The Pages project `alonzo-anthologies` runs `bash ./build.sh`; a push to `main` becomes production, any other branch a preview. Cloudflare posts a check run named "Cloudflare Pages: alonzo-anthologies" on the commit (on c6dadfe it points at production deploy `c7455b17`, success). The `zo-garden` build posts its own check, named "Cloudflare Pages" (deploy `dc4746b5`, success). What can go wrong: a failed build leaves the previous deployment serving, so the failure is quiet unless someone looks at the check.
 5. **You check the live site.** The checks are in [OPER-001](../Documents/Operations/OPER-001-CloudflareDeploy.md). On 2026-10-14, after the move to GitHub, `/`, `/resume/` and `/ai-governance/` returned 200 (re-checked with `curl` the same night).
 
-**What is left of GitLab** (gray in DIA-102; nobody should use it):
+**What is left of GitLab** (dashed in DIA-102; nobody should use it):
 
 - The GitLab project `awilliams9293/alonzo-anthologies` was archived on 2026-10-14. This clone stopped fetching it on 2026-10-15: that remote was the only local ref whose history still credited an AI agent as a co-author. The archived project itself is unchanged. Its Cloudflare webhook targets the GitLab-wired Pages project that was deleted that night, which is moot while the project is archived.
 - Deciding whether to delete the archived project is [ST-005](../Stories/ST-005-RetireGitLab.md). GitHub's branches do not contain those co-author commits. GitHub still serves the old commit ids if you ask for them by SHA.

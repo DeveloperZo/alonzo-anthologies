@@ -32,16 +32,16 @@ itself.
 
 ## What runs today
 
-![](../../_KNOWLEDGE/Diagrams/DIA-106-HomeLibrary.svg)
+![](./diagrams/DIA-100-WhatItIsFor.svg)
 
-Six more views, each answering one question:
+Six closer looks, most general first ([index and numbering](./diagrams/README.md)):
 
-- [DIA-107: Components: what each piece is and why it is here](../../_KNOWLEDGE/Diagrams/DIA-107-HomeLibraryComponents.svg)
-- [DIA-108: What runs where, and which models fit on the card](../../_KNOWLEDGE/Diagrams/DIA-108-HomeLibraryRunsWhere.svg)
-- [DIA-109: One request, step by step](../../_KNOWLEDGE/Diagrams/DIA-109-HomeLibraryRequest.svg)
-- [DIA-110: Startup and failure](../../_KNOWLEDGE/Diagrams/DIA-110-HomeLibraryStartup.svg)
-- [DIA-111: Files, secrets and state](../../_KNOWLEDGE/Diagrams/DIA-111-HomeLibraryFiles.svg)
-- [DIA-112: Who can reach what](../../_KNOWLEDGE/Diagrams/DIA-112-HomeLibraryReach.svg)
+- [DIA-101: The pieces: what each is, why we have it, and how you use it](./diagrams/DIA-101-ThePieces.svg)
+- [DIA-102: Where it lives](./diagrams/DIA-102-WhereItLives.svg)
+- [DIA-103: One request, step by step](./diagrams/DIA-103-OneRequest.svg)
+- [DIA-104: After a restart](./diagrams/DIA-104-AfterARestart.svg)
+- [DIA-105: Who can get in](./diagrams/DIA-105-WhoCanGetIn.svg)
+- [DIA-200: Handing over work](./diagrams/DIA-200-HandingOverWork.svg)
 
 | Piece | Address | Job |
 | --- | --- | --- |
@@ -231,6 +231,8 @@ Design seeds for the swarm are listed in
   Hand-off tool hardened (refuses oversize input, rejects cut-off
   replies), batch tool added, live board added on port 8088,
   `server/start.ps1` added, `local-models` skill added.
+- 2026-11-18: Diagrams redone in plain language and renumbered as
+  DIA-100 to DIA-105 and DIA-200 in `diagrams/`.
 - 2026-11-18: Diagram set added: DIA-106 redrawn as the overview, plus
   DIA-107 to DIA-112. Drawn by subagents from a verified fact sheet.
 - 2026-11-18: LM Studio retired and Ollama made the only runtime. Both

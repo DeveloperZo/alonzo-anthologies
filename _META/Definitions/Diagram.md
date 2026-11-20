@@ -6,7 +6,7 @@ Status: working
 Owner: zo
 Human id: definition-diagram
 Update trigger: when diagram naming, placement, the spec shape or the caption rule changes
-Last updated: 2026-10-14
+Last updated: 2026-11-18
 -->
 
 ## What a Diagram is
@@ -28,6 +28,12 @@ not here.
 
 The `DIA` number space is shared across both places. Check both before
 picking a number.
+
+A series may instead keep its own diagrams and its own numbers in a
+`diagrams/` folder inside the series, with a README that says so. The home
+library series does: `anthologies/home-library-series/diagrams/`. There,
+`DIA-100` is the most general picture, `DIA-1xx` are closer looks at parts of
+it, and each higher hundred is a block about one part in more depth.
 
 ## Naming
 

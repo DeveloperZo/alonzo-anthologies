@@ -21,9 +21,9 @@ This repo publishes one website, **alonzo-anthologies.pages.dev**: a set of essa
 
 ## The whole system on one page
 
-![DIA-101 The whole system](../Diagrams/DIA-101-SystemOverview.svg)
+![DIA-100 What this repository is for](../Diagrams/DIA-100-WhatItIsFor.svg)
 
-Read it left to right, following the numbered steps. The four boxes along the top are the four areas this set covers; the italic line under each names the page that explains it. The dashed row at the bottom is what is left over: the archived GitLab project, read-only, and the `zo-garden` project that the same push still builds, scheduled for retirement.
+Read the frame on the left first: the four series the repo holds, and the project notes. Green boxes end up on the public site. Then follow the three numbered steps down the right side. [DIA-101](../Diagrams/DIA-101-ThePieces.svg) is the table of the pieces, including what is left over: the archived GitLab project and the `zo-garden` project that the same push still builds, scheduled for retirement.
 
 ## The pages
 
@@ -36,7 +36,7 @@ Read it left to right, following the numbered steps. The four boxes along the to
 
 ## Flows that cross pages
 
-The numbers match DIA-101.
+Flows 1, 2 and 4 are steps 1, 2 and 3 on DIA-100. Flow 3 happens inside its publisher box, and flow 5 is the live site box.
 
 1. **Write and push.** The owner edits Markdown in `anthologies/website-series/site/content/` or the resume data in `anthologies/resume-series/resumeContent/src/data/`, commits, and pushes to GitHub. Anything pushed is public: the repo is public and every branch gets a preview. See [ARCH-002](./ARCH-002-SourceControl.md).
 2. **GitHub tells Cloudflare.** Cloudflare's GitHub App starts a build on the Pages project `alonzo-anthologies`, and today also on the duplicate `zo-garden`. If the app lost access to the repo, pushes would stop deploying with no error anywhere. See [ARCH-002](./ARCH-002-SourceControl.md) and [ARCH-003](./ARCH-003-Hosting.md).
@@ -101,6 +101,7 @@ Every component the area pages rate **Structural** or **Coordinated**, most dema
 
 ## Changelog
 
+- 2026-11-18: The overview picture is now DIA-100 (What this repository is for), redrawn in plain language, with DIA-101 (The pieces) as its table. The old DIA-101 "whole system" picture is retired; it is in git history. Reading note and the line under "Flows that cross pages" updated to match.
 - 2026-10-14 (late evening): GitHub is the only code host; GitLab archived. Rewrote the system paragraph, DIA-101 reading note, flows 1 to 3, deployable components, the Change Map (GitHub `main` and repo, Cloudflare's GitHub App, branch protection on `main` added as Coordinated, the GitLab webhook and legacy GitHub rows removed, `zo-garden` now a live duplicate), Standing decisions and cross-cutting gaps. Links moved to ST-005-RetireGitLab and ST-007-GitHubCi. Re-verified tonight: `git remote -v` and `git ls-remote origin`, the GitHub public API (repo id 1229275646, public, `main` unprotected, no workflows), the Cloudflare API (both projects on that repo id, production `c7455b17`, `zo-garden` deploy `dc4746b5`), and `curl` on both hostnames. Area-page ratings for ARCH-004 and ARCH-005 carried over unchanged.
 - 2026-10-14: Rewritten as the landing page of the Architecture set, in the shape of the Serennovas architecture landing page: system paragraph, DIA-101, page index, cross-page flows, deployable components, Change Map built from the four area pages, cross-cutting gaps. The 2026-05-05 long-form overview (problem, constraints, ASCII context, tradeoffs, verification plan) is superseded by ARCH-002 to ARCH-005; its two lasting decisions moved to Standing decisions. Facts re-checked against the area pages and the 2026-10-14 operations log.
 - 2026-05-05: Created as the anchor doc for the monorepo.
