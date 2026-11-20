@@ -1,7 +1,7 @@
 import { applyProfileTailoring } from './tailoring';
 
 const baseSummary =
-  "Software architect and principal engineer with over a decade of experience building and running production systems. Modernizes complex systems, sets technical direction across teams, and designs scalable solutions across industries. Integrates AI across the software development lifecycle to turn business strategy into reliable delivery.";
+  "Software architect and principal engineer with over a decade of experience building and running production systems. Modernizes complex systems, sets technical direction across teams, and integrates AI across the software development lifecycle.";
 
 const baseCompetencies = [
   {

@@ -70,7 +70,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'vendors',
       description:
-        'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice would be to change later.',
+        'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice is to change.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
@@ -130,7 +130,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and standards for all five teams, and stayed hands-on as full-stack architect for one of them on Azure, including production support with Application Insights.',
+        'Set the UI architecture and standards for all five teams, and stayed hands-on as full-stack architect for one of them on Azure, providing production support with Application Insights.',
       role: 'Senior Software Architect',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
@@ -227,7 +227,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'engagements',
       description:
-        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call (Application Insights, CloudWatch).',
+        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call with Application Insights and CloudWatch.',
       role: 'Software Architect',
       learnings: [
         'Learned to ground stories in facts and data that the client cares about',
@@ -464,7 +464,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'compliance-poc',
       description:
-        "Built a proof of concept that ran compliance checks on over 10,000 servers, and wrote Perl and Python scripts for small-scale ETL.",
+        "Built a proof of concept that ran compliance checks on over 10,000 servers, and wrote Perl and Python automation scripts for small-scale ETL.",
       role: 'Developer',
       learnings: [],
     },
