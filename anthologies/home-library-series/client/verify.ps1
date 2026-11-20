@@ -74,6 +74,9 @@ if (-not $tailscale) {
 }
 if ($tailscale) {
     Test-Step "Tailscale reaches the desktop" {
+        # A relayed pong exits 1 and writes "direct connection not established".
+        # That is still a pass. Keep the stderr line from aborting the check.
+        $ErrorActionPreference = "Continue"
         $out = (& $tailscale ping --c 1 $Desktop 2>&1 | Out-String).Trim()
         if ($out -match "is local Tailscale IP") { return "this machine is the desktop, so there is no tunnel to test" }
         if ($out -notmatch "pong") { throw $out }
