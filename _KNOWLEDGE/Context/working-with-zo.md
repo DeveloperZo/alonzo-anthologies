@@ -33,3 +33,28 @@ Verify what can be verified directly, state the result in a line, and
 carry on. If a check can only be run by Zo, name it once and keep
 working on whatever does not depend on it. Save questions for choices
 that change the direction of the work.
+
+## Diagrams: clarity before polish
+
+Zo's correction on 2026-11-18, about DIA-106 and DIA-107: the form was
+gold plated and the pictures were not clear. The high-level diagrams of
+a set must be readable by his wife, who is not technical.
+
+How to apply: in an overview diagram, lead with a plain name that says
+what the piece does, and put the program name in small print. No
+insider words (frontier, harness, token, relay, runtime, container,
+port). No shape code that needs a legend. Technical vocabulary belongs
+in the detailed diagrams only. Check the words before the layout.
+
+Order matters too (same day): number a set from most general to most
+specific. X00 is the overview, X01 to X99 are closer looks, and a higher
+hundred may be more complex. Do not draw technical specs until asked.
+
+## Test what the person will do, not the plumbing (2026-11-18)
+
+Zo asked why web search was missing from the first build and why the fix
+arrived in pieces. Both were my fault: I checked that a search ran from
+inside the container and left the real test (a recent question in a
+signed-in chat) to him, then fixed one symptom per complaint. For anything
+he will use by hand, run it the way he will before calling it done, with a
+vague real-world question, and list every gap found in one report.

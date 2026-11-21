@@ -24,7 +24,7 @@ The site is a folder of static files that Cloudflare Pages builds and serves for
 
 ![DIA-103 Hosting and deploy](../Diagrams/DIA-103-Hosting.svg)
 
-Read it left to right. The numbered badges 1 to 6 are the steps below. Solid arrows are the live deploy path; the dashed row at the bottom is the duplicate `zo-garden` project, fed by the same push, and the archived GitLab project; the dotted red line is the API token, used only for reading.
+The picture is the plain-language outline. Follow the numbers 1 to 6: the online copy (GitHub) tells the publisher (Cloudflare Pages), the page maker makes the pages, the main copy goes to the live site and any other copy becomes a public trial copy, and a visitor opens the live site. The dashed box is the duplicate `zo-garden` project, fed by the same push. The picture's six numbers are its own and do not match the numbered steps below. It leaves out the API token and the archived GitLab project.
 
 ## Components that matter here
 
@@ -41,7 +41,7 @@ Read it left to right. The numbered badges 1 to 6 are the steps below. Solid arr
 
 ## How it works, step by step
 
-**Deploying (steps 1 to 5 in DIA-103):**
+**Deploying (DIA-103 shows the outline with its own numbers):**
 
 1. The owner, or an agent at the owner's request, pushes a branch to `origin` (GitHub `DeveloperZo/alonzo-anthologies`). Push rules live in [ARCH-002](./ARCH-002-SourceControl.md).
 2. Cloudflare's GitHub App hears about the push and starts a build in each connected Pages project. No CI runs first and no token is involved. If the app loses access to the repo, nothing deploys and nothing alerts; the check run on the commit is where it would show. The recreated `alonzo-anthologies` project has not yet built from a push (its only deploy was started at creation); `zo-garden` did build c6dadfe from a push, which shows the events arrive.

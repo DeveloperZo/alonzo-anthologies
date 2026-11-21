@@ -54,6 +54,19 @@ One model answers every route. The route only sets how much it thinks.
 - **The desktop must be on.** If the relay does not answer, do the work
   yourself and say so. There is no fallback and none is wanted.
 
+## Private drives and the paid route
+
+On lemonpepper, drives `C:` and `D:` are private and `F:` is the working
+drive. Full rules: `anthologies/home-library-series/client/PRIVATE.md`.
+
+- Never read, list or search `C:` or `D:` yourself, with any tool or shell
+  command. You are a paid AI and those drives are not for you.
+- To have a private file handled, pass its path to `ask-local.ps1` with
+  `-Out` on a private drive. The reply is saved there and not shown. Do
+  not open it. Report only that it was written.
+- `-Route paid` sends the request to Claude through the front door. It
+  costs money and is refused for private input. Use it only when Zo asks.
+
 ## Exit codes
 
 - `0` complete reply.
@@ -61,6 +74,7 @@ One model answers every route. The route only sets how much it thinks.
 - `4` reply cut off or input truncated. Do not use the partial text.
   Raise `-MaxTokens`, split the input, or move to `local-think`.
 - `1` request failed (relay down, bad route). `2` bad arguments or no key.
+- `5` refused by the drive rules. Nothing was sent. Do not work around it.
 
 On limesalt the key must be in the `WHL_LITELLM_KEY` environment
 variable. On the desktop the tool finds it. Never print it.

@@ -81,7 +81,7 @@ on a preview deploy, and expect it to take more than one sitting.
 ## Landing page skeleton
 
 `ARCH-001-PlatformOverview` uses: The system in one paragraph; The whole
-system on one page (DIA-101); The pages (table: Page, What it covers, Read it
+system on one page (DIA-100); The pages (table: Page, What it covers, Read it
 when you want to know); Flows that cross pages; Deployable components (table:
 Component, Runs where, Ships how); Change Map (the cross-system table:
 Component, Kind, Why it matters, Change class, Where to read more; most

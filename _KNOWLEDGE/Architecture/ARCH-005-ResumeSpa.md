@@ -29,7 +29,7 @@ The resume app, branded **Alonzo's Anthologies**, is a small React website that 
 
 ![DIA-105 Resume SPA](../Diagrams/DIA-105-ResumeSpa.svg)
 
-Read it left to right. Blue boxes are the data files, amber boxes are the React views, green boxes are what a visitor sees, and red boxes are the PDF path. The circled numbers match the steps below. Everything inside the dashed frame runs in the visitor's browser; the grey strip along the bottom is the build that puts the app at `/resume/`.
+The picture is the plain-language outline. Read it left to right: the data files, the pages that read them, and the PDF. Blue is Zo's facts, green is the pages a visitor sees, amber is the downloaded file. Only the printed resume view leads to the PDF. The picture carries no step numbers; the steps are in the text below.
 
 ## Components that matter here
 

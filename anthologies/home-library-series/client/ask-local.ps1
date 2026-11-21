@@ -13,9 +13,13 @@ Read ROUTING.md beside this file for what is safe to hand over.
               does not allow -File to be given twice.) The instruction is
               sent before the files and repeated after them, because the
               models answer long inputs better when the question comes last.
-  -Route      local-fast (the default: thinks briefly, then answers) or
+  -Route      local-fast (the default: thinks briefly, then answers),
               local-think (same model, thinks properly first; about three
-              times slower; for reasoning, ordering, counting, strict rewrites).
+              times slower; for reasoning, ordering, counting, strict rewrites),
+              or paid (a pass-through to Claude; costs money; never allowed
+              with private input).
+  -Private    Treat this request as private even if no file is on a private
+              drive, for example when the private text is in the prompt.
   -System     Optional system message.
   -Task       Short label for this job. Shows as a tag in Langfuse.
   -Caller     Who is asking. Shows as the user in Langfuse. Defaults to this
@@ -39,9 +43,21 @@ Exit codes:
   4  a reply came back but cannot be trusted: it was cut off at the reply
      limit, or the model did not see the whole input. The partial text is
      written to standard error, never to standard output or -Out
+  5  refused by the drive rules. Nothing was sent
 
-The key is read from the WHL_LITELLM_KEY environment variable. On the desktop
-it falls back to LITELLM_MASTER_KEY in E:\WHL\compose\.env. It is never printed.
+Drive rules (see PRIVATE.md beside this file). On lemonpepper, drives C and D
+are private and drive F is the working drive. Set WHL_PRIVATE_ROOTS (a list
+separated by semicolons) to change that, or to turn the rules on elsewhere.
+If any input file is on a private drive, or -Private is given:
+  - the request goes through the private door (port 4001), which has only
+    home routes and no paid key;
+  - the paid route is refused;
+  - -Out is required and must itself be on a private drive;
+  - the reply is never printed, not even a partial one.
+
+The key is read from the WHL_LITELLM_KEY environment variable (WHL_PRIVATE_KEY
+for the private door). On the desktop it falls back to LITELLM_MASTER_KEY
+(LITELLM_PRIVATE_KEY) in E:\WHL\compose\.env. It is never printed.
 #>
 param(
     [string]$Prompt,
@@ -56,7 +72,9 @@ param(
     [switch]$Stats,
     [switch]$KeepUnicode,
     [int]$ContextTokens = 16384,
-    [string]$Relay = "http://lemonpepper:4000/v1"
+    [string]$Relay = "http://lemonpepper:4000/v1",
+    [string]$PrivateRelay = "http://lemonpepper:4001/v1",
+    [switch]$Private
 )
 
 $ErrorActionPreference = "Stop"
@@ -75,17 +93,44 @@ if (-not $Prompt) {
     if (-not $Prompt) { Fail 2 "no prompt given" }
 }
 
+# ---- Drive rules ----------------------------------------------------------
+$privateRoots = @()
+if ($env:WHL_PRIVATE_ROOTS) {
+    $privateRoots = @($env:WHL_PRIVATE_ROOTS -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+} elseif ($env:COMPUTERNAME -eq "WIN-MPISA5DBMQF") {
+    $privateRoots = @("C:\", "D:\")
+}
+function Test-PrivatePath([string]$Path) {
+    $full = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Path)
+    foreach ($r in $privateRoots) {
+        $root = $r.TrimEnd('\', '/') + '\'
+        if ($full.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)) { return $true }
+    }
+    return $false
+}
+$isPrivate = [bool]$Private
+
 $content = $Prompt
 if ($File) {
     $File = @($File | ForEach-Object { $_ -split ';' } | ForEach-Object { $_.Trim() } | Where-Object { $_ })
     foreach ($f in $File) {
         if (-not (Test-Path -LiteralPath $f)) { Fail 2 "file not found: $f" }
+        if (Test-PrivatePath $f) { $isPrivate = $true }
         $text = [System.IO.File]::ReadAllText((Resolve-Path -LiteralPath $f).Path, $utf8)
         $name = Split-Path -Leaf $f
         $content += "`n`n===== FILE: $name =====`n$text`n===== END OF FILE: $name ====="
     }
     $content += "`n`nThe instruction again, now that you have read the file content above:`n$Prompt"
 }
+
+if ($isPrivate) {
+    if ($Route -notlike "local-*") { Fail 5 "private input cannot go to the '$Route' route. Private things stay on the home routes." }
+    if (-not $Out) { Fail 5 "private input needs -Out, on a private drive. The reply is never printed." }
+    if (-not (Test-PrivatePath $Out)) { Fail 5 "the reply to private input must be saved on a private drive. '$Out' is not on one." }
+    $Relay = $PrivateRelay
+}
+# The paid model's window is far larger than the home model's.
+if ($Route -eq "paid" -and $ContextTokens -eq 16384) { $ContextTokens = 180000 }
 
 # Estimate tokens on the safe side. Measured on this setup: prose and code run
 # about 3.4 characters to a token, and runs of digits nearer 1.2. An input that
@@ -98,12 +143,13 @@ if ($estimate + $MaxTokens -gt $ContextTokens) {
     Fail 3 "too large. About $estimate tokens in, $MaxTokens reserved for the reply, and the window is $ContextTokens. Split the input, or lower -MaxTokens if a short answer is enough."
 }
 
-$key = $env:WHL_LITELLM_KEY
+if ($isPrivate) { $key = $env:WHL_PRIVATE_KEY; $keyName = "LITELLM_PRIVATE_KEY"; $keyVar = "WHL_PRIVATE_KEY" }
+else { $key = $env:WHL_LITELLM_KEY; $keyName = "LITELLM_MASTER_KEY"; $keyVar = "WHL_LITELLM_KEY" }
 if (-not $key -and (Test-Path "E:\WHL\compose\.env")) {
-    $line = Get-Content "E:\WHL\compose\.env" | Where-Object { $_ -match '^LITELLM_MASTER_KEY=' } | Select-Object -First 1
+    $line = Get-Content "E:\WHL\compose\.env" | Where-Object { $_ -match "^$keyName=" } | Select-Object -First 1
     if ($line) { $key = ($line -split '=', 2)[1].Trim() }
 }
-if (-not $key) { Fail 2 "no key. Set WHL_LITELLM_KEY." }
+if (-not $key) { Fail 2 "no key. Set $keyVar." }
 
 if (-not $Caller) { $Caller = $env:WHL_CALLER }
 if (-not $Caller) {
@@ -142,10 +188,10 @@ try {
     if ($Effort) { try { $resp = Send-Request $false } catch { $first = $_ } }
     if (-not $resp) {
         $detail = $first.Exception.Message
-        try {
+        if (-not $isPrivate) { try {
             $stream = $first.Exception.Response.GetResponseStream()
             $detail += " " + ((New-Object System.IO.StreamReader($stream, $utf8)).ReadToEnd() -replace "\s+", " ")
-        } catch {}
+        } catch {} }
         if ($detail.Length -gt 400) { $detail = $detail.Substring(0, 400) }
         Fail 1 "request failed: $detail"
     }
@@ -170,6 +216,7 @@ function Write-Stats([string]$Verdict) {
     if (-not $Stats) { return }
     $line = [ordered]@{
         route      = $Route
+        private    = $isPrivate
         caller     = $Caller
         task       = $Task
         tokens_in  = $tokensIn
@@ -187,14 +234,14 @@ function Write-Stats([string]$Verdict) {
 $leastPossible = [int]($all.Length / 6.0)
 if ($tokensIn -gt 0 -and ($tokensIn -lt $leastPossible -or ($tokensIn + $tokensOut) -ge ($ContextTokens - 16))) {
     Write-Stats "input-cut"
-    if ($reply) { [Console]::Error.WriteLine("----- untrusted reply -----`n$reply") }
+    if ($reply -and -not $isPrivate) { [Console]::Error.WriteLine("----- untrusted reply -----`n$reply") }
     Fail 4 "the model saw $tokensIn tokens of an input of $($all.Length) characters, so part of it was cut off. Split the input and ask again."
 }
 
 # Guard 2: the reply was cut off. On local-fast, thinking counts against the limit.
 if ($finish -ne "stop" -or -not $reply) {
     Write-Stats "reply-cut"
-    if ($reply) { [Console]::Error.WriteLine("----- partial reply -----`n$reply") }
+    if ($reply -and -not $isPrivate) { [Console]::Error.WriteLine("----- partial reply -----`n$reply") }
     Fail 4 "the reply was cut off (finish: $finish, $tokensOut tokens used of $MaxTokens). Raise -MaxTokens and ask again."
 }
 

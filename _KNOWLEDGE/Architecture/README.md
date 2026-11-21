@@ -21,7 +21,7 @@ Definition and rating scale: [`_META/Definitions/Architecture.md`](../../_META/D
 
 | Page | Covers | Diagram |
 | --- | --- | --- |
-| [ARCH-001 Platform overview](./ARCH-001-PlatformOverview.md) | Landing page: the whole system, cross-page flows, the Change Map | [DIA-101](../Diagrams/DIA-101-SystemOverview.svg) |
+| [ARCH-001 Platform overview](./ARCH-001-PlatformOverview.md) | Landing page: the whole system, cross-page flows, the Change Map | [DIA-100](../Diagrams/DIA-100-WhatItIsFor.svg), [DIA-101](../Diagrams/DIA-101-ThePieces.svg) |
 | [ARCH-002 Source control](./ARCH-002-SourceControl.md) | GitHub, `main`, secrets, the archived GitLab project | [DIA-102](../Diagrams/DIA-102-SourceControl.svg) |
 | [ARCH-003 Hosting](./ARCH-003-Hosting.md) | Cloudflare Pages, hostnames, previews, the token, rollback | [DIA-103](../Diagrams/DIA-103-Hosting.svg) |
 | [ARCH-004 Site build](./ARCH-004-SiteBuild.md) | `build.sh`, Quartz, drafts, staging `/resume/` | [DIA-104](../Diagrams/DIA-104-SiteBuild.svg) |
