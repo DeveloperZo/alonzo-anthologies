@@ -62,7 +62,9 @@ def main() -> int:
         return 2
 
     files = tracked(wt)
-    edit = card.get("edit") or [f for f in files if any(fnmatch.fnmatch(f, p) for p in card["write"])]
+    # An explicit "edit": [] means no existing file is edited (only new_files).
+    edit = card["edit"] if "edit" in card else \
+        [f for f in files if any(fnmatch.fnmatch(f, p) for p in card["write"])]
     new_files = card.get("new_files", [])
     for nf in new_files:  # aider adds a missing file it is given as empty, then fills it
         p = wt / nf

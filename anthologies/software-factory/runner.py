@@ -272,20 +272,29 @@ def process(root: Path, repo: Path, card_path: Path, worker: str, judge_cmd: str
 
     feedback: Path | None = None
     passed = False
+    fail_reason = "gate did not pass"
     for attempt in range(1, card["retries"] + 2):
         w = run_worker(worker, wt, card_path, feedback, run_dir, attempt)
         files = changed_files(wt, base_sha, noise, ignore)
         bad = out_of_scope(files, card["write"])
         g = [] if bad else gate(wt, card, card["accept"])
         ok, failed = summarize(g, excused, ratchet, base_counts)
-        ok = ok and not bad and bool(files)
+        # The worker's exit code counts: a worker that gave up (or never ran the
+        # model) must not pass on the strength of a gate that an empty change
+        # can satisfy.
+        ok = ok and not bad and bool(files) and w["code"] == 0
         stage(f"attempt-{attempt}", {"worker": w, "files": files, "out_of_scope": bad,
                                      "gate": g, "passed": ok})
         if ok:
             passed = True
             break
+        if w["code"] == 3:  # worker refused the card as too big; retrying cannot help
+            fail_reason = "card over the worker's context budget"
+            break
         feedback = run_dir / f"feedback-{attempt}.txt"
         lines = []
+        if w["code"] != 0:
+            lines.append(f"The worker exited {w['code']}:\n{w['tail'][-1500:]}")
         if not files:
             lines.append("No files were changed.")
         if bad:
@@ -306,9 +315,11 @@ def process(root: Path, repo: Path, card_path: Path, worker: str, judge_cmd: str
         stage("hidden", h)
         result["hidden_passed"] = all(r["code"] == 0 for r in h) if h else None
         changed_files(wt, base_sha, noise, ignore)
+        if passed and result["hidden_passed"] is False:
+            passed, fail_reason = False, "hidden tests failed"
 
     verdict = judge(judge_cmd, wt, card_path, run_dir) if passed else \
-        {"verdict": "reject", "reasons": ["gate did not pass"]}
+        {"verdict": "reject", "reasons": [fail_reason]}
     stage("judge", verdict)
 
     if passed:
