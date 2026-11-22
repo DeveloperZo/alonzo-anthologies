@@ -114,7 +114,8 @@ def gate(wt: Path, card: dict, cmds: list[str]) -> list[dict]:
 # Build and test output that is never the worker's change, even if the repo
 # does not ignore it. Cards can add more under "ignore".
 DEFAULT_IGNORE = ["*__pycache__*", "*node_modules/*", "*/bin/*", "*/obj/*", "*/dist/*",
-                  "*/coverage/*", "*.pyc", "*/.vite/*", "*test-results/*", "*playwright-report/*"]
+                  "*/coverage/*", "*.pyc", "*/.vite/*", "*test-results/*", "*playwright-report/*",
+                  "*.aider*"]
 
 
 def changed_files(wt: Path, base: str, noise: set[str], ignore: list[str]) -> list[str]:
