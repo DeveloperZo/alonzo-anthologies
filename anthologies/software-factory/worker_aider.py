@@ -11,8 +11,8 @@ Settings (environment):
                      FACTORY_RETRY_ROUTE is set)
   FACTORY_LLM_BASE   default http://localhost:4000/v1
   FACTORY_CTX        model context window, default 16384
-  WHL_LITELLM_KEY    relay key. If unset, read from E:\\WHL\\compose\\.env by this
-                     process, like ask-local.ps1 does. Never printed.
+  WHL_FACTORY_KEY    the factory's LiteLLM virtual key (front door, local-*, paid).
+                     Required. Never printed, never read from a file.
   FACTORY_AIDER      aider executable, default "aider"
 
 Card fields used: goal, criterion, workdir, write, read, and optionally
@@ -33,14 +33,9 @@ from pathlib import Path
 
 
 def relay_key() -> str:
-    key = os.environ.get("WHL_LITELLM_KEY", "")
-    env = Path(r"E:\WHL\compose\.env")
-    if not key and env.exists():
-        for line in env.read_text(encoding="utf-8", errors="replace").splitlines():
-            if line.startswith("LITELLM_MASTER_KEY="):
-                key = line.split("=", 1)[1].strip()
-                break
-    return key
+    """The factory's own LiteLLM virtual key. Never read from E:\\WHL\\compose\\.env:
+    the master keys there are rotated and must not be used by tools."""
+    return os.environ.get("WHL_FACTORY_KEY", "")
 
 
 def tracked(wt: Path) -> list[str]:
@@ -63,7 +58,7 @@ def main() -> int:
     ctx = int(os.environ.get("FACTORY_CTX", "16384"))
     key = relay_key()
     if not key:
-        print("worker_aider: no relay key (set WHL_LITELLM_KEY)", file=sys.stderr)
+        print("worker_aider: no relay key (set WHL_FACTORY_KEY)", file=sys.stderr)
         return 2
 
     files = tracked(wt)
