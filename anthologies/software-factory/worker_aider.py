@@ -92,6 +92,22 @@ def main() -> int:
     if feedback_path and Path(feedback_path).exists():
         fb = Path(feedback_path).read_text(encoding="utf-8", errors="replace")[-3500:]
         lines.append("Your previous attempt failed these checks. Fix the cause:\n" + fb)
+    # Budget check: Aider sends whole files, so a card whose files do not fit the
+    # context makes the model hang or reason over a truncated prompt. Fail fast.
+    chars = len("\n\n".join(lines))
+    for f in edit + read:
+        try:
+            chars += (wt / f).stat().st_size
+        except OSError:
+            pass
+    est = int(chars / 3.5) + 2000  # files + message + Aider's own prompt
+    budget = ctx - int(os.environ.get("FACTORY_OUTPUT_RESERVE", "4096"))
+    (run_dir / f"budget-{attempt}.json").write_text(json.dumps(
+        {"estimated_input_tokens": est, "budget": budget, "ctx": ctx}), encoding="utf-8")
+    if est > budget:
+        print(f"worker_aider: card too big for the context: ~{est} input tokens, budget {budget}. "
+              "Split the card or narrow edit/read.", file=sys.stderr)
+        return 3
     msg_file = run_dir / f"aider-message-{attempt}.txt"
     msg_file.write_text("\n\n".join(lines), encoding="utf-8")
 
@@ -108,6 +124,7 @@ def main() -> int:
            "--no-git", "--yes-always", "--no-pretty", "--no-stream",
            "--map-tokens", "0", "--no-show-model-warnings", "--no-check-update",
            "--analytics-disable", "--no-auto-lint", "--no-auto-test",
+           "--timeout", os.environ.get("FACTORY_LLM_TIMEOUT", "600"),
            "--chat-history-file", str(run_dir / f"aider-chat-{attempt}.md"),
            "--input-history-file", str(run_dir / "aider-input.history"),
            "--message-file", str(msg_file)]
@@ -120,7 +137,7 @@ def main() -> int:
     log = run_dir / f"aider-attempt-{attempt}.log"
     with log.open("w", encoding="utf-8") as f:
         p = subprocess.run(cmd, cwd=str(wt), stdout=f, stderr=subprocess.STDOUT, env=env,
-                           stdin=subprocess.DEVNULL, timeout=1800)
+                           stdin=subprocess.DEVNULL, timeout=2400)
     tail = log.read_text(encoding="utf-8", errors="replace")[-1500:]
     print(tail)
     return p.returncode
