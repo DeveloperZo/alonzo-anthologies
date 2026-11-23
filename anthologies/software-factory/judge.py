@@ -87,11 +87,15 @@ def main() -> int:
                             "completion_tokens": usage.get("completion_tokens")}) + "\n")
 
     text = resp["choices"][0]["message"].get("content") or ""
-    m = re.search(r"\{.*\}", text, re.S)
-    try:
-        v = json.loads(m.group(0)) if m else {}
-    except json.JSONDecodeError:
-        v = {}
+    # Decode from the last '{"verdict"': a greedy brace match breaks when the
+    # reviewer quotes code that contains braces.
+    v: dict = {}
+    for m in reversed(list(re.finditer(r'\{\s*"verdict"', text))):
+        try:
+            v = json.JSONDecoder().raw_decode(text, m.start())[0]
+            break
+        except json.JSONDecodeError:
+            continue
     if v.get("verdict") not in ("accept", "reject"):
         print(json.dumps({"verdict": "error", "reasons": ["judge reply was not a verdict",
                                                            text[:300]]}))
