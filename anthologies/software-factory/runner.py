@@ -21,7 +21,8 @@ Stages per card:
                 the gate log of a failed attempt is handed to the next one
   5. hidden     card.hidden_tests copied in from their commit, card.hidden_accept run;
                 scoring only, the worker never sees them
-  6. judge      external command if --judge is given; otherwise "unjudged"
+  6. judge      external command if --judge is given, run after each attempt whose
+                 gate passes; a reject is fed back to the next attempt. Otherwise "unjudged"
   7. file       commit on the branch (never main, never pushed), result.json,
                 card moved to output/ or finding/, one line appended to log.md
 """
@@ -285,6 +286,23 @@ def process(root: Path, repo: Path, card_path: Path, worker: str, judge_cmd: str
         ok = ok and not bad and bool(files) and w["code"] == 0
         stage(f"attempt-{attempt}", {"worker": w, "files": files, "out_of_scope": bad,
                                      "gate": g, "passed": ok})
+        if ok and judge_cmd:
+            # Judge inside the loop: a rejection is detail the gate cannot see
+            # (wording, a property left out), so it goes back to the worker as
+            # feedback, like a red gate.
+            (run_dir / "diff.patch").write_text(git(wt, "diff", "--cached", base_sha),
+                                                encoding="utf-8")
+            verdict = judge(judge_cmd, wt, card_path, run_dir)
+            stage(f"judge-{attempt}", verdict)
+            if verdict.get("verdict") == "error":  # a broken judge is not feedback
+                fail_reason = "judge error: " + "; ".join(verdict.get("reasons", []))
+                break
+            if verdict.get("verdict") != "accept":
+                fail_reason = "judge: " + ("; ".join(verdict.get("reasons", [])) or "rejected")
+                feedback = run_dir / f"feedback-{attempt}.txt"
+                feedback.write_text("The checks passed, but a reviewer rejected the change:\n- "
+                                    + "\n- ".join(verdict.get("reasons", [])), encoding="utf-8")
+                continue
         if ok:
             passed = True
             break
@@ -318,8 +336,12 @@ def process(root: Path, repo: Path, card_path: Path, worker: str, judge_cmd: str
         if passed and result["hidden_passed"] is False:
             passed, fail_reason = False, "hidden tests failed"
 
-    verdict = judge(judge_cmd, wt, card_path, run_dir) if passed else \
-        {"verdict": "reject", "reasons": [fail_reason]}
+    if not passed:
+        verdict = {"verdict": "reject", "reasons": [fail_reason]}
+    elif judge_cmd:
+        verdict = result["stages"][f"judge-{attempt}"]
+    else:
+        verdict = {"verdict": "unjudged", "reasons": ["no judge configured"]}
     stage("judge", verdict)
 
     if passed:

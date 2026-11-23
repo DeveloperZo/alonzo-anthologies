@@ -6,12 +6,12 @@ Status: draft
 Owner: zo
 Human id: software-factory-readme
 Update trigger: when a stage is added, the card format changes, or a replay result changes the design
-Last updated: 2026-11-22
+Last updated: 2026-11-23
 -->
 
-Status: v0 runner only. The queue, worktrees, gate, hidden tests and
-filing work; there is no model in the loop yet. The worker and the judge
-are plug-in commands still to be chosen (harness bake-off next).
+Status: v0. Worker is Aider on the local model (`worker_aider.py`);
+judge is a frontier model (`judge.py`). M-UI-050 replayed end to end on
+the local model on 2026-11-23 (4 of 4 cards, hidden tests 4 of 4).
 
 ## Shape
 
@@ -54,8 +54,12 @@ Standard library only. One card at a time. Per card:
    `hidden_accept` run, files removed again. The worker never sees them
    and they are never committed.
 6. **Judge**: a command whose last output line is
-   `{"verdict":"accept"|"reject","reasons":[...]}`. Without one the
-   verdict is `unjudged`.
+   `{"verdict":"accept"|"reject","reasons":[...]}`, run after every
+   attempt whose gate passes. A reject goes back to the worker as
+   feedback for the next attempt; a judge error stops the card. Without
+   a judge the verdict is `unjudged`. `judge.py` is the frontier judge:
+   it sends the card and `diff.patch` to `FACTORY_JUDGE_ROUTE` through
+   LiteLLM and logs its tokens to `judge-usage.jsonl`.
 7. **File**: commit on the card's branch, card moved to `output\` or
    `finding\`, line appended to `log.md`.
 
