@@ -83,6 +83,10 @@ def main() -> int:
         lines.append(f"Required interface (other code and tests depend on these exact names):\n{card['interface']}")
     if card.get("notes"):
         lines.append(f"Notes: {card['notes']}")
+    paths = edit + [nf for nf in new_files if nf not in edit]
+    if paths:
+        lines.append("Files to change, by exact path from the repository root (write to these paths, "
+                     "never to a path relative to another file):\n" + "\n".join(paths))
     lines.append("Only change the files you have been given. Keep the change minimal and match the "
                  "surrounding code style. Do not add dependencies. Do not edit tests unless a file you "
                  "were given is a test.")
@@ -118,7 +122,9 @@ def main() -> int:
            "--model", f"openai/{route}",
            "--model-metadata-file", str(meta),
            "--edit-format", "diff",
-           "--no-git", "--yes-always", "--no-pretty", "--no-stream",
+           # Git root (the worktree) anchors paths. With --no-git, Aider took the folder of
+           # the chat files as its root and wrote new files to a nested duplicate path.
+           "--no-auto-commits", "--no-dirty-commits", "--no-gitignore", "--yes-always", "--no-pretty", "--no-stream",
            "--map-tokens", "0", "--no-show-model-warnings", "--no-check-update",
            "--analytics-disable", "--no-auto-lint", "--no-auto-test",
            "--timeout", os.environ.get("FACTORY_LLM_TIMEOUT", "600"),
