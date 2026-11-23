@@ -125,7 +125,7 @@ def main() -> int:
            # Git root (the worktree) anchors paths. With --no-git, Aider took the folder of
            # the chat files as its root and wrote new files to a nested duplicate path.
            "--no-auto-commits", "--no-dirty-commits", "--no-gitignore", "--yes-always", "--no-pretty", "--no-stream",
-           "--map-tokens", "0", "--no-show-model-warnings", "--no-check-update",
+           "--map-tokens", "0", "--no-detect-urls", "--no-show-model-warnings", "--no-check-update",
            "--analytics-disable", "--no-auto-lint", "--no-auto-test",
            "--timeout", os.environ.get("FACTORY_LLM_TIMEOUT", "600"),
            "--chat-history-file", str(run_dir / f"aider-chat-{attempt}.md"),
