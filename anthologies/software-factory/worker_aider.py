@@ -11,6 +11,7 @@ Settings (environment):
                      FACTORY_RETRY_ROUTE is set)
   FACTORY_LLM_BASE   default http://localhost:4000/v1
   FACTORY_CTX        model context window, default 16384
+  FACTORY_MAX_OUTPUT output cap incl. reasoning, default 6144 (also the input reserve)
   WHL_FACTORY_KEY    the factory's LiteLLM virtual key (front door, local-*, paid).
                      Required. Never printed, never read from a file.
   FACTORY_AIDER      aider executable, default "aider"
@@ -102,7 +103,11 @@ def main() -> int:
         except OSError:
             pass
     est = int(chars / 3.5) + 2000  # files + message + Aider's own prompt
-    budget = ctx - int(os.environ.get("FACTORY_OUTPUT_RESERVE", "4096"))
+    # gpt-oss spends output tokens on reasoning before the edit; at 4096, 8 of 9
+    # token-limit hits in the M-UI-035 run were the output cap. Input and output
+    # share the context, so a bigger cap leaves less room for files.
+    max_out = int(os.environ.get("FACTORY_MAX_OUTPUT", "6144"))
+    budget = ctx - int(os.environ.get("FACTORY_OUTPUT_RESERVE", str(max_out)))
     (run_dir / f"budget-{attempt}.json").write_text(json.dumps(
         {"estimated_input_tokens": est, "budget": budget, "ctx": ctx}), encoding="utf-8")
     if est > budget:
@@ -114,7 +119,7 @@ def main() -> int:
 
     meta = run_dir / "aider-model-metadata.json"
     meta.write_text(json.dumps({f"openai/{route}": {
-        "max_input_tokens": ctx, "max_tokens": 4096, "max_output_tokens": 4096,
+        "max_input_tokens": ctx, "max_tokens": max_out, "max_output_tokens": max_out,
         "input_cost_per_token": 0, "output_cost_per_token": 0,
         "litellm_provider": "openai", "mode": "chat"}}), encoding="utf-8")
 
