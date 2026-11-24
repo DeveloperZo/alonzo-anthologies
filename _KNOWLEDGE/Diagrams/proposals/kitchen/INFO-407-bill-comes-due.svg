@@ -1,0 +1,65 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p407-t p407-d">
+  <title id="p407-t">DIA-407 · The Bill Comes Due</title>
+  <desc id="p407-d">Two squares drawn so that their areas are two bills for AI spend per weekly active user: 37 dollars in March 2026, and 115 dollars in August 2026 in rust, about three times the area. Beside them, two strips of the same length show the share of the work each bill bought: new features 57 percent then 56 percent, maintenance 25 percent then 24 percent, and the rest. The two strips look the same. Below, one hundred marks stand for one hundred organizations, and eighteen are filled: the share that measures the impact of AI. Vendor data at list prices, and a self-reported survey.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p407-h); stroke: none; }
+      .hb { fill: url(#p407-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+      .huge { font-size: 34px; } .hugep { font-size: 64px; fill: var(--paper); } .num { font-size: 26px; } .off { fill: none; stroke: var(--soft); stroke-width: 0.8; }
+    </style>
+    <pattern id="p407-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VII</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 7 · THE CARD AND THE INVOICE</text>
+  <text x="70" y="104" class="sc">THE BILL: AI SPEND PER WEEKLY ACTIVE USER</text>
+  <rect x="70" y="238.18" width="133.82" height="133.82" class="hb"/>
+  <rect x="225.82" y="136.08" width="235.92" height="235.92" class="fa"/>
+  <rect x="92.91" y="279.09" width="88" height="40" class="paper"/>
+  <text x="136.91" y="311.09" text-anchor="middle" class="huge">&#36;37</text>
+  <text x="343.78" y="276.04" text-anchor="middle" class="hugep">&#36;115</text>
+  <text x="70" y="394" class="it">March 2026</text>
+  <text x="225.82" y="394" class="ita">August 2026: about three times the bill</text>
+  <text x="520" y="104" class="sc">WHAT IT BOUGHT: SHARE OF THE WORK</text>
+  <rect x="520" y="148" width="210.9" height="40" class="hb"/><rect x="730.9" y="148" width="92.5" height="40" class="ink"/><rect x="823.4" y="148" width="66.6" height="40" class="b"/><text x="625.45" y="208" text-anchor="middle" class="it">57%</text><text x="777.15" y="208" text-anchor="middle" class="it">25%</text><text x="520" y="139" class="sm">March 2026</text>
+  <rect x="520" y="262" width="207.2" height="40" class="hb"/><rect x="727.2" y="262" width="88.8" height="40" class="ink"/><rect x="816" y="262" width="74" height="40" class="b"/><text x="623.6" y="322" text-anchor="middle" class="it">56%</text><text x="771.6" y="322" text-anchor="middle" class="it">24%</text><text x="520" y="253" class="sm">August 2026</text>
+  <text x="625.45" y="346" text-anchor="middle" class="sm">new features</text>
+  <text x="771.6" y="346" text-anchor="middle" class="sm">maintenance</text>
+  <text x="853" y="346" text-anchor="middle" class="sm">the rest</text>
+  <text x="520" y="394" class="it">The mix of work did not move.</text>
+  <text x="70" y="452" class="sc">WHO CHECKS: OF EVERY HUNDRED ORGANIZATIONS, THOSE THAT MEASURE THE IMPACT</text>
+  <circle cx="76" cy="478" r="6" class="ink"/><circle cx="92.6" cy="478" r="6" class="ink"/><circle cx="109.2" cy="478" r="6" class="ink"/><circle cx="125.8" cy="478" r="6" class="ink"/><circle cx="142.4" cy="478" r="6" class="ink"/><circle cx="159" cy="478" r="6" class="ink"/><circle cx="175.6" cy="478" r="6" class="ink"/><circle cx="192.2" cy="478" r="6" class="ink"/><circle cx="208.8" cy="478" r="6" class="ink"/><circle cx="225.4" cy="478" r="6" class="ink"/><circle cx="242" cy="478" r="6" class="ink"/><circle cx="258.6" cy="478" r="6" class="ink"/><circle cx="275.2" cy="478" r="6" class="ink"/><circle cx="291.8" cy="478" r="6" class="ink"/><circle cx="308.4" cy="478" r="6" class="ink"/><circle cx="325" cy="478" r="6" class="ink"/><circle cx="341.6" cy="478" r="6" class="ink"/><circle cx="358.2" cy="478" r="6" class="ink"/><circle cx="374.8" cy="478" r="6" class="off"/><circle cx="391.4" cy="478" r="6" class="off"/><circle cx="408" cy="478" r="6" class="off"/><circle cx="424.6" cy="478" r="6" class="off"/><circle cx="441.2" cy="478" r="6" class="off"/><circle cx="457.8" cy="478" r="6" class="off"/><circle cx="474.4" cy="478" r="6" class="off"/><circle cx="491" cy="478" r="6" class="off"/><circle cx="507.6" cy="478" r="6" class="off"/><circle cx="524.2" cy="478" r="6" class="off"/><circle cx="540.8" cy="478" r="6" class="off"/><circle cx="557.4" cy="478" r="6" class="off"/><circle cx="574" cy="478" r="6" class="off"/><circle cx="590.6" cy="478" r="6" class="off"/><circle cx="607.2" cy="478" r="6" class="off"/><circle cx="623.8" cy="478" r="6" class="off"/><circle cx="640.4" cy="478" r="6" class="off"/><circle cx="657" cy="478" r="6" class="off"/><circle cx="673.6" cy="478" r="6" class="off"/><circle cx="690.2" cy="478" r="6" class="off"/><circle cx="706.8" cy="478" r="6" class="off"/><circle cx="723.4" cy="478" r="6" class="off"/><circle cx="740" cy="478" r="6" class="off"/><circle cx="756.6" cy="478" r="6" class="off"/><circle cx="773.2" cy="478" r="6" class="off"/><circle cx="789.8" cy="478" r="6" class="off"/><circle cx="806.4" cy="478" r="6" class="off"/><circle cx="823" cy="478" r="6" class="off"/><circle cx="839.6" cy="478" r="6" class="off"/><circle cx="856.2" cy="478" r="6" class="off"/><circle cx="872.8" cy="478" r="6" class="off"/><circle cx="889.4" cy="478" r="6" class="off"/><circle cx="76" cy="500" r="6" class="off"/><circle cx="92.6" cy="500" r="6" class="off"/><circle cx="109.2" cy="500" r="6" class="off"/><circle cx="125.8" cy="500" r="6" class="off"/><circle cx="142.4" cy="500" r="6" class="off"/><circle cx="159" cy="500" r="6" class="off"/><circle cx="175.6" cy="500" r="6" class="off"/><circle cx="192.2" cy="500" r="6" class="off"/><circle cx="208.8" cy="500" r="6" class="off"/><circle cx="225.4" cy="500" r="6" class="off"/><circle cx="242" cy="500" r="6" class="off"/><circle cx="258.6" cy="500" r="6" class="off"/><circle cx="275.2" cy="500" r="6" class="off"/><circle cx="291.8" cy="500" r="6" class="off"/><circle cx="308.4" cy="500" r="6" class="off"/><circle cx="325" cy="500" r="6" class="off"/><circle cx="341.6" cy="500" r="6" class="off"/><circle cx="358.2" cy="500" r="6" class="off"/><circle cx="374.8" cy="500" r="6" class="off"/><circle cx="391.4" cy="500" r="6" class="off"/><circle cx="408" cy="500" r="6" class="off"/><circle cx="424.6" cy="500" r="6" class="off"/><circle cx="441.2" cy="500" r="6" class="off"/><circle cx="457.8" cy="500" r="6" class="off"/><circle cx="474.4" cy="500" r="6" class="off"/><circle cx="491" cy="500" r="6" class="off"/><circle cx="507.6" cy="500" r="6" class="off"/><circle cx="524.2" cy="500" r="6" class="off"/><circle cx="540.8" cy="500" r="6" class="off"/><circle cx="557.4" cy="500" r="6" class="off"/><circle cx="574" cy="500" r="6" class="off"/><circle cx="590.6" cy="500" r="6" class="off"/><circle cx="607.2" cy="500" r="6" class="off"/><circle cx="623.8" cy="500" r="6" class="off"/><circle cx="640.4" cy="500" r="6" class="off"/><circle cx="657" cy="500" r="6" class="off"/><circle cx="673.6" cy="500" r="6" class="off"/><circle cx="690.2" cy="500" r="6" class="off"/><circle cx="706.8" cy="500" r="6" class="off"/><circle cx="723.4" cy="500" r="6" class="off"/><circle cx="740" cy="500" r="6" class="off"/><circle cx="756.6" cy="500" r="6" class="off"/><circle cx="773.2" cy="500" r="6" class="off"/><circle cx="789.8" cy="500" r="6" class="off"/><circle cx="806.4" cy="500" r="6" class="off"/><circle cx="823" cy="500" r="6" class="off"/><circle cx="839.6" cy="500" r="6" class="off"/><circle cx="856.2" cy="500" r="6" class="off"/><circle cx="872.8" cy="500" r="6" class="off"/><circle cx="889.4" cy="500" r="6" class="off"/>
+  <text x="902" y="544" text-anchor="end" class="num">18 in 100</text>
+  <text x="70" y="544" class="sm">The squares are drawn so that area is spend. The strips show the mix of work, not how much of it.</text>
+  <text x="480" y="584" text-anchor="middle" class="sm">Spend and mix: one vendor's data at list prices. Who checks: a survey of 883 engineering leaders, self-reported.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">The Bill Comes Due</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-407 · AI spend per weekly active user tripled in five months while the mix of work stayed where it was.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p401-t p401-d">
+  <title id="p401-t">DIA-401 · A Double-Edged Knife</title>
+  <desc id="p401-d">A field of tasks drawn as dots and cut from top to bottom by a jagged line, the frontier of what the AI does well. To the left, inside it, the dots are dark and three large figures read: 12.2 percent more tasks finished, 25.1 percent faster, and quality up 40 percent and more. To the right, outside it, the ground is hatched, the dots are rust and one large rust figure reads minus 19: consultants using AI were 19 percentage points less likely to get the answer right. Two dots that sit level with each other, one on each side of the line, are bracketed as two tasks that look equally hard. From a preregistered field experiment of 758 consultants.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p401-h); stroke: none; }
+      .hb { fill: url(#p401-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+      .huge { font-size: 54px; } .hugea { font-size: 84px; fill: var(--accent); }
+    </style>
+    <pattern id="p401-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE I</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 1 · DOES IT MAKE YOU BETTER?</text>
+  <path d="M 556 84 L 500 118 L 590 150 L 520 186 L 604 226 L 548 262 L 478 300 L 566 338 L 508 372 L 600 410 L 534 446 L 574 482 L 496 520 L 552 566 L 910 566 L 910 84 Z" class="h" style="opacity:0.55"/>
+  <rect x="50" y="84" width="860" height="482" class="l"/>
+  <path d="M 556 84 L 500 118 L 590 150 L 520 186 L 604 226 L 548 262 L 478 300 L 566 338 L 508 372 L 600 410 L 534 446 L 574 482 L 496 520 L 552 566" class="l" style="stroke-width:2.6"/>
+  <circle cx="372" cy="126" r="7" class="ink"/><circle cx="432" cy="160" r="7" class="ink"/><circle cx="386" cy="214" r="7" class="ink"/><circle cx="452" cy="238" r="7" class="ink"/><circle cx="408" cy="290" r="7" class="ink"/><circle cx="368" cy="352" r="7" class="ink"/><circle cx="446" cy="356" r="7" class="ink"/><circle cx="404" cy="418" r="7" class="ink"/><circle cx="456" cy="470" r="7" class="ink"/><circle cx="384" cy="496" r="7" class="ink"/><circle cx="430" cy="534" r="7" class="ink"/><circle cx="628" cy="132" r="7" class="fa"/><circle cx="640" cy="300" r="7" class="fa"/><circle cx="622" cy="452" r="7" class="fa"/><circle cx="612" cy="536" r="7" class="fa"/>
+  <circle cx="512" cy="338" r="7" class="ink"/><circle cx="596" cy="338" r="7" class="fa"/>
+  <path d="M 512 352 v 8 H 596 v -8" class="thin"/>
+  <rect x="640" y="352" width="230" height="44" class="paper"/>
+  <text x="614" y="368" class="sm">two tasks that look equally hard,</text>
+  <text x="614" y="384" class="sm">one on each side of the line</text>
+  <!-- inside -->
+  <text x="78" y="118" class="sc">INSIDE WHAT THE AI DOES WELL</text>
+  <text x="78" y="196" class="huge">+12.2%</text><text x="80" y="220" class="it">more tasks finished</text>
+  <text x="78" y="308" class="huge">+25.1%</text><text x="80" y="332" class="it">faster</text>
+  <text x="78" y="420" class="huge">+40%</text><text x="80" y="444" class="it">and more, in the quality of the work</text>
+  <!-- outside -->
+  <rect x="664" y="100" width="232" height="180" class="paper"/>
+  <text x="884" y="118" text-anchor="end" class="sc" style="fill:var(--accent)">OUTSIDE IT</text>
+  <text x="884" y="204" text-anchor="end" class="hugea">−19</text>
+  <text x="884" y="232" text-anchor="end" class="ita">points less likely</text>
+  <text x="884" y="252" text-anchor="end" class="ita">to get the answer right</text>
+  <rect x="640" y="474" width="256" height="74" class="paper"/>
+  <text x="884" y="496" text-anchor="end" class="sm">The frontier is jagged. Nothing about</text>
+  <text x="884" y="512" text-anchor="end" class="sm">a task says which side it will fall on.</text>
+  <text x="884" y="536" text-anchor="end" class="sm">758 consultants, assigned by chance.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">A Double-Edged Knife</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-401 · One tool, one study: better work on one side of a jagged frontier, worse answers on the other.</text>
+</svg>

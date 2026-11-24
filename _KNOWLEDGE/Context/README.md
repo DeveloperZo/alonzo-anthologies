@@ -12,6 +12,7 @@ travel between machines. These files do.
 | [monorepo.md](monorepo.md) | Repo layout, GitHub remote, naming and terminology |
 | [docs-pattern.md](docs-pattern.md) | The doc taxonomy this repo's structure is modeled on |
 | [ai-governance-series.md](ai-governance-series.md) | The two-part explainer: structure, design system, editorial rules |
+| [sdlc-articles.md](sdlc-articles.md) | The two SDLC articles: where each draft lives, the direction Zo set, and the kitchen plates (DIA-401 to 408) |
 | [working-with-zo.md](working-with-zo.md) | How Zo divides work between Cowork and Claude Code |
 | [deployment.md](deployment.md) | Publishing the site and getting write access from non-local sessions |
 | [home-library.md](home-library.md) | The home server: what runs on it, where the WHL project really lives, a Docker startup fix, and the rule to hand token-heavy work to the local models |

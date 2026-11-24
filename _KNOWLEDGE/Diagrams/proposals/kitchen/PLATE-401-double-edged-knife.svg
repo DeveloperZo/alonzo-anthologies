@@ -1,0 +1,76 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p401-t p401-d">
+  <title id="p401-t">DIA-401 · A Double-Edged Knife</title>
+  <desc id="p401-d">A menu card cut in two along a jagged line, with a chef's knife lying at the end of the cut. Dishes on the upper piece are ticked. Dishes on the lower piece, which has dropped away, are struck through in rust. Notes give the figures from a field experiment of 758 consultants: on tasks inside what the AI did well, quality rose by more than 40 percent, work was 25.1 percent faster and 12.2 percent more tasks were finished. On a task outside it, consultants using AI were 19 percentage points less likely to get the answer right. The cut does not follow the order of the menu.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p401-h); stroke: none; }
+      .hb { fill: url(#p401-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+      .dish { font-size: 15px; } .hd { font-size: 10.5px; letter-spacing: 0.18em; fill: var(--soft); } .mh { font-size: 15px; letter-spacing: 0.3em; }
+    </style>
+    <pattern id="p401-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE I</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 1 · DOES IT MAKE YOU BETTER?</text>
+  <!-- shadows -->
+  <path d="M 60 86 L 570 86 L 570 427 L 545.14 410 L 520.29 427 L 495.43 410 L 470.57 427 L 445.71 410 L 420.86 427 L 396 410 L 372 277 L 345.2 260 L 318.4 277 L 291.6 260 L 264.8 277 L 238 260 L 214 360 L 188.33 377 L 162.67 360 L 137 377 L 111.33 360 L 85.67 377 L 60 360 Z" class="h" transform="translate(7 7)"/>
+  <g transform="translate(5 12) rotate(1.5 60 360)"><path d="M 60 360 L 85.67 377 L 111.33 360 L 137 377 L 162.67 360 L 188.33 377 L 214 360 L 238 260 L 264.8 277 L 291.6 260 L 318.4 277 L 345.2 260 L 372 277 L 396 410 L 420.86 427 L 445.71 410 L 470.57 427 L 495.43 410 L 520.29 427 L 545.14 410 L 570 427 L 570 490 L 60 490 Z" class="h" transform="translate(7 7)"/></g>
+  <!-- upper piece -->
+  <path d="M 60 86 L 570 86 L 570 427 L 545.14 410 L 520.29 427 L 495.43 410 L 470.57 427 L 445.71 410 L 420.86 427 L 396 410 L 372 277 L 345.2 260 L 318.4 277 L 291.6 260 L 264.8 277 L 238 260 L 214 360 L 188.33 377 L 162.67 360 L 137 377 L 111.33 360 L 85.67 377 L 60 360 Z" class="b"/>
+  <text x="315" y="124" text-anchor="middle" class="mh">TONIGHT</text>
+  <line x1="88" y1="134" x2="542" y2="134" class="thin"/>
+  <text x="88" y="158" class="hd">STARTERS</text><line x1="88" y1="165" x2="212" y2="165" class="thin"/><text x="246" y="158" class="hd">MAINS</text><line x1="246" y1="165" x2="370" y2="165" class="thin"/><text x="404" y="158" class="hd">SWEETS</text><line x1="404" y1="165" x2="528" y2="165" class="thin"/>
+  <text x="88" y="195" class="dish">Onion soup</text><path d="M 192 190 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="88" y="245" class="dish">Green salad</text><path d="M 192 240 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="88" y="295" class="dish">Crab cakes</text><path d="M 192 290 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="88" y="345" class="dish">Beet salad</text><path d="M 192 340 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="246" y="195" class="dish">Roast chicken</text><path d="M 350 190 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="246" y="245" class="dish">Short rib</text><path d="M 350 240 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="404" y="195" class="dish">Lemon tart</text><path d="M 508 190 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="404" y="245" class="dish">Bread pudding</text><path d="M 508 240 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="404" y="295" class="dish">Ice cream</text><path d="M 508 290 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="404" y="345" class="dish">Cheese plate</text><path d="M 508 340 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/><text x="404" y="395" class="dish">Apple pie</text><path d="M 508 390 l 4 5 l 8 -12" class="l" style="stroke-width:1.2"/>
+  <!-- lower piece, dropped away from the cut -->
+  <g transform="translate(5 12) rotate(1.5 60 360)"><path d="M 60 360 L 85.67 377 L 111.33 360 L 137 377 L 162.67 360 L 188.33 377 L 214 360 L 238 260 L 264.8 277 L 291.6 260 L 318.4 277 L 345.2 260 L 372 277 L 396 410 L 420.86 427 L 445.71 410 L 470.57 427 L 495.43 410 L 520.29 427 L 545.14 410 L 570 427 L 570 490 L 60 490 Z" class="b"/><text x="88" y="395" class="dish">Oysters</text><path d="M 84 390.5 q 25.9 -3 59.8 0.5" class="la"/><text x="88" y="445" class="dish">Chicken livers</text><path d="M 84 440.5 q 51.8 -3 111.6 0.5" class="la"/><text x="246" y="295" class="dish">Grilled fish</text><path d="M 242 290.5 q 44.4 -3 96.8 0.5" class="la"/><text x="246" y="345" class="dish">Risotto</text><path d="M 242 340.5 q 25.9 -3 59.8 0.5" class="la"/><text x="246" y="395" class="dish">Steak and chips</text><path d="M 242 390.5 q 55.5 -3 119 0.5" class="la"/><text x="246" y="445" class="dish">Lamb chops</text><path d="M 242 440.5 q 37 -3 82 0.5" class="la"/><text x="404" y="445" class="dish">Custard</text><path d="M 400 440.5 q 25.9 -3 59.8 0.5" class="la"/></g>
+  <g transform="translate(578 430) rotate(19)">
+    <path d="M 0 0 Q 96 -20 232 -23 L 232 40 Q 104 44 0 0 Z" class="b"/>
+    <path d="M 0 0 Q 104 44 232 40 L 232 29 Q 112 31 14 4 Z" class="h"/>
+    <path d="M 14 4 Q 112 31 232 29" class="thin"/>
+    <path d="M 46 -5 Q 130 -13 222 -14" class="thin" style="opacity:0.55"/>
+    <rect x="232" y="-24" width="15" height="42" class="hb"/>
+    <path d="M 247 -22 L 338 -17 Q 358 -15 358 1 Q 358 17 338 18 L 247 17 Z" class="b"/>
+    <path d="M 247 -22 L 338 -17 Q 358 -15 358 1 Q 358 17 338 18 L 247 17 Z" class="h"/>
+    <circle cx="270" cy="-1" r="3.4" class="b" style="stroke-width:1"/><circle cx="298" cy="0" r="3.4" class="b" style="stroke-width:1"/><circle cx="326" cy="1" r="3.4" class="b" style="stroke-width:1"/>
+  </g>
+  <!-- notes -->
+  <text x="612" y="112" class="it">Above the cut, the work the tool</text>
+  <text x="612" y="130" class="it">does well. With it, consultants turned in</text>
+  <text x="612" y="164" class="big">quality up over 40%</text>
+  <text x="612" y="186" class="sm">25.1% faster, 12.2% more tasks finished</text>
+  <text x="612" y="276" class="ita">Below it, the same tool, and they were</text>
+  <text x="612" y="310" class="biga">19 points less likely</text>
+  <text x="612" y="332" class="ita">to get the answer right.</text>
+  <text x="64" y="548" class="sm">Nothing printed on the menu says which side of the cut a dish will fall.</text>
+  <text x="64" y="566" class="sm">A preregistered field experiment, 758 consultants.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">A Double-Edged Knife</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-401 · One tool, one study: better work on one side of a jagged line, worse answers on the other.</text>
+</svg>
