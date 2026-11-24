@@ -4,15 +4,15 @@ Run it on limesalt (or on the desktop itself). It changes nothing.
 
   powershell -NoProfile -ExecutionPolicy Bypass -File verify.ps1
 
-Optional: set WHL_LITELLM_KEY to the LiteLLM master key (LITELLM_MASTER_KEY in
-E:\WHL\compose\.env on the desktop) to also run a chat through the relay and
-confirm it. Without the key those checks are skipped, not failed.
+Optional: set WHL_LITELLM_KEY to this machine's own key for the front door
+(each caller has one; the master key is for the desktop only) to also run a
+chat through the relay and confirm it. Without the key those checks are
+skipped, not failed.
 
 Exit code 0 means every check that ran passed.
 #>
 param(
     [string]$Desktop = "lemonpepper",
-    [string]$OllamaModel = "gpt-oss:20b",
     [string]$RelayModel = "local-fast"
 )
 
@@ -86,27 +86,17 @@ if ($tailscale) {
     Add-Result "Tailscale reaches the desktop" "SKIP" "tailscale command not found"
 }
 
-# 2 and 3. Ollama, the thin version exit test.
-Test-Step "Ollama lists models (port 11434)" {
-    $ids = (Invoke-RestMethod -Uri "${base}:11434/v1/models" -TimeoutSec 20).data.id
-    if (-not $ids) { throw "no models listed" }
-    "$(@($ids).Count) models"
-}
-Test-Step "Ollama answers a chat" {
-    # Ask in Ollama's own format with the same context size the relay uses.
-    # A different size would make Ollama reload the model, and the next real
-    # request through the relay would then wait for it to load again.
-    $body = @{
-        model    = $OllamaModel
-        messages = @(@{ role = "user"; content = "Reply with one word: ready" })
-        stream   = $false
-        think    = "low"
-        options  = @{ num_ctx = 16384; num_predict = 200 }
-    } | ConvertTo-Json -Depth 5
-    $sw = [Diagnostics.Stopwatch]::StartNew()
-    $r = Invoke-RestMethod -Uri "${base}:11434/api/chat" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 180
-    if (-not $r.message.content) { throw "empty reply" }
-    "replied '$($r.message.content.Trim())' in $([math]::Round($sw.Elapsed.TotalSeconds, 1)) s"
+# 2. Ollama is closed to the network. Since the 2026-11-23 hardening it listens
+# on 127.0.0.1 only and the desktop firewall blocks 11434 inbound, so callers
+# use the doors (4000, 4001). A connection here means the closure has slipped,
+# for example the Ollama app's "Expose Ollama to the network" was switched on.
+Test-Step "Ollama is closed to the network (port 11434)" {
+    $tcp = New-Object Net.Sockets.TcpClient
+    try {
+        $open = $tcp.ConnectAsync($Desktop, 11434).Wait(5000) -and $tcp.Connected
+    } catch { $open = $false } finally { $tcp.Close() }
+    if ($open) { throw "port 11434 accepted a connection; it should be closed" }
+    "refused, as expected"
 }
 
 # 4. The relay must be reachable and must refuse a caller with no key.

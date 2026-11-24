@@ -1,0 +1,27 @@
+The attached file is a docker compose file. Return the whole file with these changes and no others. Keep every other line, comment and indentation exactly as it is. Output only the file, no code fence, no explanation.
+
+1. Add a service named litellm-db, at the same indentation as the other services:
+  litellm-db:
+    image: postgres:16
+    container_name: whl-litellm-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: litellm
+      POSTGRES_PASSWORD: ${LITELLM_DB_PASSWORD}
+      POSTGRES_DB: litellm_front
+    volumes:
+      - whl-litellm-db:/var/lib/postgresql/data
+   Give it a copy of the networks: block of the service that publishes port 4000, if that service has one.
+
+2. In the service that publishes port 4000 (the front door), add to its environment, in the same style (map or list) the block already uses:
+   DATABASE_URL: postgresql://litellm:${LITELLM_DB_PASSWORD}@whl-litellm-db:5432/litellm_front
+   LITELLM_SALT_KEY: ${LITELLM_SALT_KEY}
+   and add depends_on with litellm-db (merge with an existing depends_on).
+
+3. In the service that publishes port 4001 (the private door), add to its environment, in the same style:
+   DATABASE_URL: postgresql://litellm:${LITELLM_DB_PASSWORD}@whl-litellm-db:5432/litellm_private
+   LITELLM_SALT_KEY: ${LITELLM_PRIVATE_SALT_KEY}
+   DISABLE_ADMIN_UI: "True"
+   and add depends_on with litellm-db (merge with an existing depends_on).
+
+4. Under the top-level volumes: key, add the entry `whl-litellm-db: {}`. If there is no top-level volumes: key, add one at the end of the file.

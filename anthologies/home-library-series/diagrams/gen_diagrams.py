@@ -47,7 +47,7 @@ def dia106():
     arrow = 'stroke="#4F627F" stroke-width="2.5" marker-end="url(#d100-blue)"'
     s = f"""<svg viewBox="0 0 1000 670" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d100-title d100-desc">
   <title id="d100-title">DIA-100 · Home library: what it is for</title>
-  <desc id="d100-desc">A plain-language overview. On the left is you, at a laptop, at home or away. You can ask the Arbiter for help. The Arbiter is the AI that plans the job and checks the result. Today it is a paid AI on the internet (Claude Code); later it can be our own model. It hands the bulk reading and writing to the computer at home. On the computer at home the request arrives at the front door, which checks the password and passes it to the home AI. The home AI reads, summarizes and drafts, and costs only electricity. The front door also writes a note of each request in the logbook. You can also use the chat page in a web browser to talk to the home AI directly. A movies and shows shelf also runs on the same computer and is not set up yet. The small grey print under each box is the real name of the program.</desc>
+  <desc id="d100-desc">A plain-language overview. On the left is you, at a laptop, at home or away. You can ask the Arbiter for help. The Arbiter is the AI that plans the job and checks the result. Today it is a paid AI on the internet (Claude Code); later it can be our own model. It hands the bulk reading and writing to the computer at home. On the computer at home the request arrives at the front door, which checks the caller's key and passes it to the home AI. The home AI reads, summarizes and drafts, and costs only electricity. The front door also writes a note of each request in the logbook. You can also use the chat page in a web browser to talk to the home AI directly. A movies and shows shelf also runs on the same computer and is not set up yet. The small grey print under each box is the real name of the program.</desc>
 {STYLE.replace("PFX", "d100")}  <rect width="1000" height="670" fill="#F2EEE3"/>
   <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-100 · HOME LIBRARY: WHAT IT IS FOR</text>
   <text x="500" y="58" text-anchor="middle" font-size="14" fill="#6B6873">Our own AI at home. The small grey print is the real name of each program.</text>
@@ -80,7 +80,7 @@ def dia106():
   <text x="144" y="512" text-anchor="middle" font-size="13" fill="#4F627F">at a laptop, at home or away</text>
 """
     s += box(450, 132, 235, 92, G, GS, "THE LOGBOOK", "writes down every request", "so we can see what was saved", "Langfuse")
-    s += box(450, 296, 235, 92, G, GS, "THE FRONT DOOR", "checks the password", "passes the request to the AI", "LiteLLM")
+    s += box(450, 296, 235, 92, G, GS, "THE FRONT DOOR", "checks the caller's key", "passes the request to the AI", "LiteLLM")
     s += box(721, 296, 235, 92, G, GS, "THE HOME AI", "reads, summarizes and drafts", "costs only electricity", "Ollama, on the graphics card")
     s += box(450, 450, 235, 92, G, GS, "THE CHAT PAGE", "type a question, get an answer", "in a web browser", "Open WebUI")
     s += box(721, 450, 235, 92, G, GS, "MOVIES AND SHOWS", "our own films and music", "on any of our screens", "Jellyfin · not set up yet")
@@ -120,8 +120,8 @@ GROUPS = [
     ("THE TWO DOORS", [
         ("The front door", "LiteLLM, port 4000",
          "The everyday entrance. It has a switch: home, or paid",
-         "One password and one logbook for everything that is not private",
-         "", "Behind the scenes. Tools need the password"),
+         "Each tool has its own key, and one logbook for everything",
+         "", "Behind the scenes. Each tool needs its own key"),
         ("The private door", "a second LiteLLM, port 4001",
          "A second entrance that only knows the home AI",
          "Private things go this way. It has no way out to paid help",
@@ -157,7 +157,7 @@ GROUPS = [
         ("n8n Cloud", "a paid subscription",
          "A service that runs chores by itself: on a schedule, or when something happens",
          "Connects apps and repeats work. It may ask the home AI, never Claude",
-         "", "Its AI steps use the credential Home AI (private door)"),
+         "", "Not connected today. Its credential has its own key"),
     ]),
     ("UNDERNEATH", [
         ("The private connection", "Tailscale",
@@ -225,7 +225,7 @@ def dia107():
     H = y + 22
     head = f"""<svg viewBox="0 0 1000 {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d101-title d101-desc">
   <title id="d101-title">DIA-101 · The pieces: what each piece is, why we have it, and how you use it</title>
-  <desc id="d101-desc">A plain-language table of every piece of the home library, in five groups. Each row gives a plain name with the real program name in small print, what it is, why we have it, and how you use it. The AI at home: the home AI (Ollama running the gpt-oss model), which is in front, and the graphics card. The two doors: the front door (LiteLLM, port 4000) with a switch for home or paid, and the private door (port 4001) that only knows the home AI. Pages you can open: the private chat page at lemonpepper:3002, the chat page at lemonpepper:3000, the live board at lemonpepper:8088, the logbook (Langfuse) at lemonpepper:3001, and movies and shows (Jellyfin) at lemonpepper:8096, not set up yet. Paid help, on the internet: Claude, off until an API key is added, and n8n Cloud, which asks the home AI through the private door. Underneath: the private connection (Tailscale) and the service runner (Docker Desktop). Two notes: LM Studio was dropped on 2026-11-18, and a memory is planned and not built.</desc>
+  <desc id="d101-desc">A plain-language table of every piece of the home library, in five groups. Each row gives a plain name with the real program name in small print, what it is, why we have it, and how you use it. The AI at home: the home AI (Ollama running the gpt-oss model), which is in front, and the graphics card. The two doors: the front door (LiteLLM, port 4000) with a switch for home or paid, and the private door (port 4001) that only knows the home AI. Pages you can open: the private chat page at lemonpepper:3002, the chat page at lemonpepper:3000, the live board at lemonpepper:8088, the logbook (Langfuse) at lemonpepper:3001, and movies and shows (Jellyfin) at lemonpepper:8096, not set up yet. Paid help, on the internet: Claude, off until an API key is added, and n8n Cloud, which has no way in while it is not used. Underneath: the private connection (Tailscale) and the service runner (Docker Desktop). Two notes: LM Studio was dropped on 2026-11-18, and a memory is planned and not built.</desc>
 {STYLE.replace("PFX", "d101")}  <rect width="1000" height="{H}" fill="#F2EEE3"/>
   <text x="500" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#A85B49" letter-spacing="0.04em">DIA-101 · THE PIECES</text>
   <text x="500" y="58" text-anchor="middle" font-size="14" fill="#6B6873">What is each piece, why do we have it, and how do you use it?</text>
@@ -313,7 +313,7 @@ def dia102():
     s += T(436, 106, "THE COMPUTER AT HOME", 12, MU, w="700", ls=True) + T(436, 123, "stays on, never sleeps · named lemonpepper", 12, MU)
     s += RECT(430, 134, 536, 194, "none", "#9D9A95", 8, 1.2, "3,3")
     s += T(442, 152, "KEPT RUNNING BY THE SERVICE RUNNER", 12, MU, w="700", ls=True) + T(722, 152, "Docker Desktop", 11, MU)
-    s += sbox(442, 162, 164, G, GS, "THE FRONT DOOR", "checks the password", "LiteLLM")
+    s += sbox(442, 162, 164, G, GS, "THE FRONT DOOR", "checks the key", "LiteLLM")
     s += sbox(618, 162, 164, G, GS, "THE CHAT PAGE", "ask the home AI", "Open WebUI")
     s += sbox(794, 162, 164, G, GS, "THE LOGBOOK", "notes every request", "Langfuse")
     s += sbox(442, 244, 164, G, GS, "THE LIVE BOARD", "shows what is happening", "made for this system")
@@ -332,12 +332,12 @@ def dia102():
 def dia103():
     p, H = "d103", 540
     s = head(p, H, "DIA-103 · One request, step by step",
-             "Five numbered steps. One: whoever asks (the Arbiter, or you on the chat page) sends a request over the private connection to the front door. Two: the front door checks the password and passes the request on. Three: the home AI reads the request and writes the answer. Four: the answer goes back the same way. Five: the front door writes a note of the request in the logbook, which keeps the full question and answer. A short answer takes 1 to 3 seconds. After an hour of quiet the home AI goes to sleep and the next answer takes up to 30 seconds.",
+             "Five numbered steps. One: whoever asks (the Arbiter, or you on the chat page) sends a request over the private connection to the front door. Two: the front door checks the caller's key and passes the request on. Three: the home AI reads the request and writes the answer. Four: the answer goes back the same way. Five: the front door writes a note of the request in the logbook, which keeps the full question and answer. A short answer takes 1 to 3 seconds. After an hour of quiet the home AI goes to sleep and the next answer takes up to 30 seconds.",
              "DIA-103 · ONE REQUEST", "What happens when someone asks the home AI something?")
     s += L(244, 200, 387, 200, B, p) + L(610, 200, 753, 200, B, p)
     s += L(756, 236, 613, 236, B, p) + L(390, 236, 247, 236, B, p) + L(500, 262, 500, 357, B, p)
     s += box(24, 170, 220, 92, B, BS, "WHOEVER ASKS", "the Arbiter,", "or you on the chat page", "Claude Code · Open WebUI")
-    s += box(390, 170, 220, 92, G, GS, "THE FRONT DOOR", "checks the password", "no password, no answer", "LiteLLM")
+    s += box(390, 170, 220, 92, G, GS, "THE FRONT DOOR", "checks the key", "no key, no answer", "LiteLLM")
     s += box(756, 170, 220, 92, G, GS, "THE HOME AI", "reads the request", "writes the answer", "Ollama")
     s += box(390, 360, 220, 92, G, GS, "THE LOGBOOK", "keeps the note, and the", "full question and answer", "Langfuse")
     s += circ(317, 200, 1) + circ(683, 200, 2) + circ(756, 170, 3) + circ(683, 236, 4) + circ(500, 310, 5)
@@ -349,10 +349,10 @@ def dia103():
     for k, t in enumerate(["A short answer: 1 to 3 seconds.", "After an hour of quiet the home AI", "goes to sleep. The next answer", "takes up to 30 seconds."]):
         s += T(24, 396 + 19 * k, t, 13.5)
     s += T(700, 372, "FROM THE CHAT PAGE", 12, MU, w="700", ls=True)
-    for k, t in enumerate(["The same steps. The chat page asks", "the front door for you. The password", "is already saved in it. Nothing", "leaves the house."]):
+    for k, t in enumerate(["The same steps. The chat page asks", "the front door for you. Its key", "is already saved in it. Nothing", "leaves the house."]):
         s += T(700, 396 + 19 * k, t, 13.5)
     s += circ(36, 484, "n") + T(56, 488.5, "a step, in order", 12.5, MU)
-    return s + foot(H, "DIA-103 · One request: the front door checks the password, the home AI answers, and the logbook keeps a note.")
+    return s + foot(H, "DIA-103 · One request: the front door checks the key, the home AI answers, and the logbook keeps a note.")
 
 
 OFF = [
@@ -389,19 +389,19 @@ def dia104():
 
 
 DOORS = [
-    ("MOVIES AND SHOWS", "Jellyfin", "never set up", "the first visitor becomes its owner", A),
-    ("THE CHAT PAGE", "Open WebUI", "no account yet", "the first to sign up becomes its owner", A),
+    ("MOVIES AND SHOWS", "Jellyfin", "has its own sign-in", "Zo's account", G),
+    ("THE CHAT PAGES", "Open WebUI", "have their own sign-in", "Zo's account on each", G),
     ("THE LIVE BOARD", "made for this system", "open on purpose", "shows activity only, never the words", G),
     ("THE LOGBOOK", "Langfuse", "has its own sign-in", "one account, Zo's", G),
-    ("THE FRONT DOOR", "LiteLLM", "needs the password", "one password, shared by every tool", G),
-    ("THE HOME AI", "Ollama", "no lock at all", "anyone who gets this far can use it or remove it", R),
+    ("THE FRONT DOOR", "LiteLLM", "needs a key", "each tool has its own", G),
+    ("THE HOME AI", "Ollama", "only from inside", "closed to other devices; use a door", G),
 ]
 
 
 def dia105():
     p, H = "d105", 630
     s = head(p, H, "DIA-105 · Who can get in",
-             "On the left, three kinds of visitor. Our own devices on the private connection: the intended way in. Any device on the home wifi, such as a guest's phone or a smart TV: not intended, but it works. The internet, everyone else: blocked. On the right, the six doors on the computer at home and the lock on each. Movies and shows: never set up, the first visitor becomes its owner. The chat page: no account yet, the first to sign up becomes its owner. The live board: open on purpose, it shows activity only. The logbook: has its own sign-in. The front door: needs the password. The home AI: no lock at all.",
+             "On the left, three kinds of visitor. Our own devices on the private connection: the intended way in. Any device on the home wifi, such as a guest's phone or a smart TV: not intended, but it works. The internet, everyone else: blocked. On the right, the six doors on the computer at home and the lock on each. Movies and shows: has its own sign-in. The chat pages: each has its own sign-in. The live board: open on purpose, it shows activity only. The logbook: has its own sign-in. The front door: needs a key, and each tool has its own. The home AI: closed to other devices, reached only through a door.",
              "DIA-105 · WHO CAN GET IN", "Which doors are open, to whom, and how is each one locked?")
     s += RECT(428, 84, 548, 428, "none", "#9D9A95", 14, 1.5)
     s += T(444, 106, "THE DOORS ON THE COMPUTER AT HOME", 12, MU, w="700", ls=True)
@@ -426,7 +426,7 @@ def dia105():
     s += L(220, ly - 4, 256, ly - 4, A) + T(264, ly, "open wider than intended", 12.5, MU)
     for x, c, t in ((470, G, "locked, or nothing to lock"), (670, A, "lock not finished"), (820, R, "no lock")):
         s += f'  <rect x="{x}" y="{ly - 11}" width="12" height="12" rx="2" fill="{c}"/>\n' + T(x + 20, ly, t, 12.5, MU)
-    return s + foot(H, "DIA-105 · Who can get in: the home wifi reaches every door, two pages have no owner yet, and the home AI has no lock.")
+    return s + foot(H, "DIA-105 · Who can get in: every door has a lock, the home AI is closed to other devices, and nothing is open to the internet.")
 
 
 LANES = [
@@ -537,7 +537,7 @@ def dia100():
     gm = f'marker-end="url(#{p}-green)"'
     g = lambda d: f'  <path d="{d}" fill="none" stroke="{G}" stroke-width="2.5" {gm}/>\n'
     s = head(p, H, "DIA-100 · Home library: what it is for",
-             "The overview. You open one of two pages on the computer at home. Private chat, at lemonpepper:3002, is for health, family and money. Everyday chat, at lemonpepper:3000, is for everything else. Each page talks to a door, which is a gateway with no screen of its own. Private chat uses the private door, port 4001, which only knows the home AI and has no way out to paid help. Everyday chat, and tools, use the front door, port 4000, which has a switch: home by default, or paid. Both doors lead to the home AI, which answers at home and costs only electricity. The home AI reads and writes the private files on drives C and D and reads the working files on drive F. Paid help is outside, on the internet. n8n Cloud runs chores by itself and comes in through the private door, so it may ask the home AI and can never reach Claude. Claude, a paid AI for hard thinking, is reached from the front door only if you flip the switch, sees only what is sent, and cannot reach in. Also on the computer at home: the logbook, the live board, and movies and shows.",
+             "The overview. You open one of two pages on the computer at home. Private chat, at lemonpepper:3002, is for health, family and money. Everyday chat, at lemonpepper:3000, is for everything else. Each page talks to a door, which is a gateway with no screen of its own. Private chat uses the private door, port 4001, which only knows the home AI and has no way out to paid help. Everyday chat, and tools, use the front door, port 4000, which has a switch: home by default, or paid. Both doors lead to the home AI, which answers at home and costs only electricity. The home AI reads and writes the private files on drives C and D and reads the working files on drive F. Paid help is outside, on the internet. n8n Cloud runs chores by itself. It may ask only the home AI and never Claude, and it has no way in while it is not used. Claude, a paid AI for hard thinking, is reached from the front door only if you flip the switch, sees only what is sent, and cannot reach in. Also on the computer at home: the logbook, the live board, and movies and shows.",
              "DIA-100 · HOME LIBRARY: WHAT IT IS FOR", "Our own AI at home is in front. Private chat and private files stay in the house. Claude sees only what we send it.")
     s += RECT(136, 216, 852, 444, "none", "#9D9A95", 14, 1.5) + T(156, 238, "THE COMPUTER AT HOME", 12, MU, w="700", ls=True)
     # you to the two pages
@@ -549,7 +549,7 @@ def dia100():
     # the home AI to the files
     s += g("M770,420 H790 V296 H807") + P("M770,464 H790 V588 H807", B, p)
     # paid help: n8n comes in at the private door, the front door goes out to Claude
-    s += L(460, 188, 460, 247, A, p) + L(460, 634, 460, 701, A, p)
+    s += L(460, 634, 460, 701, A, p)
     s += RECT(24, 396, 96, 92, BG, B, 46) + T(72, 438, "YOU", 16, B, "middle", "700") + T(72, 458, "any device", 12, B, "middle")
     s += T(72, 378, "private things", 12.5, G, "middle", "600") + T(72, 514, "everything else", 12.5, B, "middle", "600")
     s += box(150, 250, 180, 92, G, GS, "PRIVATE CHAT", "a page for private things", "health, family, money", "a page · lemonpepper:3002")
@@ -559,14 +559,14 @@ def dia100():
     s += box(600, 396, 170, 92, G, GS, "THE HOME AI", "answers at home", "costs only electricity", "Ollama")
     s += fbox(810, 250, 166, G, GS, "PRIVATE FILES", "health, family, money", "paid help may not open", "drives C: and D:")
     s += fbox(810, 542, 166, B, BS, "WORKING FILES", "projects and drafts", "paid help may see these", "drive F:")
-    s += box(345, 96, 230, 92, A, AS, "N8N CLOUD", "runs chores by itself", "asks the home AI, never Claude", "a paid service on the internet")
+    s += box(345, 96, 230, 92, A, AS, "N8N CLOUD", "runs chores by itself", "not connected today", "a paid service on the internet")
     s += box(345, 704, 230, 92, A, AS, "CLAUDE", "a paid AI, for hard thinking", "sees only what is sent", "off until an API key is added")
     s += T(581, 366, "always", 12.5, G, w="600") + T(581, 530, "by default", 12.5, B, w="600")
     s += T(796, 366, "reads,", 12, G) + T(796, 382, "writes", 12, G) + T(796, 530, "reads", 12, B)
-    s += T(472, 206, "comes in through the private door", 12.5, A, w="600") + T(472, 678, "goes out only if you flip the switch", 12.5, A, w="600")
+    s += T(472, 206, "no way in while it is not used", 12.5, A, w="600") + T(472, 678, "goes out only if you flip the switch", 12.5, A, w="600")
     s += T(150, 128, "PAID HELP", 12, A, w="700", ls=True) + T(150, 147, "on the internet", 12.5, MU) + T(150, 165, "costs money", 12.5, MU)
     s += T(150, 736, "PAID HELP", 12, A, w="700", ls=True) + T(150, 755, "on the internet", 12.5, MU) + T(150, 773, "costs money", 12.5, MU)
-    s += T(610, 134, "n8n may ask the home AI", 13) + T(610, 153, "and nothing else.", 13)
+    s += T(610, 134, "If connected, n8n may ask", 13) + T(610, 153, "the home AI and nothing else.", 13)
     s += T(610, 742, "Claude cannot reach in.", 13) + T(610, 761, "We send work out to it.", 13)
     s += T(500, 834, "Also on the computer at home: the logbook, the live board, movies and shows. Every piece is in DIA-101.", 12.5, MU, "middle")
     s += swatch(24, 864, GS, G, "private side") + swatch(180, 864, BS, B, "working side") + swatch(336, 864, AS, A, "paid help, on the internet")

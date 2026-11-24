@@ -6,7 +6,7 @@ Status: working
 Owner: zo
 Human id: home-library-diagrams
 Update trigger: when a diagram is added, renumbered or retired
-Last updated: 2026-11-18
+Last updated: 2026-11-23
 -->
 
 Eight pictures, most general first. Read them in number order.
@@ -53,11 +53,13 @@ Numbers belong to this series, not to the whole repo.
 | Movies and shows | Jellyfin | media server |
 | The private connection | Tailscale | the tailnet |
 | The service runner | Docker Desktop | containers |
-| The password | the LiteLLM master key | the key |
+| The key | one LiteLLM key per caller (the master keys stay on the desktop) | virtual key |
 | The computer at home | the desktop `lemonpepper` | |
 | The laptop | `limesalt` | |
 
 ## Changelog
+
+- 2026-11-23: Updated for the hardened server. DIA-105: every door has a lock, the home AI is closed to other devices, the chat pages and movies have owners. DIA-100, DIA-101 and DIA-103: "the password" became each caller's own key. DIA-100 and DIA-101: n8n Cloud has no way in while it is not used (Funnel is off). The `.md` specs beside them were not rewritten and still describe the 2026-11-18 state.
 
 - 2026-11-18: DIA-100 and DIA-101 redrawn for the home-in-front arrangement, with the private side, the paid switch and n8n Cloud. DIA-106 added for the rules. DIA-102, DIA-103 and DIA-200 still show the earlier arrangement.
 - 2026-11-18: Set redone in plain language and renumbered from DIA-106 to DIA-112 in `_KNOWLEDGE/Diagrams/` to its own series numbers here. The old "files, secrets and state" picture was a technical spec and was retired; it is in git history.

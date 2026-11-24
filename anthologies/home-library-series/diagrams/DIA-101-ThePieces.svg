@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 1216" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d101-title d101-desc">
   <title id="d101-title">DIA-101 · The pieces: what each piece is, why we have it, and how you use it</title>
-  <desc id="d101-desc">A plain-language table of every piece of the home library, in five groups. Each row gives a plain name with the real program name in small print, what it is, why we have it, and how you use it. The AI at home: the home AI (Ollama running the gpt-oss model), which is in front, and the graphics card. The two doors: the front door (LiteLLM, port 4000) with a switch for home or paid, and the private door (port 4001) that only knows the home AI. Pages you can open: the private chat page at lemonpepper:3002, the chat page at lemonpepper:3000, the live board at lemonpepper:8088, the logbook (Langfuse) at lemonpepper:3001, and movies and shows (Jellyfin) at lemonpepper:8096, not set up yet. Paid help, on the internet: Claude, off until an API key is added, and n8n Cloud, which asks the home AI through the private door. Underneath: the private connection (Tailscale) and the service runner (Docker Desktop). Two notes: LM Studio was dropped on 2026-11-18, and a memory is planned and not built.</desc>
+  <desc id="d101-desc">A plain-language table of every piece of the home library, in five groups. Each row gives a plain name with the real program name in small print, what it is, why we have it, and how you use it. The AI at home: the home AI (Ollama running the gpt-oss model), which is in front, and the graphics card. The two doors: the front door (LiteLLM, port 4000) with a switch for home or paid, and the private door (port 4001) that only knows the home AI. Pages you can open: the private chat page at lemonpepper:3002, the chat page at lemonpepper:3000, the live board at lemonpepper:8088, the logbook (Langfuse) at lemonpepper:3001, and movies and shows (Jellyfin) at lemonpepper:8096, not set up yet. Paid help, on the internet: Claude, off until an API key is added, and n8n Cloud, which has no way in while it is not used. Underneath: the private connection (Tailscale) and the service runner (Docker Desktop). Two notes: LM Studio was dropped on 2026-11-18, and a memory is planned and not built.</desc>
   <defs>
     <style>
       :root {
@@ -61,10 +61,10 @@
   <text x="24" y="321" font-size="11.5" fill="#6B6873">LiteLLM, port 4000</text>
   <text x="250" y="303" font-size="13" fill="#2A2A35">The everyday entrance. It has a</text>
   <text x="250" y="321" font-size="13" fill="#2A2A35">switch: home, or paid</text>
-  <text x="510" y="303" font-size="13" font-style="italic" fill="#2A2A35">One password and one logbook for</text>
-  <text x="510" y="321" font-size="13" font-style="italic" fill="#2A2A35">everything that is not private</text>
-  <text x="790" y="303" font-size="13" fill="#6B6873">Behind the scenes. Tools</text>
-  <text x="790" y="321" font-size="13" fill="#6B6873">need the password</text>
+  <text x="510" y="303" font-size="13" font-style="italic" fill="#2A2A35">Each tool has its own key, and one</text>
+  <text x="510" y="321" font-size="13" font-style="italic" fill="#2A2A35">logbook for everything</text>
+  <text x="790" y="303" font-size="13" fill="#6B6873">Behind the scenes. Each</text>
+  <text x="790" y="321" font-size="13" fill="#6B6873">tool needs its own key</text>
   <line x1="24" y1="340" x2="976" y2="340" stroke="#E2DFD6" stroke-width="1"/>
   <text x="24" y="367" font-size="15.5" font-weight="700" fill="#5A8270">The private door</text>
   <text x="24" y="385" font-size="11.5" fill="#6B6873">a second LiteLLM, port 4001</text>
@@ -143,9 +143,8 @@
   <text x="250" y="895" font-size="13" fill="#2A2A35">happens</text>
   <text x="510" y="859" font-size="13" font-style="italic" fill="#2A2A35">Connects apps and repeats work. It may</text>
   <text x="510" y="877" font-size="13" font-style="italic" fill="#2A2A35">ask the home AI, never Claude</text>
-  <text x="790" y="859" font-size="13" fill="#6B6873">Its AI steps use the</text>
-  <text x="790" y="877" font-size="13" fill="#6B6873">credential Home AI (private</text>
-  <text x="790" y="895" font-size="13" fill="#6B6873">door)</text>
+  <text x="790" y="859" font-size="13" fill="#6B6873">Not connected today. Its</text>
+  <text x="790" y="877" font-size="13" fill="#6B6873">credential has its own key</text>
   <rect x="24" y="914" width="952" height="22" rx="4" fill="#FAFAF8" stroke="#E2DFD6" stroke-width="1"/>
   <text x="34" y="929.5" font-size="12" font-weight="700" fill="#6B6873" letter-spacing="0.03em">UNDERNEATH</text>
   <text x="24" y="963" font-size="15.5" font-weight="700" fill="#5A8270">The private connection</text>
