@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d105-title d105-desc">
   <title id="d105-title">DIA-105 · Who can get in</title>
-  <desc id="d105-desc">On the left, three kinds of visitor. Our own devices on the private connection: the intended way in. Any device on the home wifi, such as a guest's phone or a smart TV: not intended, but it works. The internet, everyone else: blocked. On the right, the six doors on the computer at home and the lock on each. Movies and shows: never set up, the first visitor becomes its owner. The chat page: no account yet, the first to sign up becomes its owner. The live board: open on purpose, it shows activity only. The logbook: has its own sign-in. The front door: needs the password. The home AI: no lock at all.</desc>
+  <desc id="d105-desc">On the left, three kinds of visitor. Our own devices on the private connection: the intended way in. Any device on the home wifi, such as a guest's phone or a smart TV: not intended, but it works. The internet, everyone else: blocked. On the right, the six doors on the computer at home and the lock on each. Movies and shows: has its own sign-in. The chat pages: each has its own sign-in. The live board: open on purpose, it shows activity only. The logbook: has its own sign-in. The front door: needs a key, and each tool has its own. The home AI: closed to other devices, reached only through a door.</desc>
   <defs>
     <style>
       :root {
@@ -38,13 +38,13 @@
   <rect x="454" y="120" width="506" height="54" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="470" y="143" font-size="15" fill="#5A8270" font-weight="700">MOVIES AND SHOWS</text>
   <text x="470" y="161" font-size="11.5" fill="#6B6873">Jellyfin</text>
-  <text x="946" y="143" font-size="13" fill="#A28438" text-anchor="end" font-weight="700">never set up</text>
-  <text x="946" y="161" font-size="12.5" fill="#A28438" text-anchor="end" font-style="italic">the first visitor becomes its owner</text>
+  <text x="946" y="143" font-size="13" fill="#5A8270" text-anchor="end" font-weight="700">has its own sign-in</text>
+  <text x="946" y="161" font-size="12.5" fill="#5A8270" text-anchor="end" font-style="italic">Zo's account</text>
   <rect x="454" y="184" width="506" height="54" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
-  <text x="470" y="207" font-size="15" fill="#5A8270" font-weight="700">THE CHAT PAGE</text>
+  <text x="470" y="207" font-size="15" fill="#5A8270" font-weight="700">THE CHAT PAGES</text>
   <text x="470" y="225" font-size="11.5" fill="#6B6873">Open WebUI</text>
-  <text x="946" y="207" font-size="13" fill="#A28438" text-anchor="end" font-weight="700">no account yet</text>
-  <text x="946" y="225" font-size="12.5" fill="#A28438" text-anchor="end" font-style="italic">the first to sign up becomes its owner</text>
+  <text x="946" y="207" font-size="13" fill="#5A8270" text-anchor="end" font-weight="700">have their own sign-in</text>
+  <text x="946" y="225" font-size="12.5" fill="#5A8270" text-anchor="end" font-style="italic">Zo's account on each</text>
   <rect x="454" y="248" width="506" height="54" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="470" y="271" font-size="15" fill="#5A8270" font-weight="700">THE LIVE BOARD</text>
   <text x="470" y="289" font-size="11.5" fill="#6B6873">made for this system</text>
@@ -58,13 +58,13 @@
   <rect x="454" y="376" width="506" height="54" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="470" y="399" font-size="15" fill="#5A8270" font-weight="700">THE FRONT DOOR</text>
   <text x="470" y="417" font-size="11.5" fill="#6B6873">LiteLLM</text>
-  <text x="946" y="399" font-size="13" fill="#5A8270" text-anchor="end" font-weight="700">needs the password</text>
-  <text x="946" y="417" font-size="12.5" fill="#5A8270" text-anchor="end" font-style="italic">one password, shared by every tool</text>
+  <text x="946" y="399" font-size="13" fill="#5A8270" text-anchor="end" font-weight="700">needs a key</text>
+  <text x="946" y="417" font-size="12.5" fill="#5A8270" text-anchor="end" font-style="italic">each tool has its own</text>
   <rect x="454" y="440" width="506" height="54" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="470" y="463" font-size="15" fill="#5A8270" font-weight="700">THE HOME AI</text>
   <text x="470" y="481" font-size="11.5" fill="#6B6873">Ollama</text>
-  <text x="946" y="463" font-size="13" fill="#A85B49" text-anchor="end" font-weight="700">no lock at all</text>
-  <text x="946" y="481" font-size="12.5" fill="#A85B49" text-anchor="end" font-style="italic">anyone who gets this far can use it or remove it</text>
+  <text x="946" y="463" font-size="13" fill="#5A8270" text-anchor="end" font-weight="700">only from inside</text>
+  <text x="946" y="481" font-size="12.5" fill="#5A8270" text-anchor="end" font-style="italic">closed to other devices; use a door</text>
   <path d="M424,128 H412 V486 H424" fill="none" stroke="#4F627F" stroke-width="2.5"/>
   <path d="M404,148 H392 V466 H404" fill="none" stroke="#A28438" stroke-width="2.5"/>
   <line x1="264" y1="162" x2="409" y2="162" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d105-blue)"/>
@@ -98,5 +98,5 @@
   <text x="690" y="572" font-size="12.5" fill="#6B6873">lock not finished</text>
   <rect x="820" y="561" width="12" height="12" rx="2" fill="#A85B49"/>
   <text x="840" y="572" font-size="12.5" fill="#6B6873">no lock</text>
-  <text x="500" y="608" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-105 · Who can get in: the home wifi reaches every door, two pages have no owner yet, and the home AI has no lock.</text>
+  <text x="500" y="608" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-105 · Who can get in: every door has a lock, the home AI is closed to other devices, and nothing is open to the internet.</text>
 </svg>

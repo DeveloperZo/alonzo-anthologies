@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 914" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d100-title d100-desc">
   <title id="d100-title">DIA-100 · Home library: what it is for</title>
-  <desc id="d100-desc">The overview. You open one of two pages on the computer at home. Private chat, at lemonpepper:3002, is for health, family and money. Everyday chat, at lemonpepper:3000, is for everything else. Each page talks to a door, which is a gateway with no screen of its own. Private chat uses the private door, port 4001, which only knows the home AI and has no way out to paid help. Everyday chat, and tools, use the front door, port 4000, which has a switch: home by default, or paid. Both doors lead to the home AI, which answers at home and costs only electricity. The home AI reads and writes the private files on drives C and D and reads the working files on drive F. Paid help is outside, on the internet. n8n Cloud runs chores by itself and comes in through the private door, so it may ask the home AI and can never reach Claude. Claude, a paid AI for hard thinking, is reached from the front door only if you flip the switch, sees only what is sent, and cannot reach in. Also on the computer at home: the logbook, the live board, and movies and shows.</desc>
+  <desc id="d100-desc">The overview. You open one of two pages on the computer at home. Private chat, at lemonpepper:3002, is for health, family and money. Everyday chat, at lemonpepper:3000, is for everything else. Each page talks to a door, which is a gateway with no screen of its own. Private chat uses the private door, port 4001, which only knows the home AI and has no way out to paid help. Everyday chat, and tools, use the front door, port 4000, which has a switch: home by default, or paid. Both doors lead to the home AI, which answers at home and costs only electricity. The home AI reads and writes the private files on drives C and D and reads the working files on drive F. Paid help is outside, on the internet. n8n Cloud runs chores by itself. It may ask only the home AI and never Claude, and it has no way in while it is not used. Claude, a paid AI for hard thinking, is reached from the front door only if you flip the switch, sees only what is sent, and cannot reach in. Also on the computer at home: the logbook, the live board, and movies and shows.</desc>
   <defs>
     <style>
       :root {
@@ -43,7 +43,6 @@
   <path d="M550,588 H575 V464 H597" fill="none" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d100-blue)"/>
   <path d="M770,420 H790 V296 H807" fill="none" stroke="#5A8270" stroke-width="2.5" marker-end="url(#d100-green)"/>
   <path d="M770,464 H790 V588 H807" fill="none" stroke="#4F627F" stroke-width="2.5" marker-end="url(#d100-blue)"/>
-  <line x1="460" y1="188" x2="460" y2="247" stroke="#A28438" stroke-width="2.5" marker-end="url(#d100-amber)"/>
   <line x1="460" y1="634" x2="460" y2="701" stroke="#A28438" stroke-width="2.5" marker-end="url(#d100-amber)"/>
   <rect x="24" y="396" width="96" height="92" rx="46" fill="#FAFAF8" stroke="#4F627F" stroke-width="2"/>
   <text x="72" y="438" font-size="16" fill="#4F627F" text-anchor="middle" font-weight="700">YOU</text>
@@ -88,7 +87,7 @@
   <rect x="345" y="96" width="230" height="92" rx="12" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
   <text x="460.0" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#A28438">N8N CLOUD</text>
   <text x="460.0" y="143" text-anchor="middle" font-size="13" fill="#A28438">runs chores by itself</text>
-  <text x="460.0" y="161" text-anchor="middle" font-size="13" fill="#A28438">asks the home AI, never Claude</text>
+  <text x="460.0" y="161" text-anchor="middle" font-size="13" fill="#A28438">not connected today</text>
   <text x="460.0" y="180" text-anchor="middle" font-size="11" fill="#6B6873">a paid service on the internet</text>
   <rect x="345" y="704" width="230" height="92" rx="12" fill="#F0E5CD" stroke="#A28438" stroke-width="2"/>
   <text x="460.0" y="730" text-anchor="middle" font-size="16" font-weight="700" fill="#A28438">CLAUDE</text>
@@ -100,7 +99,7 @@
   <text x="796" y="366" font-size="12" fill="#5A8270">reads,</text>
   <text x="796" y="382" font-size="12" fill="#5A8270">writes</text>
   <text x="796" y="530" font-size="12" fill="#4F627F">reads</text>
-  <text x="472" y="206" font-size="12.5" fill="#A28438" font-weight="600">comes in through the private door</text>
+  <text x="472" y="206" font-size="12.5" fill="#A28438" font-weight="600">no way in while it is not used</text>
   <text x="472" y="678" font-size="12.5" fill="#A28438" font-weight="600">goes out only if you flip the switch</text>
   <text x="150" y="128" font-size="12" fill="#A28438" font-weight="700" letter-spacing="0.03em">PAID HELP</text>
   <text x="150" y="147" font-size="12.5" fill="#6B6873">on the internet</text>
@@ -108,8 +107,8 @@
   <text x="150" y="736" font-size="12" fill="#A28438" font-weight="700" letter-spacing="0.03em">PAID HELP</text>
   <text x="150" y="755" font-size="12.5" fill="#6B6873">on the internet</text>
   <text x="150" y="773" font-size="12.5" fill="#6B6873">costs money</text>
-  <text x="610" y="134" font-size="13" fill="#2A2A35">n8n may ask the home AI</text>
-  <text x="610" y="153" font-size="13" fill="#2A2A35">and nothing else.</text>
+  <text x="610" y="134" font-size="13" fill="#2A2A35">If connected, n8n may ask</text>
+  <text x="610" y="153" font-size="13" fill="#2A2A35">the home AI and nothing else.</text>
   <text x="610" y="742" font-size="13" fill="#2A2A35">Claude cannot reach in.</text>
   <text x="610" y="761" font-size="13" fill="#2A2A35">We send work out to it.</text>
   <text x="500" y="834" font-size="12.5" fill="#6B6873" text-anchor="middle">Also on the computer at home: the logbook, the live board, movies and shows. Every piece is in DIA-101.</text>

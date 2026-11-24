@@ -6,7 +6,7 @@ Status: draft
 Owner: zo
 Human id: home-library-series-readme
 Update trigger: when a decision below is settled, or a project in the series starts
-Last updated: 2026-11-18
+Last updated: 2026-11-23
 -->
 
 Status: working as of 2026-11-18. One relay fronts one model runtime
@@ -16,6 +16,12 @@ run on limesalt with the relay key passed every service check. A
 frontier harness can hand work to the local models with
 `client/ask-local.ps1`. Still to do: one run of the verify script on a
 phone hotspot (the runs so far did not record the network).
+
+Hardened on 2026-11-22 and 23 (scripts and runbook in
+`server/hardening/`): Ollama answers on the desktop only, each caller has
+its own key on one of the two doors, both doors keep their keys in a
+database, the public Funnel is off, and `E:\WHL` and the photo folders
+are backed up nightly.
 
 ## Thin version exit test
 
@@ -29,6 +35,10 @@ Met on 2026-11-17: from limesalt on a phone hotspot,
 `http://lemonpepper:11434/v1/models` returned the desktop's model
 list. A chat request by the same name was answered from the desktop
 itself.
+
+Since 2026-11-22 port 11434 is closed to other machines on purpose, so
+this test is now made through the relay: `http://lemonpepper:4000/v1`
+with the caller's own key.
 
 ## What runs today
 
@@ -45,11 +55,15 @@ Six closer looks, most general first ([index and numbering](./diagrams/README.md
 
 | Piece | Address | Job |
 | --- | --- | --- |
-| LiteLLM (the relay) | `http://lemonpepper:4000/v1` | The one address tools should use. Needs a key. Forwards to Ollama and records each request |
+| LiteLLM (the relay, front door) | `http://lemonpepper:4000/v1` | The one address tools should use. Each caller has its own key. Forwards to Ollama and records each request |
+| LiteLLM (private door) | `http://lemonpepper:4001/v1` | Home routes only, for the private chat page. Its own keys. Tailnet only |
 | Langfuse (the dashboard) | `http://lemonpepper:3001` | Shows every request through the relay: model, prompt, reply, time taken |
-| Open WebUI | `http://lemonpepper:3000` | Chat in the browser |
-| Ollama | `http://lemonpepper:11434/v1` | The model runtime: loads a model onto the graphics card and answers with it. Direct access has no key and is not recorded in Langfuse |
+| Open WebUI | `http://lemonpepper:3000` and `:3002` (private) | Chat in the browser |
+| Ollama | `127.0.0.1:11434` on the desktop only | The model runtime: loads a model onto the graphics card and answers with it. Closed to other machines since 2026-11-22: bound to 127.0.0.1 and blocked inbound by the firewall. Reach it through a door |
 | Jellyfin | `http://lemonpepper:8096` | Media server |
+
+Every address is reachable over Tailscale only. Nothing is published to
+the internet: Tailscale Funnel was switched off on 2026-11-23.
 
 The relay offers two routes. A client asks for a route name, not a
 model name. One model, `gpt-oss:20b`, answers both.
@@ -177,10 +191,18 @@ an entry to `E:\WHL\config\litellm\config.yaml` and restart the relay.
 - Settled 2026-11-17: the two stacks are joined. Langfuse reports for
   the WHL LiteLLM on port 4000, which gained a route to Ollama. The
   second relay was removed from `server/`.
-- Whether direct access to Ollama on port 11434 stays open. It has no
-  key and is not recorded in Langfuse.
-- Later: `E:\WHL` moves into a repo. Today it has no history and no
-  backup.
+- Settled 2026-11-22: direct access to Ollama on port 11434 is closed.
+  Ollama is bound to 127.0.0.1 (with the Ollama app's "Expose Ollama to
+  the network" off) and a firewall rule blocks 11434 inbound. The doors
+  reach it from inside the desktop.
+- Settled 2026-11-23: one key per caller instead of one shared master
+  key. The master keys were replaced and stay on the desktop. Keys live
+  in a database (`whl-litellm-db`) behind both doors.
+- Settled 2026-11-22: `E:\WHL` is backed up nightly at 04:00 with restic
+  to `D:\Backups\whl-restic`, and the photo folders on D: nightly at
+  04:30 to `E:\Backups\photos-restic`. Both use one password, kept in
+  Zo's password manager. A restore test passed.
+- Later: `E:\WHL` moves into a repo. Today it has no history.
 - Settled 2026-11-18: Ollama is the only model runtime. LM Studio is
   retired.
 - Settled 2026-11-18: one model, `gpt-oss:20b`, answers every route.
@@ -193,9 +215,9 @@ an entry to `E:\WHL\config\litellm\config.yaml` and restart the relay.
   WHL README that kept orchestration local.
 - Later: a memory layer (a vector store and a workflow runner are
   staged in the WHL files but not started).
-- Five Ollama models are now unused: four from two years ago (52 GB,
-  two of which cannot fit on the card) and `qwen2.5-coder:14b` (9 GB).
-  Deleting them is Zo's call.
+- Settled 2026-11-23: the five unused Ollama models were deleted
+  (57.2 GB freed). Kept: `gpt-oss:20b`, `bonsai-2:27b`, `bonsai-2:9b`
+  and `nomic-embed-text`.
 - Settled 2026-11-17: an activity dashboard is wanted (Langfuse behind
   a relay). Open WebUI is the chat front end already running.
 - Where the non-repo library lives, and how it is backed up.
@@ -224,6 +246,14 @@ Design seeds for the swarm are listed in
 `anthologies/gatekeeper-series/planning/SEEDS.md`.
 
 ## Changelog
+
+- 2026-11-23: Server hardened, following `server/hardening/RUNBOOK.md`.
+  Ollama closed to the network (127.0.0.1 and a firewall rule), a
+  database added behind both doors, eight per-caller keys made and the
+  master keys replaced, `E:\WHL` closed to the `claude_agent` account,
+  nightly backups for `E:\WHL` and the photo folders, Tailscale Funnel
+  switched off, five unused models deleted. `client/verify.ps1` now
+  checks that 11434 is closed and passes 11 of 11 from the desktop.
 
 - 2026-11-18: Local models scored on twelve tasks, then scored again
   against two newer models. Result: one model on every route, with

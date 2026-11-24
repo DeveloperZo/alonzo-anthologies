@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d103-title d103-desc">
   <title id="d103-title">DIA-103 · One request, step by step</title>
-  <desc id="d103-desc">Five numbered steps. One: whoever asks (the Arbiter, or you on the chat page) sends a request over the private connection to the front door. Two: the front door checks the password and passes the request on. Three: the home AI reads the request and writes the answer. Four: the answer goes back the same way. Five: the front door writes a note of the request in the logbook, which keeps the full question and answer. A short answer takes 1 to 3 seconds. After an hour of quiet the home AI goes to sleep and the next answer takes up to 30 seconds.</desc>
+  <desc id="d103-desc">Five numbered steps. One: whoever asks (the Arbiter, or you on the chat page) sends a request over the private connection to the front door. Two: the front door checks the caller's key and passes the request on. Three: the home AI reads the request and writes the answer. Four: the answer goes back the same way. Five: the front door writes a note of the request in the logbook, which keeps the full question and answer. A short answer takes 1 to 3 seconds. After an hour of quiet the home AI goes to sleep and the next answer takes up to 30 seconds.</desc>
   <defs>
     <style>
       :root {
@@ -45,8 +45,8 @@
   <text x="134.0" y="254" text-anchor="middle" font-size="11" fill="#6B6873">Claude Code · Open WebUI</text>
   <rect x="390" y="170" width="220" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="500.0" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE FRONT DOOR</text>
-  <text x="500.0" y="217" text-anchor="middle" font-size="13" fill="#5A8270">checks the password</text>
-  <text x="500.0" y="235" text-anchor="middle" font-size="13" fill="#5A8270">no password, no answer</text>
+  <text x="500.0" y="217" text-anchor="middle" font-size="13" fill="#5A8270">checks the key</text>
+  <text x="500.0" y="235" text-anchor="middle" font-size="13" fill="#5A8270">no key, no answer</text>
   <text x="500.0" y="254" text-anchor="middle" font-size="11" fill="#6B6873">LiteLLM</text>
   <rect x="756" y="170" width="220" height="92" rx="12" fill="#DEE8E1" stroke="#5A8270" stroke-width="2"/>
   <text x="866.0" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#5A8270">THE HOME AI</text>
@@ -82,11 +82,11 @@
   <text x="24" y="453" font-size="13.5" fill="#2A2A35">takes up to 30 seconds.</text>
   <text x="700" y="372" font-size="12" fill="#6B6873" font-weight="700" letter-spacing="0.03em">FROM THE CHAT PAGE</text>
   <text x="700" y="396" font-size="13.5" fill="#2A2A35">The same steps. The chat page asks</text>
-  <text x="700" y="415" font-size="13.5" fill="#2A2A35">the front door for you. The password</text>
+  <text x="700" y="415" font-size="13.5" fill="#2A2A35">the front door for you. Its key</text>
   <text x="700" y="434" font-size="13.5" fill="#2A2A35">is already saved in it. Nothing</text>
   <text x="700" y="453" font-size="13.5" fill="#2A2A35">leaves the house.</text>
   <circle cx="36" cy="484" r="11" fill="#FAFAF8" stroke="#4F627F" stroke-width="1.8"/>
   <text x="36" y="488.5" font-size="12.5" fill="#4F627F" text-anchor="middle" font-weight="700">n</text>
   <text x="56" y="488.5" font-size="12.5" fill="#6B6873">a step, in order</text>
-  <text x="500" y="518" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-103 · One request: the front door checks the password, the home AI answers, and the logbook keeps a note.</text>
+  <text x="500" y="518" font-size="13.5" fill="#A85B49" text-anchor="middle" font-weight="600">DIA-103 · One request: the front door checks the key, the home AI answers, and the logbook keeps a note.</text>
 </svg>

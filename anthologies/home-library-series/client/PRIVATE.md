@@ -68,9 +68,15 @@ Wired on 2026-11-18:
 - AI steps in a workflow pick that credential and the model `local-fast` or
   `local-think`. If the list shows OpenAI names, type the name in.
 
-What opening the door means: anyone on the internet can now knock on it,
-and its password is the only guard. Its welcome page is visible without a
-password; nothing else is. To close it again: `tailscale funnel reset`.
+What opening the door meant: anyone on the internet could knock on it,
+and its password was the only guard.
+
+Closed on 2026-11-23: Funnel is off, so the private door is reachable over
+Tailscale only, and n8n cloud can no longer reach it. n8n is not in use
+today. Its credential now holds its own key (`n8n-cloud`, rate limited),
+not the private door's master key. If a workflow is wanted again, it
+needs a route back in; reopening Funnel is `tailscale funnel --bg 4001`.
+The private door's admin page is also switched off.
 
 ## Web search
 
