@@ -1,0 +1,69 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p404-t p404-d">
+  <title id="p404-t">DIA-404 · Rising Tide, Leaky Boats</title>
+  <desc id="p404-d">Two kitchen passes in side elevation, one above the other, each receiving the same ten plates. In the tight kitchen the gate at the pass is down: four plates wait, one is being tasted with a spoon, and five have gone out, each ticked. In the loose kitchen the gate is propped up, leaving a gap marked in rust: nine plates have run through untasted and three of them, drawn in rust, are wrong. A note gives the figures from the consultant study: below-average performers gained 43 percent in quality with AI and above-average performers 17 percent.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p404-h); stroke: none; }
+      .hb { fill: url(#p404-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <pattern id="p404-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE IV</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 4 · TWO KITCHENS, SAME MENU</text>
+  <text x="60" y="88" class="sc">THE TIGHT KITCHEN</text>
+  <text x="60" y="344" class="sc">THE LOOSE KITCHEN</text>
+  <rect x="50" y="276" width="860" height="10" class="h"/><line x1="50" y1="276" x2="910" y2="276" class="l"/><line x1="50" y1="286" x2="910" y2="286" class="thin"/>
+  <rect x="340" y="106" width="12" height="170" class="hb"/><rect x="528" y="106" width="12" height="170" class="hb"/><rect x="328" y="90" width="224" height="16" class="b"/><line x1="382" y1="106" x2="382" y2="130" class="l"/><path d="M 375 130 L 389 130 L 402 154 L 362 154 Z" class="hb"/><line x1="432" y1="106" x2="432" y2="130" class="l"/><path d="M 425 130 L 439 130 L 452 154 L 412 154 Z" class="hb"/><line x1="481" y1="106" x2="481" y2="232" class="thin"/><line x1="491" y1="106" x2="491" y2="232" class="thin"/><rect x="474" y="232" width="24" height="44" class="hb"/>
+  <g transform="translate(100 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(168 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(236 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(304 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(406 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><path d="M 412 250 L 386 198" class="l" style="stroke-width:2.4"/><ellipse cx="415" cy="255" rx="6" ry="9" transform="rotate(-27 415 255)" class="b"/><g transform="translate(590 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(661 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(732 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(803 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(874 276) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g>
+  <rect x="50" y="530" width="860" height="10" class="h"/><line x1="50" y1="530" x2="910" y2="530" class="l"/><line x1="50" y1="540" x2="910" y2="540" class="thin"/>
+  <rect x="340" y="360" width="12" height="170" class="hb"/><rect x="528" y="360" width="12" height="170" class="hb"/><rect x="328" y="344" width="224" height="16" class="b"/><line x1="382" y1="360" x2="382" y2="384" class="l"/><path d="M 375 384 L 389 384 L 402 408 L 362 408 Z" class="hb"/><line x1="432" y1="360" x2="432" y2="384" class="l"/><path d="M 425 384 L 439 384 L 452 408 L 412 408 Z" class="hb"/><line x1="481" y1="360" x2="481" y2="408" class="thin"/><line x1="491" y1="360" x2="491" y2="408" class="thin"/><rect x="474" y="408" width="24" height="16" class="hb"/><path d="M 498 416 L 528 438" class="l" style="stroke-width:2.4"/>
+  <g transform="translate(270 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(866 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(828 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="fa"/><path d="M -13 -7 Q 0 -27 13 -7" class="la" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="ba" style="stroke-width:1"/></g><g transform="translate(790 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(752 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="fa"/><path d="M -13 -7 Q 0 -27 13 -7" class="la" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="ba" style="stroke-width:1"/></g><g transform="translate(714 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(676 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(638 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="fa"/><path d="M -13 -7 Q 0 -27 13 -7" class="la" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="ba" style="stroke-width:1"/></g><g transform="translate(600 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(562 530) scale(1.5)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g>
+  <!-- the gap under the propped gate: nothing stands in it -->
+  <path d="M 486 430 V 525 M 480 430 h 12 M 480 525 h 12" class="la" style="stroke-width:1.3"/>
+  <text x="472" y="484" text-anchor="end" class="ita">waved through</text>
+  <!-- notes -->
+  <text x="60" y="116" class="it">Every plate stops at the pass,</text>
+  <text x="60" y="134" class="it">even on a slammed Friday.</text>
+  <text x="590" y="140" class="it">Five out, each one tasted.</text>
+  <text x="590" y="158" class="sm">The rest wait their turn.</text>
+  <text x="60" y="372" class="it">One chef, a full rail,</text>
+  <text x="60" y="390" class="it">and the gate propped up.</text>
+  <text x="590" y="396" class="ita">Nine out, none tasted.</text>
+  <text x="590" y="416" class="ita">Three should not have left.</text>
+  <text x="910" y="306" text-anchor="end" class="sm">to the table</text>
+  <text x="910" y="560" text-anchor="end" class="sm">to the table</text>
+  <text x="60" y="306" class="sm">from the stations</text>
+  <text x="60" y="560" class="sm">from the stations</text>
+  <text x="480" y="584" text-anchor="middle" class="sm">Same knives, same Monday, the same 10 plates sent to each pass. At the stations the weaker cooks gained most: 43% against 17%.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">Rising Tide, Leaky Boats</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-404 · The weaker cook gains most at the station, 43% against 17%. The pass decides what reaches the table.</text>
+</svg>

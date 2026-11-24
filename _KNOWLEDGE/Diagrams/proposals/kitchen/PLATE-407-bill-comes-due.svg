@@ -1,0 +1,65 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p407-t p407-d">
+  <title id="p407-t">DIA-407 · The Bill Comes Due</title>
+  <desc id="p407-d">Two till receipts hang from one rail, each printed at one line per dollar. The March 2026 receipt is 37 lines long. The August 2026 receipt is 115 lines long, about three times the length, and a rust bracket marks the extra. Below each receipt is the plate it paid for, seen from above and divided by the mix of work: 57 percent new features and 25 percent maintenance in March, 56 percent and 24 percent in August. The two plates look the same. A note says the plates show the mix of work and not its volume, and that in one survey 18 percent of organizations measure the impact of AI at all. Vendor data at list prices.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p407-h); stroke: none; }
+      .hb { fill: url(#p407-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <pattern id="p407-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VII</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 7 · THE CARD AND THE INVOICE</text>
+  <line x1="46" y1="92" x2="914" y2="92" class="l" style="stroke-width:2.4"/>
+  <path d="M 157 105 V 250.5 h 110 V 105 Z" class="h"/><path d="M 150 98 H 260 V 243.5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 Z" class="b"/><path d="M 160 108 h 44 M 230 108 h 20 M 160 111.5 h 44 M 230 111.5 h 20 M 160 115 h 44 M 230 115 h 20 M 160 118.5 h 44 M 230 118.5 h 20 M 160 122 h 52 M 230 122 h 20 M 160 125.5 h 44 M 230 125.5 h 20 M 160 129 h 44 M 230 129 h 20 M 160 132.5 h 44 M 230 132.5 h 20 M 160 136 h 44 M 230 136 h 20 M 160 139.5 h 52 M 230 139.5 h 20 M 160 143 h 44 M 230 143 h 20 M 160 146.5 h 44 M 230 146.5 h 20 M 160 150 h 44 M 230 150 h 20 M 160 153.5 h 44 M 230 153.5 h 20 M 160 157 h 52 M 230 157 h 20 M 160 160.5 h 44 M 230 160.5 h 20 M 160 164 h 44 M 230 164 h 20 M 160 167.5 h 44 M 230 167.5 h 20 M 160 171 h 44 M 230 171 h 20 M 160 174.5 h 52 M 230 174.5 h 20 M 160 178 h 44 M 230 178 h 20 M 160 181.5 h 44 M 230 181.5 h 20 M 160 185 h 44 M 230 185 h 20 M 160 188.5 h 44 M 230 188.5 h 20 M 160 192 h 52 M 230 192 h 20 M 160 195.5 h 44 M 230 195.5 h 20 M 160 199 h 44 M 230 199 h 20 M 160 202.5 h 44 M 230 202.5 h 20 M 160 206 h 44 M 230 206 h 20 M 160 209.5 h 52 M 230 209.5 h 20 M 160 213 h 44 M 230 213 h 20 M 160 216.5 h 44 M 230 216.5 h 20 M 160 220 h 44 M 230 220 h 20 M 160 223.5 h 44 M 230 223.5 h 20 M 160 227 h 52 M 230 227 h 20 M 160 230.5 h 44 M 230 230.5 h 20 M 160 234 h 44 M 230 234 h 20" class="thin" style="stroke-width:0.55"/><rect x="196" y="86" width="18" height="20" class="hb"/>
+  <path d="M 447 105 V 523.5 h 110 V 105 Z" class="h"/><path d="M 440 98 H 550 V 516.5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 l -5.5 5 l -5.5 -5 Z" class="b"/><path d="M 450 108 h 44 M 520 108 h 20 M 450 111.5 h 44 M 520 111.5 h 20 M 450 115 h 44 M 520 115 h 20 M 450 118.5 h 44 M 520 118.5 h 20 M 450 122 h 52 M 520 122 h 20 M 450 125.5 h 44 M 520 125.5 h 20 M 450 129 h 44 M 520 129 h 20 M 450 132.5 h 44 M 520 132.5 h 20 M 450 136 h 44 M 520 136 h 20 M 450 139.5 h 52 M 520 139.5 h 20 M 450 143 h 44 M 520 143 h 20 M 450 146.5 h 44 M 520 146.5 h 20 M 450 150 h 44 M 520 150 h 20 M 450 153.5 h 44 M 520 153.5 h 20 M 450 157 h 52 M 520 157 h 20 M 450 160.5 h 44 M 520 160.5 h 20 M 450 164 h 44 M 520 164 h 20 M 450 167.5 h 44 M 520 167.5 h 20 M 450 171 h 44 M 520 171 h 20 M 450 174.5 h 52 M 520 174.5 h 20 M 450 178 h 44 M 520 178 h 20 M 450 181.5 h 44 M 520 181.5 h 20 M 450 185 h 44 M 520 185 h 20 M 450 188.5 h 44 M 520 188.5 h 20 M 450 192 h 52 M 520 192 h 20 M 450 195.5 h 44 M 520 195.5 h 20 M 450 199 h 44 M 520 199 h 20 M 450 202.5 h 44 M 520 202.5 h 20 M 450 206 h 44 M 520 206 h 20 M 450 209.5 h 52 M 520 209.5 h 20 M 450 213 h 44 M 520 213 h 20 M 450 216.5 h 44 M 520 216.5 h 20 M 450 220 h 44 M 520 220 h 20 M 450 223.5 h 44 M 520 223.5 h 20 M 450 227 h 52 M 520 227 h 20 M 450 230.5 h 44 M 520 230.5 h 20 M 450 234 h 44 M 520 234 h 20 M 450 237.5 h 44 M 520 237.5 h 20 M 450 241 h 44 M 520 241 h 20 M 450 244.5 h 52 M 520 244.5 h 20 M 450 248 h 44 M 520 248 h 20 M 450 251.5 h 44 M 520 251.5 h 20 M 450 255 h 44 M 520 255 h 20 M 450 258.5 h 44 M 520 258.5 h 20 M 450 262 h 52 M 520 262 h 20 M 450 265.5 h 44 M 520 265.5 h 20 M 450 269 h 44 M 520 269 h 20 M 450 272.5 h 44 M 520 272.5 h 20 M 450 276 h 44 M 520 276 h 20 M 450 279.5 h 52 M 520 279.5 h 20 M 450 283 h 44 M 520 283 h 20 M 450 286.5 h 44 M 520 286.5 h 20 M 450 290 h 44 M 520 290 h 20 M 450 293.5 h 44 M 520 293.5 h 20 M 450 297 h 52 M 520 297 h 20 M 450 300.5 h 44 M 520 300.5 h 20 M 450 304 h 44 M 520 304 h 20 M 450 307.5 h 44 M 520 307.5 h 20 M 450 311 h 44 M 520 311 h 20 M 450 314.5 h 52 M 520 314.5 h 20 M 450 318 h 44 M 520 318 h 20 M 450 321.5 h 44 M 520 321.5 h 20 M 450 325 h 44 M 520 325 h 20 M 450 328.5 h 44 M 520 328.5 h 20 M 450 332 h 52 M 520 332 h 20 M 450 335.5 h 44 M 520 335.5 h 20 M 450 339 h 44 M 520 339 h 20 M 450 342.5 h 44 M 520 342.5 h 20 M 450 346 h 44 M 520 346 h 20 M 450 349.5 h 52 M 520 349.5 h 20 M 450 353 h 44 M 520 353 h 20 M 450 356.5 h 44 M 520 356.5 h 20 M 450 360 h 44 M 520 360 h 20 M 450 363.5 h 44 M 520 363.5 h 20 M 450 367 h 52 M 520 367 h 20 M 450 370.5 h 44 M 520 370.5 h 20 M 450 374 h 44 M 520 374 h 20 M 450 377.5 h 44 M 520 377.5 h 20 M 450 381 h 44 M 520 381 h 20 M 450 384.5 h 52 M 520 384.5 h 20 M 450 388 h 44 M 520 388 h 20 M 450 391.5 h 44 M 520 391.5 h 20 M 450 395 h 44 M 520 395 h 20 M 450 398.5 h 44 M 520 398.5 h 20 M 450 402 h 52 M 520 402 h 20 M 450 405.5 h 44 M 520 405.5 h 20 M 450 409 h 44 M 520 409 h 20 M 450 412.5 h 44 M 520 412.5 h 20 M 450 416 h 44 M 520 416 h 20 M 450 419.5 h 52 M 520 419.5 h 20 M 450 423 h 44 M 520 423 h 20 M 450 426.5 h 44 M 520 426.5 h 20 M 450 430 h 44 M 520 430 h 20 M 450 433.5 h 44 M 520 433.5 h 20 M 450 437 h 52 M 520 437 h 20 M 450 440.5 h 44 M 520 440.5 h 20 M 450 444 h 44 M 520 444 h 20 M 450 447.5 h 44 M 520 447.5 h 20 M 450 451 h 44 M 520 451 h 20 M 450 454.5 h 52 M 520 454.5 h 20 M 450 458 h 44 M 520 458 h 20 M 450 461.5 h 44 M 520 461.5 h 20 M 450 465 h 44 M 520 465 h 20 M 450 468.5 h 44 M 520 468.5 h 20 M 450 472 h 52 M 520 472 h 20 M 450 475.5 h 44 M 520 475.5 h 20 M 450 479 h 44 M 520 479 h 20 M 450 482.5 h 44 M 520 482.5 h 20 M 450 486 h 44 M 520 486 h 20 M 450 489.5 h 52 M 520 489.5 h 20 M 450 493 h 44 M 520 493 h 20 M 450 496.5 h 44 M 520 496.5 h 20 M 450 500 h 44 M 520 500 h 20 M 450 503.5 h 44 M 520 503.5 h 20 M 450 507 h 52 M 520 507 h 20" class="thin" style="stroke-width:0.55"/><rect x="486" y="86" width="18" height="20" class="hb"/>
+  <!-- where the first bill ended, carried across to the second -->
+  <line x1="260" y1="243.5" x2="434" y2="243.5" class="sight"/>
+  <path d="M 562 243.5 V 516.5 M 556 243.5 h 12 M 556 516.5 h 12" class="la" style="stroke-width:1.3"/>
+  <!-- the plates -->
+  <circle cx="241" cy="436" r="70" class="h"/><circle cx="236" cy="430" r="70" class="b"/><circle cx="236" cy="430" r="58" class="thin"/><path d="M 236 430 L 236 378 A 52 52 0 1 1 213.86 477.05 Z" class="hb" style="stroke-width:1"/><path d="M 236 430 L 213.86 477.05 A 52 52 0 0 1 188.95 407.86 Z" class="ink" style="opacity:0.82"/><path d="M 236 430 L 188.95 407.86 A 52 52 0 0 1 236 378 Z" class="b" style="stroke-width:1"/><text x="320" y="452" class="sm">new features 57%</text><text x="154" y="474" text-anchor="end" class="sm">maintenance 25%</text><text x="158" y="390" text-anchor="end" class="sm">the rest 18%</text>
+  <circle cx="775" cy="436" r="70" class="h"/><circle cx="770" cy="430" r="70" class="b"/><circle cx="770" cy="430" r="58" class="thin"/><path d="M 770 430 L 770 378 A 52 52 0 1 1 750.86 478.35 Z" class="hb" style="stroke-width:1"/><path d="M 770 430 L 750.86 478.35 A 52 52 0 0 1 720.55 413.93 Z" class="ink" style="opacity:0.82"/><path d="M 770 430 L 720.55 413.93 A 52 52 0 0 1 770 378 Z" class="b" style="stroke-width:1"/><text x="854" y="452" class="sm">56%</text><text x="688" y="474" text-anchor="end" class="sm">24%</text><text x="692" y="390" text-anchor="end" class="sm">20%</text>
+  <!-- notes -->
+  <text x="276" y="126" class="it">March 2026</text>
+  <text x="276" y="156" class="big">$37</text>
+  <text x="580" y="126" class="ita">August 2026</text>
+  <text x="580" y="156" class="biga">$115</text>
+  <text x="580" y="178" class="ita">about three times the bill,</text>
+  <text x="580" y="196" class="ita">five months on</text>
+  <text x="276" y="176" class="sm">AI spend per weekly</text>
+  <text x="276" y="192" class="sm">active user</text>
+  <text x="236" y="548" text-anchor="middle" class="it">what it bought, in March</text>
+  <text x="770" y="548" text-anchor="middle" class="it">what it bought, in August</text>
+  <text x="480" y="584" text-anchor="middle" class="sm">One printed line is one dollar. The plates show the mix of work, not how much of it. In one survey, 18% of organizations measure the impact at all.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">The Bill Comes Due</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-407 · AI spend per weekly active user tripled in five months, $37 to $115, while the mix of work stayed where it was.</text>
+</svg>

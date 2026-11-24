@@ -58,3 +58,14 @@ inside the container and left the real test (a recent question in a
 signed-in chat) to him, then fixed one symptom per complaint. For anything
 he will use by hand, run it the way he will before calling it done, with a
 vague real-world question, and list every gap found in one report.
+
+## Branch names (2026-11-23)
+
+Zo, after a branch was pushed as `claude/project-thread-...`: "dont ever
+branch names with claude or a tool. Use the feat or milestone its
+associated with."
+
+Name a branch for the feature or milestone it carries, in the repo's own
+style: `feat/play-mode-achievements`, `diagrams/site-and-home-library`.
+Never put the name of an assistant, a tool or a session id in a branch
+name, even when the session was handed a default branch name that has one.

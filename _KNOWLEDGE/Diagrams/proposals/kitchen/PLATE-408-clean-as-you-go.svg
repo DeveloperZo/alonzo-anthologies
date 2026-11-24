@@ -1,0 +1,74 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p408-t p408-d">
+  <title id="p408-t">DIA-408 · Clean As You Go</title>
+  <desc id="p408-d">The loose kitchen from plate four, in the same side elevation, repaired. The gate at the pass is down again. Three repairs are drawn in rust. A stop on the counter and a rule over the queue cap the plates waiting at four. A second tasting spoon, not the cook's own, rests in the plate at the gate. A cost sheet is clipped up beside the pass for a weekly check of spend against what shipped. Five plates have gone out and each is ticked. A note says this is a count of what is fitted and not a measurement, because no study in the piece tests these fixes.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      :root { --paper: #F2EEE3; --ink: #2A2A35; --soft: #6B6873; --accent: #A85B49; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1E2128; --ink: #E8E5DC; --soft: #B8B5AD; --accent: #D29183; } }
+      text { font-family: Spectral, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .paper { fill: var(--paper); }
+      .l { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: var(--ink); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+      .b { fill: var(--paper); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+      .bt { fill: var(--paper); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+      .ink { fill: var(--ink); stroke: none; }
+      .h { fill: url(#p408-h); stroke: none; }
+      .hb { fill: url(#p408-h); stroke: var(--ink); stroke-width: 1.4; stroke-linejoin: round; }
+      .hl { stroke: var(--ink); stroke-width: 0.6; }
+      .la { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .ba { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; stroke-linejoin: round; }
+      .fa { fill: var(--accent); stroke: none; }
+      .sight { fill: none; stroke: var(--soft); stroke-width: 0.7; stroke-dasharray: 5 4; }
+      .sc { font-size: 11px; letter-spacing: 0.16em; fill: var(--soft); }
+      .it { font-size: 13.5px; font-style: italic; }
+      .ita { font-size: 15px; font-style: italic; fill: var(--accent); }
+      .sm { font-size: 12px; font-style: italic; fill: var(--soft); }
+      .big { font-size: 24px; }
+      .biga { font-size: 24px; fill: var(--accent); }
+      .cap { font-size: 12.5px; fill: var(--soft); }
+      .title { font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif; font-size: 38px; word-spacing: 0.14em; }
+    </style>
+    <pattern id="p408-h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" class="hl"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" class="paper"/>
+  <rect x="14" y="14" width="932" height="692" class="l" style="stroke-width:1.2"/>
+  <rect x="20" y="20" width="920" height="680" class="thin"/>
+  <text x="42" y="50" class="sc">PLATE VIII</text>
+  <text x="918" y="50" text-anchor="end" class="sc">SAME MENU, DIFFERENT KITCHEN · SECTION 8 · THE KITCHEN DECIDES</text>
+  <text x="60" y="88" class="sc">THE LOOSE KITCHEN, REPAIRED</text>
+  <rect x="50" y="486" width="860" height="10" class="h"/><line x1="50" y1="486" x2="910" y2="486" class="l"/><line x1="50" y1="496" x2="910" y2="496" class="thin"/>
+  <rect x="370" y="316" width="12" height="170" class="hb"/><rect x="558" y="316" width="12" height="170" class="hb"/><rect x="358" y="300" width="224" height="16" class="b"/><line x1="412" y1="316" x2="412" y2="340" class="l"/><path d="M 405 340 L 419 340 L 432 364 L 392 364 Z" class="hb"/><line x1="462" y1="316" x2="462" y2="340" class="l"/><path d="M 455 340 L 469 340 L 482 364 L 442 364 Z" class="hb"/><line x1="511" y1="316" x2="511" y2="442" class="thin"/><line x1="521" y1="316" x2="521" y2="442" class="thin"/><rect x="504" y="442" width="24" height="44" class="hb"/>
+  <g transform="translate(122 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(190 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(258 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><g transform="translate(326 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g>
+  <g transform="translate(436 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/></g><path d="M 442 460 L 416 408" class="la" style="stroke-width:2.4"/><ellipse cx="445" cy="465" rx="6" ry="9" transform="rotate(-27 445 465)" class="ba"/>
+  <g transform="translate(616 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(682 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(748 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(814 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g><g transform="translate(880 486) scale(1.4)"><path d="M -13 -7 Q 0 -27 13 -7 Z" class="h"/><path d="M -13 -7 Q 0 -27 13 -7" class="l" style="stroke-width:1"/><path d="M -23 -7 L 23 -7 Q 15 0 8 0 L -8 0 Q -15 0 -23 -7 Z" class="b" style="stroke-width:1"/><path d="M -6 -38 l 4 5 l 8 -12" class="l" style="stroke-width:1.1"/></g>
+  <!-- 1: the cap, a stop on the counter and a rule over the four that may wait -->
+  <rect x="62" y="428" width="12" height="58" class="ba"/><path d="M 62 428 h 12 M 58 428 h 20" class="la"/>
+  <path d="M 90 424 v -8 H 358 v 8" class="la" style="stroke-width:1.3"/>
+  <!-- 3: the cost sheet, clipped to the post -->
+  <g transform="translate(596 290)"><rect x="0" y="0" width="58" height="76" class="ba"/><rect x="19" y="-6" width="20" height="10" class="ba"/><path d="M 8 18 h 42 M 8 30 h 42 M 8 42 h 42 M 8 54 h 42 M 30 12 v 52" class="la" style="stroke-width:0.9"/></g>
+  <!-- keys beside the three repairs -->
+  <text x="84" y="408" class="ita">a</text>
+  <text x="396" y="416" class="ita">b</text>
+  <text x="662" y="300" class="ita">c</text>
+  <!-- notes -->
+  <text x="60" y="200" class="ita">a. A cap on the tickets.</text>
+  <text x="60" y="219" class="sm">When four are waiting, the cooks stop</text>
+  <text x="60" y="235" class="sm">firing and help clear the pass.</text>
+  <text x="352" y="200" class="ita">b. A second spoon.</text>
+  <text x="352" y="219" class="sm">Not the cook's: a check written</text>
+  <text x="352" y="235" class="sm">from the card, not from the pot.</text>
+  <text x="640" y="200" class="ita">c. The weekly food-cost check.</text>
+  <text x="640" y="219" class="sm">Spend set beside what shipped</text>
+  <text x="640" y="235" class="sm">and what came back.</text>
+  <text x="60" y="518" class="sm">from the stations</text>
+  <text x="910" y="518" text-anchor="end" class="sm">to the table</text>
+  <text x="60" y="122" class="it">The same pass as the lower kitchen on Plate IV. The gate is down again,</text>
+  <text x="60" y="140" class="it">and every plate that leaves has been tasted.</text>
+  <text x="480" y="574" text-anchor="middle" class="sm">Three repairs, one for each check that broke. A count of what is fitted, not a measurement: no study in this piece tests them.</text>
+  <text x="480" y="634" text-anchor="middle" class="title">Clean As You Go</text>
+  <line x1="300" y1="656" x2="660" y2="656" class="thin"/>
+  <text x="480" y="679" text-anchor="middle" class="cap">DIA-408 · The loose kitchen with its three checks closed: a cap at the pass, a second spoon, a weekly look at the bill.</text>
+</svg>
