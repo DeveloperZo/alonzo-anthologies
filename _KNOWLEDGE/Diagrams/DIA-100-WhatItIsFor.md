@@ -30,7 +30,7 @@ On the left, a frame for Zo's computer holds the four series as four boxes: the 
 4. The project notes box is where this picture itself lives.
 
 ## Architecture Relevance
-This is the most general picture of the repository and the one embedded in [ARCH-001](../Architecture/ARCH-001-PlatformOverview.md). It replaces the old DIA-101 "whole system" picture. Left out on purpose, and covered by the closer pictures: the main copy and trial copies (DIA-102, DIA-103), the page maker and how the resume app is made alongside the pages (DIA-104, DIA-105), the old duplicate site and the old shelf (listed in DIA-101), the Cloudflare token, and the `_META` and `_ENV` folders. The home library has its own set in `anthologies/home-library-series/diagrams/`.
+This is the most general picture of the repository and the one embedded in [ARCH-001](../Architecture/ARCH-001-PlatformOverview.md). It replaces the old DIA-101 "whole system" picture. Left out on purpose, and covered by the closer pictures: the main copy and trial copies (DIA-102, DIA-103), the page maker and how the resume app is made alongside the pages (DIA-104, DIA-105), the old duplicate site and the old shelf (listed in DIA-101), the Cloudflare token, and the `_META` and `_ENV` folders. The home library has its own set in `../williams-home-library/diagrams/`.
 
 ## Suggested Caption
 DIA-100 · What it is for: four series live in one folder, and the website and the resume travel one road to the public site.

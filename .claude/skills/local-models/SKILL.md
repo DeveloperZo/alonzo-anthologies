@@ -10,25 +10,25 @@ token. You (the frontier model) plan, judge and check. It reads and
 drafts. The point is that the bulk text never enters your context: you
 send a file path, it reads the file, and only a short reply comes back.
 
-Full evidence and failure cases: `anthologies/home-library-series/client/ROUTING.md`.
+Full evidence and failure cases: `../williams-home-library/client/ROUTING.md`.
 Read it once before a large hand-off.
 
 ## The two commands
 
-Both live in `anthologies/home-library-series/client/`. Run them from the
+Both live in `../williams-home-library/client/`. Run them from the
 repo root with the Bash or PowerShell tool.
 
 One job:
 
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local.ps1 -Prompt "<instruction>" -File "<path>[;<path>]" -Task <label> -Stats
+powershell -NoProfile -ExecutionPolicy Bypass -File ../williams-home-library/client/ask-local.ps1 -Prompt "<instruction>" -File "<path>[;<path>]" -Task <label> -Stats
 ```
 
 The same instruction over many files (the big saver). Replies go to a
 folder, one per input, and you get one summary line:
 
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -File anthologies/home-library-series/client/ask-local-batch.ps1 -Prompt "<instruction>" -Path "<glob>" -OutDir <folder> -Task <label>
+powershell -NoProfile -ExecutionPolicy Bypass -File ../williams-home-library/client/ask-local-batch.ps1 -Prompt "<instruction>" -Path "<glob>" -OutDir <folder> -Task <label>
 ```
 
 Do NOT read the input files yourself first. That spends the tokens you
@@ -57,7 +57,7 @@ One model answers every route. The route only sets how much it thinks.
 ## Private drives and the paid route
 
 On lemonpepper, drives `C:` and `D:` are private and `F:` is the working
-drive. Full rules: `anthologies/home-library-series/client/PRIVATE.md`.
+drive. Full rules: `../williams-home-library/client/PRIVATE.md`.
 
 - Never read, list or search `C:` or `D:` yourself, with any tool or shell
   command. You are a paid AI and those drives are not for you.

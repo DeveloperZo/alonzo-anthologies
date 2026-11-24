@@ -5,7 +5,7 @@ import os, sys, textwrap
 from xml.sax.saxutils import escape
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "..", "anthologies", "home-library-series", "diagrams"))
+sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "williams-home-library", "diagrams"))
 from gen_diagrams import STYLE, T, L, RECT, box, sbox, circ, head, foot, swatch, G, GS, B, BS, A, AS, R, MU, BG  # noqa: E402,F401
 
 FRAME = "#9D9A95"
@@ -30,7 +30,7 @@ def dia100():
     s += T(40, 123, "Everything is written here first · the working copy", 12, MU)
     s += box(40, 140, 224, 92, G, GS, "THE WEBSITE", "essays and an illustrated series", "the pages people read", "website-series")
     s += box(280, 140, 224, 92, G, GS, "THE RESUME", "an interactive resume", "cover letters stay off the site", "resume-series")
-    s += box(40, 250, 224, 92, MU, BG, "THE HOME LIBRARY", "our own AI at home", "has its own set of pictures", "home-library-series")
+    s += box(40, 250, 224, 92, MU, BG, "THE HOME LIBRARY", "our own AI at home", "has its own set of pictures", "williams-home-library")
     s += box(280, 250, 224, 92, MU, BG, "CHECKING AI WORK", "a way to check what AI did", "plans only, nothing built yet", "gatekeeper-series")
     s += RECT(40, 368, 464, 1, "none", "#E2DFD6", 0, 1)
     s += T(40, 392, "ALSO IN THE FOLDER", 12, MU, w="700", ls=True)

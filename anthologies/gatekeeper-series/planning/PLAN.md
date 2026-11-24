@@ -88,7 +88,7 @@ from elsewhere: the vendor-neutral agent runner (see
 
 The workbench needs a model endpoint. Today that is a paid vendor
 command line tool. Once the home library server exists
-(`anthologies/home-library-series/`), slice W3 points the workbench at
+(`../williams-home-library/`), slice W3 points the workbench at
 it, and slice W4 is the agent swarm that runs on it. Neither series
 blocks the other before W3.
 

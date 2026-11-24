@@ -4,7 +4,7 @@ Helpers and palette come from the home library generator so the two sets look al
 Do not edit the SVGs by hand."""
 import sys
 
-sys.path.insert(0, r"F:\Programming\alonzo-anthologies\anthologies\home-library-series\diagrams")
+sys.path.insert(0, r"F:\Programming\williams-home-library\diagrams")
 from gen_diagrams import STYLE, T, L, RECT, box, sbox, circ, head, foot, swatch, G, GS, B, BS, A, AS, R, MU, BG  # noqa: E402,F401
 
 TEXT = "#2A2A35"

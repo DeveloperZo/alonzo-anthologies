@@ -26,7 +26,7 @@ Before reading several files, or one long file, only to summarize it,
 pull facts out of it or label it, hand that work to the free local
 models instead. The how is in the `local-models` skill
 (`.claude/skills/local-models/SKILL.md`) and the evidence is in
-`anthologies/home-library-series/client/ROUTING.md`. Zo set this on
+`../williams-home-library/client/ROUTING.md`. Zo set this on
 2026-11-18 to cut frontier token cost.
 
 ## Keeping these current
