@@ -108,6 +108,11 @@ flow. `flow.mjs` holds it. Each plate has its own composition:
 The `INFO-*` files (rounds 2 and 3) and `WONDER-401-chart` are
 superseded and kept only as history.
 
+Zo's verdict on round 4, 2026-11-23: "decent for now nothing here gets
+to levels of accomplishment part 1 has. So we can commit". The plates
+are accepted as a working set, not as finished. The bar is still
+Part 1's plates, and a later pass should aim there.
+
 - Generators: `INFO-40N-name.gen.mjs` and `WONDER-40N-name.gen.mjs`, run as
   `node INFO-40N-name.gen.mjs INFO-40N-name.svg`. Renders in `renders/`.
 - Drawn: 401, 402, 404, 405, 406, 407. Their PNG renders are embedded
