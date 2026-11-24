@@ -99,3 +99,44 @@ Zo's method (2026-11-22): replay one or two completed milestones from
 history, from the commit before they landed, to build and harden the
 factory. Score outcome per frontier dollar against a frontier-only run,
 not raw tokens. Then run on new milestones and adapt.
+
+## Carve-out (planner's only code exception)
+
+A card cannot edit or read a file that alone exceeds the card budget (~9k tokens).
+When the item needs a change inside such a file, the planner may first carve the
+code to be changed out into a new small file, with no behaviour change:
+
+1. Make the carve-out in a scratch worktree, never in the play repo itself:
+   `git -C <repo> worktree add <root>/carve/<name> <base>`, edit there, then
+   `git -C <root>/carve/<name> diff > <root>/carveouts/<name>.patch` (add new files
+   with `git add -N` first so they appear in the diff).
+2. Pure move only: the moved code keeps its names, logic and exports. The old file
+   imports it back. No renames, no fixes, no new behaviour, no test changes unless an
+   import path must follow the move.
+3. Run it as its own card through the runner, gated and judged like any card, with
+   the stub worker: write the card (criterion "carve-out: no behaviour change",
+   scope = the old file plus the new file), then
+   `runner.py ... run-next --worker "patch:<root>/carveouts/<name>.patch" --judge ...`.
+   The patch worker does not retry, so a red gate or a judge reject means fix the
+   patch and re-run a new card id.
+4. The accepted carve-out commit is the base for the cards that follow.
+5. Remove the scratch worktree afterwards (`git worktree remove`).
+
+Carve-outs count as frontier work in scoring (planner cost), and the report lists
+them separately from local cards.
+
+## Intent (planner, before any card)
+
+Before cutting a single card, the planner writes `<root>/intent.md`:
+
+1. **User-visible change:** at most five bullets. Each bullet states one thing a user will
+   see or do differently, and quotes the sentence of the item it serves, word for word.
+2. **Not doing:** every change the planner considered that no item sentence asks for
+   (extra controls, links, fallbacks, refactors, "while we are here" fixes), one line each.
+3. **Where the item is silent:** choose the fewest new screens, steps, controls and links.
+   When two readings are possible, take the one that changes the least for the user, and
+   say so in one line.
+
+Cards are cut only for the bullets in section 1. A card whose criterion cannot be traced to
+a bullet is not cut. Carve-outs serve a bullet and say which one. The report shows each
+planner's intent.md beside the blind reviewer's verdict on intent.
