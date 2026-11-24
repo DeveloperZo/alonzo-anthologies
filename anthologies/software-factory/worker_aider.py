@@ -70,7 +70,10 @@ def main() -> int:
     for nf in new_files:  # aider adds a missing file it is given as empty, then fills it
         p = wt / nf
         p.parent.mkdir(parents=True, exist_ok=True)
-        if not p.exists():
+        # On a retry the model re-emits the whole new file and Aider appends it to
+        # the old one (seen in the 2026-11-24 replays), so new files start empty
+        # on every attempt; the feedback still says what was wrong last time.
+        if not p.exists() or attempt > 1:
             p.write_text("", encoding="utf-8")
     read = card.get("read", [])
 
