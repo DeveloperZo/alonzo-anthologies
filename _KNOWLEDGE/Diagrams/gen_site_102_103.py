@@ -4,7 +4,7 @@ Helpers come from the home library generator so the two sets look alike. Do not 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "anthologies" / "home-library-series" / "diagrams"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "williams-home-library" / "diagrams"))
 from gen_diagrams import STYLE, T, L, RECT, box, sbox, circ, head, foot, swatch, G, GS, B, BS, A, AS, R, MU, BG  # noqa: E402,F401
 
 FRAME = "#9D9A95"

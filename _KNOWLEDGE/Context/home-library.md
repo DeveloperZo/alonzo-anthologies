@@ -29,12 +29,12 @@ relay got written on 2026-11-17.
   fit and was removed.
 - **Intended use (Zo, 2026-11-18):** a frontier tool is the harness and
   hands token-heavy work to the local models to cut frontier cost. The
-  hand-off is `anthologies/home-library-series/client/ask-local.ps1`;
+  hand-off is `../williams-home-library/client/ask-local.ps1`;
   what is safe to hand over is in `client/ROUTING.md` beside it. No
   fallback is wanted for when the desktop is off. A memory layer and
   moving `E:\WHL` into a repo are both deferred.
 - **Tools added 2026-11-18**, all under
-  `anthologies/home-library-series/`: `client/ask-local-batch.ps1`
+  `../williams-home-library/`: `client/ask-local-batch.ps1`
   (one instruction over many files), `client/eval/run_eval.py` (rerun
   after any model change), `board/` (live board on port 8088; its
   collector is a Python process that does not start by itself), and
@@ -46,7 +46,7 @@ relay got written on 2026-11-17.
   reason.
 - **Never call the relay's `GET /health`.** It sends a real chat to
   every route and forces a model swap. Use `/health/liveliness`.
-- **Langfuse** runs from `anthologies/home-library-series/server/` on
+- **Langfuse** runs from `../williams-home-library/server/` on
   port 3001, as compose project `whl-langfuse`, attached to the `whl`
   Docker network. Port 3000 is Open WebUI.
 - Edits made in `E:\WHL` that day: `config/litellm/config.yaml`,
@@ -56,10 +56,10 @@ relay got written on 2026-11-17.
 - Langfuse 4 has no `/api/public/traces`. To read records back, use
   `/api/public/v2/observations` with the project keys.
 - To check the whole system, run
-  `anthologies/home-library-series/client/verify.ps1`.
+  `../williams-home-library/client/verify.ps1`.
 
 The pictures are DIA-100 to DIA-105 and DIA-200 in
-`anthologies/home-library-series/diagrams/`, most general first.
+`../williams-home-library/diagrams/`, most general first.
 
 ## Machine names
 
@@ -164,7 +164,7 @@ How to apply, for any paid AI working here: do not read, list or search
 command. To have a private file handled, pass its path to
 `ask-local.ps1` with `-Out` on a private drive and do not open the
 result. The rules and their limits are in
-`anthologies/home-library-series/client/PRIVATE.md`.
+`../williams-home-library/client/PRIVATE.md`.
 
 The separate account exists as of 2026-11-18: a standard Windows account
 `claude_agent` for paid AI tools. Windows already closes `C:\Users\awill`
@@ -298,7 +298,7 @@ experience and we are missing rudimentary capabilities". What changed:
   the four Claude entries, shows a status line under each reply: tokens,
   cost of the reply, the chat's total and the month's total. Each Claude
   entry also has the `usage` capability on, which makes the page ask for
-  token counts. Source copy: `anthologies/home-library-series/server/chat-page/claude_cost_filter.py`.
+  token counts. Source copy: `../williams-home-library/server/chat-page/claude_cost_filter.py`.
   To change it, edit that file and paste it in under Admin Panel,
   Functions.
 - The month total is a ledger file inside the page's data folder
@@ -324,7 +324,7 @@ experience and we are missing rudimentary capabilities". What changed:
   for the chat total. Only the everyday page has the mount.
 - `/static` needs no sign-in, so the month total is visible to anything
   that can reach port 3000. Nothing else is in that file.
-- Repo copies: `anthologies/home-library-series/server/chat-page/`
+- Repo copies: `../williams-home-library/server/chat-page/`
   (`spend-ring.js`, `claude_cost_filter.py`).
 - Checked in dark and light: the ring updated from $0.03 to $0.05 on its
   own after a reply, and the tooltip reads cleanly.
@@ -336,7 +336,7 @@ experience and we are missing rudimentary capabilities". What changed:
   (with the `usage` capability on), shows "N in · N out" under each reply.
   It writes nothing anywhere and the private page has no ring or
   `/static` file. Source copy:
-  `anthologies/home-library-series/server/chat-page/home_tokens_filter.py`.
+  `../williams-home-library/server/chat-page/home_tokens_filter.py`.
 - Tested in a private chat: "3,455 in · 225 out" under a home-best reply.
 
 ### Savings meter replaces token counts (2026-11-19)
@@ -357,7 +357,7 @@ experience and we are missing rudimentary capabilities". What changed:
 - One script, `E:\WHL\config\openwebui\loader.js`, now mounted on both
   pages. It reads the page name from `/api/config` and shows the ring
   (everyday) or the green "saved" figure (private). Repo copies in
-  `anthologies/home-library-series/server/chat-page/` (`meter.js`,
+  `../williams-home-library/server/chat-page/` (`meter.js`,
   `meter_filter.py`).
 - Earlier replies this month that carried token counts were added to the
   month totals. Replies from before the page asked for token counts
@@ -396,7 +396,7 @@ experience and we are missing rudimentary capabilities". What changed:
 - Kept off the Paid side: the home lab documents (home network detail)
   and the job applications and cover letters, which were copied into the
   private page's knowledge without being opened.
-- Tool: `anthologies/home-library-series/server/chat-page/port_tool.py`
+- Tool: `../williams-home-library/server/chat-page/port_tool.py`
   runs inside a page container from `/tmp/port/spec.json` and
   `/tmp/port/files`. Rerunning replaces that project's folder,
   knowledge and catch-up chats.

@@ -35,7 +35,7 @@ purpose, and each project folder keeps its own name and tooling.
 | `anthologies/website-series/` | `site/` (Quartz) |
 | `anthologies/resume-series/` | `resumeContent/` (React SPA), `coverLetters/`, `applications/` |
 | `anthologies/gatekeeper-series/` | Planning only (2026-11-17). Knowledge repository, workbench and validation tool, distilled from the private `GatekeeperProtocol` repo. Start at its `README.md` and `planning/` |
-| `anthologies/home-library-series/` | Concept only (2026-11-17). The desktop as a home server for local LLMs, reachable from limesalt (the laptop) at home and away |
+| `../williams-home-library/` | Concept only (2026-11-17). The desktop as a home server for local LLMs, reachable from limesalt (the laptop) at home and away |
 
 A series may start as planning docs with no code. The source repo for
 the gatekeeper series is not imported: it is private, this repo is

@@ -19,7 +19,7 @@ A table, because the content is a list. Each row gives a plain name with the rea
 3. The group "what the public sees" is the part a visitor meets. The rest is behind the scenes.
 
 ## Architecture Relevance
-The reference to keep open while reading DIA-100 and DIA-102 to DIA-105. The plain names here are the ones those pictures use. The rows are a list at the top of the generator, so adding a piece is a one-line change. Left out: the home library pieces (they have their own table in `anthologies/home-library-series/diagrams/`), the Cloudflare token, and the settings that make the pieces agree (the Change Map in [ARCH-001](../Architecture/ARCH-001-PlatformOverview.md) lists those).
+The reference to keep open while reading DIA-100 and DIA-102 to DIA-105. The plain names here are the ones those pictures use. The rows are a list at the top of the generator, so adding a piece is a one-line change. Left out: the home library pieces (they have their own table in `../williams-home-library/diagrams/`), the Cloudflare token, and the settings that make the pieces agree (the Change Map in [ARCH-001](../Architecture/ARCH-001-PlatformOverview.md) lists those).
 
 ## Suggested Caption
 DIA-101 · The pieces: what each piece of the publishing system is, why we have it, and how you use it.

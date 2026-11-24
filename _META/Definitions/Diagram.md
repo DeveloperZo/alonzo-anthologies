@@ -31,7 +31,7 @@ picking a number.
 
 A series may instead keep its own diagrams and its own numbers in a
 `diagrams/` folder inside the series, with a README that says so. The home
-library series does: `anthologies/home-library-series/diagrams/`. There,
+library series does: `../williams-home-library/diagrams/`. There,
 `DIA-100` is the most general picture, `DIA-1xx` are closer looks at parts of
 it, and each higher hundred is a block about one part in more depth.
 

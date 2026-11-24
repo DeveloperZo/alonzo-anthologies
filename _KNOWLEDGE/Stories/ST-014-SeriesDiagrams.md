@@ -12,7 +12,7 @@ Last updated: 2026-11-18
 ## Summary
 
 On 2026-11-18 the home library diagrams were redone in plain language
-(DIA-100 to DIA-105 and DIA-200 in `anthologies/home-library-series/diagrams/`),
+(DIA-100 to DIA-105 and DIA-200 in `../williams-home-library/diagrams/`),
 and the anthologies site set in `_KNOWLEDGE/Diagrams/` was redone the same way
 (DIA-100 to DIA-105). Zo's verdict on the site set: fine for 100-level
 pictures, but the home library style was copied without applying the site's
@@ -47,7 +47,7 @@ a missing level.
 - 100-level pictures must be readable by someone in the household who is not
   technical: plain names first, program names as small print.
 - See `_META/Definitions/Diagram.md` and
-  `anthologies/home-library-series/diagrams/README.md`.
+  `../williams-home-library/diagrams/README.md`.
 
 ## Changelog
 
