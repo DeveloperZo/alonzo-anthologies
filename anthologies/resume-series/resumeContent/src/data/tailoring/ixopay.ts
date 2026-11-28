@@ -22,7 +22,7 @@ const ixopay: Tailoring = {
   role: 'Engineering Manager',
   profile: {
     professionalSummary:
-      'Software architect and engineering lead who designs, builds, and runs production systems. Refactored and ran a fintech lending platform with a customer payment portal on Azure and .NET, certified a commerce system with a payment processor, and modernized healthcare systems under HIPAA. Sets technical direction across teams and stays hands-on through production support.',
+      'Software architect and engineering lead who takes systems from design into production and stays accountable for them once they run. Has done that in payments, lending, and healthcare, mostly on Azure and .NET, where security and compliance rules shape the architecture from the start.',
     competencies: {
       'Enterprise Integration':
         'Connects complex systems through APIs, service-oriented architectures, and integration patterns, including payment processor and Salesforce integrations.',
