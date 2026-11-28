@@ -50,12 +50,19 @@ export const baseQuests: Quest[] = [
     {
       key: 'planning',
       description:
-        'Coordinated cross-team planning for the new platform, did the system design for 30% of its stories, and did the analysis and initial solution for the team\'s tickets before development started.',
+        'Prioritized the team\'s work against the product roadmap with Product, and tracked risks and dependencies in cross-team planning.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
         'Discovered that hands-on solution design across team boundaries keeps program delivery coherent',
       ],
+    },
+    {
+      key: 'design',
+      description:
+        'Did the system design for 30% of the platform\'s stories, and the analysis and initial solution for the team\'s tickets up front.',
+      role: 'Software Engineering Manager',
+      learnings: [],
     },
     {
       key: 'architects',
@@ -293,7 +300,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'operations',
       description:
-        'Owned every deployment and outage response, day and night, for a customer payment portal monitored with Application Insights, and ran root cause analysis and corrective actions after each outage.',
+        'Owned high availability and operational reliability for a customer payment portal, handling every deployment, outage and escalation day and night with Application Insights, and ran root cause analysis and corrective actions after each outage.',
       role: 'Team Lead',
       learnings: [],
     },

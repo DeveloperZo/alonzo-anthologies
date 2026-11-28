@@ -31,7 +31,7 @@ const ixopay: Tailoring = {
   },
   quests: {
     1: {
-      order: ['team', 'planning', 'ai-sdlc', 'architects'],
+      order: ['team', 'planning', 'design', 'ai-sdlc', 'architects'],
     },
     2: {
       order: ['mentoring', 'velocity', 'ui-architecture', 'requirements', 'component-library'],
@@ -54,9 +54,17 @@ const ixopay: Tailoring = {
         'Led engineering on a fintech lending platform on Azure, rising from senior developer to team lead to interim director of engineering.',
       order: ['kpis', 'ceo-investors', 'operations', 'refactor', 'microservices', 'dotnet-core'],
       accomplishments: {
+        refactor: {
+          description:
+            'Refactored the whole lending application onto a service-repository pattern in three months, turning negative sprint velocity positive.',
+        },
+        'dotnet-core': {
+          description:
+            "Began moving the apps from .NET Framework to .NET Core on day one, improving performance and setting technical direction.",
+        },
         operations: {
           description:
-            'Owned every deployment and production incident response, day and night, for a customer payment portal monitored with Application Insights, and ran root cause analysis and corrective actions after each outage.',
+            'Owned high availability and operational reliability for a customer payment portal, handling every deployment, production incident and escalation day and night with Application Insights, and ran root cause analysis and corrective actions after each outage.',
         },
       },
     },

@@ -176,6 +176,11 @@ definition, reader clarity) ran on every printed bullet. Zo's answers:
   root cause analysis and corrective actions after Lendr outages; daily use
   of Jira, Confluence and Slack (Skills, Delivery Tools). PCI DSS and
   tokenization were never in scope: do not claim them.
+- Also stated by Zo: at Progyny, prioritized the team's work against the
+  product roadmap with Product and tracked cross-team risks and
+  dependencies (planning); the design work is its own bullet (design). At
+  Lendr, as tech lead, owned high availability, operational reliability
+  and escalations for the payment portal (operations).
 
 Quest 1 is written at director altitude on purpose: bullets lead with the
 decision and name who else it bound, not with the artifact. The printed
@@ -185,8 +190,8 @@ CareConnect program, product, or platform lead. Internal names
 (CareConnect, Business Services, Mothra, Aidbox, cc_toolkit, nSpec) stay off the printed
 entry.
 
-**Superseded in part (2026-11-28):** quest 1 is now four bullets
-(planning, architects, ai-sdlc, team). The 2026-08-31 note below is kept
+**Superseded in part (2026-11-28):** quest 1 is now five bullets
+(planning, design, architects, ai-sdlc, team). The 2026-08-31 note below is kept
 for history.
 
 **Quest 1 is five bullets, 3 Director / 2 Senior Manager (2026-08-31).**
