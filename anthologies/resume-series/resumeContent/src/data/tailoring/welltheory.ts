@@ -9,8 +9,6 @@
 // healthcare claims and multi-tenant SaaS with EHR integrations, interim engineering leadership,
 // and a React and TypeScript product on the consulting entry (those two names are already tags).
 // It does not claim SOC 2, HITRUST, incident response, or ownership of non-production PHI environments.
-// The seven-team planning bullet and the HIPAA vendor bullet stay in the data and are ordered last
-// on quest 1, because resume-spa.md says that register does not support those claims.
 import type { Tailoring } from './types';
 
 const welltheory: Tailoring = {
@@ -32,7 +30,7 @@ const welltheory: Tailoring = {
   quests: {
     1: {
       description: 'Hired and led a team of 5 on an AWS healthcare benefits platform covering 7M lives',
-      order: ['team', 'ai-sdlc', 'delivery', 'architects', 'planning', 'vendors'],
+      order: ['team', 'ai-sdlc', 'architects', 'planning'],
       accomplishments: {
         team: {
           description:

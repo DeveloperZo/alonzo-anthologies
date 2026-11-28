@@ -50,7 +50,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'planning',
       description:
-        'Coordinated planning across seven engineering teams for the new platform and did the system design for 30% of its stories.',
+        'Coordinated cross-team planning for the new platform, did the system design for 30% of its stories, and did the analysis and initial solution for the team\'s tickets before development started.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that breaking ambiguity into structured planning artifacts accelerates team alignment',
@@ -60,7 +60,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'architects',
       description:
-        'Worked with the enterprise architects to find gaps in the architecture and turned their guidance into specs engineers could build from.',
+        'Partnered with the enterprise architects to find gaps in the platform architecture, and turned their guidance into specs engineers could build from.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that translating architecture decisions into actionable requirements closes the gap between design and delivery',
@@ -68,19 +68,9 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'vendors',
-      description:
-        'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing compliance and cost against how easy each choice is to change.',
-      role: 'Software Engineering Manager',
-      learnings: [
-        'Learned that adapter patterns provide flexibility while maintaining compliance boundaries',
-        'Discovered that BAA boundaries and PHI routing rules must be designed into architecture from the start',
-      ],
-    },
-    {
       key: 'ai-sdlc',
       description:
-        'Introduced AI-assisted SDLC practices with PHI safeguards across multiple teams, bringing in industry expertise and architectural guidance the teams could use to be more effective.',
+        'Introduced AI-assisted SDLC practices with PHI safeguards across multiple teams, backed by architectural guidance the teams could apply to their own work.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that AI-assisted workflows require careful guardrails in healthcare contexts',
@@ -88,19 +78,9 @@ export const baseQuests: Quest[] = [
       ],
     },
     {
-      key: 'delivery',
-      description:
-        'Delivered over 90% of refined work within two weeks, with the technical design done before the team picked it up.',
-      role: 'Software Engineering Manager',
-      learnings: [
-        'Learned that clear technical design upfront shortens refinement-to-delivery cycles',
-        'Discovered that team execution improves when work is refined with explicit design intent',
-      ],
-    },
-    {
       key: 'team',
       description:
-        'Hired and led a five-engineer team owning authentication, content, Salesforce integrations, enrollment, and eligibility.',
+        'Hired and led a team of five engineers owning authentication, content, Salesforce integrations, enrollment, and eligibility on a platform serving 7 million covered lives.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
@@ -113,10 +93,10 @@ export const baseQuests: Quest[] = [
   id: 2,
   titles: {
     retro: 'Rise of the Architect',
-    sleek: 'Senior Software Architect at Inspire11',
+    sleek: 'Senior Consultant at Inspire11',
   },
   company: 'Inspire11',
-  workTitle: 'Senior Software Architect',
+  workTitle: 'Senior Consultant',
   description:
     'Led software architecture for five engineering teams building a single product.',
   summary:
@@ -124,14 +104,14 @@ export const baseQuests: Quest[] = [
   type: 'career',
   startDate: new Date('2024-05-01'),
   endDate: new Date('2025-05-17'),
-  roles: ['Senior Software Architect'],
+  roles: ['Senior Consultant'],
   tags: ['Architecture', 'Leadership', 'UI Design', 'Cross-Team Collaboration', 'Azure', 'Software Development'],
   accomplishments: [
     {
       key: 'ui-architecture',
       description:
-        'Set the UI architecture and standards for all five teams, and stayed hands-on as full-stack architect for one of them on Azure, providing production support with Application Insights.',
-      role: 'Senior Software Architect',
+        'Set the UI architecture and standards for all five teams, and served as hands-on full-stack architect for one of them on Azure, including production support through Application Insights.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned architectural effectiveness requires balancing team autonomy with system-wide consistency',
         'Found that specialized depth and broad oversight can be balanced through effective delegation',
@@ -140,8 +120,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'component-library',
       description:
-        'Created a shared component library from the Figma designs that sped up delivery across teams and secured a $2M project extension.',
-      role: 'Senior Software Architect',
+        'Created a shared component library from Figma designs that sped up delivery across teams, was the primary factor in a $2M project extension, and is still in use today.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that component libraries still deliver value even when implemented late in a project',
         'Discovered that reusable design systems can unlock measurable commercial outcomes',
@@ -150,8 +130,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'requirements',
       description:
-        'Turned business requirements into technical documentation (designs, specs, and stories) so every team built it the same way.',
-      role: 'Senior Software Architect',
+        'Turned business requirements into the designs, specs, and stories all five teams built from.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that translating requirements into architecture and stories closes the gap between business intent and delivery',
       ],
@@ -159,8 +139,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'velocity',
       description:
-        'Raised team velocity by 40% and kept it there through architecture changes and simpler development workflows.',
-      role: 'Senior Software Architect',
+        'Raised velocity 40% across the five teams and sustained it through architecture changes and simpler development workflows.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that maximizing team velocity requires teams to understand strategic direction and implementation goals',
         'Discovered that architectural clarity compounds into sustained delivery gains',
@@ -169,8 +149,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'mentoring',
       description:
-        'Led developers at every level across the five teams on the architecture, and mentored the senior developers.',
-      role: 'Senior Software Architect',
+        'Mentored the senior developers across the five teams, and guided developers at every level on the architecture.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that deliberate mentorship strengthens engineering capability across teams',
       ],
@@ -181,10 +161,10 @@ export const baseQuests: Quest[] = [
   id: 3,
   titles: {
     retro: "The Modernizer's Quest",
-    sleek: 'Software Architect at Productive Edge',
+    sleek: 'Senior Consultant at Productive Edge',
   },
   company: 'Productive Edge',
-  workTitle: 'Software Architect',
+  workTitle: 'Senior Consultant',
   description:
     'Modernized legacy healthcare and commerce systems for consulting clients, leading cross-functional teams from architecture through delivery.',
   summary:
@@ -192,14 +172,14 @@ export const baseQuests: Quest[] = [
   type: 'career',
   startDate: new Date('2020-02-01'),
   endDate: new Date('2024-05-31'),
-  roles: ['Software Architect'],
+  roles: ['Senior Consultant'],
   tags: ['Legacy Modernization', 'Azure', 'AWS', 'SaaS', 'Healthcare', 'Payment Processing', 'Software Development'],
   accomplishments: [
     {
       key: 'stack',
       description:
-        'Owned the cloud architecture for every engagement, on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker, AWS Lambda, and Azure SQL.',
-      role: 'Software Architect',
+        'Owned the cloud architecture on every engagement, on Azure and AWS, in whatever stack the client ran.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned to be proficient in architecting for a language I was not well-versed in',
       ],
@@ -207,8 +187,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'saas-rebuild',
       description:
-        'Rebuilt a monolithic healthcare application as a multi-tenant SaaS platform for 15 tenants with up to 50K users each, without breaking its EHR integrations.',
-      role: 'Software Architect',
+        'Led the rebuild of a monolithic healthcare application into a multi-tenant SaaS platform for 15 tenants of up to 50K users each, keeping its EHR integrations working.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that multi-tenant architectures can be effectively handled through configuration',
         'Discovered that maintaining EHR integrations during architectural transitions requires careful API design',
@@ -217,8 +197,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'claims',
       description:
-        'Cut maintenance costs by 30% by modernizing a claims application across the full stack, keeping it HIPAA compliant throughout.',
-      role: 'Software Architect',
+        'Cut maintenance costs 30% by modernizing a claims application end to end, keeping it HIPAA compliant throughout.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that healthcare data practices impact technical decisions and constraints',
         'Learned that compliance requirements should be considered in reusable patterns',
@@ -227,8 +207,8 @@ export const baseQuests: Quest[] = [
     {
       key: 'engagements',
       description:
-        'Ran 16 client engagements end to end, owning budgets up to $250K, scope, delivery, and on-call with Application Insights and CloudWatch.',
-      role: 'Software Architect',
+        'Ran 16 client engagements end to end, owning scope, budgets up to $250K, delivery, and on-call through Application Insights and CloudWatch.',
+      role: 'Senior Consultant',
       learnings: [
         'Learned to ground stories in facts and data that the client cares about',
         'Discovered that owning budget and scope alongside technical delivery builds client trust',
@@ -238,7 +218,7 @@ export const baseQuests: Quest[] = [
       key: 'payments',
       description:
         "Certified a client's commerce system with FreedomPay to meet payment security requirements.",
-      role: 'Software Architect',
+      role: 'Senior Consultant',
       learnings: [
         'Learned how to build IdP integrations from the ground up',
       ],
@@ -247,7 +227,7 @@ export const baseQuests: Quest[] = [
       key: 'scaffolding',
       description:
         'Built standard project scaffolding that let new projects deploy to production on day one instead of spending a sprint on setup.',
-      role: 'Software Architect',
+      role: 'Senior Consultant',
       learnings: [
         'Learned that project templates work easier when teams build working relationships',
         'Learned that standardization must balance consistency with flexibility for project-specific needs',
@@ -257,7 +237,7 @@ export const baseQuests: Quest[] = [
       key: 'people',
       description:
         "Ran 1-on-1s and career progression for the development team, and contributed to the firm's strategy on AI usage and productivity.",
-      role: 'Software Architect',
+      role: 'Senior Consultant',
       learnings: [],
     },
   ],
@@ -283,7 +263,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'refactor',
       description:
-        'Rewrote the production lending application: moved 250k+ lines onto a service-repository pattern in 3 months and turned sprint velocity from negative back to positive.',
+        'Refactored the entire production lending application onto a service-repository pattern in three months, turning sprint velocity from negative back to positive.',
       role: 'Team Lead',
       learnings: [
         'Learned how to perform every function of and be involved in most decisions for the SDLC',
@@ -313,7 +293,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'operations',
       description:
-        'Owned every deployment and outage response, day and night, with Application Insights monitoring, for a platform where customers made payments through a portal.',
+        'Owned every deployment and outage response, day and night, for a customer payment portal monitored with Application Insights.',
       role: 'Team Lead',
       learnings: [],
     },
@@ -330,7 +310,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'ceo-investors',
       description:
-        'Stepped in as interim director of engineering after the director was let go, communicating technical strategy to the CEO and investors until the CTO was hired.',
+        'Presented technical strategy to the CEO and investors as interim director of engineering after the prior director was let go.',
       role: 'Interim Director of Engineering',
       learnings: [
         'Learned that technical leadership requires communication as much as technical proficiency',
@@ -405,7 +385,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'features',
       description:
-        "Built C# features on SQL Server and Entity Framework, and owned deployments and outages at all hours.",
+        "Built C# features on SQL Server and Entity Framework for a car loan application, and owned its deployments and outages at all hours.",
       role: 'Developer',
       learnings: [],
     },

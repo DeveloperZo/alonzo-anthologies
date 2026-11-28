@@ -22,7 +22,7 @@ const walkerdunlop: Tailoring = {
   },
   quests: {
     1: {
-      order: ['ai-sdlc', 'planning', 'architects', 'delivery', 'vendors', 'team'],
+      order: ['ai-sdlc', 'planning', 'architects', 'team'],
     },
     2: {
       order: ['ui-architecture', 'component-library', 'requirements', 'velocity', 'mentoring'],

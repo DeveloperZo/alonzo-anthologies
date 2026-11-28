@@ -19,19 +19,11 @@ const topstepEm: Tailoring = {
   },
   quests: {
     1: {
-      order: ['team', 'planning', 'delivery', 'ai-sdlc', 'vendors', 'architects'],
+      order: ['team', 'planning', 'ai-sdlc', 'architects'],
       accomplishments: {
         team: {
           description:
             'Hired and led a five-engineer team that owns authentication, content, Salesforce integrations, enrollment, and eligibility in production.',
-        },
-        delivery: {
-          description:
-            'Kept feature delivery predictable: over 90% of refined work shipped within two weeks, with technical design done up front.',
-        },
-        vendors: {
-          description:
-            'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing the trade-offs between compliance, cost, and how easy each choice would be to change later.',
         },
       },
     },
@@ -40,12 +32,6 @@ const topstepEm: Tailoring = {
     },
     3: {
       order: ['people', 'engagements', 'stack', 'saas-rebuild', 'claims', 'payments', 'scaffolding'],
-      accomplishments: {
-        stack: {
-          description:
-            'Owned the cloud architecture on every engagement on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker containers, AWS Lambda, and Azure SQL.',
-        },
-      },
     },
     4: {
       description:
@@ -55,10 +41,6 @@ const topstepEm: Tailoring = {
         operations: {
           description:
             'Owned all deployments and incident response at all hours, with Application Insights monitoring, for a platform where customers made payments through a portal.',
-        },
-        refactor: {
-          description:
-            'Made the technical investment to rewrite the production lending application: 250k+ lines onto a service-repository pattern in 3 months, turning sprint velocity from negative back to positive.',
         },
         microservices: {
           description:
