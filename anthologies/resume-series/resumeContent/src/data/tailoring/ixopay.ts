@@ -7,10 +7,10 @@
 // adoption of AI-assisted development. Payments or fintech, payment processor integrations, and
 // managing more than one team are preferred.
 //
-// Zo, 2026-11-28: apply as the hands-on lead, not the people manager. This overlay leads with
-// architecting, building, and running production systems: the Lendr payment portal on Azure and .NET,
-// the FreedomPay payment-processor certification, multi-tenant SaaS and claims modernization under
-// HIPAA, and architecture across five teams. People leadership stays on the page but is ordered last.
+// Zo, 2026-11-28: manager-first (an IC framing was tried and reverted the same day). The summary
+// states who he is in two sentences and leaves the evidence to the bullets. People leadership and
+// delivery ownership lead each entry, then production ownership on the Lendr payment portal, the
+// FreedomPay payment-processor certification, and work under HIPAA.
 // It does not claim PCI DSS, tokenization or network tokens, managing two teams or managing through
 // leads, a formal root cause analysis practice, or Jira, Confluence, or Slack: the base data does not
 // state them. targetRole stays unset (see the resume-tailor skill).
@@ -22,23 +22,23 @@ const ixopay: Tailoring = {
   role: 'Engineering Manager',
   profile: {
     professionalSummary:
-      'Software architect and engineering lead who takes systems from design into production and stays accountable for them once they run. Has done that in payments, lending, and healthcare, mostly on Azure and .NET, where security and compliance rules shape the architecture from the start.',
+      'Software engineering manager who hires and leads engineering teams and stays close enough to the architecture to own what they ship in production. Has led that work in payments, lending, and healthcare, mostly on Azure and .NET, including a stretch as interim director of engineering at a fintech lender.',
     competencies: {
-      'Enterprise Integration':
-        'Connects complex systems through APIs, service-oriented architectures, and integration patterns, including payment processor and Salesforce integrations.',
+      'Technology Leadership':
+        'Hires and leads engineering teams, runs one-on-ones and career development, and drives delivery from planning through production.',
       'Development Practices':
         'Establishes engineering standards around code quality, testing, CI/CD, and production support.',
     },
   },
   quests: {
     1: {
-      order: ['planning', 'architects', 'ai-sdlc', 'team'],
+      order: ['team', 'planning', 'ai-sdlc', 'architects'],
     },
     2: {
-      order: ['ui-architecture', 'component-library', 'requirements', 'velocity', 'mentoring'],
+      order: ['mentoring', 'velocity', 'ui-architecture', 'requirements', 'component-library'],
     },
     3: {
-      order: ['stack', 'saas-rebuild', 'payments', 'claims', 'engagements', 'scaffolding', 'people'],
+      order: ['people', 'engagements', 'payments', 'claims', 'saas-rebuild', 'scaffolding', 'stack'],
       accomplishments: {
         payments: {
           description:
@@ -51,7 +51,9 @@ const ixopay: Tailoring = {
       },
     },
     4: {
-      order: ['refactor', 'microservices', 'dotnet-core', 'operations', 'kpis', 'ceo-investors'],
+      description:
+        'Led engineering on a fintech lending platform on Azure, rising from senior developer to team lead to interim director of engineering.',
+      order: ['kpis', 'ceo-investors', 'operations', 'refactor', 'microservices', 'dotnet-core'],
       accomplishments: {
         operations: {
           description:
