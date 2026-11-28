@@ -80,7 +80,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'team',
       description:
-        'Hired and led a team of five engineers owning authentication, content, Salesforce integrations, enrollment, and eligibility on a platform serving 7 million covered lives.',
+        'Hired, led, and ran performance reviews for a team of five engineers owning authentication, content, Salesforce integrations, enrollment, and eligibility on a platform serving 7 million covered lives.',
       role: 'Software Engineering Manager',
       learnings: [
         'Learned that managing platform-critical systems requires balancing feature delivery with system reliability',
@@ -293,7 +293,7 @@ export const baseQuests: Quest[] = [
     {
       key: 'operations',
       description:
-        'Owned every deployment and outage response, day and night, for a customer payment portal monitored with Application Insights.',
+        'Owned every deployment and outage response, day and night, for a customer payment portal monitored with Application Insights, and ran root cause analysis and corrective actions after each outage.',
       role: 'Team Lead',
       learnings: [],
     },

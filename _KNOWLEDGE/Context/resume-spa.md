@@ -172,6 +172,10 @@ definition, reader clarity) ran on every printed bullet. Zo's answers:
 - Lendr: lines of code are not the dimension. It was 350k, and the
   bullet now says the entire application, refactored in three months.
 - Boeing numbers stay as they are (2012 to 2016, not worth reworking).
+- Also stated by Zo: performance reviews for the Progyny team of five;
+  root cause analysis and corrective actions after Lendr outages; daily use
+  of Jira, Confluence and Slack (Skills, Delivery Tools). PCI DSS and
+  tokenization were never in scope: do not claim them.
 
 Quest 1 is written at director altitude on purpose: bullets lead with the
 decision and name who else it bound, not with the artifact. The printed

@@ -11,9 +11,8 @@
 // states who he is in two sentences and leaves the evidence to the bullets. People leadership and
 // delivery ownership lead each entry, then production ownership on the Lendr payment portal, the
 // FreedomPay payment-processor certification, and work under HIPAA.
-// It does not claim PCI DSS, tokenization or network tokens, managing two teams or managing through
-// leads, a formal root cause analysis practice, or Jira, Confluence, or Slack: the base data does not
-// state them. targetRole stays unset (see the resume-tailor skill).
+// It does not claim PCI DSS or tokenization (Zo, 2026-11-28: neither was in scope), or managing two
+// teams or managing through leads. targetRole stays unset (see the resume-tailor skill).
 import type { Tailoring } from './types';
 
 const ixopay: Tailoring = {
@@ -57,7 +56,7 @@ const ixopay: Tailoring = {
       accomplishments: {
         operations: {
           description:
-            'Owned every deployment and production incident response, day and night, for a customer payment portal monitored with Application Insights.',
+            'Owned every deployment and production incident response, day and night, for a customer payment portal monitored with Application Insights, and ran root cause analysis and corrective actions after each outage.',
         },
       },
     },

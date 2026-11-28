@@ -36,7 +36,8 @@ export const skills = [
   { group: "Architecture", items: ["Microservices", "Multi-tenant", "SOA", "CQRS (command query responsibility segregation)"] },
   { group: "Languages & Frameworks", items: ["C#", "TypeScript", "JavaScript", "SQL", ".NET", "Python", "Entity Framework", "SignalR", "React"] },
   { group: "Cloud, Data & DevOps", items: ["Azure Cloud","AWS Cloud", "Docker", "CI/CD", "SQL Server", "PostgreSQL", "Observability (Application Insights, CloudWatch, Datadog)"] },
-  { group: "Quality & Compliance", items: ["Automated testing", "HIPAA & PHI compliance", "Agile delivery"] },
+  { group: "Quality & Compliance", items: ["Automated testing", "HIPAA & PHI compliance", "Agile delivery", "Incident response & root cause analysis"] },
+  { group: "Delivery Tools", items: ["Jira", "Confluence", "Slack", "Azure DevOps"] },
   { group: "AI & Modernization", items: ["AI-assisted SDLC (Claude, Codex, Cursor)", "Legacy modernization"] },
   { group: "Leadership", items: ["Technical leadership", "Cross-team planning", "Executive communication", "Engineering management", "People leadership", "Hiring engineering teams"] },
 ];
