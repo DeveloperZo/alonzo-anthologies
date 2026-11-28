@@ -20,7 +20,7 @@ const wolterskluwer: Tailoring = {
   },
   quests: {
     1: {
-      order: ['ai-sdlc', 'planning', 'architects', 'vendors', 'delivery', 'team'],
+      order: ['ai-sdlc', 'planning', 'architects', 'team'],
     },
     2: {
       order: ['component-library', 'ui-architecture', 'requirements', 'mentoring', 'velocity'],

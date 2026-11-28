@@ -145,16 +145,54 @@ them. `learnings` holds one specific non-obvious thing per accomplishment,
 or nothing. QuestDetail hides the Skills section when a quest has no
 learnings, so empty is safe.
 
-Every quest except 10 (education) now follows it. The
-"Learned that... / Discovered that..." boilerplate is gone from the file.
+Every quest except 10 (education) now follows it. The printed bullets
+do. Some on-screen learnings on quests 1 to 4 still use the "Learned
+that... / Discovered that..." boilerplate.
+
+**Zo is the source of facts (2026-11-28).** This is Zo's personal site,
+not an HR record. Zo's statement settles a title, number or scope. Do
+not ask for documents. Do ask what a number measured and what Zo did
+versus the team, because an interviewer will.
+
+**Validation pass, 2026-11-28.** Three passes (sourcing, metric
+definition, reader clarity) ran on every printed bullet. Zo's answers:
+
+- Titles: Progyny is Software Engineering Manager. Inspire11 and
+  Productive Edge print as Senior Consultant; the architecture function
+  is carried by the bullets.
+- Progyny: "seven teams" cut. The HIPAA vendor bullet cut. The "90% of
+  refined work in two weeks" bullet cut; what it stood for (Zo did the
+  analysis and initial solution for the team's tickets) folded into the
+  planning bullet.
+- Inspire11: the component library was the primary factor in the $2M
+  extension and is still in use. Velocity 40% is read at the role's
+  scope, across the five teams.
+- Productive Edge: the stack inventory is out again; the bullet says
+  "in whatever stack the client ran".
+- Lendr: lines of code are not the dimension. It was 350k, and the
+  bullet now says the entire application, refactored in three months.
+- Boeing numbers stay as they are (2012 to 2016, not worth reworking).
+- Also stated by Zo: performance reviews for the Progyny team of five;
+  root cause analysis and corrective actions after Lendr outages; daily use
+  of Jira, Confluence and Slack (Skills, Delivery Tools). PCI DSS and
+  tokenization were never in scope: do not claim them.
+- Also stated by Zo: at Progyny, prioritized the team's work against the
+  product roadmap with Product and tracked cross-team risks and
+  dependencies (planning); the design work is its own bullet (design). At
+  Lendr, as tech lead, owned high availability, operational reliability
+  and escalations for the payment portal (operations).
 
 Quest 1 is written at director altitude on purpose: bullets lead with the
 decision and name who else it bound, not with the artifact. The printed
-title is Manager, Experience Platform, which is the actual title. Do not
+title is Software Engineering Manager (Zo, 2026-11-28). Do not
 put Director or VP on the resume. Do not describe this role as the
 CareConnect program, product, or platform lead. Internal names
 (CareConnect, Business Services, Mothra, Aidbox, cc_toolkit, nSpec) stay off the printed
 entry.
+
+**Superseded in part (2026-11-28):** quest 1 is now five bullets
+(planning, design, architects, ai-sdlc, team). The 2026-08-31 note below is kept
+for history.
 
 **Quest 1 is five bullets, 3 Director / 2 Senior Manager (2026-08-31).**
 Aligned to the evidence register the same day. Director spine first:
@@ -216,7 +254,7 @@ failure and the one that produced the caption style in the first place.
 "Platform manager on the greenfield rebuild of Progyny's..." repeats
 both lines directly above it. A verb that happens to echo the title is
 fine when it is doing work in a sentence: "Managed platform
-services" under a Manager, Experience Platform heading reads normally.
+services" under a Software Engineering Manager heading reads normally.
 
 ## Length band
 

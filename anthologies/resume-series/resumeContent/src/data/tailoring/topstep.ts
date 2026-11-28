@@ -19,35 +19,19 @@ const topstep: Tailoring = {
   },
   quests: {
     1: {
-      order: ['planning', 'ai-sdlc', 'architects', 'team', 'delivery', 'vendors'],
-      accomplishments: {
-        vendors: {
-          description:
-            'Led vendor evaluations and the configuration platform design with HIPAA in scope, weighing the trade-offs between compliance, cost, and how easy each choice would be to change later.',
-        },
-      },
+      order: ['planning', 'ai-sdlc', 'architects', 'team'],
     },
     2: {
       order: ['ui-architecture', 'component-library', 'velocity', 'requirements', 'mentoring'],
     },
     3: {
       order: ['stack', 'saas-rebuild', 'engagements', 'claims', 'payments', 'scaffolding', 'people'],
-      accomplishments: {
-        stack: {
-          description:
-            'Owned the cloud architecture on every engagement on Azure and AWS, delivering in C#/.NET, Java Spring Boot, React, Angular, and Flutter with Docker containers, AWS Lambda, and Azure SQL.',
-        },
-      },
     },
     4: {
       description:
         'Joined as a senior developer on a fintech lending platform on Azure while sprint velocity was running negative, and was promoted to team lead within the first year.',
       order: ['refactor', 'microservices', 'operations', 'dotnet-core', 'kpis', 'ceo-investors'],
       accomplishments: {
-        refactor: {
-          description:
-            'Rewrote the production lending application to pay down technical debt: moved 250k+ lines onto a service-repository pattern in 3 months and turned sprint velocity from negative back to positive.',
-        },
         microservices: {
           description:
             'Built a distributed system of microservices on Azure Functions and Azure App Service with SignalR for real-time messaging, reworked the Salesforce integration, and wrote a utility to transform the entire database schema.',

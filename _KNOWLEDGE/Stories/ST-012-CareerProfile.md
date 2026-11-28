@@ -44,7 +44,7 @@ Zo does not send cover letters. He sends one visual page that gets him into a co
     - Manor was the small loan company (2016).
     - At Productive Edge (2020) his title was Senior Consultant and his function was Software Architect. That is where his execution became formally recognized.
 - **Settled:** 7M covered lives; target role is Director or Senior Manager, hands-on.
-- **Still open, do not print:** "Seven teams" and "HIPAA vendor evaluations" (both dropped as unsupported, now back in the data).
+- **Settled 2026-11-28:** "Seven teams" and "HIPAA vendor evaluations" are cut from the data (Zo).
 - **Identity sources**:
   - the resume SPA's play theme (Press Start 2P, the TV frame, seasonal and time-of-day colors, quest titles such as "The Developer's Forge")
   - the career factory (play-mode home)
